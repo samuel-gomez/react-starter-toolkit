@@ -1,6 +1,6 @@
 {
-  "apiUrl": "#{BASE_URL_API}#",
-  "baseUrl": "#{BASE_URL}#",
+  "apiUrl": "https://demo6519127.mockable.io/",
+  "baseUrl": "https://react-starter-toolkit.netlify.app/",
   "fetchConfig": {
     "async": true,
     "crossDomain": true,
@@ -16,12 +16,12 @@
   "oidc": {
     "isEnabled": true,
     "client_id": "interactive.public",
-    "redirect_uri": "http://localhost:3000/authentication/callback",
+    "redirect_uri": "https://react-starter-toolkit.netlify.app/authentication/callback",
     "response_type": "code",
-    "post_logout_redirect_uri": "http://localhost:3000/",
+    "post_logout_redirect_uri": "https://react-starter-toolkit.netlify.app/",
     "scope": "openid profile email api offline_access",
     "authority": "https://demo.identityserver.io",
-    "silent_redirect_uri": "http://localhost:3000/authentication/silent_callback",
+    "silent_redirect_uri": "https://react-starter-toolkit.netlify.app/authentication/silent_callback",
     "automaticSilentRenew": true,
     "loadUserInfo": true
   }

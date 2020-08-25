@@ -9,14 +9,13 @@
     "cover": "npm t -- --coverage",
     "storybook": "start-storybook -p 9009 -s .storybook",
     "lint": "./node_modules/.bin/eslint ./src/ --ignore-pattern \"**/*.test.js\" --ignore-pattern \"**/*.steps.js\"",
-    "lint:fix": "npm run lint --fix",
-    "precommit": "npm run lint:fix"
+    "lint:fix": "npm run lint --fix"
   },
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "npm run precommit",
-      "pre-push": "npm run cover"
+      "pre-commit": "",
+      "pre-push": ""
     }
   },
   "dependencies": {
