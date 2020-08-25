@@ -2,19 +2,16 @@
   "apiUrl": "https://demo6519127.mockable.io/",
   "baseUrl": "https://react-starter-toolkit.netlify.app/",
   "fetchConfig": {
-    "async": true,
     "crossDomain": true,
+    "withCredentials": true,
     "method": "GET",
-    "contentType": "application/json; charset=utf-8",
-    "responseType": "json",
-    "withCredential": true,
-    "Access-Control-Allow-Origin": "#{API_ORIGIN}#",
+    "Access-Control-Allow-Origin": "*",
     "headers": {
-      "Accept": "application/json"
+      "accept": "application/json"
     }
   },
   "oidc": {
-    "isEnabled": true,
+    "isEnabled": false,
     "client_id": "interactive.public",
     "redirect_uri": "https://react-starter-toolkit.netlify.app/authentication/callback",
     "response_type": "code",
