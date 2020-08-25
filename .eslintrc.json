@@ -1,0 +1,88 @@
+{
+  "extends": ["airbnb", "prettier", "prettier/react", "react-app"],
+  "plugins": ["prettier", "react", "react-hooks"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
+  "rules": {
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "react/prop-types": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/no-unescaped-entities": "off",
+    "react/require-default-props": "off",
+    "react/no-unused-prop-types": "off",
+    "react/no-unused-state": "error",
+    "no-underscore-dangle": 0,
+    "import/imports-first": ["error", "absolute-first"],
+    "import/newline-after-import": "error",
+    "quotes": ["error", "single"],
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "jsx-a11y/label-has-for": [
+      2,
+      {
+        "components": ["label"],
+        "required": {
+          "every": []
+        },
+        "allowChildren": false
+      }
+    ],
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "controlComponents": ["Textarea", "File"],
+        "detch": 3
+      }
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 1000
+      }
+    ]
+  },
+  "globals": {
+    "window": true,
+    "document": true,
+    "localStorage": true,
+    "FormData": true,
+    "FileReader": true,
+    "Blob": true,
+    "navigator": true,
+    "fetch": true
+  },
+  "parser": "babel-eslint",
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src", "node_modules"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      },
+      "alias": {
+        "map": [
+          [
+            "@axa-fr/react-oidc-context",
+            "@axa-fr/react-oidc-context/dist/index.js"
+          ]
+        ],
+        "extensions": [".ts", ".js", ".jsx", ".json"]
+      }
+    }
+  }
+}

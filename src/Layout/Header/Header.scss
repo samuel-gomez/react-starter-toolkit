@@ -1,0 +1,37 @@
+@import '@axa-fr/react-toolkit-layout-header/dist/Header/header.scss';
+@import '@axa-fr/react-toolkit-layout-header/dist/Name/name.scss';
+@import '@axa-fr/react-toolkit-layout-header/dist/User/user.scss';
+@import '@axa-fr/react-toolkit-layout-header/dist/Logo/logo.scss';
+@import '@axa-fr/react-toolkit-layout-header/dist/Infos/infos.scss';
+
+.af {
+  &-alert {
+    &--infos {
+      margin: 0;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid $color-mercury;
+      border-radius: 25px;
+      padding: 0.4rem 0.3rem 0.4rem 3rem;
+      font-size: 0.9em;
+      order: 2;
+    }
+  }
+  &-skeleton {
+    &--info {
+      margin: 0;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid $color-mercury;
+      height: 36px;
+      border-radius: 25px;
+      padding: 0.4rem 0.3rem 0.4rem 3rem;
+      font-size: 0.9em;
+      order: 2;
+    }
+  }
+}

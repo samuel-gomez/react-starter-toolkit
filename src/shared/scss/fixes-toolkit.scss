@@ -1,0 +1,172 @@
+@import '@axa-fr/react-toolkit-core/dist/assets/scss/core.scss';
+
+.af-link {
+  background: transparent;
+  border: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: normal;
+  text-decoration: underline;
+  &:focus,
+  &:active {
+    outline: none;
+    color: $color-azur;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+  &--hasIconLeft,
+  &--hasIconRight {
+    text-decoration: none;
+    .af-link__text {
+      text-decoration: underline;
+    }
+    &:hover {
+      .af-link__text {
+        text-decoration: none;
+      }
+    }
+  }
+  &--disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    .af-link__text {
+      text-decoration: none;
+    }
+    &:hover,
+    &:focus,
+    &:active {
+      .af-link__text,
+      .glyphicon {
+        text-decoration: none;
+        color: $white;
+      }
+    }
+  }
+}
+
+.af-main {
+  padding-top: 1rem;
+}
+
+.af-title--content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.af-btn--circle-small {
+  width: 2rem;
+  height: 2rem;
+}
+
+.af-table__cell--actions {
+  padding: 0.2rem 0.5rem;
+  text-align: center;
+}
+
+.af-body__content {
+  max-height: calc(100vh - 60px);
+}
+.af-modal__body {
+  max-height: 78vh;
+  overflow: auto;
+}
+
+.af-popover__container-pop {
+  width: auto;
+}
+
+.af-alert {
+  &--simple {
+    border: 0;
+    margin: 0 0 0.3rem 0;
+    background: none;
+    padding: 0.6rem 0;
+    line-height: 1.5;
+    .af-alert {
+      &__title {
+        font-size: 0.9rem;
+
+        &-icon {
+          background: none;
+          padding: 0;
+          margin-right: 0;
+          min-width: auto;
+          &:after {
+            display: none;
+          }
+        }
+        &-text {
+          margin-left: 1rem;
+          padding: 0;
+          font-weight: normal;
+        }
+      }
+      &__content {
+        &__left {
+          display: none;
+        }
+        &__right {
+          display: flex;
+          padding-left: 0.5rem;
+          &::before {
+            margin-right: 0.5rem;
+          }
+          p {
+            margin: 0;
+          }
+        }
+      }
+    }
+    &.af-alert {
+      &--error {
+        .glyphicon {
+          color: $color-alertError-leftBgColor;
+        }
+      }
+      &--success {
+        .glyphicon {
+          color: $color-alertSucces-leftBgColor;
+        }
+      }
+      &--info {
+        .glyphicon {
+          color: $color-alertInfo-leftBgColor;
+        }
+      }
+      &--danger {
+        .glyphicon {
+          color: $color-alertDanger-leftBgColor;
+        }
+      }
+    }
+  }
+}
+
+.af-form__radio-custom {
+  .af-form__input-radio {
+    visibility: inherit;
+  }
+}
+.af-form__checkbox-toggle {
+  .af-form__input-checkbox {
+    visibility: inherit;
+    &:focus + .af-form__label {
+      box-shadow: 0 0 5px $color-axa;
+    }
+  }
+}
+
+.af-form__group {
+  &--required &-label {
+    &:after {
+      content: '*';
+      color: $color-red-error;
+    }
+  }
+}
+
+.af-form__input-textarea {
+  font-size: 1rem;
+}

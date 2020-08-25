@@ -2,19 +2,81 @@
   "name": "react-starter-toolkit",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "cover": "npm t -- --coverage",
+    "storybook": "start-storybook -p 9009 -s .storybook",
+    "lint": "./node_modules/.bin/eslint ./src/ --ignore-pattern \"**/*.test.js\" --ignore-pattern \"**/*.steps.js\"",
+    "lint:fix": "npm run lint --fix",
+    "precommit": "npm run lint:fix"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "npm run precommit",
+      "pre-push": "npm run cover"
+    }
+  },
+  "dependencies": {
+    "@axa-fr/react-oidc-context": "~3.1.4",
+    "@axa-fr/react-toolkit-all": "~1.3.16",
+    "@axa-fr/react-toolkit-core": "~1.3.16",
+    "@storybook/addon-a11y": "~5.3.19",
+    "@storybook/addon-actions": "~5.3.19",
+    "@storybook/addon-info": "~5.3.19",
+    "@storybook/addon-knobs": "~5.3.19",
+    "@storybook/addon-notes": "~5.3.19",
+    "@storybook/addon-options": "~5.3.19",
+    "@storybook/addon-storysource": "~5.3.19",
+    "@storybook/addon-viewport": "~5.3.19",
+    "@storybook/addons": "~5.3.19",
+    "@storybook/core": "~5.3.19",
+    "@storybook/react": "~5.3.19",
+    "@testing-library/jest-dom": "~4.2.4",
+    "@testing-library/react": "~9.3.2",
+    "@testing-library/react-hooks": "~3.4.1",
+    "@testing-library/user-event": "~7.1.2",
+    "jest-cucumber": "^3.0.0",
+    "lodash": "^4.17.20",
+    "moment": "^2.27.0",
+    "oidc-client": "~1.10.1",
+    "prop-types": "~15.7.2",
+    "react": "~16.13.1",
+    "react-app-polyfill": "~1.0.5",
+    "react-dom": "~16.13.1",
+    "react-router-dom": "~5.2.0",
+    "react-scripts": "~3.4.3",
+    "react-test-renderer": "^16.13.1",
+    "sass": "~1.26.10"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^9.1.1",
+    "@commitlint/config-conventional": "^9.1.1",
+    "commitizen": "^4.1.2",
+    "concurrently": "^5.3.0",
+    "cz-conventional-changelog": "^3.2.0",
+    "eslint": "^7.7.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-react-app": "^5.2.1",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-flowtype": "^5.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.0",
+    "husky": "^4.2.5",
+    "jest-sonar-reporter": "^2.0.0",
+    "precise-commits": "^1.0.2",
+    "prettier": "^2.0.5"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +92,25 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "rootDir": "./",
+  "jest": {
+    "collectCoverageFrom": [
+      "<rootDir>/src/**/*.{js,jsx,mjs}",
+      "!<rootDir>/src/**/index.js",
+      "!<rootDir>/src/**/constants.js",
+      "!<rootDir>/src/**/*.stories.js",
+      "!<rootDir>/src/**/*.rules.js",
+      "!<rootDir>/node_modules/"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "clearMocks": true
   }
 }

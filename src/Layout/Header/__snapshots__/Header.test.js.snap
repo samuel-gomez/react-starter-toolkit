@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header/> Render <Header/> 1`] = `
+<DocumentFragment>
+  <div
+    class="af-header"
+  >
+    <div
+      class="container af-header__wrapper"
+    >
+      <header
+        class="af-header__content"
+        role="banner"
+      >
+        <div
+          class="af-header__name"
+        >
+          <a
+            class="af-logo"
+            href="/"
+          >
+            <img
+              alt="OASIS"
+              class="af-logo__brand"
+              src="logo-axa.svg"
+            />
+          </a>
+          <h2
+            class="af-header__title"
+          >
+            OASIS
+            <small
+              class="af-header__subtitle"
+            />
+          </h2>
+        </div>
+        <div
+          class="af-info-user"
+        >
+          <a
+            class="af-info-user__link"
+            href="#"
+            title="Voir mon profil"
+          >
+            <span
+              class="af-info-user__name"
+            >
+              Non Connecté
+            </span>
+            <span
+              class="af-info-user__profile"
+            >
+              [Profil]
+            </span>
+          </a>
+        </div>
+      </header>
+    </div>
+  </div>
+</DocumentFragment>
+`;

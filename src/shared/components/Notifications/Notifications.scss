@@ -1,0 +1,79 @@
+@import '@axa-fr/react-toolkit-core/dist/assets/scss/core.scss';
+
+$typesLite: (
+  success $color-alertSucces-leftBgColor $color-alertSucces-bgColor $color-alertSucces-colorBorder $color-alertSucces-textColor,
+  info $color-alertInfo-leftBgColor $color-alertInfo-bgColor $color-alertInfo-colorBorder $color-alertInfo-textColor,
+  danger $color-alertDanger-leftBgColor $color-alertDanger-bgColor $color-alertDanger-colorBorder $color-alertDanger-textColor,
+  error $color-alertError-leftBgColor $color-alertError-bgColor $color-alertError-colorBorder $color-alertError-textColor
+);
+
+.af {
+  &-notifications {
+    position: fixed;
+    height: 100vh;
+    width: 400px;
+    background: rgba(0, 0, 0, 0);
+    padding: 1rem;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    &--open {
+      animation: 0.5s cubic-bezier(0.08, 0.82, 0.17, 1) forwards slideToLeft;
+    }
+  }
+  &-alert--notification {
+    overflow: hidden;
+    max-height: 300px;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease-out, max-height 0.3s ease-out 0.3s, margin 0.3s ease-out 0.3s;
+    opacity: 1;
+    &.af-alert--hide {
+      opacity: 0;
+      max-height: 0;
+      margin: 0;
+    }
+    .af-alert {
+      &__title-icon {
+        background-color: inherit;
+        min-width: inherit;
+        padding: 0 0 0 1rem;
+        &:after {
+          display: none;
+        }
+      }
+      &__title-text {
+        padding: 0.9375rem 1.5rem 0.9375rem 1rem;
+        font-size: 1rem;
+        color: $color-texte;
+      }
+      &__content {
+        line-height: 0.9rem;
+        font-size: 0.9rem;
+        .af-alert__content__left {
+          background: inherit;
+          width: 1rem;
+          min-width: 1rem;
+          margin-left: 1rem;
+        }
+        &__right {
+          color: $color-texte;
+        }
+      }
+    }
+  }
+  &-alert {
+    @each $typeLite in $typesLite {
+      &--#{nth($typeLite, 1)}.af-alert--notification {
+        border: 0;
+        border-left: 2px solid nth($typeLite, 2);
+        .af-alert {
+          &__title-icon {
+            .glyphicon {
+              color: nth($typeLite, 2);
+            }
+          }
+        }
+      }
+    }
+  }
+}

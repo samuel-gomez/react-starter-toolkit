@@ -1,0 +1,25 @@
+{
+  "apiUrl": "http://localhost:36548/api/v1.0/",
+  "baseUrl": "",
+  "fetchConfig": {
+    "crossDomain": true,
+    "withCredentials": true,
+    "method": "GET",
+    "Access-Control-Allow-Origin": "*",
+    "headers": {
+      "accept": "application/json"
+    }
+  },
+  "oidc": {
+    "isEnabled": true,
+    "client_id": "interactive.public",
+    "redirect_uri": "http://localhost:3000/authentication/callback",
+    "response_type": "code",
+    "post_logout_redirect_uri": "http://localhost:3000/",
+    "scope": "openid profile email api offline_access",
+    "authority": "https://demo.identityserver.io",
+    "silent_redirect_uri": "http://localhost:3000/authentication/silent_callback",
+    "automaticSilentRenew": true,
+    "loadUserInfo": true
+  }
+}

@@ -1,0 +1,8 @@
+$width-column: 400px !default;
+$width-transformation: 240px !default;
+$height-transformation: 75px !default;
+$left-transformation: ($width-column / 2) - ($width-transformation / 2);
+$max-workflow-columns: 10;
+$max-workflow-transformations: 30;
+$color-first-column: #d2d2ff;
+$color-column-container: #f2f1ff;

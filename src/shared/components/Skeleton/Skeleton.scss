@@ -1,0 +1,19 @@
+.af-skeleton {
+  display: inline-block;
+  height: 47px;
+  flex: 0 0 300px;
+  background: linear-gradient(-45deg, #ecebf1 40%, #f2f1f5 50%, #ecebf1 60%);
+  background-size: 400% 400%;
+  animation: pulse 0.5s ease-in infinite;
+  padding-left: 0;
+  margin-left: 15px;
+}
+
+@keyframes pulse {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: -100% 0%;
+  }
+}

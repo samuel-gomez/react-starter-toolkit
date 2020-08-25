@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotificationsEnhanced Render <NotificationsEnhanced/> 1`] = `
+<DocumentFragment>
+  <aside
+    class=""
+  />
+</DocumentFragment>
+`;
+
+exports[`NotificationsEnhanced Render <NotificationsEnhanced/> with notifications 1`] = `
+<DocumentFragment>
+  <aside
+    class=""
+  >
+    <div
+      class="af-alert af-alert--notification af-alert--error"
+    >
+      <button
+        class="af-alert__icon-close"
+      >
+        <i
+          class="glyphicon glyphicon-close"
+        />
+      </button>
+      <div
+        class="af-alert__title"
+      >
+        <div
+          class="af-alert__title-icon"
+        >
+          <i
+            class="glyphicon glyphicon-minus-sign"
+          />
+        </div>
+        <div
+          class="af-alert__title-text"
+        >
+          label
+        </div>
+      </div>
+    </div>
+  </aside>
+</DocumentFragment>
+`;

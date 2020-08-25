@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MembersLineEnhanced /> Should render MembersLineEnhanced 1`] = `
+<DocumentFragment>
+  <tr
+    class="af-table__tr"
+  >
+    <td
+      class="af-table__cell"
+    >
+      Samuel
+    </td>
+    <td
+      class="af-table__cell"
+    >
+      Gomez
+    </td>
+    <td
+      class="af-table__cell"
+    >
+      1985-10-20T13:44:20.540000
+    </td>
+    <td
+      class="af-table__cell"
+    >
+      PP
+    </td>
+  </tr>
+</DocumentFragment>
+`;

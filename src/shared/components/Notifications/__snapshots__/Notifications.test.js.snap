@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Notifications Render <Notifications/> 1`] = `
+<DocumentFragment>
+  <aside
+    class="af-notifications"
+  />
+</DocumentFragment>
+`;
+
+exports[`Notifications Should contain Notification when array notifications is NOT empty 1`] = `
+<DocumentFragment>
+  <aside
+    class="af-notifications"
+  >
+    <div
+      class="af-alert af-alert--notification af-alert--error"
+    >
+      <button
+        class="af-alert__icon-close"
+      >
+        <i
+          class="glyphicon glyphicon-close"
+        />
+      </button>
+      <div
+        class="af-alert__title"
+      >
+        <div
+          class="af-alert__title-icon"
+        >
+          <i
+            class="glyphicon glyphicon-minus-sign"
+          />
+        </div>
+        <div
+          class="af-alert__title-text"
+        >
+          titleerror
+        </div>
+      </div>
+    </div>
+  </aside>
+</DocumentFragment>
+`;
