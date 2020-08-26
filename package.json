@@ -6,16 +6,18 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "cover": "npm t -- --coverage",
+    "test:sonar": "react-scripts test --testResultsProcessor ./node_modules/jest-sonar-reporter",
+    "cover": "npm t -- --coverage --watchAll",
     "storybook": "start-storybook -p 9009 -s .storybook",
     "lint": "./node_modules/.bin/eslint ./src/ --ignore-pattern \"**/*.test.js\" --ignore-pattern \"**/*.steps.js\"",
-    "lint:fix": "npm run lint --fix"
+    "lint:fix": "npm run lint --fix",
+    "precommit": "npm run lint:fix && git add ."
   },
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "",
-      "pre-push": ""
+      "pre-commit": "npm run precommit",
+      "pre-push": "npm run cover -- -u"
     }
   },
   "dependencies": {
@@ -77,6 +79,11 @@
       "@commitlint/config-conventional"
     ]
   },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
@@ -94,6 +101,12 @@
   },
   "rootDir": "./",
   "jest": {
+    "coverageReporters": [
+      "json",
+      "lcov",
+      "text",
+      "clover"
+    ],
     "collectCoverageFrom": [
       "<rootDir>/src/**/*.{js,jsx,mjs}",
       "!<rootDir>/src/**/index.js",

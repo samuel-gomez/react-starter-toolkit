@@ -3,7 +3,6 @@ import { BrowserRouter as Router, MemoryRouter } from 'react-router-dom';
 import { render } from '@testing-library/react';
 import Environment from 'App/Environment';
 /* import MembersPage from 'Members';
-import PageNotFound from 'NotFound';
 import { renderLayoutMembers } from './Routes'; */
 import Routes from '.';
 
