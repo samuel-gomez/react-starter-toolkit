@@ -11,7 +11,7 @@
     }
   },
   "oidc": {
-    "isEnabled": true,
+    "isEnabled": false,
     "client_id": "interactive.public",
     "redirect_uri": "https://react-starter-toolkit.netlify.app/authentication/callback",
     "response_type": "code",

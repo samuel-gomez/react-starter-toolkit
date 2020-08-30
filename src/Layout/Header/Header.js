@@ -12,9 +12,21 @@ export const HeaderInfo = ({ isLoaded, children }) => (isLoaded ? <>{children}</
 
 export const HeaderInfoWithClassModifier = withClassModifier(HeaderInfo);
 
+
+const onSignIn = googleUser => {
+  const {getId, getName, getImageUrl, getEmail } = googleUser.getBasicProfile();
+  console.log(`ID: ${getId()}`);
+  console.log(`Name: ${getName()}`);
+  console.log(`Image UR: ${getImageUrl()}`);
+  console.log(`Email: ${getEmail()}`); 
+}
+
+
 export const HeaderApp = ({ infos, title, link, authName, authRole, anomaly }) => (
   <Header>
     <Name title={title} img={logo} alt={title} />
+    <div className="g-signin2" data-onsuccess={onSignIn} />
+
     {infos && (
       <Resilience anomaly={anomaly} resilienceModifier="simple infos">
         <HeaderInfoWithClassModifier isLoaded={infos.length > 0}>
