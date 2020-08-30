@@ -6,6 +6,7 @@ import withClassModifier from '@axa-fr/react-toolkit-core/dist/withClassModifier
 import Skeleton from 'shared/components/Skeleton';
 import Resilience from 'shared/components/Resilience/Resilience';
 import withAuthentication from 'shared/hoc/withAuthentication';
+import { Empty } from 'shared/components/Resilience/ResilienceSubstitut/ResilienceSubstitut';
 import './Header.scss';
 
 export const HeaderInfo = ({ isLoaded, children }) => (isLoaded ? <>{children}</> : <Skeleton classModifier="info" />);
@@ -26,7 +27,9 @@ export const HeaderApp = ({ infos, title, link, authName, authRole, anomaly }) =
   <Header>
     <Name title={title} img={logo} alt={title} />
     
-    <div className="g-signin2" data-onsuccess="onSignIn()"/>
+    <div className="g-signin2" >
+      <Empty data-onsuccess={onSignIn} />
+    </div>
 
     {infos && (
       <Resilience anomaly={anomaly} resilienceModifier="simple infos">
