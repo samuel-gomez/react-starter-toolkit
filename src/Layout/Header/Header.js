@@ -25,7 +25,8 @@ const onSignIn = googleUser => {
 export const HeaderApp = ({ infos, title, link, authName, authRole, anomaly }) => (
   <Header>
     <Name title={title} img={logo} alt={title} />
-    <div className="g-signin2" data-onsuccess={onSignIn} />
+    
+    <div className="g-signin2" data-onsuccess="onSignIn()"/>
 
     {infos && (
       <Resilience anomaly={anomaly} resilienceModifier="simple infos">

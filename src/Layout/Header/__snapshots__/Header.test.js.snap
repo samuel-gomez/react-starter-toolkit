@@ -35,6 +35,10 @@ exports[`<Header/> Render <Header/> 1`] = `
           </h2>
         </div>
         <div
+          class="g-signin2"
+          data-onsuccess="onSignIn()"
+        />
+        <div
           class="af-info-user"
         >
           <a
