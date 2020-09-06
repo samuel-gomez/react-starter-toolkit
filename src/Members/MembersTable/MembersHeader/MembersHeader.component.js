@@ -4,16 +4,15 @@ import PropTypes from 'prop-types';
 import { Table } from '@axa-fr/react-toolkit-all';
 import { NONE, DESCENDING, ASCENDING } from 'shared/constants';
 import { TABLE_HEADERS_MEMBERS } from 'Members/constants';
-import TableTh from './TableTh';
-import { toggleSorting } from './Header.helper';
+import MembersHeaderTh from './MembersHeaderTh';
 
 const TableHeader = ({ onSort, sorting, sortingInfo }) => (
   <Table.Header>
     <Table.Tr className="af-table__tr">
-      {TABLE_HEADERS_MEMBERS.map(({ field, label }) => (
-        <TableTh key={field} order={sortingInfo[field]} sort={() => onSort(toggleSorting(field, sorting))} sortable={Boolean(field)}>
+      {TABLE_HEADERS_MEMBERS.map(({ field, label, id }) => (
+        <MembersHeaderTh key={id} sorting={sorting} sortingInfo={sortingInfo} field={field} onSort={onSort}>
           {label}
-        </TableTh>
+        </MembersHeaderTh>
       ))}
     </Table.Tr>
   </Table.Header>

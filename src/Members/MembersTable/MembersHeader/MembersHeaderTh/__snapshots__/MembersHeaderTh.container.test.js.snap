@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MembersHeaderThEnhanced /> Should render MembersHeaderThEnhanced with no sortable button 1`] = `
+<DocumentFragment>
+  <th
+    class="af-table__th"
+    role="columnheader"
+  >
+    No sortable
+  </th>
+</DocumentFragment>
+`;
+
+exports[`<MembersHeaderThEnhanced /> Should render MembersHeaderThEnhanced with sortable button for firstname column 1`] = `
+<DocumentFragment>
+  <th
+    class="af-table__th af-table__th--sortable af-table__th--active"
+    role="button"
+  >
+    <button
+      class="af-btn af-btn--table-sorting af-btn--table-sorting--active"
+      type="button"
+    >
+      sortable
+      <span
+        class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-arrow-xs-up"
+      />
+    </button>
+  </th>
+</DocumentFragment>
+`;

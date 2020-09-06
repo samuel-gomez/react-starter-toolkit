@@ -10,7 +10,7 @@ import {
   setMembersError,
   setMembersSuccess,
 } from './Members.hook';
-import { FETCH_MEMBERS_INIT, FETCH_MEMBERS_FAILURE, FETCH_MEMBERS_SUCCESS } from './constants';
+import { FETCH_MEMBERS_INIT, FETCH_MEMBERS_FAILURE, FETCH_MEMBERS_SUCCESS, FETCH_MEMBERS_ORDER } from './constants';
 
 const membersMock = [
   {
@@ -191,6 +191,30 @@ describe('dataFetchReducer', () => {
     expect(result).toEqual(expected);
   });
 
+  it('Should return state with isLoading true and sorting new state when type = FETCH_MEMBERS_ORDER', () => {
+    const state = {
+      value: 'value',
+    };
+    const type = FETCH_MEMBERS_ORDER;
+
+    const result = dataFetchReducer(state, {
+      type,
+      payload: {
+        field: 'lastname',
+        order: 1,
+      },
+    });
+    const expected = {
+      value: 'value',
+      isLoading: true,
+      sorting: {
+        field: 'lastname',
+        order: 1,
+      },
+    };
+    expect(result).toEqual(expected);
+  });
+
   it('Should return throw error when type = other', () => {
     const state = {
       value: 'value',
@@ -211,9 +235,19 @@ describe('useMembers', () => {
   const findMembersMock = jest.fn();
 
   const defaultUseMembersParams = {
-    initState: {
+    initStateCt: {
       isLoading: false,
-      optionsProcessus: [],
+      members: [],
+      anomaly: null,
+      sorting: {
+        field: '',
+        order: 'NONE',
+      },
+      filters: {
+        numberItems: 10,
+        currentPage: 1,
+        numberPages: 1,
+      },
     },
     fetchCustom: fetchMock,
     fetchDataFn: fetchDataMock,
@@ -223,7 +257,21 @@ describe('useMembers', () => {
 
   it('Should update stateMembers when useMembers called', () => {
     const { result } = renderHook(() => useMembers(defaultUseMembersParams));
-    const expected = { isLoading: false, optionsProcessus: [], setHideStudy: result.current.setHideStudy };
+    const expected = {
+      isLoading: false,
+      members: [],
+      anomaly: null,
+      sorting: {
+        field: '',
+        order: 'NONE',
+      },
+      filters: {
+        numberItems: 10,
+        currentPage: 1,
+        numberPages: 1,
+      },
+      onChangeOrder: result.current.onChangeOrder,
+    };
     act(() => {
       expect(result.current).toEqual(expected);
       expect(fetchDataMock).toBeCalled();

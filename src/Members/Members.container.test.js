@@ -30,8 +30,14 @@ describe('Component <MembersEnhanced />', () => {
           firstname: 'Samuel',
           lastname: 'Gomez',
           birthdate: '20/10/1985',
+          sexe: 'M',
         },
       ],
+      onChangeOrder: () => {},
+      sorting: {
+        field: '',
+        order: 'NONE',
+      },
     }));
     act(() => {
       const { asFragment } = render(<MembersEnhanced {...defaultProps} useMembersFn={useMembersMock} />);

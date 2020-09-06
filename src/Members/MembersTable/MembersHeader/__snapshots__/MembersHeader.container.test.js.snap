@@ -1,0 +1,62 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MembersHeaderEnhanced /> Should render MembersHeaderEnhanced 1`] = `
+<DocumentFragment>
+  <thead
+    class="af-table-thead"
+  >
+    <tr
+      class="af-table__tr"
+    >
+      <th
+        class="af-table__th af-table__th--sortable"
+        role="button"
+      >
+        <button
+          class="af-btn af-btn--table-sorting"
+          type="button"
+        >
+          Prénom
+          <span
+            class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-sorting"
+          />
+        </button>
+      </th>
+      <th
+        class="af-table__th af-table__th--sortable"
+        role="button"
+      >
+        <button
+          class="af-btn af-btn--table-sorting"
+          type="button"
+        >
+          Nom
+          <span
+            class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-sorting"
+          />
+        </button>
+      </th>
+      <th
+        class="af-table__th af-table__th--sortable"
+        role="button"
+      >
+        <button
+          class="af-btn af-btn--table-sorting"
+          type="button"
+        >
+          Date de naissance
+          <span
+            class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-sorting"
+          />
+        </button>
+      </th>
+      <th
+        class="af-table__th"
+        role="columnheader"
+      >
+        Sexe
+      </th>
+    </tr>
+  </thead>
+</DocumentFragment>
+`;

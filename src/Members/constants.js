@@ -7,8 +7,8 @@ export const FETCH_MEMBERS_FAILURE = 'FETCH_MEMBERS_FAILURE';
 export const FETCH_MEMBERS_ORDER = 'FETCH_MEMBERS_ORDER';
 
 export const TABLE_HEADERS_MEMBERS = [
-  { label: 'Prénom', field: 'firstname' },
-  { label: 'Nom', field: 'lastname' },
-  { label: 'Date de naissance', field: 'birthdate' },
-  { label: 'Sexe', field: 'sexe' },
+  { label: 'Prénom', field: 'firstname', id: 'firstname' },
+  { label: 'Nom', field: 'lastname', id: 'lastname' },
+  { label: 'Date de naissance', field: 'birthdate', id: 'birthdate' },
+  { label: 'Sexe', id: 'sexe' },
 ];

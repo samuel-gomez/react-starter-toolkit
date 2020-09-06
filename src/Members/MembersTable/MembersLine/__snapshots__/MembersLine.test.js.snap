@@ -22,7 +22,9 @@ exports[`<MembersLine/> Should render MembersLine 1`] = `
     </td>
     <td
       class="af-table__cell"
-    />
+    >
+      M
+    </td>
   </tr>
 </DocumentFragment>
 `;
