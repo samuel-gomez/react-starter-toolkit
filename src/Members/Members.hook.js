@@ -1,9 +1,25 @@
-import { useEffect, useReducer } from 'react';
+import { useEffect, useReducer, useCallback } from 'react';
 import moment from 'moment';
-import { get, orderBy } from 'lodash';
+import { get } from 'lodash';
+import { NONE } from 'shared/constants';
 import fetchData from 'shared/helpers/fetchData';
 import findMembers from './Members.service';
-import { FETCH_MEMBERS_INIT, FETCH_MEMBERS_SUCCESS, FETCH_MEMBERS_FAILURE } from './constants';
+import { FETCH_MEMBERS_INIT, FETCH_MEMBERS_SUCCESS, FETCH_MEMBERS_FAILURE, FETCH_MEMBERS_ORDER } from './constants';
+
+const initState = {
+  isLoading: false,
+  members: [],
+  anomaly: null,
+  sorting: {
+    field: '',
+    order: NONE,
+  },
+  filters: {
+    numberItems: 10,
+    currentPage: 1,
+    numberPages: 1,
+  },
+};
 
 export const computeInfos = ({ members = [], getFn = get, momentFn = moment }) =>
   members.map(member => ({
@@ -16,11 +32,11 @@ export const setStateMembersLoading = ({ state }) => ({
   isLoading: true,
 });
 
-export const setStateMembersSuccess = ({ state, payload, computeInfosFn = computeInfos, orderByFn = orderBy }) => ({
+export const setStateMembersSuccess = ({ state, payload, computeInfosFn = computeInfos }) => ({
   ...state,
   isLoading: false,
   members: computeInfosFn({
-    members: orderByFn(payload.members.responseBody, ['created'], ['desc']),
+    members: payload.members.responseBody,
   }),
 });
 
@@ -28,6 +44,15 @@ export const setStateMembersFailure = ({ state, payload }) => ({
   ...state,
   isLoading: false,
   anomaly: payload.members,
+});
+
+export const setStateMembersOrder = ({ state, payload }) => ({
+  ...state,
+  sorting: {
+    ...state.sorting,
+    ...payload,
+  },
+  isLoading: true,
 });
 
 export const dataFetchReducer = (
@@ -38,6 +63,7 @@ export const dataFetchReducer = (
     setStateMembersLoadingFn = setStateMembersLoading,
     setStateMembersSuccessFn = setStateMembersSuccess,
     setStateMembersFailureFn = setStateMembersFailure,
+    setStateMembersOrderFn = setStateMembersOrder,
   },
 ) => {
   switch (type) {
@@ -45,6 +71,8 @@ export const dataFetchReducer = (
       return setStateMembersLoadingFn({ state });
     case FETCH_MEMBERS_SUCCESS:
       return setStateMembersSuccessFn({ state, payload });
+    case FETCH_MEMBERS_ORDER:
+      return setStateMembersOrderFn({ state, payload });
     case FETCH_MEMBERS_FAILURE:
       return setStateMembersFailureFn({ state, payload });
     default:
@@ -55,18 +83,25 @@ export const dataFetchReducer = (
 export const setMembersInit = dispatch => () => dispatch({ type: FETCH_MEMBERS_INIT });
 export const setMembersError = dispatch => payload => dispatch({ type: FETCH_MEMBERS_FAILURE, payload });
 export const setMembersSuccess = dispatch => payload => dispatch({ type: FETCH_MEMBERS_SUCCESS, payload });
+export const setMembersOrder = dispatch => payload => dispatch({ type: FETCH_MEMBERS_ORDER, payload });
 
 export const useMembers = ({
-  initState,
   fetchCustom,
+  initStateCt = initState,
   fetchDataFn = fetchData,
   dataFetchReducerFn = dataFetchReducer,
   findMembersFn = findMembers,
   setMembersInitFn = setMembersInit,
   setMembersErrorFn = setMembersError,
   setMembersSuccessFn = setMembersSuccess,
+  setMembersOrderFn = setMembersOrder,
 }) => {
-  const [stateMembers, dispatch] = useReducer(dataFetchReducerFn, initState);
+  const [stateMembers, dispatch] = useReducer(dataFetchReducerFn, initStateCt);
+  const {
+    sorting: { field, order },
+  } = stateMembers;
+
+  const onChangeOrder = useCallback(sorting => setMembersOrderFn(dispatch)(sorting), [setMembersOrderFn]);
 
   useEffect(() => {
     fetchDataFn({
@@ -77,10 +112,14 @@ export const useMembers = ({
       fetchServices: {
         members: {
           service: findMembersFn,
+          args: {
+            field,
+            order,
+          },
         },
       },
     });
-  }, [fetchCustom, fetchDataFn, findMembersFn, setMembersErrorFn, setMembersInitFn, setMembersSuccessFn]);
+  }, [fetchCustom, fetchDataFn, field, findMembersFn, order, setMembersErrorFn, setMembersInitFn, setMembersSuccessFn]);
 
-  return { ...stateMembers };
+  return { ...stateMembers, onChangeOrder };
 };

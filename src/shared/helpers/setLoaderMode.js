@@ -1,5 +1,3 @@
-import { isEmpty } from 'lodash';
-
-const setLoaderMode = (isLoading, items, LoaderModes) => (isLoading && isEmpty(items) ? LoaderModes.get : LoaderModes.none);
+const setLoaderMode = ({ isLoading, LoaderModes }) => (isLoading ? LoaderModes.get : LoaderModes.none);
 
 export default setLoaderMode;

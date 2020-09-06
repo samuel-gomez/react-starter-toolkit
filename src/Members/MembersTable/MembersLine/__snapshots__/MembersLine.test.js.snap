@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<MembersLineEnhanced /> Should render MembersLineEnhanced 1`] = `
+exports[`<MembersLine/> Should render MembersLine 1`] = `
 <DocumentFragment>
   <tr
     class="af-table__tr"
@@ -22,9 +22,7 @@ exports[`<MembersLineEnhanced /> Should render MembersLineEnhanced 1`] = `
     </td>
     <td
       class="af-table__cell"
-    >
-      PP
-    </td>
+    />
   </tr>
 </DocumentFragment>
 `;
