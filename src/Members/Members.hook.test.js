@@ -10,7 +10,7 @@ import {
   setMembersError,
   setMembersSuccess,
 } from './Members.hook';
-import { FETCH_MEMBERS_INIT, FETCH_MEMBERS_FAILURE, FETCH_MEMBERS_SUCCESS, FETCH_MEMBERS_ORDER } from './constants';
+import { FETCH_MEMBERS } from './constants';
 
 const membersMock = [
   {
@@ -135,7 +135,7 @@ describe('dataFetchReducer', () => {
     const state = {
       value: 'value',
     };
-    const type = FETCH_MEMBERS_INIT;
+    const type = FETCH_MEMBERS.INIT;
 
     const result = dataFetchReducer(state, { type });
     const expected = {
@@ -149,7 +149,7 @@ describe('dataFetchReducer', () => {
     const state = {
       value: 'value',
     };
-    const type = FETCH_MEMBERS_FAILURE;
+    const type = FETCH_MEMBERS.FAILURE;
 
     const result = dataFetchReducer(state, { type, payload: { members: 'error' } });
     const expected = {
@@ -164,7 +164,7 @@ describe('dataFetchReducer', () => {
     const state = {
       value: 'value',
     };
-    const type = FETCH_MEMBERS_SUCCESS;
+    const type = FETCH_MEMBERS.SUCCESS;
 
     const result = dataFetchReducer(state, {
       type,
@@ -195,7 +195,7 @@ describe('dataFetchReducer', () => {
     const state = {
       value: 'value',
     };
-    const type = FETCH_MEMBERS_ORDER;
+    const type = FETCH_MEMBERS.ORDER;
 
     const result = dataFetchReducer(state, {
       type,

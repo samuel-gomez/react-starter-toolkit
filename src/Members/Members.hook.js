@@ -4,7 +4,7 @@ import { get } from 'lodash';
 import { NONE } from 'shared/constants';
 import fetchData from 'shared/helpers/fetchData';
 import findMembers from './Members.service';
-import { FETCH_MEMBERS_INIT, FETCH_MEMBERS_SUCCESS, FETCH_MEMBERS_FAILURE, FETCH_MEMBERS_ORDER } from './constants';
+import { FETCH_MEMBERS } from './constants';
 
 const initState = {
   isLoading: false,
@@ -67,23 +67,23 @@ export const dataFetchReducer = (
   },
 ) => {
   switch (type) {
-    case FETCH_MEMBERS_INIT:
+    case FETCH_MEMBERS.INIT:
       return setStateMembersLoadingFn({ state });
-    case FETCH_MEMBERS_SUCCESS:
+    case FETCH_MEMBERS.SUCCESS:
       return setStateMembersSuccessFn({ state, payload });
-    case FETCH_MEMBERS_ORDER:
+    case FETCH_MEMBERS.ORDER:
       return setStateMembersOrderFn({ state, payload });
-    case FETCH_MEMBERS_FAILURE:
+    case FETCH_MEMBERS.FAILURE:
       return setStateMembersFailureFn({ state, payload });
     default:
       return state;
   }
 };
 
-export const setMembersInit = dispatch => () => dispatch({ type: FETCH_MEMBERS_INIT });
-export const setMembersError = dispatch => payload => dispatch({ type: FETCH_MEMBERS_FAILURE, payload });
-export const setMembersSuccess = dispatch => payload => dispatch({ type: FETCH_MEMBERS_SUCCESS, payload });
-export const setMembersOrder = dispatch => payload => dispatch({ type: FETCH_MEMBERS_ORDER, payload });
+export const setMembersInit = dispatch => () => dispatch({ type: FETCH_MEMBERS.INIT });
+export const setMembersError = dispatch => payload => dispatch({ type: FETCH_MEMBERS.FAILURE, payload });
+export const setMembersSuccess = dispatch => payload => dispatch({ type: FETCH_MEMBERS.SUCCESS, payload });
+export const setMembersOrder = dispatch => payload => dispatch({ type: FETCH_MEMBERS.ORDER, payload });
 
 export const useMembers = ({
   fetchCustom,

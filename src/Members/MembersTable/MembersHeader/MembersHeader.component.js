@@ -6,10 +6,10 @@ import { NONE, DESCENDING, ASCENDING } from 'shared/constants';
 import { TABLE_HEADERS_MEMBERS } from 'Members/constants';
 import MembersHeaderTh from './MembersHeaderTh';
 
-const TableHeader = ({ onSort, sorting, sortingInfo }) => (
+const TableHeader = ({ onSort, sorting, sortingInfo, headers = TABLE_HEADERS_MEMBERS }) => (
   <Table.Header>
     <Table.Tr className="af-table__tr">
-      {TABLE_HEADERS_MEMBERS.map(({ field, label, id }) => (
+      {headers.map(({ field, label, id }) => (
         <MembersHeaderTh key={id} sorting={sorting} sortingInfo={sortingInfo} field={field} onSort={onSort}>
           {label}
         </MembersHeaderTh>
