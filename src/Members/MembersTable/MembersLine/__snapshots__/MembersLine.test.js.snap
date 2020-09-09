@@ -23,7 +23,7 @@ exports[`<MembersLine/> Should render MembersLine 1`] = `
     <td
       class="af-table__cell"
     >
-      PP
+      M
     </td>
   </tr>
 </DocumentFragment>

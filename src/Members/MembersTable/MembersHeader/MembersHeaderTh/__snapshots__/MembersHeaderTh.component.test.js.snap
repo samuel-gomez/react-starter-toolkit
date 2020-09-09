@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MembersHeaderTh/> Should render MembersHeaderTh with Hello text 1`] = `
+<DocumentFragment>
+  <th
+    class="af-table__th"
+    role="columnheader"
+  >
+    Hello
+  </th>
+</DocumentFragment>
+`;
+
+exports[`<MembersHeaderThSortable /> Should render MembersHeaderThSortable with Hello text 1`] = `
+<DocumentFragment>
+  <th
+    class="af-table__th af-table__th--sortable af-table__th--active"
+    role="button"
+  >
+    <button
+      class="af-btn af-btn--table-sorting af-btn--table-sorting--active"
+      type="button"
+    >
+      Hello
+      <span
+        role="img"
+      >
+        ♛
+      </span>
+    </button>
+  </th>
+</DocumentFragment>
+`;

@@ -7,31 +7,22 @@ import { useNotifications } from 'shared/components/Notifications';
 import Members from './Members';
 import { useMembers } from './Members.hook';
 
-export const MembersContext = React.createContext();
-export const MembersProvider = MembersContext.Provider;
-
-const initState = {
-  isLoading: false,
-  members: [],
-  anomaly: null,
-};
+export const MembersContext = React.createContext({ onchangeOrder: () => {}, sorting: {}, addNotification: () => {}, stateNotifications: [] });
+const { Provider: MembersProvider } = MembersContext;
 
 export const MembersEnhanced = ({ useMembersFn, fetch, ...rest }) => {
-  const { anomaly, isLoading, members, setHideStudy } = useMembersFn({
-    initState,
+  const { anomaly, isLoading, members, onChangeOrder, sorting } = useMembersFn({
     fetchCustom: fetch,
   });
 
   const { addNotification, onDeleteNotification, stateNotifications } = useNotifications();
 
   return (
-    <MembersProvider value={{ addNotification, stateNotifications }}>
+    <MembersProvider value={{ onChangeOrder, sorting, addNotification, stateNotifications }}>
       <Members
         {...rest}
         members={members}
-        loaderMode={setLoaderMode(isLoading, members, LoaderModes)}
-        fetch={fetch}
-        setHideStudy={setHideStudy}
+        loaderMode={setLoaderMode({ isLoading, LoaderModes })}
         anomaly={anomaly}
         deleteNotification={onDeleteNotification}
         notifications={stateNotifications}

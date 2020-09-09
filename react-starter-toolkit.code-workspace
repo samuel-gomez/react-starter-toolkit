@@ -1,0 +1,18 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "sonarlint.connectedMode.project": {
+      "serverId": "356E71EE-AWMGd8aDxvesvDcZUyNu",
+      "projectKey": "riskmanagement.ifrs-oasis-front"
+    },
+    "workbench.colorCustomizations": {
+      "activityBar.background": "#013435",
+      "titleBar.activeBackground": "#02484A",
+      "titleBar.activeForeground": "#E8FEFF"
+    }
+  }
+}

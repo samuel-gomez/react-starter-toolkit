@@ -29,10 +29,10 @@ defineFeature(feature, test => {
           members={[
             {
               _id: '00001',
-              type: 'PP',
               firstname: 'Samuel',
               lastname: 'Gomez',
               birthdate: '20/10/1985',
+              sexe: 'M',
             },
           ]}
         />,
@@ -44,12 +44,12 @@ defineFeature(feature, test => {
     });
 
     then('le tableau présente 3 colonnes dans l’ordre suivant : ’Nom’, ‘Prénom’, ‘Date de naissance’, ‘type’', () => {
-      expect($.container.querySelector('thead.af-table__thead')).toBeInTheDocument();
+      expect($.container.querySelector('thead.af-table-thead')).toBeInTheDocument();
       expect($.container.querySelector('tr.af-table__tr')).toBeInTheDocument();
-      expect($.container.querySelector('th.af-table__th:nth-child(1)')).toHaveTextContent(/Nom/i);
-      expect($.container.querySelector('th.af-table__th:nth-child(2)')).toHaveTextContent(/Prénom/i);
+      expect($.container.querySelector('th.af-table__th:nth-child(1)')).toHaveTextContent(/Prénom/i);
+      expect($.container.querySelector('th.af-table__th:nth-child(2)')).toHaveTextContent(/Nom/i);
       expect($.container.querySelector('th.af-table__th:nth-child(3)')).toHaveTextContent(/Date de naissance/i);
-      expect($.container.querySelector('th.af-table__th:nth-child(4)')).toHaveTextContent(/Type/i);
+      expect($.container.querySelector('th.af-table__th:nth-child(4)')).toHaveTextContent(/Sexe/i);
     });
 
     then(
@@ -60,7 +60,7 @@ defineFeature(feature, test => {
         expect($.container.querySelector('td.af-table__cell:nth-child(1)')).toHaveTextContent(/Samuel/i);
         expect($.container.querySelector('td.af-table__cell:nth-child(2)')).toHaveTextContent(/Gomez/i);
         expect($.container.querySelector('td.af-table__cell:nth-child(3)')).toHaveTextContent(/20\/10\/1985/i);
-        expect($.container.querySelector('td.af-table__cell:nth-child(4)')).toHaveTextContent(/PP/i);
+        expect($.container.querySelector('td.af-table__cell:nth-child(4)')).toHaveTextContent(/M/i);
       },
     );
   });
