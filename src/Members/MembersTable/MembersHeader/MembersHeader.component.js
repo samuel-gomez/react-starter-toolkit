@@ -5,7 +5,7 @@ import { Table } from '@axa-fr/react-toolkit-all';
 import { NONE, DESCENDING, ASCENDING } from 'shared/constants';
 import MembersHeaderTh from './MembersHeaderTh';
 
-const TableHeader = ({ onSort, sorting, sortingInfo, headers }) => (
+const MembersHeader = ({ onSort, sorting, sortingInfo, headers }) => (
   <Table.Header>
     <Table.Tr className="af-table__tr">
       {headers.map(({ field, label, id }) => (
@@ -22,11 +22,11 @@ const propTypes = {
   sorting: PropTypes.object,
   sortingInfo: PropTypes.objectOf(PropTypes.oneOf([NONE, ASCENDING, DESCENDING])),
   headers: PropTypes.arrayOf(
-    PropTypes.shape({ 
-      label: PropTypes.string.isRequired, 
-      field: PropTypes.string, 
-      id: PropTypes.string.isRequired
-    })
+    PropTypes.shape({
+      label: PropTypes.string.isRequired,
+      field: PropTypes.string,
+      id: PropTypes.string.isRequired,
+    }),
   ).isRequired,
 };
 
@@ -36,7 +36,7 @@ const defaultProps = {
   sortingInfo: {},
 };
 
-TableHeader.propTypes = propTypes;
-TableHeader.defaultProps = defaultProps;
+MembersHeader.propTypes = propTypes;
+MembersHeader.defaultProps = defaultProps;
 
-export default TableHeader;
+export default MembersHeader;

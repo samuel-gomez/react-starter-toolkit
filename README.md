@@ -1,4 +1,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c496aa9a-8801-4a32-9571-547bd4ea5ea3/deploy-status)](https://app.netlify.com/sites/react-starter-toolkit/deploys)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=samuel-gomez_react-starter-toolkit&metric=alert_status)](https://sonarcloud.io/dashboard?id=samuel-gomez_react-starter-toolkit)
+[![Reliability](https://sonarcloud.io/api/project_badges/measure?project=samuel-gomez_react-starter-toolkit&metric=reliability_rating)](https://sonarcloud.io/component_measures?id=samuel-gomez_react-starter-toolkit&metric=reliability_rating)
+[![Security](https://sonarcloud.io/api/project_badges/measure?project=samuel-gomez_react-starter-toolkit&metric=security_rating)](https://sonarcloud.io/component_measures?id=samuel-gomez_react-starter-toolkit&metric=security_rating)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
