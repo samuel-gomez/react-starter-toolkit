@@ -7,22 +7,20 @@ import { useNotifications } from 'shared/components/Notifications';
 import Members from './Members';
 import { useMembers } from './Members.hook';
 
-export const MembersContext = React.createContext({ onchangeOrder: () => {}, sorting: {}, addNotification: () => {}, stateNotifications: [] });
+export const MembersContext = React.createContext({ onchangeOrder: null, sorting: {}, addNotification: null, stateNotifications: [] });
 const { Provider: MembersProvider } = MembersContext;
 
-export const MembersEnhanced = ({ useMembersFn, fetch, ...rest }) => {
-  const { anomaly, isLoading, members, onChangeOrder, sorting } = useMembersFn({
-    fetchCustom: fetch,
-  });
+export const MembersEnhanced = ({ useMembersFn, useNotificationsFn, setLoaderModeFn, fetch, ...rest }) => {
+  const { anomaly, isLoading, members, onChangeOrder, stateSorting } = useMembersFn({ fetchCustom: fetch });
 
-  const { addNotification, onDeleteNotification, stateNotifications } = useNotifications();
+  const { addNotification, onDeleteNotification, stateNotifications } = useNotificationsFn();
 
   return (
-    <MembersProvider value={{ onChangeOrder, sorting, addNotification, stateNotifications }}>
+    <MembersProvider value={{ onChangeOrder, sorting: stateSorting, addNotification, stateNotifications }}>
       <Members
         {...rest}
         members={members}
-        loaderMode={setLoaderMode({ isLoading, LoaderModes })}
+        loaderMode={setLoaderModeFn({ isLoading, LoaderModes })}
         anomaly={anomaly}
         deleteNotification={onDeleteNotification}
         notifications={stateNotifications}
@@ -33,10 +31,14 @@ export const MembersEnhanced = ({ useMembersFn, fetch, ...rest }) => {
 
 MembersEnhanced.propTypes = {
   useMembersFn: PropTypes.func,
+  useNotificationsFn: PropTypes.func,
+  setLoaderModeFn: PropTypes.func,
 };
 
 MembersEnhanced.defaultProps = {
   useMembersFn: useMembers,
+  useNotificationsFn: useNotifications,
+  setLoaderModeFn: setLoaderMode,
 };
 
 export default withEnhancedCustomFetch(MembersEnhanced);

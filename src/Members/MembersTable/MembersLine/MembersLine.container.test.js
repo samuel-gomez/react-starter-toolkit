@@ -7,7 +7,7 @@ describe('<MembersLineEnhanced />', () => {
     const tbody = document.createElement('tbody');
     const defaultProps = {
       _id: '00001',
-      type: 'PP',
+      sexe: 'M',
       firstname: 'Samuel',
       lastname: 'Gomez',
       birthdate: '1985-10-20T13:44:20.540000',
