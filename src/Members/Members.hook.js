@@ -1,4 +1,4 @@
-import { useEffect, useReducer, useCallback } from 'react';
+import { useEffect, useReducer, useCallback, useState } from 'react';
 import moment from 'moment';
 import { get } from 'lodash';
 import { NONE } from 'shared/constants';
@@ -10,10 +10,6 @@ const initState = {
   isLoading: false,
   members: [],
   anomaly: null,
-  sorting: {
-    field: '',
-    order: NONE,
-  },
   filters: {
     numberItems: 10,
     currentPage: 1,
@@ -46,14 +42,6 @@ export const setStateMembersFailure = ({ state, payload }) => ({
   anomaly: payload.members,
 });
 
-export const setStateMembersOrder = ({ state, payload }) => ({
-  ...state,
-  sorting: {
-    ...state.sorting,
-    ...payload,
-  },
-  isLoading: true,
-});
 
 export const dataFetchReducer = (
   state,
@@ -63,7 +51,6 @@ export const dataFetchReducer = (
     setStateMembersLoadingFn = setStateMembersLoading,
     setStateMembersSuccessFn = setStateMembersSuccess,
     setStateMembersFailureFn = setStateMembersFailure,
-    setStateMembersOrderFn = setStateMembersOrder,
   },
 ) => {
   switch (type) {
@@ -71,8 +58,6 @@ export const dataFetchReducer = (
       return setStateMembersLoadingFn({ state });
     case FETCH_MEMBERS.SUCCESS:
       return setStateMembersSuccessFn({ state, payload });
-    case FETCH_MEMBERS.ORDER:
-      return setStateMembersOrderFn({ state, payload });
     case FETCH_MEMBERS.FAILURE:
       return setStateMembersFailureFn({ state, payload });
     default:
@@ -83,7 +68,6 @@ export const dataFetchReducer = (
 export const setMembersInit = dispatch => () => dispatch({ type: FETCH_MEMBERS.INIT });
 export const setMembersError = dispatch => payload => dispatch({ type: FETCH_MEMBERS.FAILURE, payload });
 export const setMembersSuccess = dispatch => payload => dispatch({ type: FETCH_MEMBERS.SUCCESS, payload });
-export const setMembersOrder = dispatch => payload => dispatch({ type: FETCH_MEMBERS.ORDER, payload });
 
 export const useMembers = ({
   fetchCustom,
@@ -94,14 +78,16 @@ export const useMembers = ({
   setMembersInitFn = setMembersInit,
   setMembersErrorFn = setMembersError,
   setMembersSuccessFn = setMembersSuccess,
-  setMembersOrderFn = setMembersOrder,
 }) => {
   const [stateMembers, dispatch] = useReducer(dataFetchReducerFn, initStateCt);
-  const {
-    sorting: { field, order },
-  } = stateMembers;
+  const [stateSorting, setStateSorting] = useState({
+    field: '',
+    order: NONE,
+  });
 
-  const onChangeOrder = useCallback(sorting => setMembersOrderFn(dispatch)(sorting), [setMembersOrderFn]);
+  const { field, order } = stateSorting;
+
+  const onChangeOrder = useCallback(sorting => setStateSorting(sorting), []);
 
   useEffect(() => {
     fetchDataFn({
@@ -121,5 +107,5 @@ export const useMembers = ({
     });
   }, [fetchCustom, fetchDataFn, field, findMembersFn, order, setMembersErrorFn, setMembersInitFn, setMembersSuccessFn]);
 
-  return { ...stateMembers, onChangeOrder };
+  return { ...stateMembers, onChangeOrder, stateSorting };
 };

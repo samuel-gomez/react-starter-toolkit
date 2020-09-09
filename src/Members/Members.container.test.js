@@ -34,7 +34,7 @@ describe('Component <MembersEnhanced />', () => {
         },
       ],
       onChangeOrder: () => {},
-      sorting: {
+      stateSorting: {
         field: '',
         order: 'NONE',
       },
