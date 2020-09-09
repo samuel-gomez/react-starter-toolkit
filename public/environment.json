@@ -1,5 +1,5 @@
 {
-  "apiUrl": "https://demo6519127.mockable.io/",
+  "apiUrl": "https://react-starter-toolkit-api.netlify.app/api/",
   "baseUrl": "https://react-starter-toolkit.netlify.app/",
   "fetchConfig": {
     "crossDomain": true,
