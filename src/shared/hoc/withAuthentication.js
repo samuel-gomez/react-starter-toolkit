@@ -16,14 +16,14 @@ export const getAuthUid = oidcUser => (!isEmpty(get(oidcUser, 'profile.axa_uid_r
  * MAAM gives us : "member_of": [ "CN=IFRS_OASIS_ADMIN"]
  * @param {Object} oidcUser
  */
-const extractDataFromOAuthToken = oidcUser => ({
+export const extractDataFromOAuthToken = oidcUser => ({
   authName: getAuthName(oidcUser),
   authAccessToken: getAuthAccessToken(oidcUser),
   authRole: getAuthRole(oidcUser),
   authUid: getAuthUid(oidcUser),
 });
 
-const withAuthentication = (useReactOidcFn = useReactOidc) => Component => props => {
+const withAuthentication = (Component, useReactOidcFn = useReactOidc) => props => {
   const { oidcUser } = useReactOidcFn();
   return <Component {...props} {...extractDataFromOAuthToken(oidcUser)} />;
 };

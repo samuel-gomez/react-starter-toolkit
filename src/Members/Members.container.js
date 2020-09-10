@@ -10,9 +10,8 @@ import { useMembers } from './Members.hook';
 export const MembersContext = React.createContext({ onchangeOrder: null, sorting: {}, addNotification: null, stateNotifications: [] });
 const { Provider: MembersProvider } = MembersContext;
 
-export const MembersEnhanced = ({ useMembersFn, useNotificationsFn, setLoaderModeFn, fetch, ...rest }) => {
-  const { anomaly, isLoading, members, onChangeOrder, stateSorting } = useMembersFn({ fetchCustom: fetch });
-
+export const MembersEnhanced = ({ useMembersFn, useNotificationsFn, setLoaderModeFn, fetchCustom, ...rest }) => {
+  const { anomaly, isLoading, members, onChangeOrder, stateSorting } = useMembersFn({ fetchCustom });
   const { addNotification, onDeleteNotification, stateNotifications } = useNotificationsFn();
 
   return (

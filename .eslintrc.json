@@ -28,7 +28,8 @@
       "error",
       2,
       {
-        "SwitchCase": 1
+        "SwitchCase": 1,
+        "ignoredNodes": ["TemplateLiteral"]
       }
     ],
     "react-hooks/rules-of-hooks": "error",
@@ -75,12 +76,7 @@
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       },
       "alias": {
-        "map": [
-          [
-            "@axa-fr/react-oidc-context",
-            "@axa-fr/react-oidc-context/dist/index.js"
-          ]
-        ],
+        "map": [["@axa-fr/react-oidc-context", "@axa-fr/react-oidc-context/dist/index.js"]],
         "extensions": [".ts", ".js", ".jsx", ".json"]
       }
     }

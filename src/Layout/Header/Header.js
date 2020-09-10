@@ -47,4 +47,4 @@ HeaderApp.defaultProps = {
   authRole: 'Profil',
 };
 
-export default withAuthentication()(HeaderApp);
+export default withAuthentication(HeaderApp);

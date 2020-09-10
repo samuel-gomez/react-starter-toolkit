@@ -1,1 +1,1 @@
-export { default, withEnvironment, EnvironmentProvider, fetchEnv, getFileEnv, useEnv } from './Environment';
+export { default, withEnvironment, EnvironmentProvider, useEnv } from './Environment';
