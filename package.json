@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "set PORT=8080 && react-scripts start",
-    "build": "react-scripts build && serve -s build",
+    "build": "react-scripts build",
     "build:local": "cross-env REACT_APP_NODE_ENV=production.local react-scripts build && serve -s build -p 5002",
     "test": "react-scripts test",
     "test:sonar": "react-scripts test --testResultsProcessor ./node_modules/jest-sonar-reporter",
