@@ -1,0 +1,25 @@
+{
+  "apiUrl": "https://react-starter-toolkit-api.netlify.app/api/",
+  "baseUrl": "http://localhost:5002/",
+  "fetchConfig": {
+    "crossDomain": true,
+    "withCredentials": true,
+    "method": "GET",
+    "Access-Control-Allow-Origin": "*",
+    "headers": {
+      "accept": "application/json"
+    }
+  },
+  "oidc": {
+    "isEnabled": false,
+    "client_id": "interactive.public",
+    "redirect_uri": "http://localhost:5002/authentication/callback",
+    "response_type": "code",
+    "post_logout_redirect_uri": "http://localhost:5002/",
+    "scope": "openid profile email api offline_access",
+    "authority": "https://demo.identityserver.io",
+    "silent_redirect_uri": "http://localhost:5002/authentication/silent_callback",
+    "automaticSilentRenew": true,
+    "loadUserInfo": true
+  }
+}
