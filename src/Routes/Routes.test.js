@@ -1,22 +1,23 @@
 import React from 'react';
 import { BrowserRouter as Router, MemoryRouter } from 'react-router-dom';
-import { render } from '@testing-library/react';
+import { render, act } from '@testing-library/react';
 import Environment from 'App/Environment';
-/* import MembersPage from 'Members';
-import { renderLayoutMembers } from './Routes'; */
+import MembersPage from 'Members';
+import { renderLayoutMembers } from './Routes';
 import Routes from '.';
 
 describe('Route', () => {
-  it('Should render Routes', () => {
-    const { asFragment } = render(
-      <Environment>
-        <Router>
-          <Routes />
-        </Router>
-      </Environment>,
-    );
-
-    expect(asFragment()).toMatchSnapshot();
+  it('Should render Routes', async () => {
+    await act(async () => {
+      const { asFragment } = render(
+        <Environment>
+          <Router>
+            <Routes />
+          </Router>
+        </Environment>,
+      );
+      expect(asFragment()).toMatchSnapshot();
+    });
   });
 
   it('NotFound Page', () => {
@@ -28,7 +29,7 @@ describe('Route', () => {
 
     expect(asFragment()).toMatchSnapshot();
   });
-  /*
+
   it('Should return <MembersPage /> with props when call renderLayoutMembers', () => {
     const customProps = {
       myProp: 'property members',
@@ -36,5 +37,5 @@ describe('Route', () => {
     const result = renderLayoutMembers({ ...customProps });
     expect(result.type).toEqual(MembersPage);
     expect(result.props.myProp).toEqual('property members');
-  });*/
+  });
 });

@@ -27,14 +27,9 @@ export const useEnv = (getImportFn = getImport, initStateCt = initState) => {
 
   useEffect(() => {
     if (envState.environment === null) {
-      (async () => {
-        try {
-          const environment = await getImportFn();
-          setEnvState({ environment });
-        } catch (error) {
-          setEnvState({ error });
-        }
-      })();
+      getImportFn()
+        .then(environment => setEnvState({ environment }))
+        .catch(error => setEnvState({ error }));
     }
   }, [envState.environment, getImportFn]);
 

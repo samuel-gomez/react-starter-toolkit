@@ -44,7 +44,7 @@ describe('customFetch', () => {
     fetchMock.mockResolvedValue(resolvedValue);
     await customFetch({ apiUrl: apiMock, fetchAuthConfig: fetchAuthConfigMock, fetchFn: fetchMock })(path, customConfig);
 
-    expect(fetchMock).toBeCalledWith('http://localhost:5001/api/projects?apiKey=uL19TxbOTqdHcHTPd1AgQbR-FjqEDqWK', {
+    expect(fetchMock).toBeCalledWith('http://localhost:5001/api/projects', {
       headers: {
         'x-api-key': 'nadia',
         body: 'body',

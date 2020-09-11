@@ -19,7 +19,10 @@ const MembersHeader = ({ onSort, sorting, sortingInfo, headers }) => (
 
 const propTypes = {
   onSort: PropTypes.func,
-  sorting: PropTypes.object,
+  sorting: PropTypes.shape({
+    field: PropTypes.string,
+    order: PropTypes.string,
+  }),
   sortingInfo: PropTypes.objectOf(PropTypes.oneOf([NONE, ASCENDING, DESCENDING])),
   headers: PropTypes.arrayOf(
     PropTypes.shape({
@@ -32,7 +35,10 @@ const propTypes = {
 
 const defaultProps = {
   onSort: undefined,
-  sorting: {},
+  sorting: {
+    field: '',
+    order: NONE,
+  },
   sortingInfo: {},
 };
 
