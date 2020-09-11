@@ -9,3 +9,13 @@ exports[`Renders RouteBase component without crashing 1`] = `
   </div>
 </DocumentFragment>
 `;
+
+exports[`Should App render without crashing 1`] = `
+<DocumentFragment>
+  <div
+    style="min-height: 94px; position: relative;"
+  >
+     
+  </div>
+</DocumentFragment>
+`;

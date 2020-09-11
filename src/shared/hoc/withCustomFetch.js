@@ -5,32 +5,29 @@ import { STATUS_API } from 'shared/constants';
 import { withEnvironment } from 'App/Environment';
 import compose from 'shared/helpers/compose';
 
-export const customFetch = fetch => apiBaseUrl => fetchConfig => async (path, customConfig) => {
-  const url = `${apiBaseUrl}${path}?apiKey=uL19TxbOTqdHcHTPd1AgQbR-FjqEDqWK`;
-  const config = merge(cloneDeep(fetchConfig), customConfig);
-  const response = await fetch(url, config);
+export const customFetch = ({ apiUrl, fetchAuthConfig, fetchFn = fetch, mergeFn = merge, cloneDeepFn = cloneDeep }) => async (path, customConfig) => {
+  const url = `${apiUrl}${path}`;
+  const config = mergeFn(cloneDeepFn(fetchAuthConfig), customConfig);
+  const response = await fetchFn(url, config);
   if (config.blob && response.status === STATUS_API.SUCCESS) {
     return response.blob();
   }
+
   return {
     ...(await response.json()),
     statusHttp: response.status,
   };
 };
 
-export const withCustomFetch = fetch => Component => props => {
-  const {
-    environment: { apiUrl, fetchConfig },
-    authAccessToken,
-  } = props;
+export const withCustomFetch = (Component, mergeFn = merge, cloneDeepFn = cloneDeep) => ({ environment, authAccessToken, ...rest }) => {
+  const { apiUrl, fetchConfig } = environment;
   const authConfig = {
     headers: {
       Authorization: `Bearer ${authAccessToken}`,
     },
   };
-  const fetchAuthConfig = merge(cloneDeep(fetchConfig), authConfig);
-  return <Component {...props} fetch={customFetch(fetch)(apiUrl)(fetchAuthConfig)} />;
+  const fetchAuthConfig = mergeFn(cloneDeepFn(fetchConfig), authConfig);
+  return <Component {...rest} fetchCustom={customFetch({ apiUrl, fetchAuthConfig })} />;
 };
 
-const withEnhancedCustomFetch = compose(withEnvironment, withAuthentication(), withCustomFetch(fetch));
-export default withEnhancedCustomFetch;
+export default compose(withEnvironment, withAuthentication, withCustomFetch);

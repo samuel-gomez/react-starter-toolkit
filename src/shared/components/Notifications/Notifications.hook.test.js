@@ -20,10 +20,13 @@ describe('useNotifications', () => {
       { id: '01', title: 'title1' },
       { id: '02', title: 'title2' },
     ];
-    jest.useFakeTimers();
+
     const { result } = renderHook(() => useNotifications(initState));
+
+    jest.useFakeTimers();
     act(() => result.current.onDeleteNotification('01'));
-    jest.advanceTimersByTime(1000);
+    act(() => jest.advanceTimersByTime(1000));
+
     expect(result.current.stateNotifications).toEqual([{ id: '02', title: 'title2' }]);
   });
 

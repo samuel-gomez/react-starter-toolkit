@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { render, act } from '@testing-library/react';
 import App, { RoutesBase } from './App';
 import Environment from './Environment';
@@ -30,10 +29,11 @@ const envMock = {
   },
 };
 
-it('Should App renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+it('Should App render without crashing', async () => {
+  await act(async () => {
+    const { asFragment } = render(<App />);
+    expect(asFragment()).toMatchSnapshot();
+  });
 });
 
 const wrapper = ({ children }) => <Environment>{children}</Environment>;

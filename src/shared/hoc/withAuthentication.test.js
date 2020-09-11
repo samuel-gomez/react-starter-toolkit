@@ -61,7 +61,7 @@ describe('withAuthentication', () => {
       oidcUser: {},
     });
     const CustomComponent = () => <div>Hello</div>;
-    const EnhancedComponent = withAuthentication(useReactOidcMock)(CustomComponent);
+    const EnhancedComponent = withAuthentication(CustomComponent, useReactOidcMock);
     expect(EnhancedComponent().props.authName).toBeDefined();
     expect(EnhancedComponent().props.authAccessToken).toBeDefined();
     expect(EnhancedComponent().props.authRole).toBeDefined();
