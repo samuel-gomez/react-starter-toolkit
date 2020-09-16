@@ -10,7 +10,9 @@ exports[`<NotFound page/> Renders NotFound page component without crashing 1`] =
     >
       <h1
         class="af-title-bar__title"
-      />
+      >
+        title
+      </h1>
       <a
         class="btn af-btn--circle"
         href="/"

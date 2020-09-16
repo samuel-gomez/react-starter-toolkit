@@ -6,6 +6,7 @@ const defaultProps = {
   header: () => {},
   title: () => {},
   footer: () => {},
+  menu: () => {},
   members: [],
   anomaly: null,
   loaderMode: 'none',

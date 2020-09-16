@@ -19,12 +19,14 @@ TitleBar.defaultProps = {
   backHome: false,
   children: null,
   className: 'af-title-bar',
+  title: 'title',
 };
 
 TitleBar.propTypes = {
   backHome: PropTypes.bool,
   children: PropTypes.node,
   className: PropTypes.string,
+  title: PropTypes.string,
 };
 
 export default TitleBar;

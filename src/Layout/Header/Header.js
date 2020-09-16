@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { Header, Name, User, Infos } from '@axa-fr/react-toolkit-all';
 import logo from 'shared/images/slash-logo.svg';
 import withClassModifier from '@axa-fr/react-toolkit-core/dist/withClassModifier.hoc';
+import { withEnvironment } from 'App/Environment';
+import compose from 'shared/helpers/compose';
 import Skeleton from 'shared/components/Skeleton';
 import Resilience from 'shared/components/Resilience/Resilience';
 import withAuthentication from 'shared/hoc/withAuthentication';
@@ -49,4 +51,5 @@ HeaderApp.defaultProps = {
   authRole: 'Profil',
 };
 
-export default withAuthentication(HeaderApp);
+const enhance = compose(withEnvironment, withAuthentication);
+export default enhance(HeaderApp);

@@ -1,12 +1,17 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { AuthenticationProvider, OidcSecure } from '@axa-fr/react-oidc-context';
+import { AuthenticationProvider, OidcSecure, oidcLog, InMemoryWebStorage } from '@axa-fr/react-oidc-context';
 import Environment, { withEnvironment } from 'App/Environment';
 import 'App/App.scss';
 import Routes from 'Layout/Routes';
 
 export const RoutesBase = ({ environment }) => (
-  <AuthenticationProvider configuration={environment.oidc} isEnabled={environment.oidc.isEnabled}>
+  <AuthenticationProvider
+    loggerLevel={oidcLog.NONE}
+    configuration={environment.oidc}
+    isEnabled={environment.oidc.isEnabled}
+    InMemoryWebStorage={InMemoryWebStorage}
+  >
     <Router>
       <OidcSecure>
         <Routes />

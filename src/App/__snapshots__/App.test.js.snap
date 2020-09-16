@@ -3,56 +3,9 @@
 exports[`Renders RouteBase component without crashing 1`] = `
 <DocumentFragment>
   <div
-    class="af-header"
+    style="min-height: 94px; position: relative;"
   >
-    <div
-      class="container af-header__wrapper"
-    >
-      <header
-        class="af-header__content"
-        role="banner"
-      >
-        <div
-          class="af-header__name"
-        >
-          <a
-            class="af-logo"
-            href="/"
-          >
-            <img
-              alt="Toolkit React Starter"
-              class="af-logo__brand"
-              src="slash-logo.svg"
-            />
-          </a>
-          <h2
-            class="af-header__title"
-          >
-            Toolkit React Starter
-            <small
-              class="af-header__subtitle"
-            >
-              by Slash Design System
-            </small>
-          </h2>
-        </div>
-        <div
-          class="af-info-user"
-        >
-          <a
-            class="af-info-user__link"
-            href="#"
-            title="Voir mon profil"
-          >
-            <span
-              class="af-info-user__name"
-            >
-              Non Connecté
-            </span>
-          </a>
-        </div>
-      </header>
-    </div>
+     
   </div>
   <div
     class="af-nav-container"

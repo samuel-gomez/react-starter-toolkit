@@ -1,73 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Route NotFound Page 1`] = `
+exports[`<MenuEnhanced/> Render <Menu/> 1`] = `
 <DocumentFragment>
-  <div
-    class="af-title-bar af-title-bar--hasstepper af-title-bar--backhome"
-  >
-    <div
-      class="container af-title-bar__wrapper"
-    >
-      <h1
-        class="af-title-bar__title"
-      >
-        title
-      </h1>
-      <a
-        class="btn af-btn--circle"
-        href="/"
-        title="Retour à l'accueil"
-      >
-        <i
-          class="glyphicon glyphicon-home"
-        />
-      </a>
-      404 Page Not Found
-    </div>
-  </div>
-  <div
-    class="container af-container--notfound"
-  >
-    <h1
-      class="af-notfound__title"
-    >
-      <div
-        class="af-notfound__title-covernumber"
-      >
-        <span
-          class="af-notfound__title-number"
-        >
-          404
-        </span>
-      </div>
-      <div
-        class="af-notfound__title-covernot"
-      >
-        <span
-          class="af-notfound__title-not"
-        >
-          not
-          <br />
-          found
-        </span>
-      </div>
-    </h1>
-    <p
-      class="af-notfound__message"
-    >
-      The page you are looking for is not here!
-    </p>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`Route Should render Routes 1`] = `
-<DocumentFragment>
-  <div
-    style="min-height: 94px; position: relative;"
-  >
-     
-  </div>
   <div
     class="af-nav-container"
   >
@@ -233,52 +167,5 @@ exports[`Route Should render Routes 1`] = `
       class="glyphicon glyphicon-menu-hamburger"
     />
   </a>
-  <div
-    class="af-title-bar"
-  >
-    <div
-      class="container af-title-bar__wrapper"
-    >
-      <h1
-        class="af-title-bar__title"
-      >
-        Accueil
-      </h1>
-    </div>
-  </div>
-  <div
-    class="af-main container"
-  >
-    <h1
-      class="af-title--content"
-    >
-      Tableau de bord
-    </h1>
-  </div>
-  <footer
-    class="af-footer"
-  >
-    <div
-      class="container-fluid container"
-    >
-      <a
-        class="af-logo"
-        href="https://www.axa.fr/"
-        target="blank"
-        title="Site Axa"
-      >
-        <img
-          alt="Logo Axa"
-          class="af-logo__brand"
-          src="logo-axa.svg"
-        />
-      </a>
-      <div
-        class="af-footer-content"
-      >
-        © 2020 AXA Tous droits réservés
-      </div>
-    </div>
-  </footer>
 </DocumentFragment>
 `;

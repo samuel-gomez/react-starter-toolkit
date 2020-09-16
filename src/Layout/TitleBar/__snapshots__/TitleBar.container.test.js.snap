@@ -10,7 +10,9 @@ exports[`Component <TitleBarEnhanced /> Should render TitleBarEnhanced 1`] = `
     >
       <h1
         class="af-title-bar__title"
-      />
+      >
+        title
+      </h1>
     </div>
   </div>
 </DocumentFragment>

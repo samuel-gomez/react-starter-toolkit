@@ -1,5 +1,7 @@
 import ROUTE_URL from 'Layout/constants';
 
+export const CLASS_BODY_MENU_OPEN = 'af-menu-open';
+
 const MENU_ITEMS = [
   {
     label: 'Accueil',

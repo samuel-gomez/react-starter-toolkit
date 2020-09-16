@@ -8,7 +8,7 @@ exports[`Component <MembersEnhanced /> Should render <MembersEnhanced /> with de
     <h1
       class="af-title--content"
     >
-      Liste des sociétaires
+      Liste des membres
     </h1>
     <div
       style="min-height: 94px; position: relative;"
@@ -27,7 +27,7 @@ exports[`Component <MembersEnhanced /> Should render <MembersEnhanced /> with on
     <h1
       class="af-title--content"
     >
-      Liste des sociétaires
+      Liste des membres
     </h1>
     <div
       style="min-height: 94px; position: relative;"
