@@ -20,18 +20,20 @@ exports[`<Header/> Render <Header/> 1`] = `
             href="/"
           >
             <img
-              alt="OASIS"
+              alt="Toolkit React Starter"
               class="af-logo__brand"
-              src="logo-axa.svg"
+              src="slash-logo.svg"
             />
           </a>
           <h2
             class="af-header__title"
           >
-            OASIS
+            Toolkit React Starter
             <small
               class="af-header__subtitle"
-            />
+            >
+              by Slash Design System
+            </small>
           </h2>
         </div>
         <div

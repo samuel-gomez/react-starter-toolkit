@@ -5,14 +5,33 @@
   &--backhome {
     .af-title-bar {
       &__wrapper {
+        display: flex;
         justify-content: flex-start;
+        align-items: center;
         .af-title-bar__title {
+          order: 2;
           margin-left: 1em;
         }
       }
     }
   }
-  &--oasis{
+  &--oasis {
     margin-bottom: 2rem;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .af-title-bar {
+    position: sticky;
+    width: 100%;
+    top: 73px;
+    z-index: 8;
+    &__title {
+      font-size: 1.2rem;
+    }
+    .af-btn--circle {
+      width: 2rem;
+      height: 2rem;
+    }
   }
 }

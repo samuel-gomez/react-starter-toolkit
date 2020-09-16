@@ -6,8 +6,11 @@ exports[`<NotFound page/> Renders NotFound page component without crashing 1`] =
     class="af-title-bar af-title-bar--hasstepper af-title-bar--backhome"
   >
     <div
-      class="container-fluid container af-title-bar__wrapper"
+      class="container af-title-bar__wrapper"
     >
+      <h1
+        class="af-title-bar__title"
+      />
       <a
         class="btn af-btn--circle"
         href="/"
@@ -17,11 +20,7 @@ exports[`<NotFound page/> Renders NotFound page component without crashing 1`] =
           class="glyphicon glyphicon-home"
         />
       </a>
-      <h1
-        class="af-title-bar__title"
-      >
-        404 Page Not Found
-      </h1>
+      404 Page Not Found
     </div>
   </div>
   <div

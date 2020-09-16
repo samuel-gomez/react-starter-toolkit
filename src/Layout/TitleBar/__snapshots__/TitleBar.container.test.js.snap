@@ -6,7 +6,7 @@ exports[`Component <TitleBarEnhanced /> Should render TitleBarEnhanced 1`] = `
     class="af-title-bar af-title-bar--red"
   >
     <div
-      class="container-fluid container af-title-bar__wrapper"
+      class="container af-title-bar__wrapper"
     >
       <h1
         class="af-title-bar__title"
