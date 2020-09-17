@@ -6,11 +6,12 @@ import MembersTable from './MembersTable';
 import { TITLE_BAR, TITLE } from './constants';
 import './Members.scss';
 
-const Members = ({ header, footer, title, loaderMode, members, anomaly, deleteNotification, notifications }) => (
+const Members = ({ header, footer, title, menu, loaderMode, members, anomaly, deleteNotification, notifications }) => (
   <>
     {header()}
+    {menu()}
     {notifications && notifications.length > 0 && <NotificationsContainer notifications={notifications} deleteNotification={deleteNotification} />}
-    {title({ children: TITLE_BAR })}
+    {title({ title: TITLE_BAR, backHome: true })}
     <div className="af-main container">
       <h1 className="af-title--content">{TITLE}</h1>
       <Loader mode={loaderMode}>

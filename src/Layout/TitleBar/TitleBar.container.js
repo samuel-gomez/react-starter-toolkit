@@ -1,5 +1,4 @@
 import React from 'react';
-// eslint-disable-next-line import/no-unresolved
 import { ClassManager } from '@axa-fr/react-toolkit-core';
 import TitleBar from './TitleBar';
 

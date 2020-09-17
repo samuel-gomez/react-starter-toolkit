@@ -1,8 +1,4 @@
-@import '@axa-fr/react-toolkit-layout-header/dist/Header/header.scss';
-@import '@axa-fr/react-toolkit-layout-header/dist/Name/name.scss';
-@import '@axa-fr/react-toolkit-layout-header/dist/User/user.scss';
-@import '@axa-fr/react-toolkit-layout-header/dist/Logo/logo.scss';
-@import '@axa-fr/react-toolkit-layout-header/dist/Infos/infos.scss';
+@import '@axa-fr/react-toolkit-core/dist/assets/scss/core.scss';
 
 .af {
   &-alert {
@@ -32,6 +28,31 @@
       padding: 0.4rem 0.3rem 0.4rem 3rem;
       font-size: 0.9em;
       order: 2;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .af-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    &__wrapper {
+      margin: 0;
+      width: 100%;
+      background: #eee;
+    }
+    &__content {
+      padding-top: 15px;
+      padding-bottom: 0;
+      width: 100%;
+    }
+    &__title {
+      font-size: 1.2rem;
+      width: 150px;
+    }
+    &__subtitle {
+      display: none;
     }
   }
 }

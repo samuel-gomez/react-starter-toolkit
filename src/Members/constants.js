@@ -1,5 +1,5 @@
-export const TITLE_BAR = 'Sociétaires';
-export const TITLE = 'Liste des sociétaires';
+export const TITLE_BAR = 'Gestion des membres';
+export const TITLE = 'Liste des membres';
 
 export const FETCH_MEMBERS = {
   INIT: 'FETCH_MEMBERS_INIT',
@@ -14,3 +14,5 @@ export const TABLE_HEADERS_MEMBERS = [
   { label: 'Date de naissance', field: 'birthdate', id: 'birthdate' },
   { label: 'Sexe', id: 'sexe' },
 ];
+
+export const ROUTE_URL_MEMBERS = '/members';

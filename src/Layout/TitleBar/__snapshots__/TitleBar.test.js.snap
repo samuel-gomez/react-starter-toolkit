@@ -6,11 +6,13 @@ exports[`<TitleBar/> Render <TitleBar /> 1`] = `
     class="af-title-bar"
   >
     <div
-      class="container-fluid container af-title-bar__wrapper"
+      class="container af-title-bar__wrapper"
     >
       <h1
         class="af-title-bar__title"
-      />
+      >
+        title
+      </h1>
     </div>
   </div>
 </DocumentFragment>

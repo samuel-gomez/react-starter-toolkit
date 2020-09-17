@@ -1,5 +1,11 @@
 @import '@axa-fr/react-toolkit-core/dist/assets/scss/core.scss';
 
+@include media-breakpoint-down(sm) {
+  .container {
+    max-width: 100%;
+  }
+}
+
 .af-link {
   background: transparent;
   border: 0;
@@ -169,4 +175,8 @@
 
 .af-form__input-textarea {
   font-size: 1rem;
+}
+
+.af-logo__brand {
+  height: auto;
 }

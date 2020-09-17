@@ -12,6 +12,7 @@ defineFeature(feature, test => {
     header: () => {},
     title: () => {},
     footer: () => {},
+    menu: () => {},
     members: [],
     anomaly: null,
     loaderMode: 'none',

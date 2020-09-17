@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ActionElt/> Render <ActionElt/> with Link When url is defined 1`] = `
+<DocumentFragment>
+  <a
+    class="af-nav__link"
+    href="/members"
+  >
+    withlink
+  </a>
+</DocumentFragment>
+`;
+
+exports[`<ActionElt/> Render <ActionElt/> with Link When url is defined 2`] = `
+<DocumentFragment>
+  <span
+    class="af-nav__link"
+  >
+    nolink
+  </span>
+</DocumentFragment>
+`;
+
+exports[`<MenuItem/> Render <Menu/> 1`] = `
+<DocumentFragment>
+  <li
+    class="af-nav__item "
+    role="none"
+  >
+    <span
+      aria-expanded="false"
+      class="af-nav__link"
+      role="menuitem"
+      tabindex="-1"
+    />
+  </li>
+</DocumentFragment>
+`;

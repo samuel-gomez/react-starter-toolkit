@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Header, Name, User, Infos } from '@axa-fr/react-toolkit-all';
-import logo from '@axa-fr/react-toolkit-core/dist/assets/logo-axa.svg';
+import logo from 'shared/images/slash-logo.svg';
 import withClassModifier from '@axa-fr/react-toolkit-core/dist/withClassModifier.hoc';
+import { withEnvironment } from 'App/Environment';
+import compose from 'shared/helpers/compose';
 import Skeleton from 'shared/components/Skeleton';
 import Resilience from 'shared/components/Resilience/Resilience';
 import withAuthentication from 'shared/hoc/withAuthentication';
@@ -12,9 +14,9 @@ export const HeaderInfo = ({ isLoaded, children }) => (isLoaded ? <>{children}</
 
 export const HeaderInfoWithClassModifier = withClassModifier(HeaderInfo);
 
-export const HeaderApp = ({ infos, title, link, authName, authRole, anomaly }) => (
+export const HeaderApp = ({ infos, title, subtitle, link, authName, authRole, anomaly }) => (
   <Header>
-    <Name title={title} img={logo} alt={title} />
+    <Name title={title} img={logo} alt={title} subtitle={subtitle} />
     {infos && (
       <Resilience anomaly={anomaly} resilienceModifier="simple infos">
         <HeaderInfoWithClassModifier isLoaded={infos.length > 0}>
@@ -28,6 +30,7 @@ export const HeaderApp = ({ infos, title, link, authName, authRole, anomaly }) =
 
 HeaderApp.propTypes = {
   title: PropTypes.string,
+  subtitle: PropTypes.string,
   link: PropTypes.string,
   infos: PropTypes.arrayOf(
     PropTypes.shape({
@@ -40,11 +43,13 @@ HeaderApp.propTypes = {
 };
 
 HeaderApp.defaultProps = {
-  title: 'OASIS',
+  title: 'Toolkit React Starter',
+  subtitle: 'by Slash Design System',
   infos: null,
   link: '#',
   authName: 'Non Connecté',
   authRole: 'Profil',
 };
 
-export default withAuthentication(HeaderApp);
+const enhance = compose(withEnvironment, withAuthentication);
+export default enhance(HeaderApp);

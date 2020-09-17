@@ -13,10 +13,10 @@ describe('<Header/>', () => {
     expect(getByText('mydefinition')).toBeDefined();
   });
 
-  it('Should contain <User /> with when authName="FDS" authRole="IFRS_OASIS_ADMIN"', () => {
-    const { getByText } = render(<Header authName="FDS" authRole="IFRS_OASIS_ADMIN" />);
+  it('Should contain <User /> with when authName="FDS" authRole="ADMIN"', () => {
+    const { getByText } = render(<Header authName="FDS" authRole="ADMIN" />);
     expect(getByText('FDS')).toBeDefined();
-    expect(getByText(/IFRS_OASIS_ADMIN/)).toBeDefined();
+    expect(getByText(/ADMIN/)).toBeDefined();
   });
 
   it('Should contain <User /> with "Non Connecté" and "Profil" when authName and/or authRole are undefined', () => {

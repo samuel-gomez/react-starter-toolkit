@@ -8,7 +8,7 @@ exports[`<Members/> Should render Members 1`] = `
     <h1
       class="af-title--content"
     >
-      Liste des sociétaires
+      Liste des membres
     </h1>
     <div
       style="min-height: 94px; position: relative;"
@@ -58,7 +58,7 @@ exports[`<Members/> with <Notification /> Should render Members with <Notificati
     <h1
       class="af-title--content"
     >
-      Liste des sociétaires
+      Liste des membres
     </h1>
     <div
       style="min-height: 94px; position: relative;"

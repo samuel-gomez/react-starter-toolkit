@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MenuItemEnhanced/> Render <Menu/> 1`] = `
+<DocumentFragment>
+  <li
+    class="af-nav__item "
+    role="none"
+  >
+    <span
+      aria-expanded="false"
+      class="af-nav__link"
+      role="menuitem"
+      tabindex="-1"
+    />
+  </li>
+</DocumentFragment>
+`;

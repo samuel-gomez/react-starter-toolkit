@@ -1,0 +1,17 @@
+@import '@axa-fr/react-toolkit-core/dist/assets/scss/core.scss';
+
+.af-title-bar__mobile-menu {
+  display: none;
+  background-color: $color-axa;
+}
+@include media-breakpoint-down(sm) {
+  .af-title-bar__mobile-menu {
+    position: fixed;
+    display: block;
+    top: 84px;
+    right: 0;
+    z-index: 12;
+    width: 2rem;
+    height: 2rem;
+  }
+}
