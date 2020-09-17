@@ -38,3 +38,5 @@ export const MenuItemDefaultProps = {
 
 MenuItem.propTypes = MenuItemPropTypes;
 MenuItem.defaultProps = MenuItemDefaultProps;
+
+export default MenuItem;

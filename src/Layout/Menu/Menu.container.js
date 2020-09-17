@@ -16,16 +16,23 @@ export const setPositionInit = ({ menuItems, pathname, matchPathFn = matchPath }
     )
     .reduce((accumulator, currentValue) => accumulator + currentValue);
 
-const MenuEnhanced = ({ menuItems, setPositionInitFn, ...rest }) => {
-  const { pathname } = useLocation();
-  const initPosition = setPositionInitFn({ menuItems, pathname });
-  const [isVisible, setIsMenuVisible] = useState(false);
+export const setToggleMenu = ({ setIsMenuVisible, isVisible, documentObj = document }) => {
+  const { body } = documentObj;
+  body.classList.toggle(CLASS_BODY_MENU_OPEN);
+  setIsMenuVisible(!isVisible);
+};
 
-  const toggleMenu = useCallback(() => {
-    const { body } = document;
-    body.classList.toggle(CLASS_BODY_MENU_OPEN);
-    setIsMenuVisible(!isVisible);
-  }, [isVisible]);
+export const useMenuVisible = (initState = false) => {
+  const [isVisible, setIsMenuVisible] = useState(initState);
+  return { isVisible, setIsMenuVisible };
+};
+
+const MenuEnhanced = ({ menuItems, setPositionInitFn, setToggleMenuFn, useLocationFn, useMenuVisibleFn, ...rest }) => {
+  const { pathname } = useLocationFn();
+  const initPosition = setPositionInitFn({ menuItems, pathname });
+  const { isVisible, setIsMenuVisible } = useMenuVisibleFn();
+
+  const toggleMenu = useCallback(() => setToggleMenuFn({ setIsMenuVisible, isVisible }), [isVisible, setIsMenuVisible, setToggleMenuFn]);
 
   return (
     <>
@@ -46,11 +53,17 @@ const MenuEnhanced = ({ menuItems, setPositionInitFn, ...rest }) => {
 export const menuEnhancedPropTypes = {
   menuItems: menuItemPropType,
   setPositionInitFn: PropTypes.func,
+  setToggleMenuFn: PropTypes.func,
+  useLocationFn: PropTypes.func,
+  useMenuVisibleFn: PropTypes.func,
 };
 
 export const menuEnhancedDefaultProps = {
   menuItems: MENU_ITEMS,
   setPositionInitFn: setPositionInit,
+  setToggleMenuFn: setToggleMenu,
+  useLocationFn: useLocation,
+  useMenuVisibleFn: useMenuVisible,
 };
 
 MenuEnhanced.propTypes = menuEnhancedPropTypes;
