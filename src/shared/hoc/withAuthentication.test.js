@@ -1,15 +1,16 @@
 import React from 'react';
 
-import withAuthentication, { getAuthName, getAuthAccessToken, getAuthRole, getAuthUid } from './withAuthentication';
+import withAuthentication, { getAuthName, getAuthAccessToken, getAuthRole, getAuthUid, setAuthRole } from './withAuthentication';
 
 const oidcUser = {
   access_token: 'tokenid',
   profile: {
     name: 'FDS',
-    member_of: ['CN=IFRS_OASIS_ADMIN'],
+    member_of: ['CN=ADMIN'],
     axa_uid_racf: 'S000007',
   },
 };
+const profils = ['ADMIN', 'USER'];
 
 describe('getAuthName', () => {
   it('Should return FDS When getAuthName called with profile name "FDS" ', () => {
@@ -34,9 +35,9 @@ describe('getAuthAccessToken', () => {
 });
 
 describe('getAuthRole', () => {
-  it('Should return IFRS_OASIS_ADMIN When getAuthRole called with profile member_of "CN=IFRS_OASIS_ADMIN" ', () => {
-    const result = getAuthRole(oidcUser);
-    expect(result).toEqual('IFRS_OASIS_ADMIN');
+  it('Should return ADMIN When getAuthRole called with profile member_of "CN=ADMIN" ', () => {
+    const result = getAuthRole(oidcUser, profils);
+    expect(result).toEqual('ADMIN');
   });
   it('Should return "" When getAuthRole called with no profile member_of', () => {
     const result = getAuthRole({});
@@ -51,6 +52,17 @@ describe('getAuthUid', () => {
   });
   it('Should return "" When getAuthUID called with no profile axa_uid_racf', () => {
     const result = getAuthUid({});
+    expect(result).toEqual('');
+  });
+});
+
+describe('setAuthRole', () => {
+  it('Should return ADMIN When memberOf contain ADMIN ', () => {
+    const result = setAuthRole({ memberOf: 'CN=ADMIN', profils });
+    expect(result).toEqual('ADMIN');
+  });
+  it('Should return "" When memberOf not contain ADMIN', () => {
+    const result = setAuthRole({ memberOf: 'CN=OTHER', profils });
     expect(result).toEqual('');
   });
 });

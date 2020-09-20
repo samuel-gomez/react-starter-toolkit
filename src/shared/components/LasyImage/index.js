@@ -22,7 +22,7 @@ export const useLoadImage = ({ name, loadImageFn = loadImage, initState = null }
   return { stateimage, setStateImage };
 };
 
-const ImageEnhanced = ({ name, alt, useLoadImageFn }) => {
+const LasyImage = ({ name, alt, useLoadImageFn }) => {
   const { stateimage } = useLoadImageFn({ name });
   return stateimage !== null ? <img src={stateimage} alt={alt} /> : <Loading />;
 };
@@ -35,7 +35,7 @@ export const menuEnhancedDefaultProps = {
   useLoadImageFn: useLoadImage,
 };
 
-ImageEnhanced.propTypes = menuEnhancedPropTypes;
-ImageEnhanced.defaultProps = menuEnhancedDefaultProps;
+LasyImage.propTypes = menuEnhancedPropTypes;
+LasyImage.defaultProps = menuEnhancedDefaultProps;
 
-export default ImageEnhanced;
+export default LasyImage;

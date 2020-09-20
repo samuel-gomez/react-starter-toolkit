@@ -8,9 +8,13 @@ export const FIELDS = [
   {
     id: ROUTE_URL_FIELDS_CLASSICS,
     title: 'Champ de saisie',
-    link: {
-      text: 'Toolkit Core : Basics Form elements',
-      path: ROUTE_URL_FIELDS_CLASSICS,
+    storybook: {
+      text: 'Storybook : Text Input',
+      path: 'form-input-text--text',
+    },
+    designSystem: {
+      text: 'Guidelines : Text Input',
+      path: '/molecules/form-text/',
     },
     picture: {
       name: 'champ-texte.jpg',

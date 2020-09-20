@@ -1,19 +1,26 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen, fireEvent, act } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
 import WrapperStaticRouter from 'shared/components/WrapperStaticRouter';
+import withWrapperEnvAndAuth from 'shared/hoc/withWrapperEnvAndAuth';
 import MenuEnhanced, { setPositionInit, setToggleMenu } from './Menu.container';
 import MENU_ITEMS, { CLASS_BODY_MENU_OPEN } from './constants';
 
+const MenuEnhancedWithEnvAndAuth = withWrapperEnvAndAuth(MenuEnhanced);
+
 describe('<MenuEnhanced/>', () => {
-  it('Render <Menu/>', () => {
-    const { asFragment } = render(<MenuEnhanced menuItems={MENU_ITEMS} />, { wrapper: WrapperStaticRouter });
-    expect(asFragment()).toMatchSnapshot();
+  it('Render <Menu/>', async () => {
+    await act(async () => {
+      const { asFragment } = render(<MenuEnhancedWithEnvAndAuth menuItems={MENU_ITEMS} />, { wrapper: WrapperStaticRouter });
+      expect(asFragment()).toMatchSnapshot();
+    });
   });
-  it('Should call toggle class body When click on button', () => {
-    render(<MenuEnhanced menuItems={MENU_ITEMS} />, { wrapper: WrapperStaticRouter });
-    fireEvent.click(screen.getByTitle('Toggle menu'));
-    expect(document.querySelector('body').getAttribute('class')).toEqual('af-menu-open');
+  it('Should call toggle class body When click on button', async () => {
+    await act(async () => {
+      render(<MenuEnhancedWithEnvAndAuth menuItems={MENU_ITEMS} />, { wrapper: WrapperStaticRouter });
+      fireEvent.click(screen.getByTitle('Toggle menu'));
+      expect(document.querySelector('body').getAttribute('class')).toEqual('af-menu-open');
+    });
   });
 });
 

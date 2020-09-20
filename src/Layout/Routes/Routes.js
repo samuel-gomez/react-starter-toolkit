@@ -14,8 +14,8 @@ export const renderLayoutForm = props => Layout(Form, props);
 
 const Routes = () => (
   <Switch>
-    <Route exact path={ROUTE_URL.MEMBERS} render={renderLayoutMembers} />
     <Route exact path={ROUTE_URL.DASHBOARD} render={renderLayoutDashboard} />
+    <Route exact path={ROUTE_URL.MEMBERS} render={renderLayoutMembers} />
     <Route exact path={ROUTE_URL.FORM} render={renderLayoutForm} />
     <Route component={PageNotFound} />
   </Switch>
