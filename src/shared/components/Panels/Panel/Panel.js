@@ -10,10 +10,22 @@ const Panel = ({ storybook, designSystem, title, picture: { alt, name } }) => (
       <h3 className="af-panel__title">{title}</h3>
     </header>
     <section className="af-panel__content" style={{ minHeight: '200px', justifyContent: 'center', display: 'flex', alignItems: 'center' }}>
-      <a className="btn af-btn--circle" href={`${DESIGN_SYSTEM}${designSystem.path}`} title={storybook.text} target="_blank" rel="noreferrer">
+      <a
+        className="btn af-btn--circle"
+        href={`${DESIGN_SYSTEM}${designSystem.path}`}
+        title={storybook.text}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <i className="glyphicon glyphicon-link" />
       </a>
-      <a className="btn af-btn--circle" href={`${STORYBOOK}?path=/story/${storybook.path}`} title={storybook.text} target="_blank" rel="noreferrer">
+      <a
+        className="btn af-btn--circle"
+        href={`${STORYBOOK}?path=/story/${storybook.path}`}
+        title={storybook.text}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <i className="glyphicon glyphicon-link" />
       </a>
     </section>
