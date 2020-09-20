@@ -49,3 +49,13 @@ export const MODIFIER_MODAL = 'workflow-status';
 export const NONE = 'NONE';
 export const ASCENDING = 1;
 export const DESCENDING = -1;
+
+export const STORYBOOK = 'https://axaguildev.github.io/react-toolkit/latest/storybook/';
+export const DESIGN_SYSTEM = 'https://axaguildev.github.io/react-toolkit/latest/design/';
+
+export const ADMIN = 'Admin';
+export const READER = 'Reader';
+export const WRITER = 'Writer';
+export const USER = 'User';
+
+export const PROFILS = [ADMIN, READER, WRITER, USER];

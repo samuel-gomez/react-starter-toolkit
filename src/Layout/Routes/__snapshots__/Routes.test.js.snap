@@ -110,111 +110,21 @@ exports[`Route Should render Routes 1`] = `
           id="mainmenu"
           role="menubar"
         >
-          <li
-            class="af-nav__item af-nav__item--active "
-            role="none"
+          <div
+            style="min-height: 94px; position: relative;"
           >
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-label="Accueil"
-              class="af-nav__link"
-              href="/"
-              role="menuitem"
-              tabindex="0"
-            >
-              Accueil
-            </a>
-          </li>
-          <li
-            class="af-nav__item "
-            role="none"
+             
+          </div>
+          <div
+            style="min-height: 94px; position: relative;"
           >
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-label="Membres"
-              class="af-nav__link"
-              href="/members"
-              role="menuitem"
-              tabindex="-1"
-            >
-              Membres
-            </a>
-          </li>
-          <li
-            class="af-nav__item af-nav__item--haschild "
-            role="none"
+             
+          </div>
+          <div
+            style="min-height: 94px; position: relative;"
           >
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-label="Forms"
-              class="af-nav__link"
-              href="/form"
-              role="menuitem"
-              tabindex="-1"
-            >
-              Forms
-            </a>
-            <i
-              class="glyphicon glyphicon-arrow-xs-down"
-            />
-            <ul
-              aria-label=""
-              class="af-nav__list af-nav__list--children"
-              role="menu"
-            >
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Champs classiques"
-                  class="af-nav__link"
-                  href="/form/classics-fields"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Champs classiques
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Champ datepicker"
-                  class="af-nav__link"
-                  href="/form/datepicker"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Champ datepicker
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Champ slider"
-                  class="af-nav__link"
-                  href="/form/slider"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Champ slider
-                </a>
-              </li>
-            </ul>
-          </li>
+             
+          </div>
         </ul>
       </div>
     </nav>

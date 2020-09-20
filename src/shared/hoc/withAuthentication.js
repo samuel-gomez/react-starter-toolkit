@@ -1,26 +1,39 @@
 import React from 'react';
 import { get, isEmpty } from 'lodash';
 import { useReactOidc } from '@axa-fr/react-oidc-context';
+import { PROFILS } from 'shared/constants';
 
 const NON_CONNECTE = 'Non Connecté';
 
-export const getAuthName = oidcUser => (!isEmpty(get(oidcUser, 'profile.name')) ? oidcUser.profile.name : NON_CONNECTE);
+export const getAuthName = (oidcUser, isEmptyFn = isEmpty, getFn = get) =>
+  !isEmptyFn(getFn(oidcUser, 'profile.name')) ? oidcUser.profile.name : NON_CONNECTE;
 
-export const getAuthAccessToken = oidcUser => (!isEmpty(get(oidcUser, 'access_token')) ? oidcUser.access_token : '');
+export const getAuthAccessToken = (oidcUser, isEmptyFn = isEmpty, getFn = get) =>
+  !isEmptyFn(getFn(oidcUser, 'access_token')) ? oidcUser.access_token : '';
 
-export const getAuthRole = oidcUser => (!isEmpty(get(oidcUser, 'profile.member_of')) ? oidcUser.profile.member_of[0].replace('CN=', '') : '');
+export const setAuthRole = ({ memberOf, profils }) => profils.map(profil => (memberOf.search(`${profil}`) !== -1 ? profil : '')).join('');
 
-export const getAuthUid = oidcUser => (!isEmpty(get(oidcUser, 'profile.axa_uid_racf')) ? oidcUser.profile.axa_uid_racf : '');
+export const getAuthRole = (oidcUser, profils = PROFILS, setAuthRoleFn = setAuthRole, isEmptyFn = isEmpty, getFn = get) =>
+  !isEmptyFn(getFn(oidcUser, 'profile.member_of')) ? setAuthRoleFn({ memberOf: oidcUser.profile.member_of[0], profils }) : '';
+
+export const getAuthUid = (oidcUser, isEmptyFn = isEmpty, getFn = get) =>
+  !isEmptyFn(getFn(oidcUser, 'profile.axa_uid_racf')) ? oidcUser.profile.axa_uid_racf : '';
 
 /**
- * MAAM gives us : "member_of": [ "CN=IFRS_OASIS_ADMIN"]
+ *
  * @param {Object} oidcUser
  */
-export const extractDataFromOAuthToken = oidcUser => ({
-  authName: getAuthName(oidcUser),
-  authAccessToken: getAuthAccessToken(oidcUser),
-  authRole: getAuthRole(oidcUser),
-  authUid: getAuthUid(oidcUser),
+const extractDataFromOAuthToken = (
+  oidcUser,
+  getAuthNameFn = getAuthName,
+  getAuthAccessTokenFn = getAuthAccessToken,
+  getAuthRoleFn = getAuthRole,
+  getAuthUidFn = getAuthUid,
+) => ({
+  authName: getAuthNameFn(oidcUser),
+  authAccessToken: getAuthAccessTokenFn(oidcUser),
+  authRole: getAuthRoleFn(oidcUser),
+  authUid: getAuthUidFn(oidcUser),
 });
 
 const withAuthentication = (Component, useReactOidcFn = useReactOidc) => props => {

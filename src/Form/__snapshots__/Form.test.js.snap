@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Form page/> Renders Form page component without crashing 1`] = `
+<DocumentFragment>
+  <div
+    class="af-main container"
+  >
+    <h2
+      class="af-title--content"
+    >
+      Liste des champs
+    </h2>
+    <div
+      class="col col-sm-12 col-md-12 col-lg-4 col-xl-4"
+    >
+      <article
+        class="af-panel"
+      >
+        <img
+          alt="loading..."
+          src="puff.svg"
+          style="position: absolute; transform: translate(-50%,-50%); left: 50%; top: 50%;"
+        />
+        <header
+          class="af-panel__header"
+        >
+          <h3
+            class="af-panel__title"
+          >
+            Champ de saisie
+          </h3>
+        </header>
+        <section
+          class="af-panel__content"
+          style="min-height: 200px; justify-content: center; display: flex; align-items: center;"
+        >
+          <a
+            class="btn af-btn--circle"
+            href="https://axaguildev.github.io/react-toolkit/latest/design//molecules/form-text/"
+            rel="noreferrer"
+            target="_blank"
+            title="Storybook : Text Input"
+          >
+            <i
+              class="glyphicon glyphicon-link"
+            />
+          </a>
+          <a
+            class="btn af-btn--circle"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/form-input-text--text"
+            rel="noreferrer"
+            target="_blank"
+            title="Storybook : Text Input"
+          >
+            <i
+              class="glyphicon glyphicon-link"
+            />
+          </a>
+        </section>
+      </article>
+    </div>
+  </div>
+</DocumentFragment>
+`;

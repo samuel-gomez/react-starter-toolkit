@@ -119,6 +119,7 @@
       "!<rootDir>/src/**/constants.js",
       "!<rootDir>/src/**/*.stories.js",
       "!<rootDir>/src/**/*.rules.js",
+      "!<rootDir>/src/shared/hoc/withEnvAndAuth.js",
       "!<rootDir>/node_modules/"
     ],
     "coverageThreshold": {

@@ -1,4 +1,5 @@
 import ROUTE_URL from 'Layout/constants';
+import { ADMIN } from 'shared/constants';
 
 export const CLASS_BODY_MENU_OPEN = 'af-menu-open';
 
@@ -10,6 +11,7 @@ const MENU_ITEMS = [
   {
     label: 'Membres',
     url: ROUTE_URL.MEMBERS,
+    authorized: [ADMIN],
   },
   {
     label: 'Forms',
