@@ -1,7 +1,7 @@
 import React from 'react';
 import WrapperStaticRouter from 'shared/components/WrapperStaticRouter';
 import { render, act } from '@testing-library/react';
-import Form from './Form';
+import SlashDesignSystem from './SlashDesignSystem';
 
 const defaultProps = {
   header: () => {},
@@ -9,10 +9,10 @@ const defaultProps = {
   footer: () => {},
   menu: () => {},
 };
-describe('<Form page/>', () => {
-  it('Renders Form page component without crashing', async () => {
+describe('<SlashDesignSystem page/>', () => {
+  it('Renders SlashDesignSystem page component without crashing', async () => {
     await act(async () => {
-      const { asFragment } = render(<Form {...defaultProps} />, { wrapper: WrapperStaticRouter });
+      const { asFragment } = render(<SlashDesignSystem {...defaultProps} />, { wrapper: WrapperStaticRouter });
       expect(asFragment()).toMatchSnapshot();
     });
   });

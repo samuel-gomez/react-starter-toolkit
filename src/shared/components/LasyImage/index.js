@@ -22,9 +22,9 @@ export const useLoadImage = ({ name, loadImageFn = loadImage, initState = null }
   return { stateimage, setStateImage };
 };
 
-const LasyImage = ({ name, alt, useLoadImageFn }) => {
+const LasyImage = ({ name, alt, useLoadImageFn, ...rest }) => {
   const { stateimage } = useLoadImageFn({ name });
-  return stateimage !== null ? <img src={stateimage} alt={alt} /> : <Loading />;
+  return stateimage !== null ? <img {...rest} src={stateimage} alt={alt} /> : <Loading />;
 };
 
 export const menuEnhancedPropTypes = {

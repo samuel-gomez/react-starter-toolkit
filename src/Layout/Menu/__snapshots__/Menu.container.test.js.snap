@@ -61,77 +61,36 @@ exports[`<MenuEnhanced/> Render <Menu/> 1`] = `
             </a>
           </li>
           <li
-            class="af-nav__item af-nav__item--haschild "
+            class="af-nav__item "
             role="none"
           >
             <a
               aria-expanded="false"
               aria-haspopup="true"
-              aria-label="Forms"
+              aria-label="Membres"
               class="af-nav__link"
-              href="/form"
+              href="/members"
               role="menuitem"
               tabindex="-1"
             >
-              Forms
+              Membres
             </a>
-            <i
-              class="glyphicon glyphicon-arrow-xs-down"
-            />
-            <ul
-              aria-label=""
-              class="af-nav__list af-nav__list--children"
-              role="menu"
+          </li>
+          <li
+            class="af-nav__item "
+            role="none"
+          >
+            <a
+              aria-expanded="false"
+              aria-haspopup="true"
+              aria-label="Slash DS"
+              class="af-nav__link"
+              href="/slash-design-system"
+              role="menuitem"
+              tabindex="-1"
             >
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Champs classiques"
-                  class="af-nav__link"
-                  href="/form/classics-fields"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Champs classiques
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Champ datepicker"
-                  class="af-nav__link"
-                  href="/form/datepicker"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Champ datepicker
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Champ slider"
-                  class="af-nav__link"
-                  href="/form/slider"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Champ slider
-                </a>
-              </li>
-            </ul>
+              Slash DS
+            </a>
           </li>
         </ul>
       </div>
