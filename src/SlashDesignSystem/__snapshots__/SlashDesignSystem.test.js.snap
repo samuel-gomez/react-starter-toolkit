@@ -1,0 +1,1261 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SlashDesignSystem page/> Renders SlashDesignSystem page component without crashing 1`] = `
+<DocumentFragment>
+  <div
+    class="af-main container"
+  >
+    <h2
+      class="af-title--content"
+    >
+      Liste des composants
+    </h2>
+    <div
+      class="af-cards"
+    >
+      <article
+        class="af-card af-skeleton"
+      >
+        <img
+          alt="loading..."
+          class="af-lasyimage"
+          src="puff.svg"
+        />
+        <header
+          class="af-card__header"
+        >
+          <h3
+            class="af-card__title"
+          >
+            Champ texte
+          </h3>
+        </header>
+        <section
+          class="af-card__content"
+        >
+          <a
+            class="btn af-btn--circle af-btn--svg"
+            href="https://axaguildev.github.io/react-toolkit/latest/design/molecules/form-text/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Text Input"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 342.988 280"
+            >
+              <path
+                d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
+              />
+            </svg>
+          </a>
+          <a
+            class="btn af-btn--circle af-btn--storybook"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/form-input-text--text"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Text Input"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 9.6 12"
+            >
+              <path
+                d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
+              />
+            </svg>
+          </a>
+        </section>
+      </article>
+      <article
+        class="af-card af-skeleton"
+      >
+        <img
+          alt="loading..."
+          class="af-lasyimage"
+          src="puff.svg"
+        />
+        <header
+          class="af-card__header"
+        >
+          <h3
+            class="af-card__title"
+          >
+            Champ textarea
+          </h3>
+        </header>
+        <section
+          class="af-card__content"
+        >
+          <a
+            class="btn af-btn--circle af-btn--svg"
+            href="https://axaguildev.github.io/react-toolkit/latest/design/molecules/form-textarea/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Textarea Input"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 342.988 280"
+            >
+              <path
+                d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
+              />
+            </svg>
+          </a>
+          <a
+            class="btn af-btn--circle af-btn--storybook"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/form-input-textarea--textarea"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Textarea Input"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 9.6 12"
+            >
+              <path
+                d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
+              />
+            </svg>
+          </a>
+        </section>
+      </article>
+      <article
+        class="af-card af-skeleton"
+      >
+        <img
+          alt="loading..."
+          class="af-lasyimage"
+          src="puff.svg"
+        />
+        <header
+          class="af-card__header"
+        >
+          <h3
+            class="af-card__title"
+          >
+            Champ file
+          </h3>
+        </header>
+        <section
+          class="af-card__content"
+        >
+          <a
+            class="btn af-btn--circle af-btn--svg"
+            href="https://axaguildev.github.io/react-toolkit/latest/design/molecules/form-file/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : File Input"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 342.988 280"
+            >
+              <path
+                d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
+              />
+            </svg>
+          </a>
+          <a
+            class="btn af-btn--circle af-btn--storybook"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/form-input-file--file"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : File Input"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 9.6 12"
+            >
+              <path
+                d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
+              />
+            </svg>
+          </a>
+        </section>
+      </article>
+      <article
+        class="af-card af-skeleton"
+      >
+        <img
+          alt="loading..."
+          class="af-lasyimage"
+          src="puff.svg"
+        />
+        <header
+          class="af-card__header"
+        >
+          <h3
+            class="af-card__title"
+          >
+            Accordion
+          </h3>
+        </header>
+        <section
+          class="af-card__content"
+        >
+          <a
+            class="btn af-btn--circle af-btn--svg"
+            href="https://axaguildev.github.io/react-toolkit/latest/design/organisms/accordion/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Accordion"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 342.988 280"
+            >
+              <path
+                d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
+              />
+            </svg>
+          </a>
+          <a
+            class="btn af-btn--circle af-btn--storybook"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/collapse--accordion"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Accordion"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 9.6 12"
+            >
+              <path
+                d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
+              />
+            </svg>
+          </a>
+        </section>
+      </article>
+      <article
+        class="af-card af-skeleton"
+      >
+        <img
+          alt="loading..."
+          class="af-lasyimage"
+          src="puff.svg"
+        />
+        <header
+          class="af-card__header"
+        >
+          <h3
+            class="af-card__title"
+          >
+            Modal
+          </h3>
+        </header>
+        <section
+          class="af-card__content"
+        >
+          <a
+            class="btn af-btn--circle af-btn--svg"
+            href="https://axaguildev.github.io/react-toolkit/latest/design/organisms/modal/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Modal"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 342.988 280"
+            >
+              <path
+                d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
+              />
+            </svg>
+          </a>
+          <a
+            class="btn af-btn--circle af-btn--storybook"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/modal-default--modal-core"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Modal"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 9.6 12"
+            >
+              <path
+                d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
+              />
+            </svg>
+          </a>
+        </section>
+      </article>
+      <article
+        class="af-card af-skeleton"
+      >
+        <img
+          alt="loading..."
+          class="af-lasyimage"
+          src="puff.svg"
+        />
+        <header
+          class="af-card__header"
+        >
+          <h3
+            class="af-card__title"
+          >
+            Alert
+          </h3>
+        </header>
+        <section
+          class="af-card__content"
+        >
+          <a
+            class="btn af-btn--circle af-btn--svg"
+            href="https://axaguildev.github.io/react-toolkit/latest/design/molecules/alert/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Alert"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 342.988 280"
+            >
+              <path
+                d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
+              />
+            </svg>
+          </a>
+          <a
+            class="btn af-btn--circle af-btn--storybook"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/alert-alert--default"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Alert"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 9.6 12"
+            >
+              <path
+                d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
+              />
+            </svg>
+          </a>
+        </section>
+      </article>
+      <article
+        class="af-card af-skeleton"
+      >
+        <img
+          alt="loading..."
+          class="af-lasyimage"
+          src="puff.svg"
+        />
+        <header
+          class="af-card__header"
+        >
+          <h3
+            class="af-card__title"
+          >
+            Badge
+          </h3>
+        </header>
+        <section
+          class="af-card__content"
+        >
+          <a
+            class="btn af-btn--circle af-btn--svg"
+            href="https://axaguildev.github.io/react-toolkit/latest/design/atoms/badge/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Badge"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 342.988 280"
+            >
+              <path
+                d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
+              />
+            </svg>
+          </a>
+          <a
+            class="btn af-btn--circle af-btn--storybook"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/badge--simple-badge"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Badge"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 9.6 12"
+            >
+              <path
+                d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
+              />
+            </svg>
+          </a>
+        </section>
+      </article>
+      <article
+        class="af-card af-skeleton"
+      >
+        <img
+          alt="loading..."
+          class="af-lasyimage"
+          src="puff.svg"
+        />
+        <header
+          class="af-card__header"
+        >
+          <h3
+            class="af-card__title"
+          >
+            Popover
+          </h3>
+        </header>
+        <section
+          class="af-card__content"
+        >
+          <a
+            class="btn af-btn--circle af-btn--svg"
+            href="https://axaguildev.github.io/react-toolkit/latest/design/atoms/popover/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Popover"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 342.988 280"
+            >
+              <path
+                d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
+              />
+            </svg>
+          </a>
+          <a
+            class="btn af-btn--circle af-btn--storybook"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/popover--popover"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Popover"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 9.6 12"
+            >
+              <path
+                d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
+              />
+            </svg>
+          </a>
+        </section>
+      </article>
+      <article
+        class="af-card af-skeleton"
+      >
+        <img
+          alt="loading..."
+          class="af-lasyimage"
+          src="puff.svg"
+        />
+        <header
+          class="af-card__header"
+        >
+          <h3
+            class="af-card__title"
+          >
+            Slider
+          </h3>
+        </header>
+        <section
+          class="af-card__content"
+        >
+          <a
+            class="btn af-btn--circle af-btn--svg"
+            href="https://axaguildev.github.io/react-toolkit/latest/design/atoms/slider/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Slider"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 342.988 280"
+            >
+              <path
+                d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
+              />
+            </svg>
+          </a>
+          <a
+            class="btn af-btn--circle af-btn--storybook"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/form-input-slider--slider"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Slider"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 9.6 12"
+            >
+              <path
+                d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
+              />
+            </svg>
+          </a>
+        </section>
+      </article>
+      <article
+        class="af-card af-skeleton"
+      >
+        <img
+          alt="loading..."
+          class="af-lasyimage"
+          src="puff.svg"
+        />
+        <header
+          class="af-card__header"
+        >
+          <h3
+            class="af-card__title"
+          >
+            Table
+          </h3>
+        </header>
+        <section
+          class="af-card__content"
+        >
+          <a
+            class="btn af-btn--circle af-btn--svg"
+            href="https://axaguildev.github.io/react-toolkit/latest/design/molecules/table/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Table"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 342.988 280"
+            >
+              <path
+                d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
+              />
+            </svg>
+          </a>
+          <a
+            class="btn af-btn--circle af-btn--storybook"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/table-table--complex"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Table"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 9.6 12"
+            >
+              <path
+                d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
+              />
+            </svg>
+          </a>
+        </section>
+      </article>
+      <article
+        class="af-card af-skeleton"
+      >
+        <img
+          alt="loading..."
+          class="af-lasyimage"
+          src="puff.svg"
+        />
+        <header
+          class="af-card__header"
+        >
+          <h3
+            class="af-card__title"
+          >
+            Tabs
+          </h3>
+        </header>
+        <section
+          class="af-card__content"
+        >
+          <a
+            class="btn af-btn--circle af-btn--svg"
+            href="https://axaguildev.github.io/react-toolkit/latest/design/molecules/tabs/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Tabs"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 342.988 280"
+            >
+              <path
+                d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
+              />
+            </svg>
+          </a>
+          <a
+            class="btn af-btn--circle af-btn--storybook"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/tabs--default"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Tabs"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 9.6 12"
+            >
+              <path
+                d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
+              />
+            </svg>
+          </a>
+        </section>
+      </article>
+      <article
+        class="af-card af-skeleton"
+      >
+        <img
+          alt="loading..."
+          class="af-lasyimage"
+          src="puff.svg"
+        />
+        <header
+          class="af-card__header"
+        >
+          <h3
+            class="af-card__title"
+          >
+            Button
+          </h3>
+        </header>
+        <section
+          class="af-card__content"
+        >
+          <a
+            class="btn af-btn--circle af-btn--svg"
+            href="https://axaguildev.github.io/react-toolkit/latest/design/atoms/button/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Button"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 342.988 280"
+            >
+              <path
+                d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
+              />
+            </svg>
+          </a>
+          <a
+            class="btn af-btn--circle af-btn--storybook"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/button--simple-button"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Button"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 9.6 12"
+            >
+              <path
+                d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
+              />
+            </svg>
+          </a>
+        </section>
+      </article>
+      <article
+        class="af-card af-skeleton"
+      >
+        <img
+          alt="loading..."
+          class="af-lasyimage"
+          src="puff.svg"
+        />
+        <header
+          class="af-card__header"
+        >
+          <h3
+            class="af-card__title"
+          >
+            Menu
+          </h3>
+        </header>
+        <section
+          class="af-card__content"
+        >
+          <a
+            class="btn af-btn--circle af-btn--svg"
+            href="https://axaguildev.github.io/react-toolkit/latest/design/molecules/navigation/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Menu"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 342.988 280"
+            >
+              <path
+                d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
+              />
+            </svg>
+          </a>
+          <a
+            class="btn af-btn--circle af-btn--storybook"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/layout-header-navbar--navbarbase"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Menu"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 9.6 12"
+            >
+              <path
+                d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
+              />
+            </svg>
+          </a>
+        </section>
+      </article>
+      <article
+        class="af-card af-skeleton"
+      >
+        <img
+          alt="loading..."
+          class="af-lasyimage"
+          src="puff.svg"
+        />
+        <header
+          class="af-card__header"
+        >
+          <h3
+            class="af-card__title"
+          >
+            List
+          </h3>
+        </header>
+        <section
+          class="af-card__content"
+        >
+          <a
+            class="btn af-btn--circle af-btn--svg"
+            href="https://axaguildev.github.io/react-toolkit/latest/design/atoms/list/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title=""
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 342.988 280"
+            >
+              <path
+                d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
+              />
+            </svg>
+          </a>
+          <a
+            class="btn af-btn--circle af-btn--storybook"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title=""
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 9.6 12"
+            >
+              <path
+                d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
+              />
+            </svg>
+          </a>
+        </section>
+      </article>
+      <article
+        class="af-card af-skeleton"
+      >
+        <img
+          alt="loading..."
+          class="af-lasyimage"
+          src="puff.svg"
+        />
+        <header
+          class="af-card__header"
+        >
+          <h3
+            class="af-card__title"
+          >
+            Checkbox
+          </h3>
+        </header>
+        <section
+          class="af-card__content"
+        >
+          <a
+            class="btn af-btn--circle af-btn--svg"
+            href="https://axaguildev.github.io/react-toolkit/latest/design/molecules/form-checkbox/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Checkbox"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 342.988 280"
+            >
+              <path
+                d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
+              />
+            </svg>
+          </a>
+          <a
+            class="btn af-btn--circle af-btn--storybook"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/form-input-checkbox--checkbox"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Checkbox"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 9.6 12"
+            >
+              <path
+                d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
+              />
+            </svg>
+          </a>
+        </section>
+      </article>
+      <article
+        class="af-card af-skeleton"
+      >
+        <img
+          alt="loading..."
+          class="af-lasyimage"
+          src="puff.svg"
+        />
+        <header
+          class="af-card__header"
+        >
+          <h3
+            class="af-card__title"
+          >
+            Checkbox-card
+          </h3>
+        </header>
+        <section
+          class="af-card__content"
+        >
+          <a
+            class="btn af-btn--circle af-btn--svg"
+            href="https://axaguildev.github.io/react-toolkit/latest/design/organisms/form-card/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Checkbox-card"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 342.988 280"
+            >
+              <path
+                d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
+              />
+            </svg>
+          </a>
+          <a
+            class="btn af-btn--circle af-btn--storybook"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/form-input-checkbox-card--checkbox-card"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Checkbox-card"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 9.6 12"
+            >
+              <path
+                d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
+              />
+            </svg>
+          </a>
+        </section>
+      </article>
+      <article
+        class="af-card af-skeleton"
+      >
+        <img
+          alt="loading..."
+          class="af-lasyimage"
+          src="puff.svg"
+        />
+        <header
+          class="af-card__header"
+        >
+          <h3
+            class="af-card__title"
+          >
+            Radio-card
+          </h3>
+        </header>
+        <section
+          class="af-card__content"
+        >
+          <a
+            class="btn af-btn--circle af-btn--svg"
+            href="https://axaguildev.github.io/react-toolkit/latest/design/organisms/form-card/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Radio-card"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 342.988 280"
+            >
+              <path
+                d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
+              />
+            </svg>
+          </a>
+          <a
+            class="btn af-btn--circle af-btn--storybook"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/form-input-radio-card--cardgroupradio-with-two-radio-cards"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Radio-card"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 9.6 12"
+            >
+              <path
+                d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
+              />
+            </svg>
+          </a>
+        </section>
+      </article>
+      <article
+        class="af-card af-skeleton"
+      >
+        <img
+          alt="loading..."
+          class="af-lasyimage"
+          src="puff.svg"
+        />
+        <header
+          class="af-card__header"
+        >
+          <h3
+            class="af-card__title"
+          >
+            Steps
+          </h3>
+        </header>
+        <section
+          class="af-card__content"
+        >
+          <a
+            class="btn af-btn--circle af-btn--svg"
+            href="https://axaguildev.github.io/react-toolkit/latest/design/molecules/steps/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Steps"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 342.988 280"
+            >
+              <path
+                d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
+              />
+            </svg>
+          </a>
+          <a
+            class="btn af-btn--circle af-btn--storybook"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/form-steps--new-design-steps"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Steps"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 9.6 12"
+            >
+              <path
+                d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
+              />
+            </svg>
+          </a>
+        </section>
+      </article>
+      <article
+        class="af-card af-skeleton"
+      >
+        <img
+          alt="loading..."
+          class="af-lasyimage"
+          src="puff.svg"
+        />
+        <header
+          class="af-card__header"
+        >
+          <h3
+            class="af-card__title"
+          >
+            Number
+          </h3>
+        </header>
+        <section
+          class="af-card__content"
+        >
+          <a
+            class="btn af-btn--circle af-btn--svg"
+            href="https://axaguildev.github.io/react-toolkit/latest/design/molecules/form-text/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Number"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 342.988 280"
+            >
+              <path
+                d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
+              />
+            </svg>
+          </a>
+          <a
+            class="btn af-btn--circle af-btn--storybook"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/form-input-number--number"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Number"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 9.6 12"
+            >
+              <path
+                d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
+              />
+            </svg>
+          </a>
+        </section>
+      </article>
+      <article
+        class="af-card af-skeleton"
+      >
+        <img
+          alt="loading..."
+          class="af-lasyimage"
+          src="puff.svg"
+        />
+        <header
+          class="af-card__header"
+        >
+          <h3
+            class="af-card__title"
+          >
+            Select-multi
+          </h3>
+        </header>
+        <section
+          class="af-card__content"
+        >
+          <a
+            class="btn af-btn--circle af-btn--svg"
+            href="https://axaguildev.github.io/react-toolkit/latest/design/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Select-multi"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 342.988 280"
+            >
+              <path
+                d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
+              />
+            </svg>
+          </a>
+          <a
+            class="btn af-btn--circle af-btn--storybook"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/form-input-selectmulti--multiselect"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Select-multi"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 9.6 12"
+            >
+              <path
+                d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
+              />
+            </svg>
+          </a>
+        </section>
+      </article>
+      <article
+        class="af-card af-skeleton"
+      >
+        <img
+          alt="loading..."
+          class="af-lasyimage"
+          src="puff.svg"
+        />
+        <header
+          class="af-card__header"
+        >
+          <h3
+            class="af-card__title"
+          >
+            Pass
+          </h3>
+        </header>
+        <section
+          class="af-card__content"
+        >
+          <a
+            class="btn af-btn--circle af-btn--svg"
+            href="https://axaguildev.github.io/react-toolkit/latest/design/molecules/form-pass"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Pass"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 342.988 280"
+            >
+              <path
+                d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
+              />
+            </svg>
+          </a>
+          <a
+            class="btn af-btn--circle af-btn--storybook"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/form-input-pass--pass"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Pass"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 9.6 12"
+            >
+              <path
+                d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
+              />
+            </svg>
+          </a>
+        </section>
+      </article>
+      <article
+        class="af-card af-skeleton"
+      >
+        <img
+          alt="loading..."
+          class="af-lasyimage"
+          src="puff.svg"
+        />
+        <header
+          class="af-card__header"
+        >
+          <h3
+            class="af-card__title"
+          >
+            Date
+          </h3>
+        </header>
+        <section
+          class="af-card__content"
+        >
+          <a
+            class="btn af-btn--circle af-btn--svg"
+            href="https://axaguildev.github.io/react-toolkit/latest/design/molecules/form-datepicker/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Date"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 342.988 280"
+            >
+              <path
+                d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
+              />
+            </svg>
+          </a>
+          <a
+            class="btn af-btn--circle af-btn--storybook"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/form-input-date--dateinputstory"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Date"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 9.6 12"
+            >
+              <path
+                d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
+              />
+            </svg>
+          </a>
+        </section>
+      </article>
+      <article
+        class="af-card af-skeleton"
+      >
+        <img
+          alt="loading..."
+          class="af-lasyimage"
+          src="puff.svg"
+        />
+        <header
+          class="af-card__header"
+        >
+          <h3
+            class="af-card__title"
+          >
+            Toggle
+          </h3>
+        </header>
+        <section
+          class="af-card__content"
+        >
+          <a
+            class="btn af-btn--circle af-btn--svg"
+            href="https://axaguildev.github.io/react-toolkit/latest/design/molecules/form-checkbox/"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Toggle"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 342.988 280"
+            >
+              <path
+                d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
+              />
+            </svg>
+          </a>
+          <a
+            class="btn af-btn--circle af-btn--storybook"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/form-input-checkbox--checkboxitem-toggle"
+            rel="noopener noreferrer"
+            target="_blank"
+            title="Storybook : Toggle"
+          >
+            <svg
+              class="af-btn__img"
+              viewBox="0 0 9.6 12"
+            >
+              <path
+                d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
+              />
+            </svg>
+          </a>
+        </section>
+      </article>
+    </div>
+  </div>
+</DocumentFragment>
+`;
