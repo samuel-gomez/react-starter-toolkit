@@ -1,5 +1,7 @@
 import React from 'react';
-import Cards, { cardsPropTypes } from 'shared/components/Cards';
+import PropTypes from 'prop-types';
+import Cards from 'shared/components/Cards';
+import { cardPropTypes } from 'shared/components/Cards/Card';
 import { COMPONENTS, TITLE_BAR, TITLE } from './constants';
 
 const SlashDesignSystemPage = ({ header, footer, title, menu, components }) => (
@@ -16,7 +18,11 @@ const SlashDesignSystemPage = ({ header, footer, title, menu, components }) => (
 );
 
 export const formPagePropTypes = {
-  ...cardsPropTypes,
+  components: PropTypes.arrayOf(
+    PropTypes.shape({
+      ...cardPropTypes,
+    }),
+  ),
 };
 
 export const formPageDefaultProps = {

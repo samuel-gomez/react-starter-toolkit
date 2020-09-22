@@ -15,3 +15,76 @@ exports[`<MenuItemEnhanced/> Render <Menu/> 1`] = `
   </li>
 </DocumentFragment>
 `;
+
+exports[`<MenuItemEnhanced/> Render <Menu/> hasChild 1`] = `
+<DocumentFragment>
+  <li
+    class="af-nav__item af-nav__item--haschild "
+    role="none"
+  >
+    <span
+      aria-expanded="false"
+      class="af-nav__link"
+      role="menuitem"
+      tabindex="-1"
+    />
+    <i
+      class="glyphicon glyphicon-arrow-xs-down"
+    />
+    <ul
+      aria-label=""
+      class="af-nav__list af-nav__list--children"
+      role="menu"
+    >
+      <li
+        class="af-nav__item "
+        role="none"
+      >
+        <a
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-label="Accueil"
+          class="af-nav__link"
+          href="/accueil"
+          role="menuitem"
+          tabindex="-1"
+        >
+          Accueil
+        </a>
+      </li>
+      <li
+        class="af-nav__item "
+        role="none"
+      >
+        <a
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-label="Membres"
+          class="af-nav__link"
+          href="/members"
+          role="menuitem"
+          tabindex="-1"
+        >
+          Membres
+        </a>
+      </li>
+      <li
+        class="af-nav__item "
+        role="none"
+      >
+        <a
+          aria-expanded="false"
+          aria-haspopup="true"
+          aria-label="Slash DS"
+          class="af-nav__link"
+          href="/slash"
+          role="menuitem"
+          tabindex="-1"
+        >
+          Slash DS
+        </a>
+      </li>
+    </ul>
+  </li>
+</DocumentFragment>
+`;

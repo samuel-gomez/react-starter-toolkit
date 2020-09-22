@@ -36,3 +36,31 @@ exports[`<MenuItem/> Render <Menu/> 1`] = `
   </li>
 </DocumentFragment>
 `;
+
+exports[`<MenuItem/> Render <Menu/> with children createMenuFn to be called 1`] = `
+<DocumentFragment>
+  <li
+    class="af-nav__item "
+    role="none"
+  >
+    <span
+      aria-expanded="false"
+      class="af-nav__link"
+      role="menuitem"
+      tabindex="-1"
+    />
+    <i
+      class="glyphicon glyphicon-arrow-xs-down"
+    />
+    <ul
+      aria-label=""
+      class="af-nav__list af-nav__list--children"
+      role="menu"
+    >
+      <p>
+        Child
+      </p>
+    </ul>
+  </li>
+</DocumentFragment>
+`;

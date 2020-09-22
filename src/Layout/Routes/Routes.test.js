@@ -4,8 +4,8 @@ import { render, act } from '@testing-library/react';
 import Environment from 'App/Environment';
 import MembersPage from 'Members';
 import DashboardPage from 'Dashboard';
-import FormPage from 'Form';
-import { renderLayoutMembers, renderLayoutDashboard, renderLayoutForm } from './Routes';
+import SlashDesignSystemPage from 'SlashDesignSystem';
+import { renderLayoutMembers, renderLayoutDashboard, renderLayoutSlashDesignSystem } from './Routes';
 import Routes from '.';
 
 describe('Route', () => {
@@ -48,12 +48,12 @@ describe('Route', () => {
     expect(result.type).toEqual(DashboardPage);
     expect(result.props.myProp).toEqual('property dashboard');
   });
-  it('Should return <FormPage /> with props when call renderLayoutForm', () => {
+  it('Should return <FormPage /> with props when call renderLayoutSlashDesignSystem', () => {
     const customProps = {
-      myProp: 'property form',
+      myProp: 'property slash',
     };
-    const result = renderLayoutForm({ ...customProps });
-    expect(result.type).toEqual(FormPage);
-    expect(result.props.myProp).toEqual('property form');
+    const result = renderLayoutSlashDesignSystem({ ...customProps });
+    expect(result.type).toEqual(SlashDesignSystemPage);
+    expect(result.props.myProp).toEqual('property slash');
   });
 });

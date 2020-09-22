@@ -13,6 +13,7 @@ $color-storybook: #ff2d74;
 .af-card {
   position: relative;
   margin-bottom: 60px;
+  min-height: 160px;
   &__image {
     width: 100%;
     border-radius: 15px 15px 0 0;

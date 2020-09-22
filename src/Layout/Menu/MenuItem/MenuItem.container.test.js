@@ -13,4 +13,28 @@ describe('<MenuItemEnhanced/>', () => {
       expect(asFragment()).toMatchSnapshot();
     });
   });
+  it('Render <Menu/> hasChild', async () => {
+    await act(async () => {
+      const { asFragment } = render(
+        <MenuEnhancedWithEnvAndAuth>
+          {[
+            {
+              label: 'Accueil',
+              url: 'accueil',
+            },
+            {
+              label: 'Membres',
+              url: 'members',
+            },
+            {
+              label: 'Slash DS',
+              url: 'slash',
+            },
+          ]}
+        </MenuEnhancedWithEnvAndAuth>,
+        { wrapper: WrapperStaticRouter },
+      );
+      expect(asFragment()).toMatchSnapshot();
+    });
+  });
 });

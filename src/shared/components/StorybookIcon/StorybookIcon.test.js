@@ -1,11 +1,10 @@
 import React from 'react';
-// import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 import StorybookIcon from './index';
 
 describe('<StorybookIcon/>', () => {
   it('Should render StorybookIcon', () => {
-    /* const wrapper = shallow(<StorybookIcon />);
-    expect(wrapper).toHaveLength(1);
-    expect(wrapper.debug()).toMatchSnapsho */ t();
+    const { asFragment } = render(<StorybookIcon />);
+    expect(asFragment()).toMatchSnapshot();
   });
 });
