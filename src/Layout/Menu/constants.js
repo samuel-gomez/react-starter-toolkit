@@ -15,6 +15,19 @@ const MENU_ITEMS = [
     label: 'Slash DS',
     url: ROUTE_URL.SLASH,
   },
+  {
+    label: 'Pages',
+    children: [
+      {
+        label: 'Not found',
+        url: ROUTE_URL.NOTFOUND,
+      },
+      {
+        label: 'Forbidden',
+        url: ROUTE_URL.UNAUTHORIZE,
+      },
+    ],
+  },
 ];
 
 export default MENU_ITEMS;

@@ -11,7 +11,7 @@ exports[`Route NotFound Page 1`] = `
       <h1
         class="af-title-bar__title"
       >
-        title
+        404 Page Not Found
       </h1>
       <a
         class="btn af-btn--circle"
@@ -22,29 +22,28 @@ exports[`Route NotFound Page 1`] = `
           class="glyphicon glyphicon-home"
         />
       </a>
-      404 Page Not Found
     </div>
   </div>
   <div
-    class="container af-container--notfound"
+    class="container af-container af-container--resilience-page"
   >
     <h1
-      class="af-notfound__title"
+      class="af-resilience-page__title"
     >
       <div
-        class="af-notfound__title-covernumber"
+        class="af-resilience-page__title-covernumber"
       >
         <span
-          class="af-notfound__title-number"
+          class="af-resilience-page__title-number"
         >
           404
         </span>
       </div>
       <div
-        class="af-notfound__title-covernot"
+        class="af-resilience-page__title-covernot"
       >
         <span
-          class="af-notfound__title-not"
+          class="af-resilience-page__title-not"
         >
           not
           <br />
@@ -53,7 +52,7 @@ exports[`Route NotFound Page 1`] = `
       </div>
     </h1>
     <p
-      class="af-notfound__message"
+      class="af-resilience-page__message"
     >
       The page you are looking for is not here!
     </p>
@@ -110,6 +109,11 @@ exports[`Route Should render Routes 1`] = `
           id="mainmenu"
           role="menubar"
         >
+          <div
+            style="min-height: 94px; position: relative;"
+          >
+             
+          </div>
           <div
             style="min-height: 94px; position: relative;"
           >
