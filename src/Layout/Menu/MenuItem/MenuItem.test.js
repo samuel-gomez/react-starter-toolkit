@@ -1,7 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import WrapperStaticRouter from 'shared/components/WrapperStaticRouter';
-import { NavBarItem } from '@axa-fr/react-toolkit-all';
 import { MenuItem, ActionElt } from './MenuItem';
 
 describe('<MenuItem/>', () => {

@@ -11,7 +11,7 @@
     }
   },
   "oidc": {
-    "isEnabled": false,
+    "isEnabled": true,
     "client_id": "interactive.public",
     "redirect_uri": "http://toolkitreact.com:8080/authentication/callback",
     "response_type": "code",
