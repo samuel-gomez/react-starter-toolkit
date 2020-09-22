@@ -13,6 +13,7 @@ describe('<MenuItemEnhanced/>', () => {
       expect(asFragment()).toMatchSnapshot();
     });
   });
+
   it('Render <Menu/> hasChild', async () => {
     await act(async () => {
       const { asFragment } = render(

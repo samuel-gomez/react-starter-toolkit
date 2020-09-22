@@ -2,11 +2,11 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { StaticRouter } from 'react-router-dom';
 import { defineFeature, loadFeature } from 'jest-cucumber';
-import NotFound from './NotFound.component';
+import NotFound from './NotFound';
 
 const wrapper = ({ children }) => <StaticRouter context={{}}>{children}</StaticRouter>;
 
-const feature = loadFeature('src/NotFound/NotFound.component.feature');
+const feature = loadFeature('src/NotFound/NotFound.feature');
 
 defineFeature(feature, test => {
   test('Chargement de la page 404', ({ given, when, then }) => {

@@ -92,6 +92,60 @@ exports[`<Menu/> Render <Menu/> 1`] = `
               Slash DS
             </a>
           </li>
+          <li
+            class="af-nav__item af-nav__item--haschild "
+            role="none"
+          >
+            <span
+              aria-expanded="false"
+              class="af-nav__link"
+              role="menuitem"
+              tabindex="-1"
+            >
+              Pages
+            </span>
+            <i
+              class="glyphicon glyphicon-arrow-xs-down"
+            />
+            <ul
+              aria-label=""
+              class="af-nav__list af-nav__list--children"
+              role="menu"
+            >
+              <li
+                class="af-nav__item "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Not found"
+                  class="af-nav__link"
+                  href="/notfound"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Not found
+                </a>
+              </li>
+              <li
+                class="af-nav__item "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Forbidden"
+                  class="af-nav__link"
+                  href="/forbidden"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Forbidden
+                </a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </div>
     </nav>

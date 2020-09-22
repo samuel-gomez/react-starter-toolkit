@@ -64,6 +64,11 @@ exports[`Renders RouteBase component without crashing 1`] = `
           >
              
           </div>
+          <div
+            style="min-height: 94px; position: relative;"
+          >
+             
+          </div>
         </ul>
       </div>
     </nav>

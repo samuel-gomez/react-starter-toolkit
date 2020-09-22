@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import PageNotFound from 'NotFound';
+import PageUnauthorize from 'Unauthorize';
 import Members from 'Members';
 import SlashDesignSystem from 'SlashDesignSystem';
 import Dashboard from 'Dashboard';
@@ -17,6 +18,7 @@ const Routes = () => (
     <Route exact path={ROUTE_URL.DASHBOARD} render={renderLayoutDashboard} />
     <Route exact path={ROUTE_URL.MEMBERS} render={renderLayoutMembers} />
     <Route exact path={ROUTE_URL.SLASH} render={renderLayoutSlashDesignSystem} />
+    <Route exact path={ROUTE_URL.UNAUTHORIZE} component={PageUnauthorize} />
     <Route component={PageNotFound} />
   </Switch>
 );

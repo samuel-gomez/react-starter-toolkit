@@ -2,14 +2,14 @@
 
 $font-family-serif: Georgia, 'Times New Roman', Times, serif, arial;
 
-.af-container--notfound {
+.af-container--resilience-page {
   min-height: 500px;
   height: 50vh;
   position: relative;
   overflow: hidden;
 }
 
-.af-notfound {
+.af-resilience-page {
   &__title {
     font-size: 5em;
     color: $color-axa;
@@ -25,7 +25,7 @@ $font-family-serif: Georgia, 'Times New Roman', Times, serif, arial;
       background-color: $color-red-axa;
       left: 50%;
       top: -70px;
-      box-shadow: 0 -3px 26px rgba(0, 0, 0, .6);
+      box-shadow: 0 -3px 26px rgba(0, 0, 0, 0.6);
       transform: rotateZ(29deg) translate(-50%, 0);
       z-index: 2;
     }
@@ -43,7 +43,7 @@ $font-family-serif: Georgia, 'Times New Roman', Times, serif, arial;
     }
 
     &-number {
-      animation: slideToLeft .7s cubic-bezier(.86, 0, .07, 1);
+      animation: slideToLeft 0.7s cubic-bezier(0.86, 0, 0.07, 1);
       position: absolute;
       right: 0;
     }
@@ -66,7 +66,7 @@ $font-family-serif: Georgia, 'Times New Roman', Times, serif, arial;
     }
 
     &-not {
-      animation: slideToRight .7s cubic-bezier(.86, 0, .07, 1);
+      animation: slideToRight 0.7s cubic-bezier(0.86, 0, 0.07, 1);
       position: absolute;
       left: 0;
     }
@@ -81,12 +81,11 @@ $font-family-serif: Georgia, 'Times New Roman', Times, serif, arial;
     font-family: $font-family-serif;
     font-weight: 600;
     width: 20%;
-    animation: appearmessage 1s cubic-bezier(.86, 0, .07, 1);
+    animation: appearmessage 1s cubic-bezier(0.86, 0, 0.07, 1);
   }
 }
 
 @keyframes slideToLeft {
-
   from {
     right: -100%;
   }
@@ -94,11 +93,9 @@ $font-family-serif: Georgia, 'Times New Roman', Times, serif, arial;
   to {
     right: 0;
   }
-
 }
 
 @keyframes slideToRight {
-
   from {
     left: -100%;
   }
@@ -106,11 +103,9 @@ $font-family-serif: Georgia, 'Times New Roman', Times, serif, arial;
   to {
     left: 0;
   }
-
 }
 
 @keyframes appearmessage {
-
   0% {
     opacity: 0;
     right: 54%;
@@ -125,5 +120,4 @@ $font-family-serif: Georgia, 'Times New Roman', Times, serif, arial;
     opacity: 1;
     right: 24%;
   }
-
 }
