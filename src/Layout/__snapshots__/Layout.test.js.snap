@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout Should <CustomComponent /> contain layout props and customProps when call Layout with  1`] = `
+<DocumentFragment>
+  <div>
+    Hello
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Layout Should redirect to forbidden page when user connected is not aurhorized 1`] = `
+<DocumentFragment>
+  <p>
+    Redirection forbidden
+  </p>
+</DocumentFragment>
+`;

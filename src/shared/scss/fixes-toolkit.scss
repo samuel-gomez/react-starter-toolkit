@@ -70,6 +70,13 @@
   padding: 0.2rem 0.5rem;
   text-align: center;
 }
+.af-btn.af-btn--table-sorting {
+  box-shadow: none;
+  padding: 1em;
+  &:hover {
+    padding: 1em;
+  }
+}
 
 .af-body__content {
   max-height: calc(100vh - 60px);

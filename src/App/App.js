@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { AuthenticationProvider, OidcSecure, oidcLog, InMemoryWebStorage } from '@axa-fr/react-oidc-context';
+import { AuthenticationProvider, oidcLog, InMemoryWebStorage } from '@axa-fr/react-oidc-context';
 import Environment, { withEnvironment } from 'App/Environment';
 import Routes from 'Layout/Routes';
 
@@ -12,9 +12,7 @@ export const RoutesBase = ({ environment }) => (
     InMemoryWebStorage={InMemoryWebStorage}
   >
     <Router>
-      <OidcSecure>
-        <Routes />
-      </OidcSecure>
+      <Routes />
     </Router>
   </AuthenticationProvider>
 );

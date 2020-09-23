@@ -9,7 +9,7 @@ describe('<MenuItem/>', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it.only('Render <Menu/> with children createMenuFn to be called', () => {
+  it('Render <Menu/> with children createMenuFn to be called', () => {
     const Child = () => <p>Child</p>;
     const createMenuMock = jest.fn().mockReturnValue(<Child />);
 
