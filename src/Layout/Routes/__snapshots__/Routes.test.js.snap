@@ -63,136 +63,22 @@ exports[`Route NotFound Page 1`] = `
 exports[`Route Should render Routes 1`] = `
 <DocumentFragment>
   <div
-    style="min-height: 94px; position: relative;"
-  >
-     
-  </div>
-  <div
-    class="af-nav-container"
-  >
-    <button
-      aria-controls="mainmenu"
-      aria-haspopup="true"
-      class="mask fade "
-      id="togglemenu"
-      type="button"
-    />
-    <nav
-      aria-label="Menu principal"
-      class="af-nav af-drawer left "
-      role="navigation"
-    >
-      <div
-        class="container af-nav__wrapper"
-      >
-        <div
-          class="af-nav__aside-header"
-        >
-          <h4
-            class="af-nav__aside-title"
-          >
-            Menu
-          </h4>
-          <button
-            aria-controls="mainmenu"
-            aria-haspopup="true"
-            class="af-nav__aside-close"
-            id="togglemenu"
-            type="button"
-          >
-            ×
-          </button>
-        </div>
-        <ul
-          aria-labelledby="togglemenu"
-          class="af-nav__list "
-          id="mainmenu"
-          role="menubar"
-        >
-          <div
-            style="min-height: 94px; position: relative;"
-          >
-             
-          </div>
-          <div
-            style="min-height: 94px; position: relative;"
-          >
-             
-          </div>
-          <div
-            style="min-height: 94px; position: relative;"
-          >
-             
-          </div>
-          <div
-            style="min-height: 94px; position: relative;"
-          >
-             
-          </div>
-        </ul>
-      </div>
-    </nav>
-  </div>
-  <a
-    aria-controls="mainmenu"
-    aria-haspopup="true"
-    class="btn af-title-bar__mobile-menu af-btn--circle"
-    href="#"
-    id="togglemenu"
-    role="button"
-    tabindex="0"
-    title="Toggle menu"
-  >
-    <i
-      class="glyphicon glyphicon-menu-hamburger"
-    />
-  </a>
-  <div
-    class="af-title-bar"
+    class="oidc-authenticating"
   >
     <div
-      class="container af-title-bar__wrapper"
+      class="oidc-authenticating__container"
     >
       <h1
-        class="af-title-bar__title"
+        class="oidc-authenticating__title"
       >
-        Accueil
+        Authentification en cours
       </h1>
+      <p
+        class="oidc-authenticating__content"
+      >
+        Vous allez être redirigé sur la page de login
+      </p>
     </div>
   </div>
-  <div
-    class="af-main container"
-  >
-    <h1
-      class="af-title--content"
-    >
-      Tableau de bord
-    </h1>
-  </div>
-  <footer
-    class="af-footer"
-  >
-    <div
-      class="container-fluid container"
-    >
-      <a
-        class="af-logo"
-        href="https://www.axa.fr/"
-        target="blank"
-        title="Site Axa"
-      >
-        <img
-          alt="Logo Axa"
-          class="af-logo__brand"
-          src="logo-axa.svg"
-        />
-      </a>
-      <div
-        class="af-footer-content"
-      >
-        © 2020 AXA Tous droits réservés - v0.1.0
-      </div>
-    </div>
-  </footer>
 </DocumentFragment>
 `;

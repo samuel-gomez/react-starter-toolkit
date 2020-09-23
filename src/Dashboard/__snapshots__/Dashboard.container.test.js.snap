@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Dashboard page/> Renders Dashboard page component without crashing 1`] = `
+<DocumentFragment>
+  <div
+    class="af-main container"
+  >
+    <h1
+      class="af-title--content"
+    >
+      Tableau de bord
+    </h1>
+  </div>
+</DocumentFragment>
+`;
