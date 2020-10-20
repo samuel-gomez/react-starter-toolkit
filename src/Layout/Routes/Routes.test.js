@@ -1,8 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, MemoryRouter } from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 import { render, act } from '@testing-library/react';
 import withWrapperEnvAndAuth from 'shared/hoc/withWrapperEnvAndAuth';
-import Environment from 'App/Environment';
 import MembersPage from 'Members';
 import DashboardPage from 'Dashboard';
 import SlashDesignSystemPage from 'SlashDesignSystem';
@@ -15,11 +14,9 @@ describe('Route', () => {
   it('Should render Routes', async () => {
     await act(async () => {
       const { asFragment } = render(
-        <Environment>
-          <Router>
-            <RoutesEnvAndAuth />
-          </Router>
-        </Environment>,
+        <MemoryRouter initialEntries={['/']}>
+          <RoutesEnvAndAuth authRole="ELMU_Admin" />
+        </MemoryRouter>,
       );
       expect(asFragment()).toMatchSnapshot();
     });

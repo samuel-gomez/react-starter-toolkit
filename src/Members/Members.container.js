@@ -7,15 +7,15 @@ import { useNotifications } from 'shared/components/Notifications';
 import Members from './Members';
 import { useMembers } from './Members.hook';
 
-export const MembersContext = React.createContext({ onchangeOrder: null, sorting: {}, addNotification: null, stateNotifications: [] });
+export const MembersContext = React.createContext({ onChangeSorting: null, sorting: {}, addNotification: null, stateNotifications: [] });
 const { Provider: MembersProvider } = MembersContext;
 
 export const MembersEnhanced = ({ useMembersFn, useNotificationsFn, setLoaderModeFn, fetchCustom, ...rest }) => {
-  const { anomaly, isLoading, members, onChangeOrder, stateSorting } = useMembersFn({ fetchCustom });
+  const { anomaly, isLoading, members, pagination, onChangeSorting, stateSorting, onChangePaging } = useMembersFn({ fetchCustom });
   const { addNotification, onDeleteNotification, stateNotifications } = useNotificationsFn();
 
   return (
-    <MembersProvider value={{ onChangeOrder, sorting: stateSorting, addNotification, stateNotifications }}>
+    <MembersProvider value={{ onChangeSorting, sorting: stateSorting, addNotification, stateNotifications }}>
       <Members
         {...rest}
         members={members}
@@ -23,6 +23,8 @@ export const MembersEnhanced = ({ useMembersFn, useNotificationsFn, setLoaderMod
         anomaly={anomaly}
         deleteNotification={onDeleteNotification}
         notifications={stateNotifications}
+        pagination={pagination}
+        onChangePaging={onChangePaging}
       />
     </MembersProvider>
   );

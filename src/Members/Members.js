@@ -1,12 +1,12 @@
 import React from 'react';
 import Resilience from 'shared/components/Resilience/Resilience';
 import NotificationsContainer from 'shared/components/Notifications';
-import { Loader } from '@axa-fr/react-toolkit-all';
+import { Loader, Paging } from '@axa-fr/react-toolkit-all';
 import MembersTable from './MembersTable';
 import { TITLE_BAR, TITLE } from './constants';
 import './Members.scss';
 
-const Members = ({ header, footer, title, menu, loaderMode, members, anomaly, deleteNotification, notifications }) => (
+const Members = ({ header, footer, title, menu, loaderMode, members, anomaly, deleteNotification, notifications, onChangePaging, pagination }) => (
   <>
     {header()}
     {menu()}
@@ -17,6 +17,7 @@ const Members = ({ header, footer, title, menu, loaderMode, members, anomaly, de
       <Loader mode={loaderMode}>
         <Resilience anomaly={anomaly}>
           <MembersTable members={members} />
+          <Paging {...pagination} onChange={onChangePaging} />
         </Resilience>
       </Loader>
     </div>

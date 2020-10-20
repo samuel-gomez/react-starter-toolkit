@@ -8,7 +8,7 @@ import {
   setStateMembersFailure,
   setMembersInit,
   setMembersError,
-  setMembersSuccess
+  setMembersSuccess,
 } from './Members.hook';
 import { FETCH_MEMBERS } from './constants';
 
@@ -61,7 +61,6 @@ describe('setMembersSuccess', () => {
   });
 });
 
-
 describe('setStateMembersLoading', () => {
   it('Should return state isLoading: true When called with state', () => {
     const state = { value: '01' };
@@ -109,7 +108,6 @@ describe('setStateMembersSuccess', () => {
     expect(result).toEqual(expected);
   });
 });
-
 
 describe('computeInfos', () => {
   it('Should computed members when computeInfos have been called with members', () => {
@@ -193,7 +191,6 @@ describe('dataFetchReducer', () => {
     expect(result).toEqual(expected);
   });
 
-
   it('Should return throw error when type = other', () => {
     const state = {
       value: 'value',
@@ -229,19 +226,19 @@ describe('useMembers', () => {
     dataFetchReducerFn: dataFetchReducerMock,
     findMembersFn: findMembersMock,
   };
- 
+
   it('Should update stateMembers when useMembers called', () => {
     const { result } = renderHook(() => useMembers(defaultUseMembersParams));
     const expected = {
       isLoading: false,
       members: [],
-      anomaly: null,      
+      anomaly: null,
       filters: {
         numberItems: 10,
         currentPage: 1,
         numberPages: 1,
       },
-      onChangeOrder: result.current.onChangeOrder,
+      onChangeSorting: result.current.onChangeSorting,
       stateSorting: {
         field: '',
         order: 'NONE',
@@ -253,12 +250,12 @@ describe('useMembers', () => {
     });
   });
 
-  it('Should update order state when onChangeOrder called', () => {    
+  it('Should update order state when onChangeSorting called', () => {
     const { result } = renderHook(() => useMembers(defaultUseMembersParams));
-    act(() => result.current.onChangeOrder({ field: 'name', order: 1})); 
-    expect(result.current.stateSorting).toEqual({ field: 'name', order: 1});
+    act(() => result.current.onChangeSorting({ field: 'name', order: 1 }));
+    expect(result.current.stateSorting).toEqual({ field: 'name', order: 1 });
   });
-  it('Should update stateMembers when onChangeOrder called', () => {
+  it('Should update stateMembers when onChangeSorting called', () => {
     const { result } = renderHook(() => useMembers(defaultUseMembersParams));
     const expected = {
       isLoading: false,
@@ -269,7 +266,7 @@ describe('useMembers', () => {
         currentPage: 1,
         numberPages: 1,
       },
-      onChangeOrder: result.current.onChangeOrder,
+      onChangeSorting: result.current.onChangeSorting,
       stateSorting: {
         field: '',
         order: 'NONE',
