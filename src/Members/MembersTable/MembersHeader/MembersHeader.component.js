@@ -21,7 +21,7 @@ const propTypes = {
   onSort: PropTypes.func,
   sorting: PropTypes.shape({
     field: PropTypes.string,
-    order: PropTypes.string,
+    order: PropTypes.oneOf([NONE, ASCENDING, DESCENDING]),
   }),
   sortingInfo: PropTypes.objectOf(PropTypes.oneOf([NONE, ASCENDING, DESCENDING])),
   headers: PropTypes.arrayOf(
