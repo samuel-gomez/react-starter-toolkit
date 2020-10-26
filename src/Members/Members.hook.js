@@ -26,7 +26,7 @@ const initStatePaging = {
   page: 1,
 };
 
-export const setNumberPages = ({ total = 1, max = 1 }) => Math.ceil(max > total ? 1 : Number(total / max) - 1);
+export const setNumberPages = ({ total = 1, max = 1 }) => Math.ceil(max >= total ? 1 : Number(total / max) - 1);
 export const setCurrentPage = ({ max, skip }) => Number(skip / max) || 1;
 
 export const setPagination = ({ total, skip, max, setCurrentPageFn = setCurrentPage, setNumberPagesfn = setNumberPages }) => ({
@@ -103,6 +103,18 @@ export const setMembersInit = dispatch => () => dispatch({ type: FETCH_MEMBERS.I
 export const setMembersError = dispatch => payload => dispatch({ type: FETCH_MEMBERS.FAILURE, payload });
 export const setMembersSuccess = dispatch => payload => dispatch({ type: FETCH_MEMBERS.SUCCESS, payload });
 
+export const setPaging = paging => prevPaging =>
+  prevPaging?.numberItems !== paging?.numberItems
+    ? {
+        numberItems: paging?.numberItems,
+        page: 1,
+      }
+    : paging;
+
+export const setOnChangePaging = ({ setStateFormPaging, paging, setPagingFn = setPaging }) => {
+  setStateFormPaging(setPagingFn(paging));
+};
+
 export const useMembers = ({
   fetchCustom,
   initStateCt = initState,
@@ -114,6 +126,7 @@ export const useMembers = ({
   setMembersInitFn = setMembersInit,
   setMembersErrorFn = setMembersError,
   setMembersSuccessFn = setMembersSuccess,
+  setOnChangePagingFn = setOnChangePaging,
 }) => {
   const [stateMembers, dispatch] = useReducer(dataFetchReducerFn, initStateCt);
   const [stateSorting, setStateSorting] = useState(initStateSortingCt);
@@ -124,18 +137,7 @@ export const useMembers = ({
 
   const onChangeSorting = useCallback(sorting => setStateSorting(sorting), []);
 
-  const onChangePaging = useCallback(
-    paging =>
-      setStateFormPaging(prevPaging =>
-        prevPaging?.numberItems !== paging?.numberItems
-          ? {
-              numberItems: paging?.numberItems,
-              page: 1,
-            }
-          : paging,
-      ),
-    [],
-  );
+  const onChangePaging = useCallback(paging => setOnChangePagingFn({ setStateFormPaging, paging }), [setOnChangePagingFn]);
 
   useEffect(() => {
     const abortController = new AbortController();

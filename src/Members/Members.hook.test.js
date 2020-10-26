@@ -9,6 +9,11 @@ import {
   setMembersInit,
   setMembersError,
   setMembersSuccess,
+  setPaging,
+  setOnChangePaging,
+  setAnomalyIfEmpty,
+  setNumberPages,
+  setBirthDate,
 } from './Members.hook';
 import { FETCH_MEMBERS } from './constants';
 
@@ -22,6 +27,62 @@ const membersMock = [
     created: '2020-10-20T13:44:20.540000',
   },
 ];
+
+describe('setNumberPages', () => {
+  it('Should return 0 when max = 1 and total = 1', () => {
+    const result = setNumberPages({});
+    expect(result).toEqual(1);
+  });
+  it('Should return 5 when max = 10 and total = 50', () => {
+    const result = setNumberPages({ max: 10, total: 50 });
+    expect(result).toEqual(4);
+  });
+  it('Should return 1 when max = 10 and total = 5', () => {
+    const result = setNumberPages({ max: 10, total: 5 });
+    expect(result).toEqual(1);
+  });
+});
+
+describe('setBirthDate', () => {
+  it('Should return empty string when date null', () => {
+    const result = setBirthDate({ birthDate: null });
+    expect(result).toEqual('');
+  });
+  it('Should return formatted date when technical date', () => {
+    const result = setBirthDate({ birthDate: '1983-03-30T00:00:00' });
+    expect(result).toEqual('30/03/1983');
+  });
+});
+
+describe('setAnomalyIfEmpty', () => {
+  it('Should return null when receive items not empty', () => {
+    const result = setAnomalyIfEmpty(['item']);
+    expect(result).toBeNull();
+  });
+  it('Should  when receive items not empty', () => {
+    const result = setAnomalyIfEmpty([]);
+    const expected = { label: 'Info : Aucune donnée trouvée', type: 'info', iconName: 'exclamation-sign' };
+    expect(result).toEqual(expected);
+  });
+});
+describe('setPaging', () => {
+  it('Should return paging with same page number when numberItems not changing', () => {
+    const result = setPaging({ numberItems: 50, page: 2 })({ numberItems: 50 });
+    expect(result).toEqual({ numberItems: 50, page: 2 });
+  });
+  it('Should return new paging with page one when numberItems had changing', () => {
+    const result = setPaging({ numberItems: 50, page: 2 })({ numberItems: 10 });
+    expect(result).toEqual({ numberItems: 50, page: 1 });
+  });
+});
+
+describe('setStateFormPaging', () => {
+  it('Should call setStateFormPaging when call setOnChangePaging', () => {
+    const setStateFormPagingMock = jest.fn();
+    setOnChangePaging({ setStateFormPaging: setStateFormPagingMock, paging: {} });
+    expect(setStateFormPagingMock).toBeCalled();
+  });
+});
 
 describe('setStateMembersFailure', () => {
   it('Should return state isLoading: false with anomaly with When called with state and payload', () => {
@@ -78,22 +139,26 @@ describe('setStateMembersSuccess', () => {
     const state = { value: '01' };
     const payload = {
       members: {
-        responseBody: [
-          {
-            _id: '00001',
-            type: 'PP',
-            firstname: 'Samuel',
-            lastname: 'Gomez',
-            birthdate: '1985-10-20T13:44:20.540000',
-            created: '2020-10-20T13:44:20.540000',
-          },
-        ],
+        responseBody: {
+          data: [
+            {
+              _id: '00001',
+              type: 'PP',
+              firstname: 'Samuel',
+              lastname: 'Gomez',
+              birthdate: '1985-10-20T13:44:20.540000',
+              created: '2020-10-20T13:44:20.540000',
+            },
+          ],
+          totals: 50,
+        },
       },
     };
     const result = setStateMembersSuccess({ state, payload });
     const expected = {
       value: '01',
       isLoading: false,
+      anomaly: null,
       members: [
         {
           _id: '00001',
@@ -104,6 +169,12 @@ describe('setStateMembersSuccess', () => {
           created: '2020-10-20T13:44:20.540000',
         },
       ],
+      pagination: {
+        currentPage: 1,
+        numberItems: NaN,
+        numberPages: 1,
+        total: NaN,
+      },
     };
     expect(result).toEqual(expected);
   });
@@ -170,13 +241,14 @@ describe('dataFetchReducer', () => {
       type,
       payload: {
         members: {
-          responseBody: membersMock,
+          responseBody: { data: membersMock, totals: 50 },
         },
       },
     });
     const expected = {
       value: 'value',
       isLoading: false,
+      anomaly: null,
       members: [
         {
           _id: '00001',
@@ -187,6 +259,12 @@ describe('dataFetchReducer', () => {
           created: '2020-10-20T13:44:20.540000',
         },
       ],
+      pagination: {
+        currentPage: 1,
+        numberItems: NaN,
+        numberPages: 1,
+        total: NaN,
+      },
     };
     expect(result).toEqual(expected);
   });
@@ -240,8 +318,13 @@ describe('useMembers', () => {
       },
       onChangeSorting: result.current.onChangeSorting,
       stateSorting: {
-        field: '',
-        order: 'NONE',
+        field: 'firstname',
+        order: 1,
+      },
+      onChangePaging: result.current.onChangePaging,
+      stateFormPaging: {
+        numberItems: 50,
+        page: 1,
       },
     };
     act(() => {
@@ -268,13 +351,31 @@ describe('useMembers', () => {
       },
       onChangeSorting: result.current.onChangeSorting,
       stateSorting: {
-        field: '',
-        order: 'NONE',
+        field: 'firstname',
+        order: 1,
+      },
+      onChangePaging: result.current.onChangePaging,
+      stateFormPaging: {
+        numberItems: 50,
+        page: 1,
       },
     };
     act(() => {
       expect(result.current).toEqual(expected);
       expect(fetchDataMock).toBeCalled();
+    });
+  });
+
+  it('Should update order state when onChangePaging called', () => {
+    const { result } = renderHook(() => useMembers(defaultUseMembersParams));
+    act(() =>
+      result.current.onChangePaging({
+        numberItems: 100,
+      }),
+    );
+    expect(result.current.stateFormPaging).toEqual({
+      numberItems: 100,
+      page: 1,
     });
   });
 });

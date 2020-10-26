@@ -17,7 +17,7 @@ const Members = ({ header, footer, title, menu, loaderMode, members, anomaly, de
       <Loader mode={loaderMode}>
         <Resilience anomaly={anomaly}>
           <MembersTable members={members} />
-          <Paging {...pagination} onChange={onChangePaging} />
+          <Paging {...pagination} onChange={onChangePaging} id="paging" />
         </Resilience>
       </Loader>
     </div>
