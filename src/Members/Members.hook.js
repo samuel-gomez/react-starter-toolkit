@@ -1,7 +1,8 @@
-import { useEffect, useReducer, useCallback, useState } from 'react';
+import { useEffect, useReducer, useCallback, useState, useContext } from 'react';
 import formatDate from 'shared/helpers/formatDate';
 import { ASCENDING } from 'shared/constants';
 import fetchData from 'shared/helpers/fetchData';
+import { FetchContext } from 'App/Fetch';
 import findMembers from './Members.service';
 import { FETCH_MEMBERS } from './constants';
 
@@ -116,7 +117,6 @@ export const setOnChangePaging = ({ setStateFormPaging, paging, setPagingFn = se
 };
 
 export const useMembers = ({
-  fetchCustom,
   initStateCt = initState,
   initStateSortingCt = initStateSorting,
   initStatePagingCt = initStatePaging,
@@ -127,7 +127,9 @@ export const useMembers = ({
   setMembersErrorFn = setMembersError,
   setMembersSuccessFn = setMembersSuccess,
   setOnChangePagingFn = setOnChangePaging,
+  FetchContextObj = FetchContext,
 }) => {
+  const { fetchCustom } = useContext(FetchContextObj);
   const [stateMembers, dispatch] = useReducer(dataFetchReducerFn, initStateCt);
   const [stateSorting, setStateSorting] = useState(initStateSortingCt);
   const [stateFormPaging, setStateFormPaging] = useState(initStatePagingCt);

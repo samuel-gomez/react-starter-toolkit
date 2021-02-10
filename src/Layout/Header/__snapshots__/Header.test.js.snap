@@ -20,7 +20,7 @@ exports[`<Header/> Render <Header/> 1`] = `
             href="/"
           >
             <img
-              alt="Toolkit React Starter"
+              alt=""
               class="af-logo__brand"
               src="slash-logo.svg"
             />
@@ -28,12 +28,9 @@ exports[`<Header/> Render <Header/> 1`] = `
           <h2
             class="af-header__title"
           >
-            Toolkit React Starter
             <small
               class="af-header__subtitle"
-            >
-              by Slash Design System
-            </small>
+            />
           </h2>
         </div>
         <div

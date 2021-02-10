@@ -1,23 +1,9 @@
 import React from 'react';
 import { renderHook, act } from '@testing-library/react-hooks';
 import { render } from '@testing-library/react';
-import { withEnvironment, EnvironmentProvider, useEnv } from '.';
+import { EnvironmentProvider, useEnv } from '.';
 
 const BaseComponent = ({ environment }) => <div>{environment.env}</div>;
-const ComponentWithEnvironment = withEnvironment(BaseComponent);
-
-describe('withEnvironment', () => {
-  it('Should BaseComponent receive environment props when use withEnvironment HOC and wrapped by EnvironmentProvider', () => {
-    const { getByText, asFragment } = render(
-      <EnvironmentProvider value={{ environment: { env: 'production' } }}>
-        <ComponentWithEnvironment />
-      </EnvironmentProvider>,
-    );
-
-    expect(getByText('production')).toBeDefined();
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
 
 describe('useEnv', () => {
   it('Should import file when state environment is null', async () => {

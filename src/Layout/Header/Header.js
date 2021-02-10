@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Header, Name, User, Infos } from '@axa-fr/react-toolkit-all';
 import logo from 'shared/images/slash-logo.svg';
-import withEnvAndAuth from 'shared/hoc/withEnvAndAuth';
 import withClassModifier from '@axa-fr/react-toolkit-core/dist/withClassModifier.hoc';
 import Skeleton from 'shared/components/Skeleton';
 import Resilience from 'shared/components/Resilience/Resilience';
@@ -27,8 +26,8 @@ export const HeaderApp = ({ infos, title, subtitle, link, authName, authRole, an
 );
 
 HeaderApp.propTypes = {
-  title: PropTypes.string,
-  subtitle: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
   link: PropTypes.string,
   infos: PropTypes.arrayOf(
     PropTypes.shape({
@@ -41,12 +40,10 @@ HeaderApp.propTypes = {
 };
 
 HeaderApp.defaultProps = {
-  title: 'Toolkit React Starter',
-  subtitle: 'by Slash Design System',
   infos: null,
   link: '#',
   authName: 'Non Connecté',
   authRole: 'Profil',
 };
 
-export default withEnvAndAuth(HeaderApp);
+export default HeaderApp;

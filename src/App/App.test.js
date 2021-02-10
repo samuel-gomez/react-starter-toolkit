@@ -1,7 +1,7 @@
 import React from 'react';
+import WrapperStaticRouter from 'shared/components/WrapperStaticRouter';
 import { render, act } from '@testing-library/react';
-import App, { RoutesBase } from './App';
-import Environment from './Environment';
+import App from './App';
 
 const envMock = {
   baseUrl: 'local',
@@ -28,19 +28,9 @@ const envMock = {
     triggerAuthFlow: true,
   },
 };
-
 it('Should App render without crashing', async () => {
   await act(async () => {
-    const { asFragment } = render(<App />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
-
-const wrapper = ({ children }) => <Environment>{children}</Environment>;
-
-it('Renders RouteBase component without crashing', async () => {
-  await act(async () => {
-    const { asFragment } = render(<RoutesBase environment={envMock} />, { wrapper });
+    const { asFragment } = render(<App {...envMock} />, { wrapper: WrapperStaticRouter });
     expect(asFragment()).toMatchSnapshot();
   });
 });

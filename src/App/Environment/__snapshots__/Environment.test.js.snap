@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`withEnvironment Should BaseComponent receive environment props when use withEnvironment HOC and wrapped by EnvironmentProvider 1`] = `
-<DocumentFragment>
-  <div>
-    production
-  </div>
-</DocumentFragment>
-`;

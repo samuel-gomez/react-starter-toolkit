@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`setFetchCustom Should Base have fetchCustom props when call setFetchCustom 1`] = `
+<DocumentFragment>
+  <div>
+    haveFetchCustom
+  </div>
+</DocumentFragment>
+`;

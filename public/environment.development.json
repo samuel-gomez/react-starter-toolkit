@@ -13,12 +13,12 @@
   "oidc": {
     "isEnabled": true,
     "client_id": "interactive.public",
-    "redirect_uri": "http://toolkitreact.com:8080/authentication/callback",
+    "redirect_uri": "http://localhost:9999/authentication/callback",
     "response_type": "code",
-    "post_logout_redirect_uri": "http://toolkitreact.com:8080/",
+    "post_logout_redirect_uri": "http://localhost:9999/",
     "scope": "openid profile email api offline_access",
     "authority": "https://demo.identityserver.io",
-    "silent_redirect_uri": "http://toolkitreact.com:8080/authentication/silent_callback",
+    "silent_redirect_uri": "http://localhost:9999/authentication/silent_callback",
     "automaticSilentRenew": true,
     "loadUserInfo": true
   }

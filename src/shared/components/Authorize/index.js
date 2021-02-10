@@ -1,5 +1,9 @@
-import withEnvAndAuth from 'shared/hoc/withEnvAndAuth';
+import { useContext } from 'react';
+import { UserContext } from 'App/User';
 
-const Autorize = ({ authorized, authRole, children }) => (authorized !== undefined && !authorized.includes(authRole) ? null : children);
+const Authorize = ({ authorized, children }) => {
+  const { authRole } = useContext(UserContext);
+  return authorized !== undefined && !authorized.includes(authRole) ? null : children;
+};
 
-export default withEnvAndAuth(Autorize);
+export default Authorize;
