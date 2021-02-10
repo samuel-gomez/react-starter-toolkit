@@ -1,16 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Loader } from '@axa-fr/react-toolkit-all';
 
 const NODE_ENV = process.env.REACT_APP_NODE_ENV || process.env.NODE_ENV;
-export const { Consumer: EnvironmentConsumer, Provider: EnvironmentProvider } = React.createContext();
 
-/**
- * HOC pass the environment context props to Component
- * @param {*} Component
- */
-export const withEnvironment = Component => props => (
-  <EnvironmentConsumer>{store => (!store.environment ? <Loader /> : <Component {...props} {...store} />)}</EnvironmentConsumer>
-);
+export const EnvironmentContext = React.createContext();
+export const { Provider: EnvironmentProvider } = EnvironmentContext;
 
 const initState = {
   environment: null,

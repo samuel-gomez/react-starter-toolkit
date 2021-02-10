@@ -1,28 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { AuthenticationProvider, oidcLog, InMemoryWebStorage } from '@axa-fr/react-oidc-context';
-import Environment, { withEnvironment } from 'App/Environment';
 import Routes from 'Layout/Routes';
+import UserProvider from './User';
+import FetchProvider from './Fetch';
 
-export const RoutesBase = ({ environment }) => (
-  <AuthenticationProvider
-    loggerLevel={oidcLog.NONE}
-    configuration={environment.oidc}
-    isEnabled={environment.oidc.isEnabled}
-    InMemoryWebStorage={InMemoryWebStorage}
-  >
-    <Router>
-      <Routes />
-    </Router>
+const App = ({ oidc, fetchConfig, apiUrl, baseUrl }) => (
+  <AuthenticationProvider loggerLevel={oidcLog.NONE} configuration={oidc} isEnabled={oidc.isEnabled} InMemoryWebStorage={InMemoryWebStorage}>
+    <UserProvider>
+      <FetchProvider apiUrl={apiUrl} fetchConfig={fetchConfig}>
+        <Router basename={baseUrl}>
+          <Routes />
+        </Router>
+      </FetchProvider>
+    </UserProvider>
   </AuthenticationProvider>
-);
-
-const RouteBaseWithEnvironment = withEnvironment(RoutesBase);
-
-const App = () => (
-  <Environment>
-    <RouteBaseWithEnvironment />
-  </Environment>
 );
 
 export default App;

@@ -8,7 +8,6 @@ import SlashDesignSystem from 'SlashDesignSystem';
 import Dashboard from 'Dashboard';
 import Layout from 'Layout';
 import ROUTE_URL from 'Layout/constants';
-import withEnvAndAuth from 'shared/hoc/withEnvAndAuth';
 
 export const renderLayoutMembers = parentProps => props => Layout(Members, props, parentProps);
 export const renderLayoutDashboard = parentProps => props => Layout(Dashboard, props, parentProps);
@@ -24,4 +23,4 @@ const Routes = props => (
   </Switch>
 );
 
-export default withEnvAndAuth(Routes);
+export default Routes;

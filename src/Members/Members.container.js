@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { LoaderModes } from '@axa-fr/react-toolkit-all';
-import withEnhancedCustomFetch from 'shared/hoc/withCustomFetch';
 import setLoaderMode from 'shared/helpers/setLoaderMode';
 import { useNotifications } from 'shared/components/Notifications';
 import Members from './Members';
@@ -10,8 +9,8 @@ import { useMembers } from './Members.hook';
 export const MembersContext = React.createContext({ onChangeSorting: null, sorting: {}, addNotification: null, stateNotifications: [] });
 const { Provider: MembersProvider } = MembersContext;
 
-export const MembersEnhanced = ({ useMembersFn, useNotificationsFn, setLoaderModeFn, fetchCustom, ...rest }) => {
-  const { anomaly, isLoading, members, pagination, onChangeSorting, stateSorting, onChangePaging } = useMembersFn({ fetchCustom });
+export const MembersEnhanced = ({ useMembersFn, useNotificationsFn, setLoaderModeFn, ...rest }) => {
+  const { anomaly, isLoading, members, pagination, onChangeSorting, stateSorting, onChangePaging } = useMembersFn({});
   const { addNotification, onDeleteNotification, stateNotifications } = useNotificationsFn();
 
   return (
@@ -42,4 +41,4 @@ MembersEnhanced.defaultProps = {
   setLoaderModeFn: setLoaderMode,
 };
 
-export default withEnhancedCustomFetch(MembersEnhanced);
+export default MembersEnhanced;

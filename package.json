@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "set PORT=8080 && react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "build:local": "cross-env REACT_APP_NODE_ENV=production.local react-scripts build && serve -s build -p 5002",
     "test": "react-scripts test",
@@ -16,9 +16,7 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "npm run precommit",
-      "pre-push": "npm run cover -- -u"
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
   "dependencies": {
@@ -44,7 +42,7 @@
     "classnames": "^2.2.6",
     "jest-cucumber": "^3.0.0",
     "lodash": "^4.17.20",
-    "moment": "^2.27.0",
+    "moment": "^2.29.1",
     "oidc-client": "~1.10.1",
     "prop-types": "~15.7.2",
     "react": "~16.13.1",
@@ -56,7 +54,8 @@
     "react-scripts": "~3.4.3",
     "react-social-login": "^3.4.9",
     "react-test-renderer": "^16.13.1",
-    "sass": "~1.26.10"
+    "sass": "~1.26.10",
+    "intl": "^1.2.5"
   },
   "devDependencies": {
     "@commitlint/cli": "^9.1.1",
