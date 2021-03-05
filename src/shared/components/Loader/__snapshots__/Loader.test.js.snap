@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Loader /> Should render Loader 1`] = `
+<DocumentFragment>
+  <div
+    class="af-loader"
+  />
+</DocumentFragment>
+`;

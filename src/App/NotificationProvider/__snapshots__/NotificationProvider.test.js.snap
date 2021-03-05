@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Render App with Base have addNotification props Should Base have fetchCustom props when call setFetchCustom 1`] = `
+<DocumentFragment>
+  <ul>
+    <li>
+      have addNotification
+    </li>
+  </ul>
+</DocumentFragment>
+`;
+
+exports[`Render App with Base have addNotification props Should Base have fetchCustom props when call setFetchCustom with 1 notification 1`] = `
+<DocumentFragment>
+  <aside
+    class="af-notifications af-notifications--open"
+  >
+    <div
+      class="af-alert af-alert--notification af-alert--error"
+      role="alert"
+    >
+      <button
+        class="af-alert__icon-close"
+      >
+        <i
+          class="glyphicon glyphicon-close"
+        />
+      </button>
+      <div
+        class="af-alert__title"
+      >
+        <div
+          class="af-alert__title-icon"
+        >
+          <i
+            class="glyphicon glyphicon-minus-sign"
+          />
+        </div>
+        <div
+          class="af-alert__title-text"
+        >
+          labeldemonalert
+        </div>
+      </div>
+      <div
+        class="af-alert__content"
+      >
+        <div
+          class="af-alert__content__left"
+        />
+        <div
+          class="af-alert__content__right"
+        >
+          <p>
+            detail
+          </p>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <ul>
+    <li>
+      have addNotification
+    </li>
+  </ul>
+</DocumentFragment>
+`;

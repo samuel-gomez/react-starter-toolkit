@@ -1,0 +1,16 @@
+@import '@axa-fr/react-toolkit-core/dist/assets/scss/core.scss';
+
+.af-popover__wrapper{
+  position: relative;
+  display: block;
+}
+.af-popover__container{
+  display: block;
+}
+.af-popover__container--short {
+  .af-popover__container-pop {
+    word-break: break-word;
+    width: 200px;
+    text-align: center;
+  }
+}

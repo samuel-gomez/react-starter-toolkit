@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import { UserContext } from 'App/User';
+import { UserContext } from 'App/UserProvider';
 import Header from './Header';
 
 const HeaderContainer = props => {

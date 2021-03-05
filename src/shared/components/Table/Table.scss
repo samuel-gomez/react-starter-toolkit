@@ -1,0 +1,81 @@
+@import '@axa-fr/react-toolkit-core/dist/assets/scss/core.scss';
+@import '../../scss/mixins.scss';
+
+.af-table {
+  .af-table__tr.af-table__tr--pair .af-table__cell {
+    background-color: $white;
+  }
+  .af-table__tr.af-table__tr--impair .af-table__cell {
+    background-color: $color-wild-sand;
+  }
+
+  .af-table__th {
+    padding: 0;
+    .glyphicon {
+      right: 0.3rem;
+    }
+  }
+  .af-table__th--sortable {
+    padding: 0 1rem 0 0;
+    cursor: pointer;
+    &:hover {
+      background-color: $color-table-sorting;
+    }
+    .af-table__tr-label {
+      padding-right: 0;
+    }
+  }
+
+  .af-table__th--active {
+    background-color: $color-table-sorting;
+  }
+  .af-table__th--actions {
+    text-align: center;
+    .glyphicon {
+      font-size: 1.2rem;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .af-table__tr-label {
+    padding: 1rem;
+    display: block;
+  }
+}
+
+.af {
+  &-btn {
+    &__img {
+      width: 19px;
+      fill: $white;
+      @include centerer;
+    }
+    &--circle-small {
+      &:hover {
+        .af {
+          &-btn {
+            &__img {
+              fill: $color-axa;
+            }
+          }
+        }
+      }
+    }
+    &--circle-disabled {
+      background-color: $color-gray-2;
+      border-color: $color-gray-1;
+      cursor: not-allowed;
+      color: $color-gray-1;
+      &:hover {
+        background-color: $color-gray-2;
+        border-color: $color-gray-1;
+        color: $color-gray-1;
+      }
+    }
+  }
+
+  &-actions {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}

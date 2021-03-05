@@ -1,21 +1,36 @@
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { render, act } from '@testing-library/react';
-import withWrapperEnvAndAuth from 'shared/hoc/withWrapperEnvAndAuth';
+import { AuthenticationProvider } from '@axa-fr/react-oidc-context';
 import MembersPage from 'Members';
 import DashboardPage from 'Dashboard';
 import SlashDesignSystemPage from 'SlashDesignSystem';
-import { renderLayoutMembers, renderLayoutDashboard, renderLayoutSlashDesignSystem } from './Routes';
+import SearchMembersPage from 'SearchMembers';
+import { renderLayoutMembers, renderLayoutDashboard, renderLayoutSlashDesignSystem, renderLayoutSearchMembers } from './Routes';
 import Routes from '.';
 
-const RoutesEnvAndAuth = withWrapperEnvAndAuth(Routes);
+const oidc = {
+  isEnabled: true,
+  client_id: '0123456',
+  redirect_uri: 'http://localhost:3000/authentication/callback',
+  response_type: 'code',
+  post_logout_redirect_uri: 'http://localhost:3000/logout',
+  scope: 'openid profile email',
+  authority: 'https://autority/',
+  silent_redirect_uri: 'http://localhost:3000/authentication/silent_callback',
+  automaticSilentRenew: true,
+  loadUserInfo: true,
+  triggerAuthFlow: true,
+};
 
 describe('Route', () => {
   it('Should render Routes', async () => {
     await act(async () => {
       const { asFragment } = render(
         <MemoryRouter initialEntries={['/']}>
-          <RoutesEnvAndAuth authRole="ELMU_Admin" />
+          <AuthenticationProvider configuration={oidc} isEnabled>
+            <Routes />
+          </AuthenticationProvider>
         </MemoryRouter>,
       );
       expect(asFragment()).toMatchSnapshot();
@@ -26,7 +41,9 @@ describe('Route', () => {
     await act(async () => {
       const { asFragment } = render(
         <MemoryRouter initialEntries={['/random']}>
-          <RoutesEnvAndAuth />
+          <AuthenticationProvider configuration={oidc} isEnabled>
+            <Routes />
+          </AuthenticationProvider>
         </MemoryRouter>,
       );
 
@@ -61,5 +78,14 @@ describe('Route', () => {
     const result = renderLayoutSlashDesignSystem(parentProps)({ ...customProps });
     expect(result.type).toEqual(SlashDesignSystemPage);
     expect(result.props.myProp).toEqual('property slash');
+  });
+
+  it('Should return <SearchMembersPage /> with props when call renderLayoutSearchMembers', () => {
+    const customProps = {
+      myProp: 'property search member',
+    };
+    const result = renderLayoutSearchMembers(parentProps)({ ...customProps });
+    expect(result.type).toEqual(SearchMembersPage);
+    expect(result.props.myProp).toEqual('property search member');
   });
 });

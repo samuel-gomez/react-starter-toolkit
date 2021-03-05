@@ -15,6 +15,7 @@ exports[`Notifications Should contain Notification when array notifications is N
   >
     <div
       class="af-alert af-alert--notification af-alert--error"
+      role="alert"
     >
       <button
         class="af-alert__icon-close"

@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Body Render <Body/> with 1 header and 1 item and actions Body 1`] = `
+<DocumentFragment>
+  samuel
+  <p
+    id="uid"
+    name="[object Object]"
+  >
+    action body
+  </p>
+</DocumentFragment>
+`;
+
+exports[`Body Render <Body/> with 1 item 1`] = `
+<DocumentFragment>
+  samuel
+</DocumentFragment>
+`;
+
+exports[`Body Render <Body/> with empty items 1`] = `<DocumentFragment />`;

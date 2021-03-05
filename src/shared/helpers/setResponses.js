@@ -1,5 +1,5 @@
 import { isEmpty, isNil } from 'lodash';
-import { STATUS_API } from 'shared/constants';
+import { STATUS_API, STATUS_HTTP, STATUS_HTTP_MESSAGES } from 'shared/constants';
 
 export const addError = ({ responses, error, key }) => ({
   ...responses,
@@ -20,6 +20,7 @@ export const setResponse = ({ responses, responseService, key, addErrorFn = addE
         key,
         error: {
           ...anomaly,
+          label: anomaly?.label ?? STATUS_HTTP_MESSAGES[statusHttp],
           type: 'danger',
           iconName: 'alert',
         },
@@ -28,12 +29,26 @@ export const setResponse = ({ responses, responseService, key, addErrorFn = addE
       return addErrorFn({
         responses,
         key,
-        error: anomaly,
+        error: {
+          ...anomaly,
+          label: anomaly?.label ?? STATUS_HTTP_MESSAGES[statusHttp],
+        },
       });
     default:
-      return addSuccessFn({ responses, key, success: responseService });
+      return addSuccessFn({ responses, key, success: formatSuccessResponse(responseService) });
   }
 };
+
+export const formatSuccessResponse = responseService =>
+  responseService.statusHttp
+    ? responseService
+    : {
+        responseBody: responseService,
+        anomaly: null,
+        statusHttp: STATUS_HTTP.SUCCESS,
+        code: STATUS_HTTP.SUCCESS,
+        label: STATUS_HTTP_MESSAGES[STATUS_HTTP.SUCCESS],
+      };
 
 export const setResponses = ({ responsesServices, setError, setSuccess, callbackSuccess }) => {
   let responses = { success: [], error: [] };

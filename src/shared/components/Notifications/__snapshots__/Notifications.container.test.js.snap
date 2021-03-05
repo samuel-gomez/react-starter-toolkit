@@ -15,6 +15,7 @@ exports[`NotificationsEnhanced Render <NotificationsEnhanced/> with notification
   >
     <div
       class="af-alert af-alert--notification af-alert--error"
+      role="alert"
     >
       <button
         class="af-alert__icon-close"

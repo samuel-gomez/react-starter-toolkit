@@ -135,6 +135,22 @@ exports[`Should App render without crashing 1`] = `
             <a
               aria-expanded="false"
               aria-haspopup="true"
+              aria-label="Rechercher"
+              class="af-nav__link"
+              href="/local/search-members"
+              role="menuitem"
+              tabindex="-1"
+            >
+              Rechercher
+            </a>
+          </li>
+          <li
+            class="af-nav__item "
+            role="none"
+          >
+            <a
+              aria-expanded="false"
+              aria-haspopup="true"
               aria-label="Slash DS"
               class="af-nav__link"
               href="/local/slash-design-system"

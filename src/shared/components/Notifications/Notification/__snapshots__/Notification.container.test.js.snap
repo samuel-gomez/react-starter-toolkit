@@ -4,6 +4,7 @@ exports[`NotificationEnhanced Render <NotificationEnhanced/> 1`] = `
 <DocumentFragment>
   <div
     class="af-alert af-alert--notification af-alert--mymodifier"
+    role="alert"
   >
     <button
       class="af-alert__icon-close"
