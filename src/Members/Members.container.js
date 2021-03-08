@@ -2,28 +2,26 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { LoaderModes } from '@axa-fr/react-toolkit-all';
 import setLoaderMode from 'shared/helpers/setLoaderMode';
-import { useNotifications } from 'shared/components/Notifications';
 import Members from './Members';
 import { useMembers } from './Members.hook';
 
-export const MembersContext = React.createContext({ onChangeSorting: null, sorting: {}, addNotification: null, stateNotifications: [] });
+export const MembersContext = React.createContext({ onChangeSorting: null, sorting: {} });
 const { Provider: MembersProvider } = MembersContext;
 
-export const MembersEnhanced = ({ useMembersFn, useNotificationsFn, setLoaderModeFn, ...rest }) => {
+export const MembersEnhanced = ({ useMembersFn, setLoaderModeFn, ...rest }) => {
   const { anomaly, isLoading, members, pagination, onChangeSorting, stateSorting, onChangePaging } = useMembersFn({});
-  const { addNotification, onDeleteNotification, stateNotifications } = useNotificationsFn();
 
   return (
-    <MembersProvider value={{ onChangeSorting, sorting: stateSorting, addNotification, stateNotifications }}>
+    <MembersProvider value={{ onChangeSorting, sorting: stateSorting }}>
       <Members
         {...rest}
         members={members}
         loaderMode={setLoaderModeFn({ isLoading, LoaderModes })}
         anomaly={anomaly}
-        deleteNotification={onDeleteNotification}
-        notifications={stateNotifications}
         pagination={pagination}
         onChangePaging={onChangePaging}
+        onChangeSorting={onChangeSorting}
+        sorting={stateSorting}
       />
     </MembersProvider>
   );
@@ -31,13 +29,11 @@ export const MembersEnhanced = ({ useMembersFn, useNotificationsFn, setLoaderMod
 
 MembersEnhanced.propTypes = {
   useMembersFn: PropTypes.func,
-  useNotificationsFn: PropTypes.func,
   setLoaderModeFn: PropTypes.func,
 };
 
 MembersEnhanced.defaultProps = {
   useMembersFn: useMembers,
-  useNotificationsFn: useNotifications,
   setLoaderModeFn: setLoaderMode,
 };
 

@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThContainer Render <ThContainer/> with field empty (not sortable) 1`] = `
+<DocumentFragment>
+  child th
+</DocumentFragment>
+`;
+
+exports[`ThContainer Render <ThContainer/> with field not empty (sortable) 1`] = `
+<DocumentFragment>
+  child th
+  <span
+    class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-sorting"
+  />
+</DocumentFragment>
+`;

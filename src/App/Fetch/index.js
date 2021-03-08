@@ -1,1 +1,0 @@
-export { default, FetchContext } from './Fetch'

@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table Render <Table/> with 1 header and 1 item 1`] = `
+<DocumentFragment>
+  <table
+    class="af-table af-table--classModifier"
+  >
+    <thead
+      aria-label="table-header"
+      class="af-table__thead"
+    >
+      <tr
+        aria-label="table-header-line"
+        class="af-table__tr"
+      >
+        <th
+          class="af-table__th af-table__th--sortable"
+          role="button"
+        >
+          <span
+            class="af-table__tr-label"
+          >
+            label
+          </span>
+          <span
+            class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-sorting"
+          />
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      aria-label="table-body"
+      class="af-table__body"
+    >
+      <tr
+        aria-label="table-body-line"
+        class="af-table__tr"
+      >
+        <td
+          class="af-table__cell"
+        >
+          samuel
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`Table Render <Table/> with 1 header and 1 item and childrenHeader and actionsBody 1`] = `
+<DocumentFragment>
+  <table
+    class="af-table af-table--classModifier"
+  >
+    <thead
+      aria-label="table-header"
+      class="af-table__thead"
+    >
+      <tr
+        aria-label="table-header-line"
+        class="af-table__tr"
+      >
+        <th
+          class="af-table__th af-table__th--sortable"
+          role="button"
+        >
+          <span
+            class="af-table__tr-label"
+          >
+            label
+          </span>
+          <span
+            class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-sorting"
+          />
+        </th>
+        <th>
+          children header
+        </th>
+      </tr>
+    </thead>
+    <tbody
+      aria-label="table-body"
+      class="af-table__body"
+    >
+      <tr
+        aria-label="table-body-line"
+        class="af-table__tr"
+      >
+        <td
+          class="af-table__cell"
+        >
+          samuel
+        </td>
+        <td
+          class="af-table__cell af-table__cell--actions"
+        >
+          <p
+            id="uid"
+            name="[object Object]"
+          >
+            action body
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`Table Render <Table/> with empty items 1`] = `
+<DocumentFragment>
+  <table
+    class="af-table af-table--classModifier"
+  >
+    <thead
+      aria-label="table-header"
+      class="af-table__thead"
+    >
+      <tr
+        aria-label="table-header-line"
+        class="af-table__tr"
+      />
+    </thead>
+    <tbody
+      aria-label="table-body"
+      class="af-table__body"
+    />
+  </table>
+</DocumentFragment>
+`;

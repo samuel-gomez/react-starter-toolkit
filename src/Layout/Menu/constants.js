@@ -12,6 +12,10 @@ const MENU_ITEMS = [
     url: ROUTE_URL.MEMBERS,
   },
   {
+    label: 'Rechercher',
+    url: ROUTE_URL.SEARCHMEMBERS,
+  },
+  {
     label: 'Slash DS',
     url: ROUTE_URL.SLASH,
   },

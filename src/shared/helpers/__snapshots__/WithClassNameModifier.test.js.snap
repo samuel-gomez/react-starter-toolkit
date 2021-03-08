@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WithClassNameModifier Should render Custom Component with new className props null modifier when apply HOC with className null modifier 1`] = `
+<DocumentFragment>
+  <div
+    class="af-component"
+  >
+    Hello
+  </div>
+</DocumentFragment>
+`;
+
+exports[`WithClassNameModifier Should render Custom Component with new className props when apply HOC with className 1`] = `
+<DocumentFragment>
+  <div
+    class="af-component af-component--sam"
+  >
+    Hello
+  </div>
+</DocumentFragment>
+`;
+
+exports[`WithClassNameModifier Should render Custom Component with new className props with 2 modifiers when apply HOC with className with 2 modifiers 1`] = `
+<DocumentFragment>
+  <div
+    class="af-component af-component--sam af-component--sam2"
+  >
+    Hello
+  </div>
+</DocumentFragment>
+`;

@@ -23,12 +23,13 @@
     "no-underscore-dangle": 0,
     "import/imports-first": ["error", "absolute-first"],
     "import/newline-after-import": "error",
-    "quotes": ["error", "single"],
+    "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
     "indent": [
       "error",
       2,
       {
         "SwitchCase": 1,
+        "offsetTernaryExpressions": true,
         "ignoredNodes": ["TemplateLiteral"]
       }
     ],

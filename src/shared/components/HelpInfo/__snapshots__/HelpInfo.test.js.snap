@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HelpInfo/> Should render HelpInfo 1`] = `
+<DocumentFragment>
+  <div
+    class="af-popover__wrapper"
+  >
+    <div
+      class="af-popover__container af-popover__container--short"
+    >
+      <div
+        class="af-popover__container-over"
+        role="presentation"
+      >
+        <h1>
+          Hello
+        </h1>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<HelpInfo/> Should render HelpInfo without popover when is disabled 1`] = `
+<DocumentFragment>
+  <h1>
+    Hello
+  </h1>
+</DocumentFragment>
+`;
+
+exports[`<HelpInfo/> Should render HelpInfo without popover when no content hover 1`] = `
+<DocumentFragment>
+  <h1>
+    Hello
+  </h1>
+</DocumentFragment>
+`;

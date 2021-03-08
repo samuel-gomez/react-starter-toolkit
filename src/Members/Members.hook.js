@@ -1,8 +1,10 @@
 import { useEffect, useReducer, useCallback, useState, useContext } from 'react';
-import formatDate from 'shared/helpers/formatDate';
-import { ASCENDING } from 'shared/constants';
+import { setDate } from 'shared/helpers/formatDate';
 import fetchData from 'shared/helpers/fetchData';
-import { FetchContext } from 'App/Fetch';
+import { ASCENDING } from 'shared/components/Table';
+import { setDisplay } from 'shared/helpers/formatDataTable';
+import setAnomalyEmptyItems from 'shared/helpers/setAnomalyEmptyItems';
+import { FetchContext } from 'App/FetchProvider';
 import findMembers from './Members.service';
 import { FETCH_MEMBERS } from './constants';
 
@@ -37,15 +39,13 @@ export const setPagination = ({ total, skip, max, setCurrentPageFn = setCurrentP
   currentPage: setCurrentPageFn({ total, max, skip }),
 });
 
-export const setAnomalyIfEmpty = items =>
-  !items.length ? { label: 'Info : Aucune donnée trouvée', type: 'info', iconName: 'exclamation-sign' } : null;
-
-export const setBirthDate = ({ birthDate, formatDateFn = formatDate }) => (birthDate !== null ? formatDateFn(birthDate) : '');
-
-export const computeInfos = ({ members = [], setBirthDateFn = setBirthDate }) =>
-  members.map(member => ({
-    ...member,
-    birthdate: setBirthDateFn({ birthDate: member?.birthdate }),
+export const computeInfos = ({ members = [], setDateFn = setDate, setDisplayFn = setDisplay }) =>
+  members.map(({ _id, firstname, lastname, birthdate, sexe }) => ({
+    key: _id,
+    ...setDisplayFn({ firstname }),
+    ...setDisplayFn({ lastname }),
+    ...setDisplayFn({ birthdate: setDateFn({ date: birthdate }) }),
+    ...setDisplayFn({ sexe }),
   }));
 
 export const setStateMembersLoading = ({ state }) => ({
@@ -57,12 +57,12 @@ export const setStateMembersSuccess = ({
   state,
   payload,
   computeInfosFn = computeInfos,
-  setAnomalyIfEmptyFn = setAnomalyIfEmpty,
+  setAnomalyEmptyItemsFn = setAnomalyEmptyItems,
   setPaginationFn = setPagination,
 }) => ({
   ...state,
   isLoading: false,
-  anomaly: setAnomalyIfEmptyFn(payload?.members?.responseBody?.data),
+  anomaly: setAnomalyEmptyItemsFn(payload?.members?.responseBody?.data),
   members: computeInfosFn({
     members: payload?.members?.responseBody?.data,
   }),

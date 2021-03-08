@@ -112,6 +112,7 @@ describe('setResponse', () => {
       key: 1,
       error: {
         code: 404,
+        label: 'Erreur: Elément non trouvé',
         type: 'danger',
         iconName: 'alert',
       },
@@ -132,6 +133,7 @@ describe('setResponse', () => {
       key: 1,
       error: {
         code: 500,
+        label: 'Erreur: Problème technique ! Contacter votre support',
       },
     });
   });

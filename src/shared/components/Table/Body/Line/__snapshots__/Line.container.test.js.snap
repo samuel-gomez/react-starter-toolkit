@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LineContainer Render <LineContainer/> with cols and actions 1`] = `
+<DocumentFragment>
+  <p
+    id="uniqueid"
+  >
+    action body
+  </p>
+</DocumentFragment>
+`;
+
+exports[`LineContainer Render <LineContainer/> without cols 1`] = `<DocumentFragment />`;

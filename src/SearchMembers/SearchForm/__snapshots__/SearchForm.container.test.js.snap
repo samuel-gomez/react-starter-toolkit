@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchFormContainer Render <SearchFormContainer/> 1`] = `
+<DocumentFragment>
+  <form
+    autocomplete="off"
+    class="af-filter-inline"
+    id="form-search-members"
+    name="form-search-members"
+  >
+    <div
+      class="af-filter-inline__default af-filter-inline__default--search-distributors"
+    >
+      <div
+        class="af-filter-inline__field"
+      >
+        <div
+          class="col-md-12"
+        >
+          <div
+            class="af-form__text"
+          >
+            <label
+              class="af-form__group-label"
+              for="name"
+            >
+              Nom du membre
+            </label>
+            <input
+              autocomplete="search-name"
+              class="af-form__input-text"
+              id="name"
+              name="name"
+              placeholder="John Doe"
+              type="text"
+              value=""
+            />
+            <small
+              class="af-form__help"
+            >
+              Minimum 3 caractères pour un nom
+            </small>
+          </div>
+        </div>
+      </div>
+      <button
+        class="btn af-btn af-btn--hasiconLeft af-btn--submitconfirm af-btn--disabled"
+        disabled=""
+        form="form-search-members"
+        type="submit"
+      >
+        <span
+          class="af-btn__text"
+        >
+          Rechercher
+        </span>
+        <i
+          class="glyphicon glyphicon-search"
+        />
+      </button>
+    </div>
+  </form>
+</DocumentFragment>
+`;

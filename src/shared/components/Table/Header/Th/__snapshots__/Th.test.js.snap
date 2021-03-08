@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Th Render <Th/> 1`] = `
+<DocumentFragment>
+  child th
+</DocumentFragment>
+`;

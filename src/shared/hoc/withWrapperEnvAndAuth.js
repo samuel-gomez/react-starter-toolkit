@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import { AuthenticationProvider } from '@axa-fr/react-oidc-context';
-import { EnvironmentProvider } from 'App/Environment';
+import EnvironmentProvider from 'App/EnvironmentProvider';
 
 const oidc = {
   isEnabled: true,

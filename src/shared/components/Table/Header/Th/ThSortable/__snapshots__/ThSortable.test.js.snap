@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThSortable Render <ThSortable/> 1`] = `
+<DocumentFragment>
+  child th
+  <i
+    class="glyphicon glyphicon-ok"
+  />
+</DocumentFragment>
+`;

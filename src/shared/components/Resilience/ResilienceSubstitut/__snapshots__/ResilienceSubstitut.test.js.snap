@@ -6,6 +6,7 @@ exports[`<ResilienceSubstitut/> Render <ResilienceSubstitut/> with classModifier
 <DocumentFragment>
   <div
     class="af-alert af-alert--warning"
+    role="alert"
   >
     <div
       class="af-alert__title"
@@ -45,6 +46,7 @@ exports[`<ResilienceSubstitut/> Render <ResilienceSubstitut/> with default props
 <DocumentFragment>
   <div
     class="af-alert af-alert--error"
+    role="alert"
   >
     <div
       class="af-alert__title"

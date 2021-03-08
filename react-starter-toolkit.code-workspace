@@ -10,9 +10,9 @@
       "projectKey": "samuel-gomez_react-starter-toolkit"
     },
     "workbench.colorCustomizations": {
-      "activityBar.background": "#013435",
-      "titleBar.activeBackground": "#02484A",
-      "titleBar.activeForeground": "#E8FEFF"
+      "activityBar.background": "#051a49",
+      "titleBar.activeBackground": "#01329d",
+      "titleBar.activeForeground": "#bfe3ff"
     }
   }
 }

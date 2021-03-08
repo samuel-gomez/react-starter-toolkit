@@ -1,22 +1,20 @@
 import React from 'react';
 import Resilience from 'shared/components/Resilience/Resilience';
-import NotificationsContainer from 'shared/components/Notifications';
-import { Loader, Paging } from '@axa-fr/react-toolkit-all';
-import MembersTable from './MembersTable';
-import { TITLE_BAR, TITLE } from './constants';
-import './Members.scss';
+import { Paging } from '@axa-fr/react-toolkit-all';
+import Loader from 'shared/components/Loader';
+import Table from 'shared/components/Table';
+import { TITLE_BAR, TITLE, TABLE_HEADERS_MEMBERS } from './constants';
 
-const Members = ({ header, footer, title, menu, loaderMode, members, anomaly, deleteNotification, notifications, onChangePaging, pagination }) => (
+const Members = ({ header, footer, title, menu, loaderMode, members, anomaly, onChangePaging, pagination, onChangeSorting, sorting }) => (
   <>
     {header()}
     {menu()}
-    {notifications && notifications.length > 0 && <NotificationsContainer notifications={notifications} deleteNotification={deleteNotification} />}
     {title({ title: TITLE_BAR, backHome: true })}
     <div className="af-main container">
       <h1 className="af-title--content">{TITLE}</h1>
       <Loader mode={loaderMode}>
         <Resilience anomaly={anomaly}>
-          <MembersTable members={members} />
+          <Table items={members} headers={TABLE_HEADERS_MEMBERS} onSort={onChangeSorting} sorting={sorting} />
           <Paging {...pagination} onChange={onChangePaging} id="paging" />
         </Resilience>
       </Loader>
