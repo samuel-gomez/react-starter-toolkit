@@ -28,7 +28,7 @@ export const getAuthUid = ({ oidcUser, isEmptyFn = isEmpty, getFn = get }) =>
   !isEmptyFn(getFn(oidcUser, 'profile.axa_uid_racf')) ? oidcUser.profile.axa_uid_racf : '';
 
 /**
- * MAAM gives us : "member_of": [ELMU_Admin,CN=IAM_ELMU,OU=applis,O=axafrance,DC=REWACAD,DC=axa-fr,DC=intraxa]
+ *
  * @param {Object} oidcUser
  */
 const extractDataFromOAuthToken = (

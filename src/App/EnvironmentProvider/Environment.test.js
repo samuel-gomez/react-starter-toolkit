@@ -1,9 +1,36 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { renderHook, act } from '@testing-library/react-hooks';
 import { render } from '@testing-library/react';
-import { EnvironmentProvider, useEnv } from '.';
+import EnvironmentProvider, { useEnv, EnvironmentContext } from '.';
 
-const BaseComponent = ({ environment }) => <div>{environment.env}</div>;
+const BaseWithEnvironment = ({ environment }) => <div>{environment.baseUrl}</div>;
+
+const BaseUseEnvContext = () => {
+  const envProps = useContext(EnvironmentContext);
+  return <BaseWithEnvironment {...envProps} />;
+};
+
+const useEnvFnMock = jest.fn().mockReturnValue({
+  envState: {
+    environment: {
+      baseUrl: 'urllocal',
+    },
+  },
+});
+
+const App = () => (
+  <EnvironmentProvider useEnvFn={useEnvFnMock}>
+    <BaseUseEnvContext />
+  </EnvironmentProvider>
+);
+
+describe('Render App with Base have env props', () => {
+  it('Should render App baseUrl props when call setFetchCustom', () => {
+    const { asFragment, getByText } = render(<App />);
+    expect(asFragment()).toMatchSnapshot();
+    expect(getByText('urllocal')).toBeDefined();
+  });
+});
 
 describe('useEnv', () => {
   it('Should import file when state environment is null', async () => {

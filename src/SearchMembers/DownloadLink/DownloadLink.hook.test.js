@@ -218,7 +218,8 @@ describe('useDownload', () => {
         signal: {},
       }),
     );
-    jest.advanceTimersByTime(21000);
+
+    act(() => jest.advanceTimersByTime(21000));
     expect(abortMock).toBeCalled();
   });
 });

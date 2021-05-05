@@ -81,9 +81,17 @@
 .af-body__content {
   max-height: calc(100vh - 60px);
 }
-.af-modal__body {
-  max-height: 78vh;
-  overflow: auto;
+
+.af-modal {
+  position: absolute;
+  &__body {
+    max-height: 78vh;
+    overflow: auto;
+  }
+
+  &__header-title {
+    font-size: 1.2rem;
+  }
 }
 
 .af-popover__container-pop {

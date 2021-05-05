@@ -1,30 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Table as TableToolkit } from '@axa-fr/react-toolkit-all';
-import { NONE, DESCENDING, ASCENDING } from './constants';
+import WithClassNameModifier from 'shared/helpers/WithClassNameModifier';
 import Body from './Body';
 import Header, { HeadersPropTypes } from './Header';
-import './Table.scss';
 
-const Table = ({ onSort, sorting, classModifier, headers, items, childrenHeader, actionsBody, headersOrderCt }) => (
-  <TableToolkit classModifier={classModifier}>
-    <Header headers={headers} onSort={onSort} sorting={sorting} headersOrderCt={headersOrderCt}>
+const Table = WithClassNameModifier(({ onSort, sorting, className, headers, items, childrenHeader, actionsBody }) => (
+  <table className={className}>
+    <Header headers={headers} onSort={onSort} sorting={sorting}>
       {childrenHeader}
     </Header>
     <Body items={items} actions={actionsBody} />
-  </TableToolkit>
-);
+  </table>
+));
 
 Table.propTypes = {
   headers: HeadersPropTypes.isRequired,
   items: PropTypes.arrayOf(PropTypes.object).isRequired,
-  classModifier: PropTypes.string,
-  headersOrderCt: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
+  className: PropTypes.string,
 };
 
 Table.defaultProps = {
-  classModifier: '',
-  headersOrderCt: { NONE, DESCENDING, ASCENDING },
+  className: 'af-table',
 };
 
 export default Table;

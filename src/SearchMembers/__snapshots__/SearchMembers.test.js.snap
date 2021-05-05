@@ -69,7 +69,7 @@ exports[`<SearchMembers/> Should render <SearchMembers /> with one member 1`] = 
       </div>
     </form>
     <div
-      style="min-height: 94px; position: relative;"
+      class="af-loader"
     >
       <h2
         class="af-title"
@@ -187,7 +187,6 @@ exports[`<SearchMembers/> Should render <SearchMembers /> with one member 1`] = 
           </tr>
         </tbody>
       </table>
-       
     </div>
   </div>
 </DocumentFragment>
@@ -262,14 +261,13 @@ exports[`<SearchMembers/> Should render SearchMembers 1`] = `
       </div>
     </form>
     <div
-      style="min-height: 94px; position: relative;"
+      class="af-loader"
     >
       <h2
         class="af-title"
       >
         Tableau des membres
       </h2>
-       
     </div>
   </div>
 </DocumentFragment>

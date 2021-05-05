@@ -17,7 +17,6 @@ export const getImport = () => import(`../../../public/environment.${NODE_ENV}.j
  */
 export const useEnv = (getImportFn = getImport, initStateCt = initState) => {
   const [envState, setEnvState] = useState(initStateCt);
-
   useEffect(() => {
     if (envState.environment === null) {
       getImportFn()
@@ -33,8 +32,8 @@ export const useEnv = (getImportFn = getImport, initStateCt = initState) => {
  * Component wrapper to add environment context
  * @param {Component} children
  */
-const EnvironmentProvider = ({ children }) => {
-  const { envState } = useEnv();
+const EnvironmentProvider = ({ children, useEnvFn = useEnv }) => {
+  const { envState } = useEnvFn();
   return <Provider value={envState}>{children}</Provider>;
 };
 

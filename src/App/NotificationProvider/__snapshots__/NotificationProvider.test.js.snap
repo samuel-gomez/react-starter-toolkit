@@ -19,13 +19,6 @@ exports[`Render App with Base have addNotification props Should Base have fetchC
       class="af-alert af-alert--notification af-alert--error"
       role="alert"
     >
-      <button
-        class="af-alert__icon-close"
-      >
-        <i
-          class="glyphicon glyphicon-close"
-        />
-      </button>
       <div
         class="af-alert__title"
       >
@@ -41,6 +34,14 @@ exports[`Render App with Base have addNotification props Should Base have fetchC
         >
           labeldemonalert
         </div>
+        <button
+          class="af-alert__title-icon-close"
+          type="button"
+        >
+          <i
+            class="glyphicon glyphicon-close"
+          />
+        </button>
       </div>
       <div
         class="af-alert__content"

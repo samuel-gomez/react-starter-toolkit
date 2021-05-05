@@ -1,0 +1,11 @@
+.ReactModal__Overlay {
+  z-index: 1000;
+  overflow: auto;
+  &--after-open {
+    background: rgba(48, 50, 191, 0.62) !important;
+  }
+}
+
+.af-modal__body {
+  max-height: inherit;
+}

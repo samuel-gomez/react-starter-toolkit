@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import ThSortable from './ThSortable';
 import Th from './Th';
 
-export const ThEnhanced = ({ field, sorting, onSort, headersOrderCt, ...rest }) =>
-  field ? <ThSortable {...rest} sorting={sorting} onSort={onSort} field={field} headersOrderCt={headersOrderCt} /> : <Th {...rest} />;
+export const ThEnhanced = ({ field, sorting, onSort, ...rest }) =>
+  field ? <ThSortable {...rest} sorting={sorting} onSort={onSort} field={field} /> : <Th {...rest} />;
 
 const ThEnhancedPropTypes = {
   field: PropTypes.string,

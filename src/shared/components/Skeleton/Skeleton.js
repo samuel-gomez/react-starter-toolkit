@@ -1,11 +1,16 @@
 import React from 'react';
-import withClassModifier from '@axa-fr/react-toolkit-core/dist/withClassModifier.hoc';
-import withClassDefault from '@axa-fr/react-toolkit-core/dist/withClassDefault.hoc';
-import compose from 'shared/helpers/compose';
+import PropTypes from 'prop-types';
+import WithClassNameModifier from 'shared/helpers/WithClassNameModifier';
 import './Skeleton.scss';
 
-export const Skeleton = ({ className }) => <div aria-busy="true" aria-label="loader" role="status" className={className} />;
+const Skeleton = WithClassNameModifier(({ className }) => <div aria-busy="true" aria-label="loader" role="status" className={className} />);
 
-const enhance = compose(withClassDefault('af-skeleton'), withClassModifier);
+Skeleton.propTypes = {
+  className: PropTypes.string,
+};
 
-export default enhance(Skeleton);
+Skeleton.defaultProps = {
+  className: 'af-skeleton',
+};
+
+export default Skeleton;

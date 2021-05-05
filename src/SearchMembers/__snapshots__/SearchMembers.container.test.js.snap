@@ -69,14 +69,13 @@ exports[`<SearchMembersContainer/> Should render <SearchMembersContainer /> with
       </div>
     </form>
     <div
-      style="min-height: 94px; position: relative;"
+      class="af-loader"
     >
       <h2
         class="af-title"
       >
         Tableau des membres
       </h2>
-       
     </div>
   </div>
 </DocumentFragment>
@@ -151,14 +150,13 @@ exports[`<SearchMembersContainer/> Should render SearchMembersContainer 1`] = `
       </div>
     </form>
     <div
-      style="min-height: 94px; position: relative;"
+      class="af-loader"
     >
       <h2
         class="af-title"
       >
         Tableau des membres
       </h2>
-       
     </div>
   </div>
 </DocumentFragment>

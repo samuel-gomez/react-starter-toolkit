@@ -5,16 +5,6 @@ exports[`<Skeleton/> Render <Skeleton/> 1`] = `
   <div
     aria-busy="true"
     aria-label="loader"
-    role="status"
-  />
-</DocumentFragment>
-`;
-
-exports[`<SkeletonEnhanced/> Render <SkeletonEnhanced/> 1`] = `
-<DocumentFragment>
-  <div
-    aria-busy="true"
-    aria-label="loader"
     class="af-skeleton"
     role="status"
   />

@@ -1,17 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Table } from '@axa-fr/react-toolkit-all';
+import WithClassNameModifier from 'shared/helpers/WithClassNameModifier';
 
-const Td = ({ children, ...restTd }) => (
-  <Table.Td {...restTd} >{children}</Table.Td>
-);
+const Td = WithClassNameModifier(({ className, children }) => <td className={className}>{children}</td>);
 
 Td.propTypes = {
   children: PropTypes.node,
+  className: PropTypes.string,
 };
 
 Td.defaultProps = {
-  children: null
+  children: null,
+  className: 'af-table__cell',
 };
 
 export default Td;

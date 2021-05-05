@@ -6,13 +6,6 @@ exports[`Notifications Render <Notification/> 1`] = `
     class="af-alert af-alert--notification"
     role="alert"
   >
-    <button
-      class="af-alert__icon-close"
-    >
-      <i
-        class="glyphicon glyphicon-close"
-      />
-    </button>
     <div
       class="af-alert__title"
     >
@@ -28,6 +21,14 @@ exports[`Notifications Render <Notification/> 1`] = `
       >
         title
       </div>
+      <button
+        class="af-alert__title-icon-close"
+        type="button"
+      >
+        <i
+          class="glyphicon glyphicon-close"
+        />
+      </button>
     </div>
     <div
       class="af-alert__content"

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { LoaderModes } from '@axa-fr/react-toolkit-all';
+import { LoaderModes } from 'shared/components/Loader';
 import setLoaderMode from 'shared/helpers/setLoaderMode';
 import Members from './Members';
 import { useMembers } from './Members.hook';

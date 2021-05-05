@@ -6,13 +6,6 @@ exports[`NotificationEnhanced Render <NotificationEnhanced/> 1`] = `
     class="af-alert af-alert--notification af-alert--mymodifier"
     role="alert"
   >
-    <button
-      class="af-alert__icon-close"
-    >
-      <i
-        class="glyphicon glyphicon-close"
-      />
-    </button>
     <div
       class="af-alert__title"
     >
@@ -28,6 +21,14 @@ exports[`NotificationEnhanced Render <NotificationEnhanced/> 1`] = `
       >
         title
       </div>
+      <button
+        class="af-alert__title-icon-close"
+        type="button"
+      >
+        <i
+          class="glyphicon glyphicon-close"
+        />
+      </button>
     </div>
   </div>
 </DocumentFragment>

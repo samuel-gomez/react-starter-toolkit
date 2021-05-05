@@ -20,7 +20,7 @@ exports[`<Header/> Render <Header/> 1`] = `
             href="/"
           >
             <img
-              alt=""
+              alt="title"
               class="af-logo__brand"
               src="slash-logo.svg"
             />
@@ -28,9 +28,12 @@ exports[`<Header/> Render <Header/> 1`] = `
           <h2
             class="af-header__title"
           >
-            <small
+            title
+            <span
               class="af-header__subtitle"
-            />
+            >
+              subtitle
+            </span>
           </h2>
         </div>
         <div

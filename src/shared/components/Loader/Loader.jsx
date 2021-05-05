@@ -4,10 +4,7 @@ import WithClassNameModifier from 'shared/helpers/WithClassNameModifier';
 import './Loader.scss';
 
 const Loader = WithClassNameModifier(({ className, isVisible, message, children }) => (
-  <div className={className}>
-    {children}
-    {isVisible && <p className="af-loader__spinner">{message}</p>}
-  </div>
+  <div className={className}>{isVisible ? <p className="af-loader__spinner">{message}</p> : children}</div>
 ));
 
 const LoaderPropTypes = {

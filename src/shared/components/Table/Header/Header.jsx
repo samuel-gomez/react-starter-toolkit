@@ -1,15 +1,17 @@
+/* eslint-disable react/forbid-prop-types */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Table } from '@axa-fr/react-toolkit-all';
 import HelpHover from 'shared/components/HelpInfo';
+import { NONE, DESCENDING, ASCENDING } from '../constants';
 import Th from './Th';
 
-const Header = ({ headers, onSort, sorting, children, ariaLabel, ariaLabelLine, headersOrderCt }) => (
+const Header = ({ headers, onSort, sorting, children, ariaLabel, ariaLabelLine }) => (
   <thead className="af-table__thead" aria-label={ariaLabel}>
     <Table.Tr className="af-table__tr" aria-label={ariaLabelLine}>
       <>
         {headers.map(({ field, label, key, infobulle }) => (
-          <Th key={key} sorting={sorting} field={field} onSort={onSort} headersOrderCt={headersOrderCt}>
+          <Th key={key} sorting={sorting} field={field} onSort={onSort}>
             <HelpHover content={infobulle}>
               <span className="af-table__tr-label">{label}</span>
             </HelpHover>
@@ -34,9 +36,9 @@ export const HeaderPropTypes = {
   onSort: PropTypes.func,
   sorting: PropTypes.shape({
     field: PropTypes.string,
-    order: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    order: PropTypes.oneOf([NONE, ASCENDING, DESCENDING]),
   }),
-  sortingInfo: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.string, PropTypes.number])),
+  sortingInfo: PropTypes.objectOf(PropTypes.oneOf([NONE, ASCENDING, DESCENDING])),
   children: PropTypes.node,
   ariaLabel: PropTypes.string,
   ariaLabelLine: PropTypes.string,
@@ -46,7 +48,7 @@ export const HeaderDefaultProps = {
   onSort: undefined,
   sorting: {
     field: '',
-    order: '',
+    order: NONE,
   },
   sortingInfo: {},
   children: null,

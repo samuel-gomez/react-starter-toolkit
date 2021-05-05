@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { LoaderModes } from '@axa-fr/react-toolkit-all';
+import { LoaderModes } from 'shared/components/Loader';
 import DownloadLinkContainer from './DownloadLink.container';
 
 describe('DownloadLinkContainer', () => {

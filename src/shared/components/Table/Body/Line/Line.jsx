@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import withClassModifier from '@axa-fr/react-toolkit-core/dist/withClassModifier.hoc';
+import WithClassNameModifier from 'shared/helpers/WithClassNameModifier';
 import Td from './Td';
 
-const Tr = withClassModifier(({ className, children }) => (
+const Tr = WithClassNameModifier(({ className, children }) => (
   <tr className={className} aria-label="table-body-line">
     {children}
   </tr>

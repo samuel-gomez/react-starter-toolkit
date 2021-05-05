@@ -1,6 +1,6 @@
 {
   "apiUrl": "https://react-starter-toolkit-api.netlify.app/api/",
-  "baseUrl": "https://react-starter-toolkit.netlify.app/",
+  "baseUrl": "https://react-starter-toolkit.netlify.app",
   "fetchConfig": {
     "crossDomain": true,
     "withCredentials": true,

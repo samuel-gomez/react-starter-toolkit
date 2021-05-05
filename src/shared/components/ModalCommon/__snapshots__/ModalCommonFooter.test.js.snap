@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ModalCommonFooter/> Should render ModalCommonFooter 1`] = `
+<DocumentFragment>
+  <div
+    class="af-modal__footer"
+  >
+    <button
+      class="btn af-btn af-btn--reverse"
+    >
+      <span
+        class="af-btn__text"
+      >
+        Annuler
+      </span>
+    </button>
+    <button
+      class="btn af-btn af-btn--hasiconRight af-btn--success"
+      type="button"
+    >
+      <span
+        class="af-btn__text"
+      >
+        Confirmer
+      </span>
+      <i
+        class="glyphicon glyphicon-arrowthin-right"
+      />
+    </button>
+  </div>
+</DocumentFragment>
+`;

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Loader } from '@axa-fr/react-toolkit-all';
+import Loader from 'shared/components/Loader';
 import Resilience from 'shared/components/Resilience/Resilience';
 import Th from 'shared/components/Table/Header/Th';
 import Table from 'shared/components/Table';
@@ -15,7 +15,7 @@ const SearchMembers = ({ header, footer, title, menu, loaderMode, members, anoma
     <div className="af-main container">
       <h1 className="af-title--content">{TITLE}</h1>
       <SearchForm submitSearchForm={submitSearch} />
-      <Loader mode={loaderMode}>
+      <Loader text="Recherche des membres en cours..." mode={loaderMode}>
         <Resilience anomaly={anomaly}>
           <h2 className="af-title">{SUBTITLE}</h2>
           <Table

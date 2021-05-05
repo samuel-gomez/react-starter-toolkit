@@ -1,4 +1,5 @@
 @import '@axa-fr/react-toolkit-core/src/common/scss/core.scss';
+@import '../../scss/variables.scss';
 
 $base-color: #eaeaf8;
 $shine-color: #ffffff;
@@ -6,8 +7,9 @@ $classBase: af-loader;
 
 .#{$classBase} {
   position: relative;
+  width: 100%;
   &--active {
-    min-height: 100px;
+    min-height: calc(100vh - #{$headerHeight} - #{$footerHeight});
   }
   &__spinner {
     display: flex;

@@ -17,13 +17,6 @@ exports[`NotificationsEnhanced Render <NotificationsEnhanced/> with notification
       class="af-alert af-alert--notification af-alert--error"
       role="alert"
     >
-      <button
-        class="af-alert__icon-close"
-      >
-        <i
-          class="glyphicon glyphicon-close"
-        />
-      </button>
       <div
         class="af-alert__title"
       >
@@ -39,6 +32,14 @@ exports[`NotificationsEnhanced Render <NotificationsEnhanced/> with notification
         >
           label
         </div>
+        <button
+          class="af-alert__title-icon-close"
+          type="button"
+        >
+          <i
+            class="glyphicon glyphicon-close"
+          />
+        </button>
       </div>
     </div>
   </aside>

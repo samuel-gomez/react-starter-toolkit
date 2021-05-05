@@ -99,7 +99,7 @@ describe('<ThSortableContainer />', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('Should call toggleSorting function', () => {
+  it('Should call onSort function', () => {
     const toggleSortingMock = jest.fn();
     const setSortingIconMock = jest.fn();
     const setClassModifierActiveMock = jest.fn().mockReturnValue('classnameactive');
@@ -113,7 +113,9 @@ describe('<ThSortableContainer />', () => {
     };
 
     renderWithContainer(() => <ThSortableContainer {...defaultPropsOverride} />);
+
     expect(ThSortableContainer({ ...defaultPropsOverride }).props.sort()).toEqual('ordering');
+
     expect(toggleSortingMock).toBeCalled();
   });
 });

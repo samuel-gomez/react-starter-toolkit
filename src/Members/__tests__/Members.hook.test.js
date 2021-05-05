@@ -253,6 +253,33 @@ describe('useMembers', () => {
   };
 
   it('Should update stateMembers when useMembers called', () => {
+    const { result } = renderHook(() => useMembers({}));
+    const expected = {
+      isLoading: true,
+      members: [],
+      anomaly: null,
+      pagination: {
+        total: 0,
+        currentPage: 1,
+        numberPages: 1,
+      },
+      onChangeSorting: result.current.onChangeSorting,
+      stateSorting: {
+        field: 'firstname',
+        order: true,
+      },
+      onChangePaging: result.current.onChangePaging,
+      stateFormPaging: {
+        numberItems: 50,
+        page: 1,
+      },
+    };
+    act(() => {
+      expect(result.current).toEqual(expected);
+    });
+  });
+
+  it('Should update stateMembers when useMembers called', () => {
     const { result } = renderHook(() => useMembers(defaultUseMembersParams));
     const expected = {
       isLoading: false,

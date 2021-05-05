@@ -29,11 +29,11 @@ exports[`Should App render without crashing 1`] = `
             class="af-header__title"
           >
             Toolkit React Starter
-            <small
+            <span
               class="af-header__subtitle"
             >
               by Slash Design System
-            </small>
+            </span>
           </h2>
         </div>
         <div

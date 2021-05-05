@@ -1,6 +1,6 @@
 import React, { createContext } from 'react';
 import PropTypes from 'prop-types';
-import { LoaderModes } from '@axa-fr/react-toolkit-all';
+import { LoaderModes } from 'shared/components/Loader';
 import setLoaderMode from 'shared/helpers/setLoaderMode';
 import SearchMembers from './SearchMembers';
 import { useSearchMembers, initStateSearch } from './SearchMembers.hook';
