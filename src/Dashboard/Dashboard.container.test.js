@@ -1,5 +1,5 @@
 import React from 'react';
-import WrapperStaticRouter from 'shared/components/WrapperStaticRouter';
+import { WrapperStaticRouter } from 'shared/testsUtils';
 import { render } from '@testing-library/react';
 import Dashboard from './Dashboard.container';
 

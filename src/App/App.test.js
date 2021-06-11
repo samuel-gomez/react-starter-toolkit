@@ -1,10 +1,10 @@
 import React from 'react';
-import WrapperStaticRouter from 'shared/components/WrapperStaticRouter';
+import { WrapperStaticRouter } from 'shared/testsUtils';
 import { render, act } from '@testing-library/react';
 import App from './App';
 
 const envMock = {
-  baseUrl: 'local',
+  baseUrl: '/',
   oidc: {
     client_id: 'interactive.public',
     redirect_uri: 'http://localhost:3000/authentication/callback',

@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent, act } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import WrapperStaticRouter from 'shared/components/WrapperStaticRouter';
+import { WrapperStaticRouter } from 'shared/testsUtils';
 import withWrapperEnvAndAuth from 'shared/hoc/withWrapperEnvAndAuth';
 import MenuEnhanced, { setPositionInit, setToggleMenu } from './Menu.container';
 import MENU_ITEMS, { CLASS_BODY_MENU_OPEN } from './constants';

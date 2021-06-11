@@ -1,16 +1,17 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import { emptyFunction } from 'shared/testsUtils';
 import ModalPage from '../Modal';
 
 const defaultProps = {
-  header: () => {},
-  title: () => {},
-  footer: () => {},
-  menu: () => {},
-  openModalConfirm: () => {},
+  header: emptyFunction,
+  title: emptyFunction,
+  footer: emptyFunction,
+  menu: emptyFunction,
+  openModalConfirm: emptyFunction,
   modalConfirmProps: {
     isOpen: false,
-    onCancel: () => {},
+    onCancel: emptyFunction,
   },
 };
 
