@@ -170,6 +170,44 @@ exports[`Should App render without crashing 1`] = `
               role="menuitem"
               tabindex="-1"
             >
+              Demos
+            </span>
+            <i
+              class="glyphicon glyphicon-arrow-xs-down"
+            />
+            <ul
+              aria-label=""
+              class="af-nav__list af-nav__list--children"
+              role="menu"
+            >
+              <li
+                class="af-nav__item "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Modal"
+                  class="af-nav__link"
+                  href="/local/demos/modal"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Modal
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li
+            class="af-nav__item af-nav__item--haschild "
+            role="none"
+          >
+            <span
+              aria-expanded="false"
+              class="af-nav__link"
+              role="menuitem"
+              tabindex="-1"
+            >
               Pages
             </span>
             <i
