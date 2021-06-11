@@ -1,6 +1,5 @@
 import React from 'react';
 import { TITLE_BAR, TITLE } from './constants';
-import './Dashboard.scss';
 
 const Dashboard = ({ header, footer, title, menu }) => (
   <>
