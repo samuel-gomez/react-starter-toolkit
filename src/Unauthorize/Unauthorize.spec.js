@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { StaticRouter } from 'react-router-dom';
 import { defineFeature, loadFeature } from 'jest-cucumber';
+import { emptyFunction } from 'shared/testsUtils';
 import Unauthorize from './Unauthorize';
 
 const wrapper = ({ children }) => <StaticRouter context={{}}>{children}</StaticRouter>;
@@ -11,7 +12,7 @@ const feature = loadFeature('src/Unauthorize/Unauthorize.feature');
 defineFeature(feature, test => {
   test('Chargement de la page 403', ({ given, when, then, and }) => {
     let $;
-    given('Je suis un utilisateur accédant à une page non autorisée', () => {});
+    given('Je suis un utilisateur accédant à une page non autorisée', emptyFunction);
 
     when('Je suis redirigé sur cette page', () => {
       $ = render(<Unauthorize />, { wrapper });

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, act } from '@testing-library/react';
-import WrapperStaticRouter from 'shared/components/WrapperStaticRouter';
+import { WrapperStaticRouter } from 'shared/testsUtils';
 import withWrapperEnvAndAuth from 'shared/hoc/withWrapperEnvAndAuth';
 import MenuItemEnhanced from './MenuItem.container';
 

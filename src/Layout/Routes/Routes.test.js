@@ -6,7 +6,8 @@ import MembersPage from 'Members';
 import DashboardPage from 'Dashboard';
 import SlashDesignSystemPage from 'SlashDesignSystem';
 import SearchMembersPage from 'SearchMembers';
-import { renderLayoutMembers, renderLayoutDashboard, renderLayoutSlashDesignSystem, renderLayoutSearchMembers } from './Routes';
+import ModalPage from 'Demos/Modal';
+import { renderLayoutMembers, renderLayoutDashboard, renderLayoutSlashDesignSystem, renderLayoutSearchMembers, renderLayoutModal } from './Routes';
 import Routes from '.';
 
 const oidc = {
@@ -87,5 +88,14 @@ describe('Route', () => {
     const result = renderLayoutSearchMembers(parentProps)({ ...customProps });
     expect(result.type).toEqual(SearchMembersPage);
     expect(result.props.myProp).toEqual('property search member');
+  });
+
+  it('Should return <ModalPage /> with props when call renderLayoutModal', () => {
+    const customProps = {
+      myProp: 'property modal',
+    };
+    const result = renderLayoutModal(parentProps)({ ...customProps });
+    expect(result.type).toEqual(ModalPage);
+    expect(result.props.myProp).toEqual('property modal');
   });
 });

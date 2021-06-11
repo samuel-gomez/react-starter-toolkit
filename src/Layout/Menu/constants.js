@@ -20,6 +20,15 @@ const MENU_ITEMS = [
     url: ROUTE_URL.SLASH,
   },
   {
+    label: 'Demos',
+    children: [
+      {
+        label: 'Modal',
+        url: ROUTE_URL.MODAL,
+      },
+    ],
+  },
+  {
     label: 'Pages',
     children: [
       {

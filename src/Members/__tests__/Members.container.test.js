@@ -1,12 +1,13 @@
 import React from 'react';
 import { render, act } from '@testing-library/react';
+import { emptyFunction } from 'shared/testsUtils';
 import { MembersEnhanced } from '../Members.container';
 import { defaultProps, membersMock } from './Members.test';
 
 const setUseMembersMock = (members = []) =>
   jest.fn(() => ({
     members,
-    onChangeSorting: () => {},
+    onChangeSorting: emptyFunction,
     stateSorting: {
       field: '',
       order: 'NONE',

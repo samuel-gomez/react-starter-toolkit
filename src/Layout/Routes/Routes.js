@@ -6,6 +6,7 @@ import PageUnauthorize from 'Unauthorize';
 import Members from 'Members';
 import SearchMembers from 'SearchMembers';
 import SlashDesignSystem from 'SlashDesignSystem';
+import Modal from 'Demos/Modal';
 import Dashboard from 'Dashboard';
 import Layout from 'Layout';
 import ROUTE_URL from 'Layout/constants';
@@ -14,6 +15,7 @@ export const renderLayoutMembers = parentProps => props => Layout(Members, props
 export const renderLayoutSearchMembers = parentProps => props => Layout(SearchMembers, props, parentProps);
 export const renderLayoutDashboard = parentProps => props => Layout(Dashboard, props, parentProps);
 export const renderLayoutSlashDesignSystem = parentProps => props => Layout(SlashDesignSystem, props, parentProps);
+export const renderLayoutModal = parentProps => props => Layout(Modal, props, parentProps);
 
 const Routes = props => (
   <Switch>
@@ -21,6 +23,7 @@ const Routes = props => (
     <Route exact path={ROUTE_URL.MEMBERS} render={withOidcSecure(renderLayoutMembers(props))} />
     <Route exact path={ROUTE_URL.SEARCHMEMBERS} render={withOidcSecure(renderLayoutSearchMembers(props))} />
     <Route exact path={ROUTE_URL.SLASH} render={withOidcSecure(renderLayoutSlashDesignSystem(props))} />
+    <Route exact path={ROUTE_URL.MODAL} render={withOidcSecure(renderLayoutModal(props))} />
     <Route exact path={ROUTE_URL.UNAUTHORIZE} component={PageUnauthorize} />
     <Route component={PageNotFound} />
   </Switch>

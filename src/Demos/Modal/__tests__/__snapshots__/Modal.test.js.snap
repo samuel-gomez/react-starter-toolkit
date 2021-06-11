@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ModalPage/> Should render ModalPage 1`] = `
+<DocumentFragment>
+  <div
+    class="af-main container"
+  >
+    <h1
+      class="af-title--content"
+    >
+      Example
+    </h1>
+    <button
+      class="btn af-btn"
+      type="submit"
+    >
+      <span
+        class="af-btn__text"
+      >
+        Click me to launch modal
+      </span>
+    </button>
+  </div>
+</DocumentFragment>
+`;

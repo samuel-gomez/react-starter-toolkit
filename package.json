@@ -1,6 +1,6 @@
 {
   "name": "react-starter-toolkit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "start": "react-scripts start",
@@ -126,7 +126,8 @@
       "!<rootDir>/src/**/*.rules.js",
       "!<rootDir>/src/shared/hoc/withEnvAndAuth.js",
       "!<rootDir>/node_modules/",
-      "!<rootDir>/src/shared/helpers/compose.js"
+      "!<rootDir>/src/shared/helpers/compose.js",
+      "!<rootDir>/src/testsUtils/"
     ],
     "coverageThreshold": {
       "global": {
