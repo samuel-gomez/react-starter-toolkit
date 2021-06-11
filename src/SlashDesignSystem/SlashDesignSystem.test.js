@@ -1,13 +1,13 @@
 import React from 'react';
-import { WrapperStaticRouter } from 'shared/testsUtils';
+import { WrapperStaticRouter, emptyFunction } from 'shared/testsUtils';
 import { render, act } from '@testing-library/react';
 import SlashDesignSystem from './SlashDesignSystem';
 
 const defaultProps = {
-  header: () => {},
-  title: () => {},
-  footer: () => {},
-  menu: () => {},
+  header: emptyFunction,
+  title: emptyFunction,
+  footer: emptyFunction,
+  menu: emptyFunction,
 };
 describe('<SlashDesignSystem page/>', () => {
   it('Renders SlashDesignSystem page component without crashing', async () => {

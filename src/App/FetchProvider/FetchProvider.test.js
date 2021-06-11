@@ -1,5 +1,6 @@
 import React, { useContext, createContext } from 'react';
 import { render } from '@testing-library/react';
+import { emptyFunction } from 'shared/testsUtils';
 import FetchProvider, { FetchContext, setFetchCustom } from './FetchProvider';
 
 const fetchConfig = {
@@ -36,7 +37,7 @@ describe('setFetchCustom', () => {
 });
 
 const fetchMock = jest.fn({
-  json: () => {},
+  json: emptyFunction,
 });
 describe('setFetchCustom', () => {
   const resolvedValue = { json: () => ({ data: 'data' }), blob: () => ({ blob: 'blob' }), status: 200 };

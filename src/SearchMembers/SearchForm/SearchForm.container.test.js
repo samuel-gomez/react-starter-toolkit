@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import { emptyFunction } from 'shared/testsUtils';
 import SearchFormContainer, { setOnSubmitSearchForm } from './SearchForm.container';
 
 const defaultProps = {
@@ -15,7 +16,7 @@ describe('SearchFormContainer', () => {
 
   it('useSearchFormFn and setConfirmClassModifierFn when Render <SearchFormContainer/>', () => {
     const useSearchFormFnMock = jest.fn().mockReturnValue({
-      onChangeSearchForm: () => {},
+      onChangeSearchForm: emptyFunction,
       stateSearchForm: {
         hasErrors: true,
         fields: {
@@ -24,7 +25,7 @@ describe('SearchFormContainer', () => {
       },
     });
     const setConfirmClassModifierFnMock = jest.fn().mockReturnValue('confirmClassModifier');
-    const setOnSubmitSearchFormFnMock = jest.fn().mockReturnValue(() => {});
+    const setOnSubmitSearchFormFnMock = jest.fn().mockReturnValue(emptyFunction);
 
     render(
       <SearchFormContainer

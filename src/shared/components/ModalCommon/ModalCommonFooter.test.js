@@ -1,10 +1,11 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import { emptyFunction } from 'shared/testsUtils';
 import ModalCommonFooter from './ModalCommonFooter';
 
 const defaultProps = {
-  onSubmit: () => {},
-  onCancel: () => {},
+  onSubmit: emptyFunction,
+  onCancel: emptyFunction,
 };
 
 describe('<ModalCommonFooter/>', () => {

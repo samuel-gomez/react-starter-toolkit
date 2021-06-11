@@ -1,12 +1,13 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import { emptyFunction } from 'shared/testsUtils';
 import Members from '../Members';
 
 export const defaultProps = {
-  header: () => {},
-  title: () => {},
-  footer: () => {},
-  menu: () => {},
+  header: emptyFunction,
+  title: emptyFunction,
+  footer: emptyFunction,
+  menu: emptyFunction,
   members: [],
   anomaly: null,
   loaderMode: 'none',

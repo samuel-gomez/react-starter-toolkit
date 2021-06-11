@@ -1,18 +1,19 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import { emptyFunction } from 'shared/testsUtils';
 import SearchMembersContainer from './SearchMembers.container';
 
 const defaultProps = {
-  header: () => {},
-  title: () => {},
-  footer: () => {},
-  menu: () => {},
+  header: emptyFunction,
+  title: emptyFunction,
+  footer: emptyFunction,
+  menu: emptyFunction,
   members: [],
   anomaly: null,
   loaderMode: 'none',
-  deleteNotification: () => {},
+  deleteNotification: emptyFunction,
   notifications: [],
-  submitSearch: () => {},
+  submitSearch: emptyFunction,
 };
 
 describe('<SearchMembersContainer/>', () => {

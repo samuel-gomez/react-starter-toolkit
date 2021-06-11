@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import { emptyFunction } from 'shared/testsUtils';
 import { defineFeature, loadFeature } from 'jest-cucumber';
 import Members from '..';
 import { computeInfos } from '../Members.hook';
@@ -7,10 +8,10 @@ import { computeInfos } from '../Members.hook';
 const feature = loadFeature('./src/Members/__tests__/Members.feature');
 
 export const defaultProps = {
-  header: () => {},
-  title: () => {},
-  footer: () => {},
-  menu: () => {},
+  header: emptyFunction,
+  title: emptyFunction,
+  footer: emptyFunction,
+  menu: emptyFunction,
   loaderMode: 'none',
 };
 
@@ -38,7 +39,7 @@ export const renderMembers = ({ membersData = [], useMembersProps = defaultUseMe
   return render(<Members {...defaultProps} useMembersFn={useMembersFnMock} />);
 };
 
-export const givenJeSuisUnUtilisateurConnuEtConnecte = given => given('Je suis un utilisateur connu et connecté', () => {});
+export const givenJeSuisUnUtilisateurConnuEtConnecte = given => given('Je suis un utilisateur connu et connecté', emptyFunction);
 
 defineFeature(feature, test => {
   let $;

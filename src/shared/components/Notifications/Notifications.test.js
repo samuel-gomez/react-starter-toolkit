@@ -1,10 +1,11 @@
 import React from 'react';
 import { render, fireEvent, screen } from '@testing-library/react';
+import { emptyFunction } from 'shared/testsUtils';
 import { Notifications } from './Notifications';
 
 const defaultProps = {
   notifications: [],
-  deleteNotification: () => {},
+  deleteNotification: emptyFunction,
 };
 
 describe('Notifications', () => {
@@ -14,7 +15,7 @@ describe('Notifications', () => {
   });
 
   it('Should contain Notification when array notifications is NOT empty', () => {
-    const notifications = [{ id: 'id', title: 'titleerror', classModifier: '', onClose: () => {} }];
+    const notifications = [{ id: 'id', title: 'titleerror', classModifier: '', onClose: emptyFunction }];
     const { asFragment, getByText } = render(<Notifications {...defaultProps} notifications={notifications} />);
     expect(getByText('titleerror')).toBeInTheDocument();
     expect(asFragment()).toMatchSnapshot();

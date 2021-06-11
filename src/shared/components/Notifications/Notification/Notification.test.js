@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import { emptyFunction } from 'shared/testsUtils';
 import Notification from './Notification';
 
 describe('Notifications', () => {
@@ -8,7 +9,7 @@ describe('Notifications', () => {
       id: 'id',
       title: 'title',
       detail: 'detail',
-      onClose: () => {},
+      onClose: emptyFunction,
       classModifier: '',
     };
     const { asFragment } = render(<Notification {...defaultProps} />);

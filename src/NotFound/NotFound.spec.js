@@ -1,6 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import { StaticRouter } from 'react-router-dom';
+import { emptyFunction } from 'shared/testsUtils';
 import { defineFeature, loadFeature } from 'jest-cucumber';
 import NotFound from './NotFound';
 
@@ -12,7 +13,7 @@ defineFeature(feature, test => {
   test('Chargement de la page 404', ({ given, when, then }) => {
     let $;
 
-    given('Je suis un utilisateur accédant à une page inconnue', () => {});
+    given('Je suis un utilisateur accédant à une page inconnue', emptyFunction);
 
     when('Je suis redirigé sur cette page', () => {
       $ = render(<NotFound />, { wrapper });
