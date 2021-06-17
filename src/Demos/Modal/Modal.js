@@ -30,6 +30,15 @@ const ModalPage = ({ header, footer, title, menu, openModalConfirm, modalConfirm
     {title({ title: TITLE_BAR })}
     <div className="af-main container">
       <h1 className="af-title--content">{TITLE}</h1>
+      <a
+        className="af-link af-link--hasIconRight"
+        href="https://codesandbox.io/embed/modal-default-l6sq5"
+        target="blank"
+        rel="nofollow noreferrer noopener"
+      >
+        <span className="af-link__text">CodeSandBox</span>
+        <i className="glyphicon glyphicon-new-window" />
+      </a>
       <LiveCode code={code} scope={{ ...scope, openModalConfirm, ...modalConfirmProps, classModifier: '' }} />
     </div>
     {footer()}

@@ -17,7 +17,7 @@ const LiveCode = WithClassNameModifier(({ className, code, scope }) => (
 
 LiveCode.propTypes = {
   code: PropTypes.string.isRequired,
-  scope: PropTypes.objectOf(PropTypes.object).isRequired,
+  scope: PropTypes.objectOf(PropTypes.oneOfType([PropTypes.func, PropTypes.string, PropTypes.object, PropTypes.array])).isRequired,
   className: PropTypes.string,
 };
 

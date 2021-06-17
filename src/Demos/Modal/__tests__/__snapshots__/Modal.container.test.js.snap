@@ -10,6 +10,21 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
     >
       Example
     </h1>
+    <a
+      class="af-link af-link--hasIconRight"
+      href="https://codesandbox.io/embed/modal-default-l6sq5"
+      rel="nofollow noreferrer noopener"
+      target="blank"
+    >
+      <span
+        class="af-link__text"
+      >
+        CodeSandBox
+      </span>
+      <i
+        class="glyphicon glyphicon-new-window"
+      />
+    </a>
     <article
       class="af-livecode"
     >

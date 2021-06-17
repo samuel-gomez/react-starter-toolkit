@@ -5,6 +5,7 @@ import { ROUTE_URL_SLASH as SLASH } from 'SlashDesignSystem/constants';
 import { ROUTE_URL_NOTFOUND as NOTFOUND } from 'NotFound/constants';
 import { ROUTE_URL_UNAUTHORIZE as UNAUTHORIZE } from 'Unauthorize/constants';
 import { ROUTE_URL_MODAL as MODAL } from 'Demos/Modal/constants';
+import { ROUTE_URL_BUTTON as BUTTON } from 'Demos/Button/constants';
 
 const ROUTE_URL = {
   DASHBOARD,
@@ -14,6 +15,7 @@ const ROUTE_URL = {
   NOTFOUND,
   UNAUTHORIZE,
   MODAL,
+  BUTTON,
 };
 
 export default ROUTE_URL;

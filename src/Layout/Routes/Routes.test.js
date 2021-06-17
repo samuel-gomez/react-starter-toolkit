@@ -7,7 +7,15 @@ import DashboardPage from 'Dashboard';
 import SlashDesignSystemPage from 'SlashDesignSystem';
 import SearchMembersPage from 'SearchMembers';
 import ModalPage from 'Demos/Modal';
-import { renderLayoutMembers, renderLayoutDashboard, renderLayoutSlashDesignSystem, renderLayoutSearchMembers, renderLayoutModal } from './Routes';
+import ButtonPage from 'Demos/Button';
+import {
+  renderLayoutMembers,
+  renderLayoutDashboard,
+  renderLayoutSlashDesignSystem,
+  renderLayoutSearchMembers,
+  renderLayoutModal,
+  renderLayoutButton,
+} from './Routes';
 import Routes from '.';
 
 const oidc = {
@@ -42,7 +50,7 @@ describe('Route', () => {
     await act(async () => {
       const { asFragment } = render(
         <MemoryRouter initialEntries={['/random']}>
-          <AuthenticationProvider configuration={oidc} isEnabled>
+          <AuthenticationProvider configuration={oidc} isEnabled={false}>
             <Routes />
           </AuthenticationProvider>
         </MemoryRouter>,
@@ -97,5 +105,14 @@ describe('Route', () => {
     const result = renderLayoutModal(parentProps)({ ...customProps });
     expect(result.type).toEqual(ModalPage);
     expect(result.props.myProp).toEqual('property modal');
+  });
+
+  it('Should return <ButtonPage /> with props when call renderLayoutButton', () => {
+    const customProps = {
+      myProp: 'property button',
+    };
+    const result = renderLayoutButton(parentProps)({ ...customProps });
+    expect(result.type).toEqual(ButtonPage);
+    expect(result.props.myProp).toEqual('property button');
   });
 });

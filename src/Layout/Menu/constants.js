@@ -26,6 +26,10 @@ const MENU_ITEMS = [
         label: 'Modal',
         url: ROUTE_URL.MODAL,
       },
+      {
+        label: 'Button',
+        url: ROUTE_URL.BUTTON,
+      },
     ],
   },
   {
