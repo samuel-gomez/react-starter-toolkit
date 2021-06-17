@@ -1,8 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button } from '@axa-fr/react-toolkit-all';
+import { Button, Alert } from '@axa-fr/react-toolkit-all';
+import Modal from '@axa-fr/react-toolkit-modal-default';
+import LiveCode from 'shared/components/LiveCode';
+import { ModalCommonHeader, ModalCommonBody, ModalCommonFooter } from 'shared/components/ModalCommon';
 import { TITLE_BAR, TITLE } from './constants';
-import ModalConfirm from './ModalConfirm';
+
+const scope = { Button, Modal, ModalCommonHeader, ModalCommonBody, ModalCommonFooter, Alert };
+const code = `
+<>
+  <Button type="submit" onClick={openModalConfirm}>
+    <span className="af-btn__text">Click me to launch modal</span>
+  </Button>
+  <Modal isOpen={isOpen} onOutsideTap={onCancel} classModifier={classModifier}>
+    <ModalCommonHeader onCancel={onCancel} title="Validation des informations générales" />
+    <ModalCommonBody>
+      <Alert classModifier="info" icon="info-sign" title="Vous allez créer un nouvel élément." />
+      <p>Confirmez-vous vouloir valider avec les informations suivantes ?</p>      
+    </ModalCommonBody>
+    <ModalCommonFooter cancelLabel="Annuler" onCancel={onCancel} onSubmit={onCancel} confirmLabel="Valider" confirmClassModifier="" />
+  </Modal>
+</>
+`;
 
 const ModalPage = ({ header, footer, title, menu, openModalConfirm, modalConfirmProps }) => (
   <>
@@ -11,10 +30,7 @@ const ModalPage = ({ header, footer, title, menu, openModalConfirm, modalConfirm
     {title({ title: TITLE_BAR })}
     <div className="af-main container">
       <h1 className="af-title--content">{TITLE}</h1>
-      <Button type="submit" onClick={openModalConfirm}>
-        <span className="af-btn__text">Click me to launch modal</span>
-      </Button>
-      <ModalConfirm {...modalConfirmProps} />
+      <LiveCode code={code} scope={{ ...scope, openModalConfirm, ...modalConfirmProps, classModifier: '' }} />
     </div>
     {footer()}
   </>
