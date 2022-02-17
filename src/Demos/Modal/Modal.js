@@ -12,7 +12,7 @@ const code = `
   <Button type="submit" onClick={openModalConfirm}>
     <span className="af-btn__text">Click me to launch modal</span>
   </Button>
-  <Modal isOpen={isOpen} onOutsideTap={onCancel} classModifier={classModifier}>
+  <Modal isOpen={setIsOpen()} onOutsideTap={onCancel} classModifier={classModifier}>
     <ModalCommonHeader onCancel={onCancel} title="Validation des informations générales" />
     <ModalCommonBody>
       <Alert classModifier="info" icon="info-sign" title="Vous allez créer un nouvel élément." />
@@ -39,7 +39,16 @@ const ModalPage = ({ header, footer, title, menu, openModalConfirm, modalConfirm
         <span className="af-link__text">CodeSandBox</span>
         <i className="glyphicon glyphicon-new-window" />
       </a>
-      <LiveCode code={code} scope={{ ...scope, openModalConfirm, ...modalConfirmProps, classModifier: '' }} />
+      <LiveCode
+        code={code}
+        scope={{
+          ...scope,
+          openModalConfirm,
+          onCancel: modalConfirmProps.onCancel,
+          classModifier: '',
+          setIsOpen: () => modalConfirmProps.isOpen,
+        }}
+      />
     </div>
     {footer()}
   </>
