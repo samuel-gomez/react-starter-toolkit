@@ -12,7 +12,7 @@ const defaultProps = {
 
 describe('<ModalPageContainer/>', () => {
   it('Should render ModalPageContainer', () => {
-    const { asFragment } = render(<ModalPageContainer {...defaultProps} />);
-    expect(asFragment()).toMatchSnapshot();
+    const { baseElement } = render(<ModalPageContainer {...defaultProps} />);
+    expect(baseElement).toMatchSnapshot();
   });
 });
