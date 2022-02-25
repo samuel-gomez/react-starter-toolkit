@@ -1,6 +1,5 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { withOidcSecure } from '@axa-fr/react-oidc-context';
 import PageNotFound from 'NotFound';
 import PageUnauthorize from 'Unauthorize';
 import Members from 'Members';

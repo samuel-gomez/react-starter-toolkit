@@ -47,7 +47,6 @@
     "lodash": "4.17.21",
     "moment": "2.29.1",
     "mw.validation": "1.0.15",
-    "oidc-client": "1.11.5",
     "prism-react-renderer": "1.2.1",
     "prop-types": "15.7.2",
     "react": "17.0.1",
