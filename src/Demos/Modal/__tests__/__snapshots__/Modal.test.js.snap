@@ -29,6 +29,22 @@ exports[`<ModalPage/> Should render ModalPage 1`] = `
       class="af-livecode"
     >
       <div
+        code="
+<>
+  <Button type=\\"submit\\" onClick={openModalConfirm}>
+    <span className=\\"af-btn__text\\">Click me to launch modal</span>
+  </Button>
+  <Modal isOpen={setIsOpen()} onOutsideTap={onCancel} classModifier={classModifier}>
+    <ModalCommonHeader onCancel={onCancel} title=\\"Validation des informations générales\\" />
+    <ModalCommonBody>
+      <Alert classModifier=\\"info\\" icon=\\"info-sign\\" title=\\"Vous allez créer un nouvel élément.\\" />
+      <p>Confirmez-vous vouloir valider avec les informations suivantes ?</p>      
+    </ModalCommonBody>
+    <ModalCommonFooter cancelLabel=\\"Annuler\\" onCancel={onCancel} onSubmit={onCancel} confirmLabel=\\"Valider\\" confirmClassModifier=\\"\\" />
+  </Modal>
+</>
+"
+        language="jsx"
         style="position: relative; text-align: left; box-sizing: border-box; padding: 0px; overflow: hidden; white-space: pre; font-family: monospace; color: rgb(248, 248, 242); background-color: rgb(40, 42, 54); font-size: 12px;"
       >
         <textarea
@@ -44,7 +60,7 @@ exports[`<ModalPage/> Should render ModalPage 1`] = `
   &lt;Button type="submit" onClick={openModalConfirm}&gt;
     &lt;span className="af-btn__text"&gt;Click me to launch modal&lt;/span&gt;
   &lt;/Button&gt;
-  &lt;Modal isOpen={isOpen} onOutsideTap={onCancel} classModifier={classModifier}&gt;
+  &lt;Modal isOpen={setIsOpen()} onOutsideTap={onCancel} classModifier={classModifier}&gt;
     &lt;ModalCommonHeader onCancel={onCancel} title="Validation des informations générales" /&gt;
     &lt;ModalCommonBody&gt;
       &lt;Alert classModifier="info" icon="info-sign" title="Vous allez créer un nouvel élément." /&gt;
@@ -364,10 +380,22 @@ exports[`<ModalPage/> Should render ModalPage 1`] = `
               {
             </span>
             <span
-              class="token tag script language-javascript"
-              style="color: rgb(255, 121, 198);"
+              class="token tag script language-javascript function"
+              style="color: rgb(80, 250, 123);"
             >
-              isOpen
+              setIsOpen
+            </span>
+            <span
+              class="token tag script language-javascript punctuation"
+              style="color: rgb(248, 248, 242);"
+            >
+              (
+            </span>
+            <span
+              class="token tag script language-javascript punctuation"
+              style="color: rgb(248, 248, 242);"
+            >
+              )
             </span>
             <span
               class="token tag script language-javascript punctuation"

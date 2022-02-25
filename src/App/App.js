@@ -1,23 +1,40 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { AuthenticationProvider, oidcLog, InMemoryWebStorage } from '@axa-fr/react-oidc-context';
+import { OidcProvider, useOidcUser, useOidcAccessToken, OidcSecure } from '@axa-fr/react-oidc-context';
 import Routes from 'Layout/Routes';
 import UserProvider from 'App/UserProvider';
 import FetchProvider from 'App/FetchProvider';
 import NotificationProvider from 'App/NotificationProvider';
+import { PropTypes } from 'prop-types';
 
-const App = ({ oidc, fetchConfig, apiUrl, baseUrl }) => (
-  <AuthenticationProvider loggerLevel={oidcLog.NONE} configuration={oidc} isEnabled={oidc.isEnabled} InMemoryWebStorage={InMemoryWebStorage}>
-    <UserProvider>
-      <FetchProvider apiUrl={apiUrl} fetchConfig={fetchConfig}>
-        <NotificationProvider>
-          <Router basename={baseUrl}>
-            <Routes />
-          </Router>
-        </NotificationProvider>
-      </FetchProvider>
+const App = ({ oidc, fetchConfig, apiUrl, baseUrl, OidcProviderCmpt, OidcSecureCmpt, useOidcUserFn, useOidcAccessTokenFn }) => (
+  <OidcProviderCmpt configuration={oidc}>
+    <UserProvider useOidcUser={useOidcUserFn}>
+      <OidcSecureCmpt>
+        <FetchProvider apiUrl={apiUrl} fetchConfig={fetchConfig} useOidcAccessToken={useOidcAccessTokenFn}>
+          <NotificationProvider>
+            <Router basename={baseUrl}>
+              <Routes />
+            </Router>
+          </NotificationProvider>
+        </FetchProvider>
+      </OidcSecureCmpt>
     </UserProvider>
-  </AuthenticationProvider>
+  </OidcProviderCmpt>
 );
+
+App.propTypes = {
+  OidcProviderCmpt: PropTypes.func,
+  OidcSecureCmpt: PropTypes.func,
+  useOidcUserFn: PropTypes.func,
+  useOidcAccessTokenFn: PropTypes.func,
+};
+
+App.defaultProps = {
+  OidcProviderCmpt: OidcProvider,
+  OidcSecureCmpt: OidcSecure,
+  useOidcUserFn: useOidcUser,
+  useOidcAccessTokenFn: useOidcAccessToken,
+};
 
 export default App;

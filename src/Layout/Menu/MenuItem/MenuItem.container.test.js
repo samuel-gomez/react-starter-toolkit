@@ -1,15 +1,15 @@
 import React from 'react';
 import { render, act } from '@testing-library/react';
 import { WrapperStaticRouter } from 'shared/testsUtils';
-import withWrapperEnvAndAuth from 'shared/hoc/withWrapperEnvAndAuth';
+import withUser from 'shared/hoc/withUser';
 import MenuItemEnhanced from './MenuItem.container';
 
-const MenuEnhancedWithEnvAndAuth = withWrapperEnvAndAuth(MenuItemEnhanced);
+const MenuEnhancedWithUser = withUser(MenuItemEnhanced);
 
 describe('<MenuItemEnhanced/>', () => {
   it('Render <Menu/>', async () => {
     await act(async () => {
-      const { asFragment } = render(<MenuEnhancedWithEnvAndAuth />, { wrapper: WrapperStaticRouter });
+      const { asFragment } = render(<MenuEnhancedWithUser />, { wrapper: WrapperStaticRouter });
       expect(asFragment()).toMatchSnapshot();
     });
   });
@@ -17,7 +17,7 @@ describe('<MenuItemEnhanced/>', () => {
   it('Render <Menu/> hasChild', async () => {
     await act(async () => {
       const { asFragment } = render(
-        <MenuEnhancedWithEnvAndAuth>
+        <MenuEnhancedWithUser>
           {[
             {
               label: 'Accueil',
@@ -32,7 +32,7 @@ describe('<MenuItemEnhanced/>', () => {
               url: 'slash',
             },
           ]}
-        </MenuEnhancedWithEnvAndAuth>,
+        </MenuEnhancedWithUser>,
         { wrapper: WrapperStaticRouter },
       );
       expect(asFragment()).toMatchSnapshot();

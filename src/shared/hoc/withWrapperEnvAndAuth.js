@@ -2,7 +2,7 @@
  * This HOC is useful for testing components that need to be wwrapped by environment and authentication providers
  */
 import React from 'react';
-import { AuthenticationProvider } from '@axa-fr/react-oidc-context';
+import { OidcProvider } from '@axa-fr/react-oidc-context';
 import EnvironmentProvider from 'App/EnvironmentProvider';
 
 const oidc = {
@@ -21,8 +21,8 @@ const oidc = {
 
 export default Component => props => (
   <EnvironmentProvider value={{ environment: { oidc } }}>
-    <AuthenticationProvider configuration={oidc} isEnabled>
+    <OidcProvider configuration={oidc} isEnabled>
       <Component {...props} />
-    </AuthenticationProvider>
+    </OidcProvider>
   </EnvironmentProvider>
 );

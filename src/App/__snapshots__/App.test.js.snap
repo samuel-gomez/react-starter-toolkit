@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should App render without crashing 1`] = `
+exports[`Should render App 1`] = `
 <DocumentFragment>
   <div
     class="af-header"
@@ -47,7 +47,7 @@ exports[`Should App render without crashing 1`] = `
             <span
               class="af-info-user__name"
             >
-              Non Connecté
+              Samuel Gomez
             </span>
           </a>
         </div>

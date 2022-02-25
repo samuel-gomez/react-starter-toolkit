@@ -1,6 +1,5 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import { withOidcSecure } from '@axa-fr/react-oidc-context';
 import PageNotFound from 'NotFound';
 import PageUnauthorize from 'Unauthorize';
 import Members from 'Members';
@@ -21,12 +20,12 @@ export const renderLayoutButton = parentProps => props => Layout(Button, props, 
 
 const Routes = props => (
   <Switch>
-    <Route exact path={ROUTE_URL.DASHBOARD} render={withOidcSecure(renderLayoutDashboard(props))} />
-    <Route exact path={ROUTE_URL.MEMBERS} render={withOidcSecure(renderLayoutMembers(props))} />
-    <Route exact path={ROUTE_URL.SEARCHMEMBERS} render={withOidcSecure(renderLayoutSearchMembers(props))} />
-    <Route exact path={ROUTE_URL.SLASH} render={withOidcSecure(renderLayoutSlashDesignSystem(props))} />
-    <Route exact path={ROUTE_URL.MODAL} render={withOidcSecure(renderLayoutModal(props))} />
-    <Route exact path={ROUTE_URL.BUTTON} render={withOidcSecure(renderLayoutButton(props))} />
+    <Route exact path={ROUTE_URL.DASHBOARD} render={renderLayoutDashboard(props)} />
+    <Route exact path={ROUTE_URL.MEMBERS} render={renderLayoutMembers(props)} />
+    <Route exact path={ROUTE_URL.SEARCHMEMBERS} render={renderLayoutSearchMembers(props)} />
+    <Route exact path={ROUTE_URL.SLASH} render={renderLayoutSlashDesignSystem(props)} />
+    <Route exact path={ROUTE_URL.MODAL} render={renderLayoutModal(props)} />
+    <Route exact path={ROUTE_URL.BUTTON} render={renderLayoutButton(props)} />
     <Route exact path={ROUTE_URL.UNAUTHORIZE} component={PageUnauthorize} />
     <Route component={PageNotFound} />
   </Switch>
