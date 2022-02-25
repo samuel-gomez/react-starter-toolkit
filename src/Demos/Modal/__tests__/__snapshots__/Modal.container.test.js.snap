@@ -35,7 +35,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
   <Button type=\\"submit\\" onClick={openModalConfirm}>
     <span className=\\"af-btn__text\\">Click me to launch modal</span>
   </Button>
-  <Modal isOpen={setIsOpen()} onOutsideTap={(onCancel)} classModifier={classModifier}>
+  <Modal isOpen={setIsOpen()} onOutsideTap={onCancel} classModifier={classModifier}>
     <ModalCommonHeader onCancel={onCancel} title=\\"Validation des informations générales\\" />
     <ModalCommonBody>
       <Alert classModifier=\\"info\\" icon=\\"info-sign\\" title=\\"Vous allez créer un nouvel élément.\\" />
@@ -62,7 +62,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
   &lt;Button type="submit" onClick={openModalConfirm}&gt;
     &lt;span className="af-btn__text"&gt;Click me to launch modal&lt;/span&gt;
   &lt;/Button&gt;
-  &lt;Modal isOpen={setIsOpen()} onOutsideTap={(onCancel)} classModifier={classModifier}&gt;
+  &lt;Modal isOpen={setIsOpen()} onOutsideTap={onCancel} classModifier={classModifier}&gt;
     &lt;ModalCommonHeader onCancel={onCancel} title="Validation des informations générales" /&gt;
     &lt;ModalCommonBody&gt;
       &lt;Alert classModifier="info" icon="info-sign" title="Vous allez créer un nouvel élément." /&gt;
@@ -430,22 +430,10 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
                 {
               </span>
               <span
-                class="token tag script language-javascript punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                (
-              </span>
-              <span
                 class="token tag script language-javascript"
                 style="color: rgb(255, 121, 198);"
               >
                 onCancel
-              </span>
-              <span
-                class="token tag script language-javascript punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                )
               </span>
               <span
                 class="token tag script language-javascript punctuation"

@@ -1,7 +1,6 @@
-import React, { createContext, useContext } from 'react';
+import React, { createContext } from 'react';
 import mergeObj from 'shared/helpers/mergeObj';
 import { STATUS_API } from 'shared/constants';
-import { UserContext } from 'App/UserProvider';
 
 export const FetchContext = createContext({ fetchCustom: fetch });
 export const FetchContextProvider = FetchContext.Provider;
@@ -19,11 +18,11 @@ export const setFetchCustom = ({ apiUrl, fetchAuthConfig, fetchFn = fetch, merge
   };
 };
 
-const FetchProvider = ({ apiUrl, fetchConfig, children, mergeObjFn = mergeObj, setFetchCustomFn = setFetchCustom, UserContextObj = UserContext }) => {
-  const { authAccessToken } = useContext(UserContextObj);
+const FetchProvider = ({ apiUrl, fetchConfig, children, useOidcAccessToken, mergeObjFn = mergeObj, setFetchCustomFn = setFetchCustom }) => {
+  const { accessToken } = useOidcAccessToken();
   const authConfig = {
     headers: {
-      Authorization: `Bearer ${authAccessToken}`,
+      Authorization: `Bearer ${accessToken}`,
     },
   };
   const fetchAuthConfig = mergeObjFn(fetchConfig, authConfig);

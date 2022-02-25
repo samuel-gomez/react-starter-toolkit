@@ -15,17 +15,16 @@ const BaseWithFetch = () => {
   return <Base {...fetchProps} />;
 };
 
-const UserContext = createContext();
-const UserContextProvider = UserContext.Provider;
-
 const Base = ({ fetchCustom }) => <div>{fetchCustom ? 'haveFetchCustom' : 'notHaveFetchCustom'}</div>;
 
+const useOidcAccessTokenMock = jest.fn().mockReturnValue({
+  accessToken: 'accessTokenfdsfdsqgvqvsqfs',
+});
+
 const App = () => (
-  <UserContextProvider value={{ authAccessToken: 'authAccessToken' }}>
-    <FetchProvider apiUrl={apiMock} fetchConfig={fetchConfig} UserContextObj={UserContext}>
-      <BaseWithFetch />
-    </FetchProvider>
-  </UserContextProvider>
+  <FetchProvider apiUrl={apiMock} fetchConfig={fetchConfig} useOidcAccessToken={useOidcAccessTokenMock}>
+    <BaseWithFetch />
+  </FetchProvider>
 );
 
 describe('setFetchCustom', () => {

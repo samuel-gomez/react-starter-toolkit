@@ -1,13 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Render App with Base have user props Should Base have fetchCustom props when call setFetchCustom 1`] = `
+exports[`Render App with Base have user props Should Base have user props when render App with UserProvider 1`] = `
 <DocumentFragment>
   <ul>
     <li>
       have authName
-    </li>
-    <li>
-      have authAccessToken
     </li>
     <li>
       have authRole

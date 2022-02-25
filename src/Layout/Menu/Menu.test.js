@@ -1,17 +1,15 @@
 import React from 'react';
-import { render, act } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { WrapperStaticRouter } from 'shared/testsUtils';
-import withWrapperEnvAndAuth from 'shared/hoc/withWrapperEnvAndAuth';
+import withUser from 'shared/hoc/withUser';
 import { Menu } from './Menu';
 import MENU_ITEMS from './constants';
 
-const MenuWithEnvAndAuth = withWrapperEnvAndAuth(Menu);
+const MenuWithUser = withUser(Menu);
 
 describe('<Menu/>', () => {
-  it('Render <Menu/>', async () => {
-    await act(async () => {
-      const { asFragment } = render(<MenuWithEnvAndAuth menuItems={MENU_ITEMS} isVisible />, { wrapper: WrapperStaticRouter });
-      expect(asFragment()).toMatchSnapshot();
-    });
+  it('Render <Menu/>', () => {
+    const { asFragment } = render(<MenuWithUser menuItems={MENU_ITEMS} isVisible />, { wrapper: WrapperStaticRouter });
+    expect(asFragment()).toMatchSnapshot();
   });
 });
