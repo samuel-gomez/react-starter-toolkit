@@ -47,7 +47,7 @@ defineFeature(feature, test => {
   test('Affichage de la liste des sociétaires', ({ given, when, then, and }) => {
     givenJeSuisUnUtilisateurConnuEtConnecte(given);
 
-    when('J’accède à la page des sociétaires', () => {
+    when("J'accède à la page des sociétaires", () => {
       $ = renderMembers({
         membersData: [
           {
@@ -65,7 +65,7 @@ defineFeature(feature, test => {
       expect($.getByRole('table')).toBeInTheDocument();
     });
 
-    and(/^le tableau présente 4 colonnes dans l\’ordre suivant : ’Nom’, ‘Prénom’, ‘Date de naissance’, ‘sexe’$/, arg0 => {
+    and(/^le tableau présente 4 colonnes dans l\'ordre suivant : "Nom", "Prénom", "Date de naissance", "sexe"$/, arg0 => {
       expect($.container.querySelector('thead.af-table__thead')).toBeInTheDocument();
       expect($.container.querySelector('tr.af-table__tr')).toBeInTheDocument();
       expect($.container.querySelector('th.af-table__th:nth-child(1)')).toHaveTextContent(/Prénom/i);
@@ -75,7 +75,7 @@ defineFeature(feature, test => {
     });
 
     and(
-      'le tableau contient 1 ligne correspondant à un sociétaire avec 4 colonnes dans l’ordre suivant :’Samuel’, ‘Gomez’, ‘20/10/1985’, ‘M’',
+      'le tableau contient 1 ligne correspondant à un sociétaire avec 4 colonnes dans l\'ordre suivant :"Samuel", "Gomez", "20/10/1985", "M"',
       (arg0, arg1, arg2, arg3, arg4) => {
         expect($.container.querySelector('tbody.af-table__body')).toBeInTheDocument();
         expect($.container.querySelector('tr.af-table__tr')).toBeInTheDocument();
