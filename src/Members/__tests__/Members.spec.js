@@ -65,7 +65,7 @@ defineFeature(feature, test => {
       expect($.getByRole('table')).toBeInTheDocument();
     });
 
-    and(/^le tableau présente 4 colonnes dans l\'ordre suivant : "Nom", "Prénom", "Date de naissance", "sexe"$/, arg0 => {
+    and(/^le tableau présente 4 colonnes dans l'ordre suivant : "Nom", "Prénom", "Date de naissance", "sexe"$/, arg0 => {
       expect($.container.querySelector('thead.af-table__thead')).toBeInTheDocument();
       expect($.container.querySelector('tr.af-table__tr')).toBeInTheDocument();
       expect($.container.querySelector('th.af-table__th:nth-child(1)')).toHaveTextContent(/Prénom/i);
