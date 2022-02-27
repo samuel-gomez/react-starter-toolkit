@@ -10,7 +10,7 @@
     "test:sonar": "react-scripts test --testResultsProcessor ./node_modules/jest-sonar-reporter",
     "cover": "cross-env NODE_ICU_DATA=node_modules/full-icu npm t -- --coverage --watchAll=false",
     "storybook": "start-storybook -p 9009 -s .storybook",
-    "lint": "./node_modules/.bin/eslint ./src/ --ignore-pattern \"**/*.test.js\" --ignore-pattern \"**/*.steps.js\"",
+    "lint": "eslint ./src/ --ignore-pattern \"**/*.test.js\" --ignore-pattern \"**/*.steps.js\"",
     "lint:fix": "npm run lint --fix",
     "precommit": "npm run lint:fix && git add ."
   },
