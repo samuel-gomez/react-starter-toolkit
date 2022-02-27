@@ -5,7 +5,7 @@ import StorybookIcon from 'shared/components/StorybookIcon';
 import SlashIcon from 'shared/components/SlashIcon';
 import { STORYBOOK, DESIGN_SYSTEM } from 'shared/constants';
 
-const Card = ({ storybook, designSystem, title, picture: { alt, name } }) => (
+const Card = ({ storybook, designSystem, title, picture: { name, alt } }) => (
   <article className="af-card af-skeleton">
     <LasyImage className="af-card__image" name={name} alt={alt} />
     <header className="af-card__header">
@@ -14,8 +14,8 @@ const Card = ({ storybook, designSystem, title, picture: { alt, name } }) => (
     <section className="af-card__content">
       <a
         className="btn af-btn--circle af-btn--svg"
-        href={`${DESIGN_SYSTEM}${designSystem?.path}`}
-        title={storybook?.text}
+        href={`${DESIGN_SYSTEM}${designSystem.path}`}
+        title={storybook.text}
         target="_blank"
         rel="noopener noreferrer"
       >
@@ -23,8 +23,8 @@ const Card = ({ storybook, designSystem, title, picture: { alt, name } }) => (
       </a>
       <a
         className="btn af-btn--circle af-btn--storybook"
-        href={`${STORYBOOK}?path=/story/${storybook?.path}`}
-        title={storybook?.text}
+        href={`${STORYBOOK}?path=/story/${storybook.path}`}
+        title={storybook.text}
         target="_blank"
         rel="noopener noreferrer"
       >
