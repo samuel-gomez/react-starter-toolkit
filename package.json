@@ -20,7 +20,7 @@
     }
   },
   "dependencies": {
-    "@axa-fr/react-oidc-context": "4.0.0",
+    "@axa-fr/react-oidc-context": "4.0.2",
     "@axa-fr/react-toolkit-all": "1.4.1",
     "@axa-fr/react-toolkit-core": "1.4.1",
     "@axa-fr/react-toolkit-modal-default": "1.3.23",
