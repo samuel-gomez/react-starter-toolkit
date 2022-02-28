@@ -43,7 +43,7 @@
     "apexcharts": "3.25.0",
     "classnames": "2.2.6",
     "downloadjs": "1.4.7",
-    "jest-cucumber": "3.0.0",
+    "jest-cucumber": "3.0.1",
     "lodash": "4.17.21",
     "moment": "2.29.1",
     "mw.validation": "1.0.15",
