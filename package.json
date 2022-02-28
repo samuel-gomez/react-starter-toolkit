@@ -40,7 +40,7 @@
     "@testing-library/react": "11.2.7",
     "@testing-library/react-hooks": "5.1.3",
     "@testing-library/user-event": "12.8.3",
-    "apexcharts": "3.25.0",
+    "apexcharts": "3.33.1",
     "classnames": "2.2.6",
     "downloadjs": "1.4.7",
     "jest-cucumber": "3.0.1",
