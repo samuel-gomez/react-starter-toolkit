@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: '14.x'
       - name: Install dependencies
-        run: npm ci
+        run: npm i
       - name: Run Jest coverage
         run: npm run cover
       - name: Run Lint

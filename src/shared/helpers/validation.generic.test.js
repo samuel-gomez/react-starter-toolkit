@@ -486,7 +486,7 @@ describe('Function hasErrorMessage', () => {
         message: 'hello',
       },
     };
-    const results = hasErrorMessage('name')(fields);
+    const results = hasErrorMessage(fields.name);
     expect(results).toBe(true);
   });
 
@@ -496,7 +496,7 @@ describe('Function hasErrorMessage', () => {
         message: null,
       },
     };
-    const results = hasErrorMessage('name')(fields);
+    const results = hasErrorMessage(fields.name);
     expect(results).toBe(false);
   });
 });
@@ -541,7 +541,7 @@ describe('Function getValuesList', () => {
   it('Should return values array with 2 items when 2 fields have value', () => {
     const fields = {
       lastname: {
-        value:'doe',
+        value: 'doe',
       },
       firstname: {
         value: 'john',
@@ -558,10 +558,10 @@ describe('Function getValuesList', () => {
   it('Should return empty array when all value are empty', () => {
     const fields = {
       lastname: {
-        value:'',
+        value: '',
       },
       firstname: {
-        value:'',
+        value: '',
       },
       birthdate: {
         value: null,

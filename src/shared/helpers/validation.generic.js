@@ -63,8 +63,11 @@ export const computeInitialStateErrorMessage = (state, rules) => {
   return newState;
 };
 
-export const hasErrorMessage = key => fields => fields[key].message !== null;
+export const hasErrorMessage = ({ message }) => message !== null;
 
-export const getErrorsList = fields => Object.keys(fields).filter(key => hasErrorMessage(key)(fields));
+export const getErrorsList = fields => Object.keys(fields).filter(key => hasErrorMessage(fields[key]));
 
-export const getValuesList = fields => Object.keys(fields).filter(key => fields[key].value !== null && fields[key].value !== '' && fields[key].values !== '' && fields[key].values !== null);
+export const getValuesList = fields =>
+  Object.keys(fields).filter(
+    key => fields[key].value !== null && fields[key].value !== '' && fields[key].values !== '' && fields[key].values !== null,
+  );
