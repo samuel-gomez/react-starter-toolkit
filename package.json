@@ -24,7 +24,7 @@
     "@axa-fr/react-toolkit-all": "1.4.1",
     "@axa-fr/react-toolkit-core": "1.4.1",
     "@axa-fr/react-toolkit-modal-default": "1.3.23",
-    "@babel/parser": "7.13.9",
+    "@babel/parser": "7.17.3",
     "@storybook/addon-a11y": "6.1.21",
     "@storybook/addon-actions": "6.1.21",
     "@storybook/addon-info": "5.3.21",
@@ -142,6 +142,6 @@
     "resetMocks": false
   },
   "resolutions": {
-    "@babel/parser": "7.13.9"
+    "@babel/parser": "7.17.3"
   }
 }
