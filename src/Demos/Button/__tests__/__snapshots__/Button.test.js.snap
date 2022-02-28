@@ -236,7 +236,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               &gt;
             </span>
             <span
-              class="token plain"
+              class="token plain-text"
             />
           </div>
           <div
@@ -244,7 +244,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             style="color: rgb(248, 248, 242);"
           >
             <span
-              class="token plain"
+              class="token plain-text"
             >
                   
             </span>
@@ -303,7 +303,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               &gt;
             </span>
             <span
-              class="token plain"
+              class="token plain-text"
             >
               Classic button
             </span>
@@ -326,7 +326,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               &gt;
             </span>
             <span
-              class="token plain"
+              class="token plain-text"
             />
           </div>
           <div
@@ -334,7 +334,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             style="color: rgb(248, 248, 242);"
           >
             <span
-              class="token plain"
+              class="token plain-text"
             >
                 
             </span>
@@ -683,7 +683,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               &gt;
             </span>
             <span
-              class="token plain"
+              class="token plain-text"
             />
           </div>
           <div
@@ -691,7 +691,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             style="color: rgb(248, 248, 242);"
           >
             <span
-              class="token plain"
+              class="token plain-text"
             >
                   
             </span>
@@ -750,7 +750,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               &gt;
             </span>
             <span
-              class="token plain"
+              class="token plain-text"
             >
               Reversed button
             </span>
@@ -773,7 +773,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               &gt;
             </span>
             <span
-              class="token plain"
+              class="token plain-text"
             />
           </div>
           <div
@@ -781,7 +781,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             style="color: rgb(248, 248, 242);"
           >
             <span
-              class="token plain"
+              class="token plain-text"
             >
                 
             </span>
@@ -1166,7 +1166,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               &gt;
             </span>
             <span
-              class="token plain"
+              class="token plain-text"
             />
           </div>
           <div
@@ -1174,7 +1174,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             style="color: rgb(248, 248, 242);"
           >
             <span
-              class="token plain"
+              class="token plain-text"
             >
                   
             </span>
@@ -1233,7 +1233,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               &gt;
             </span>
             <span
-              class="token plain"
+              class="token plain-text"
             >
               Disabled button
             </span>
@@ -1256,7 +1256,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               &gt;
             </span>
             <span
-              class="token plain"
+              class="token plain-text"
             />
           </div>
           <div
@@ -1264,7 +1264,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             style="color: rgb(248, 248, 242);"
           >
             <span
-              class="token plain"
+              class="token plain-text"
             >
                 
             </span>
@@ -1614,7 +1614,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               &gt;
             </span>
             <span
-              class="token plain"
+              class="token plain-text"
             />
           </div>
           <div
@@ -1622,7 +1622,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             style="color: rgb(248, 248, 242);"
           >
             <span
-              class="token plain"
+              class="token plain-text"
             >
                   
             </span>
@@ -1681,7 +1681,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               &gt;
             </span>
             <span
-              class="token plain"
+              class="token plain-text"
             >
               Success button
             </span>
@@ -1704,7 +1704,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               &gt;
             </span>
             <span
-              class="token plain"
+              class="token plain-text"
             />
           </div>
           <div
@@ -1712,7 +1712,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             style="color: rgb(248, 248, 242);"
           >
             <span
-              class="token plain"
+              class="token plain-text"
             >
                 
             </span>
@@ -2061,7 +2061,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               &gt;
             </span>
             <span
-              class="token plain"
+              class="token plain-text"
             />
           </div>
           <div
@@ -2069,7 +2069,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             style="color: rgb(248, 248, 242);"
           >
             <span
-              class="token plain"
+              class="token plain-text"
             >
                   
             </span>
@@ -2128,7 +2128,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               &gt;
             </span>
             <span
-              class="token plain"
+              class="token plain-text"
             >
               Danger button
             </span>
@@ -2151,7 +2151,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               &gt;
             </span>
             <span
-              class="token plain"
+              class="token plain-text"
             />
           </div>
           <div
@@ -2159,7 +2159,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             style="color: rgb(248, 248, 242);"
           >
             <span
-              class="token plain"
+              class="token plain-text"
             >
                 
             </span>
@@ -2508,7 +2508,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               &gt;
             </span>
             <span
-              class="token plain"
+              class="token plain-text"
             />
           </div>
           <div
@@ -2516,7 +2516,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             style="color: rgb(248, 248, 242);"
           >
             <span
-              class="token plain"
+              class="token plain-text"
             >
                   
             </span>
@@ -2575,8 +2575,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               &gt;
             </span>
             <span
-              class="token constant"
-              style="color: rgb(189, 147, 249);"
+              class="token plain-text"
             >
               OK
             </span>
@@ -2599,7 +2598,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               &gt;
             </span>
             <span
-              class="token plain"
+              class="token plain-text"
             />
           </div>
           <div
@@ -2607,7 +2606,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             style="color: rgb(248, 248, 242);"
           >
             <span
-              class="token plain"
+              class="token plain-text"
             >
                 
             </span>
@@ -2958,7 +2957,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               &gt;
             </span>
             <span
-              class="token plain"
+              class="token plain-text"
             />
           </div>
           <div
@@ -2966,7 +2965,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             style="color: rgb(248, 248, 242);"
           >
             <span
-              class="token plain"
+              class="token plain-text"
             >
                   
             </span>
@@ -3025,7 +3024,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               &gt;
             </span>
             <span
-              class="token plain"
+              class="token plain-text"
             >
               With right icon button
             </span>
@@ -3048,7 +3047,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               &gt;
             </span>
             <span
-              class="token plain"
+              class="token plain-text"
             />
           </div>
           <div
@@ -3056,7 +3055,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             style="color: rgb(248, 248, 242);"
           >
             <span
-              class="token plain"
+              class="token plain-text"
             >
                   
             </span>
@@ -3121,7 +3120,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               /&gt;
             </span>
             <span
-              class="token plain"
+              class="token plain-text"
             />
           </div>
           <div
@@ -3129,7 +3128,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             style="color: rgb(248, 248, 242);"
           >
             <span
-              class="token plain"
+              class="token plain-text"
             >
                 
             </span>
@@ -3483,7 +3482,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               &gt;
             </span>
             <span
-              class="token plain"
+              class="token plain-text"
             />
           </div>
           <div
@@ -3491,7 +3490,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             style="color: rgb(248, 248, 242);"
           >
             <span
-              class="token plain"
+              class="token plain-text"
             >
                   
             </span>
@@ -3556,7 +3555,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               /&gt;
             </span>
             <span
-              class="token plain"
+              class="token plain-text"
             />
           </div>
           <div
@@ -3564,7 +3563,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             style="color: rgb(248, 248, 242);"
           >
             <span
-              class="token plain"
+              class="token plain-text"
             >
                   
             </span>
@@ -3623,7 +3622,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               &gt;
             </span>
             <span
-              class="token plain"
+              class="token plain-text"
             >
               With left icon button
             </span>
@@ -3646,7 +3645,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               &gt;
             </span>
             <span
-              class="token plain"
+              class="token plain-text"
             />
           </div>
           <div
@@ -3654,7 +3653,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             style="color: rgb(248, 248, 242);"
           >
             <span
-              class="token plain"
+              class="token plain-text"
             >
                 
             </span>
@@ -4006,7 +4005,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               &gt;
             </span>
             <span
-              class="token plain"
+              class="token plain-text"
             />
           </div>
           <div
@@ -4014,7 +4013,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             style="color: rgb(248, 248, 242);"
           >
             <span
-              class="token plain"
+              class="token plain-text"
             >
                   
             </span>
@@ -4079,7 +4078,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               /&gt;
             </span>
             <span
-              class="token plain"
+              class="token plain-text"
             />
           </div>
           <div
@@ -4087,7 +4086,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             style="color: rgb(248, 248, 242);"
           >
             <span
-              class="token plain"
+              class="token plain-text"
             >
                 
             </span>

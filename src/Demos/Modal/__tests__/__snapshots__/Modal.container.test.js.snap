@@ -109,7 +109,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
                 &gt;
               </span>
               <span
-                class="token plain"
+                class="token plain-text"
               />
             </div>
             <div
@@ -117,7 +117,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
               style="color: rgb(248, 248, 242);"
             >
               <span
-                class="token plain"
+                class="token plain-text"
               >
                   
               </span>
@@ -212,7 +212,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
                 &gt;
               </span>
               <span
-                class="token plain"
+                class="token plain-text"
               />
             </div>
             <div
@@ -220,7 +220,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
               style="color: rgb(248, 248, 242);"
             >
               <span
-                class="token plain"
+                class="token plain-text"
               >
                     
               </span>
@@ -279,7 +279,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
                 &gt;
               </span>
               <span
-                class="token plain"
+                class="token plain-text"
               >
                 Click me to launch modal
               </span>
@@ -302,7 +302,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
                 &gt;
               </span>
               <span
-                class="token plain"
+                class="token plain-text"
               />
             </div>
             <div
@@ -310,7 +310,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
               style="color: rgb(248, 248, 242);"
             >
               <span
-                class="token plain"
+                class="token plain-text"
               >
                   
               </span>
@@ -333,7 +333,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
                 &gt;
               </span>
               <span
-                class="token plain"
+                class="token plain-text"
               />
             </div>
             <div
@@ -341,7 +341,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
               style="color: rgb(248, 248, 242);"
             >
               <span
-                class="token plain"
+                class="token plain-text"
               >
                   
               </span>
@@ -484,7 +484,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
                 &gt;
               </span>
               <span
-                class="token plain"
+                class="token plain-text"
               />
             </div>
             <div
@@ -492,7 +492,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
               style="color: rgb(248, 248, 242);"
             >
               <span
-                class="token plain"
+                class="token plain-text"
               >
                     
               </span>
@@ -593,7 +593,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
                 /&gt;
               </span>
               <span
-                class="token plain"
+                class="token plain-text"
               />
             </div>
             <div
@@ -601,7 +601,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
               style="color: rgb(248, 248, 242);"
             >
               <span
-                class="token plain"
+                class="token plain-text"
               >
                     
               </span>
@@ -624,7 +624,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
                 &gt;
               </span>
               <span
-                class="token plain"
+                class="token plain-text"
               />
             </div>
             <div
@@ -632,7 +632,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
               style="color: rgb(248, 248, 242);"
             >
               <span
-                class="token plain"
+                class="token plain-text"
               >
                       
               </span>
@@ -769,7 +769,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
                 /&gt;
               </span>
               <span
-                class="token plain"
+                class="token plain-text"
               />
             </div>
             <div
@@ -777,7 +777,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
               style="color: rgb(248, 248, 242);"
             >
               <span
-                class="token plain"
+                class="token plain-text"
               >
                       
               </span>
@@ -800,24 +800,9 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
                 &gt;
               </span>
               <span
-                class="token plain"
+                class="token plain-text"
               >
-                Confirmez
-              </span>
-              <span
-                class="token operator"
-              >
-                -
-              </span>
-              <span
-                class="token plain"
-              >
-                vous vouloir valider avec les informations suivantes 
-              </span>
-              <span
-                class="token operator"
-              >
-                ?
+                Confirmez-vous vouloir valider avec les informations suivantes ?
               </span>
               <span
                 class="token tag punctuation"
@@ -838,7 +823,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
                 &gt;
               </span>
               <span
-                class="token plain"
+                class="token plain-text"
               >
                       
               </span>
@@ -848,7 +833,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
               style="color: rgb(248, 248, 242);"
             >
               <span
-                class="token plain"
+                class="token plain-text"
               >
                     
               </span>
@@ -871,7 +856,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
                 &gt;
               </span>
               <span
-                class="token plain"
+                class="token plain-text"
               />
             </div>
             <div
@@ -879,7 +864,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
               style="color: rgb(248, 248, 242);"
             >
               <span
-                class="token plain"
+                class="token plain-text"
               >
                     
               </span>
@@ -1082,7 +1067,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
                 /&gt;
               </span>
               <span
-                class="token plain"
+                class="token plain-text"
               />
             </div>
             <div
@@ -1090,7 +1075,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
               style="color: rgb(248, 248, 242);"
             >
               <span
-                class="token plain"
+                class="token plain-text"
               >
                   
               </span>
@@ -1113,7 +1098,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
                 &gt;
               </span>
               <span
-                class="token plain"
+                class="token plain-text"
               />
             </div>
             <div
@@ -1121,7 +1106,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
               style="color: rgb(248, 248, 242);"
             >
               <span
-                class="token plain"
+                class="token plain-text"
               />
               <span
                 class="token tag punctuation"
