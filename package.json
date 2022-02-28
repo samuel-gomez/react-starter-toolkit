@@ -54,7 +54,7 @@
     "react-app-polyfill": "2.0.0",
     "react-dom": "17.0.2",
     "react-github-login": "1.0.3",
-    "react-google-login": "5.1.21",
+    "react-google-login": "5.2.2",
     "react-live": "2.4.1",
     "react-router-dom": "5.2.0",
     "react-scripts": "4.0.3",
