@@ -62,8 +62,8 @@
     "intl": "1.2.5"
   },
   "devDependencies": {
-    "@commitlint/cli": "9.1.2",
-    "@commitlint/config-conventional": "10.0.0",
+    "@commitlint/cli": "16.2.1",
+    "@commitlint/config-conventional": "16.2.1",
     "commitizen": "4.2.4",
     "cross-env": "7.0.3",
     "cz-conventional-changelog": "3.3.0",
