@@ -30,18 +30,64 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
         class="af-livecode"
       >
         <div
-          style="font-size: 12px;"
+          code="
+<>
+  <Button type=\\"submit\\" onClick={openModalConfirm}>
+    <span className=\\"af-btn__text\\">Click me to launch modal</span>
+  </Button>
+  <Modal isOpen={setIsOpen()} onOutsideTap={onCancel} classModifier={classModifier}>
+    <ModalCommonHeader onCancel={onCancel} title=\\"Validation des informations générales\\" />
+    <ModalCommonBody>
+      <Alert classModifier=\\"info\\" icon=\\"info-sign\\" title=\\"Vous allez créer un nouvel élément.\\" />
+      <p>Confirmez-vous vouloir valider avec les informations suivantes ?</p>      
+    </ModalCommonBody>
+    <ModalCommonFooter cancelLabel=\\"Annuler\\" onCancel={onCancel} onSubmit={onCancel} confirmLabel=\\"Valider\\" confirmClassModifier=\\"\\" />
+  </Modal>
+</>
+"
+          language="jsx"
+          style="position: relative; text-align: left; box-sizing: border-box; padding: 0px; overflow: hidden; white-space: pre; font-family: monospace; color: rgb(248, 248, 242); background-color: rgb(40, 42, 54); font-size: 12px;"
         >
+          <textarea
+            autocapitalize="off"
+            autocomplete="off"
+            autocorrect="off"
+            class="npm__react-simple-code-editor__textarea"
+            data-gramm="false"
+            spellcheck="false"
+            style="margin: 0px; border: 0px; background: none; box-sizing: inherit; display: inherit; font-family: inherit; font-style: inherit; font-variant-ligatures: inherit; font-weight: inherit; letter-spacing: inherit; line-height: inherit; tab-size: inherit; text-indent: inherit; text-rendering: inherit; text-transform: inherit; white-space: pre-wrap; word-break: keep-all; overflow-wrap: break-word; position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; resize: none; overflow: hidden; padding: 10px 10px 10px 10px;"
+          >
+            
+&lt;&gt;
+  &lt;Button type="submit" onClick={openModalConfirm}&gt;
+    &lt;span className="af-btn__text"&gt;Click me to launch modal&lt;/span&gt;
+  &lt;/Button&gt;
+  &lt;Modal isOpen={setIsOpen()} onOutsideTap={onCancel} classModifier={classModifier}&gt;
+    &lt;ModalCommonHeader onCancel={onCancel} title="Validation des informations générales" /&gt;
+    &lt;ModalCommonBody&gt;
+      &lt;Alert classModifier="info" icon="info-sign" title="Vous allez créer un nouvel élément." /&gt;
+      &lt;p&gt;Confirmez-vous vouloir valider avec les informations suivantes ?&lt;/p&gt;      
+    &lt;/ModalCommonBody&gt;
+    &lt;ModalCommonFooter cancelLabel="Annuler" onCancel={onCancel} onSubmit={onCancel} confirmLabel="Valider" confirmClassModifier="" /&gt;
+  &lt;/Modal&gt;
+&lt;/&gt;
+
+          </textarea>
           <pre
-            class="prism-code language-jsx"
-            style="margin: 0px; outline: none; padding: 10px; font-family: inherit; white-space: pre-wrap; tab-size: 2;"
+            aria-hidden="true"
+            style="margin: 0px; border: 0px; background: none; box-sizing: inherit; display: inherit; font-family: inherit; font-style: inherit; font-variant-ligatures: inherit; font-weight: inherit; letter-spacing: inherit; line-height: inherit; tab-size: inherit; text-indent: inherit; text-rendering: inherit; text-transform: inherit; white-space: pre-wrap; word-break: keep-all; overflow-wrap: break-word; position: relative; pointer-events: none; padding: 10px 10px 10px 10px;"
           >
             <div
               class="token-line"
               style="color: rgb(248, 248, 242);"
             >
-              
+              <span
+                class="token plain"
+                style="display: inline-block;"
+              >
+                
 
+              </span>
             </div>
             <div
               class="token-line"
@@ -65,8 +111,6 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
               <span
                 class="token plain-text"
               />
-              
-
             </div>
             <div
               class="token-line"
@@ -170,8 +214,6 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
               <span
                 class="token plain-text"
               />
-              
-
             </div>
             <div
               class="token-line"
@@ -262,8 +304,6 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
               <span
                 class="token plain-text"
               />
-              
-
             </div>
             <div
               class="token-line"
@@ -295,8 +335,6 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
               <span
                 class="token plain-text"
               />
-              
-
             </div>
             <div
               class="token-line"
@@ -448,8 +486,6 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
               <span
                 class="token plain-text"
               />
-              
-
             </div>
             <div
               class="token-line"
@@ -559,8 +595,6 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
               <span
                 class="token plain-text"
               />
-              
-
             </div>
             <div
               class="token-line"
@@ -592,8 +626,6 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
               <span
                 class="token plain-text"
               />
-              
-
             </div>
             <div
               class="token-line"
@@ -739,8 +771,6 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
               <span
                 class="token plain-text"
               />
-              
-
             </div>
             <div
               class="token-line"
@@ -797,8 +827,6 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
               >
                       
               </span>
-              
-
             </div>
             <div
               class="token-line"
@@ -830,8 +858,6 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
               <span
                 class="token plain-text"
               />
-              
-
             </div>
             <div
               class="token-line"
@@ -1043,8 +1069,6 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
               <span
                 class="token plain-text"
               />
-              
-
             </div>
             <div
               class="token-line"
@@ -1076,8 +1100,6 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
               <span
                 class="token plain-text"
               />
-              
-
             </div>
             <div
               class="token-line"
@@ -1101,23 +1123,71 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
               <span
                 class="token plain"
               />
-              
-
             </div>
             <div
               class="token-line"
               style="color: rgb(248, 248, 242);"
             >
-              
+              <span
+                class="token plain"
+                style="display: inline-block;"
+              >
+                
 
+              </span>
             </div>
           </pre>
+          <style
+            type="text/css"
+          >
+            
+/**
+ * Reset the text fill color so that placeholder is visible
+ */
+.npm__react-simple-code-editor__textarea:empty {
+  -webkit-text-fill-color: inherit !important;
+}
+
+/**
+ * Hack to apply on some CSS on IE10 and IE11
+ */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /**
+    * IE doesn't support '-webkit-text-fill-color'
+    * So we use 'color: transparent' to make the text transparent on IE
+    * Unlike other browsers, it doesn't affect caret color in IE
+    */
+  .npm__react-simple-code-editor__textarea {
+    color: transparent !important;
+  }
+
+  .npm__react-simple-code-editor__textarea::selection {
+    background-color: #accef7 !important;
+    color: transparent !important;
+  }
+}
+
+          </style>
         </div>
         <div
           style="padding: 2rem; border: 3px solid #ccc;"
-        />
+        >
+          <button
+            class="btn af-btn"
+            type="submit"
+          >
+            <span
+              class="af-btn__text"
+            >
+              Click me to launch modal
+            </span>
+          </button>
+        </div>
       </article>
     </div>
   </div>
+  <div
+    class="ReactModalPortal"
+  />
 </body>
 `;
