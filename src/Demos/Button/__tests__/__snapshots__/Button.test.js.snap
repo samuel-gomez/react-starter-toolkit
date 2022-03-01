@@ -14,43 +14,18 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
       class="af-livecode"
     >
       <div
-        code="
-  <Button type=\\"submit\\" onClick={e => console.log(e)} id=\\"btn-classic\\">
-    <span className=\\"af-btn__text\\">Classic button</span>
-  </Button>
-"
-        language="jsx"
-        style="position: relative; text-align: left; box-sizing: border-box; padding: 0px; overflow: hidden; white-space: pre; font-family: monospace; color: rgb(248, 248, 242); background-color: rgb(40, 42, 54); font-size: 12px;"
+        style="font-size: 12px;"
       >
-        <textarea
-          autocapitalize="off"
-          autocomplete="off"
-          autocorrect="off"
-          class="npm__react-simple-code-editor__textarea"
-          data-gramm="false"
-          spellcheck="false"
-          style="margin: 0px; border: 0px; background: none; box-sizing: inherit; display: inherit; font-family: inherit; font-style: inherit; font-variant-ligatures: inherit; font-weight: inherit; letter-spacing: inherit; line-height: inherit; tab-size: inherit; text-indent: inherit; text-rendering: inherit; text-transform: inherit; white-space: pre-wrap; word-break: keep-all; overflow-wrap: break-word; position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; resize: none; overflow: hidden; padding: 10px 10px 10px 10px;"
-        >
-            &lt;Button type="submit" onClick={e =&gt; console.log(e)} id="btn-classic"&gt;
-    &lt;span className="af-btn__text"&gt;Classic button&lt;/span&gt;
-  &lt;/Button&gt;
-
-        </textarea>
         <pre
-          aria-hidden="true"
-          style="margin: 0px; border: 0px; background: none; box-sizing: inherit; display: inherit; font-family: inherit; font-style: inherit; font-variant-ligatures: inherit; font-weight: inherit; letter-spacing: inherit; line-height: inherit; tab-size: inherit; text-indent: inherit; text-rendering: inherit; text-transform: inherit; white-space: pre-wrap; word-break: keep-all; overflow-wrap: break-word; position: relative; pointer-events: none; padding: 10px 10px 10px 10px;"
+          class="prism-code language-jsx"
+          style="margin: 0px; outline: none; padding: 10px; font-family: inherit; white-space: pre-wrap; tab-size: 2;"
         >
           <div
             class="token-line"
             style="color: rgb(248, 248, 242);"
           >
-            <span
-              class="token plain"
-              style="display: inline-block;"
-            >
-              
+            
 
-            </span>
           </div>
           <div
             class="token-line"
@@ -238,6 +213,8 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="token plain-text"
             />
+            
+
           </div>
           <div
             class="token-line"
@@ -328,6 +305,8 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="token plain-text"
             />
+            
+
           </div>
           <div
             class="token-line"
@@ -359,109 +338,38 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="token plain"
             />
+            
+
           </div>
           <div
             class="token-line"
             style="color: rgb(248, 248, 242);"
           >
-            <span
-              class="token plain"
-              style="display: inline-block;"
-            >
-              
+            
 
-            </span>
           </div>
         </pre>
-        <style
-          type="text/css"
-        >
-          
-/**
- * Reset the text fill color so that placeholder is visible
- */
-.npm__react-simple-code-editor__textarea:empty {
-  -webkit-text-fill-color: inherit !important;
-}
-
-/**
- * Hack to apply on some CSS on IE10 and IE11
- */
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  /**
-    * IE doesn't support '-webkit-text-fill-color'
-    * So we use 'color: transparent' to make the text transparent on IE
-    * Unlike other browsers, it doesn't affect caret color in IE
-    */
-  .npm__react-simple-code-editor__textarea {
-    color: transparent !important;
-  }
-
-  .npm__react-simple-code-editor__textarea::selection {
-    background-color: #accef7 !important;
-    color: transparent !important;
-  }
-}
-
-        </style>
       </div>
       <div
         style="padding: 2rem; border: 3px solid #ccc;"
-      >
-        <button
-          class="btn af-btn"
-          id="btn-classic"
-          type="submit"
-        >
-          <span
-            class="af-btn__text"
-          >
-            Classic button
-          </span>
-        </button>
-      </div>
+      />
     </article>
     <article
       class="af-livecode"
     >
       <div
-        code="
-  <Button classModifier=\\"reverse\\" type=\\"submit\\" onClick={e => console.log(e)} id=\\"btn-reverse\\">
-    <span className=\\"af-btn__text\\">Reversed button</span>
-  </Button>
-"
-        language="jsx"
-        style="position: relative; text-align: left; box-sizing: border-box; padding: 0px; overflow: hidden; white-space: pre; font-family: monospace; color: rgb(248, 248, 242); background-color: rgb(40, 42, 54); font-size: 12px;"
+        style="font-size: 12px;"
       >
-        <textarea
-          autocapitalize="off"
-          autocomplete="off"
-          autocorrect="off"
-          class="npm__react-simple-code-editor__textarea"
-          data-gramm="false"
-          spellcheck="false"
-          style="margin: 0px; border: 0px; background: none; box-sizing: inherit; display: inherit; font-family: inherit; font-style: inherit; font-variant-ligatures: inherit; font-weight: inherit; letter-spacing: inherit; line-height: inherit; tab-size: inherit; text-indent: inherit; text-rendering: inherit; text-transform: inherit; white-space: pre-wrap; word-break: keep-all; overflow-wrap: break-word; position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; resize: none; overflow: hidden; padding: 10px 10px 10px 10px;"
-        >
-            &lt;Button classModifier="reverse" type="submit" onClick={e =&gt; console.log(e)} id="btn-reverse"&gt;
-    &lt;span className="af-btn__text"&gt;Reversed button&lt;/span&gt;
-  &lt;/Button&gt;
-
-        </textarea>
         <pre
-          aria-hidden="true"
-          style="margin: 0px; border: 0px; background: none; box-sizing: inherit; display: inherit; font-family: inherit; font-style: inherit; font-variant-ligatures: inherit; font-weight: inherit; letter-spacing: inherit; line-height: inherit; tab-size: inherit; text-indent: inherit; text-rendering: inherit; text-transform: inherit; white-space: pre-wrap; word-break: keep-all; overflow-wrap: break-word; position: relative; pointer-events: none; padding: 10px 10px 10px 10px;"
+          class="prism-code language-jsx"
+          style="margin: 0px; outline: none; padding: 10px; font-family: inherit; white-space: pre-wrap; tab-size: 2;"
         >
           <div
             class="token-line"
             style="color: rgb(248, 248, 242);"
           >
-            <span
-              class="token plain"
-              style="display: inline-block;"
-            >
-              
+            
 
-            </span>
           </div>
           <div
             class="token-line"
@@ -685,6 +593,8 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="token plain-text"
             />
+            
+
           </div>
           <div
             class="token-line"
@@ -775,6 +685,8 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="token plain-text"
             />
+            
+
           </div>
           <div
             class="token-line"
@@ -806,109 +718,38 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="token plain"
             />
+            
+
           </div>
           <div
             class="token-line"
             style="color: rgb(248, 248, 242);"
           >
-            <span
-              class="token plain"
-              style="display: inline-block;"
-            >
-              
+            
 
-            </span>
           </div>
         </pre>
-        <style
-          type="text/css"
-        >
-          
-/**
- * Reset the text fill color so that placeholder is visible
- */
-.npm__react-simple-code-editor__textarea:empty {
-  -webkit-text-fill-color: inherit !important;
-}
-
-/**
- * Hack to apply on some CSS on IE10 and IE11
- */
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  /**
-    * IE doesn't support '-webkit-text-fill-color'
-    * So we use 'color: transparent' to make the text transparent on IE
-    * Unlike other browsers, it doesn't affect caret color in IE
-    */
-  .npm__react-simple-code-editor__textarea {
-    color: transparent !important;
-  }
-
-  .npm__react-simple-code-editor__textarea::selection {
-    background-color: #accef7 !important;
-    color: transparent !important;
-  }
-}
-
-        </style>
       </div>
       <div
         style="padding: 2rem; border: 3px solid #ccc;"
-      >
-        <button
-          class="btn af-btn af-btn--reverse"
-          id="btn-reverse"
-          type="submit"
-        >
-          <span
-            class="af-btn__text"
-          >
-            Reversed button
-          </span>
-        </button>
-      </div>
+      />
     </article>
     <article
       class="af-livecode"
     >
       <div
-        code="
-  <Button disabled=\\"disabled\\" classModifier=\\"disabled\\" type=\\"submit\\" onClick={e => console.log(e)} id=\\"btn-disabled\\">
-    <span className=\\"af-btn__text\\">Disabled button</span>
-  </Button>
-"
-        language="jsx"
-        style="position: relative; text-align: left; box-sizing: border-box; padding: 0px; overflow: hidden; white-space: pre; font-family: monospace; color: rgb(248, 248, 242); background-color: rgb(40, 42, 54); font-size: 12px;"
+        style="font-size: 12px;"
       >
-        <textarea
-          autocapitalize="off"
-          autocomplete="off"
-          autocorrect="off"
-          class="npm__react-simple-code-editor__textarea"
-          data-gramm="false"
-          spellcheck="false"
-          style="margin: 0px; border: 0px; background: none; box-sizing: inherit; display: inherit; font-family: inherit; font-style: inherit; font-variant-ligatures: inherit; font-weight: inherit; letter-spacing: inherit; line-height: inherit; tab-size: inherit; text-indent: inherit; text-rendering: inherit; text-transform: inherit; white-space: pre-wrap; word-break: keep-all; overflow-wrap: break-word; position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; resize: none; overflow: hidden; padding: 10px 10px 10px 10px;"
-        >
-            &lt;Button disabled="disabled" classModifier="disabled" type="submit" onClick={e =&gt; console.log(e)} id="btn-disabled"&gt;
-    &lt;span className="af-btn__text"&gt;Disabled button&lt;/span&gt;
-  &lt;/Button&gt;
-
-        </textarea>
         <pre
-          aria-hidden="true"
-          style="margin: 0px; border: 0px; background: none; box-sizing: inherit; display: inherit; font-family: inherit; font-style: inherit; font-variant-ligatures: inherit; font-weight: inherit; letter-spacing: inherit; line-height: inherit; tab-size: inherit; text-indent: inherit; text-rendering: inherit; text-transform: inherit; white-space: pre-wrap; word-break: keep-all; overflow-wrap: break-word; position: relative; pointer-events: none; padding: 10px 10px 10px 10px;"
+          class="prism-code language-jsx"
+          style="margin: 0px; outline: none; padding: 10px; font-family: inherit; white-space: pre-wrap; tab-size: 2;"
         >
           <div
             class="token-line"
             style="color: rgb(248, 248, 242);"
           >
-            <span
-              class="token plain"
-              style="display: inline-block;"
-            >
-              
+            
 
-            </span>
           </div>
           <div
             class="token-line"
@@ -1168,6 +1009,8 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="token plain-text"
             />
+            
+
           </div>
           <div
             class="token-line"
@@ -1258,6 +1101,8 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="token plain-text"
             />
+            
+
           </div>
           <div
             class="token-line"
@@ -1289,110 +1134,38 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="token plain"
             />
+            
+
           </div>
           <div
             class="token-line"
             style="color: rgb(248, 248, 242);"
           >
-            <span
-              class="token plain"
-              style="display: inline-block;"
-            >
-              
+            
 
-            </span>
           </div>
         </pre>
-        <style
-          type="text/css"
-        >
-          
-/**
- * Reset the text fill color so that placeholder is visible
- */
-.npm__react-simple-code-editor__textarea:empty {
-  -webkit-text-fill-color: inherit !important;
-}
-
-/**
- * Hack to apply on some CSS on IE10 and IE11
- */
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  /**
-    * IE doesn't support '-webkit-text-fill-color'
-    * So we use 'color: transparent' to make the text transparent on IE
-    * Unlike other browsers, it doesn't affect caret color in IE
-    */
-  .npm__react-simple-code-editor__textarea {
-    color: transparent !important;
-  }
-
-  .npm__react-simple-code-editor__textarea::selection {
-    background-color: #accef7 !important;
-    color: transparent !important;
-  }
-}
-
-        </style>
       </div>
       <div
         style="padding: 2rem; border: 3px solid #ccc;"
-      >
-        <button
-          class="btn af-btn af-btn--disabled"
-          disabled=""
-          id="btn-disabled"
-          type="submit"
-        >
-          <span
-            class="af-btn__text"
-          >
-            Disabled button
-          </span>
-        </button>
-      </div>
+      />
     </article>
     <article
       class="af-livecode"
     >
       <div
-        code="
-  <Button classModifier=\\"success\\" type=\\"submit\\" onClick={e => console.log(e)} id=\\"btn-success\\">
-    <span className=\\"af-btn__text\\">Success button</span>
-  </Button>
-"
-        language="jsx"
-        style="position: relative; text-align: left; box-sizing: border-box; padding: 0px; overflow: hidden; white-space: pre; font-family: monospace; color: rgb(248, 248, 242); background-color: rgb(40, 42, 54); font-size: 12px;"
+        style="font-size: 12px;"
       >
-        <textarea
-          autocapitalize="off"
-          autocomplete="off"
-          autocorrect="off"
-          class="npm__react-simple-code-editor__textarea"
-          data-gramm="false"
-          spellcheck="false"
-          style="margin: 0px; border: 0px; background: none; box-sizing: inherit; display: inherit; font-family: inherit; font-style: inherit; font-variant-ligatures: inherit; font-weight: inherit; letter-spacing: inherit; line-height: inherit; tab-size: inherit; text-indent: inherit; text-rendering: inherit; text-transform: inherit; white-space: pre-wrap; word-break: keep-all; overflow-wrap: break-word; position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; resize: none; overflow: hidden; padding: 10px 10px 10px 10px;"
-        >
-            &lt;Button classModifier="success" type="submit" onClick={e =&gt; console.log(e)} id="btn-success"&gt;
-    &lt;span className="af-btn__text"&gt;Success button&lt;/span&gt;
-  &lt;/Button&gt;
-
-        </textarea>
         <pre
-          aria-hidden="true"
-          style="margin: 0px; border: 0px; background: none; box-sizing: inherit; display: inherit; font-family: inherit; font-style: inherit; font-variant-ligatures: inherit; font-weight: inherit; letter-spacing: inherit; line-height: inherit; tab-size: inherit; text-indent: inherit; text-rendering: inherit; text-transform: inherit; white-space: pre-wrap; word-break: keep-all; overflow-wrap: break-word; position: relative; pointer-events: none; padding: 10px 10px 10px 10px;"
+          class="prism-code language-jsx"
+          style="margin: 0px; outline: none; padding: 10px; font-family: inherit; white-space: pre-wrap; tab-size: 2;"
         >
           <div
             class="token-line"
             style="color: rgb(248, 248, 242);"
           >
-            <span
-              class="token plain"
-              style="display: inline-block;"
-            >
-              
+            
 
-            </span>
           </div>
           <div
             class="token-line"
@@ -1616,6 +1389,8 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="token plain-text"
             />
+            
+
           </div>
           <div
             class="token-line"
@@ -1706,6 +1481,8 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="token plain-text"
             />
+            
+
           </div>
           <div
             class="token-line"
@@ -1737,109 +1514,38 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="token plain"
             />
+            
+
           </div>
           <div
             class="token-line"
             style="color: rgb(248, 248, 242);"
           >
-            <span
-              class="token plain"
-              style="display: inline-block;"
-            >
-              
+            
 
-            </span>
           </div>
         </pre>
-        <style
-          type="text/css"
-        >
-          
-/**
- * Reset the text fill color so that placeholder is visible
- */
-.npm__react-simple-code-editor__textarea:empty {
-  -webkit-text-fill-color: inherit !important;
-}
-
-/**
- * Hack to apply on some CSS on IE10 and IE11
- */
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  /**
-    * IE doesn't support '-webkit-text-fill-color'
-    * So we use 'color: transparent' to make the text transparent on IE
-    * Unlike other browsers, it doesn't affect caret color in IE
-    */
-  .npm__react-simple-code-editor__textarea {
-    color: transparent !important;
-  }
-
-  .npm__react-simple-code-editor__textarea::selection {
-    background-color: #accef7 !important;
-    color: transparent !important;
-  }
-}
-
-        </style>
       </div>
       <div
         style="padding: 2rem; border: 3px solid #ccc;"
-      >
-        <button
-          class="btn af-btn af-btn--success"
-          id="btn-success"
-          type="submit"
-        >
-          <span
-            class="af-btn__text"
-          >
-            Success button
-          </span>
-        </button>
-      </div>
+      />
     </article>
     <article
       class="af-livecode"
     >
       <div
-        code="
-  <Button classModifier=\\"danger\\" type=\\"submit\\" onClick={e => console.log(e)} id=\\"btn-danger\\">
-    <span className=\\"af-btn__text\\">Danger button</span>
-  </Button>
-"
-        language="jsx"
-        style="position: relative; text-align: left; box-sizing: border-box; padding: 0px; overflow: hidden; white-space: pre; font-family: monospace; color: rgb(248, 248, 242); background-color: rgb(40, 42, 54); font-size: 12px;"
+        style="font-size: 12px;"
       >
-        <textarea
-          autocapitalize="off"
-          autocomplete="off"
-          autocorrect="off"
-          class="npm__react-simple-code-editor__textarea"
-          data-gramm="false"
-          spellcheck="false"
-          style="margin: 0px; border: 0px; background: none; box-sizing: inherit; display: inherit; font-family: inherit; font-style: inherit; font-variant-ligatures: inherit; font-weight: inherit; letter-spacing: inherit; line-height: inherit; tab-size: inherit; text-indent: inherit; text-rendering: inherit; text-transform: inherit; white-space: pre-wrap; word-break: keep-all; overflow-wrap: break-word; position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; resize: none; overflow: hidden; padding: 10px 10px 10px 10px;"
-        >
-            &lt;Button classModifier="danger" type="submit" onClick={e =&gt; console.log(e)} id="btn-danger"&gt;
-    &lt;span className="af-btn__text"&gt;Danger button&lt;/span&gt;
-  &lt;/Button&gt;
-
-        </textarea>
         <pre
-          aria-hidden="true"
-          style="margin: 0px; border: 0px; background: none; box-sizing: inherit; display: inherit; font-family: inherit; font-style: inherit; font-variant-ligatures: inherit; font-weight: inherit; letter-spacing: inherit; line-height: inherit; tab-size: inherit; text-indent: inherit; text-rendering: inherit; text-transform: inherit; white-space: pre-wrap; word-break: keep-all; overflow-wrap: break-word; position: relative; pointer-events: none; padding: 10px 10px 10px 10px;"
+          class="prism-code language-jsx"
+          style="margin: 0px; outline: none; padding: 10px; font-family: inherit; white-space: pre-wrap; tab-size: 2;"
         >
           <div
             class="token-line"
             style="color: rgb(248, 248, 242);"
           >
-            <span
-              class="token plain"
-              style="display: inline-block;"
-            >
-              
+            
 
-            </span>
           </div>
           <div
             class="token-line"
@@ -2063,6 +1769,8 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="token plain-text"
             />
+            
+
           </div>
           <div
             class="token-line"
@@ -2153,6 +1861,8 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="token plain-text"
             />
+            
+
           </div>
           <div
             class="token-line"
@@ -2184,109 +1894,38 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="token plain"
             />
+            
+
           </div>
           <div
             class="token-line"
             style="color: rgb(248, 248, 242);"
           >
-            <span
-              class="token plain"
-              style="display: inline-block;"
-            >
-              
+            
 
-            </span>
           </div>
         </pre>
-        <style
-          type="text/css"
-        >
-          
-/**
- * Reset the text fill color so that placeholder is visible
- */
-.npm__react-simple-code-editor__textarea:empty {
-  -webkit-text-fill-color: inherit !important;
-}
-
-/**
- * Hack to apply on some CSS on IE10 and IE11
- */
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  /**
-    * IE doesn't support '-webkit-text-fill-color'
-    * So we use 'color: transparent' to make the text transparent on IE
-    * Unlike other browsers, it doesn't affect caret color in IE
-    */
-  .npm__react-simple-code-editor__textarea {
-    color: transparent !important;
-  }
-
-  .npm__react-simple-code-editor__textarea::selection {
-    background-color: #accef7 !important;
-    color: transparent !important;
-  }
-}
-
-        </style>
       </div>
       <div
         style="padding: 2rem; border: 3px solid #ccc;"
-      >
-        <button
-          class="btn af-btn af-btn--danger"
-          id="btn-danger"
-          type="submit"
-        >
-          <span
-            class="af-btn__text"
-          >
-            Danger button
-          </span>
-        </button>
-      </div>
+      />
     </article>
     <article
       class="af-livecode"
     >
       <div
-        code="
-  <Button classModifier=\\"small\\" type=\\"submit\\" onClick={e => console.log(e)} id=\\"btn-small\\">
-    <span className=\\"af-btn__text\\">OK</span>
-  </Button>
-"
-        language="jsx"
-        style="position: relative; text-align: left; box-sizing: border-box; padding: 0px; overflow: hidden; white-space: pre; font-family: monospace; color: rgb(248, 248, 242); background-color: rgb(40, 42, 54); font-size: 12px;"
+        style="font-size: 12px;"
       >
-        <textarea
-          autocapitalize="off"
-          autocomplete="off"
-          autocorrect="off"
-          class="npm__react-simple-code-editor__textarea"
-          data-gramm="false"
-          spellcheck="false"
-          style="margin: 0px; border: 0px; background: none; box-sizing: inherit; display: inherit; font-family: inherit; font-style: inherit; font-variant-ligatures: inherit; font-weight: inherit; letter-spacing: inherit; line-height: inherit; tab-size: inherit; text-indent: inherit; text-rendering: inherit; text-transform: inherit; white-space: pre-wrap; word-break: keep-all; overflow-wrap: break-word; position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; resize: none; overflow: hidden; padding: 10px 10px 10px 10px;"
-        >
-            &lt;Button classModifier="small" type="submit" onClick={e =&gt; console.log(e)} id="btn-small"&gt;
-    &lt;span className="af-btn__text"&gt;OK&lt;/span&gt;
-  &lt;/Button&gt;
-
-        </textarea>
         <pre
-          aria-hidden="true"
-          style="margin: 0px; border: 0px; background: none; box-sizing: inherit; display: inherit; font-family: inherit; font-style: inherit; font-variant-ligatures: inherit; font-weight: inherit; letter-spacing: inherit; line-height: inherit; tab-size: inherit; text-indent: inherit; text-rendering: inherit; text-transform: inherit; white-space: pre-wrap; word-break: keep-all; overflow-wrap: break-word; position: relative; pointer-events: none; padding: 10px 10px 10px 10px;"
+          class="prism-code language-jsx"
+          style="margin: 0px; outline: none; padding: 10px; font-family: inherit; white-space: pre-wrap; tab-size: 2;"
         >
           <div
             class="token-line"
             style="color: rgb(248, 248, 242);"
           >
-            <span
-              class="token plain"
-              style="display: inline-block;"
-            >
-              
+            
 
-            </span>
           </div>
           <div
             class="token-line"
@@ -2510,6 +2149,8 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="token plain-text"
             />
+            
+
           </div>
           <div
             class="token-line"
@@ -2600,6 +2241,8 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="token plain-text"
             />
+            
+
           </div>
           <div
             class="token-line"
@@ -2631,111 +2274,38 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="token plain"
             />
+            
+
           </div>
           <div
             class="token-line"
             style="color: rgb(248, 248, 242);"
           >
-            <span
-              class="token plain"
-              style="display: inline-block;"
-            >
-              
+            
 
-            </span>
           </div>
         </pre>
-        <style
-          type="text/css"
-        >
-          
-/**
- * Reset the text fill color so that placeholder is visible
- */
-.npm__react-simple-code-editor__textarea:empty {
-  -webkit-text-fill-color: inherit !important;
-}
-
-/**
- * Hack to apply on some CSS on IE10 and IE11
- */
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  /**
-    * IE doesn't support '-webkit-text-fill-color'
-    * So we use 'color: transparent' to make the text transparent on IE
-    * Unlike other browsers, it doesn't affect caret color in IE
-    */
-  .npm__react-simple-code-editor__textarea {
-    color: transparent !important;
-  }
-
-  .npm__react-simple-code-editor__textarea::selection {
-    background-color: #accef7 !important;
-    color: transparent !important;
-  }
-}
-
-        </style>
       </div>
       <div
         style="padding: 2rem; border: 3px solid #ccc;"
-      >
-        <button
-          class="btn af-btn af-btn--small"
-          id="btn-small"
-          type="submit"
-        >
-          <span
-            class="af-btn__text"
-          >
-            OK
-          </span>
-        </button>
-      </div>
+      />
     </article>
     <article
       class="af-livecode"
     >
       <div
-        code="
-  <Button classModifier=\\"hasiconRight\\" type=\\"submit\\" onClick={e => console.log(e)} id=\\"btn-reverse-with-right-icon\\">
-    <span className=\\"af-btn__text\\">With right icon button</span>
-    <i className=\\"glyphicon glyphicon-arrowthin-right\\" />
-  </Button>
-"
-        language="jsx"
-        style="position: relative; text-align: left; box-sizing: border-box; padding: 0px; overflow: hidden; white-space: pre; font-family: monospace; color: rgb(248, 248, 242); background-color: rgb(40, 42, 54); font-size: 12px;"
+        style="font-size: 12px;"
       >
-        <textarea
-          autocapitalize="off"
-          autocomplete="off"
-          autocorrect="off"
-          class="npm__react-simple-code-editor__textarea"
-          data-gramm="false"
-          spellcheck="false"
-          style="margin: 0px; border: 0px; background: none; box-sizing: inherit; display: inherit; font-family: inherit; font-style: inherit; font-variant-ligatures: inherit; font-weight: inherit; letter-spacing: inherit; line-height: inherit; tab-size: inherit; text-indent: inherit; text-rendering: inherit; text-transform: inherit; white-space: pre-wrap; word-break: keep-all; overflow-wrap: break-word; position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; resize: none; overflow: hidden; padding: 10px 10px 10px 10px;"
-        >
-            &lt;Button classModifier="hasiconRight" type="submit" onClick={e =&gt; console.log(e)} id="btn-reverse-with-right-icon"&gt;
-    &lt;span className="af-btn__text"&gt;With right icon button&lt;/span&gt;
-    &lt;i className="glyphicon glyphicon-arrowthin-right" /&gt;
-  &lt;/Button&gt;
-
-        </textarea>
         <pre
-          aria-hidden="true"
-          style="margin: 0px; border: 0px; background: none; box-sizing: inherit; display: inherit; font-family: inherit; font-style: inherit; font-variant-ligatures: inherit; font-weight: inherit; letter-spacing: inherit; line-height: inherit; tab-size: inherit; text-indent: inherit; text-rendering: inherit; text-transform: inherit; white-space: pre-wrap; word-break: keep-all; overflow-wrap: break-word; position: relative; pointer-events: none; padding: 10px 10px 10px 10px;"
+          class="prism-code language-jsx"
+          style="margin: 0px; outline: none; padding: 10px; font-family: inherit; white-space: pre-wrap; tab-size: 2;"
         >
           <div
             class="token-line"
             style="color: rgb(248, 248, 242);"
           >
-            <span
-              class="token plain"
-              style="display: inline-block;"
-            >
-              
+            
 
-            </span>
           </div>
           <div
             class="token-line"
@@ -2959,6 +2529,8 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="token plain-text"
             />
+            
+
           </div>
           <div
             class="token-line"
@@ -3049,6 +2621,8 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="token plain-text"
             />
+            
+
           </div>
           <div
             class="token-line"
@@ -3122,6 +2696,8 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="token plain-text"
             />
+            
+
           </div>
           <div
             class="token-line"
@@ -3153,114 +2729,38 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="token plain"
             />
+            
+
           </div>
           <div
             class="token-line"
             style="color: rgb(248, 248, 242);"
           >
-            <span
-              class="token plain"
-              style="display: inline-block;"
-            >
-              
+            
 
-            </span>
           </div>
         </pre>
-        <style
-          type="text/css"
-        >
-          
-/**
- * Reset the text fill color so that placeholder is visible
- */
-.npm__react-simple-code-editor__textarea:empty {
-  -webkit-text-fill-color: inherit !important;
-}
-
-/**
- * Hack to apply on some CSS on IE10 and IE11
- */
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  /**
-    * IE doesn't support '-webkit-text-fill-color'
-    * So we use 'color: transparent' to make the text transparent on IE
-    * Unlike other browsers, it doesn't affect caret color in IE
-    */
-  .npm__react-simple-code-editor__textarea {
-    color: transparent !important;
-  }
-
-  .npm__react-simple-code-editor__textarea::selection {
-    background-color: #accef7 !important;
-    color: transparent !important;
-  }
-}
-
-        </style>
       </div>
       <div
         style="padding: 2rem; border: 3px solid #ccc;"
-      >
-        <button
-          class="btn af-btn af-btn--hasiconRight"
-          id="btn-reverse-with-right-icon"
-          type="submit"
-        >
-          <span
-            class="af-btn__text"
-          >
-            With right icon button
-          </span>
-          <i
-            class="glyphicon glyphicon-arrowthin-right"
-          />
-        </button>
-      </div>
+      />
     </article>
     <article
       class="af-livecode"
     >
       <div
-        code="
-  <Button classModifier=\\"hasiconLeft\\" type=\\"submit\\" onClick={e => console.log(e)} id=\\"btn-reverse-with-left-icon\\">
-    <i className=\\"glyphicon glyphicon-arrowthin-left\\" />
-    <span className=\\"af-btn__text\\">With left icon button</span>
-  </Button>
-"
-        language="jsx"
-        style="position: relative; text-align: left; box-sizing: border-box; padding: 0px; overflow: hidden; white-space: pre; font-family: monospace; color: rgb(248, 248, 242); background-color: rgb(40, 42, 54); font-size: 12px;"
+        style="font-size: 12px;"
       >
-        <textarea
-          autocapitalize="off"
-          autocomplete="off"
-          autocorrect="off"
-          class="npm__react-simple-code-editor__textarea"
-          data-gramm="false"
-          spellcheck="false"
-          style="margin: 0px; border: 0px; background: none; box-sizing: inherit; display: inherit; font-family: inherit; font-style: inherit; font-variant-ligatures: inherit; font-weight: inherit; letter-spacing: inherit; line-height: inherit; tab-size: inherit; text-indent: inherit; text-rendering: inherit; text-transform: inherit; white-space: pre-wrap; word-break: keep-all; overflow-wrap: break-word; position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; resize: none; overflow: hidden; padding: 10px 10px 10px 10px;"
-        >
-            &lt;Button classModifier="hasiconLeft" type="submit" onClick={e =&gt; console.log(e)} id="btn-reverse-with-left-icon"&gt;
-    &lt;i className="glyphicon glyphicon-arrowthin-left" /&gt;
-    &lt;span className="af-btn__text"&gt;With left icon button&lt;/span&gt;
-  &lt;/Button&gt;
-
-        </textarea>
         <pre
-          aria-hidden="true"
-          style="margin: 0px; border: 0px; background: none; box-sizing: inherit; display: inherit; font-family: inherit; font-style: inherit; font-variant-ligatures: inherit; font-weight: inherit; letter-spacing: inherit; line-height: inherit; tab-size: inherit; text-indent: inherit; text-rendering: inherit; text-transform: inherit; white-space: pre-wrap; word-break: keep-all; overflow-wrap: break-word; position: relative; pointer-events: none; padding: 10px 10px 10px 10px;"
+          class="prism-code language-jsx"
+          style="margin: 0px; outline: none; padding: 10px; font-family: inherit; white-space: pre-wrap; tab-size: 2;"
         >
           <div
             class="token-line"
             style="color: rgb(248, 248, 242);"
           >
-            <span
-              class="token plain"
-              style="display: inline-block;"
-            >
-              
+            
 
-            </span>
           </div>
           <div
             class="token-line"
@@ -3484,6 +2984,8 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="token plain-text"
             />
+            
+
           </div>
           <div
             class="token-line"
@@ -3557,6 +3059,8 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="token plain-text"
             />
+            
+
           </div>
           <div
             class="token-line"
@@ -3647,6 +3151,8 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="token plain-text"
             />
+            
+
           </div>
           <div
             class="token-line"
@@ -3678,112 +3184,38 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="token plain"
             />
+            
+
           </div>
           <div
             class="token-line"
             style="color: rgb(248, 248, 242);"
           >
-            <span
-              class="token plain"
-              style="display: inline-block;"
-            >
-              
+            
 
-            </span>
           </div>
         </pre>
-        <style
-          type="text/css"
-        >
-          
-/**
- * Reset the text fill color so that placeholder is visible
- */
-.npm__react-simple-code-editor__textarea:empty {
-  -webkit-text-fill-color: inherit !important;
-}
-
-/**
- * Hack to apply on some CSS on IE10 and IE11
- */
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  /**
-    * IE doesn't support '-webkit-text-fill-color'
-    * So we use 'color: transparent' to make the text transparent on IE
-    * Unlike other browsers, it doesn't affect caret color in IE
-    */
-  .npm__react-simple-code-editor__textarea {
-    color: transparent !important;
-  }
-
-  .npm__react-simple-code-editor__textarea::selection {
-    background-color: #accef7 !important;
-    color: transparent !important;
-  }
-}
-
-        </style>
       </div>
       <div
         style="padding: 2rem; border: 3px solid #ccc;"
-      >
-        <button
-          class="btn af-btn af-btn--hasiconLeft"
-          id="btn-reverse-with-left-icon"
-          type="submit"
-        >
-          <i
-            class="glyphicon glyphicon-arrowthin-left"
-          />
-          <span
-            class="af-btn__text"
-          >
-            With left icon button
-          </span>
-        </button>
-      </div>
+      />
     </article>
     <article
       class="af-livecode"
     >
       <div
-        code="
-  <Button className=\\"af-btn--circle\\" type=\\"submit\\" onClick={e => console.log(e)} id=\\"btn-circle\\">
-    <i className=\\"glyphicon glyphicon-floppy-disk\\" />
-  </Button>
-"
-        language="jsx"
-        style="position: relative; text-align: left; box-sizing: border-box; padding: 0px; overflow: hidden; white-space: pre; font-family: monospace; color: rgb(248, 248, 242); background-color: rgb(40, 42, 54); font-size: 12px;"
+        style="font-size: 12px;"
       >
-        <textarea
-          autocapitalize="off"
-          autocomplete="off"
-          autocorrect="off"
-          class="npm__react-simple-code-editor__textarea"
-          data-gramm="false"
-          spellcheck="false"
-          style="margin: 0px; border: 0px; background: none; box-sizing: inherit; display: inherit; font-family: inherit; font-style: inherit; font-variant-ligatures: inherit; font-weight: inherit; letter-spacing: inherit; line-height: inherit; tab-size: inherit; text-indent: inherit; text-rendering: inherit; text-transform: inherit; white-space: pre-wrap; word-break: keep-all; overflow-wrap: break-word; position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; resize: none; overflow: hidden; padding: 10px 10px 10px 10px;"
-        >
-            &lt;Button className="af-btn--circle" type="submit" onClick={e =&gt; console.log(e)} id="btn-circle"&gt;
-    &lt;i className="glyphicon glyphicon-floppy-disk" /&gt;
-  &lt;/Button&gt;
-
-        </textarea>
         <pre
-          aria-hidden="true"
-          style="margin: 0px; border: 0px; background: none; box-sizing: inherit; display: inherit; font-family: inherit; font-style: inherit; font-variant-ligatures: inherit; font-weight: inherit; letter-spacing: inherit; line-height: inherit; tab-size: inherit; text-indent: inherit; text-rendering: inherit; text-transform: inherit; white-space: pre-wrap; word-break: keep-all; overflow-wrap: break-word; position: relative; pointer-events: none; padding: 10px 10px 10px 10px;"
+          class="prism-code language-jsx"
+          style="margin: 0px; outline: none; padding: 10px; font-family: inherit; white-space: pre-wrap; tab-size: 2;"
         >
           <div
             class="token-line"
             style="color: rgb(248, 248, 242);"
           >
-            <span
-              class="token plain"
-              style="display: inline-block;"
-            >
-              
+            
 
-            </span>
           </div>
           <div
             class="token-line"
@@ -4007,6 +3439,8 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="token plain-text"
             />
+            
+
           </div>
           <div
             class="token-line"
@@ -4080,6 +3514,8 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="token plain-text"
             />
+            
+
           </div>
           <div
             class="token-line"
@@ -4111,65 +3547,21 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="token plain"
             />
+            
+
           </div>
           <div
             class="token-line"
             style="color: rgb(248, 248, 242);"
           >
-            <span
-              class="token plain"
-              style="display: inline-block;"
-            >
-              
+            
 
-            </span>
           </div>
         </pre>
-        <style
-          type="text/css"
-        >
-          
-/**
- * Reset the text fill color so that placeholder is visible
- */
-.npm__react-simple-code-editor__textarea:empty {
-  -webkit-text-fill-color: inherit !important;
-}
-
-/**
- * Hack to apply on some CSS on IE10 and IE11
- */
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  /**
-    * IE doesn't support '-webkit-text-fill-color'
-    * So we use 'color: transparent' to make the text transparent on IE
-    * Unlike other browsers, it doesn't affect caret color in IE
-    */
-  .npm__react-simple-code-editor__textarea {
-    color: transparent !important;
-  }
-
-  .npm__react-simple-code-editor__textarea::selection {
-    background-color: #accef7 !important;
-    color: transparent !important;
-  }
-}
-
-        </style>
       </div>
       <div
         style="padding: 2rem; border: 3px solid #ccc;"
-      >
-        <button
-          class="af-btn--circle"
-          id="btn-circle"
-          type="submit"
-        >
-          <i
-            class="glyphicon glyphicon-floppy-disk"
-          />
-        </button>
-      </div>
+      />
     </article>
   </div>
 </DocumentFragment>
