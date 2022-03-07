@@ -1,6 +1,6 @@
 {
-  "extends": ["airbnb", "prettier", "prettier/react", "react-app"],
-  "plugins": ["prettier", "react", "react-hooks"],
+  "extends": ["airbnb", "prettier", "react-app"],
+  "plugins": ["prettier"],
   "env": {
     "browser": true,
     "node": true,
@@ -8,6 +8,9 @@
     "jest": true
   },
   "rules": {
+    "react/function-component-definition": "off",
+    "import/no-anonymous-default-export": "off",
+    "no-restricted-exports": "off",
     "react/jsx-filename-extension": [
       1,
       {
@@ -69,7 +72,7 @@
     "navigator": true,
     "fetch": true
   },
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "settings": {
     "import/resolver": {
       "node": {
