@@ -387,7 +387,7 @@ exports[`Route Should render Routes 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2020 AXA Tous droits réservés - v0.1.1
+        © 2020 AXA Tous droits réservés - v0.1.2
       </div>
     </div>
   </footer>

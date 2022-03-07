@@ -6,7 +6,7 @@ import Skeleton from 'shared/components/Skeleton';
 import Resilience from 'shared/components/Resilience/Resilience';
 import './Header.scss';
 
-export const HeaderInfo = ({ isLoaded, children }) => (isLoaded ? { children } : <Skeleton classModifier="info" />);
+export const HeaderInfo = ({ isLoaded, children }) => (isLoaded ? children : <Skeleton classModifier="info" />);
 
 export const HeaderApp = ({ infos, title, subtitle, link, authName, authRole, anomaly }) => (
   <Header>
