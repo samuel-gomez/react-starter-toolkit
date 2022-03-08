@@ -6,11 +6,10 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "build:local": "cross-env REACT_APP_NODE_ENV=production.local react-scripts build && serve -s build -p 5002",
-    "test": "cross-env NODE_ICU_DATA=node_modules/full-icu react-scripts test --watchAll=false",
+    "test": "react-scripts test --watchAll=false",
     "test:sonar": "react-scripts test --testResultsProcessor ./node_modules/jest-sonar-reporter",
-    "cover:local": "cross-env NODE_ICU_DATA=node_modules/full-icu npm t -- --coverage --watchAll=false",
-    "cover": "cross-env NODE_ICU_DATA=node_modules/full-icu npm t -- --coverage --watchAll=false --silent",
-    "storybook": "start-storybook -p 9009 -s .storybook",
+    "cover:local": "npm t -- --coverage --watchAll=false",
+    "cover": "npm t -- --coverage --watchAll=false --silent",
     "lint": "eslint ./src/ --ignore-pattern \"**/*.test.js\" --ignore-pattern \"**/*.steps.js\"",
     "lint:fix": "npm run lint --fix",
     "precommit": "npm run lint:fix && git add ."
@@ -21,31 +20,14 @@
     }
   },
   "dependencies": {
-    "@axa-fr/react-oidc-context": "4.2.10",
+    "@axa-fr/react-oidc-context": "4.2.11",
     "@axa-fr/react-toolkit-all": "1.4.1",
     "@axa-fr/react-toolkit-core": "1.4.1",
     "@axa-fr/react-toolkit-modal-default": "1.3.23",
-    "@babel/eslint-parser": "^7.17.0",
     "@babel/parser": "7.17.3",
-    "@storybook/addon-a11y": "6.4.19",
-    "@storybook/addon-actions": "6.4.19",
-    "@storybook/addon-info": "5.3.21",
-    "@storybook/addon-knobs": "6.4.0",
-    "@storybook/addon-notes": "5.3.21",
-    "@storybook/addon-options": "5.3.21",
-    "@storybook/addon-storysource": "6.4.19",
-    "@storybook/addon-viewport": "6.4.19",
-    "@storybook/addons": "6.4.19",
-    "@storybook/core": "6.4.19",
-    "@storybook/react": "6.4.19",
-    "@testing-library/jest-dom": "5.16.2",
-    "@testing-library/react": "12.1.3",
-    "@testing-library/react-hooks": "7.0.2",
-    "@testing-library/user-event": "13.5.0",
-    "apexcharts": "3.33.1",
+    "apexcharts": "3.33.2",
     "classnames": "2.3.1",
     "downloadjs": "1.4.7",
-    "intl": "1.2.5",
     "jest-cucumber": "3.0.1",
     "lodash": "4.17.21",
     "moment": "2.29.1",
@@ -56,19 +38,21 @@
     "react-apexcharts": "1.3.9",
     "react-app-polyfill": "3.0.0",
     "react-dom": "17.0.2",
-    "react-github-login": "1.0.3",
-    "react-google-login": "5.2.2",
     "react-live": "2.4.0",
     "react-router-dom": "6.2.2",
-    "react-scripts": "4.0.3",
-    "react-social-login": "3.4.15"
+    "react-scripts": "4.0.3"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "5.16.2",
+    "@testing-library/react": "12.1.3",
+    "@testing-library/react-hooks": "7.0.2",
+    "@testing-library/user-event": "13.5.0",
     "@commitlint/cli": "16.2.1",
     "@commitlint/config-conventional": "16.2.1",
     "commitizen": "4.2.4",
     "cross-env": "7.0.3",
     "cz-conventional-changelog": "3.3.0",
+    "@babel/eslint-parser": "^7.17.0",
     "eslint": "8.10.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-prettier": "8.5.0",
@@ -80,12 +64,11 @@
     "eslint-plugin-prettier": "4.0.0",
     "eslint-plugin-react": "7.29.3",
     "eslint-plugin-react-hooks": "4.3.0",
-    "full-icu": "1.4.0",
     "husky": "4.3.8",
+    "intl": "1.2.5",
     "jest-sonar-reporter": "2.0.0",
     "precise-commits": "1.0.2",
     "prettier": "2.5.1",
-    "react-test-renderer": "16.14.0",
     "sass": "1.49.9"
   },
   "commitlint": {
@@ -97,9 +80,6 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
-  },
-  "eslintConfig": {
-    "extends": "react-app"
   },
   "browserslist": {
     "production": [
