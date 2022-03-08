@@ -8,7 +8,7 @@ exports[`Layout Should <CustomComponent /> contain layout props and customProps 
 </DocumentFragment>
 `;
 
-exports[`Layout Should redirect to forbidden page when user connected is not aurhorized 1`] = `
+exports[`Layout Should redirect to forbidden page when user connected is not authorized 1`] = `
 <DocumentFragment>
   <p>
     Redirection forbidden

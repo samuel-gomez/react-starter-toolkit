@@ -15,8 +15,8 @@ describe('Layout', () => {
     expect(CustomComponentWithLayout.props.footer).toBeDefined();
     expect(CustomComponentWithLayout.props.title).toBeDefined();
   });
-  it('Should redirect to forbidden page when user connected is not aurhorized', () => {
-    constNavigateMock = () => <p>Redirection forbidden</p>;
+  it('Should redirect to forbidden page when user connected is not authorized', () => {
+    const NavigateMock = () => <p>Redirection forbidden</p>;
     const CustomComponentWithLayout = Layout(
       CustomComponent,
       {
