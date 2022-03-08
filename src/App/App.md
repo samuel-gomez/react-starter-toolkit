@@ -1,3 +1,0 @@
-## Starter Project
-
-New project
