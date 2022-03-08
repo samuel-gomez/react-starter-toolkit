@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import PageNotFound from 'NotFound';
 import PageUnauthorize from 'Unauthorize';
 import Members from 'Members';
@@ -11,24 +11,24 @@ import Dashboard from 'Dashboard';
 import Layout from 'Layout';
 import ROUTE_URL from 'Layout/constants';
 
-export const renderLayoutMembers = parentProps => props => Layout(Members, props, parentProps);
-export const renderLayoutSearchMembers = parentProps => props => Layout(SearchMembers, props, parentProps);
-export const renderLayoutDashboard = parentProps => props => Layout(Dashboard, props, parentProps);
-export const renderLayoutSlashDesignSystem = parentProps => props => Layout(SlashDesignSystem, props, parentProps);
-export const renderLayoutModal = parentProps => props => Layout(Modal, props, parentProps);
-export const renderLayoutButton = parentProps => props => Layout(Button, props, parentProps);
+export const LayoutDashboard = props => Layout(Dashboard, props);
+export const LayoutMembers = props => Layout(Members, props);
+export const LayoutSearchMembers = props => Layout(SearchMembers, props);
+export const LayoutSlashDesignSystem = props => Layout(SlashDesignSystem, props);
+export const LayoutModal = props => Layout(Modal, props);
+export const LayoutButton = props => Layout(Button, props);
 
-const Routes = props => (
-  <Switch>
-    <Route exact path={ROUTE_URL.DASHBOARD} render={renderLayoutDashboard(props)} />
-    <Route exact path={ROUTE_URL.MEMBERS} render={renderLayoutMembers(props)} />
-    <Route exact path={ROUTE_URL.SEARCHMEMBERS} render={renderLayoutSearchMembers(props)} />
-    <Route exact path={ROUTE_URL.SLASH} render={renderLayoutSlashDesignSystem(props)} />
-    <Route exact path={ROUTE_URL.MODAL} render={renderLayoutModal(props)} />
-    <Route exact path={ROUTE_URL.BUTTON} render={renderLayoutButton(props)} />
-    <Route exact path={ROUTE_URL.UNAUTHORIZE} component={PageUnauthorize} />
-    <Route component={PageNotFound} />
-  </Switch>
+const RoutesCmpt = () => (
+  <Routes>
+    <Route exact path={ROUTE_URL.DASHBOARD} element={<LayoutDashboard />} />
+    <Route exact path={ROUTE_URL.MEMBERS} element={<LayoutMembers />} />
+    <Route exact path={ROUTE_URL.SEARCHMEMBERS} element={<LayoutSearchMembers />} />
+    <Route exact path={ROUTE_URL.SLASH} element={<LayoutSlashDesignSystem />} />
+    <Route exact path={ROUTE_URL.MODAL} element={<LayoutModal />} />
+    <Route exact path={ROUTE_URL.BUTTON} element={<LayoutButton />} />
+    <Route exact path={ROUTE_URL.UNAUTHORIZE} element={<PageUnauthorize />} />
+    <Route path="*" element={<PageNotFound />} />
+  </Routes>
 );
 
-export default Routes;
+export default RoutesCmpt;

@@ -16,11 +16,14 @@ describe('Layout', () => {
     expect(CustomComponentWithLayout.props.title).toBeDefined();
   });
   it('Should redirect to forbidden page when user connected is not aurhorized', () => {
-    const parentProps = {
-      authName: 'Alice Smith',
-    };
-    const RedirectMock = () => <p>Redirection forbidden</p>;
-    const CustomComponentWithLayout = Layout(CustomComponent, {}, parentProps, RedirectMock);
+    constNavigateMock = () => <p>Redirection forbidden</p>;
+    const CustomComponentWithLayout = Layout(
+      CustomComponent,
+      {
+        authName: 'Alice Smith',
+      },
+      NavigateMock,
+    );
     const { getByText, asFragment } = render(<Router>{CustomComponentWithLayout}</Router>);
     expect(getByText('Redirection forbidden')).toBeInTheDocument();
     expect(asFragment()).toMatchSnapshot();
