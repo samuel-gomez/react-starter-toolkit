@@ -1,5 +1,5 @@
 import React from 'react';
-import { StaticRouter } from 'react-router-dom';
+import { StaticRouter } from 'react-router-dom/server';
 import { render } from '@testing-library/react';
 import Unauthorize from './Unauthorize';
 

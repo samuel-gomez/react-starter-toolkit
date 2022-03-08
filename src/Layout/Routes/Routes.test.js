@@ -1,20 +1,7 @@
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
-import { render } from '@testing-library/react';
-import MembersPage from 'Members';
-import DashboardPage from 'Dashboard';
-import SlashDesignSystemPage from 'SlashDesignSystem';
-import SearchMembersPage from 'SearchMembers';
-import ModalPage from 'Demos/Modal';
-import ButtonPage from 'Demos/Button';
-import {
-  renderLayoutMembers,
-  renderLayoutDashboard,
-  renderLayoutSlashDesignSystem,
-  renderLayoutSearchMembers,
-  renderLayoutModal,
-  renderLayoutButton,
-} from './Routes';
+import { render, act } from '@testing-library/react';
+import { LayoutMembers, LayoutDashboard, LayoutSlashDesignSystem, LayoutSearchMembers, LayoutModal, LayoutButton } from './Routes';
 import Routes from '.';
 
 describe('Route', () => {
@@ -36,63 +23,72 @@ describe('Route', () => {
 
     expect(asFragment()).toMatchSnapshot();
   });
+});
 
-  const parentProps = {
-    authName: 'Bob Smith',
-    authRole: 'admin',
-  };
-
-  it('Should return <MembersPage /> with props when call renderLayoutMembers', () => {
-    const customProps = {
-      myProp: 'property members',
-    };
-    const result = renderLayoutMembers(parentProps)({ ...customProps });
-    expect(result.type).toEqual(MembersPage);
-    expect(result.props.myProp).toEqual('property members');
+describe('LayoutDashboard', () => {
+  it('Render LayoutDashboard', () => {
+    const { asFragment } = render(
+      <MemoryRouter>
+        <LayoutDashboard />
+      </MemoryRouter>,
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
+});
 
-  it('Should return <DashboardPage /> with props when call renderLayoutDashboard', () => {
-    const customProps = {
-      myProp: 'property dashboard',
-    };
-    const result = renderLayoutDashboard(parentProps)({ ...customProps });
-    expect(result.type).toEqual(DashboardPage);
-    expect(result.props.myProp).toEqual('property dashboard');
+describe('LayoutMembers', () => {
+  it('Render LayoutMembers', () => {
+    const { asFragment } = render(
+      <MemoryRouter>
+        <LayoutMembers />
+      </MemoryRouter>,
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
+});
 
-  it('Should return <SlashDesignSystemPage /> with props when call renderLayoutSlashDesignSystem', () => {
-    const customProps = {
-      myProp: 'property slash',
-    };
-    const result = renderLayoutSlashDesignSystem(parentProps)({ ...customProps });
-    expect(result.type).toEqual(SlashDesignSystemPage);
-    expect(result.props.myProp).toEqual('property slash');
+describe('LayoutSlashDesignSystem', () => {
+  it('Render LayoutSlashDesignSystem', async () => {
+    await act(async () => {
+      const { asFragment } = render(
+        <MemoryRouter>
+          <LayoutSlashDesignSystem />
+        </MemoryRouter>,
+      );
+      expect(asFragment()).toMatchSnapshot();
+    });
   });
+});
 
-  it('Should return <SearchMembersPage /> with props when call renderLayoutSearchMembers', () => {
-    const customProps = {
-      myProp: 'property search member',
-    };
-    const result = renderLayoutSearchMembers(parentProps)({ ...customProps });
-    expect(result.type).toEqual(SearchMembersPage);
-    expect(result.props.myProp).toEqual('property search member');
+describe('LayoutSearchMembers', () => {
+  it('Render LayoutSearchMembers', () => {
+    const { asFragment } = render(
+      <MemoryRouter>
+        <LayoutSearchMembers />
+      </MemoryRouter>,
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
+});
 
-  it('Should return <ModalPage /> with props when call renderLayoutModal', () => {
-    const customProps = {
-      myProp: 'property modal',
-    };
-    const result = renderLayoutModal(parentProps)({ ...customProps });
-    expect(result.type).toEqual(ModalPage);
-    expect(result.props.myProp).toEqual('property modal');
+describe('LayoutModal', () => {
+  it('Render LayoutModal', () => {
+    const { asFragment } = render(
+      <MemoryRouter>
+        <LayoutModal />
+      </MemoryRouter>,
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
+});
 
-  it('Should return <ButtonPage /> with props when call renderLayoutButton', () => {
-    const customProps = {
-      myProp: 'property button',
-    };
-    const result = renderLayoutButton(parentProps)({ ...customProps });
-    expect(result.type).toEqual(ButtonPage);
-    expect(result.props.myProp).toEqual('property button');
+describe('LayoutButton', () => {
+  it('Render LayoutButton', () => {
+    const { asFragment } = render(
+      <MemoryRouter>
+        <LayoutButton />
+      </MemoryRouter>,
+    );
+    expect(asFragment()).toMatchSnapshot();
   });
 });

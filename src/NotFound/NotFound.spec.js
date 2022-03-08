@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { StaticRouter } from 'react-router-dom';
+import { StaticRouter } from 'react-router-dom/server';
 import { emptyFunction } from 'shared/testsUtils';
 import { defineFeature, loadFeature } from 'jest-cucumber';
 import NotFound from './NotFound';

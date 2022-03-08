@@ -6,15 +6,7 @@ import { Menu, menuItemPropType } from './Menu';
 import MENU_ITEMS, { CLASS_BODY_MENU_OPEN } from './constants';
 
 export const setPositionInit = ({ menuItems, pathname, matchPathFn = matchPath }) =>
-  menuItems
-    .map((navItem, index) =>
-      matchPathFn(pathname, {
-        path: navItem.url,
-      })
-        ? index
-        : 0,
-    )
-    .reduce((accumulator, currentValue) => accumulator + currentValue);
+  menuItems.map((navItem, index) => (pathname === navItem.url ? index : 0)).reduce((accumulator, currentValue) => accumulator + currentValue);
 
 export const setToggleMenu = ({ setIsMenuVisible, isVisible, documentObj = document }) => {
   const { body } = documentObj;

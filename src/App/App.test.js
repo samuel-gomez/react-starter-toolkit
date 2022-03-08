@@ -21,6 +21,6 @@ const envMock = {
 };
 
 it('Should render App', () => {
-  const { asFragment } = render(<App {...envMock} />, { wrapper: WrapperStaticRouter });
+  const { asFragment } = render(<App {...envMock} />);
   expect(asFragment()).toMatchSnapshot();
 });
