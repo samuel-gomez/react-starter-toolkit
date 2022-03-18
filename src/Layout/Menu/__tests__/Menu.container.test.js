@@ -31,6 +31,15 @@ describe('setPositionInit', () => {
       label: 'lien 2',
       url: '/lien2',
     },
+    {
+      label: 'lien 3',
+      children: [
+        {
+          label: 'enfant 1',
+          url: 'lien3/enfant1',
+        },
+      ],
+    },
   ];
   it('Should return position 0  when pathname = first item url', () => {
     const result = setPositionInit({ menuItems, pathname: '/' });
@@ -39,6 +48,10 @@ describe('setPositionInit', () => {
   it('Should return position 1  when pathname = second item url', () => {
     const result = setPositionInit({ menuItems, pathname: '/lien2' });
     expect(result).toEqual(1);
+  });
+  it('Should return position 2  when pathname = third item children url', () => {
+    const result = setPositionInit({ menuItems, pathname: 'lien3/enfant1' });
+    expect(result).toEqual(2);
   });
 });
 

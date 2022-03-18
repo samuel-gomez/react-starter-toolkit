@@ -3,8 +3,8 @@
   "version": "0.1.2",
   "private": true,
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "cross-env GENERATE_SOURCEMAP=false react-scripts start",
+    "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
     "build:local": "cross-env REACT_APP_NODE_ENV=production.local react-scripts build && serve -s build -p 5002",
     "test": "react-scripts test --watchAll=false",
     "test:sonar": "react-scripts test --testResultsProcessor ./node_modules/jest-sonar-reporter",
@@ -40,7 +40,7 @@
     "react-dom": "17.0.2",
     "react-live": "2.4.0",
     "react-router-dom": "6.2.2",
-    "react-scripts": "4.0.3"
+    "react-scripts": "5.0.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "5.16.2",
@@ -57,7 +57,6 @@
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-prettier": "8.5.0",
     "eslint-config-react-app": "7.0.0",
-    "eslint-import-resolver-alias": "1.1.2",
     "eslint-plugin-flowtype": "8.0.3",
     "eslint-plugin-import": "2.25.4",
     "eslint-plugin-jsx-a11y": "6.5.1",

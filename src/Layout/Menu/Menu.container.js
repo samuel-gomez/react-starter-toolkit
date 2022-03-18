@@ -1,12 +1,22 @@
 import React, { useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
-import { useLocation, matchPath } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { ToggleButton, Action } from '@axa-fr/react-toolkit-all';
 import { Menu, menuItemPropType } from './Menu';
 import MENU_ITEMS, { CLASS_BODY_MENU_OPEN } from './constants';
 
-export const setPositionInit = ({ menuItems, pathname, matchPathFn = matchPath }) =>
-  menuItems.map((navItem, index) => (pathname === navItem.url ? index : 0)).reduce((accumulator, currentValue) => accumulator + currentValue);
+const isNotNull = item => item !== null;
+
+export const setPositionInit = ({ menuItems, pathname, isChildren }) =>
+  menuItems
+    .map((navItem, index) => {
+      const subIndex = navItem.children ? setPositionInit({ menuItems: navItem.children, pathname, isChildren: true }) : undefined;
+      if (isChildren) {
+        return pathname === navItem.url ? index : null;
+      }
+      return pathname === navItem.url || subIndex !== undefined ? index : null;
+    })
+    .find(isNotNull);
 
 export const setToggleMenu = ({ setIsMenuVisible, isVisible, documentObj = document }) => {
   const { body } = documentObj;

@@ -78,10 +78,6 @@
       "node": {
         "paths": ["src", "node_modules"],
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      },
-      "alias": {
-        "map": [["@axa-fr/react-oidc-context", "@axa-fr/react-oidc-context/dist/index.js"]],
-        "extensions": [".ts", ".js", ".jsx", ".json"]
       }
     }
   }
