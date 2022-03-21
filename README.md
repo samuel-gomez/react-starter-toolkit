@@ -1,4 +1,5 @@
 [![Build](https://github.com/samuel-gomez/react-starter-toolkit/actions/workflows/build.yml/badge.svg)](https://github.com/samuel-gomez/react-starter-toolkit/actions/workflows/build.yml)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 [![codecov](https://codecov.io/gh/samuel-gomez/react-starter-toolkit/branch/master/graph/badge.svg?token=N75VO37VG7)](https://codecov.io/gh/samuel-gomez/react-starter-toolkit)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c496aa9a-8801-4a32-9571-547bd4ea5ea3/deploy-status)](https://app.netlify.com/sites/react-starter-toolkit/deploys)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=samuel-gomez_react-starter-toolkit&metric=alert_status)](https://sonarcloud.io/dashboard?id=samuel-gomez_react-starter-toolkit)
