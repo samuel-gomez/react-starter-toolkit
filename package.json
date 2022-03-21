@@ -24,7 +24,7 @@
     "@axa-fr/react-toolkit-all": "1.4.1",
     "@axa-fr/react-toolkit-core": "1.4.1",
     "@axa-fr/react-toolkit-modal-default": "1.4.0",
-    "@babel/parser": "7.17.3",
+    "@babel/parser": "7.17.8",
     "apexcharts": "3.33.2",
     "classnames": "2.3.1",
     "downloadjs": "1.4.7",
@@ -123,6 +123,6 @@
     "resetMocks": false
   },
   "resolutions": {
-    "@babel/parser": "7.17.3"
+    "@babel/parser": "7.17.8"
   }
 }
