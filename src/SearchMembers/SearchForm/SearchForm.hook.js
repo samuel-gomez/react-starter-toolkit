@@ -40,11 +40,10 @@ export const useSearchForm = ({ initStateSearchFormCt = initStateSearchForm, set
   const [stateSearchForm, setStateSearchForm] = useState(initStateSearchFormCt);
   const { fields } = stateSearchForm;
 
-  const onChangeSearchForm = useCallback(event => setOnChangeSearchFormFn({ stateSearchForm, setStateSearchForm, fields, event }), [
-    fields,
-    setOnChangeSearchFormFn,
-    stateSearchForm,
-  ]);
+  const onChangeSearchForm = useCallback(
+    event => setOnChangeSearchFormFn({ stateSearchForm, setStateSearchForm, fields, event }),
+    [fields, setOnChangeSearchFormFn, stateSearchForm],
+  );
 
   return { onChangeSearchForm, stateSearchForm };
 };

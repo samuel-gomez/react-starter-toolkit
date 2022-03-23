@@ -1,5 +1,5 @@
 {
-  "extends": ["prettier", "react-app"],
+  "extends": ["react-app", "plugin:prettier/recommended"],
   "plugins": ["prettier"],
   "env": {
     "browser": true,
@@ -28,7 +28,7 @@
     "import/newline-after-import": "error",
     "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
     "indent": [
-      "error",
+      "off",
       2,
       {
         "SwitchCase": 1,

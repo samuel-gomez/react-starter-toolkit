@@ -1,1 +1,1 @@
-export { default } from './Td.container'
+export { default } from './Td.container';
