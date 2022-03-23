@@ -5,10 +5,12 @@ import SearchForm from './SearchForm';
 import { useSearchForm } from './SearchForm.hook';
 import { NAME } from './constants';
 
-export const setOnSubmitSearchForm = ({ fields, submitSearchForm }) => () =>
-  submitSearchForm({
-    [NAME]: fields[NAME].value,
-  });
+export const setOnSubmitSearchForm =
+  ({ fields, submitSearchForm }) =>
+  () =>
+    submitSearchForm({
+      [NAME]: fields[NAME].value,
+    });
 
 export const SearchFormEnhanced = ({
   defaultClassName,

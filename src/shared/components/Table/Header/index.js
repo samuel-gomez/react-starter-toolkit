@@ -1,1 +1,1 @@
-export { default, HeaderPropTypes, HeaderDefaultProps, HeadersPropTypes } from './Header'
+export { default, HeaderPropTypes, HeaderDefaultProps, HeadersPropTypes } from './Header';

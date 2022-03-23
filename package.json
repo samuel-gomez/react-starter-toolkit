@@ -14,7 +14,9 @@
     "lint:fix": "npm run lint --fix",
     "precommit": "npm run lint:fix && git add .",
     "prepare": "husky install",
-    "commit": "cz"
+    "commit": "cz",
+    "prettier": "prettier --check src",
+    "prettier-fix": "prettier --write src"
   },
   "dependencies": {
     "@axa-fr/react-oidc-context": "4.5.1",
