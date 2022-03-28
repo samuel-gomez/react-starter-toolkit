@@ -15,6 +15,6 @@
     "client_id": "interactive.public",
     "redirect_uri": "http://localhost:9999/authentication/callback",
     "scope": "openid profile email api offline_access",
-    "authority": "https://demo.identityserver.io"
+    "authority": "https://demo.duendesoftware.com"
   }
 }
