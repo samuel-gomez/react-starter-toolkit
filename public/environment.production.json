@@ -17,7 +17,7 @@
     "response_type": "code",
     "post_logout_redirect_uri": "https://react-starter-toolkit.netlify.app/",
     "scope": "openid profile email api offline_access",
-    "authority": "https://demo.identityserver.io",
+    "authority": "https://demo.duendesoftware.com",
     "silent_redirect_uri": "https://react-starter-toolkit.netlify.app/authentication/silent_callback",
     "automaticSilentRenew": true,
     "loadUserInfo": true
