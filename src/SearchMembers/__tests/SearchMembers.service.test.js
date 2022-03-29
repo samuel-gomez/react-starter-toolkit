@@ -5,7 +5,7 @@ describe('Search Members Services', () => {
 
   it('searchMembers', () => {
     searchMembers({ fetchCustom: fetchCustomMock, signal: 'abort' });
-    expect(fetchCustomMock).toBeCalledWith('members', {
+    expect(fetchCustomMock).toBeCalledWith('members/search', {
       method: 'POST',
       signal: 'abort',
       body: '{}',

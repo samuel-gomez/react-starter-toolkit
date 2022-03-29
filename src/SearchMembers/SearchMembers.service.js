@@ -1,7 +1,7 @@
 import { JSON_CONTENT_HEADER } from 'shared/constants';
 
 const searchMembers = ({ fetchCustom, signal, body = {} }) =>
-  fetchCustom('members', {
+  fetchCustom('members/search', {
     signal,
     body: JSON.stringify(body),
     method: 'POST',
