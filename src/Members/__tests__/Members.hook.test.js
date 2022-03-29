@@ -14,17 +14,7 @@ import {
   setNumberPages,
 } from '../Members.hook';
 import { FETCH_MEMBERS } from '../constants';
-import { membersMock as membersMockExpected } from './Members.test';
-
-const membersMock = [
-  {
-    _id: 99999,
-    firstname: 'Samuel',
-    lastname: 'Gomez',
-    birthdate: '1985-10-20T13:44:20.540000',
-    sexe: 'M',
-  },
-];
+import { membersMock, membersFormattedMock } from './Members.mock';
 
 describe('setNumberPages', () => {
   it('Should return 0 when max = 1 and total = 1', () => {
@@ -126,7 +116,7 @@ describe('setStateMembersSuccess', () => {
       value: '01',
       isLoading: false,
       anomaly: null,
-      members: membersMockExpected,
+      members: membersFormattedMock,
       pagination: {
         currentPage: 1,
         numberItems: NaN,
@@ -207,7 +197,7 @@ describe('dataFetchReducer', () => {
       value: 'value',
       isLoading: false,
       anomaly: null,
-      members: membersMockExpected,
+      members: membersFormattedMock,
       pagination: {
         currentPage: 1,
         numberItems: NaN,
