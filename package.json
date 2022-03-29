@@ -19,7 +19,7 @@
     "prettier-fix": "prettier --write src"
   },
   "dependencies": {
-    "@axa-fr/react-oidc-context": "4.5.8",
+    "@axa-fr/react-oidc-context": "4.5.9",
     "@axa-fr/react-toolkit-all": "1.4.1",
     "@axa-fr/react-toolkit-core": "1.4.1",
     "@axa-fr/react-toolkit-modal-default": "1.4.0",
@@ -48,7 +48,7 @@
     "@testing-library/jest-dom": "5.16.3",
     "@testing-library/react": "12.1.4",
     "@testing-library/react-hooks": "7.0.2",
-    "@testing-library/user-event": "13.5.0",
+    "@testing-library/user-event": "14.0.0",
     "commitizen": "4.2.4",
     "cross-env": "7.0.3",
     "cz-conventional-changelog": "3.3.0",
