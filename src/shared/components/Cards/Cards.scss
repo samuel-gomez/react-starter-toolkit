@@ -45,6 +45,10 @@ $color-storybook: #ff2d74;
   .af-btn--storybook {
     background-color: $color-storybook;
     transition: all 0.5s linear;
+    fill: white;
+    padding: 0.3rem;
+    display: flex;
+    justify-content: center;
     &:hover {
       .af {
         &-btn {
@@ -59,6 +63,10 @@ $color-storybook: #ff2d74;
   .af-btn--svg {
     background-color: $color-blue-lighter;
     transition: all 0.5s linear;
+    fill: white;
+    padding: 0.3rem;
+    display: flex;
+    justify-content: center;
     &:hover {
       .af {
         &-btn {
