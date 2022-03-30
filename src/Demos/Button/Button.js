@@ -1,4 +1,6 @@
 import React from 'react';
+import { string } from 'prop-types';
+import Layout from 'Layout';
 import { TITLE_BAR, TITLE } from './constants';
 import ButtonClassic from './ButtonClassic';
 import ButtonReversed from './ButtonReversed';
@@ -10,25 +12,29 @@ import ButtonWithRightIcon from './ButtonWithRightIcon';
 import ButtonWithLeftIcon from './ButtonWithLeftIcon';
 import ButtonCircle from './ButtonCircle';
 
-const ButtonPage = ({ header, footer, title, menu }) => (
-  <>
-    {header()}
-    {menu()}
-    {title({ title: TITLE_BAR })}
-    <div className="af-main container">
-      <h1 className="af-title--content">{TITLE}</h1>
-      <ButtonClassic />
-      <ButtonReversed />
-      <ButtonDisabled />
-      <ButtonSuccess />
-      <ButtonDanger />
-      <ButtonSmall />
-      <ButtonWithRightIcon />
-      <ButtonWithLeftIcon />
-      <ButtonCircle />
-    </div>
-    {footer()}
-  </>
+const ButtonPage = ({ titleBar, title }) => (
+  <Layout propsTitle={{ title: titleBar }}>
+    <h1 className="af-title--content">{title}</h1>
+    <ButtonClassic />
+    <ButtonReversed />
+    <ButtonDisabled />
+    <ButtonSuccess />
+    <ButtonDanger />
+    <ButtonSmall />
+    <ButtonWithRightIcon />
+    <ButtonWithLeftIcon />
+    <ButtonCircle />
+  </Layout>
 );
+
+ButtonPage.propTypes = {
+  titleBar: string,
+  title: string,
+};
+
+ButtonPage.defaultProps = {
+  titleBar: TITLE_BAR,
+  title: TITLE,
+};
 
 export default ButtonPage;

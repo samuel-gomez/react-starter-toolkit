@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { string, node } from 'prop-types';
 import WithClassNameModifier from 'shared/helpers/WithClassNameModifier';
 import './Loader.scss';
 
@@ -8,8 +8,8 @@ const Loader = WithClassNameModifier(({ className, isVisible, message, children 
 ));
 
 const LoaderPropTypes = {
-  className: PropTypes.string,
-  children: PropTypes.node,
+  className: string,
+  children: node,
 };
 
 const LoaderDefaultProps = {

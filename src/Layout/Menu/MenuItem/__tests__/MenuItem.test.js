@@ -1,11 +1,10 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { WrapperStaticRouter } from 'shared/testsUtils';
+import { renderWithWrapperStaticRouter } from 'shared/testsUtils';
 import { MenuItem, ActionElt } from '../MenuItem';
 
 describe('<MenuItem/>', () => {
   it('Render <Menu/>', () => {
-    const { asFragment } = render(<MenuItem />, { wrapper: WrapperStaticRouter });
+    const { asFragment } = renderWithWrapperStaticRouter(<MenuItem />);
     expect(asFragment()).toMatchSnapshot();
   });
 
@@ -13,7 +12,7 @@ describe('<MenuItem/>', () => {
     const Child = () => <p>Child</p>;
     const createMenuMock = jest.fn().mockReturnValue(<Child />);
 
-    const { asFragment } = render(
+    const { asFragment } = renderWithWrapperStaticRouter(
       <MenuItem createMenuFn={createMenuMock}>
         {[
           {
@@ -30,7 +29,6 @@ describe('<MenuItem/>', () => {
           },
         ]}
       </MenuItem>,
-      { wrapper: WrapperStaticRouter },
     );
     expect(asFragment()).toMatchSnapshot();
   });
@@ -38,11 +36,11 @@ describe('<MenuItem/>', () => {
 
 describe('<ActionElt/>', () => {
   it('Render <ActionElt/> with Link When url is defined', () => {
-    const { asFragment } = render(<ActionElt url="/members" label="withlink" />, { wrapper: WrapperStaticRouter });
+    const { asFragment } = renderWithWrapperStaticRouter(<ActionElt url="/members" label="withlink" />);
     expect(asFragment()).toMatchSnapshot();
   });
   it('Render <ActionElt/> with Link When url is defined', () => {
-    const { asFragment } = render(<ActionElt label="nolink" />, { wrapper: WrapperStaticRouter });
+    const { asFragment } = renderWithWrapperStaticRouter(<ActionElt label="nolink" />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

@@ -1,14 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { func, string } from 'prop-types';
 import Modal from '@axa-fr/react-toolkit-modal-default';
-
-const propTypes = {
-  onCancel: PropTypes.func.isRequired,
-  title: PropTypes.string,
-};
-const defaultProps = {
-  title: 'Title of modal',
-};
 
 const ModalCommonHeader = ({ title, onCancel }) => (
   <Modal.HeaderBase>
@@ -18,6 +10,14 @@ const ModalCommonHeader = ({ title, onCancel }) => (
     </button>
   </Modal.HeaderBase>
 );
+
+const propTypes = {
+  onCancel: func.isRequired,
+  title: string,
+};
+const defaultProps = {
+  title: 'Title of modal',
+};
 
 ModalCommonHeader.propTypes = propTypes;
 ModalCommonHeader.defaultProps = defaultProps;

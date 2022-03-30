@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { node } from 'prop-types';
 import Table from './Table';
 
 const TableContainer = ({ children, items = [], headers = [], ...restTable }) =>
@@ -11,7 +11,7 @@ const TableContainer = ({ children, items = [], headers = [], ...restTable }) =>
   );
 
 TableContainer.propTypes = {
-  children: PropTypes.node,
+  children: node,
 };
 
 TableContainer.defaultProps = {

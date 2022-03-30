@@ -1,13 +1,8 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { emptyFunction } from 'shared/testsUtils';
+import { emptyFunction, renderWithWrapperStaticRouter } from 'shared/testsUtils';
 import ModalPage from '../Modal';
 
 const defaultProps = {
-  header: emptyFunction,
-  title: emptyFunction,
-  footer: emptyFunction,
-  menu: emptyFunction,
   openModalConfirm: emptyFunction,
   modalConfirmProps: {
     isOpen: false,
@@ -17,7 +12,7 @@ const defaultProps = {
 
 describe('<ModalPage/>', () => {
   it('Should render ModalPage', () => {
-    const { asFragment } = render(<ModalPage {...defaultProps} />);
+    const { asFragment } = renderWithWrapperStaticRouter(<ModalPage {...defaultProps} />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

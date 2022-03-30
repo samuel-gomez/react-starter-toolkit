@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { string } from 'prop-types';
 import WithClassNameModifier from 'shared/helpers/WithClassNameModifier';
 
 const Th = WithClassNameModifier(({ className, children, ariaLabel, ...rest }) => (
@@ -9,9 +9,9 @@ const Th = WithClassNameModifier(({ className, children, ariaLabel, ...rest }) =
 ));
 
 Th.propTypes = {
-  ariaLabel: PropTypes.string,
-  role: PropTypes.string,
-  className: PropTypes.string,
+  ariaLabel: string,
+  role: string,
+  className: string,
 };
 
 Th.defaultProps = {

@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { arrayOf, string, node, object } from 'prop-types';
 import WithClassNameModifier from 'shared/helpers/WithClassNameModifier';
 import Td from './Td';
 
@@ -22,10 +22,10 @@ const Line = ({ className, columns, actions, modifier, children }) => (
 );
 
 Line.propTypes = {
-  columns: PropTypes.arrayOf(PropTypes.object),
-  className: PropTypes.string,
-  actions: PropTypes.node,
-  children: PropTypes.node,
+  columns: arrayOf(object),
+  className: string,
+  actions: node,
+  children: node,
 };
 
 Line.defaultProps = {

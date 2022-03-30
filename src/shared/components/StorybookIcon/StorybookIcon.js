@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { string } from 'prop-types';
 import PATH from './constants';
 
 const StorybookIcon = ({ path }) => (
@@ -8,7 +8,7 @@ const StorybookIcon = ({ path }) => (
   </svg>
 );
 StorybookIcon.propTypes = {
-  path: PropTypes.string,
+  path: string,
 };
 StorybookIcon.defaultProps = {
   path: PATH,

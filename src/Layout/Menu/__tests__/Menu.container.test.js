@@ -1,7 +1,7 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom/extend-expect';
-import { WrapperStaticRouter } from 'shared/testsUtils';
+import { renderWithWrapperStaticRouter } from 'shared/testsUtils';
 import withUser from 'shared/hoc/withUser';
 import MenuEnhanced, { setPositionInit, setToggleMenu } from '../Menu.container';
 import MENU_ITEMS, { CLASS_BODY_MENU_OPEN } from '../constants';
@@ -10,12 +10,12 @@ const MenuEnhancedWithUser = withUser(MenuEnhanced);
 
 describe('<MenuEnhanced/>', () => {
   it('Render <Menu/>', () => {
-    const { asFragment } = render(<MenuEnhancedWithUser menuItems={MENU_ITEMS} />, { wrapper: WrapperStaticRouter });
+    const { asFragment } = renderWithWrapperStaticRouter(<MenuEnhancedWithUser menuItems={MENU_ITEMS} />);
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('Should call toggle class body When click on button', () => {
-    render(<MenuEnhancedWithUser menuItems={MENU_ITEMS} />, { wrapper: WrapperStaticRouter });
+    renderWithWrapperStaticRouter(<MenuEnhancedWithUser menuItems={MENU_ITEMS} />);
     fireEvent.click(screen.getByTitle('Toggle menu'));
     expect(document.querySelector('body').getAttribute('class')).toEqual('af-menu-open');
   });

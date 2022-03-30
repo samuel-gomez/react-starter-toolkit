@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { func } from 'prop-types';
 import Authorize from 'shared/components/Authorize';
 import { MenuItem } from './MenuItem';
 
@@ -28,7 +28,7 @@ const MenuItemEnhanced = ({ url, label, children, classModifier, authorized, has
 };
 
 export const menuEnhancedPropTypes = {
-  createMenuFn: PropTypes.func,
+  createMenuFn: func,
 };
 
 export const menuEnhancedDefaultProps = {

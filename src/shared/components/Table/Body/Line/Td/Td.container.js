@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { node } from 'prop-types';
 import HelpHover from 'shared/components/HelpInfo';
 import Td from './Td';
 
@@ -13,7 +13,7 @@ const TdContainer = ({ children, label, hover, classModifier }) => (
 );
 
 TdContainer.propTypes = {
-  children: PropTypes.node,
+  children: node,
 };
 
 TdContainer.defaultProps = {

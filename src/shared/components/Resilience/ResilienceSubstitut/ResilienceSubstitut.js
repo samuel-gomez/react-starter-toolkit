@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { shape, string, elementType, node, func } from 'prop-types';
 import { Alert } from '@axa-fr/react-toolkit-all';
 import { RESILIENCE_MODE, DEFAULT_CLASS_ALERT, DEFAULT_CLASS_CONTAINER } from './constants';
 
@@ -27,18 +27,18 @@ const ResilienceSubstitut = ({ anomaly, children, resilienceMode, FallbackCompon
 };
 
 ResilienceSubstitut.propTypes = {
-  anomaly: PropTypes.shape({
-    label: PropTypes.string,
-    detail: PropTypes.string,
-    type: PropTypes.string,
-    iconName: PropTypes.string,
+  anomaly: shape({
+    label: string,
+    detail: string,
+    type: string,
+    iconName: string,
   }).isRequired,
-  resilienceMode: PropTypes.string,
-  resilienceModifier: PropTypes.string,
-  children: PropTypes.node,
-  FallbackComponent: PropTypes.elementType,
-  setClassModifierFn: PropTypes.func,
-  setClassNameFn: PropTypes.func,
+  resilienceMode: string,
+  resilienceModifier: string,
+  children: node,
+  FallbackComponent: elementType,
+  setClassModifierFn: func,
+  setClassNameFn: func,
 };
 
 ResilienceSubstitut.defaultProps = {

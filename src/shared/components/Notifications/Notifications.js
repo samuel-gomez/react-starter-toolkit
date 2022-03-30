@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { string, arrayOf, shape, func } from 'prop-types';
 import './Notifications.scss';
 import { DEFAULT_CLASS_NOTIFICATION } from './constants';
 import Notification, { notificationPropTypes } from './Notification';
@@ -13,13 +13,13 @@ export const Notifications = ({ className, notifications, deleteNotification }) 
 );
 
 export const notificationsPropTypes = {
-  className: PropTypes.string,
-  notifications: PropTypes.arrayOf(
-    PropTypes.shape({
+  className: string,
+  notifications: arrayOf(
+    shape({
       ...notificationPropTypes,
     }),
   ).isRequired,
-  deleteNotification: PropTypes.func.isRequired,
+  deleteNotification: func.isRequired,
 };
 
 export const notificationsDefaultProps = {

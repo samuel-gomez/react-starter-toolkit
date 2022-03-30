@@ -1,6 +1,6 @@
 export const TITLE_BAR = 'Slash Design System';
 export const TITLE = 'Liste des composants';
-export const ROUTE_URL_SLASH = '/slash-design-system';
+export const ROUTE_URL_SLASH = '/';
 
 export const COMPONENTS = [
   {

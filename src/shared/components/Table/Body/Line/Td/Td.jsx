@@ -1,12 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { node, string } from 'prop-types';
 import WithClassNameModifier from 'shared/helpers/WithClassNameModifier';
 
 const Td = WithClassNameModifier(({ className, children }) => <td className={className}>{children}</td>);
 
 Td.propTypes = {
-  children: PropTypes.node,
-  className: PropTypes.string,
+  children: node,
+  className: string,
 };
 
 Td.defaultProps = {

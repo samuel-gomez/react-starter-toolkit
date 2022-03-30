@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { string, shape } from 'prop-types';
 import LasyImage from 'shared/components/LasyImage';
 import StorybookIcon from 'shared/components/StorybookIcon';
 import SlashIcon from 'shared/components/SlashIcon';
@@ -35,15 +35,15 @@ const Card = ({ storybook, designSystem, title, picture: { name, alt } }) => (
 );
 
 export const cardPropTypes = {
-  storybook: PropTypes.shape({
-    path: PropTypes.string,
-    text: PropTypes.string,
+  storybook: shape({
+    path: string,
+    text: string,
   }),
-  designSystem: PropTypes.shape({
-    path: PropTypes.string,
-    text: PropTypes.string,
+  designSystem: shape({
+    path: string,
+    text: string,
   }),
-  title: PropTypes.string,
+  title: string,
 };
 
 export const cardDefaultProps = {

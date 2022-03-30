@@ -1,6 +1,5 @@
-import React, { createContext } from 'react';
-import { WrapperStaticRouter } from 'shared/testsUtils';
-import { render, act, waitFor } from '@testing-library/react';
+import React from 'react';
+import { render } from '@testing-library/react';
 import App from '../App';
 
 const useOidcUserMock = jest.fn().mockReturnValue({
@@ -8,6 +7,7 @@ const useOidcUserMock = jest.fn().mockReturnValue({
     name: 'Samuel Gomez',
   },
 });
+
 const useOidcAccessTokenMock = jest.fn().mockReturnValue({
   accessToken: 'accessTokenfdsfdsqgvqvsqfs',
 });

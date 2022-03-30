@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { func } from 'prop-types';
 import { LoaderModes } from 'shared/components/Loader';
 import setLoaderMode from 'shared/helpers/setLoaderMode';
 import Members from './Members';
@@ -27,8 +27,8 @@ const MembersEnhanced = ({ useMembersFn, setLoaderModeFn, ...rest }) => {
 };
 
 MembersEnhanced.propTypes = {
-  useMembersFn: PropTypes.func,
-  setLoaderModeFn: PropTypes.func,
+  useMembersFn: func,
+  setLoaderModeFn: func,
 };
 
 MembersEnhanced.defaultProps = {

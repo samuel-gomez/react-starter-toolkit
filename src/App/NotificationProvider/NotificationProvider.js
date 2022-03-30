@@ -1,5 +1,5 @@
 import React, { createContext } from 'react';
-import PropTypes from 'prop-types';
+import { node, func } from 'prop-types';
 import Notifications, { useNotifications } from 'shared/components/Notifications';
 
 export const NotificationContext = createContext({ addNotification: null });
@@ -18,8 +18,8 @@ const NotificationProvider = ({ children, useNotificationsFn }) => {
 };
 
 NotificationProvider.propTypes = {
-  children: PropTypes.node.isRequired,
-  useNotificationsFn: PropTypes.func,
+  children: node.isRequired,
+  useNotificationsFn: func,
 };
 
 NotificationProvider.defaultProps = {

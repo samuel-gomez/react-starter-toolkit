@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import PropTypes from 'prop-types';
+import { string } from 'prop-types';
 import { UserContext } from 'App/UserProvider';
 import Header from './Header';
 
@@ -9,8 +9,8 @@ const HeaderContainer = props => {
 };
 
 HeaderContainer.propTypes = {
-  title: PropTypes.string,
-  subtitle: PropTypes.string,
+  title: string,
+  subtitle: string,
 };
 
 HeaderContainer.defaultProps = {

@@ -93,22 +93,6 @@ exports[`<Menu/> Render <Menu/> 1`] = `
             </a>
           </li>
           <li
-            class="af-nav__item "
-            role="none"
-          >
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-label="Slash DS"
-              class="af-nav__link"
-              href="/slash-design-system"
-              role="menuitem"
-              tabindex="-1"
-            >
-              Slash DS
-            </a>
-          </li>
-          <li
             class="af-nav__item af-nav__item--haschild "
             role="none"
           >
@@ -182,6 +166,22 @@ exports[`<Menu/> Render <Menu/> 1`] = `
               class="af-nav__list af-nav__list--children"
               role="menu"
             >
+              <li
+                class="af-nav__item "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Empty page"
+                  class="af-nav__link"
+                  href="/dashboard"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Empty page
+                </a>
+              </li>
               <li
                 class="af-nav__item "
                 role="none"

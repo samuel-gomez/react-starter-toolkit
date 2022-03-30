@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { func } from 'prop-types';
 import Modal from './Modal';
 import useToggleModalConfirm from './Modal.hook';
 
@@ -19,7 +19,7 @@ const ModalContainer = ({ useToggleModalConfirmFn, ...rest }) => {
 };
 
 ModalContainer.propTypes = {
-  useToggleModalConfirmFn: PropTypes.func,
+  useToggleModalConfirmFn: func,
 };
 
 ModalContainer.defaultProps = {

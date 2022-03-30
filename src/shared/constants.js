@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import { string, number, shape } from 'prop-types';
 
 export const MSG_REQUIRED = 'Le champ est obligatoire';
 
@@ -86,7 +86,7 @@ export const DEFAULT_OPTION = {
   label: DEFAULT_OPTION_LABEL,
 };
 
-export const ContextPropTypes = PropTypes.shape({
-  Provider: PropTypes.shape({ defaultValue: PropTypes.string, currentValue: PropTypes.string, changedBits: PropTypes.number }),
-  Consumer: PropTypes.shape({ defaultValue: PropTypes.string, currentValue: PropTypes.string, changedBits: PropTypes.number }),
+export const ContextPropTypes = shape({
+  Provider: shape({ defaultValue: string, currentValue: string, changedBits: number }),
+  Consumer: shape({ defaultValue: string, currentValue: string, changedBits: number }),
 });

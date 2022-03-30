@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { string, arrayOf, shape } from 'prop-types';
 import { ClassManager } from '@axa-fr/react-toolkit-all';
 import { Notifications } from './Notifications';
 import { DEFAULT_CLASS_NOTIFICATION, MODIFIER_OPEN } from './constants';
@@ -11,12 +11,12 @@ const NotificationsEnhanced = ({ className, notifications, deleteNotification, .
 };
 
 export const notificationsEnhancedPropTypes = {
-  className: PropTypes.string,
-  notifications: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string,
-      label: PropTypes.string,
-      detail: PropTypes.string,
+  className: string,
+  notifications: arrayOf(
+    shape({
+      id: string,
+      label: string,
+      detail: string,
     }),
   ),
 };

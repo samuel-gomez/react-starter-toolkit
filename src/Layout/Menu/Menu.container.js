@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from 'react';
-import PropTypes from 'prop-types';
+import { func } from 'prop-types';
 import { useLocation } from 'react-router-dom';
 import { ToggleButton, Action } from '@axa-fr/react-toolkit-all';
 import { Menu, menuItemPropType } from './Menu';
@@ -54,10 +54,10 @@ const MenuEnhanced = ({ menuItems, setPositionInitFn, setToggleMenuFn, useLocati
 
 export const menuEnhancedPropTypes = {
   menuItems: menuItemPropType,
-  setPositionInitFn: PropTypes.func,
-  setToggleMenuFn: PropTypes.func,
-  useLocationFn: PropTypes.func,
-  useMenuVisibleFn: PropTypes.func,
+  setPositionInitFn: func,
+  setToggleMenuFn: func,
+  useLocationFn: func,
+  useMenuVisibleFn: func,
 };
 
 export const menuEnhancedDefaultProps = {

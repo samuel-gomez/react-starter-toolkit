@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { WrapperStaticRouter } from 'shared/testsUtils';
+import { renderWithWrapperStaticRouter } from 'shared/testsUtils';
 import TitleBar from '../TitleBar';
 
 describe('<TitleBar/>', () => {
@@ -9,7 +9,7 @@ describe('<TitleBar/>', () => {
     expect(asFragment()).toMatchSnapshot();
   });
   it('Should not contain <Link /> when backHome is false', () => {
-    const { getByTitle } = render(<TitleBar backHome />, { wrapper: WrapperStaticRouter });
+    const { getByTitle } = renderWithWrapperStaticRouter(<TitleBar backHome />);
     expect(getByTitle("Retour à l'accueil")).toBeDefined();
   });
 });

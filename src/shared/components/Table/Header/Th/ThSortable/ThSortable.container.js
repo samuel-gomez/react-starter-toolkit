@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { func, oneOf, shape, string } from 'prop-types';
 import { NONE, DESCENDING, ASCENDING } from '../../../constants';
 import ThSortable from './ThSortable';
 
@@ -35,16 +35,16 @@ const ThSortableContainer = ({ classModifier, field, onSort, sorting, toggleSort
 };
 
 const ThSortableContainerPropTypes = {
-  field: PropTypes.string.isRequired,
-  onSort: PropTypes.func,
-  sorting: PropTypes.shape({
-    field: PropTypes.string,
-    order: PropTypes.oneOf([NONE, ASCENDING, DESCENDING]),
+  field: string.isRequired,
+  onSort: func,
+  sorting: shape({
+    field: string,
+    order: oneOf([NONE, ASCENDING, DESCENDING]),
   }).isRequired,
-  toggleSortingFn: PropTypes.func,
-  setSortingIconFn: PropTypes.func,
-  setClassModifierActiveFn: PropTypes.func,
-  classModifier: PropTypes.string,
+  toggleSortingFn: func,
+  setSortingIconFn: func,
+  setClassModifierActiveFn: func,
+  classModifier: string,
 };
 
 const ThSortableContainerDefaultProps = {
