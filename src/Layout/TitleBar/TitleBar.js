@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Title } from '@axa-fr/react-toolkit-all';
-import { PropTypes } from 'prop-types';
+import { bool, node, string } from 'prop-types';
 import './TitleBar.scss';
 
 const TitleBar = ({ backHome, children, className, handleClick, title }) => (
@@ -19,14 +19,14 @@ TitleBar.defaultProps = {
   backHome: false,
   children: null,
   className: 'af-title-bar',
-  title: 'title',
+  title: null,
 };
 
 TitleBar.propTypes = {
-  backHome: PropTypes.bool,
-  children: PropTypes.node,
-  className: PropTypes.string,
-  title: PropTypes.string,
+  backHome: bool,
+  children: node,
+  className: string,
+  title: node,
 };
 
 export default TitleBar;

@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { func, string, objectOf, bool, object } from 'prop-types';
 import { Text, Button, FieldForm, HelpMessage, FieldInput } from '@axa-fr/react-toolkit-all';
 import { NAME, LABEL_NAME, PLACEHOLDER_NAME, FORM_SEARCH_MEMBERS, LABEL_SUBMIT, MIN_SEARCH_BY_NAME } from './constants';
 import './SearchForm.scss';
@@ -33,12 +33,12 @@ const SearchForm = ({ className, fields, hasErrors, onSubmit, onChange, confirmC
 );
 
 SearchForm.propTypes = {
-  onChange: PropTypes.func.isRequired,
-  className: PropTypes.string.isRequired,
-  fields: PropTypes.objectOf(PropTypes.object).isRequired,
-  hasErrors: PropTypes.bool.isRequired,
-  onSubmit: PropTypes.func.isRequired,
-  confirmClassModifier: PropTypes.string.isRequired,
+  onChange: func.isRequired,
+  className: string.isRequired,
+  fields: objectOf(object).isRequired,
+  hasErrors: bool.isRequired,
+  onSubmit: func.isRequired,
+  confirmClassModifier: string.isRequired,
 };
 
 export default SearchForm;

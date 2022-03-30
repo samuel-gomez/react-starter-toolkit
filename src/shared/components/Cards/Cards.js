@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { shape, arrayOf } from 'prop-types';
 import Card, { cardPropTypes } from 'shared/components/Cards/Card';
 import './Cards.scss';
 
@@ -12,8 +12,8 @@ const Cards = ({ items }) => (
 );
 
 export const cardsPropTypes = {
-  items: PropTypes.arrayOf(
-    PropTypes.shape({
+  items: arrayOf(
+    shape({
       ...cardPropTypes,
     }),
   ).isRequired,

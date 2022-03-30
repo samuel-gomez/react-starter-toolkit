@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { number, arrayOf, shape } from 'prop-types';
 import { NavBar } from '@axa-fr/react-toolkit-all';
 import { MenuItemPropTypes, createMenu } from './MenuItem';
 import './Menu.scss';
@@ -10,15 +10,15 @@ export const Menu = ({ menuItems, initPosition, isVisible, handleClick }) => (
   </NavBar>
 );
 
-export const menuItemPropType = PropTypes.arrayOf(
-  PropTypes.shape({
+export const menuItemPropType = arrayOf(
+  shape({
     ...MenuItemPropTypes,
   }),
 );
 
 export const MenuPropTypes = {
   menuItems: menuItemPropType.isRequired,
-  initPosition: PropTypes.number,
+  initPosition: number,
 };
 
 export const MenuDefaultProps = {

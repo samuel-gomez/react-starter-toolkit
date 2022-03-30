@@ -1,18 +1,13 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import { emptyFunction } from 'shared/testsUtils';
+import { renderWithWrapperStaticRouter } from 'shared/testsUtils';
 import ButtonPage from '../Button';
 
-const defaultProps = {
-  header: emptyFunction,
-  title: emptyFunction,
-  footer: emptyFunction,
-  menu: emptyFunction,
-};
+const defaultProps = {};
 
 describe('<ButtonPage/>', () => {
   it('Should render ButtonPage', () => {
-    const { asFragment } = render(<ButtonPage {...defaultProps} />);
+    const { asFragment } = renderWithWrapperStaticRouter(<ButtonPage {...defaultProps} />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

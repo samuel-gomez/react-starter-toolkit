@@ -1,6 +1,6 @@
 /* eslint-disable react/forbid-prop-types */
 import React from 'react';
-import PropTypes from 'prop-types';
+import { shape, string, arrayOf, func, oneOf, node, objectOf } from 'prop-types';
 import { Table } from '@axa-fr/react-toolkit-all';
 import HelpHover from 'shared/components/HelpInfo';
 import { NONE, DESCENDING, ASCENDING } from '../constants';
@@ -23,25 +23,25 @@ const Header = ({ headers, onSort, sorting, children, ariaLabel, ariaLabelLine }
   </thead>
 );
 
-export const HeadersPropTypes = PropTypes.arrayOf(
-  PropTypes.shape({
-    label: PropTypes.string.isRequired,
-    key: PropTypes.string.isRequired,
-    field: PropTypes.string,
+export const HeadersPropTypes = arrayOf(
+  shape({
+    label: string.isRequired,
+    key: string.isRequired,
+    field: string,
   }),
 );
 
 export const HeaderPropTypes = {
   headers: HeadersPropTypes.isRequired,
-  onSort: PropTypes.func,
-  sorting: PropTypes.shape({
-    field: PropTypes.string,
-    order: PropTypes.oneOf([NONE, ASCENDING, DESCENDING]),
+  onSort: func,
+  sorting: shape({
+    field: string,
+    order: oneOf([NONE, ASCENDING, DESCENDING]),
   }),
-  sortingInfo: PropTypes.objectOf(PropTypes.oneOf([NONE, ASCENDING, DESCENDING])),
-  children: PropTypes.node,
-  ariaLabel: PropTypes.string,
-  ariaLabelLine: PropTypes.string,
+  sortingInfo: objectOf(oneOf([NONE, ASCENDING, DESCENDING])),
+  children: node,
+  ariaLabel: string,
+  ariaLabelLine: string,
 };
 
 export const HeaderDefaultProps = {

@@ -1,17 +1,11 @@
 import React from 'react';
-import { WrapperStaticRouter, emptyFunction } from 'shared/testsUtils';
-import { render } from '@testing-library/react';
+import { renderWithWrapperStaticRouter } from 'shared/testsUtils';
 import Dashboard from '../Dashboard';
 
-const defaultProps = {
-  header: emptyFunction,
-  title: emptyFunction,
-  footer: emptyFunction,
-  menu: emptyFunction,
-};
+const defaultProps = {};
 describe('<Dashboard page/>', () => {
   it('Renders Dashboard page component without crashing', () => {
-    const { asFragment } = render(<Dashboard {...defaultProps} />, { wrapper: WrapperStaticRouter });
+    const { asFragment } = renderWithWrapperStaticRouter(<Dashboard {...defaultProps} />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

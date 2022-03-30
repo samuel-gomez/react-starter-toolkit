@@ -1,18 +1,12 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { emptyFunction } from 'shared/testsUtils';
+import { renderWithWrapperStaticRouter } from 'shared/testsUtils';
 import ModalPageContainer from '../Modal.container';
 
-const defaultProps = {
-  header: emptyFunction,
-  title: emptyFunction,
-  footer: emptyFunction,
-  menu: emptyFunction,
-};
+const defaultProps = {};
 
 describe('<ModalPageContainer/>', () => {
   it('Should render ModalPageContainer', () => {
-    const { baseElement } = render(<ModalPageContainer {...defaultProps} />);
+    const { baseElement } = renderWithWrapperStaticRouter(<ModalPageContainer {...defaultProps} />);
     expect(baseElement).toMatchSnapshot();
   });
 });

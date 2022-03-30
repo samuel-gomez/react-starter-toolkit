@@ -1,13 +1,8 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { emptyFunction } from 'shared/testsUtils';
+import { emptyFunction, renderWithWrapperStaticRouter } from 'shared/testsUtils';
 import SearchMembersContainer from '../SearchMembers.container';
 
 const defaultProps = {
-  header: emptyFunction,
-  title: emptyFunction,
-  footer: emptyFunction,
-  menu: emptyFunction,
   members: [],
   anomaly: null,
   loaderMode: 'none',
@@ -18,12 +13,12 @@ const defaultProps = {
 
 describe('<SearchMembersContainer/>', () => {
   it('Should render SearchMembersContainer', () => {
-    const { asFragment } = render(<SearchMembersContainer {...defaultProps} />);
+    const { asFragment } = renderWithWrapperStaticRouter(<SearchMembersContainer {...defaultProps} />);
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('Should render <SearchMembersContainer /> with one member', () => {
-    const { asFragment } = render(
+    const { asFragment } = renderWithWrapperStaticRouter(
       <SearchMembersContainer
         {...defaultProps}
         members={[

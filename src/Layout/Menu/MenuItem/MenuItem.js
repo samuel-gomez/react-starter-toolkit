@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { string } from 'prop-types';
 import { Link } from 'react-router-dom';
 import { NavBarItem } from '@axa-fr/react-toolkit-all';
 
@@ -27,8 +27,8 @@ export const MenuItem = ({ classModifier, className, children, url, label, ariaH
 );
 
 export const MenuItemPropTypes = {
-  url: PropTypes.string,
-  label: PropTypes.string,
+  url: string,
+  label: string,
 };
 
 export const MenuItemDefaultProps = {

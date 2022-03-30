@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { string, bool } from 'prop-types';
 import TitleBar from 'Layout/TitleBar';
 import './ResiliencePage.scss';
 
@@ -25,12 +25,12 @@ const ResiliencePage = ({ classComponent, title, message, subtitlePartOne, subti
 );
 
 export const resiliencePagePropTypes = {
-  title: PropTypes.string.isRequired,
-  message: PropTypes.string.isRequired,
-  subtitlePartOne: PropTypes.string,
-  subtitlePartTwo: PropTypes.string,
-  backhome: PropTypes.bool,
-  classComponent: PropTypes.string,
+  title: string.isRequired,
+  message: string.isRequired,
+  subtitlePartOne: string,
+  subtitlePartTwo: string,
+  backhome: bool,
+  classComponent: string,
 };
 
 export const resiliencePageDefaultProps = {

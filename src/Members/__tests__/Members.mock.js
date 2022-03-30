@@ -1,5 +1,3 @@
-import { emptyFunction } from 'shared/testsUtils';
-
 export const totals = { total: 1001, count: 50, skip: 50, max: 50 };
 
 export const oneMember = {
@@ -14,10 +12,6 @@ export const oneMember = {
 };
 
 export const defaultProps = {
-  header: emptyFunction,
-  title: emptyFunction,
-  footer: emptyFunction,
-  menu: emptyFunction,
   members: [],
   anomaly: null,
   loaderMode: 'none',

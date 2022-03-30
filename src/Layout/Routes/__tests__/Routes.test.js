@@ -1,94 +1,91 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import { MemoryRouter } from 'react-router-dom';
-import { render, act } from '@testing-library/react';
-import { LayoutMembers, LayoutDashboard, LayoutSlashDesignSystem, LayoutSearchMembers, LayoutModal, LayoutButton } from '../Routes';
-import Routes from '..';
+import { render } from '@testing-library/react';
+import UserProvider from 'App/UserProvider';
+import { renderWithWrapperStaticRouter } from 'shared/testsUtils';
+import Routes, { WithAuth } from '..';
 
-describe('Route', () => {
-  it('Should render Routes', () => {
-    const { asFragment } = render(
-      <MemoryRouter initialEntries={['/']}>
-        <Routes />
-      </MemoryRouter>,
-    );
+const defaultPropsMock = {
+  SlashDesignSystemCmpt: () => <div>SlashDesignSystemCmpt</div>,
+  MembersCmpt: () => <div>MembersCmpt</div>,
+  SearchMembersCmpt: () => <div>SearchMembersCmpt</div>,
+  DashboardCmpt: () => <div>DashboardCmpt</div>,
+  ModalCmpt: () => <div>ModalCmpt</div>,
+  ButtonCmpt: () => <div>ButtonCmpt</div>,
+  PageUnauthorizeCmpt: () => <div>PageUnauthorizeCmpt</div>,
+};
+
+const renderRoute = ({ role, name, route, defaultProps = defaultPropsMock }) => {
+  const useOidcUser = jest.fn().mockReturnValue({
+    oidcUser: {
+      name,
+      profile: {
+        member_of: [`CN=${role}`],
+      },
+    },
+  });
+
+  return render(
+    <MemoryRouter initialEntries={[route]}>
+      <UserProvider useOidcUser={useOidcUser} isEnabled>
+        <Routes {...defaultProps} />
+      </UserProvider>
+    </MemoryRouter>,
+  );
+};
+
+describe('<Routes />', () => {
+  it.each`
+    role  | name        | route
+    ${''} | ${'Samuel'} | ${'/'}
+    ${''} | ${'Samuel'} | ${'/members'}
+    ${''} | ${'Samuel'} | ${'/dashboard'}
+    ${''} | ${'Samuel'} | ${'/search-members'}
+    ${''} | ${'Samuel'} | ${'/demos/modal'}
+    ${''} | ${'Samuel'} | ${'/demos/button'}
+    ${''} | ${'Samuel'} | ${'/forbidden'}
+  `('Should render page when user profil is authorized, role: $role, name: $name, route: $route', ({ role, name, route }) => {
+    const { asFragment } = renderRoute({ role, name, route });
     expect(asFragment()).toMatchSnapshot();
   });
 
-  it('NotFound Page', () => {
-    const { asFragment } = render(
-      <MemoryRouter initialEntries={['/random']}>
-        <Routes />
-      </MemoryRouter>,
-    );
-
-    expect(asFragment()).toMatchSnapshot();
+  it.each`
+    role                   | name     | route
+    ${'user unauthorized'} | ${'sam'} | ${'/'}
+    ${'user unauthorized'} | ${'sam'} | ${'/members'}
+    ${'user unauthorized'} | ${'sam'} | ${'/dashboard'}
+    ${'user unauthorized'} | ${'sam'} | ${'/search-members'}
+    ${'user unauthorized'} | ${'sam'} | ${'/demos/modal'}
+    ${'user unauthorized'} | ${'sam'} | ${'/demos/button'}
+  `('Should render forbidden page when user profil is unauthorized, authRole: $authRole, route: $route', ({ role, name, route }) => {
+    const { getByText } = renderRoute({ role, name, route, defaultProps: { WithAuthCmpt: props => <WithAuth {...props} authorized={['admin']} /> } });
+    expect(getByText('403')).toBeInTheDocument();
   });
-});
 
-describe('LayoutDashboard', () => {
-  it('Render LayoutDashboard', () => {
-    const { asFragment } = render(
-      <MemoryRouter>
-        <LayoutDashboard />
-      </MemoryRouter>,
-    );
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
-
-describe('LayoutMembers', () => {
-  it('Render LayoutMembers', () => {
-    const { asFragment } = render(
-      <MemoryRouter>
-        <LayoutMembers />
-      </MemoryRouter>,
-    );
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
-
-describe('LayoutSlashDesignSystem', () => {
-  it('Render LayoutSlashDesignSystem', async () => {
-    await act(async () => {
-      const { asFragment } = render(
-        <MemoryRouter>
-          <LayoutSlashDesignSystem />
-        </MemoryRouter>,
-      );
-      expect(asFragment()).toMatchSnapshot();
-    });
-  });
-});
-
-describe('LayoutSearchMembers', () => {
-  it('Render LayoutSearchMembers', () => {
-    const { asFragment } = render(
-      <MemoryRouter>
-        <LayoutSearchMembers />
-      </MemoryRouter>,
-    );
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
-
-describe('LayoutModal', () => {
-  it('Render LayoutModal', () => {
-    const { asFragment } = render(
-      <MemoryRouter>
-        <LayoutModal />
-      </MemoryRouter>,
-    );
-    expect(asFragment()).toMatchSnapshot();
+  it.each`
+    route
+    ${'/no-exist-route'}
+  `('Should render 404 when election route: $route is not correct', ({ route }) => {
+    const { getByText } = renderRoute({ route, role: '', name: 'samuel', defaultProps: {} });
+    expect(getByText('404')).toBeInTheDocument();
   });
 });
 
-describe('LayoutButton', () => {
-  it('Render LayoutButton', () => {
-    const { asFragment } = render(
-      <MemoryRouter>
-        <LayoutButton />
-      </MemoryRouter>,
-    );
-    expect(asFragment()).toMatchSnapshot();
+describe('Render WithAuth', () => {
+  it.each`
+    authRole | authName
+    ${''}    | ${'Samuel'}
+  `('Should render RouteCmpt when user profile is authorized (authRole, authName)', ({ authRole, authName }) => {
+    const UserContextObjMock = createContext({ authRole, authName, isEnabled: true });
+    const Component = () => <p>component</p>;
+    const { getByText } = renderWithWrapperStaticRouter(<WithAuth UserContextObj={UserContextObjMock} Component={Component} />);
+    expect(getByText('component')).toBeInTheDocument();
+  });
+
+  it('Should render NavigateCmpt when user profile is unauthorized', () => {
+    const UserContextObjMock = createContext({ isEnabled: true });
+    const NavigateCmpt = () => <p>redirect component</p>;
+    const { getByText } = renderWithWrapperStaticRouter(<WithAuth UserContextObj={UserContextObjMock} NavigateCmpt={NavigateCmpt} />);
+    expect(getByText('redirect component')).toBeInTheDocument();
   });
 });

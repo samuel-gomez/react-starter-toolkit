@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { arrayOf, object, string } from 'prop-types';
 import Line from './Line';
 
 const Body = ({ items, actions, children, ariaLabel }) => (
@@ -12,8 +12,8 @@ const Body = ({ items, actions, children, ariaLabel }) => (
 );
 
 Body.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.object).isRequired,
-  ariaLabel: PropTypes.string,
+  items: arrayOf(object).isRequired,
+  ariaLabel: string,
 };
 
 Body.defaultProps = {

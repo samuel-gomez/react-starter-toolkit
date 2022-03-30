@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+import { func } from 'prop-types';
 import loaderSVG from 'shared/images/puff.svg';
 import './LasyImage.scss';
 
@@ -27,7 +27,7 @@ const LasyImage = ({ name, alt, useLoadImageFn, ...rest }) => {
 };
 
 export const menuEnhancedPropTypes = {
-  useLoadImageFn: PropTypes.func,
+  useLoadImageFn: func,
 };
 
 export const menuEnhancedDefaultProps = {

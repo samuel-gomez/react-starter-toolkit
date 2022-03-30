@@ -1,5 +1,5 @@
 import React, { createContext } from 'react';
-import PropTypes from 'prop-types';
+import { func } from 'prop-types';
 import { LoaderModes } from 'shared/components/Loader';
 import setLoaderMode from 'shared/helpers/setLoaderMode';
 import SearchMembers from './SearchMembers';
@@ -25,8 +25,8 @@ export const SearchMembersEnhanced = ({ useSearchMembersFn, setLoaderModeFn, ...
 };
 
 SearchMembersEnhanced.propTypes = {
-  useSearchMembersFn: PropTypes.func,
-  setLoaderModeFn: PropTypes.func,
+  useSearchMembersFn: func,
+  setLoaderModeFn: func,
 };
 
 SearchMembersEnhanced.defaultProps = {

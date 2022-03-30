@@ -1,3 +1,3 @@
-export const TITLE_BAR = 'Accueil';
-export const TITLE = 'Tableau de bord';
-export const ROUTE_URL_DASHBOARD = '/';
+export const TITLE_BAR = 'Empty page';
+export const TITLE = 'Page title';
+export const ROUTE_URL_DASHBOARD = '/dashboard';

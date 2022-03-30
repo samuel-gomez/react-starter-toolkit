@@ -1,20 +1,41 @@
 import React from 'react';
-import { Navigate } from 'react-router-dom';
+import { node, string, bool, shape } from 'prop-types';
+import WithClassNameModifier from 'shared/helpers/WithClassNameModifier';
 import Header from 'Layout/Header';
 import Footer from 'Layout/Footer';
 import TitleBar from 'Layout/TitleBar';
 import Menu from 'Layout/Menu';
 
-export const renderTitle = ({ children, ...propsTitle }) => <TitleBar {...propsTitle}>{children}</TitleBar>;
-export const renderHeader = propsHeader => <Header {...propsHeader} />;
-export const renderFooter = () => <Footer />;
-export const renderMenu = () => <Menu />;
+const Layout = WithClassNameModifier(({ className, children, propsHeader, propsMenu, propsTitle, propsFooter, disabled }) => (
+  <>
+    {!disabled.header && <Header {...propsHeader} />}
+    {!disabled.menu && <Menu {...propsMenu} />}
+    {!disabled.title && <TitleBar {...propsTitle} />}
+    <section className={className}>{children}</section>
+    {!disabled.footer && <Footer {...propsFooter} />}
+  </>
+));
 
-const Layout = (Component, props, NavigateCmpt = Navigate) =>
-  props?.authName === 'Alice Smith' ? (
-    <NavigateCmpt to="/forbidden" />
-  ) : (
-    <Component {...props} menu={renderMenu} header={renderHeader} footer={renderFooter} title={renderTitle} />
-  );
+Layout.propTypes = {
+  children: node,
+  className: string,
+  disabled: shape({
+    header: bool,
+    menu: bool,
+    title: bool,
+    footer: bool,
+  }),
+};
+
+Layout.defaultProps = {
+  className: 'af-main container',
+  children: null,
+  disabled: {
+    header: false,
+    menu: false,
+    title: false,
+    footer: false,
+  },
+};
 
 export default Layout;

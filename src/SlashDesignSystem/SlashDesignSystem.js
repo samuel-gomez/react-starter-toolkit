@@ -1,37 +1,34 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { arrayOf, shape, string } from 'prop-types';
+import Layout from 'Layout';
 import Cards from 'shared/components/Cards';
 import { cardPropTypes } from 'shared/components/Cards/Card';
 import { COMPONENTS, TITLE_BAR, TITLE } from './constants';
 
-const SlashDesignSystemPage = ({ header, footer, title, menu, components }) => (
-  <>
-    {header()}
-    {menu()}
-    {title({ title: TITLE_BAR })}
-    <div className="af-main container">
-      <h2 className="af-title--content">{TITLE}</h2>
-      <Cards items={components} />
-    </div>
-    {footer()}
-  </>
+const SlashDesignSystemPage = ({ titleBar, title, components }) => (
+  <Layout propsTitle={{ title: titleBar }}>
+    <h2 className="af-title--content">{title}</h2>
+    <Cards items={components} />
+  </Layout>
 );
 
-export const formPagePropTypes = {
-  components: PropTypes.arrayOf(
-    PropTypes.shape({
+export const slashDesignSystemPagePropTypes = {
+  components: arrayOf(
+    shape({
       ...cardPropTypes,
     }),
   ),
+  titleBar: string,
+  title: string,
 };
 
-export const formPageDefaultProps = {
+export const slashDesignSystemPageDefaultProps = {
   components: COMPONENTS,
+  titleBar: TITLE_BAR,
+  title: TITLE,
 };
 
-SlashDesignSystemPage.propTypes = formPagePropTypes;
-SlashDesignSystemPage.defaultProps = formPageDefaultProps;
-
-SlashDesignSystemPage.propTypes = formPagePropTypes;
+SlashDesignSystemPage.propTypes = slashDesignSystemPagePropTypes;
+SlashDesignSystemPage.defaultProps = slashDesignSystemPageDefaultProps;
 
 export default SlashDesignSystemPage;

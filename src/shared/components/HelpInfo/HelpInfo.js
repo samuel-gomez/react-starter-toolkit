@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { node, string } from 'prop-types';
 import { Popover } from '@axa-fr/react-toolkit-all';
 import './HelpInfo.scss';
 
@@ -14,10 +14,10 @@ const HelpInfo = ({ children, content, isDisabled, mode, classModifier }) =>
   );
 
 HelpInfo.propTypes = {
-  children: PropTypes.node.isRequired,
-  content: PropTypes.node,
-  mode: PropTypes.string,
-  classModifier: PropTypes.string,
+  children: node.isRequired,
+  content: node,
+  mode: string,
+  classModifier: string,
 };
 
 HelpInfo.defaultProps = {

@@ -1,6 +1,6 @@
 /* eslint no-console: 0 */
 import React from 'react';
-import PropTypes from 'prop-types';
+import { oneOf, string } from 'prop-types';
 import { MODES, TEXTS } from './constants';
 import Loader from './Loader';
 
@@ -11,9 +11,9 @@ const LoaderContainer = ({ classModifier, text, mode, ...rest }) => {
 };
 
 const LoaderContainerPropTypes = {
-  mode: PropTypes.oneOf(Object.keys(MODES)),
-  text: PropTypes.string,
-  classModifier: PropTypes.string,
+  mode: oneOf(Object.keys(MODES)),
+  text: string,
+  classModifier: string,
 };
 
 const LoaderContainerDefaultProps = {

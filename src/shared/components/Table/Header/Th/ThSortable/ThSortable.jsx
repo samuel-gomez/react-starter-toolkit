@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { func, node, string } from 'prop-types';
 import WithClassNameModifier from 'shared/helpers/WithClassNameModifier';
 
 const ThSortable = WithClassNameModifier(({ className, children, sort, sortingIcon }) => (
@@ -10,10 +10,10 @@ const ThSortable = WithClassNameModifier(({ className, children, sort, sortingIc
 ));
 
 const ThSortablePropTypes = {
-  sort: PropTypes.func,
-  className: PropTypes.string,
-  sortingIcon: PropTypes.node,
-  children: PropTypes.node,
+  sort: func,
+  className: string,
+  sortingIcon: node,
+  children: node,
 };
 
 const ThSortableDefaultProps = {

@@ -1,5 +1,6 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { func } from 'prop-types';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import PageNotFound from 'NotFound';
 import PageUnauthorize from 'Unauthorize';
 import Members from 'Members';
@@ -8,27 +9,56 @@ import SlashDesignSystem from 'SlashDesignSystem';
 import Modal from 'Demos/Modal';
 import Button from 'Demos/Button';
 import Dashboard from 'Dashboard';
-import Layout from 'Layout';
 import ROUTE_URL from 'Layout/constants';
+import { UserContext } from 'App/UserProvider';
 
-export const LayoutDashboard = props => Layout(Dashboard, props);
-export const LayoutMembers = props => Layout(Members, props);
-export const LayoutSearchMembers = props => Layout(SearchMembers, props);
-export const LayoutSlashDesignSystem = props => Layout(SlashDesignSystem, props);
-export const LayoutModal = props => Layout(Modal, props);
-export const LayoutButton = props => Layout(Button, props);
+export const WithAuth = ({ Component, NavigateCmpt = Navigate, authorized = [''], UserContextObj = UserContext }) => {
+  const userContext = useContext(UserContextObj);
+  return authorized.includes(userContext?.authRole) || !userContext.isEnabled ? <Component /> : <NavigateCmpt to={ROUTE_URL.UNAUTHORIZE} />;
+};
 
-const RoutesCmpt = () => (
+const RoutesCmpt = ({
+  SlashDesignSystemCmpt,
+  DashboardCmpt,
+  MembersCmpt,
+  SearchMembersCmpt,
+  ModalCmpt,
+  ButtonCmpt,
+  PageUnauthorizeCmpt,
+  WithAuthCmpt,
+}) => (
   <Routes>
-    <Route exact path={ROUTE_URL.DASHBOARD} element={<LayoutDashboard />} />
-    <Route exact path={ROUTE_URL.MEMBERS} element={<LayoutMembers />} />
-    <Route exact path={ROUTE_URL.SEARCHMEMBERS} element={<LayoutSearchMembers />} />
-    <Route exact path={ROUTE_URL.SLASH} element={<LayoutSlashDesignSystem />} />
-    <Route exact path={ROUTE_URL.MODAL} element={<LayoutModal />} />
-    <Route exact path={ROUTE_URL.BUTTON} element={<LayoutButton />} />
-    <Route exact path={ROUTE_URL.UNAUTHORIZE} element={<PageUnauthorize />} />
+    <Route exact path={ROUTE_URL.SLASH} element={<WithAuthCmpt Component={SlashDesignSystemCmpt} />} />
+    <Route exact path={ROUTE_URL.MEMBERS} element={<WithAuthCmpt Component={MembersCmpt} />} />
+    <Route exact path={ROUTE_URL.SEARCHMEMBERS} element={<WithAuthCmpt Component={SearchMembersCmpt} />} />
+    <Route exact path={ROUTE_URL.MODAL} element={<WithAuthCmpt Component={ModalCmpt} />} />
+    <Route exact path={ROUTE_URL.BUTTON} element={<WithAuthCmpt Component={ButtonCmpt} />} />
+    <Route exact path={ROUTE_URL.DASHBOARD} element={<WithAuthCmpt Component={DashboardCmpt} />} />
+    <Route exact path={ROUTE_URL.UNAUTHORIZE} element={<PageUnauthorizeCmpt />} />
     <Route path="*" element={<PageNotFound />} />
   </Routes>
 );
+
+RoutesCmpt.propTypes = {
+  SlashDesignSystemCmpt: func,
+  DashboardCmpt: func,
+  MembersCmpt: func,
+  SearchMembersCmpt: func,
+  ModalCmpt: func,
+  ButtonCmpt: func,
+  PageUnauthorizeCmpt: func,
+  WithAuthCmpt: func,
+};
+
+RoutesCmpt.defaultProps = {
+  SlashDesignSystemCmpt: SlashDesignSystem,
+  DashboardCmpt: Dashboard,
+  MembersCmpt: Members,
+  SearchMembersCmpt: SearchMembers,
+  ModalCmpt: Modal,
+  ButtonCmpt: Button,
+  PageUnauthorizeCmpt: PageUnauthorize,
+  WithAuthCmpt: WithAuth,
+};
 
 export default RoutesCmpt;

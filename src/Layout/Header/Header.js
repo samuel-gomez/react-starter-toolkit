@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { string, arrayOf, shape } from 'prop-types';
 import { Header, Name, User, Infos } from '@axa-fr/react-toolkit-all';
 import logo from 'shared/images/slash-logo.svg';
 import Skeleton from 'shared/components/Skeleton';
@@ -23,17 +23,17 @@ export const HeaderApp = ({ infos, title, subtitle, link, authName, authRole, an
 );
 
 HeaderApp.propTypes = {
-  title: PropTypes.string.isRequired,
-  subtitle: PropTypes.string.isRequired,
-  link: PropTypes.string,
-  infos: PropTypes.arrayOf(
-    PropTypes.shape({
-      word: PropTypes.string,
-      definition: PropTypes.string,
+  title: string.isRequired,
+  subtitle: string.isRequired,
+  link: string,
+  infos: arrayOf(
+    shape({
+      word: string,
+      definition: string,
     }),
   ),
-  authName: PropTypes.string,
-  authRole: PropTypes.string,
+  authName: string,
+  authRole: string,
 };
 
 HeaderApp.defaultProps = {

@@ -5,7 +5,7 @@ export const CLASS_BODY_MENU_OPEN = 'af-menu-open';
 const MENU_ITEMS = [
   {
     label: 'Accueil',
-    url: ROUTE_URL.DASHBOARD,
+    url: ROUTE_URL.SLASH,
   },
   {
     label: 'Membres',
@@ -14,10 +14,6 @@ const MENU_ITEMS = [
   {
     label: 'Rechercher',
     url: ROUTE_URL.SEARCHMEMBERS,
-  },
-  {
-    label: 'Slash DS',
-    url: ROUTE_URL.SLASH,
   },
   {
     label: 'Demos',
@@ -35,6 +31,10 @@ const MENU_ITEMS = [
   {
     label: 'Pages',
     children: [
+      {
+        label: 'Empty page',
+        url: ROUTE_URL.DASHBOARD,
+      },
       {
         label: 'Not found',
         url: ROUTE_URL.NOTFOUND,

@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { func, string, bool } from 'prop-types';
 import { Button } from '@axa-fr/react-toolkit-all';
 import Loader from 'shared/components/Loader';
 import Icons from 'shared/components/Icons';
@@ -23,9 +23,9 @@ const DownloadLink = ({ loaderMode, onDownload, isDisabled }) => (
 );
 
 DownloadLink.propTypes = {
-  onDownload: PropTypes.func.isRequired,
-  loaderMode: PropTypes.string.isRequired,
-  isDisabled: PropTypes.bool,
+  onDownload: func.isRequired,
+  loaderMode: string.isRequired,
+  isDisabled: bool,
 };
 
 DownloadLink.defaultProps = {

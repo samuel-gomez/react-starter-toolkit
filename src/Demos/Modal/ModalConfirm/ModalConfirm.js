@@ -1,18 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { bool, func, string } from 'prop-types';
 import { Alert } from '@axa-fr/react-toolkit-all';
 import Modal from '@axa-fr/react-toolkit-modal-default';
 import { ModalCommonHeader, ModalCommonBody, ModalCommonFooter } from 'shared/components/ModalCommon';
-
-export const ModalConfirmPropTypes = {
-  isOpen: PropTypes.bool.isRequired,
-  onCancel: PropTypes.func.isRequired,
-  classModifier: PropTypes.string,
-};
-
-export const ModalConfirmDefaultProps = {
-  classModifier: 'lg',
-};
 
 const ModalConfirm = ({ classModifier, isOpen, onCancel }) => (
   <Modal isOpen={isOpen} onOutsideTap={onCancel} classModifier={classModifier}>
@@ -24,6 +14,16 @@ const ModalConfirm = ({ classModifier, isOpen, onCancel }) => (
     <ModalCommonFooter cancelLabel="Annuler" onCancel={onCancel} onSubmit={onCancel} confirmLabel="Valider" confirmClassModifier="" />
   </Modal>
 );
+
+export const ModalConfirmPropTypes = {
+  isOpen: bool.isRequired,
+  onCancel: func.isRequired,
+  classModifier: string,
+};
+
+export const ModalConfirmDefaultProps = {
+  classModifier: 'lg',
+};
 
 ModalConfirm.propTypes = ModalConfirmPropTypes;
 ModalConfirm.defaultProps = ModalConfirmDefaultProps;

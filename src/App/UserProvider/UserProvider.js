@@ -31,9 +31,9 @@ const extractDataFromOAuthToken = (oidcUser, getAuthNameFn = getAuthName, getAut
   authUid: getAuthUidFn({ oidcUser }),
 });
 
-const UserProvider = ({ children, useOidcUser }) => {
+const UserProvider = ({ children, useOidcUser, ...rest }) => {
   const { oidcUser } = useOidcUser();
-  return <UserContextProvider value={{ ...extractDataFromOAuthToken(oidcUser) }}>{children}</UserContextProvider>;
+  return <UserContextProvider value={{ ...extractDataFromOAuthToken(oidcUser), ...rest }}>{children}</UserContextProvider>;
 };
 
 export default UserProvider;

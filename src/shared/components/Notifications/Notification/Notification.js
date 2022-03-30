@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { string, func } from 'prop-types';
 import { Alert } from '@axa-fr/react-toolkit-all';
 import { ALERT_ICON } from '../constants';
 
@@ -10,12 +10,12 @@ const Notification = ({ id, title, detail, onClose, classModifier, type }) => (
 );
 
 export const notificationPropTypes = {
-  id: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  classModifier: PropTypes.string,
-  detail: PropTypes.string,
-  type: PropTypes.string,
-  onClose: PropTypes.func,
+  id: string.isRequired,
+  title: string.isRequired,
+  classModifier: string,
+  detail: string,
+  type: string,
+  onClose: func,
 };
 
 export const notificationDefaultProps = {

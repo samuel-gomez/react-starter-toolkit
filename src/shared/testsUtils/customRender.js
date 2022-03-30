@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
+import { StaticRouter } from 'react-router-dom/server';
 import FetchProvider from 'App/FetchProvider';
 
 const API_URL = 'https://react-starter-toolkit-api.netlify.app/api/';
@@ -16,7 +17,7 @@ const MockProviders =
         }}
         useOidcAccessToken={useOidcAccessToken}
       >
-        {children}
+        <StaticRouter context={{}}>{children}</StaticRouter>
       </FetchProvider>
     );
   };

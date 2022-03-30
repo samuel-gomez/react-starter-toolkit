@@ -1,25 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import { string, shape, number, node } from 'prop-types';
 import { Alert } from '@axa-fr/react-toolkit-all';
 import Modal from '@axa-fr/react-toolkit-modal-default';
 import './ModalCommon.scss';
-
-const propTypes = {
-  icon: PropTypes.string,
-  anomaly: PropTypes.shape({
-    code: PropTypes.number,
-    detail: PropTypes.string,
-    label: PropTypes.string,
-  }),
-  title: PropTypes.node,
-  children: PropTypes.node,
-};
-const defaultProps = {
-  anomaly: null,
-  title: '',
-  children: null,
-  icon: '',
-};
 
 const ModalCommonBody = ({ icon, title, anomaly, children }) => (
   <Modal.Body>
@@ -33,6 +16,24 @@ const ModalCommonBody = ({ icon, title, anomaly, children }) => (
     {children}
   </Modal.Body>
 );
+
+const propTypes = {
+  icon: string,
+  anomaly: shape({
+    code: number,
+    detail: string,
+    label: string,
+  }),
+  title: node,
+  children: node,
+};
+
+const defaultProps = {
+  anomaly: null,
+  title: '',
+  children: null,
+  icon: '',
+};
 
 ModalCommonBody.propTypes = propTypes;
 ModalCommonBody.defaultProps = defaultProps;

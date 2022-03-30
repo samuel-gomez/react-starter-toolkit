@@ -10,9 +10,7 @@ exports[`Component <TitleBarEnhanced /> Should className contain "af-title-bar--
     >
       <h1
         class="af-title-bar__title"
-      >
-        title
-      </h1>
+      />
       <a
         class="btn af-btn--circle"
         href="/"
@@ -37,9 +35,7 @@ exports[`Component <TitleBarEnhanced /> Should className contain "af-title-bar--
     >
       <h1
         class="af-title-bar__title"
-      >
-        title
-      </h1>
+      />
     </div>
   </div>
 </DocumentFragment>
@@ -55,9 +51,7 @@ exports[`Component <TitleBarEnhanced /> Should render TitleBarEnhanced 1`] = `
     >
       <h1
         class="af-title-bar__title"
-      >
-        title
-      </h1>
+      />
     </div>
   </div>
 </DocumentFragment>
