@@ -1,6 +1,5 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import '@testing-library/jest-dom';
 import TdContainer from '../Td.container';
 
 const defaultProps = {
