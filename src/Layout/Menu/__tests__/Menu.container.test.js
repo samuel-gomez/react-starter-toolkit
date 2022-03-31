@@ -1,6 +1,5 @@
 import React from 'react';
 import { screen, fireEvent } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect';
 import { renderWithWrapperStaticRouter } from 'shared/testsUtils';
 import withUser from 'shared/hoc/withUser';
 import MenuEnhanced, { setPositionInit, setToggleMenu } from '../Menu.container';

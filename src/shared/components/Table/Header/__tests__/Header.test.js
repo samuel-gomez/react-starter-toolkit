@@ -1,6 +1,5 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import '@testing-library/jest-dom';
 import Header from '../Header';
 
 const defaultProps = {
@@ -40,6 +39,7 @@ describe('Header', () => {
     const { asFragment } = renderWithContainer(() => <Header {...defaultProps} headers={headers} sorting={sorting} />);
     expect(asFragment()).toMatchSnapshot();
   });
+
   it('Render <Header/> with 1 header and 1 item and child Header', () => {
     const { asFragment } = renderWithContainer(() => (
       <Header {...defaultProps} headers={headers}>
