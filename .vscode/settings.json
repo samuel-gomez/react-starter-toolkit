@@ -6,5 +6,8 @@
   "sonarlint.connectedMode.project": {
     "connectionId": "SonarCloud",
     "projectKey": "samuel-gomez_react-starter-toolkit"
+  },
+  "[feature]": {
+    "editor.defaultFormatter": "alexkrechik.cucumberautocomplete"
   }
 }

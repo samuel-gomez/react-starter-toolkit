@@ -30,27 +30,27 @@ describe('SortingIcon', () => {
 });
 
 describe('toggleOrder', () => {
-  it('Should return true when receive false', () => {
-    const result = toggleOrder(false);
-    expect(result).toEqual(true);
+  it('Should return 1 when receive -1', () => {
+    const result = toggleOrder(-1);
+    expect(result).toEqual(1);
   });
 
-  it('Should return false when receive true', () => {
-    const result = toggleOrder(true);
-    expect(result).toEqual(false);
+  it('Should return -1 when receive 1', () => {
+    const result = toggleOrder(1);
+    expect(result).toEqual(-1);
   });
 });
 
 describe('setOrder', () => {
   it.each`
-    field       | prevField   | order    | expected
-    ${'champ1'} | ${'champ2'} | ${true}  | ${true}
-    ${'champ1'} | ${'champ2'} | ${false} | ${true}
-    ${'champ1'} | ${'champ1'} | ${true}  | ${false}
-    ${'champ1'} | ${'champ1'} | ${false} | ${true}
-    ${null}     | ${'champ1'} | ${false} | ${true}
-    ${null}     | ${null}     | ${false} | ${true}
-    ${'champ1'} | ${null}     | ${false} | ${true}
+    field       | prevField   | order | expected
+    ${'champ1'} | ${'champ2'} | ${1}  | ${1}
+    ${'champ1'} | ${'champ2'} | ${-1} | ${1}
+    ${'champ1'} | ${'champ1'} | ${1}  | ${-1}
+    ${'champ1'} | ${'champ1'} | ${-1} | ${1}
+    ${null}     | ${'champ1'} | ${-1} | ${1}
+    ${null}     | ${null}     | ${-1} | ${1}
+    ${'champ1'} | ${null}     | ${-1} | ${1}
   `('Should return $expected when field: $field, prevField: $prevField, order: $order', ({ field, prevField, order, expected }) => {
     const result = setOrder({ field, prevField, order });
     expect(result).toEqual(expected);
@@ -59,13 +59,13 @@ describe('setOrder', () => {
 
 describe('toggleSorting', () => {
   it.each`
-    field       | sorting                              | expected
-    ${'champ1'} | ${{ field: 'champ2', order: false }} | ${{ field: 'champ1', order: true }}
-    ${'champ1'} | ${{ field: 'champ2', order: true }}  | ${{ field: 'champ1', order: true }}
-    ${'champ2'} | ${{ field: 'champ2', order: true }}  | ${{ field: 'champ2', order: false }}
-    ${null}     | ${{ field: 'champ2', order: true }}  | ${{ field: null, order: true }}
-    ${'champ1'} | ${{ field: null, order: true }}      | ${{ field: 'champ1', order: true }}
-    ${'champ1'} | ${{ field: null, order: null }}      | ${{ field: 'champ1', order: true }}
+    field       | sorting                           | expected
+    ${'champ1'} | ${{ field: 'champ2', order: -1 }} | ${{ field: 'champ1', order: 1 }}
+    ${'champ1'} | ${{ field: 'champ2', order: 1 }}  | ${{ field: 'champ1', order: 1 }}
+    ${'champ2'} | ${{ field: 'champ2', order: 1 }}  | ${{ field: 'champ2', order: -1 }}
+    ${null}     | ${{ field: 'champ2', order: 1 }}  | ${{ field: null, order: 1 }}
+    ${'champ1'} | ${{ field: null, order: 1 }}      | ${{ field: 'champ1', order: 1 }}
+    ${'champ1'} | ${{ field: null, order: null }}   | ${{ field: 'champ1', order: 1 }}
   `('Should return $expected when field: $field, sorting: $sorting', ({ field, sorting, expected }) => {
     const result = toggleSorting({ field, sorting });
     expect(result).toEqual(expected);

@@ -7,6 +7,7 @@ export const UserContext = createContext({
   authRole: '',
   authUid: '',
 });
+UserContext.displayName = 'UserContext';
 export const UserContextProvider = UserContext.Provider;
 
 const NON_CONNECTE = 'Non Connecté';

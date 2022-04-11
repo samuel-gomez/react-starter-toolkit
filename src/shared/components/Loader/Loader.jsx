@@ -1,6 +1,6 @@
 import React from 'react';
 import { string, node } from 'prop-types';
-import WithClassNameModifier from 'shared/helpers/WithClassNameModifier';
+import WithClassNameModifier from 'shared/hoc/WithClassNameModifier';
 import './Loader.scss';
 
 const Loader = WithClassNameModifier(({ className, isVisible, message, children }) => (

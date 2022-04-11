@@ -3,6 +3,7 @@ import { node, func } from 'prop-types';
 import Notifications, { useNotifications } from 'shared/components/Notifications';
 
 export const NotificationContext = createContext({ addNotification: null });
+NotificationContext.displayName = 'NotificationContext';
 const { Provider: NotificationContextProvider } = NotificationContext;
 
 const NotificationProvider = ({ children, useNotificationsFn }) => {

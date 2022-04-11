@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, createContext } from 'react';
 
 const NODE_ENV = process.env.REACT_APP_NODE_ENV || process.env.NODE_ENV;
 
-export const EnvironmentContext = React.createContext();
+export const EnvironmentContext = createContext();
+EnvironmentContext.displayName = 'EnvironmentContext';
+
 const { Provider } = EnvironmentContext;
 
 const initState = {

@@ -1,1 +1,1 @@
-export { default, SearchMembersContext } from './SearchMembers.container';
+export { default } from './SearchMembers.container';

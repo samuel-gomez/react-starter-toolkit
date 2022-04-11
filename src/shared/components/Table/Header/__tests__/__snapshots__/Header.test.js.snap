@@ -8,7 +8,7 @@ exports[`Header Render <Header/> with 1 header 1`] = `
     label
   </span>
   <span
-    class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-arrow-xs-up"
+    class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-undefined"
   />
 </DocumentFragment>
 `;

@@ -1,4 +1,4 @@
-import React, { useContext, createContext } from 'react';
+import React, { useContext } from 'react';
 import { render } from '@testing-library/react';
 import { emptyFunction } from 'shared/testsUtils';
 import FetchProvider, { FetchContext, setFetchCustom } from '../FetchProvider';

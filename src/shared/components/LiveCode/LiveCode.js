@@ -2,7 +2,7 @@ import React from 'react';
 import { string, objectOf, oneOfType, func, object, array } from 'prop-types';
 import dracula from 'prism-react-renderer/themes/dracula';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';
-import WithClassNameModifier from 'shared/helpers/WithClassNameModifier';
+import WithClassNameModifier from 'shared/hoc/WithClassNameModifier';
 import './livecode.scss';
 
 const LiveCode = WithClassNameModifier(({ className, code, scope }) => (

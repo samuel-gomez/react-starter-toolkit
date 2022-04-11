@@ -1,37 +1,35 @@
-import React, { createContext } from 'react';
+import React from 'react';
 import { func } from 'prop-types';
-import { LoaderModes } from 'shared/components/Loader';
 import setLoaderMode from 'shared/helpers/setLoaderMode';
 import SearchMembers from './SearchMembers';
-import { useSearchMembers, initStateSearch } from './SearchMembers.hook';
+import { useSearchMembers, useFormSearchMembers } from './SearchMembers.hook';
+import { SERVICE_NAME } from './constants';
 
-export const SearchMembersContext = createContext({ stateSearch: initStateSearch });
-const { Provider: SearchMembersProvider } = SearchMembersContext;
-
-export const SearchMembersEnhanced = ({ useSearchMembersFn, setLoaderModeFn, ...rest }) => {
-  const { anomaly, isLoading, members, submitSearch, stateSearch } = useSearchMembersFn({});
+export const SearchMembersEnhanced = ({ useSearchMembersFn, setLoaderModeFn, useFormSearchMembersFn, ...rest }) => {
+  const { submitFormSearchMembers, stateFormSearchMembers } = useFormSearchMembersFn({});
+  const { anomaly, isLoading, searchMembers } = useSearchMembersFn({ stateFormSearchMembers });
 
   return (
-    <SearchMembersProvider value={{ stateSearch }}>
-      <SearchMembers
-        {...rest}
-        members={members}
-        loaderMode={setLoaderModeFn({ isLoading, LoaderModes })}
-        anomaly={anomaly}
-        submitSearch={submitSearch}
-      />
-    </SearchMembersProvider>
+    <SearchMembers
+      {...rest}
+      members={searchMembers}
+      loaderMode={setLoaderModeFn({ isLoading })}
+      anomaly={anomaly[SERVICE_NAME]}
+      submitSearch={submitFormSearchMembers}
+    />
   );
 };
 
 SearchMembersEnhanced.propTypes = {
   useSearchMembersFn: func,
   setLoaderModeFn: func,
+  useFormSearchMembersFn: func,
 };
 
 SearchMembersEnhanced.defaultProps = {
   useSearchMembersFn: useSearchMembers,
   setLoaderModeFn: setLoaderMode,
+  useFormSearchMembersFn: useFormSearchMembers,
 };
 
 export default SearchMembersEnhanced;
