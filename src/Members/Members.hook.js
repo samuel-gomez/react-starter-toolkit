@@ -1,36 +1,32 @@
-import { useEffect, useReducer, useCallback, useState, useContext } from 'react';
+import { useCallback, useState, useMemo } from 'react';
 import { setDate } from 'shared/helpers/formatDate';
-import fetchData from 'shared/helpers/fetchData';
 import { ASCENDING } from 'shared/components/Table';
 import { setDisplay } from 'shared/helpers/formatDataTable';
+import { getApi, setInitialState, useFetchData } from 'shared/helpers/fetchHook';
 import setAnomalyEmptyItems from 'shared/helpers/setAnomalyEmptyItems';
-import { FetchContext } from 'App/FetchProvider';
-import findMembers from './Members.service';
-import { FETCH_MEMBERS } from './constants';
+import { SERVICE_NAME } from './constants';
 
-const initState = {
-  isLoading: false,
-  members: [],
-  anomaly: null,
+export const INITIAL_STATE = setInitialState(SERVICE_NAME, {
   pagination: {
     total: 0,
     currentPage: 1,
     numberPages: 1,
   },
-};
+  data: [],
+});
 
-const initStateSorting = {
+const INITIAL_STATE_SORTING = {
   field: 'firstname',
   order: ASCENDING,
 };
 
-const initStatePaging = {
+const INITIAL_STATE_PAGING = {
   numberItems: 50,
   page: 1,
 };
 
 export const setNumberPages = ({ total = 1, max = 1 }) => Math.ceil(max >= total ? 1 : Number(total / max) - 1);
-export const setCurrentPage = ({ max, skip }) => Number(skip / max) || 1;
+export const setCurrentPage = ({ max, skip }) => (+max !== 0 && Math.ceil(Number(skip / max))) || 1;
 
 export const setPagination = ({ total, skip, max, setCurrentPageFn = setCurrentPage, setNumberPagesfn = setNumberPages }) => ({
   total: Number(total),
@@ -48,61 +44,24 @@ export const computeInfos = ({ members = [], setDateFn = setDate, setDisplayFn =
     ...setDisplayFn({ sexe }),
   }));
 
-export const setStateMembersLoading = ({ state }) => ({
-  ...state,
-  isLoading: true,
-});
-
-export const setStateMembersSuccess = ({
+export const computeSuccess = ({
+  responseBody,
   state,
-  payload,
-  computeInfosFn = computeInfos,
   setAnomalyEmptyItemsFn = setAnomalyEmptyItems,
+  computeInfosFn = computeInfos,
   setPaginationFn = setPagination,
 }) => ({
-  ...state,
-  isLoading: false,
-  anomaly: setAnomalyEmptyItemsFn(payload?.members?.responseBody?.data),
-  members: computeInfosFn({
-    members: payload?.members?.responseBody?.data,
-  }),
-  pagination: {
-    ...state?.pagination,
-    ...setPaginationFn(payload?.members?.responseBody?.totals),
+  anomaly: {
+    [SERVICE_NAME]: setAnomalyEmptyItemsFn(responseBody?.data),
+  },
+  [SERVICE_NAME]: {
+    data: computeInfosFn({ [SERVICE_NAME]: responseBody?.data }),
+    pagination: {
+      ...state?.pagination,
+      ...setPaginationFn(responseBody?.totals),
+    },
   },
 });
-
-export const setStateMembersFailure = ({ state, payload }) => ({
-  ...state,
-  isLoading: false,
-  anomaly: payload.members,
-});
-
-export const dataFetchReducer = (
-  state,
-  {
-    type,
-    payload,
-    setStateMembersLoadingFn = setStateMembersLoading,
-    setStateMembersSuccessFn = setStateMembersSuccess,
-    setStateMembersFailureFn = setStateMembersFailure,
-  },
-) => {
-  switch (type) {
-    case FETCH_MEMBERS.INIT:
-      return setStateMembersLoadingFn({ state });
-    case FETCH_MEMBERS.SUCCESS:
-      return setStateMembersSuccessFn({ state, payload });
-    case FETCH_MEMBERS.FAILURE:
-      return setStateMembersFailureFn({ state, payload });
-    default:
-      return state;
-  }
-};
-
-export const setMembersInit = dispatch => () => dispatch({ type: FETCH_MEMBERS.INIT });
-export const setMembersError = dispatch => payload => dispatch({ type: FETCH_MEMBERS.FAILURE, payload });
-export const setMembersSuccess = dispatch => payload => dispatch({ type: FETCH_MEMBERS.SUCCESS, payload });
 
 export const setPaging = paging => prevPaging =>
   prevPaging?.numberItems !== paging?.numberItems
@@ -117,22 +76,17 @@ export const setOnChangePaging = ({ setStateFormPaging, paging, setPagingFn = se
 };
 
 export const useMembers = ({
-  initStateCt = initState,
-  initStateSortingCt = initStateSorting,
-  initStatePagingCt = initStatePaging,
-  fetchDataFn = fetchData,
-  dataFetchReducerFn = dataFetchReducer,
-  findMembersFn = findMembers,
-  setMembersInitFn = setMembersInit,
-  setMembersErrorFn = setMembersError,
-  setMembersSuccessFn = setMembersSuccess,
+  initialState = INITIAL_STATE,
+  serviceName = SERVICE_NAME,
+  initStateSorting = INITIAL_STATE_SORTING,
+  initStatePaging = INITIAL_STATE_PAGING,
+  getApiFn = getApi,
+  useFetchDataFn = useFetchData,
+  computeSuccessFn = computeSuccess,
   setOnChangePagingFn = setOnChangePaging,
-  FetchContextObj = FetchContext,
 }) => {
-  const { fetchCustom } = useContext(FetchContextObj);
-  const [stateMembers, dispatch] = useReducer(dataFetchReducerFn, initStateCt);
-  const [stateSorting, setStateSorting] = useState(initStateSortingCt);
-  const [stateFormPaging, setStateFormPaging] = useState(initStatePagingCt);
+  const [stateSorting, setStateSorting] = useState(initStateSorting);
+  const [stateFormPaging, setStateFormPaging] = useState(initStatePaging);
 
   const { field, order } = stateSorting;
   const { numberItems, page } = stateFormPaging;
@@ -141,32 +95,15 @@ export const useMembers = ({
 
   const onChangePaging = useCallback(paging => setOnChangePagingFn({ setStateFormPaging, paging }), [setOnChangePagingFn]);
 
-  useEffect(() => {
-    const abortController = new AbortController();
+  const { state } = useFetchDataFn({
+    initialState,
+    serviceName,
+    computeSuccess: computeSuccessFn,
+    service: useMemo(
+      () => getApiFn(`members?max=${Number(numberItems)}&sort=${field}&dir=${order}&skip=${Number(page * numberItems)}`),
+      [field, getApiFn, numberItems, order, page],
+    ),
+  });
 
-    fetchDataFn({
-      fetchCustom,
-      setInit: setMembersInitFn(dispatch),
-      setError: setMembersErrorFn(dispatch),
-      setSuccess: setMembersSuccessFn(dispatch),
-      fetchServices: {
-        members: {
-          service: findMembersFn,
-          args: {
-            signal: abortController.signal,
-            field,
-            order,
-            max: Number(numberItems),
-            skip: Number(page * numberItems),
-          },
-        },
-      },
-    });
-
-    return () => {
-      abortController.abort();
-    };
-  }, [fetchCustom, fetchDataFn, field, findMembersFn, order, setMembersErrorFn, setMembersInitFn, setMembersSuccessFn, numberItems, page]);
-
-  return { ...stateMembers, onChangeSorting, stateSorting, onChangePaging, stateFormPaging };
+  return { ...state, onChangeSorting, onChangePaging, stateSorting, stateFormPaging };
 };

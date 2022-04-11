@@ -3,24 +3,10 @@
 exports[`DownloadLink Render <DownloadLink/> 1`] = `
 <DocumentFragment>
   <div
-    class="af-loader af-loader--fullscreen af-loader--active"
-  >
-    <p
-      class="af-loader__spinner"
-    >
-      Téléchargement du fichier en cours ...
-    </p>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`DownloadLink Render <DownloadLink/> loaded 1`] = `
-<DocumentFragment>
-  <div
     class="af-loader af-loader--fullscreen"
   >
     <button
-      aria-label="download-link"
+      aria-label="Télécharger"
       class="af-link af-link--hasIconLeft af-link--download"
       type="button"
     >
@@ -48,13 +34,13 @@ exports[`DownloadLink Render <DownloadLink/> loaded 1`] = `
 </DocumentFragment>
 `;
 
-exports[`DownloadLink Render <DownloadLink/> loaded and disabled 1`] = `
+exports[`DownloadLink Render <DownloadLink/> disabled 1`] = `
 <DocumentFragment>
   <div
     class="af-loader af-loader--fullscreen"
   >
     <button
-      aria-label="download-link"
+      aria-label="Télécharger"
       class="af-link af-link--hasIconLeft af-link--download"
       disabled=""
       type="button"

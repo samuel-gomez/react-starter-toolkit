@@ -3,7 +3,8 @@ import mergeObj from 'shared/helpers/mergeObj';
 import { STATUS_API } from 'shared/constants';
 
 export const FetchContext = createContext({ fetchCustom: fetch });
-export const FetchContextProvider = FetchContext.Provider;
+FetchContext.displayName = 'FetchContext';
+const FetchContextProvider = FetchContext.Provider;
 
 export const setFetchCustom =
   ({ apiUrl, fetchAuthConfig, fetchFn = fetch, mergeObjFn = mergeObj }) =>

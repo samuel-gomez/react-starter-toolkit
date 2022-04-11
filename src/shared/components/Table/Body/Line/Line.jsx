@@ -1,6 +1,6 @@
 import React from 'react';
 import { arrayOf, string, node, object } from 'prop-types';
-import WithClassNameModifier from 'shared/helpers/WithClassNameModifier';
+import WithClassNameModifier from 'shared/hoc/WithClassNameModifier';
 import Td from './Td';
 
 const Tr = WithClassNameModifier(({ className, children }) => (

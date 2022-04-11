@@ -1,6 +1,6 @@
 import React from 'react';
 import { string } from 'prop-types';
-import WithClassNameModifier from 'shared/helpers/WithClassNameModifier';
+import WithClassNameModifier from 'shared/hoc/WithClassNameModifier';
 
 const Th = WithClassNameModifier(({ className, children, ariaLabel, ...rest }) => (
   <th className={className} aria-label={ariaLabel} {...rest}>

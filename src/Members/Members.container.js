@@ -1,23 +1,23 @@
-import React from 'react';
+import React, { createContext } from 'react';
 import { func } from 'prop-types';
-import { LoaderModes } from 'shared/components/Loader';
 import setLoaderMode from 'shared/helpers/setLoaderMode';
 import Members from './Members';
 import { useMembers } from './Members.hook';
+import { SERVICE_NAME } from './constants';
 
-export const MembersContext = React.createContext({ onChangeSorting: null, sorting: {} });
+export const MembersContext = createContext({ onChangeSorting: null, sorting: {} });
 const { Provider: MembersProvider } = MembersContext;
 
 const MembersEnhanced = ({ useMembersFn, setLoaderModeFn, ...rest }) => {
-  const { anomaly, isLoading, members, pagination, onChangeSorting, stateSorting, onChangePaging } = useMembersFn({});
+  const { anomaly, isLoading, members, onChangeSorting, stateSorting, onChangePaging } = useMembersFn({});
   return (
     <MembersProvider value={{ onChangeSorting, sorting: stateSorting }}>
       <Members
         {...rest}
-        members={members}
-        loaderMode={setLoaderModeFn({ isLoading, LoaderModes })}
-        anomaly={anomaly}
-        pagination={pagination}
+        members={members.data}
+        loaderMode={setLoaderModeFn({ isLoading })}
+        anomaly={anomaly[SERVICE_NAME]}
+        pagination={members.pagination}
         onChangePaging={onChangePaging}
         onChangeSorting={onChangeSorting}
         sorting={stateSorting}

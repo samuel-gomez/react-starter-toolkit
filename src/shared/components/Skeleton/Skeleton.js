@@ -1,6 +1,6 @@
 import React from 'react';
 import { string } from 'prop-types';
-import WithClassNameModifier from 'shared/helpers/WithClassNameModifier';
+import WithClassNameModifier from 'shared/hoc/WithClassNameModifier';
 import './Skeleton.scss';
 
 const Skeleton = WithClassNameModifier(({ className }) => <div aria-busy="true" aria-label="loader" role="status" className={className} />);

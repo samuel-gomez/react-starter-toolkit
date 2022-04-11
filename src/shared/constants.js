@@ -1,4 +1,4 @@
-import { string, number, shape } from 'prop-types';
+import { string, number, shape, oneOfType, arrayOf } from 'prop-types';
 
 export const MSG_REQUIRED = 'Le champ est obligatoire';
 
@@ -52,6 +52,7 @@ export const STATUS_HTTP_MESSAGES = {
   [STATUS_HTTP.SERVER_ERROR]: 'Erreur: Problème technique ! Contacter votre support',
 };
 
+export const TIMEOUT = 20000;
 export const TIMEOUT_ERROR_MESSAGE = 'Erreur: la requête a mis trop de temps';
 
 export const MODIFIER_CLASS = {
@@ -86,7 +87,26 @@ export const DEFAULT_OPTION = {
   label: DEFAULT_OPTION_LABEL,
 };
 
+/**
+ * Commons proptypes
+ */
+
 export const ContextPropTypes = shape({
   Provider: shape({ defaultValue: string, currentValue: string, changedBits: number }),
   Consumer: shape({ defaultValue: string, currentValue: string, changedBits: number }),
 });
+
+export const SelectPropTypes = arrayOf(
+  shape({
+    value: oneOfType([string, number]),
+    label: string,
+  }),
+);
+
+export const AnomalyPropTypes = shape({
+  code: number,
+  detail: string,
+  label: string,
+});
+
+export const IdPropTypes = oneOfType([string, number]);

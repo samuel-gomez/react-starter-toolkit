@@ -1,6 +1,6 @@
 import React from 'react';
 import { func, node, string } from 'prop-types';
-import WithClassNameModifier from 'shared/helpers/WithClassNameModifier';
+import WithClassNameModifier from 'shared/hoc/WithClassNameModifier';
 
 const ThSortable = WithClassNameModifier(({ className, children, sort, sortingIcon }) => (
   <th role="button" onClick={sort} className={className}>

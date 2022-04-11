@@ -1,6 +1,6 @@
 import React from 'react';
 import { node, string } from 'prop-types';
-import WithClassNameModifier from 'shared/helpers/WithClassNameModifier';
+import WithClassNameModifier from 'shared/hoc/WithClassNameModifier';
 
 const Td = WithClassNameModifier(({ className, children }) => <td className={className}>{children}</td>);
 

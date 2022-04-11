@@ -1,20 +1,21 @@
 import { renderHook, act } from '@testing-library/react-hooks';
-import {
-  computeInfos,
-  dataFetchReducer,
-  useMembers,
-  setStateMembersLoading,
-  setStateMembersSuccess,
-  setStateMembersFailure,
-  setMembersInit,
-  setMembersError,
-  setMembersSuccess,
-  setPaging,
-  setOnChangePaging,
-  setNumberPages,
-} from '../Members.hook';
-import { FETCH_MEMBERS } from '../constants';
-import { membersMock, membersFormattedMock } from './Members.mock';
+import { computeInfos, useMembers, setPaging, setOnChangePaging, setNumberPages, setCurrentPage } from '../Members.hook';
+import { membersMock } from './Members.mock';
+
+describe('setCurrentPage', () => {
+  it.each`
+    max          | skip         | expected
+    ${undefined} | ${undefined} | ${1}
+    ${null}      | ${null}      | ${1}
+    ${0}         | ${1}         | ${1}
+    ${1}         | ${1}         | ${1}
+    ${10}        | ${1}         | ${1}
+    ${1}         | ${10}        | ${10}
+  `('Should return exoected: $expected when max: $max, skip: $skip', ({ max, skip, expected }) => {
+    const result = setCurrentPage({ max, skip });
+    expect(result).toEqual(expected);
+  });
+});
 
 describe('setNumberPages', () => {
   it('Should return 0 when max = 1 and total = 1', () => {
@@ -50,84 +51,6 @@ describe('setStateFormPaging', () => {
   });
 });
 
-describe('setStateMembersFailure', () => {
-  it('Should return state isLoading: false with anomaly with When called with state and payload', () => {
-    const state = { value: '01' };
-    const payload = { members: { code: 500 } };
-    const result = setStateMembersFailure({ state, payload });
-    const expected = {
-      value: '01',
-      isLoading: false,
-      anomaly: { code: 500 },
-    };
-    expect(result).toEqual(expected);
-  });
-});
-
-describe('setMembersInit', () => {
-  const dispatchMock = jest.fn();
-  it('Should dispatch called with { type: "FETCH_MEMBERS_INIT" } When called', () => {
-    setMembersInit(dispatchMock)();
-    expect(dispatchMock).toBeCalledWith({ type: 'FETCH_MEMBERS_INIT' });
-  });
-});
-
-describe('setMembersError', () => {
-  const dispatchMock = jest.fn();
-  it('Should dispatch called with { type: "FETCH_MEMBERS_FAILURE" } When called with error', () => {
-    setMembersError(dispatchMock)('error');
-    expect(dispatchMock).toBeCalledWith({ type: 'FETCH_MEMBERS_FAILURE', payload: 'error' });
-  });
-});
-
-describe('setMembersSuccess', () => {
-  const dispatchMock = jest.fn();
-  it('Should dispatch called with { type: "FETCH_MEMBERS_SUCCESS" } When called with response', () => {
-    setMembersSuccess(dispatchMock)('response');
-    expect(dispatchMock).toBeCalledWith({ type: 'FETCH_MEMBERS_SUCCESS', payload: 'response' });
-  });
-});
-
-describe('setStateMembersLoading', () => {
-  it('Should return state isLoading: true When called with state', () => {
-    const state = { value: '01' };
-    const result = setStateMembersLoading({ state });
-    const expected = {
-      value: '01',
-      isLoading: true,
-    };
-    expect(result).toEqual(expected);
-  });
-});
-
-describe('setStateMembersSuccess', () => {
-  it('Should return state with computed members When called with state and payload', () => {
-    const state = { value: '01' };
-    const payload = {
-      members: {
-        responseBody: {
-          data: membersMock,
-          totals: 50,
-        },
-      },
-    };
-    const result = setStateMembersSuccess({ state, payload });
-    const expected = {
-      value: '01',
-      isLoading: false,
-      anomaly: null,
-      members: membersFormattedMock,
-      pagination: {
-        currentPage: 1,
-        numberItems: NaN,
-        numberPages: 1,
-        total: NaN,
-      },
-    };
-    expect(result).toEqual(expected);
-  });
-});
-
 describe('computeInfos', () => {
   it('Should computed members when computeInfos have been called with members', () => {
     const computedMembers = computeInfos({
@@ -149,114 +72,33 @@ describe('computeInfos', () => {
   });
 });
 
-describe('dataFetchReducer', () => {
-  it('Should return state with isLoading true and is Error false when type = FETCH_MEMBERS_INIT', () => {
-    const state = {
-      value: 'value',
-    };
-    const type = FETCH_MEMBERS.INIT;
-
-    const result = dataFetchReducer(state, { type });
-    const expected = {
-      value: 'value',
-      isLoading: true,
-    };
-    expect(result).toEqual(expected);
-  });
-
-  it('Should return state with isLoading false and is Error true when type = FETCH_MEMBERS_FAILURE', () => {
-    const state = {
-      value: 'value',
-    };
-    const type = FETCH_MEMBERS.FAILURE;
-
-    const result = dataFetchReducer(state, { type, payload: { members: 'error' } });
-    const expected = {
-      value: 'value',
-      isLoading: false,
-      anomaly: 'error',
-    };
-    expect(result).toEqual(expected);
-  });
-
-  it('Should return state with isLoading false and is Error false when type = FETCH_MEMBERS_SUCCESS', () => {
-    const state = {
-      value: 'value',
-    };
-    const type = FETCH_MEMBERS.SUCCESS;
-
-    const result = dataFetchReducer(state, {
-      type,
-      payload: {
-        members: {
-          responseBody: { data: membersMock, totals: 50 },
-        },
-      },
-    });
-    const expected = {
-      value: 'value',
-      isLoading: false,
-      anomaly: null,
-      members: membersFormattedMock,
-      pagination: {
-        currentPage: 1,
-        numberItems: NaN,
-        numberPages: 1,
-        total: NaN,
-      },
-    };
-    expect(result).toEqual(expected);
-  });
-
-  it('Should return throw error when type = other', () => {
-    const state = {
-      value: 'value',
-    };
-
-    const type = 'other';
-    const result = dataFetchReducer(state, { type });
-    expect(result).toEqual({
-      value: 'value',
-    });
-  });
-});
-
 describe('useMembers', () => {
-  const fetchDataMock = jest.fn();
-  const dataFetchReducerMock = jest.fn();
-  const findMembersMock = jest.fn();
-
   const defaultUseMembersParams = {
-    initStateCt: {
-      isLoading: false,
-      members: [],
-      anomaly: null,
-      filters: {
-        numberItems: 10,
-        currentPage: 1,
-        numberPages: 1,
+    initState: {
+      isLoading: true,
+      isLoaded: false,
+      members: {
+        pagination: { total: 0, currentPage: 1, numberPages: 1 },
+        data: [],
       },
+      anomaly: { members: null },
     },
-    fetchDataFn: fetchDataMock,
-    dataFetchReducerFn: dataFetchReducerMock,
-    findMembersFn: findMembersMock,
   };
 
   it('Should update stateMembers when useMembers called', () => {
     const { result } = renderHook(() => useMembers({}));
     const expected = {
       isLoading: true,
-      members: [],
-      anomaly: null,
-      pagination: {
-        total: 0,
-        currentPage: 1,
-        numberPages: 1,
+      isLoaded: false,
+      members: {
+        pagination: { total: 0, currentPage: 1, numberPages: 1 },
+        data: [],
       },
+      anomaly: { members: null },
       onChangeSorting: result.current.onChangeSorting,
       stateSorting: {
         field: 'firstname',
-        order: true,
+        order: 1,
       },
       onChangePaging: result.current.onChangePaging,
       stateFormPaging: {
@@ -272,28 +114,20 @@ describe('useMembers', () => {
   it('Should update stateMembers when useMembers called', () => {
     const { result } = renderHook(() => useMembers(defaultUseMembersParams));
     const expected = {
-      isLoading: false,
-      members: [],
-      anomaly: null,
-      filters: {
-        numberItems: 10,
-        currentPage: 1,
-        numberPages: 1,
+      isLoading: true,
+      isLoaded: false,
+      members: {
+        pagination: { total: 0, currentPage: 1, numberPages: 1 },
+        data: [],
       },
+      anomaly: { members: null },
       onChangeSorting: result.current.onChangeSorting,
-      stateSorting: {
-        field: 'firstname',
-        order: true,
-      },
       onChangePaging: result.current.onChangePaging,
-      stateFormPaging: {
-        numberItems: 50,
-        page: 1,
-      },
+      stateSorting: { field: 'firstname', order: 1 },
+      stateFormPaging: { numberItems: 50, page: 1 },
     };
     act(() => {
       expect(result.current).toEqual(expected);
-      expect(fetchDataMock).toBeCalled();
     });
   });
 
@@ -302,31 +136,25 @@ describe('useMembers', () => {
     act(() => result.current.onChangeSorting({ field: 'name', order: 1 }));
     expect(result.current.stateSorting).toEqual({ field: 'name', order: 1 });
   });
+
   it('Should update stateMembers when onChangeSorting called', () => {
     const { result } = renderHook(() => useMembers(defaultUseMembersParams));
     const expected = {
-      isLoading: false,
-      members: [],
-      anomaly: null,
-      filters: {
-        numberItems: 10,
-        currentPage: 1,
-        numberPages: 1,
+      isLoading: true,
+      isLoaded: false,
+      members: {
+        pagination: { total: 0, currentPage: 1, numberPages: 1 },
+        data: [],
       },
+      anomaly: { members: null },
       onChangeSorting: result.current.onChangeSorting,
-      stateSorting: {
-        field: 'firstname',
-        order: true,
-      },
       onChangePaging: result.current.onChangePaging,
-      stateFormPaging: {
-        numberItems: 50,
-        page: 1,
-      },
+      stateSorting: { field: 'firstname', order: 1 },
+      stateFormPaging: { numberItems: 50, page: 1 },
     };
+
     act(() => {
       expect(result.current).toEqual(expected);
-      expect(fetchDataMock).toBeCalled();
     });
   });
 

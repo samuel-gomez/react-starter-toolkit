@@ -13,7 +13,7 @@ exports[`<ThSortableContainer /> Should render ThSortableContainer with sortable
 <DocumentFragment>
   sortable
   <span
-    class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-arrow-xs-up"
+    class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-undefined"
   />
 </DocumentFragment>
 `;
@@ -29,7 +29,7 @@ exports[`SortingIcon Should render SortingIcon with order equal NONE 1`] = `
 exports[`SortingIcon Should render SortingIcon with order equal false 1`] = `
 <DocumentFragment>
   <span
-    class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-arrow-xs-down"
+    class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-undefined"
   />
 </DocumentFragment>
 `;
@@ -37,7 +37,7 @@ exports[`SortingIcon Should render SortingIcon with order equal false 1`] = `
 exports[`SortingIcon Should render SortingIcon with order equal true 1`] = `
 <DocumentFragment>
   <span
-    class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-arrow-xs-up"
+    class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-undefined"
   />
 </DocumentFragment>
 `;

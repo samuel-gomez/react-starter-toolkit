@@ -1,18 +1,13 @@
-import { useEffect, useReducer, useCallback, useState, useContext } from 'react';
-import fetchData from 'shared/helpers/fetchData';
-import { FetchContext } from 'App/FetchProvider';
+import { useCallback, useState, useMemo } from 'react';
+import { getApi, setInitialState, useFetchData } from 'shared/helpers/fetchHook';
 import setAnomalyEmptyItems from 'shared/helpers/setAnomalyEmptyItems';
-import findMembers from './SearchMembers.service';
-import { FETCH_SEARCHMEMBERS } from './constants';
+import { SERVICE_NAME } from './constants';
 
-const initState = {
-  isLoading: false,
-  members: [],
-  anomaly: null,
-};
+export const INITIAL_STATE = setInitialState(SERVICE_NAME);
 
-export const initStateSearch = {
+export const INITIAL_STATE_FORM_SEARCH_MEMBERS = {
   name: '',
+  hasSubmit: false,
 };
 
 export const computeInfos = ({ members = [] }) =>
@@ -29,91 +24,40 @@ export const computeInfos = ({ members = [] }) =>
     },
   }));
 
-export const setStateSearchMembersLoading = ({ state }) => ({
-  ...state,
-  isLoading: true,
-});
+export const useFormSearchMembers = ({ initStateFormSearchMembers = INITIAL_STATE_FORM_SEARCH_MEMBERS }) => {
+  const [stateFormSearchMembers, setStateFormSearchMembers] = useState(initStateFormSearchMembers);
 
-export const setStateSearchMembersSuccess = ({ state, payload, setAnomalyEmptyItemsFn = setAnomalyEmptyItems, computeInfosFn = computeInfos }) => ({
-  ...state,
-  isLoading: false,
-  anomaly: setAnomalyEmptyItemsFn(payload?.members?.responseBody),
-  members: computeInfosFn({ members: payload?.members?.responseBody }),
-});
-
-export const setStateSearchMembersFailure = ({ state, payload }) => ({
-  ...state,
-  isLoading: false,
-  anomaly: payload?.members,
-});
-
-export const dataFetchReducer = (
-  state,
-  {
-    type,
-    payload,
-    setStateSearchMembersLoadingFn = setStateSearchMembersLoading,
-    setStateSearchMembersSuccessFn = setStateSearchMembersSuccess,
-    setStateSearchMembersFailureFn = setStateSearchMembersFailure,
-  },
-) => {
-  switch (type) {
-    case FETCH_SEARCHMEMBERS.INIT:
-      return setStateSearchMembersLoadingFn({ state });
-    case FETCH_SEARCHMEMBERS.SUCCESS:
-      return setStateSearchMembersSuccessFn({ state, payload });
-    case FETCH_SEARCHMEMBERS.FAILURE:
-      return setStateSearchMembersFailureFn({ state, payload });
-    default:
-      return state;
-  }
-};
-
-export const setSearchMembersInit = dispatch => () => dispatch({ type: FETCH_SEARCHMEMBERS.INIT });
-export const setSearchMembersError = dispatch => payload => dispatch({ type: FETCH_SEARCHMEMBERS.FAILURE, payload });
-export const setSearchMembersSuccess = dispatch => payload => dispatch({ type: FETCH_SEARCHMEMBERS.SUCCESS, payload });
-
-export const useSearchMembers = ({
-  initStateCt = initState,
-  initStateSearchCt = initStateSearch,
-  dataFetchReducerFn = dataFetchReducer,
-  fetchDataFn = fetchData,
-  setSearchMembersInitFn = setSearchMembersInit,
-  setSearchMembersErrorFn = setSearchMembersError,
-  setSearchMembersSuccessFn = setSearchMembersSuccess,
-  findMembersFn = findMembers,
-  FetchContextObj = FetchContext,
-}) => {
-  const { fetchCustom } = useContext(FetchContextObj);
-  const [stateMembers, dispatch] = useReducer(dataFetchReducerFn, initStateCt);
-  const [stateSearch, setStateSearch] = useState(initStateSearchCt);
-
-  const submitSearch = useCallback(nameField => {
-    setStateSearch(prevState => ({ ...prevState, ...nameField }));
+  const submitFormSearchMembers = useCallback(electorsFields => {
+    setStateFormSearchMembers(prevState => ({ ...prevState, ...electorsFields, hasSubmit: true }));
   }, []);
 
-  useEffect(() => {
-    const abortController = new AbortController();
-    if (stateSearch?.name !== '') {
-      fetchDataFn({
-        fetchCustom,
-        setInit: setSearchMembersInitFn(dispatch),
-        setError: setSearchMembersErrorFn(dispatch),
-        setSuccess: setSearchMembersSuccessFn(dispatch),
-        fetchServices: {
-          members: {
-            service: findMembersFn,
-            args: {
-              body: stateSearch,
-            },
-          },
-        },
-      });
-    }
-    return () => {
-      abortController.abort();
-    };
-  }, [fetchCustom, fetchDataFn, findMembersFn, setSearchMembersErrorFn, setSearchMembersInitFn, setSearchMembersSuccessFn, stateSearch]);
+  return { submitFormSearchMembers, stateFormSearchMembers };
+};
 
-  return { ...stateMembers, submitSearch, stateSearch };
+export const computeSuccess = ({ responseBody, setAnomalyEmptyItemsFn = setAnomalyEmptyItems, computeInfosFn = computeInfos }) => ({
+  anomaly: {
+    [SERVICE_NAME]: setAnomalyEmptyItemsFn(responseBody, 'Aucun membre ne correspond à votre recherche'),
+  },
+  [SERVICE_NAME]: computeInfosFn({ members: responseBody }),
+});
+
+export const useSearchMembers = ({
+  stateFormSearchMembers,
+  initialState = INITIAL_STATE,
+  serviceName = SERVICE_NAME,
+  getApiFn = getApi,
+  useFetchDataFn = useFetchData,
+  computeSuccessFn = computeSuccess,
+}) => {
+  const { name = '' } = stateFormSearchMembers;
+  const condition = stateFormSearchMembers.hasSubmit;
+
+  const { state } = useFetchDataFn({
+    condition,
+    initialState,
+    serviceName,
+    computeSuccess: computeSuccessFn,
+    service: useMemo(() => getApiFn(`members/search?name=${name}`), [getApiFn, name]),
+  });
+  return { ...state };
 };

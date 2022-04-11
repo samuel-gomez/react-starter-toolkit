@@ -318,6 +318,7 @@ exports[`<Members/> Should render <Members /> with one member 1`] = `
       class="af-loader"
     >
       <table
+        aria-label="Tableau Liste des membres"
         class="af-table"
       >
         <thead

@@ -2,22 +2,22 @@ import fetchData from './fetchData';
 
 describe('fetchData', () => {
   const fetchCustomMock = jest.fn();
-  const setInitMock = jest.fn();
+  const setLoadingMock = jest.fn();
   const setErrorMock = jest.fn();
   const setSuccessMock = jest.fn();
   const fetchServiceMock = jest.fn();
 
   const defaultProps = {
     fetchCustom: fetchCustomMock,
-    setInit: setInitMock,
+    setLoading: setLoadingMock,
     setError: setErrorMock,
     setSuccess: setSuccessMock,
     fetchServices: [{ myService: { service: fetchServiceMock } }],
   };
 
-  it('Should setInit called When called fetchData', () => {
+  it('Should setLoading called When called fetchData', () => {
     fetchData(defaultProps);
-    expect(setInitMock).toBeCalled();
+    expect(setLoadingMock).toBeCalled();
   });
 
   it('Should setError called with Error("Error fetch") When fetchServices throw error', async () => {

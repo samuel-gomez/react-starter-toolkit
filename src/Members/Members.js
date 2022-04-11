@@ -12,7 +12,7 @@ const Members = ({ titleBar, title, loaderMode, members, anomaly, onChangePaging
     <h1 className="af-title--content">{title}</h1>
     <Loader mode={loaderMode}>
       <Resilience anomaly={anomaly}>
-        <Table items={members} headers={TABLE_HEADERS_MEMBERS} onSort={onChangeSorting} sorting={sorting} />
+        <Table items={members} headers={TABLE_HEADERS_MEMBERS} onSort={onChangeSorting} sorting={sorting} aria-label={`Tableau ${title}`} />
         <Paging {...pagination} onChange={onChangePaging} id="paging" />
       </Resilience>
     </Loader>

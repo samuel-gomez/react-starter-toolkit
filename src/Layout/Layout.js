@@ -1,6 +1,6 @@
 import React from 'react';
 import { node, string, bool, shape } from 'prop-types';
-import WithClassNameModifier from 'shared/helpers/WithClassNameModifier';
+import WithClassNameModifier from 'shared/hoc/WithClassNameModifier';
 import Header from 'Layout/Header';
 import Footer from 'Layout/Footer';
 import TitleBar from 'Layout/TitleBar';
