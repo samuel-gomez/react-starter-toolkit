@@ -14,7 +14,7 @@
     "lint:fix": "npm run lint --fix",
     "precommit": "npm run lint:fix && git add .",
     "prepare": "husky install",
-    "commit": "cz",
+    "cz": "cz",
     "prettier": "prettier --check src",
     "prettier-fix": "prettier --write src"
   },

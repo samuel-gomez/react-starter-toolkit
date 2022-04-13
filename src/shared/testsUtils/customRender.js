@@ -3,8 +3,7 @@ import { render } from '@testing-library/react';
 import { StaticRouter } from 'react-router-dom/server';
 import FetchProvider from 'App/FetchProvider';
 import UserProvider from 'App/UserProvider';
-
-const API_URL = 'https://react-starter-toolkit-api.netlify.app/api/';
+import { MOCK_API_URL } from '.';
 
 const MockProviders =
   ({ role, ...testMock }) =>
@@ -14,7 +13,7 @@ const MockProviders =
     return (
       <UserProvider useOidcUser={useOidcUser}>
         <FetchProvider
-          apiUrl={API_URL}
+          apiUrl={MOCK_API_URL}
           fetchConfig={{
             headers: { testMock: JSON.stringify(testMock) },
           }}

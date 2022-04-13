@@ -1,5 +1,5 @@
 {
-  "apiUrl": "https://react-starter-toolkit-api.netlify.app/api/",
+  "apiUrl": "https://react-starter-api.vercel.app/api/",
   "baseUrl": "/",
   "fetchConfig": {
     "crossDomain": true,

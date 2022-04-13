@@ -1,4 +1,5 @@
 import { rest } from 'msw';
+import { MOCK_API_URL } from '..';
 
 /* export const handlers = [
   rest.post('/login', (req, res, ctx) => {
@@ -28,8 +29,6 @@ import { rest } from 'msw';
   }),
 ]; */
 
-const MOCK_API_URL = 'https://react-starter-toolkit-api.netlify.app/api';
-
 const commonResponse = (req, res, ctx) => {
   const testMock = req.headers.get('testMock');
   const testMockParsed = JSON.parse(testMock);
@@ -43,7 +42,7 @@ const commonResponse = (req, res, ctx) => {
 };
 
 export const handlers = [
-  rest.get(`${MOCK_API_URL}/members`, commonResponse),
-  rest.get(`${MOCK_API_URL}/members/search`, commonResponse),
-  rest.get(`${MOCK_API_URL}/members/:id/download-detail`, commonResponse),
+  rest.get(`${MOCK_API_URL}members`, commonResponse),
+  rest.get(`${MOCK_API_URL}members/search`, commonResponse),
+  rest.get(`${MOCK_API_URL}members/:id/download-detail`, commonResponse),
 ];
