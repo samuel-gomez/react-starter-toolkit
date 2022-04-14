@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
 import { func } from 'prop-types';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import PageNotFound from 'NotFound';
-import PageUnauthorize from 'Unauthorize';
-import Members from 'Members';
-import SearchMembers from 'SearchMembers';
-import SlashDesignSystem from 'SlashDesignSystem';
-import Modal from 'Demos/Modal';
-import Button from 'Demos/Button';
-import Dashboard from 'Dashboard';
+import PageNotFound from 'pages/NotFound';
+import PageUnauthorize from 'pages/Unauthorize';
+import Members from 'pages/Members';
+import SearchMembers from 'pages/SearchMembers';
+import SlashDesignSystem from 'pages/SlashDesignSystem';
+import Modal from 'pages/Demos/Modal';
+import Button from 'pages/Demos/Button';
+import Dashboard from 'pages/Dashboard';
 import ROUTE_URL from 'Layout/constants';
 import { UserContext } from 'App/UserProvider';
 
