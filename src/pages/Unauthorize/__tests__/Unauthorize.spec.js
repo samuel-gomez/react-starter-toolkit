@@ -7,7 +7,7 @@ import Unauthorize from '../Unauthorize';
 
 const wrapper = ({ children }) => <StaticRouter context={{}}>{children}</StaticRouter>;
 
-const feature = loadFeature('src/Unauthorize/Unauthorize.feature');
+const feature = loadFeature('src/pages/Unauthorize/Unauthorize.feature');
 
 defineFeature(feature, test => {
   test('Chargement de la page 403', ({ given, when, then, and }) => {

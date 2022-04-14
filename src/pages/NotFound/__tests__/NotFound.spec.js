@@ -7,7 +7,7 @@ import NotFound from '../NotFound';
 
 const wrapper = ({ children }) => <StaticRouter context={{}}>{children}</StaticRouter>;
 
-const feature = loadFeature('src/NotFound/NotFound.feature');
+const feature = loadFeature('src/pages/NotFound/NotFound.feature');
 
 defineFeature(feature, test => {
   test('Chargement de la page 404', ({ given, when, then }) => {

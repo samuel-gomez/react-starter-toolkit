@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { OidcProvider, useOidcUser, useOidcAccessToken, OidcSecure } from '@axa-fr/react-oidc-context';
-import Routes from 'Layout/Routes';
+import Routes from 'App/Routes';
 import UserProvider from 'App/UserProvider';
 import FetchProvider from 'App/FetchProvider';
 import NotificationProvider from 'App/NotificationProvider';

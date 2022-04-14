@@ -7,7 +7,7 @@ import { JeSuisUnUtilisateurConnuEtConnecteAvecleProfil } from 'shared/testsUtil
 import Members from '..';
 import { totals, defaultProps } from './Members.mock';
 
-const feature = loadFeature('./src/Members/__tests__/Members.feature');
+const feature = loadFeature('./src/pages/Members/__tests__/Members.feature');
 
 defineFeature(feature, test => {
   let role;
