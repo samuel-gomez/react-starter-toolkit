@@ -19,7 +19,7 @@
     "prettier-fix": "prettier --write src"
   },
   "dependencies": {
-    "@axa-fr/react-oidc-context": "4.5.9",
+    "@axa-fr/react-oidc-context": "4.5.13",
     "@axa-fr/react-toolkit-all": "1.4.1",
     "@axa-fr/react-toolkit-core": "1.4.1",
     "@axa-fr/react-toolkit-modal-default": "1.4.0",
