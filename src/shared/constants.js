@@ -72,7 +72,7 @@ export const JSON_CONTENT_HEADER = {
 };
 
 export const STORYBOOK = 'https://axaguildev.github.io/react-toolkit/latest/storybook/';
-export const DESIGN_SYSTEM = 'https://axaguildev.github.io/react-toolkit/latest/design/';
+export const DESIGN_SYSTEM = 'https://axaguildev.github.io/design-system/';
 
 export const ADMIN = 'Admin';
 export const READER = 'Reader';

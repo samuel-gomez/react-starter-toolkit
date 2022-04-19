@@ -27,7 +27,7 @@ exports[`<Cards/> Should render Cards 1`] = `
       >
         <a
           class="btn af-btn--circle af-btn--svg"
-          href="https://axaguildev.github.io/react-toolkit/latest/design/"
+          href="https://axaguildev.github.io/design-system/"
           rel="noopener noreferrer"
           target="_blank"
           title=""

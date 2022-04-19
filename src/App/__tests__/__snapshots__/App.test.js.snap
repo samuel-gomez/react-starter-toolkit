@@ -332,7 +332,7 @@ exports[`Should render App 1`] = `
         >
           <a
             class="btn af-btn--circle af-btn--svg"
-            href="https://axaguildev.github.io/react-toolkit/latest/design/molecules/form-text/"
+            href="https://axaguildev.github.io/design-system/molecules/form-text/"
             rel="noopener noreferrer"
             target="_blank"
             title="Storybook : Text Input"
@@ -386,7 +386,7 @@ exports[`Should render App 1`] = `
         >
           <a
             class="btn af-btn--circle af-btn--svg"
-            href="https://axaguildev.github.io/react-toolkit/latest/design/molecules/form-textarea/"
+            href="https://axaguildev.github.io/design-system/molecules/form-textarea/"
             rel="noopener noreferrer"
             target="_blank"
             title="Storybook : Textarea Input"
@@ -440,7 +440,7 @@ exports[`Should render App 1`] = `
         >
           <a
             class="btn af-btn--circle af-btn--svg"
-            href="https://axaguildev.github.io/react-toolkit/latest/design/molecules/form-file/"
+            href="https://axaguildev.github.io/design-system/molecules/form-file/"
             rel="noopener noreferrer"
             target="_blank"
             title="Storybook : File Input"
@@ -494,7 +494,7 @@ exports[`Should render App 1`] = `
         >
           <a
             class="btn af-btn--circle af-btn--svg"
-            href="https://axaguildev.github.io/react-toolkit/latest/design/organisms/accordion/"
+            href="https://axaguildev.github.io/design-system/organisms/accordion/"
             rel="noopener noreferrer"
             target="_blank"
             title="Storybook : Accordion"
@@ -548,7 +548,7 @@ exports[`Should render App 1`] = `
         >
           <a
             class="btn af-btn--circle af-btn--svg"
-            href="https://axaguildev.github.io/react-toolkit/latest/design/organisms/modal/"
+            href="https://axaguildev.github.io/design-system/organisms/modal/"
             rel="noopener noreferrer"
             target="_blank"
             title="Storybook : Modal"
@@ -602,7 +602,7 @@ exports[`Should render App 1`] = `
         >
           <a
             class="btn af-btn--circle af-btn--svg"
-            href="https://axaguildev.github.io/react-toolkit/latest/design/molecules/alert/"
+            href="https://axaguildev.github.io/design-system/molecules/alert/"
             rel="noopener noreferrer"
             target="_blank"
             title="Storybook : Alert"
@@ -656,7 +656,7 @@ exports[`Should render App 1`] = `
         >
           <a
             class="btn af-btn--circle af-btn--svg"
-            href="https://axaguildev.github.io/react-toolkit/latest/design/atoms/badge/"
+            href="https://axaguildev.github.io/design-system/atoms/badge/"
             rel="noopener noreferrer"
             target="_blank"
             title="Storybook : Badge"
@@ -710,7 +710,7 @@ exports[`Should render App 1`] = `
         >
           <a
             class="btn af-btn--circle af-btn--svg"
-            href="https://axaguildev.github.io/react-toolkit/latest/design/atoms/popover/"
+            href="https://axaguildev.github.io/design-system/atoms/popover/"
             rel="noopener noreferrer"
             target="_blank"
             title="Storybook : Popover"
@@ -764,7 +764,7 @@ exports[`Should render App 1`] = `
         >
           <a
             class="btn af-btn--circle af-btn--svg"
-            href="https://axaguildev.github.io/react-toolkit/latest/design/atoms/slider/"
+            href="https://axaguildev.github.io/design-system/atoms/slider/"
             rel="noopener noreferrer"
             target="_blank"
             title="Storybook : Slider"
@@ -818,7 +818,7 @@ exports[`Should render App 1`] = `
         >
           <a
             class="btn af-btn--circle af-btn--svg"
-            href="https://axaguildev.github.io/react-toolkit/latest/design/molecules/table/"
+            href="https://axaguildev.github.io/design-system/molecules/table/"
             rel="noopener noreferrer"
             target="_blank"
             title="Storybook : Table"
@@ -872,7 +872,7 @@ exports[`Should render App 1`] = `
         >
           <a
             class="btn af-btn--circle af-btn--svg"
-            href="https://axaguildev.github.io/react-toolkit/latest/design/molecules/tabs/"
+            href="https://axaguildev.github.io/design-system/molecules/tabs/"
             rel="noopener noreferrer"
             target="_blank"
             title="Storybook : Tabs"
@@ -926,7 +926,7 @@ exports[`Should render App 1`] = `
         >
           <a
             class="btn af-btn--circle af-btn--svg"
-            href="https://axaguildev.github.io/react-toolkit/latest/design/atoms/button/"
+            href="https://axaguildev.github.io/design-system/atoms/button/"
             rel="noopener noreferrer"
             target="_blank"
             title="Storybook : Button"
@@ -980,7 +980,7 @@ exports[`Should render App 1`] = `
         >
           <a
             class="btn af-btn--circle af-btn--svg"
-            href="https://axaguildev.github.io/react-toolkit/latest/design/molecules/navigation/"
+            href="https://axaguildev.github.io/design-system/molecules/navigation/"
             rel="noopener noreferrer"
             target="_blank"
             title="Storybook : Menu"
@@ -1034,7 +1034,7 @@ exports[`Should render App 1`] = `
         >
           <a
             class="btn af-btn--circle af-btn--svg"
-            href="https://axaguildev.github.io/react-toolkit/latest/design/atoms/list/"
+            href="https://axaguildev.github.io/design-system/atoms/list/"
             rel="noopener noreferrer"
             target="_blank"
             title=""
@@ -1088,7 +1088,7 @@ exports[`Should render App 1`] = `
         >
           <a
             class="btn af-btn--circle af-btn--svg"
-            href="https://axaguildev.github.io/react-toolkit/latest/design/molecules/form-checkbox/"
+            href="https://axaguildev.github.io/design-system/molecules/form-checkbox/"
             rel="noopener noreferrer"
             target="_blank"
             title="Storybook : Checkbox"
@@ -1142,7 +1142,7 @@ exports[`Should render App 1`] = `
         >
           <a
             class="btn af-btn--circle af-btn--svg"
-            href="https://axaguildev.github.io/react-toolkit/latest/design/organisms/form-card/"
+            href="https://axaguildev.github.io/design-system/organisms/form-card/"
             rel="noopener noreferrer"
             target="_blank"
             title="Storybook : Checkbox-card"
@@ -1196,7 +1196,7 @@ exports[`Should render App 1`] = `
         >
           <a
             class="btn af-btn--circle af-btn--svg"
-            href="https://axaguildev.github.io/react-toolkit/latest/design/organisms/form-card/"
+            href="https://axaguildev.github.io/design-system/organisms/form-card/"
             rel="noopener noreferrer"
             target="_blank"
             title="Storybook : Radio-card"
@@ -1250,7 +1250,7 @@ exports[`Should render App 1`] = `
         >
           <a
             class="btn af-btn--circle af-btn--svg"
-            href="https://axaguildev.github.io/react-toolkit/latest/design/molecules/steps/"
+            href="https://axaguildev.github.io/design-system/molecules/steps/"
             rel="noopener noreferrer"
             target="_blank"
             title="Storybook : Steps"
@@ -1304,7 +1304,7 @@ exports[`Should render App 1`] = `
         >
           <a
             class="btn af-btn--circle af-btn--svg"
-            href="https://axaguildev.github.io/react-toolkit/latest/design/molecules/form-text/"
+            href="https://axaguildev.github.io/design-system/molecules/form-text/"
             rel="noopener noreferrer"
             target="_blank"
             title="Storybook : Number"
@@ -1358,7 +1358,7 @@ exports[`Should render App 1`] = `
         >
           <a
             class="btn af-btn--circle af-btn--svg"
-            href="https://axaguildev.github.io/react-toolkit/latest/design/"
+            href="https://axaguildev.github.io/design-system/"
             rel="noopener noreferrer"
             target="_blank"
             title="Storybook : Select-multi"
@@ -1412,7 +1412,7 @@ exports[`Should render App 1`] = `
         >
           <a
             class="btn af-btn--circle af-btn--svg"
-            href="https://axaguildev.github.io/react-toolkit/latest/design/molecules/form-pass"
+            href="https://axaguildev.github.io/design-system/molecules/form-pass"
             rel="noopener noreferrer"
             target="_blank"
             title="Storybook : Pass"
@@ -1466,7 +1466,7 @@ exports[`Should render App 1`] = `
         >
           <a
             class="btn af-btn--circle af-btn--svg"
-            href="https://axaguildev.github.io/react-toolkit/latest/design/molecules/form-datepicker/"
+            href="https://axaguildev.github.io/design-system/molecules/form-datepicker/"
             rel="noopener noreferrer"
             target="_blank"
             title="Storybook : Date"
@@ -1520,7 +1520,7 @@ exports[`Should render App 1`] = `
         >
           <a
             class="btn af-btn--circle af-btn--svg"
-            href="https://axaguildev.github.io/react-toolkit/latest/design/molecules/form-checkbox/"
+            href="https://axaguildev.github.io/design-system/molecules/form-checkbox/"
             rel="noopener noreferrer"
             target="_blank"
             title="Storybook : Toggle"
