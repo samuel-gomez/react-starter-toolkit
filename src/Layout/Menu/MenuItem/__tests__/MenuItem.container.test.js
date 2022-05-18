@@ -8,33 +8,29 @@ const MenuEnhancedWithUser = withUser(MenuItemEnhanced);
 
 describe('<MenuItemEnhanced/>', () => {
   it('Render <Menu/>', async () => {
-    await act(async () => {
-      const { asFragment } = renderWithWrapperStaticRouter(<MenuEnhancedWithUser />);
-      expect(asFragment()).toMatchSnapshot();
-    });
+    const { asFragment } = renderWithWrapperStaticRouter(<MenuEnhancedWithUser />);
+    act(() => expect(asFragment()).toMatchSnapshot());
   });
 
   it('Render <Menu/> hasChild', async () => {
-    await act(async () => {
-      const { asFragment } = renderWithWrapperStaticRouter(
-        <MenuEnhancedWithUser>
-          {[
-            {
-              label: 'Accueil',
-              url: 'accueil',
-            },
-            {
-              label: 'Membres',
-              url: 'members',
-            },
-            {
-              label: 'Slash DS',
-              url: 'slash',
-            },
-          ]}
-        </MenuEnhancedWithUser>,
-      );
-      expect(asFragment()).toMatchSnapshot();
-    });
+    const { asFragment } = renderWithWrapperStaticRouter(
+      <MenuEnhancedWithUser>
+        {[
+          {
+            label: 'Accueil',
+            url: 'accueil',
+          },
+          {
+            label: 'Membres',
+            url: 'members',
+          },
+          {
+            label: 'Slash DS',
+            url: 'slash',
+          },
+        ]}
+      </MenuEnhancedWithUser>,
+    );
+    act(() => expect(asFragment()).toMatchSnapshot());
   });
 });

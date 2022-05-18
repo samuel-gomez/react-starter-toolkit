@@ -4,10 +4,8 @@ import AppWithEnvironment, { AppContainer } from '../App.container';
 
 describe('<AppWithEnvironment />', () => {
   it('Renders AppWithEnvironment component without crashing', async () => {
-    await act(async () => {
-      const { asFragment } = await render(<AppWithEnvironment />);
-      expect(asFragment()).toMatchSnapshot();
-    });
+    const { asFragment } = render(<AppWithEnvironment />);
+    await act(() => expect(asFragment()).toMatchSnapshot());
   });
 });
 
