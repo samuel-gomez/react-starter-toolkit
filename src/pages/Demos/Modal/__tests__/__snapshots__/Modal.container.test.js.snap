@@ -295,7 +295,6 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
           class="af-title-bar__title"
         >
           Demo modal
-          
         </h1>
       </div>
     </div>
