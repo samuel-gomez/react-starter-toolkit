@@ -11,7 +11,7 @@ export const useLoadImage = ({ name, loadImageFn = loadImage, initState = null }
   const [stateimage, setStateImage] = useState(initState);
 
   useEffect(() => {
-    if (stateimage === null) {
+    if (stateimage === null && name) {
       loadImageFn(name)
         .then(image => setStateImage(image.default))
         .catch(error => setStateImage(error));

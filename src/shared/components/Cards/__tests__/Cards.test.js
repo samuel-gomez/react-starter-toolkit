@@ -2,13 +2,18 @@ import React from 'react';
 import { render, act } from '@testing-library/react';
 import Cards from '../index';
 
-const defaultProps = { items: [{ id: 'id', title: 'title', picture: { alt: 'alt', name: 'image.jpg' } }] };
+const defaultProps = {
+  items: [
+    { id: 'id1', title: 'title1', picture: { name: 'accordion.svg', alt: 'alt_accordion' } },
+    { id: 'id2', title: 'title2', picture: { name: 'accordion.svg', alt: 'alt_accordion' } },
+  ],
+};
 
 describe('<Cards/>', () => {
   it('Should render Cards', async () => {
-    await act(async () => {
-      const { asFragment } = render(<Cards {...defaultProps} />);
-      expect(asFragment()).toMatchSnapshot();
-    });
+    const { asFragment, getAllByAltText } = render(<Cards {...defaultProps} />);
+    await act(() => getAllByAltText('loading...'));
+    act(() => getAllByAltText('alt_accordion'));
+    expect(asFragment()).toMatchSnapshot();
   });
 });
