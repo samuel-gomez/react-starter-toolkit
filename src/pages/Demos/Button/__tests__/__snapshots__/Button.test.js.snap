@@ -441,7 +441,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
                
             </span>
             <span
-              class="token tag script language-javascript operator"
+              class="token tag script language-javascript arrow operator"
               style="color: rgb(255, 121, 198);"
             >
               =&gt;
@@ -450,7 +450,13 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               class="token tag script language-javascript"
               style="color: rgb(255, 121, 198);"
             >
-               console
+               
+            </span>
+            <span
+              class="token tag script language-javascript console class-name"
+              style="color: rgb(255, 121, 198);"
+            >
+              console
             </span>
             <span
               class="token tag script language-javascript punctuation"
@@ -459,7 +465,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               .
             </span>
             <span
-              class="token tag script language-javascript function"
+              class="token tag script language-javascript method function property-access"
               style="color: rgb(80, 250, 123);"
             >
               log
@@ -888,7 +894,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
                
             </span>
             <span
-              class="token tag script language-javascript operator"
+              class="token tag script language-javascript arrow operator"
               style="color: rgb(255, 121, 198);"
             >
               =&gt;
@@ -897,7 +903,13 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               class="token tag script language-javascript"
               style="color: rgb(255, 121, 198);"
             >
-               console
+               
+            </span>
+            <span
+              class="token tag script language-javascript console class-name"
+              style="color: rgb(255, 121, 198);"
+            >
+              console
             </span>
             <span
               class="token tag script language-javascript punctuation"
@@ -906,7 +918,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               .
             </span>
             <span
-              class="token tag script language-javascript function"
+              class="token tag script language-javascript method function property-access"
               style="color: rgb(80, 250, 123);"
             >
               log
@@ -1371,7 +1383,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
                
             </span>
             <span
-              class="token tag script language-javascript operator"
+              class="token tag script language-javascript arrow operator"
               style="color: rgb(255, 121, 198);"
             >
               =&gt;
@@ -1380,7 +1392,13 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               class="token tag script language-javascript"
               style="color: rgb(255, 121, 198);"
             >
-               console
+               
+            </span>
+            <span
+              class="token tag script language-javascript console class-name"
+              style="color: rgb(255, 121, 198);"
+            >
+              console
             </span>
             <span
               class="token tag script language-javascript punctuation"
@@ -1389,7 +1407,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               .
             </span>
             <span
-              class="token tag script language-javascript function"
+              class="token tag script language-javascript method function property-access"
               style="color: rgb(80, 250, 123);"
             >
               log
@@ -1819,7 +1837,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
                
             </span>
             <span
-              class="token tag script language-javascript operator"
+              class="token tag script language-javascript arrow operator"
               style="color: rgb(255, 121, 198);"
             >
               =&gt;
@@ -1828,7 +1846,13 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               class="token tag script language-javascript"
               style="color: rgb(255, 121, 198);"
             >
-               console
+               
+            </span>
+            <span
+              class="token tag script language-javascript console class-name"
+              style="color: rgb(255, 121, 198);"
+            >
+              console
             </span>
             <span
               class="token tag script language-javascript punctuation"
@@ -1837,7 +1861,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               .
             </span>
             <span
-              class="token tag script language-javascript function"
+              class="token tag script language-javascript method function property-access"
               style="color: rgb(80, 250, 123);"
             >
               log
@@ -2266,7 +2290,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
                
             </span>
             <span
-              class="token tag script language-javascript operator"
+              class="token tag script language-javascript arrow operator"
               style="color: rgb(255, 121, 198);"
             >
               =&gt;
@@ -2275,7 +2299,13 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               class="token tag script language-javascript"
               style="color: rgb(255, 121, 198);"
             >
-               console
+               
+            </span>
+            <span
+              class="token tag script language-javascript console class-name"
+              style="color: rgb(255, 121, 198);"
+            >
+              console
             </span>
             <span
               class="token tag script language-javascript punctuation"
@@ -2284,7 +2314,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               .
             </span>
             <span
-              class="token tag script language-javascript function"
+              class="token tag script language-javascript method function property-access"
               style="color: rgb(80, 250, 123);"
             >
               log
@@ -2713,7 +2743,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
                
             </span>
             <span
-              class="token tag script language-javascript operator"
+              class="token tag script language-javascript arrow operator"
               style="color: rgb(255, 121, 198);"
             >
               =&gt;
@@ -2722,7 +2752,13 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               class="token tag script language-javascript"
               style="color: rgb(255, 121, 198);"
             >
-               console
+               
+            </span>
+            <span
+              class="token tag script language-javascript console class-name"
+              style="color: rgb(255, 121, 198);"
+            >
+              console
             </span>
             <span
               class="token tag script language-javascript punctuation"
@@ -2731,7 +2767,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               .
             </span>
             <span
-              class="token tag script language-javascript function"
+              class="token tag script language-javascript method function property-access"
               style="color: rgb(80, 250, 123);"
             >
               log
@@ -3162,7 +3198,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
                
             </span>
             <span
-              class="token tag script language-javascript operator"
+              class="token tag script language-javascript arrow operator"
               style="color: rgb(255, 121, 198);"
             >
               =&gt;
@@ -3171,7 +3207,13 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               class="token tag script language-javascript"
               style="color: rgb(255, 121, 198);"
             >
-               console
+               
+            </span>
+            <span
+              class="token tag script language-javascript console class-name"
+              style="color: rgb(255, 121, 198);"
+            >
+              console
             </span>
             <span
               class="token tag script language-javascript punctuation"
@@ -3180,7 +3222,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               .
             </span>
             <span
-              class="token tag script language-javascript function"
+              class="token tag script language-javascript method function property-access"
               style="color: rgb(80, 250, 123);"
             >
               log
@@ -3687,7 +3729,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
                
             </span>
             <span
-              class="token tag script language-javascript operator"
+              class="token tag script language-javascript arrow operator"
               style="color: rgb(255, 121, 198);"
             >
               =&gt;
@@ -3696,7 +3738,13 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               class="token tag script language-javascript"
               style="color: rgb(255, 121, 198);"
             >
-               console
+               
+            </span>
+            <span
+              class="token tag script language-javascript console class-name"
+              style="color: rgb(255, 121, 198);"
+            >
+              console
             </span>
             <span
               class="token tag script language-javascript punctuation"
@@ -3705,7 +3753,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               .
             </span>
             <span
-              class="token tag script language-javascript function"
+              class="token tag script language-javascript method function property-access"
               style="color: rgb(80, 250, 123);"
             >
               log
@@ -4210,7 +4258,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
                
             </span>
             <span
-              class="token tag script language-javascript operator"
+              class="token tag script language-javascript arrow operator"
               style="color: rgb(255, 121, 198);"
             >
               =&gt;
@@ -4219,7 +4267,13 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               class="token tag script language-javascript"
               style="color: rgb(255, 121, 198);"
             >
-               console
+               
+            </span>
+            <span
+              class="token tag script language-javascript console class-name"
+              style="color: rgb(255, 121, 198);"
+            >
+              console
             </span>
             <span
               class="token tag script language-javascript punctuation"
@@ -4228,7 +4282,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               .
             </span>
             <span
-              class="token tag script language-javascript function"
+              class="token tag script language-javascript method function property-access"
               style="color: rgb(80, 250, 123);"
             >
               log
