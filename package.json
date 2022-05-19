@@ -67,7 +67,7 @@
     "jest-sonar-reporter": "2.0.0",
     "msw": "0.39.2",
     "precise-commits": "1.0.2",
-    "prettier": "2.6.1",
+    "prettier": "2.6.2",
     "sass": "1.51.0",
     "whatwg-fetch": "3.6.2"
   },
