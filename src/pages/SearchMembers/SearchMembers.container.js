@@ -1,4 +1,3 @@
-import React from 'react';
 import { func } from 'prop-types';
 import setLoaderMode from 'shared/helpers/setLoaderMode';
 import SearchMembers from './SearchMembers';

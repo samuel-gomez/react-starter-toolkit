@@ -1,4 +1,3 @@
-import React from 'react';
 import { renderWithWrapperStaticRouter } from 'shared/testsUtils';
 import withUser from 'shared/hoc/withUser';
 import { Menu } from '../Menu';

@@ -25,5 +25,3 @@ afterEach(() => server.resetHandlers());
 
 // Clean up after the tests are finished.
 afterAll(() => server.close());
-
-global.IS_REACT_ACT_ENVIRONMENT = true;

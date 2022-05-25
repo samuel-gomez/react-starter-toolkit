@@ -1,4 +1,3 @@
-import React from 'react';
 import { ClassManager } from '@axa-fr/react-toolkit-core';
 import ResiliencePage from './ResiliencePage';
 

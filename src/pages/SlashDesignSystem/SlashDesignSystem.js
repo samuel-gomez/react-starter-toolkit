@@ -1,4 +1,3 @@
-import React from 'react';
 import { arrayOf, shape, string } from 'prop-types';
 import Layout from 'Layout';
 import Cards from 'shared/components/Cards';

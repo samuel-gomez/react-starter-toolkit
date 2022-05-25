@@ -1,4 +1,3 @@
-import React from 'react';
 import { shape, arrayOf } from 'prop-types';
 import Card, { cardPropTypes } from 'shared/components/Cards/Card';
 import './Cards.scss';

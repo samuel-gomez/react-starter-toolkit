@@ -1,4 +1,3 @@
-import React from 'react';
 import { arrayOf, object, string } from 'prop-types';
 import Line from './Line';
 

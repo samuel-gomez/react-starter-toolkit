@@ -1,4 +1,3 @@
-import React from 'react';
 import { func, node, string } from 'prop-types';
 import WithClassNameModifier from 'shared/hoc/WithClassNameModifier';
 

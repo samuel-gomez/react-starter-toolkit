@@ -1,4 +1,3 @@
-import React from 'react';
 import { string, shape } from 'prop-types';
 import LasyImage from 'shared/components/LasyImage';
 import StorybookIcon from 'shared/components/StorybookIcon';

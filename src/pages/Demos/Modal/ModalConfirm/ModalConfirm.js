@@ -1,4 +1,3 @@
-import React from 'react';
 import { bool, func, string } from 'prop-types';
 import { Alert } from '@axa-fr/react-toolkit-all';
 import Modal from '@axa-fr/react-toolkit-modal-default';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { number, arrayOf, shape } from 'prop-types';
 import { NavBar } from '@axa-fr/react-toolkit-all';
 import { MenuItemPropTypes, createMenu } from './MenuItem';

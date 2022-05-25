@@ -1,4 +1,3 @@
-import React from 'react';
 import { string } from 'prop-types';
 import Resilience from 'shared/components/Resilience/Resilience';
 import { Paging } from '@axa-fr/react-toolkit-all';

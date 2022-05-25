@@ -1,4 +1,3 @@
-import React from 'react';
 import { emptyFunction, renderWithWrapperStaticRouter } from 'shared/testsUtils';
 import ModalPage from '../Modal';
 

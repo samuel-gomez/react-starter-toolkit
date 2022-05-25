@@ -1,4 +1,3 @@
-import React from 'react';
 import { func, string } from 'prop-types';
 import Layout from 'Layout';
 import Loader from 'shared/components/Loader';
@@ -19,7 +18,7 @@ export const DownloadLinkEnhanced = ({ idKey, firstname, lastname, getDownloadPa
   <DownloadLink path={getDownloadPathFn(idKey)} fileName={setFileNameFn({ distributorId: idKey, name: `${firstname.label}-${lastname.label}` })} />
 );
 
-const SearchMembers = ({ titleBar, title, loaderMode, members, anomaly, deleteNotification, notifications, submitSearch, DownloadLinkCmpt }) => (
+const SearchMembers = ({ titleBar, title, loaderMode, members, anomaly, submitSearch, DownloadLinkCmpt }) => (
   <Layout propsTitle={{ title: titleBar, backHome: true }}>
     <h1 className="af-title--content">{title}</h1>
     <SearchForm submitSearchForm={submitSearch} />

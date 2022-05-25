@@ -1,4 +1,3 @@
-import React from 'react';
 import ResiliencePage from 'shared/components/ResiliencePage';
 import { TITLE, MESSAGE, CODE } from './constants';
 import './Unauthorize.scss';

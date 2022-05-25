@@ -1,4 +1,3 @@
-import React from 'react';
 import { StaticRouter } from 'react-router-dom/server';
 import { render } from '@testing-library/react';
 import TitleBarEnhanced from '../index';

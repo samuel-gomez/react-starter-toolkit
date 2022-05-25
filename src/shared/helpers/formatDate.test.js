@@ -1,4 +1,4 @@
-const { setDate } = require('./formatDate');
+import { setDate } from './formatDate';
 
 describe('setDate', () => {
   it.each`

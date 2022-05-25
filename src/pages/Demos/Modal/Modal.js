@@ -1,4 +1,3 @@
-import React from 'react';
 import { func, string } from 'prop-types';
 import { Button, Alert } from '@axa-fr/react-toolkit-all';
 import Modal from '@axa-fr/react-toolkit-modal-default';

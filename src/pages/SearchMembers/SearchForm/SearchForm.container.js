@@ -1,4 +1,3 @@
-import React from 'react';
 import { PropTypes } from 'prop-types';
 import setConfirmClassModifier from 'shared/helpers/setConfirmClassModifier';
 import SearchForm from './SearchForm';

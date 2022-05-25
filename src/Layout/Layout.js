@@ -1,4 +1,3 @@
-import React from 'react';
 import { node, string, bool, shape } from 'prop-types';
 import WithClassNameModifier from 'shared/hoc/WithClassNameModifier';
 import Header from 'Layout/Header';

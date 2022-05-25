@@ -1,4 +1,3 @@
-import React from 'react';
 import { func, number, oneOfType, string } from 'prop-types';
 import setLoaderMode from 'shared/helpers/setLoaderMode';
 import DownloadLink from './DownloadLink';

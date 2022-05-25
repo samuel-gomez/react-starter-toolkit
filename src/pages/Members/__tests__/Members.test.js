@@ -1,4 +1,3 @@
-import React from 'react';
 import { renderWithWrapperStaticRouter } from 'shared/testsUtils';
 import Members from '../Members';
 import { defaultProps, membersFormattedMock } from './Members.mock';

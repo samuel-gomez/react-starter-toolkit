@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button } from '@axa-fr/react-toolkit-all';
 import LiveCode from 'shared/components/LiveCode';
 
@@ -9,6 +8,6 @@ const code = `
   </Button>
 `;
 
-const ButtonCircle = props => <LiveCode code={code} scope={scope} />;
+const ButtonCircle = () => <LiveCode code={code} scope={scope} />;
 
 export default ButtonCircle;

@@ -1,4 +1,3 @@
-import React from 'react';
 import { string, bool } from 'prop-types';
 import TitleBar from 'Layout/TitleBar';
 import './ResiliencePage.scss';

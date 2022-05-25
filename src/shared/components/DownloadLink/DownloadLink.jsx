@@ -1,4 +1,3 @@
-import React from 'react';
 import { bool, func, string } from 'prop-types';
 import { Button } from '@axa-fr/react-toolkit-all';
 import Loader from 'shared/components/Loader';

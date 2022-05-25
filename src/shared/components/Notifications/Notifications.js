@@ -1,4 +1,3 @@
-import React from 'react';
 import { string, arrayOf, shape, func } from 'prop-types';
 import './Notifications.scss';
 import { DEFAULT_CLASS_NOTIFICATION } from './constants';

@@ -1,5 +1,6 @@
-import React, { createContext } from 'react';
+import { createContext } from 'react';
 import { render, act } from '@testing-library/react';
+import { TEnvironmentState } from 'App/EnvironmentProvider';
 import AppWithEnvironment, { AppContainer } from '../App.container';
 
 describe('<AppWithEnvironment />', () => {
@@ -11,12 +12,16 @@ describe('<AppWithEnvironment />', () => {
 
 describe('<AppContainer />', () => {
   it('Renders AppContainer component without crashing', () => {
-    const EnvironmentContextObj = createContext({
+    const EnvironmentContextObj = createContext<TEnvironmentState>({
       environment: {
         baseUrl: 'local',
+        oidc: {},
+        fetchConfig: {},
+        apiUrl: '/apiUrl',
       },
       error: null,
     });
+
     const AppCmpt = ({ baseUrl = '' }) => <p>{baseUrl}</p>;
     const { asFragment, getByText } = render(<AppContainer EnvironmentContextObj={EnvironmentContextObj} AppCmpt={AppCmpt} />);
     expect(getByText('local')).toBeInTheDocument();

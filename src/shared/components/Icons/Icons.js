@@ -1,4 +1,3 @@
-import React from 'react';
 import PATHS from './constants';
 
 const Icons = ({ className = 'af-icon-svg', icon }) => (

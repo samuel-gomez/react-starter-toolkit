@@ -1,4 +1,3 @@
-import React from 'react';
 import { string, arrayOf, shape } from 'prop-types';
 import { ClassManager } from '@axa-fr/react-toolkit-all';
 import { Notifications } from './Notifications';

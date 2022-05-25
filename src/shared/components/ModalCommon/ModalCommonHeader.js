@@ -1,4 +1,3 @@
-import React from 'react';
 import { func, string } from 'prop-types';
 import Modal from '@axa-fr/react-toolkit-modal-default';
 

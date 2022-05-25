@@ -1,4 +1,3 @@
-import React from 'react';
 import { node } from 'prop-types';
 import HelpHover from 'shared/components/HelpInfo';
 import Td from './Td';

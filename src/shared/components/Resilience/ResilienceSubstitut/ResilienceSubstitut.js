@@ -1,4 +1,3 @@
-import React from 'react';
 import { shape, string, elementType, node, func } from 'prop-types';
 import { Alert } from '@axa-fr/react-toolkit-all';
 import { RESILIENCE_MODE, DEFAULT_CLASS_ALERT, DEFAULT_CLASS_CONTAINER } from './constants';

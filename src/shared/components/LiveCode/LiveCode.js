@@ -1,4 +1,3 @@
-import React from 'react';
 import { string, objectOf, oneOfType, func, object, array } from 'prop-types';
 import dracula from 'prism-react-renderer/themes/dracula';
 import { LiveProvider, LiveEditor, LiveError, LivePreview } from 'react-live';

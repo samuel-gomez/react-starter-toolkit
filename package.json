@@ -16,14 +16,23 @@
     "prepare": "husky install",
     "cz": "cz",
     "prettier": "prettier --check src",
-    "prettier-fix": "prettier --write src"
+    "prettier:fix": "prettier --write src"
   },
   "dependencies": {
-    "@axa-fr/react-oidc-context": "5.7.7",
+    "@axa-fr/react-oidc-context": "5.4.2",
     "@axa-fr/react-toolkit-all": "1.4.1",
     "@axa-fr/react-toolkit-core": "1.4.1",
     "@axa-fr/react-toolkit-modal-default": "1.4.0",
     "@babel/parser": "7.17.12",
+    "@types/downloadjs": "1.4.3",
+    "@types/intl": "1.2.0",
+    "@types/jest": "27.5.1",
+    "@types/lodash": "4.14.182",
+    "@types/node": "17.0.34",
+    "@types/react": "18.0.9",
+    "@types/react-dom": "18.0.4",
+    "@types/react-router": "5.1.18",
+    "@types/react-router-dom": "5.3.3",
     "apexcharts": "3.35.2",
     "classnames": "2.3.1",
     "downloadjs": "1.4.7",
@@ -49,6 +58,8 @@
     "@testing-library/react": "13.2.0",
     "@testing-library/react-hooks": "8.0.0",
     "@testing-library/user-event": "14.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
     "commitizen": "4.2.4",
     "cross-env": "7.0.3",
     "cz-conventional-changelog": "3.3.0",
@@ -69,6 +80,7 @@
     "precise-commits": "1.0.2",
     "prettier": "2.6.2",
     "sass": "1.51.0",
+    "typescript": "^4.6.4",
     "whatwg-fetch": "3.6.2"
   },
   "commitlint": {
@@ -102,16 +114,17 @@
       "clover"
     ],
     "collectCoverageFrom": [
-      "<rootDir>/src/**/*.{js,jsx,mjs}",
-      "!<rootDir>/src/**/index.js",
-      "!<rootDir>/src/**/constants.js",
-      "!<rootDir>/src/**/*.stories.js",
-      "!<rootDir>/src/**/*.rules.js",
-      "!<rootDir>/src/shared/hoc/withEnvAndAuth.js",
+      "<rootDir>/src/**/*.{js,jsx,mjs,ts,tsx}",
+      "!<rootDir>/src/**/index.{js,ts,tsx}",
+      "!<rootDir>/src/**/constants.{js,ts}",
+      "!<rootDir>/src/**/*.stories.{js,ts}",
+      "!<rootDir>/src/**/*.rules.{js,ts}",
+      "!<rootDir>/src/shared/hoc/withEnvAndAuth.{js,ts}",
       "!<rootDir>/node_modules/",
-      "!<rootDir>/src/shared/helpers/compose.js",
-      "!<rootDir>/src/shared/testsUtils/**/*.js",
-      "!<rootDir>/src/**/__tests__/*.js"
+      "!<rootDir>/src/shared/helpers/compose.{js,ts}",
+      "!<rootDir>/src/shared/testsUtils/**/*.{js,ts}",
+      "!<rootDir>/src/**/__tests__/*.{js,ts}",
+      "!<rootDir>/src/**/*.d.ts"
     ],
     "testMatch": [
       "**/__tests__/**/*.[jt]s?(x)",

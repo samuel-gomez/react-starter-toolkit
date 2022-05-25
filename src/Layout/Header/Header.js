@@ -1,4 +1,3 @@
-import React from 'react';
 import { string, arrayOf, shape } from 'prop-types';
 import { Header, Name, User, Infos } from '@axa-fr/react-toolkit-all';
 import logo from 'shared/images/slash-logo.svg';

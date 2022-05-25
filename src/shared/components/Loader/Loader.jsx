@@ -1,4 +1,3 @@
-import React from 'react';
 import { string, node } from 'prop-types';
 import WithClassNameModifier from 'shared/hoc/WithClassNameModifier';
 import './Loader.scss';
