@@ -1,4 +1,4 @@
-import React, { createContext } from 'react';
+import { createContext } from 'react';
 import { node, func } from 'prop-types';
 import Notifications, { useNotifications } from 'shared/components/Notifications';
 

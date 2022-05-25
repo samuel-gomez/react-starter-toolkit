@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import { useState, useCallback } from 'react';
 import { func } from 'prop-types';
 import { useLocation } from 'react-router-dom';
 import { ToggleButton, Action } from '@axa-fr/react-toolkit-all';

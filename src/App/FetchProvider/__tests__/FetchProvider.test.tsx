@@ -1,43 +1,45 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { render } from '@testing-library/react';
-import { emptyFunction } from 'shared/testsUtils';
 import FetchProvider, { FetchContext, setFetchCustom } from '../FetchProvider';
 
-const fetchConfig = {
+const fetchConfigMock = {
   headers: {
     'Content-Type': 'text/plain',
   },
 };
+
 const apiMock = 'http://localhost:5001/api/';
+
+type TBase = {
+  fetchCustom?: (path: string, customConfig: object) => Promise<Response> | null;
+};
+
+const Base = ({ fetchCustom }: TBase) => <div>{fetchCustom ? 'haveFetchCustom' : 'notHaveFetchCustom'}</div>;
 
 const BaseWithFetch = () => {
   const fetchProps = useContext(FetchContext);
   return <Base {...fetchProps} />;
 };
 
-const Base = ({ fetchCustom }) => <div>{fetchCustom ? 'haveFetchCustom' : 'notHaveFetchCustom'}</div>;
-
 const useOidcAccessTokenMock = jest.fn().mockReturnValue({
   accessToken: 'accessTokenfdsfdsqgvqvsqfs',
 });
 
-const App = () => (
-  <FetchProvider apiUrl={apiMock} fetchConfig={fetchConfig} useOidcAccessToken={useOidcAccessTokenMock}>
-    <BaseWithFetch />
-  </FetchProvider>
-);
+describe('FetchProvider', () => {
+  it('Should Base have fetchCustom props when render FetchProvider with required props', async () => {
+    const { asFragment, getByText } = render(
+      <FetchProvider apiUrl={apiMock} fetchConfig={fetchConfigMock} useOidcAccessToken={useOidcAccessTokenMock}>
+        <BaseWithFetch />
+      </FetchProvider>,
+    );
 
-describe('setFetchCustom', () => {
-  it('Should Base have fetchCustom props when call setFetchCustom', () => {
-    const { asFragment, getByText } = render(<App />);
+    expect(getByText(/haveFetchCustom/)).toBeInTheDocument();
     expect(asFragment()).toMatchSnapshot();
-    expect(getByText('haveFetchCustom')).toBeDefined();
   });
 });
 
-const fetchMock = jest.fn({
-  json: emptyFunction,
-});
+const fetchMock = jest.fn();
+
 describe('setFetchCustom', () => {
   const resolvedValue = { json: () => ({ data: 'data' }), blob: () => ({ blob: 'blob' }), status: 200 };
 
@@ -50,10 +52,11 @@ describe('setFetchCustom', () => {
       },
     };
     fetchMock.mockResolvedValue(resolvedValue);
-    const result = await setFetchCustom({ apiUrl: apiMock, fetchConfig, fetchFn: fetchMock })(path, customConfig);
+    const result = await setFetchCustom({ apiUrl: apiMock, fetchAuthConfig: fetchConfigMock, fetchFn: fetchMock })(path, customConfig);
 
     expect(fetchMock).toBeCalledWith('http://localhost:5001/api/members', {
       headers: {
+        'Content-Type': 'text/plain',
         body: 'body',
       },
     });
@@ -66,7 +69,7 @@ describe('setFetchCustom', () => {
       blob: true,
     };
     fetchMock.mockResolvedValue(resolvedValue);
-    const result = await setFetchCustom({ apiUrl: apiMock, fetchConfig, fetchFn: fetchMock })(path, customConfig);
+    const result = await setFetchCustom({ apiUrl: apiMock, fetchAuthConfig: fetchConfigMock, fetchFn: fetchMock })(path, customConfig);
     expect(result).toEqual({ blob: 'blob' });
   });
 });

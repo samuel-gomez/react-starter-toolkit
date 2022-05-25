@@ -9,6 +9,7 @@ import type { TEnvironment } from './EnvironmentProvider';
 type TApp = TEnvironment & {
   OidcProviderCmpt?: typeof OidcProvider;
   OidcSecureCmpt?: typeof OidcSecure;
+  FetchProviderCmpt?: typeof OidcSecure;
   useOidcUserFn?: typeof useOidcUser;
   useOidcAccessTokenFn?: typeof useOidcAccessToken;
 };
@@ -20,19 +21,20 @@ const App = ({
   baseUrl,
   OidcProviderCmpt = OidcProvider,
   OidcSecureCmpt = OidcSecure,
-  useOidcUserFn = useOidcUser,
+  FetchProviderCmpt = FetchProvider,
   useOidcAccessTokenFn = useOidcAccessToken,
+  useOidcUserFn = useOidcUser,
 }: TApp) => (
   <OidcProviderCmpt configuration={oidc}>
     <UserProvider useOidcUser={useOidcUserFn}>
       <OidcSecureCmpt>
-        <FetchProvider apiUrl={apiUrl} fetchConfig={fetchConfig} useOidcAccessToken={useOidcAccessTokenFn}>
+        <FetchProviderCmpt apiUrl={apiUrl} fetchConfig={fetchConfig} useOidcAccessTokenFn={useOidcAccessTokenFn}>
           <NotificationProvider>
             <Router basename={baseUrl}>
               <Routes />
             </Router>
           </NotificationProvider>
-        </FetchProvider>
+        </FetchProviderCmpt>
       </OidcSecureCmpt>
     </UserProvider>
   </OidcProviderCmpt>

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`setFetchCustom Should Base have fetchCustom props when call setFetchCustom 1`] = `
+exports[`FetchProvider Should Base have fetchCustom props when render FetchProvider with required props 1`] = `
 <DocumentFragment>
   <div>
     haveFetchCustom
