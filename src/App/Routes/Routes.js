@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { func } from 'prop-types';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import PageNotFound from 'pages/NotFound';

@@ -1,4 +1,4 @@
-import React, { createContext } from 'react';
+import { createContext } from 'react';
 import { get, isEmpty } from 'lodash';
 import { PROFILS } from 'shared/constants';
 

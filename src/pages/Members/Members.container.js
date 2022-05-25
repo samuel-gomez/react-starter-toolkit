@@ -1,4 +1,4 @@
-import React, { createContext } from 'react';
+import { createContext } from 'react';
 import { func } from 'prop-types';
 import setLoaderMode from 'shared/helpers/setLoaderMode';
 import Members from './Members';

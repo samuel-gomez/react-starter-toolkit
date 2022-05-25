@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { string } from 'prop-types';
 import { UserContext } from 'App/UserProvider';
 import Header from './Header';

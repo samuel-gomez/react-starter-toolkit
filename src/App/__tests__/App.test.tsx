@@ -8,10 +8,6 @@ const useOidcUserMock = jest.fn().mockReturnValue({
   },
 });
 
-const useOidcAccessTokenMock = jest.fn().mockReturnValue({
-  accessToken: 'accessTokenfdsfdsqgvqvsqfs',
-});
-
 const envMock = {
   baseUrl: '/',
   oidc: {
@@ -36,16 +32,21 @@ describe('<App/>', () => {
   });
 
   it('Should render App with all props', async () => {
+    const OidcProviderCmpt = jest.fn().mockImplementation(({ children }: { children: ReactNode }) => <>OidcProviderCmpt : {children}</>);
+    const OidcSecureCmpt = jest.fn().mockImplementation(({ children }: { children: ReactNode }) => <>OidcSecureCmpt : {children}</>);
+    const FetchProviderCmpt = jest.fn().mockImplementation(({ children }: { children: ReactNode }) => <>FetchProviderCmpt : {children}</>);
+
     const optionalProps = {
-      OidcProviderCmpt: ({ children }: { children: ReactNode }) => <>OidcProviderCmpt : {children}</>,
-      OidcSecureCmpt: ({ children }: { children: ReactNode }) => <>OidcSecureCmpt : {children}</>,
+      OidcProviderCmpt,
+      OidcSecureCmpt,
+      FetchProviderCmpt,
       useOidcUserFn: useOidcUserMock,
-      useOidcAccessTokenFn: useOidcAccessTokenMock,
     };
     const { asFragment, getByText } = render(<App {...envMock} {...optionalProps} />);
 
-    expect(getByText(/OidcProviderCmpt/)).toBeInTheDocument();
+    await act(() => expect(getByText(/OidcProviderCmpt/)).toBeInTheDocument());
     expect(getByText(/OidcSecureCmpt/)).toBeInTheDocument();
+    expect(getByText(/FetchProviderCmpt/)).toBeInTheDocument();
     expect(asFragment()).toMatchSnapshot();
   });
 });

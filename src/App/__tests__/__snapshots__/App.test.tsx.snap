@@ -2,7 +2,7 @@
 
 exports[`<App/> Should render App with all props 1`] = `
 <DocumentFragment>
-  OidcProviderCmpt : OidcSecureCmpt : 
+  OidcProviderCmpt : OidcSecureCmpt : FetchProviderCmpt : 
   <div
     class="af-header"
   >
@@ -315,9 +315,9 @@ exports[`<App/> Should render App with all props 1`] = `
         class="af-card af-skeleton"
       >
         <img
-          alt="loading..."
-          class="af-lasyimage"
-          src="puff.svg"
+          alt="champ texte"
+          class="af-card__image"
+          src="text.svg"
         />
         <header
           class="af-card__header"
@@ -369,9 +369,9 @@ exports[`<App/> Should render App with all props 1`] = `
         class="af-card af-skeleton"
       >
         <img
-          alt="loading..."
-          class="af-lasyimage"
-          src="puff.svg"
+          alt="champ texterea"
+          class="af-card__image"
+          src="textrea.svg"
         />
         <header
           class="af-card__header"
@@ -423,9 +423,9 @@ exports[`<App/> Should render App with all props 1`] = `
         class="af-card af-skeleton"
       >
         <img
-          alt="loading..."
-          class="af-lasyimage"
-          src="puff.svg"
+          alt="champ file"
+          class="af-card__image"
+          src="file.svg"
         />
         <header
           class="af-card__header"
@@ -477,9 +477,9 @@ exports[`<App/> Should render App with all props 1`] = `
         class="af-card af-skeleton"
       >
         <img
-          alt="loading..."
-          class="af-lasyimage"
-          src="puff.svg"
+          alt="accordion"
+          class="af-card__image"
+          src="accordion.svg"
         />
         <header
           class="af-card__header"
@@ -531,9 +531,9 @@ exports[`<App/> Should render App with all props 1`] = `
         class="af-card af-skeleton"
       >
         <img
-          alt="loading..."
-          class="af-lasyimage"
-          src="puff.svg"
+          alt="modal"
+          class="af-card__image"
+          src="modal.svg"
         />
         <header
           class="af-card__header"
@@ -585,9 +585,9 @@ exports[`<App/> Should render App with all props 1`] = `
         class="af-card af-skeleton"
       >
         <img
-          alt="loading..."
-          class="af-lasyimage"
-          src="puff.svg"
+          alt="alert"
+          class="af-card__image"
+          src="alert.svg"
         />
         <header
           class="af-card__header"
@@ -639,9 +639,9 @@ exports[`<App/> Should render App with all props 1`] = `
         class="af-card af-skeleton"
       >
         <img
-          alt="loading..."
-          class="af-lasyimage"
-          src="puff.svg"
+          alt="badge"
+          class="af-card__image"
+          src="badge.svg"
         />
         <header
           class="af-card__header"
@@ -693,9 +693,9 @@ exports[`<App/> Should render App with all props 1`] = `
         class="af-card af-skeleton"
       >
         <img
-          alt="loading..."
-          class="af-lasyimage"
-          src="puff.svg"
+          alt="popover"
+          class="af-card__image"
+          src="popover.svg"
         />
         <header
           class="af-card__header"
@@ -747,9 +747,9 @@ exports[`<App/> Should render App with all props 1`] = `
         class="af-card af-skeleton"
       >
         <img
-          alt="loading..."
-          class="af-lasyimage"
-          src="puff.svg"
+          alt="slider"
+          class="af-card__image"
+          src="slider.svg"
         />
         <header
           class="af-card__header"
@@ -801,9 +801,9 @@ exports[`<App/> Should render App with all props 1`] = `
         class="af-card af-skeleton"
       >
         <img
-          alt="loading..."
-          class="af-lasyimage"
-          src="puff.svg"
+          alt="table"
+          class="af-card__image"
+          src="table.svg"
         />
         <header
           class="af-card__header"
@@ -855,9 +855,9 @@ exports[`<App/> Should render App with all props 1`] = `
         class="af-card af-skeleton"
       >
         <img
-          alt="loading..."
-          class="af-lasyimage"
-          src="puff.svg"
+          alt="tabs"
+          class="af-card__image"
+          src="tabs.svg"
         />
         <header
           class="af-card__header"
@@ -909,9 +909,9 @@ exports[`<App/> Should render App with all props 1`] = `
         class="af-card af-skeleton"
       >
         <img
-          alt="loading..."
-          class="af-lasyimage"
-          src="puff.svg"
+          alt="button"
+          class="af-card__image"
+          src="button.svg"
         />
         <header
           class="af-card__header"
@@ -963,9 +963,9 @@ exports[`<App/> Should render App with all props 1`] = `
         class="af-card af-skeleton"
       >
         <img
-          alt="loading..."
-          class="af-lasyimage"
-          src="puff.svg"
+          alt="menu"
+          class="af-card__image"
+          src="menu.svg"
         />
         <header
           class="af-card__header"
@@ -1017,9 +1017,9 @@ exports[`<App/> Should render App with all props 1`] = `
         class="af-card af-skeleton"
       >
         <img
-          alt="loading..."
-          class="af-lasyimage"
-          src="puff.svg"
+          alt="list"
+          class="af-card__image"
+          src="list.svg"
         />
         <header
           class="af-card__header"
@@ -1071,9 +1071,9 @@ exports[`<App/> Should render App with all props 1`] = `
         class="af-card af-skeleton"
       >
         <img
-          alt="loading..."
-          class="af-lasyimage"
-          src="puff.svg"
+          alt="checkbox"
+          class="af-card__image"
+          src="checkbox.svg"
         />
         <header
           class="af-card__header"
@@ -1125,9 +1125,9 @@ exports[`<App/> Should render App with all props 1`] = `
         class="af-card af-skeleton"
       >
         <img
-          alt="loading..."
-          class="af-lasyimage"
-          src="puff.svg"
+          alt="checkbox-card"
+          class="af-card__image"
+          src="checkbox-card.svg"
         />
         <header
           class="af-card__header"
@@ -1179,9 +1179,9 @@ exports[`<App/> Should render App with all props 1`] = `
         class="af-card af-skeleton"
       >
         <img
-          alt="loading..."
-          class="af-lasyimage"
-          src="puff.svg"
+          alt="radio-card"
+          class="af-card__image"
+          src="radio-card.svg"
         />
         <header
           class="af-card__header"
@@ -1233,9 +1233,9 @@ exports[`<App/> Should render App with all props 1`] = `
         class="af-card af-skeleton"
       >
         <img
-          alt="loading..."
-          class="af-lasyimage"
-          src="puff.svg"
+          alt="steps"
+          class="af-card__image"
+          src="steps.svg"
         />
         <header
           class="af-card__header"
@@ -1287,9 +1287,9 @@ exports[`<App/> Should render App with all props 1`] = `
         class="af-card af-skeleton"
       >
         <img
-          alt="loading..."
-          class="af-lasyimage"
-          src="puff.svg"
+          alt="number"
+          class="af-card__image"
+          src="number.svg"
         />
         <header
           class="af-card__header"
@@ -1341,9 +1341,9 @@ exports[`<App/> Should render App with all props 1`] = `
         class="af-card af-skeleton"
       >
         <img
-          alt="loading..."
-          class="af-lasyimage"
-          src="puff.svg"
+          alt="select-multi"
+          class="af-card__image"
+          src="select-multi.svg"
         />
         <header
           class="af-card__header"
@@ -1395,9 +1395,9 @@ exports[`<App/> Should render App with all props 1`] = `
         class="af-card af-skeleton"
       >
         <img
-          alt="loading..."
-          class="af-lasyimage"
-          src="puff.svg"
+          alt="pass"
+          class="af-card__image"
+          src="pass.svg"
         />
         <header
           class="af-card__header"
@@ -1449,9 +1449,9 @@ exports[`<App/> Should render App with all props 1`] = `
         class="af-card af-skeleton"
       >
         <img
-          alt="loading..."
-          class="af-lasyimage"
-          src="puff.svg"
+          alt="date"
+          class="af-card__image"
+          src="date.svg"
         />
         <header
           class="af-card__header"
@@ -1503,9 +1503,9 @@ exports[`<App/> Should render App with all props 1`] = `
         class="af-card af-skeleton"
       >
         <img
-          alt="loading..."
-          class="af-lasyimage"
-          src="puff.svg"
+          alt="toggle"
+          class="af-card__image"
+          src="toggle.svg"
         />
         <header
           class="af-card__header"
