@@ -1,4 +1,3 @@
-import React from 'react';
 import { string } from 'prop-types';
 import { Link } from 'react-router-dom';
 import { NavBarItem } from '@axa-fr/react-toolkit-all';

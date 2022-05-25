@@ -1,4 +1,3 @@
-import React from 'react';
 import { UserContextProvider } from 'App/UserProvider/UserProvider';
 
 const withUser = Component => props =>

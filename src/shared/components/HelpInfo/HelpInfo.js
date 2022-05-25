@@ -1,4 +1,3 @@
-import React from 'react';
 import { node, string } from 'prop-types';
 import { Popover } from '@axa-fr/react-toolkit-all';
 import './HelpInfo.scss';

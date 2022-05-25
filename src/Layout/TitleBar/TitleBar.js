@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { Title } from '@axa-fr/react-toolkit-all';
 import { bool, node, string } from 'prop-types';

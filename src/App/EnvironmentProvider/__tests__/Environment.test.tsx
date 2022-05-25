@@ -1,9 +1,10 @@
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 import { renderHook, act } from '@testing-library/react-hooks';
 import { render } from '@testing-library/react';
 import EnvironmentProvider, { useEnv, EnvironmentContext } from '..';
+import type { TEnvironment, TEnvironmentState } from '..';
 
-const BaseWithEnvironment = ({ environment }) => <div>{environment.baseUrl}</div>;
+const BaseWithEnvironment = ({ environment }: { environment: TEnvironment | null }) => <div>{environment?.baseUrl}</div>;
 
 const BaseUseEnvContext = () => {
   const envProps = useContext(EnvironmentContext);
@@ -37,21 +38,30 @@ describe('useEnv', () => {
     const getImportMock = jest.fn().mockImplementation(() => Promise.resolve({ client_id: 'test' }));
     const { result } = renderHook(() => useEnv(getImportMock));
 
-    const expectedEnv = { envState: { environment: { client_id: 'test' } }, setEnvState: result.current.setEnvState };
+    const expectedEnv = { envState: { environment: { client_id: 'test' }, error: null }, setEnvState: result.current.setEnvState };
+
     await act(async () => {
       expect(result.current).not.toEqual(expectedEnv);
     });
-    await act(async () => {
-      expect(result.current).toEqual(expectedEnv);
-    });
+    expect(result.current).toEqual(expectedEnv);
   });
+
   it('Should not import file config when state environment is not null', () => {
-    const { result } = renderHook(() => useEnv(null, { environment: 'not null env' }));
-    const expectedEnv = { envState: { environment: 'not null env' }, setEnvState: result.current.setEnvState };
+    const environmentMock: TEnvironment = {
+      oidc: { client_id: 'interactive.public' },
+      fetchConfig: { method: 'GET' },
+      apiUrl: 'url',
+      baseUrl: 'url',
+    };
+
+    const mockEnv: TEnvironmentState = { environment: environmentMock, error: null };
+    const { result } = renderHook(() => useEnv(() => Promise.resolve(), mockEnv));
+    const expectedEnv = { envState: mockEnv, setEnvState: result.current.setEnvState };
 
     act(() => {
       result.current.setEnvState({
-        environment: 'not null env',
+        environment: environmentMock,
+        error: null,
       });
     });
 

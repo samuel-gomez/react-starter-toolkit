@@ -1,4 +1,3 @@
-import React from 'react';
 import { renderWithWrapperStaticRouter } from 'shared/testsUtils';
 import { act } from '@testing-library/react';
 import SlashDesignSystem from '../SlashDesignSystem';

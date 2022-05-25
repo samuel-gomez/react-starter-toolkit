@@ -1,4 +1,3 @@
-import React from 'react';
 import { func, oneOf, shape, string } from 'prop-types';
 import { NONE, DESCENDING, ASCENDING } from '../../../constants';
 import ThSortable from './ThSortable';
@@ -25,7 +24,7 @@ export const SortingIcon = ({ order, orderIconsFn = orderIcons }) => (
 
 export const setClassModifierActive = ({ classModifier, isActive }) => (isActive ? `${classModifier} active` : classModifier);
 
-const ThSortableContainer = ({ classModifier, field, onSort, sorting, toggleSortingFn, setSortingIconFn, setClassModifierActiveFn, ...rest }) => {
+const ThSortableContainer = ({ classModifier, field, onSort, sorting, toggleSortingFn, setClassModifierActiveFn, ...rest }) => {
   const { order, field: fieldActive } = sorting;
   const isActive = fieldActive === field;
   const sortBy = toggleSortingFn({ field, sorting });
@@ -42,7 +41,6 @@ const ThSortableContainerPropTypes = {
     order: oneOf([NONE, ASCENDING, DESCENDING]),
   }).isRequired,
   toggleSortingFn: func,
-  setSortingIconFn: func,
   setClassModifierActiveFn: func,
   classModifier: string,
 };

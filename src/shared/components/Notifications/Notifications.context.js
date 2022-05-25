@@ -1,4 +1,4 @@
-import React from 'react';
+import { createContext } from 'react';
 
-export const NotificationsContext = React.createContext();
+export const NotificationsContext = createContext();
 export const NotificationsProvider = NotificationsContext.Provider;

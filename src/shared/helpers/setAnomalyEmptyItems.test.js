@@ -1,4 +1,4 @@
-const { default: setAnomalyEmptyItems } = require('./setAnomalyEmptyItems');
+import setAnomalyEmptyItems from './setAnomalyEmptyItems';
 
 describe('setAnomalyEmptyItems', () => {
   it('Should return null when receive items not empty', () => {

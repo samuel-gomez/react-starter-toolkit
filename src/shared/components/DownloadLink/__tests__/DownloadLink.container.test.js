@@ -1,4 +1,3 @@
-import React from 'react';
 import { render } from '@testing-library/react';
 import DownloadLinkContainer from '../DownloadLink.container';
 import { SERVICE_NAME } from '../constants';

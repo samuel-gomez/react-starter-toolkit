@@ -1,4 +1,3 @@
-import React from 'react';
 import { render } from '@testing-library/react';
 import { StaticRouter } from 'react-router-dom/server';
 import { defineFeature, loadFeature } from 'jest-cucumber';

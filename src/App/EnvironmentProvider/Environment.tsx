@@ -1,16 +1,27 @@
-import React, { useState, useEffect, createContext } from 'react';
+import { useState, useEffect, createContext } from 'react';
 
 const NODE_ENV = process.env.REACT_APP_NODE_ENV || process.env.NODE_ENV;
 
-export const EnvironmentContext = createContext();
-EnvironmentContext.displayName = 'EnvironmentContext';
+export type TEnvironment = {
+  apiUrl: string;
+  baseUrl: string;
+  fetchConfig: object;
+  oidc: object;
+};
 
-const { Provider } = EnvironmentContext;
+export type TEnvironmentState = {
+  environment: null | TEnvironment;
+  error: null | string | object;
+};
 
-const initState = {
+const initState: TEnvironmentState = {
   environment: null,
   error: null,
 };
+
+export const EnvironmentContext = createContext<TEnvironmentState>(initState);
+const { Provider } = EnvironmentContext;
+EnvironmentContext.displayName = 'EnvironmentContext';
 
 export const getImport = () => import(`../../../public/environment.${NODE_ENV}.json`);
 
@@ -22,8 +33,8 @@ export const useEnv = (getImportFn = getImport, initStateCt = initState) => {
   useEffect(() => {
     if (envState.environment === null) {
       getImportFn()
-        .then(environment => setEnvState({ environment }))
-        .catch(error => setEnvState({ error }));
+        .then(environment => setEnvState({ environment, error: null }))
+        .catch(error => setEnvState({ environment: null, error }));
     }
   }, [envState.environment, getImportFn]);
 
@@ -34,7 +45,7 @@ export const useEnv = (getImportFn = getImport, initStateCt = initState) => {
  * Component wrapper to add environment context
  * @param {Component} children
  */
-const EnvironmentProvider = ({ children, useEnvFn = useEnv }) => {
+const EnvironmentProvider = ({ children, useEnvFn = useEnv }: { children: JSX.Element; useEnvFn?: typeof useEnv }) => {
   const { envState } = useEnvFn();
   return <Provider value={envState}>{children}</Provider>;
 };

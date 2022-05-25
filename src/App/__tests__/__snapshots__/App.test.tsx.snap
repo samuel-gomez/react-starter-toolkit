@@ -1,7 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render App 1`] = `
+exports[`<App/> Should render App with all props 1`] = `
 <DocumentFragment>
+  OidcProviderCmpt : OidcSecureCmpt : 
   <div
     class="af-header"
   >
@@ -1579,5 +1580,15 @@ exports[`Should render App 1`] = `
       </div>
     </div>
   </footer>
+</DocumentFragment>
+`;
+
+exports[`<App/> Should render App with default props 1`] = `
+<DocumentFragment>
+  <span
+    class="oidc-loading"
+  >
+    Loading
+  </span>
 </DocumentFragment>
 `;

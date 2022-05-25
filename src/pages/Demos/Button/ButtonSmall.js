@@ -1,4 +1,3 @@
-import React from 'react';
 import { Button } from '@axa-fr/react-toolkit-all';
 import LiveCode from 'shared/components/LiveCode';
 

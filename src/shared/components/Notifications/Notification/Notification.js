@@ -1,4 +1,3 @@
-import React from 'react';
 import { string, func } from 'prop-types';
 import { Alert } from '@axa-fr/react-toolkit-all';
 import { ALERT_ICON } from '../constants';

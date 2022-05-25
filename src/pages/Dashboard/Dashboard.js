@@ -1,4 +1,3 @@
-import React from 'react';
 import { string } from 'prop-types';
 import Layout from 'Layout';
 import { TITLE_BAR, TITLE } from './constants';

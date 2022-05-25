@@ -1,4 +1,3 @@
-import React from 'react';
 import { arrayOf, string, node, object } from 'prop-types';
 import WithClassNameModifier from 'shared/hoc/WithClassNameModifier';
 import Td from './Td';

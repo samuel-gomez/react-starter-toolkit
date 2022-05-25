@@ -1,5 +1,5 @@
 /* eslint-disable react/forbid-prop-types */
-import React from 'react';
+
 import { shape, string, arrayOf, func, oneOf, node, objectOf } from 'prop-types';
 import { Table } from '@axa-fr/react-toolkit-all';
 import HelpHover from 'shared/components/HelpInfo';

@@ -1,13 +1,28 @@
-import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { OidcProvider, useOidcUser, useOidcAccessToken, OidcSecure } from '@axa-fr/react-oidc-context';
 import Routes from 'App/Routes';
 import UserProvider from 'App/UserProvider';
 import FetchProvider from 'App/FetchProvider';
 import NotificationProvider from 'App/NotificationProvider';
-import { PropTypes } from 'prop-types';
+import type { TEnvironment } from './EnvironmentProvider';
 
-const App = ({ oidc, fetchConfig, apiUrl, baseUrl, OidcProviderCmpt, OidcSecureCmpt, useOidcUserFn, useOidcAccessTokenFn }) => (
+type TApp = TEnvironment & {
+  OidcProviderCmpt?: typeof OidcProvider;
+  OidcSecureCmpt?: typeof OidcSecure;
+  useOidcUserFn?: typeof useOidcUser;
+  useOidcAccessTokenFn?: typeof useOidcAccessToken;
+};
+
+const App = ({
+  oidc,
+  fetchConfig,
+  apiUrl,
+  baseUrl,
+  OidcProviderCmpt = OidcProvider,
+  OidcSecureCmpt = OidcSecure,
+  useOidcUserFn = useOidcUser,
+  useOidcAccessTokenFn = useOidcAccessToken,
+}: TApp) => (
   <OidcProviderCmpt configuration={oidc}>
     <UserProvider useOidcUser={useOidcUserFn}>
       <OidcSecureCmpt>
@@ -22,19 +37,5 @@ const App = ({ oidc, fetchConfig, apiUrl, baseUrl, OidcProviderCmpt, OidcSecureC
     </UserProvider>
   </OidcProviderCmpt>
 );
-
-App.propTypes = {
-  OidcProviderCmpt: PropTypes.func,
-  OidcSecureCmpt: PropTypes.func,
-  useOidcUserFn: PropTypes.func,
-  useOidcAccessTokenFn: PropTypes.func,
-};
-
-App.defaultProps = {
-  OidcProviderCmpt: OidcProvider,
-  OidcSecureCmpt: OidcSecure,
-  useOidcUserFn: useOidcUser,
-  useOidcAccessTokenFn: useOidcAccessToken,
-};
 
 export default App;

@@ -1,4 +1,3 @@
-import React from 'react';
 import { render } from '@testing-library/react';
 import LoaderContainer from '../Loader.container';
 

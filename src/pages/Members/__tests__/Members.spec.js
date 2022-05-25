@@ -1,4 +1,3 @@
-import React from 'react';
 import { isNull } from 'lodash';
 import { defineFeature, loadFeature } from 'jest-cucumber';
 import { screen, within } from '@testing-library/react';

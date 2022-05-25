@@ -1,4 +1,3 @@
-import React from 'react';
 import { string } from 'prop-types';
 import ThSortable from './ThSortable';
 import Th from './Th';
