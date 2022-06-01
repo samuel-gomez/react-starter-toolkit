@@ -35,7 +35,7 @@ export const setFetchCustom =
 export type TFetchProvider = Omit<TFetchCustom, 'fetchFn' | 'fetchAuthConfig'> & {
   fetchConfig: object;
   children: JSX.Element;
-  useOidcAccessToken: typeof useOidcAccessToken;
+  useOidcAccessTokenFn: typeof useOidcAccessToken;
   setFetchCustomFn?: typeof setFetchCustom;
 };
 
@@ -43,11 +43,11 @@ const FetchProvider = ({
   apiUrl,
   fetchConfig,
   children,
-  useOidcAccessToken,
+  useOidcAccessTokenFn,
   mergeObjFn = mergeObj,
   setFetchCustomFn = setFetchCustom,
 }: TFetchProvider) => {
-  const { accessToken } = useOidcAccessToken();
+  const { accessToken } = useOidcAccessTokenFn();
   const authConfig = {
     headers: {
       Authorization: `Bearer ${accessToken}`,

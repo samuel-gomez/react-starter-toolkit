@@ -28,7 +28,7 @@ const useOidcAccessTokenMock = jest.fn().mockReturnValue({
 describe('FetchProvider', () => {
   it('Should Base have fetchCustom props when render FetchProvider with required props', async () => {
     const { asFragment, getByText } = render(
-      <FetchProvider apiUrl={apiMock} fetchConfig={fetchConfigMock} useOidcAccessToken={useOidcAccessTokenMock}>
+      <FetchProvider apiUrl={apiMock} fetchConfig={fetchConfigMock} useOidcAccessTokenFn={useOidcAccessTokenMock}>
         <BaseWithFetch />
       </FetchProvider>,
     );

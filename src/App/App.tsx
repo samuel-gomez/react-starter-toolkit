@@ -9,7 +9,7 @@ import type { TEnvironment } from './EnvironmentProvider';
 type TApp = TEnvironment & {
   OidcProviderCmpt?: typeof OidcProvider;
   OidcSecureCmpt?: typeof OidcSecure;
-  FetchProviderCmpt?: typeof OidcSecure;
+  FetchProviderCmpt?: typeof FetchProvider;
   useOidcUserFn?: typeof useOidcUser;
   useOidcAccessTokenFn?: typeof useOidcAccessToken;
 };

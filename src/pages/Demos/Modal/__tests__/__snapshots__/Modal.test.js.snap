@@ -1499,7 +1499,7 @@ exports[`<ModalPage/> Should render ModalPage 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2020 AXA Tous droits réservés - v0.1.2
+        © 2020 AXA Tous droits réservés - v0.1.3
       </div>
     </div>
   </footer>

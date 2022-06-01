@@ -403,7 +403,7 @@ exports[`<SearchMembersContainer/> Should render <SearchMembersContainer /> with
       <div
         class="af-footer-content"
       >
-        © 2020 AXA Tous droits réservés - v0.1.2
+        © 2020 AXA Tous droits réservés - v0.1.3
       </div>
     </div>
   </footer>
@@ -813,7 +813,7 @@ exports[`<SearchMembersContainer/> Should render SearchMembersContainer 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2020 AXA Tous droits réservés - v0.1.2
+        © 2020 AXA Tous droits réservés - v0.1.3
       </div>
     </div>
   </footer>
