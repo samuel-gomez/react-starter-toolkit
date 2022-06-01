@@ -7,7 +7,7 @@ import { MOCK_API_URL } from '.';
 const MockProviders =
   ({ role, ...testMock }) =>
   ({ children }) => {
-    const useOidcAccessToken = jest.fn().mockReturnValue({ accessToken: 'accessToken' });
+    const useOidcAccessTokenFn = jest.fn().mockReturnValue({ accessToken: 'accessToken' });
     const useOidcUser = jest.fn().mockReturnValueOnce({ oidcUser: { member_of: [`CN=${role}`] } });
     return (
       <UserProvider useOidcUser={useOidcUser}>
@@ -16,7 +16,7 @@ const MockProviders =
           fetchConfig={{
             headers: { testMock: JSON.stringify(testMock) },
           }}
-          useOidcAccessToken={useOidcAccessToken}
+          useOidcAccessTokenFn={useOidcAccessTokenFn}
         >
           <StaticRouter context={{}}>{children}</StaticRouter>
         </FetchProvider>
