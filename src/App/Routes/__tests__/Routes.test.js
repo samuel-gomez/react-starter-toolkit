@@ -27,7 +27,7 @@ const renderRoute = ({ role, name, route, defaultProps = defaultPropsMock }) => 
 
   return render(
     <MemoryRouter initialEntries={[route]}>
-      <UserProvider useOidcUser={useOidcUser} isEnabled>
+      <UserProvider useOidcUserFn={useOidcUser} isEnabled>
         <Routes {...defaultProps} />
       </UserProvider>
     </MemoryRouter>,

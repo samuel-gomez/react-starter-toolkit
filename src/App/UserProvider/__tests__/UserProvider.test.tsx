@@ -1,8 +1,15 @@
 import { useContext } from 'react';
 import { render } from '@testing-library/react';
+import { omit } from 'lodash';
 import UserProvider, { UserContext, getAuthName, getAuthRole, setAuthRole, getAuthUid } from '../UserProvider';
 
-const Base = ({ authName, authRole, authUid }) => (
+type TBase = {
+  authName: string;
+  authRole: string;
+  authUid: string;
+};
+
+const Base = ({ authName, authRole, authUid }: TBase) => (
   <ul>
     <li>{authName ? 'have authName' : 'notHave authName'}</li>
     <li>{authRole ? 'have authRole' : 'notHave authRole'}</li>
@@ -34,7 +41,7 @@ const useOidcUserMock = jest.fn().mockReturnValue({
 });
 
 const App = () => (
-  <UserProvider useOidcUser={useOidcUserMock}>
+  <UserProvider useOidcUserFn={useOidcUserMock}>
     <BaseWithUser />
   </UserProvider>
 );
@@ -55,18 +62,18 @@ describe('getAuthName', () => {
     expect(result).toEqual('Bob Smith');
   });
   it('Should return "" when getAuthName called with no name profile', () => {
-    const result = getAuthName({});
+    const result = getAuthName({ ...omit(oidcUser, 'name') });
     expect(result).toEqual('Non Connecté');
   });
 });
 
 describe('getAuthRole', () => {
   it('Should return Admin when getAuthRole called with profile member_of "CN=Admin" ', () => {
-    const result = getAuthRole({ oidcUser, profils });
+    const result = getAuthRole({ oidcUser });
     expect(result).toEqual('Admin');
   });
   it('Should return "" when getAuthRole called with no profile member_of', () => {
-    const result = getAuthRole({});
+    const result = getAuthRole({ ...omit(oidcUser, 'member_of') });
     expect(result).toEqual('');
   });
 });
@@ -77,7 +84,7 @@ describe('getAuthUid', () => {
     expect(result).toEqual('S000007');
   });
   it('Should return "" when getAuthUID called with no profile axa_uid_racf', () => {
-    const result = getAuthUid({});
+    const result = getAuthUid({ ...omit(oidcUser, 'axa_uid_racf') });
     expect(result).toEqual('');
   });
 });

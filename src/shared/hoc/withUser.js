@@ -1,10 +1,10 @@
-import { UserContextProvider } from 'App/UserProvider/UserProvider';
+import { UserContext } from 'App/UserProvider';
 
 const withUser = Component => props =>
   (
-    <UserContextProvider value={{ authRole: 'ADMIN' }}>
+    <UserContext.Provider value={{ authRole: 'ADMIN' }}>
       <Component {...props} />
-    </UserContextProvider>
+    </UserContext.Provider>
   );
 
 export default withUser;
