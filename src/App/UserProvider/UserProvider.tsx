@@ -46,12 +46,10 @@ export const setAuthRole = ({ memberOf, profils = PROFILS }: TsetAuthRole) =>
 
 type TgetAuthRole = {
   oidcUser: ToidcUser;
-  isEmptyFn?: typeof isEmpty;
   setAuthRoleFn?: typeof setAuthRole;
 };
 
-export const getAuthRole = ({ oidcUser, isEmptyFn = isEmpty, setAuthRoleFn = setAuthRole }: TgetAuthRole) =>
-  !isEmptyFn(oidcUser?.member_of ?? '') ? setAuthRoleFn({ memberOf: oidcUser?.member_of?.[0] ?? '' }) : '';
+export const getAuthRole = ({ oidcUser, setAuthRoleFn = setAuthRole }: TgetAuthRole) => setAuthRoleFn({ memberOf: oidcUser?.member_of?.[0] ?? '' });
 
 /**
  * getAuthUid
