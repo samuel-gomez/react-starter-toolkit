@@ -8,6 +8,7 @@ import type { TEnvironment } from './EnvironmentProvider';
 
 type TApp = TEnvironment & {
   OidcProviderCmpt?: typeof OidcProvider;
+  UserProviderCmpt?: typeof UserProvider;
   OidcSecureCmpt?: typeof OidcSecure;
   FetchProviderCmpt?: typeof FetchProvider;
   useOidcUserFn?: typeof useOidcUser;
@@ -20,13 +21,14 @@ const App = ({
   apiUrl,
   baseUrl,
   OidcProviderCmpt = OidcProvider,
+  UserProviderCmpt = UserProvider,
   OidcSecureCmpt = OidcSecure,
   FetchProviderCmpt = FetchProvider,
   useOidcAccessTokenFn = useOidcAccessToken,
   useOidcUserFn = useOidcUser,
 }: TApp) => (
   <OidcProviderCmpt configuration={oidc}>
-    <UserProvider useOidcUser={useOidcUserFn}>
+    <UserProviderCmpt useOidcUserFn={useOidcUserFn}>
       <OidcSecureCmpt>
         <FetchProviderCmpt apiUrl={apiUrl} fetchConfig={fetchConfig} useOidcAccessTokenFn={useOidcAccessTokenFn}>
           <NotificationProvider>
@@ -36,7 +38,7 @@ const App = ({
           </NotificationProvider>
         </FetchProviderCmpt>
       </OidcSecureCmpt>
-    </UserProvider>
+    </UserProviderCmpt>
   </OidcProviderCmpt>
 );
 
