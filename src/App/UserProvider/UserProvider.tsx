@@ -7,6 +7,7 @@ export const UserContext = createContext({
   authName: '',
   authRole: '',
   authUid: '',
+  isEnabled: true,
 });
 UserContext.displayName = 'UserContext';
 
@@ -96,11 +97,18 @@ type TUserProvider = {
   children: ReactNode;
   useOidcUserFn: typeof useOidcUser;
   extractDataFromOAuthTokenFn?: typeof extractDataFromOAuthToken;
+  isEnabled?: boolean;
 };
 
-const UserProvider = ({ children, useOidcUserFn, extractDataFromOAuthTokenFn = extractDataFromOAuthToken, ...rest }: TUserProvider) => {
+const UserProvider = ({
+  children,
+  useOidcUserFn,
+  extractDataFromOAuthTokenFn = extractDataFromOAuthToken,
+  isEnabled = true,
+  ...rest
+}: TUserProvider) => {
   const { oidcUser } = useOidcUserFn();
-  return <UserContext.Provider value={{ ...extractDataFromOAuthTokenFn({ oidcUser }), ...rest }}>{children}</UserContext.Provider>;
+  return <UserContext.Provider value={{ ...extractDataFromOAuthTokenFn({ oidcUser }), isEnabled, ...rest }}>{children}</UserContext.Provider>;
 };
 
 export default UserProvider;
