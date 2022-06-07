@@ -1,9 +1,9 @@
-import { createContext } from 'react';
-import { MemoryRouter } from 'react-router-dom';
+import { ComponentType, createContext } from 'react';
+import { MemoryRouter, NavigateProps } from 'react-router-dom';
 import { render } from '@testing-library/react';
 import UserProvider from 'App/UserProvider';
 import { renderWithWrapperStaticRouter } from 'shared/testsUtils';
-import Routes, { WithAuth } from '..';
+import Routes, { withAuth } from '..';
 
 const defaultPropsMock = {
   SlashDesignSystemCmpt: () => <div>SlashDesignSystemCmpt</div>,
@@ -15,7 +15,14 @@ const defaultPropsMock = {
   PageUnauthorizeCmpt: () => <div>PageUnauthorizeCmpt</div>,
 };
 
-const renderRoute = ({ role, name, route, defaultProps = defaultPropsMock }) => {
+type TrenderRoute = {
+  role?: string;
+  name?: string;
+  route?: string;
+  defaultProps?: object;
+};
+
+const renderRoute = ({ role = '', name = '', route = '/', defaultProps = defaultPropsMock }: TrenderRoute) => {
   const useOidcUser = jest.fn().mockReturnValue({
     oidcUser: {
       name,
@@ -57,8 +64,14 @@ describe('<Routes />', () => {
     ${'user unauthorized'} | ${'sam'} | ${'/search-members'}
     ${'user unauthorized'} | ${'sam'} | ${'/demos/modal'}
     ${'user unauthorized'} | ${'sam'} | ${'/demos/button'}
-  `('Should render forbidden page when user profil is unauthorized, authRole: $authRole, route: $route', ({ role, name, route }) => {
-    const { getByText } = renderRoute({ role, name, route, defaultProps: { WithAuthCmpt: props => <WithAuth {...props} authorized={['admin']} /> } });
+  `('Should render forbidden page when user profil is unauthorized, role: $role, name: $name, route: $route', ({ role, name, route }) => {
+    const UserContextObjMock = createContext({ authName: '', authRole: '', authUid: '', isEnabled: true });
+    const { getByText } = renderRoute({
+      role,
+      name,
+      route,
+      defaultProps: { withAuthCmpt: (...args: ComponentType<object>[]) => withAuth(args[0], UserContextObjMock, undefined, ['admin']) },
+    });
     expect(getByText('403')).toBeInTheDocument();
   });
 
@@ -66,26 +79,26 @@ describe('<Routes />', () => {
     route
     ${'/no-exist-route'}
   `('Should render 404 when election route: $route is not correct', ({ route }) => {
-    const { getByText } = renderRoute({ route, role: '', name: 'samuel', defaultProps: {} });
+    const { getByText } = renderRoute({ route, role: '', name: 'samuel' });
     expect(getByText('404')).toBeInTheDocument();
   });
 });
 
-describe('Render WithAuth', () => {
+describe('Render withAuth', () => {
+  const Component = () => <p>component</p>;
   it.each`
     authRole | authName
     ${''}    | ${'Samuel'}
   `('Should render RouteCmpt when user profile is authorized (authRole, authName)', ({ authRole, authName }) => {
-    const UserContextObjMock = createContext({ authRole, authName, isEnabled: true });
-    const Component = () => <p>component</p>;
-    const { getByText } = renderWithWrapperStaticRouter(<WithAuth UserContextObj={UserContextObjMock} Component={Component} />);
+    const UserContextObjMock = createContext({ authRole, authName, authUid: '', isEnabled: true });
+    const { getByText } = renderWithWrapperStaticRouter(withAuth(Component, UserContextObjMock));
     expect(getByText('component')).toBeInTheDocument();
   });
 
   it('Should render NavigateCmpt when user profile is unauthorized', () => {
-    const UserContextObjMock = createContext({ isEnabled: true });
-    const NavigateCmpt = () => <p>redirect component</p>;
-    const { getByText } = renderWithWrapperStaticRouter(<WithAuth UserContextObj={UserContextObjMock} NavigateCmpt={NavigateCmpt} />);
-    expect(getByText('redirect component')).toBeInTheDocument();
+    const UserContextObjMock = createContext({ authName: '', authRole: 'unauthorized', authUid: '', isEnabled: true });
+    const NavigateCmpt = jest.fn().mockReturnValue(null);
+    renderWithWrapperStaticRouter(withAuth(Component, UserContextObjMock, NavigateCmpt));
+    expect(NavigateCmpt).toHaveBeenCalled();
   });
 });
