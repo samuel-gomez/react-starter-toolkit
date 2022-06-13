@@ -1,15 +1,16 @@
 import { useState, useCallback } from 'react';
-import { MODIFIER_HIDE, DELAY_HIDE } from './constants';
+import { MODIFIER_HIDE, DELAY_HIDE } from './Notifications/constants';
+import { TNotification } from './Notifications/Notification';
 
-export default (initState = []) => {
-  const [stateNotifications, setStateNotifications] = useState(initState);
+const useNotifications = (initState?: TNotification[]) => {
+  const [stateNotifications, setStateNotifications] = useState(initState || []);
 
   const clearAllNotifications = useCallback(() => {
     setStateNotifications([]);
   }, []);
 
   const onDeleteNotification = useCallback(
-    id => {
+    (id: string) => {
       const notificationsWithHide = stateNotifications.map(notification =>
         notification.id === id ? { ...notification, classModifier: MODIFIER_HIDE } : notification,
       );
@@ -24,7 +25,7 @@ export default (initState = []) => {
   );
 
   const addNotification = useCallback(
-    notification => {
+    (notification: TNotification) => {
       if (stateNotifications.filter(notif => notif.id === notification.id).length === 0) {
         setStateNotifications([...stateNotifications, notification]);
       }
@@ -32,5 +33,7 @@ export default (initState = []) => {
     [stateNotifications],
   );
 
-  return { addNotification, onDeleteNotification, clearAllNotifications, stateNotifications };
+  return { addNotification, onDeleteNotification, clearAllNotifications, stateNotifications } as const;
 };
+
+export default useNotifications;
