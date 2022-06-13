@@ -1,8 +1,10 @@
 import { useContext } from 'react';
 import { render } from '@testing-library/react';
 import NotificationProvider, { NotificationContext } from '../NotificationProvider';
+import type { TNotificationContext } from '../NotificationProvider';
+import useNotifications from '../Notifications.hook';
 
-const Base = ({ addNotification }) => (
+const Base = ({ addNotification }: TNotificationContext) => (
   <ul>
     <li>{addNotification ? 'have addNotification' : 'notHave addNotification'}</li>
   </ul>
@@ -15,7 +17,7 @@ const BaseWithNotification = () => {
 const addNotificationMock = jest.fn();
 const onDeleteNotificationMock = jest.fn();
 
-const App = ({ useNotificationsFn }) => (
+const App = ({ useNotificationsFn }: { useNotificationsFn: typeof useNotifications }) => (
   <NotificationProvider useNotificationsFn={useNotificationsFn}>
     <BaseWithNotification />
   </NotificationProvider>
@@ -37,7 +39,7 @@ describe('Render App with Base have addNotification props', () => {
     const notification = {
       code: 200,
       detail: 'detail',
-      label: 'labeldemonalert',
+      title: 'labeldemonalert',
       id: 'id',
     };
 

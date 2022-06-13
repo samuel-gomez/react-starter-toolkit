@@ -1,6 +1,6 @@
 import { render, fireEvent, screen } from '@testing-library/react';
 import { emptyFunction } from 'shared/testsUtils';
-import { Notifications } from '../Notifications';
+import Notifications from '../Notifications';
 
 const defaultProps = {
   notifications: [],
