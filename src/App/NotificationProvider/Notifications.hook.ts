@@ -2,7 +2,17 @@ import { useState, useCallback } from 'react';
 import { MODIFIER_HIDE, DELAY_HIDE } from './Notifications/constants';
 import { TNotification } from './Notifications/Notification';
 
-const useNotifications = (initState?: TNotification[]) => {
+export type TaddNotification = ((notification: TNotification) => void) | null;
+export type TonDeleteNotification = ((id: string) => void) | null;
+
+type TReturnUseNotification = {
+  addNotification: TaddNotification;
+  onDeleteNotification: TonDeleteNotification;
+  clearAllNotifications: (() => void) | null;
+  stateNotifications: TNotification[];
+};
+
+const useNotifications = (initState?: TNotification[]): TReturnUseNotification => {
   const [stateNotifications, setStateNotifications] = useState(initState || []);
 
   const clearAllNotifications = useCallback(() => {
@@ -33,7 +43,7 @@ const useNotifications = (initState?: TNotification[]) => {
     [stateNotifications],
   );
 
-  return { addNotification, onDeleteNotification, clearAllNotifications, stateNotifications } as const;
+  return { addNotification, onDeleteNotification, clearAllNotifications, stateNotifications };
 };
 
 export default useNotifications;

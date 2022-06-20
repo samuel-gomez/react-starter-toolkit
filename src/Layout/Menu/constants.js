@@ -26,6 +26,10 @@ const MENU_ITEMS = [
         label: 'Button',
         url: ROUTE_URL.BUTTON,
       },
+      {
+        label: 'Notification',
+        url: ROUTE_URL.NOTIFICATION,
+      },
     ],
   },
   {
