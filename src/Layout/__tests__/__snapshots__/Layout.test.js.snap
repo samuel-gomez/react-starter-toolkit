@@ -194,6 +194,22 @@ exports[`Layout Should render when disabled: {"footer": true} 1`] = `
                   Button
                 </a>
               </li>
+              <li
+                class="af-nav__item "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Notification"
+                  class="af-nav__link"
+                  href="/demos/notification"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Notification
+                </a>
+              </li>
             </ul>
           </li>
           <li
@@ -443,6 +459,22 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
                   tabindex="-1"
                 >
                   Button
+                </a>
+              </li>
+              <li
+                class="af-nav__item "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Notification"
+                  class="af-nav__link"
+                  href="/demos/notification"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Notification
                 </a>
               </li>
             </ul>
@@ -863,6 +895,22 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
                   tabindex="-1"
                 >
                   Button
+                </a>
+              </li>
+              <li
+                class="af-nav__item "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Notification"
+                  class="af-nav__link"
+                  href="/demos/notification"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Notification
                 </a>
               </li>
             </ul>

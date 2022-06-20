@@ -6,6 +6,7 @@ import { ROUTE_URL_NOTFOUND as NOTFOUND } from 'pages/NotFound/constants';
 import { ROUTE_URL_UNAUTHORIZE as UNAUTHORIZE } from 'pages/Unauthorize/constants';
 import { ROUTE_URL_MODAL as MODAL } from 'pages/Demos/Modal/constants';
 import { ROUTE_URL_BUTTON as BUTTON } from 'pages/Demos/Button/constants';
+import { ROUTE_URL_NOTIFICATION as NOTIFICATION } from 'pages/Demos/Notification/constants';
 
 const ROUTE_URL = {
   DASHBOARD,
@@ -16,6 +17,7 @@ const ROUTE_URL = {
   UNAUTHORIZE,
   MODAL,
   BUTTON,
+  NOTIFICATION,
 };
 
 export default ROUTE_URL;

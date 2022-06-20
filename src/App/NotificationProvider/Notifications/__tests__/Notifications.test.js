@@ -14,7 +14,7 @@ describe('Notifications', () => {
   });
 
   it('Should contain Notification when array notifications is NOT empty', () => {
-    const notifications = [{ id: 'id', title: 'titleerror', classModifier: '', onClose: emptyFunction }];
+    const notifications = [{ id: 'id', label: 'titleerror', classModifier: '', onClose: emptyFunction }];
     const { asFragment, getByText } = render(<Notifications {...defaultProps} notifications={notifications} />);
     expect(getByText('titleerror')).toBeInTheDocument();
     expect(asFragment()).toMatchSnapshot();
@@ -22,7 +22,7 @@ describe('Notifications', () => {
 
   it('Should called onDeleteNotification with id When click on close button', () => {
     const deleteNotificationMock = jest.fn();
-    const notifications = [{ id: 'id', title: 'title' }];
+    const notifications = [{ id: 'id', label: 'title' }];
     render(<Notifications {...defaultProps} notifications={notifications} deleteNotification={deleteNotificationMock} />);
     fireEvent.click(screen.getByRole('button'));
     expect(deleteNotificationMock).toBeCalledWith('id');

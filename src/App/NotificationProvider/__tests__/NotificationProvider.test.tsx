@@ -39,7 +39,7 @@ describe('Render App with Base have addNotification props', () => {
     const notification = {
       code: 200,
       detail: 'detail',
-      title: 'labeldemonalert',
+      label: 'labeldemonalert',
       id: 'id',
     };
 

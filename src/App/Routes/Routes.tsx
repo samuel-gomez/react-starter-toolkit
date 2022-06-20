@@ -7,18 +7,26 @@ import SearchMembers from 'pages/SearchMembers';
 import SlashDesignSystem from 'pages/SlashDesignSystem';
 import Modal from 'pages/Demos/Modal';
 import Button from 'pages/Demos/Button';
+import Notification from 'pages/Demos/Notification';
 import Dashboard from 'pages/Dashboard';
 import ROUTE_URL from 'Layout/constants';
 import { UserContext } from 'App/UserProvider';
+import Loader, { MODES } from 'shared/components/Loader';
 
 export const withAuth = <T extends object>(
   Component: React.ComponentType<T>,
   UserContextObj = UserContext,
-  NavigateCmpt = Navigate,
   authorized = [''],
+  NavigateCmpt = Navigate,
+  LoaderCmpt = Loader,
 ) => {
   const NewComp = (props: ComponentProps<typeof Component> | object) => {
     const userContext = useContext(UserContextObj);
+
+    if (userContext.isEnabled && userContext.isLoading) {
+      return <LoaderCmpt text="Chargement des données utilisateur..." mode={MODES.get} classModifier="fullscreen" />;
+    }
+
     return authorized.includes(userContext?.authRole) || !userContext.isEnabled ? (
       <Component {...(props as T)} />
     ) : (
@@ -36,8 +44,9 @@ type TRoutesCmpt = {
   SearchMembersCmpt?: typeof SearchMembers;
   ModalCmpt?: typeof Modal;
   ButtonCmpt?: typeof Button;
+  NotificationCmpt?: typeof Notification;
   PageUnauthorizeCmpt?: typeof PageUnauthorize;
-  withAuthCmpt?: typeof withAuth;
+  withAuthFn?: typeof withAuth;
 };
 
 const RoutesCmpt = ({
@@ -47,16 +56,18 @@ const RoutesCmpt = ({
   SearchMembersCmpt = SearchMembers,
   ModalCmpt = Modal,
   ButtonCmpt = Button,
+  NotificationCmpt = Notification,
   PageUnauthorizeCmpt = PageUnauthorize,
-  withAuthCmpt = withAuth,
+  withAuthFn = withAuth,
 }: TRoutesCmpt) => (
   <Routes>
-    <Route path={ROUTE_URL.SLASH} element={withAuthCmpt(SlashDesignSystemCmpt)} />
-    <Route path={ROUTE_URL.MEMBERS} element={withAuthCmpt(MembersCmpt)} />
-    <Route path={ROUTE_URL.SEARCHMEMBERS} element={withAuthCmpt(SearchMembersCmpt)} />
-    <Route path={ROUTE_URL.MODAL} element={withAuthCmpt(ModalCmpt)} />
-    <Route path={ROUTE_URL.BUTTON} element={withAuthCmpt(ButtonCmpt)} />
-    <Route path={ROUTE_URL.DASHBOARD} element={withAuthCmpt(DashboardCmpt)} />
+    <Route path={ROUTE_URL.SLASH} element={withAuthFn(SlashDesignSystemCmpt)} />
+    <Route path={ROUTE_URL.MEMBERS} element={withAuthFn(MembersCmpt)} />
+    <Route path={ROUTE_URL.SEARCHMEMBERS} element={withAuthFn(SearchMembersCmpt)} />
+    <Route path={ROUTE_URL.MODAL} element={withAuthFn(ModalCmpt)} />
+    <Route path={ROUTE_URL.BUTTON} element={withAuthFn(ButtonCmpt)} />
+    <Route path={ROUTE_URL.NOTIFICATION} element={withAuthFn(NotificationCmpt)} />
+    <Route path={ROUTE_URL.DASHBOARD} element={withAuthFn(DashboardCmpt)} />
     <Route path={ROUTE_URL.UNAUTHORIZE} element={<PageUnauthorizeCmpt />} />
     <Route path="*" element={<PageNotFound />} />
   </Routes>

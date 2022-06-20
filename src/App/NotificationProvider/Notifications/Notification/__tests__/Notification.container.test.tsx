@@ -12,7 +12,7 @@ describe('NotificationContainer', () => {
   const defaultProps = {
     onClose: emptyFunction,
     id: 'id',
-    title: 'title',
+    label: 'title',
     NotificationCmpt,
   };
 
@@ -26,7 +26,7 @@ describe('NotificationContainer', () => {
         classModifier: 'error',
         type: EType.error,
         id: 'id',
-        title: 'title',
+        label: 'title',
         onClose: emptyFunction,
       },
       {},
@@ -48,7 +48,7 @@ describe('NotificationContainer', () => {
         classModifier: 'success mymodifier',
         type: EType.success,
         id: 'id',
-        title: 'title',
+        label: 'title',
         onClose: emptyFunction,
       },
       {},

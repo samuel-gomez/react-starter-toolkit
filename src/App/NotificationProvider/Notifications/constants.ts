@@ -6,5 +6,5 @@ export const DELAY_HIDE = 500;
 export const ALERT_ICON = {
   success: 'ok',
   error: 'minus-sign',
-  warning: 'alert',
+  danger: 'alert',
 };

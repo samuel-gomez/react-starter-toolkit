@@ -8,6 +8,7 @@ export const UserContext = createContext({
   authRole: '',
   authUid: '',
   isEnabled: true,
+  isLoading: true,
 });
 UserContext.displayName = 'UserContext';
 
@@ -85,6 +86,7 @@ const extractDataFromOAuthToken = ({
   authName: getAuthNameFn({ oidcUser }),
   authRole: getAuthRoleFn({ oidcUser }),
   authUid: getAuthUidFn({ oidcUser }),
+  isLoading: !oidcUser,
 });
 
 /**

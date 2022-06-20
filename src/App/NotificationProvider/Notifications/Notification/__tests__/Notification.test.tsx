@@ -5,7 +5,7 @@ import Notification, { EType } from '../Notification';
 describe('Notifications', () => {
   const defaultProps = {
     id: 'id',
-    title: 'title',
+    label: 'title',
     onClose: emptyFunction,
   };
   it('Render <Notification/> with required props', () => {

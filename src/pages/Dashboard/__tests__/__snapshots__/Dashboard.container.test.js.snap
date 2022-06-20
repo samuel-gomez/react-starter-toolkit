@@ -194,6 +194,22 @@ exports[`<Dashboard page/> Renders Dashboard page component without crashing 1`]
                   Button
                 </a>
               </li>
+              <li
+                class="af-nav__item "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Notification"
+                  class="af-nav__link"
+                  href="/demos/notification"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Notification
+                </a>
+              </li>
             </ul>
           </li>
           <li
