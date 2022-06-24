@@ -150,6 +150,5 @@
     "type": "git",
     "url": "https://github.com/samuel-gomez/react-starter-toolkit.git"
   },
-  "homepage": "https://github.com/samuel-gomez/react-starter-toolkit#readme",
   "license": "MIT"
 }
