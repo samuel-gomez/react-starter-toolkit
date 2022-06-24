@@ -1,6 +1,7 @@
 {
   "name": "react-starter-toolkit",
-  "version": "0.1.3",
+  "description": "This repository is a starter project that use React Toolkit Axa and CRA.",
+  "version": "0.1.4",
   "private": true,
   "scripts": {
     "start": "cross-env GENERATE_SOURCEMAP=false react-scripts start",
@@ -129,7 +130,7 @@
     "testMatch": [
       "**/__tests__/**/*.[jt]s?(x)",
       "**/?(*.)+(spec|test).[jt]s?(x)",
-      "!**/__tests__/*.mock.js"
+      "!**/__tests__/*.mock.{js,ts}"
     ],
     "coverageThreshold": {
       "global": {
@@ -144,5 +145,11 @@
   },
   "resolutions": {
     "@babel/parser": "7.17.12"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samuel-gomez/react-starter-toolkit.git"
+  },
+  "homepage": "https://github.com/samuel-gomez/react-starter-toolkit#readme",
+  "license": "MIT"
 }

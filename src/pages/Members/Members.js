@@ -1,5 +1,5 @@
 import { string } from 'prop-types';
-import Resilience from 'shared/components/Resilience/Resilience';
+import Resilience from 'shared/components/Resilience';
 import { Paging } from '@axa-fr/react-toolkit-all';
 import Layout from 'Layout';
 import Loader from 'shared/components/Loader';

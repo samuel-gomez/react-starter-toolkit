@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Skeleton/> Render <Skeleton/> with default className 1`] = `
+<DocumentFragment>
+  <div
+    aria-busy="true"
+    aria-label="loader"
+    class="af-skeleton"
+    role="status"
+  />
+</DocumentFragment>
+`;
+
+exports[`<Skeleton/> Render <Skeleton/> with other className 1`] = `
+<DocumentFragment>
+  <div
+    aria-busy="true"
+    aria-label="loader"
+    class="other"
+    role="status"
+  />
+</DocumentFragment>
+`;
+
+exports[`<Skeleton/> Render <Skeleton/> with other className and custom modifier 1`] = `
+<DocumentFragment>
+  <div
+    aria-busy="true"
+    aria-label="loader"
+    class="other other--custom"
+    role="status"
+  />
+</DocumentFragment>
+`;
+
+exports[`<Skeleton/> Should contain className .af-skeleton--loader when render Skelelon with "loader" classModifier 1`] = `
+<DocumentFragment>
+  <div
+    aria-busy="true"
+    aria-label="loader"
+    class="af-skeleton af-skeleton--loader"
+    role="status"
+  />
+</DocumentFragment>
+`;
