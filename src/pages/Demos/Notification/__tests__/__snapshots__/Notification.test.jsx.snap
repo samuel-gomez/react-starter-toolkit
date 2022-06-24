@@ -2205,7 +2205,7 @@ const useNotify = ({ NotificationContextObj = NotificationContext }) =&gt; {
       <div
         class="af-footer-content"
       >
-        © 2020 AXA Tous droits réservés - v0.1.3
+        © 2022 AXA Tous droits réservés - v0.1.4
       </div>
     </div>
   </footer>

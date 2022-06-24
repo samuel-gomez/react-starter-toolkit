@@ -9,7 +9,7 @@ import Modal from 'pages/Demos/Modal';
 import Button from 'pages/Demos/Button';
 import Notification from 'pages/Demos/Notification';
 import Dashboard from 'pages/Dashboard';
-import ROUTE_URL from 'Layout/constants';
+import ROUTE_URL from 'App/Routes/constants';
 import { UserContext } from 'App/UserProvider';
 import Loader, { MODES } from 'shared/components/Loader';
 

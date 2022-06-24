@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Authorize/> Render <Authorize />  1`] = `<DocumentFragment />`;
+
+exports[`<Authorize/> Render <Authorize /> with child 1`] = `
+<DocumentFragment>
+  <p>
+    child
+  </p>
+</DocumentFragment>
+`;
+
+exports[`<Authorize/> Render child when user role is authorized 1`] = `
+<DocumentFragment>
+  <p>
+    child
+  </p>
+</DocumentFragment>
+`;
+
+exports[`<Authorize/> Render null with child and unauthorize user role 1`] = `<DocumentFragment />`;

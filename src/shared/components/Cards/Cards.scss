@@ -8,12 +8,28 @@ $color-storybook: #ff2d74;
   grid-gap: 2rem;
   grid-auto-flow: dense;
   margin-bottom: 100px;
+  @include media-breakpoint-down(lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include media-breakpoint-down(sm) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include media-breakpoint-down(xs) {
+    grid-template-columns: 1fr;
+  }
 }
+$card-bg: #dadada;
 
 .af-card {
   position: relative;
   margin-bottom: 60px;
   min-height: 160px;
+  border-radius: 15px 15px 0 0;
+  background: $card-bg;
+  @include media-breakpoint-down(xs) {
+    min-height: 140px;
+  }
+
   &__image {
     width: 100%;
     border-radius: 15px 15px 0 0;
@@ -38,6 +54,9 @@ $color-storybook: #ff2d74;
     transform: translateY(-50%);
     right: 10px;
     width: 30%;
+  }
+  &__title {
+    font-weight: normal;
   }
   .af-btn--circle {
     border: 0;

@@ -573,7 +573,7 @@ exports[`<Members/> Should render <Members /> with one member 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2020 AXA Tous droits réservés - v0.1.3
+        © 2022 AXA Tous droits réservés - v0.1.4
       </div>
     </div>
   </footer>
@@ -1058,7 +1058,7 @@ exports[`<Members/> Should render Members 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2020 AXA Tous droits réservés - v0.1.3
+        © 2022 AXA Tous droits réservés - v0.1.4
       </div>
     </div>
   </footer>

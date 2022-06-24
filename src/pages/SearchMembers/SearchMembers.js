@@ -1,7 +1,7 @@
 import { func, string } from 'prop-types';
 import Layout from 'Layout';
 import Loader from 'shared/components/Loader';
-import Resilience from 'shared/components/Resilience/Resilience';
+import Resilience from 'shared/components/Resilience';
 import Th from 'shared/components/Table/Header/Th';
 import Table from 'shared/components/Table';
 import DownloadLink from 'shared/components/DownloadLink';
