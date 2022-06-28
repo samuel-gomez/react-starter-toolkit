@@ -10,6 +10,8 @@ export type TMenu = {
   positionInit?: number;
 };
 
-export const Menu = ({ menuItems, createMenuFn = createMenu, ...navBarProps }: TMenu) => (
-  <NavBar {...navBarProps}>{menuItems && createMenuFn(menuItems)}</NavBar>
+export const Menu = ({ menuItems, createMenuFn = createMenu, onClick, ...navBarProps }: TMenu) => (
+  <NavBar {...navBarProps} onClick={onClick}>
+    {menuItems && createMenuFn(menuItems, onClick)}
+  </NavBar>
 );

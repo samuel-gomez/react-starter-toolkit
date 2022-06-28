@@ -11,9 +11,16 @@ export const ActionElt = ({ url, label }: TActionElt) =>
     <span className="af-nav__link">{label}</span>
   );
 
-export const MenuItem = ({ children, url, label, ariaHaspopup, ariaExpanded, ariaLabel, createMenuFn, ...rest }: TMenuItem) => (
-  <NavBarItem {...rest} actionElt={ActionElt({ url, label })} aria-haspopup={ariaHaspopup} aria-expanded={ariaExpanded} aria-label={ariaLabel}>
-    {children && createMenuFn?.(children)}
+export const MenuItem = ({ children, url, label, ariaHaspopup, ariaExpanded, ariaLabel, createMenuFn, onClick, ...rest }: TMenuItem) => (
+  <NavBarItem
+    {...rest}
+    actionElt={ActionElt({ url, label })}
+    onClick={onClick}
+    aria-haspopup={ariaHaspopup}
+    aria-expanded={ariaExpanded}
+    aria-label={ariaLabel}
+  >
+    {children && createMenuFn?.(children, onClick)}
   </NavBarItem>
 );
 

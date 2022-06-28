@@ -1,3 +1,5 @@
+@import '@axa-fr/react-toolkit-core/src/common/scss/core.scss';
+
 .af-livecode {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -5,4 +7,12 @@
   grid-auto-flow: dense;
   width: 100%;
   margin-bottom: 1rem;
+}
+
+@include media-breakpoint-down(sm) {
+  .af-livecode {
+    grid-gap: 0;
+    grid-template-columns: 1fr;
+    margin-bottom: 2rem;
+  }
 }

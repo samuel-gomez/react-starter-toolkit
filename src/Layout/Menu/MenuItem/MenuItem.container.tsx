@@ -2,7 +2,8 @@ import Authorize from 'shared/components/Authorize';
 import { MenuItem } from './MenuItem';
 import type { TMenuItemEnhanced, TMenuItemBase } from './MenuItem.d';
 
-export const createMenu = (menuItems: TMenuItemBase[]) => menuItems.map(menuItem => <MenuItemEnhanced key={menuItem.label} {...menuItem} />);
+export const createMenu = (menuItems: TMenuItemBase[], onClick?: (event: React.MouseEvent<HTMLElement>) => void) =>
+  menuItems.map(menuItem => <MenuItemEnhanced key={menuItem.label} {...menuItem} onClick={onClick} />);
 
 const MenuItemEnhanced = ({ authorized, url, label, children, classModifier, createMenuFn = createMenu, ...props }: TMenuItemEnhanced) => {
   const newClassModifier = [classModifier, children ? 'haschild' : ''].join(' ').trim();
