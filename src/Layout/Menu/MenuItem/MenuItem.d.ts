@@ -17,8 +17,10 @@ export type TMenuItem = TMenuItemBase & {
   ariaHaspopup?: string;
   ariaExpanded?: string;
   ariaLabel?: string;
+  onClick?: (event: React.MouseEvent<HTMLElement>) => void;
 };
 
 export type TMenuItemEnhanced = TMenuItemBase & {
   authorized?: string[];
+  onClick?: (event: React.MouseEvent<HTMLElement>) => void;
 };
