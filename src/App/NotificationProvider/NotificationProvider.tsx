@@ -1,12 +1,13 @@
 import { createContext, ReactNode } from 'react';
+import { emptyFunction } from 'shared/testsUtils';
 import Notifications, { TNotification } from './Notifications';
 import useNotifications from './Notifications.hook';
 
 export type TNotificationContext = {
-  addNotification?: ((arg0: TNotification) => void) | null;
+  addNotification: (arg0: TNotification) => void;
 };
 
-export const NotificationContext = createContext<TNotificationContext | null>({ addNotification: null });
+export const NotificationContext = createContext<TNotificationContext>({ addNotification: emptyFunction });
 NotificationContext.displayName = 'NotificationContext';
 
 type TNotificationProvider = {

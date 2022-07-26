@@ -8,11 +8,9 @@ exports[`<DownloadLinkEnhanced /> Should call getDownloadPathFn and setFileNameF
     <button
       aria-label="Télécharger"
       class="af-link af-link--hasIconLeft af-link--download"
-      disabled=""
       type="button"
     >
       <svg
-        alt="download-csv"
         aria-labelledby="title"
         class="af-download-link__icon"
         role="img"
@@ -46,7 +44,6 @@ exports[`<DownloadLinkEnhanced /> Should call getDownloadPathFn and setFileNameF
       type="button"
     >
       <svg
-        alt="download-csv"
         aria-labelledby="title"
         class="af-download-link__icon"
         role="img"

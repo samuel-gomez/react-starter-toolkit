@@ -3,16 +3,6 @@ import DownloadLinkContainer from '../DownloadLink.container';
 import { SERVICE_NAME } from '../constants';
 
 describe('DownloadLinkContainer', () => {
-  it('Render <DownloadLinkContainer/> disabled when undefined path', () => {
-    const { asFragment } = render(<DownloadLinkContainer label="Télécharger les résultats" fileName="2_20220112_AAM-VIE_resultats.csv" />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-
-  it('Render <DownloadLinkContainer/> disabled when undefined fileName', () => {
-    const { asFragment } = render(<DownloadLinkContainer label="Télécharger les résultats" path="elecions/3/resultats" />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-
   it('Render <DownloadLinkContainer/> ', () => {
     const { asFragment } = render(
       <DownloadLinkContainer label="Télécharger les résultats" path="elecions/3/resultats" fileName="2_20220112_AAM-VIE_resultats.csv" />,
@@ -49,6 +39,6 @@ describe('DownloadLinkContainer', () => {
     );
 
     expect(setLoaderModeFnMock).toBeCalledWith({ isLoading: false });
-    expect(useDownloadFnMock).toBeCalledWith({ path: 'elecions/3/resultats', clearSubmitDownload: clearSubmitDownloadMock, hasSubmit: false });
+    expect(useDownloadFnMock).toBeCalledWith({ path: 'elecions/3/resultats', hasSubmit: false });
   });
 });

@@ -3,7 +3,6 @@ import { renderHook, act } from '@testing-library/react-hooks';
 import { emptyFunction } from 'shared/testsUtils';
 import { TIMEOUT } from 'shared/constants';
 import {
-  setInitialState,
   loading,
   failure,
   success,
@@ -36,21 +35,6 @@ describe('setBodyArgs', () => {
   it('Should return empty object when body null', () => {
     const result = setBodyArgs(null);
     expect(result).toEqual({});
-  });
-});
-
-describe('setInitialState', () => {
-  it('Should return initial state when called with service name', () => {
-    const result = setInitialState(serviceName);
-    const expected = {
-      isLoading: false,
-      isLoaded: false,
-      [serviceName]: [],
-      anomaly: {
-        [serviceName]: null,
-      },
-    };
-    expect(result).toEqual(expected);
   });
 });
 

@@ -1,5 +1,6 @@
 import { createContext } from 'react';
 import { renderHook, act } from '@testing-library/react-hooks';
+import { TNotificationContext } from 'App/NotificationProvider/NotificationProvider';
 import { SERVICE_NAME, SUBMIT_DOWNLOAD_ID_FAILURE, SUBMIT_DOWNLOAD_ID_SUCCESS, SUCCESS_DOWNLOAD_MESSAGE } from '../constants';
 import {
   useDownload,
@@ -26,29 +27,37 @@ describe('useSubmitDownload', () => {
 
 describe('setDownloadFile', () => {
   const downloadjsFnMock = jest.fn();
+  const state = {
+    downloadFile: [],
+    isLoading: false,
+    isLoaded: false,
+    anomaly: {
+      downloadFile: null,
+    },
+  };
 
-  it('Should not call downloadjsFn When state.downloadFile is null', () => {
+  it('Should not call downloadjsFn When state.downloadFile is empty', () => {
     setDownloadFile({
       fileName: 'test.csv',
-      state: {
-        downloadFile: null,
-      },
+      state,
       downloadjsFn: downloadjsFnMock,
     });
 
     expect(downloadjsFnMock).not.toBeCalled();
   });
 
-  it('Should call downloadjsFn When state.downloadFile is NOT null', () => {
+  it('Should call downloadjsFn When state.downloadFile is NOT empty', () => {
+    const blob = new Blob([''], { type: 'text/csv' });
     setDownloadFile({
       fileName: 'test.csv',
       state: {
-        downloadFile: 'file',
+        ...state,
+        downloadFile: blob,
       },
       downloadjsFn: downloadjsFnMock,
     });
 
-    expect(downloadjsFnMock).toBeCalledWith('file', 'test.csv', 'text/csv');
+    expect(downloadjsFnMock).toBeCalledWith(blob, 'test.csv', 'text/csv');
   });
 });
 
@@ -95,9 +104,7 @@ describe('useNotifyDownloadError', () => {
   const clearSubmitDownloadMock = jest.fn();
   const fetchNotifyErrorFnMock = jest.fn();
   const addNotificationMock = jest.fn();
-  const NotificationContextObjMock = createContext({
-    addNotification: addNotificationMock,
-  });
+  const NotificationContext = createContext<TNotificationContext>({ addNotification: addNotificationMock });
 
   const defaultProps = {
     path: 'elections/12/resultats',
@@ -105,7 +112,7 @@ describe('useNotifyDownloadError', () => {
     state: INITIAL_STATE,
     hasSubmit: false,
     clearSubmitDownload: clearSubmitDownloadMock,
-    NotificationContextObj: NotificationContextObjMock,
+    NotificationContextObj: NotificationContext,
     fetchNotifyErrorFn: fetchNotifyErrorFnMock,
   };
 
@@ -141,9 +148,7 @@ describe('useNotifyDownloadSuccess', () => {
   const clearSubmitDownloadMock = jest.fn();
   const fetchNotifySuccessFnMock = jest.fn();
   const addNotificationMock = jest.fn();
-  const NotificationContextObjMock = createContext({
-    addNotification: addNotificationMock,
-  });
+  const NotificationContext = createContext<TNotificationContext>({ addNotification: addNotificationMock });
 
   const defaultProps = {
     path: 'elections/12/resultats',
@@ -151,7 +156,7 @@ describe('useNotifyDownloadSuccess', () => {
     state: INITIAL_STATE,
     hasSubmit: false,
     clearSubmitDownload: clearSubmitDownloadMock,
-    NotificationContextObj: NotificationContextObjMock,
+    NotificationContextObj: NotificationContext,
     fetchNotifySuccessFn: fetchNotifySuccessFnMock,
   };
 
@@ -176,7 +181,6 @@ describe('useNotifyDownloadSuccess', () => {
     expect(fetchNotifySuccessFnMock).toBeCalledWith({
       state: { ...INITIAL_STATE, [SERVICE_NAME]: 'success', label: SUCCESS_DOWNLOAD_MESSAGE },
       addNotification: addNotificationMock,
-      serviceName: SERVICE_NAME,
       idNotifySuccess: `${SUBMIT_DOWNLOAD_ID_SUCCESS}-elections/12/resultats`,
     });
   });

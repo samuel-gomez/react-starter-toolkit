@@ -8,6 +8,12 @@
     "jest": true
   },
   "rules": {
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "lf"
+      }
+    ],
     "react/function-component-definition": "off",
     "import/no-anonymous-default-export": "off",
     "no-restricted-exports": "off",

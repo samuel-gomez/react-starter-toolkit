@@ -13,7 +13,7 @@ exports[`<LasyImage/> Should render LasyImage unknown image 1`] = `
 <DocumentFragment>
   <img
     alt="alt_unknown"
-    src="Error: Cannot find module 'shared/images/unknown.svg' from 'src/shared/components/LasyImage/LasyImage.js'"
+    src="Error: Cannot find module 'shared/images/unknown.svg' from 'src/shared/components/LasyImage/LasyImage.tsx'"
   />
 </DocumentFragment>
 `;

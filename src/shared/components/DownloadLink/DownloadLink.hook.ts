@@ -8,6 +8,15 @@ import { SERVICE_NAME, SUBMIT_DOWNLOAD_ID_FAILURE, SUBMIT_DOWNLOAD_ID_SUCCESS, S
 
 export const INITIAL_STATE = setInitialState(SERVICE_NAME);
 
+type TuseDownload = {
+  path: string;
+  hasSubmit: boolean;
+  initialState?: ReturnType<typeof setInitialState>;
+  serviceName?: string;
+  getApiFn?: typeof getApi;
+  useFetchDataFn?: typeof useFetchData;
+};
+
 export const useDownload = ({
   path,
   hasSubmit,
@@ -15,7 +24,7 @@ export const useDownload = ({
   serviceName = SERVICE_NAME,
   getApiFn = getApi,
   useFetchDataFn = useFetchData,
-}) =>
+}: TuseDownload): ReturnType<typeof useFetchData> =>
   useFetchDataFn({
     initialState,
     serviceName,
@@ -41,14 +50,28 @@ export const useSubmitDownload = (initialState = false) => {
  * Téléchargement du fichier dans le navigateur
  ***************************************************************************************** */
 
-export const setDownloadFile = ({ fileName, state, isEmptyOrNullFn = isEmptyOrNull, downloadjsFn = downloadjs }) => {
+type TsetDownloadFile = {
+  isEmptyOrNullFn?: typeof isEmptyOrNull;
+  downloadjsFn?: typeof downloadjs;
+  fileName: string;
+  state: typeof INITIAL_STATE;
+};
+
+export const setDownloadFile = ({ fileName, state, isEmptyOrNullFn = isEmptyOrNull, downloadjsFn = downloadjs }: TsetDownloadFile) => {
   const { downloadFile } = state;
+  console.log('downloadFile state', state);
   if (!isEmptyOrNullFn(downloadFile) && fileName) {
     downloadjsFn(downloadFile, fileName, 'text/csv');
   }
 };
 
-export const useDownloadFile = ({ state, fileName, setDownloadFileFn = setDownloadFile }) => {
+type TuseDownloadFile = {
+  state: typeof INITIAL_STATE;
+  fileName: string;
+  setDownloadFileFn?: typeof setDownloadFile;
+};
+
+export const useDownloadFile = ({ state, fileName, setDownloadFileFn = setDownloadFile }: TuseDownloadFile) => {
   useEffect(
     () =>
       setDownloadFileFn({
@@ -63,6 +86,21 @@ export const useDownloadFile = ({ state, fileName, setDownloadFileFn = setDownlo
  * Notification en cas d'erreur du téléchargement
  ***************************************************************************************** */
 
+type TuseNotifyDownload = {
+  state: typeof INITIAL_STATE;
+  clearSubmitDownload: () => void;
+  clearState: (initialStateCt: typeof INITIAL_STATE) => void;
+  hasSubmit: boolean;
+  path: string;
+  initialStateCt?: typeof INITIAL_STATE;
+  NotificationContextObj?: typeof NotificationContext;
+  serviceName?: string;
+};
+
+type TuseNotifyDownloadError = TuseNotifyDownload & {
+  fetchNotifyErrorFn?: typeof fetchNotifyError;
+};
+
 export const useNotifyDownloadError = ({
   state,
   clearState,
@@ -73,7 +111,7 @@ export const useNotifyDownloadError = ({
   initialStateCt = INITIAL_STATE,
   NotificationContextObj = NotificationContext,
   serviceName = SERVICE_NAME,
-}) => {
+}: TuseNotifyDownloadError) => {
   const { addNotification } = useContext(NotificationContextObj);
   useEffect(() => {
     if (state.anomaly[serviceName] !== null && hasSubmit) {
@@ -93,6 +131,10 @@ export const useNotifyDownloadError = ({
  * Notification en cas de succès du téléchargement
  ***************************************************************************************** */
 
+type TuseNotifyDownloadSuccess = TuseNotifyDownload & {
+  fetchNotifySuccessFn?: typeof fetchNotifySuccess;
+};
+
 export const useNotifyDownloadSuccess = ({
   state,
   clearState,
@@ -103,7 +145,7 @@ export const useNotifyDownloadSuccess = ({
   initialStateCt = INITIAL_STATE,
   NotificationContextObj = NotificationContext,
   serviceName = SERVICE_NAME,
-}) => {
+}: TuseNotifyDownloadSuccess) => {
   const { addNotification } = useContext(NotificationContextObj);
 
   useEffect(() => {
@@ -112,7 +154,6 @@ export const useNotifyDownloadSuccess = ({
       clearState(initialStateCt);
       fetchNotifySuccessFn({
         addNotification,
-        serviceName,
         state: {
           ...state,
           label: SUCCESS_DOWNLOAD_MESSAGE,
