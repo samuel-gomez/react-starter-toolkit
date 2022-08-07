@@ -16,7 +16,9 @@ exports[`<Unauthorize page/> Renders Unauthorize page component without crashing
     </div>
   </div>
   <div
+    aria-label="page error 403"
     class="container af-container af-container--resilience-page af-container--unauthorize"
+    role="main"
   >
     <h1
       class="af-resilience-page__title"

@@ -2,6 +2,7 @@ import { useCallback, useState, useMemo } from 'react';
 import { getApi, setInitialState, useFetchData } from 'shared/helpers/fetchHook';
 import setAnomalyEmptyItems from 'shared/helpers/setAnomalyEmptyItems';
 import { SERVICE_NAME } from './constants';
+import { DownloadLinkEnhanced } from './SearchMembers';
 
 export const INITIAL_STATE = setInitialState(SERVICE_NAME);
 
@@ -13,14 +14,20 @@ export const INITIAL_STATE_FORM_SEARCH_MEMBERS = {
 export const computeInfos = ({ members = [] }) =>
   members.map(({ _id, firstname, lastname }) => ({
     key: _id,
-    firstname: {
-      label: firstname,
-    },
-    lastname: {
-      label: lastname,
-    },
-    _id: {
-      label: _id,
+    cols: {
+      firstname: {
+        label: firstname,
+      },
+      lastname: {
+        label: lastname,
+      },
+      _id: {
+        label: _id,
+      },
+      actions: {
+        children: <DownloadLinkEnhanced idKey={_id} firstname={firstname} lastname={lastname} />,
+        classModifier: 'actions',
+      },
     },
   }));
 

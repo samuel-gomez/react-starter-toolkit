@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ModalCommonBody Should render ModalCommonBody with anomaly 1`] = `
+<DocumentFragment>
+  <div
+    class="af-modal__body"
+  >
+    <div
+      class="af-alert af-alert--error"
+      role="alert"
+    >
+      <div
+        class="af-alert__title"
+      >
+        <div
+          class="af-alert__title-icon"
+        >
+          <i
+            class="glyphicon glyphicon-exclamation-sign"
+          />
+        </div>
+        <div
+          class="af-alert__title-text"
+        >
+          there is an error
+        </div>
+      </div>
+      <div
+        class="af-alert__content"
+      >
+        <div
+          class="af-alert__content__left"
+        />
+        <div
+          class="af-alert__content__right"
+        >
+          detail
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ModalCommonBody Should render ModalCommonBody with children 1`] = `
+<DocumentFragment>
+  <div
+    class="af-modal__body"
+  >
+    <h4
+      class="af-modal__title"
+    >
+      there is a title
+    </h4>
+    <p>
+      child
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ModalCommonBody Should render ModalCommonBody with icon 1`] = `
+<DocumentFragment>
+  <div
+    class="af-modal__body"
+  >
+    <img
+      alt="./icon.svg"
+      class="af-modal__image"
+      src="./icon.svg"
+    />
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ModalCommonBody Should render ModalCommonBody with title 1`] = `
+<DocumentFragment>
+  <div
+    class="af-modal__body"
+  >
+    <h4
+      class="af-modal__title"
+    >
+      there is a title
+    </h4>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`ModalCommonBody Should render ModalCommonBody without props 1`] = `
+<DocumentFragment>
+  <div
+    class="af-modal__body"
+  />
+</DocumentFragment>
+`;

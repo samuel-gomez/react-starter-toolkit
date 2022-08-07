@@ -1,5 +1,5 @@
-export const setTextTooltip = ({ text = '', name = '', maxDisplay = {} }) =>
-  !text || text.length <= maxDisplay[name] || text === '' || !maxDisplay[name]
+export const setTextTooltip = ({ text = '', name = '', maxDisplay = 0 }) =>
+  !text || text.length <= maxDisplay || text === '' || !maxDisplay
     ? {
         [name]: {
           label: text,
@@ -7,10 +7,10 @@ export const setTextTooltip = ({ text = '', name = '', maxDisplay = {} }) =>
       }
     : {
         [name]: {
-          label: `${text.substring(0, maxDisplay[name])}...`,
+          label: `${text.substring(0, maxDisplay)}...`,
           hover: text,
         },
       };
 
-export const setDisplay = (column, setTextTooltipFn = setTextTooltip) =>
-  Object.keys(column).map(keyColumn => setTextTooltipFn({ text: column[keyColumn], name: keyColumn }))[0];
+export const setDisplay = (column, maxDisplay, setTextTooltipFn = setTextTooltip) =>
+  Object.keys(column).map(keyColumn => setTextTooltipFn({ text: column[keyColumn], name: keyColumn, maxDisplay }))[0];

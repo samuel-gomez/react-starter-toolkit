@@ -312,9 +312,9 @@ exports[`<SearchMembersContainer/> Should render <SearchMembersContainer /> with
         Recherche de membres
       </h1>
       <a
+        aria-label="Retour à l'accueil"
         class="btn af-btn--circle"
         href="/"
-        title="Retour à l'accueil"
       >
         <i
           class="glyphicon glyphicon-home"
@@ -419,7 +419,7 @@ exports[`<SearchMembersContainer/> Should render <SearchMembersContainer /> with
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.1.4
+        © 2022 AXA Tous droits réservés - v0.1.5
       </div>
     </div>
   </footer>
@@ -738,9 +738,9 @@ exports[`<SearchMembersContainer/> Should render SearchMembersContainer 1`] = `
         Recherche de membres
       </h1>
       <a
+        aria-label="Retour à l'accueil"
         class="btn af-btn--circle"
         href="/"
-        title="Retour à l'accueil"
       >
         <i
           class="glyphicon glyphicon-home"
@@ -845,7 +845,7 @@ exports[`<SearchMembersContainer/> Should render SearchMembersContainer 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.1.4
+        © 2022 AXA Tous droits réservés - v0.1.5
       </div>
     </div>
   </footer>

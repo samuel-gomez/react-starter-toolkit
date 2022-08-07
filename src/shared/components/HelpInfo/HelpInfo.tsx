@@ -2,7 +2,7 @@ import { ReactNode } from 'react';
 import { Popover } from '@axa-fr/react-toolkit-all';
 import './HelpInfo.scss';
 
-type THelpInfo = {
+export type THelpInfo = {
   children: ReactNode;
   content?: ReactNode;
   isDisabled?: boolean;

@@ -8,8 +8,7 @@ type TwithClassModifier = {
 };
 
 export const withClassNameModifier =
-  <P extends object>(Component: ComponentType<P>): ComponentType<P & TwithClassModifier> =>
-  ({ className = '', classModifier = '', defaultClassName = '', ...props }: TwithClassModifier) =>
+  <P extends object>(Component: ComponentType<P>, classNameDefault = ''): ComponentType<P & TwithClassModifier> =>
+  ({ className = classNameDefault, classModifier = '', defaultClassName = '', ...props }: TwithClassModifier) =>
     <Component {...(props as P)} className={ClassManager.getComponentClassName(className, classModifier, defaultClassName)} />;
-
 export default withClassNameModifier;

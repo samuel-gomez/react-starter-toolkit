@@ -10,6 +10,7 @@ const { Provider: MembersProvider } = MembersContext;
 
 const MembersEnhanced = ({ useMembersFn, setLoaderModeFn, ...rest }) => {
   const { anomaly, isLoading, members, onChangeSorting, stateSorting, onChangePaging } = useMembersFn({});
+
   return (
     <MembersProvider value={{ onChangeSorting, sorting: stateSorting }}>
       <Members

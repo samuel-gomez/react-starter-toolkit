@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Td Render <Td/> 1`] = `
+<tr>
+  <td
+    class="af-table__cell"
+  >
+    child td
+  </td>
+</tr>
+`;
+
+exports[`Td Render <Td/> with modifier 1`] = `
+<tr>
+  <td
+    class="af-table__cell af-table__cell--custom"
+  >
+    child td
+  </td>
+</tr>
+`;

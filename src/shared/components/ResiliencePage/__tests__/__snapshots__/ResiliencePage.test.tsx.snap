@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ResiliencePage/> Render <ResiliencePage/> with default props 1`] = `
+<DocumentFragment>
+  <div
+    class="af-title-bar af-title-bar--hasstepper af-title-bar--backhome"
+  >
+    <div
+      class="container af-title-bar__wrapper"
+    >
+      <h1
+        class="af-title-bar__title"
+      >
+        title
+      </h1>
+      <a
+        aria-label="Retour à l'accueil"
+        class="btn af-btn--circle"
+        href="/"
+      >
+        <i
+          class="glyphicon glyphicon-home"
+        />
+      </a>
+    </div>
+  </div>
+  <div
+    aria-label="page error 404"
+    class="container af-container"
+    role="main"
+  >
+    <h1
+      class="af-resilience-page__title"
+    >
+      <div
+        class="af-resilience-page__title-covernumber"
+      >
+        <span
+          class="af-resilience-page__title-number"
+        >
+          404
+        </span>
+      </div>
+      <div
+        class="af-resilience-page__title-covernot"
+      >
+        <span
+          class="af-resilience-page__title-not"
+        >
+          <br />
+        </span>
+      </div>
+    </h1>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<ResiliencePage/> Render <ResiliencePage/> with other props 1`] = `
+<DocumentFragment>
+  <div
+    class="af-title-bar af-title-bar--hasstepper"
+  >
+    <div
+      class="container af-title-bar__wrapper"
+    >
+      <h1
+        class="af-title-bar__title"
+      >
+        mytitle
+      </h1>
+    </div>
+  </div>
+  <div
+    aria-label="page error 500"
+    class="container af-container"
+    role="main"
+  >
+    <h1
+      class="af-resilience-page__title"
+    >
+      <div
+        class="af-resilience-page__title-covernumber"
+      >
+        <span
+          class="af-resilience-page__title-number"
+        >
+          500
+        </span>
+      </div>
+      <div
+        class="af-resilience-page__title-covernot"
+      >
+        <span
+          class="af-resilience-page__title-not"
+        >
+          <br />
+        </span>
+      </div>
+    </h1>
+    <p
+      class="af-resilience-page__message"
+    >
+      mymessage
+    </p>
+  </div>
+</DocumentFragment>
+`;
