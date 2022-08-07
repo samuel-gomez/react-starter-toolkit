@@ -24,7 +24,7 @@
     "@axa-fr/react-toolkit-all": "1.4.1",
     "@axa-fr/react-toolkit-core": "1.4.1",
     "@axa-fr/react-toolkit-modal-default": "1.4.0",
-    "@babel/parser": "7.17.12",
+    "@babel/parser": "7.18.11",
     "@types/downloadjs": "1.4.3",
     "@types/intl": "1.2.0",
     "@types/jest": "27.5.1",
@@ -52,7 +52,7 @@
     "react-scripts": "5.0.1"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "7.17.0",
+    "@babel/eslint-parser": "7.18.9",
     "@commitlint/cli": "17.0.3",
     "@commitlint/config-conventional": "17.0.3",
     "@testing-library/jest-dom": "5.16.4",
@@ -144,7 +144,7 @@
     "resetMocks": false
   },
   "resolutions": {
-    "@babel/parser": "7.17.12"
+    "@babel/parser": "7.18.11"
   },
   "repository": {
     "type": "git",
