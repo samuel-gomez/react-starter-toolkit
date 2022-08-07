@@ -1,27 +1,31 @@
 import { render } from '@testing-library/react';
 import LoaderContainer from '../Loader.container';
 
+const LoaderCmpt = jest.fn();
+
 const defaultProps = {
-  classModifier: '',
-  text: '',
-  mode: 'none',
+  LoaderCmpt,
 };
 describe('<LoaderContainer />', () => {
-  it('Should render LoaderContainer', () => {
-    const { asFragment } = render(<LoaderContainer {...defaultProps} />);
-
-    expect(asFragment()).toMatchSnapshot();
-  });
-
-  it('Should render LoaderContainer active', () => {
-    const { asFragment } = render(<LoaderContainer {...defaultProps} mode="get" />);
-
-    expect(asFragment()).toMatchSnapshot();
-  });
-
-  it('Should render LoaderContainer with custom text', () => {
-    const { asFragment, getByText } = render(<LoaderContainer {...defaultProps} mode="get" text="texte de chargement" />);
-    expect(getByText(/texte de chargement/)).toBeInTheDocument();
-    expect(asFragment()).toMatchSnapshot();
-  });
+  it.each`
+    classModifier | text             | mode         | expectedClassModifier | isVisible | message
+    ${undefined}  | ${undefined}     | ${undefined} | ${''}                 | ${false}  | ${''}
+    ${''}         | ${''}            | ${'none'}    | ${''}                 | ${false}  | ${''}
+    ${'sam'}      | ${''}            | ${'none'}    | ${'sam'}              | ${false}  | ${''}
+    ${'sam'}      | ${''}            | ${'get'}     | ${'sam active'}       | ${true}   | ${'Chargement en cours'}
+    ${'sam'}      | ${'mon message'} | ${'get'}     | ${'sam active'}       | ${true}   | ${'mon message'}
+  `(
+    'Should render view with expectedClassModifier: $expectedClassModifier, isVisible: $isVisible, message: $message when classModifier: $classModifier, text: $text, mode: $mode',
+    ({ expectedClassModifier, isVisible, message, ...rest }) => {
+      render(<LoaderContainer {...defaultProps} {...rest} />);
+      expect(LoaderCmpt).toHaveBeenCalledWith(
+        {
+          classModifier: expectedClassModifier,
+          isVisible,
+          message,
+        },
+        {},
+      );
+    },
+  );
 });

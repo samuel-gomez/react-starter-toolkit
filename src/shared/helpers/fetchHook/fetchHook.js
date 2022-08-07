@@ -9,15 +9,6 @@ export const LOADING = 'LOADING';
 export const FAILURE = 'FAILURE';
 export const SUCCESS = 'SUCCESS';
 
-export const setInitialState = (serviceName, defaultValue = []) => ({
-  isLoading: false,
-  isLoaded: false,
-  [serviceName]: defaultValue,
-  anomaly: {
-    [serviceName]: null,
-  },
-});
-
 export const loading = ({ state }) => ({
   ...state,
   isLoading: true,
@@ -84,7 +75,7 @@ export const useFetchData = ({
   service,
   serviceName,
   initialState,
-  computeSuccess,
+  computeSuccess = emptyFunction,
   args = {},
   condition = true,
   FetchContextObj = FetchContext,

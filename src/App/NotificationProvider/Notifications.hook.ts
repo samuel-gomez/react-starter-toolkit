@@ -2,7 +2,7 @@ import { useState, useCallback } from 'react';
 import { MODIFIER_HIDE, DELAY_HIDE } from './Notifications/constants';
 import { TNotification } from './Notifications/Notification';
 
-export type TaddNotification = ((notification: TNotification) => void) | null;
+export type TaddNotification = (notification: TNotification) => void;
 export type TonDeleteNotification = ((id: string) => void) | null;
 
 type TReturnUseNotification = {

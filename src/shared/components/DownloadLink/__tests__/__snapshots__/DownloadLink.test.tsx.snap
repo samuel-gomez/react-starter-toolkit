@@ -11,7 +11,6 @@ exports[`DownloadLink Render <DownloadLink/> 1`] = `
       type="button"
     >
       <svg
-        alt="download-csv"
         aria-labelledby="title"
         class="af-download-link__icon"
         role="img"
@@ -46,7 +45,6 @@ exports[`DownloadLink Render <DownloadLink/> disabled 1`] = `
       type="button"
     >
       <svg
-        alt="download-csv"
         aria-labelledby="title"
         class="af-download-link__icon"
         role="img"

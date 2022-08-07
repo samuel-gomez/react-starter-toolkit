@@ -3,7 +3,6 @@
 exports[`<Icon/> Should render Icon 1`] = `
 <DocumentFragment>
   <svg
-    alt="date"
     aria-labelledby="title"
     class="af-icon-svg"
     role="img"
