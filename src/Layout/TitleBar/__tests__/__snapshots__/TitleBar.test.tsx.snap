@@ -107,9 +107,9 @@ exports[`<TitleBar/> Should contain back home <Link /> when backHome is true 1`]
         title
       </h1>
       <a
+        aria-label="Retour à l'accueil"
         class="btn af-btn--circle"
         href="/"
-        title="Retour à l'accueil"
       >
         <i
           class="glyphicon glyphicon-home"

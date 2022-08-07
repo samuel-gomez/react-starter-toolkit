@@ -8,11 +8,9 @@ exports[`<DownloadLinkEnhanced /> Should call getDownloadPathFn and setFileNameF
     <button
       aria-label="Télécharger"
       class="af-link af-link--hasIconLeft af-link--download"
-      disabled=""
       type="button"
     >
       <svg
-        alt="download-csv"
         aria-labelledby="title"
         class="af-download-link__icon"
         role="img"
@@ -46,7 +44,6 @@ exports[`<DownloadLinkEnhanced /> Should call getDownloadPathFn and setFileNameF
       type="button"
     >
       <svg
-        alt="download-csv"
         aria-labelledby="title"
         class="af-download-link__icon"
         role="img"
@@ -381,9 +378,9 @@ exports[`<SearchMembers/> Should render <SearchMembers /> with one member 1`] = 
         Recherche de membres
       </h1>
       <a
+        aria-label="Retour à l'accueil"
         class="btn af-btn--circle"
         href="/"
-        title="Retour à l'accueil"
       >
         <i
           class="glyphicon glyphicon-home"
@@ -477,45 +474,41 @@ exports[`<SearchMembers/> Should render <SearchMembers /> with one member 1`] = 
             class="af-table__tr"
           >
             <th
-              aria-label="table-body-line"
               class="af-table__th"
               role="columnheader"
             >
               <span
-                class="af-table__tr-label"
+                class="af-table__th-label"
               >
                 Prénom du membre
               </span>
             </th>
             <th
-              aria-label="table-body-line"
               class="af-table__th"
               role="columnheader"
             >
               <span
-                class="af-table__tr-label"
+                class="af-table__th-label"
               >
                 Nom du membre
               </span>
             </th>
             <th
-              aria-label="table-body-line"
               class="af-table__th"
               role="columnheader"
             >
               <span
-                class="af-table__tr-label"
+                class="af-table__th-label"
               >
                 Identifiant du membre
               </span>
             </th>
             <th
-              aria-label="table-body-line"
               class="af-table__th"
               role="columnheader"
             >
               <span
-                class="af-table__tr-label"
+                class="af-table__th-label"
               >
                 Actions
               </span>
@@ -529,23 +522,7 @@ exports[`<SearchMembers/> Should render <SearchMembers /> with one member 1`] = 
           <tr
             aria-label="table-body-line"
             class="af-table__tr"
-          >
-            <td
-              class="af-table__cell"
-            >
-              nom du membre
-            </td>
-            <td
-              class="af-table__cell"
-            >
-              1254689759
-            </td>
-            <td
-              class="af-table__cell af-table__cell--actions"
-            >
-              DownloadLinkCmpt
-            </td>
-          </tr>
+          />
         </tbody>
       </table>
     </div>
@@ -571,7 +548,7 @@ exports[`<SearchMembers/> Should render <SearchMembers /> with one member 1`] = 
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.1.4
+        © 2022 AXA Tous droits réservés - v0.1.5
       </div>
     </div>
   </footer>
@@ -890,9 +867,9 @@ exports[`<SearchMembers/> Should render SearchMembers 1`] = `
         Recherche de membres
       </h1>
       <a
+        aria-label="Retour à l'accueil"
         class="btn af-btn--circle"
         href="/"
-        title="Retour à l'accueil"
       >
         <i
           class="glyphicon glyphicon-home"
@@ -997,7 +974,7 @@ exports[`<SearchMembers/> Should render SearchMembers 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.1.4
+        © 2022 AXA Tous droits réservés - v0.1.5
       </div>
     </div>
   </footer>

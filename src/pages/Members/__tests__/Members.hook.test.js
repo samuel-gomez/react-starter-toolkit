@@ -57,7 +57,7 @@ describe('computeInfos', () => {
       members: membersMock,
     });
 
-    expect(computedMembers[0].birthdate).toEqual({ label: '20/10/1985' });
+    expect(computedMembers[0].cols.birthdate).toEqual({ label: '20/10/1985' });
   });
 
   it('Should empty array when computeInfos have been called with empty members', () => {

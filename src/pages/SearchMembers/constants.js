@@ -7,6 +7,7 @@ export const TABLE_HEADERS_SEARCHMEMBERS = [
   { label: 'Prénom du membre', key: 'firstname' },
   { label: 'Nom du membre', key: 'lastname' },
   { label: 'Identifiant du membre', key: '_id' },
+  { label: 'Actions', key: 'actions' },
 ];
 
 export const SERVICE_NAME = 'searchMembers';

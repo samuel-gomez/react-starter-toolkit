@@ -355,9 +355,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Text Input"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 342.988 280"
             >
+              <title>
+                slash
+              </title>
               <path
                 d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
               />
@@ -371,9 +376,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Text Input"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 9.6 12"
             >
+              <title>
+                storybook
+              </title>
               <path
                 d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
               />
@@ -409,9 +419,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Textarea Input"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 342.988 280"
             >
+              <title>
+                slash
+              </title>
               <path
                 d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
               />
@@ -425,9 +440,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Textarea Input"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 9.6 12"
             >
+              <title>
+                storybook
+              </title>
               <path
                 d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
               />
@@ -463,9 +483,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : File Input"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 342.988 280"
             >
+              <title>
+                slash
+              </title>
               <path
                 d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
               />
@@ -479,9 +504,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : File Input"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 9.6 12"
             >
+              <title>
+                storybook
+              </title>
               <path
                 d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
               />
@@ -517,9 +547,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Accordion"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 342.988 280"
             >
+              <title>
+                slash
+              </title>
               <path
                 d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
               />
@@ -533,9 +568,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Accordion"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 9.6 12"
             >
+              <title>
+                storybook
+              </title>
               <path
                 d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
               />
@@ -571,9 +611,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Modal"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 342.988 280"
             >
+              <title>
+                slash
+              </title>
               <path
                 d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
               />
@@ -587,9 +632,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Modal"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 9.6 12"
             >
+              <title>
+                storybook
+              </title>
               <path
                 d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
               />
@@ -625,9 +675,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Alert"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 342.988 280"
             >
+              <title>
+                slash
+              </title>
               <path
                 d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
               />
@@ -641,9 +696,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Alert"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 9.6 12"
             >
+              <title>
+                storybook
+              </title>
               <path
                 d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
               />
@@ -679,9 +739,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Badge"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 342.988 280"
             >
+              <title>
+                slash
+              </title>
               <path
                 d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
               />
@@ -695,9 +760,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Badge"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 9.6 12"
             >
+              <title>
+                storybook
+              </title>
               <path
                 d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
               />
@@ -733,9 +803,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Popover"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 342.988 280"
             >
+              <title>
+                slash
+              </title>
               <path
                 d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
               />
@@ -749,9 +824,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Popover"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 9.6 12"
             >
+              <title>
+                storybook
+              </title>
               <path
                 d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
               />
@@ -787,9 +867,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Slider"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 342.988 280"
             >
+              <title>
+                slash
+              </title>
               <path
                 d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
               />
@@ -803,9 +888,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Slider"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 9.6 12"
             >
+              <title>
+                storybook
+              </title>
               <path
                 d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
               />
@@ -841,9 +931,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Table"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 342.988 280"
             >
+              <title>
+                slash
+              </title>
               <path
                 d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
               />
@@ -857,9 +952,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Table"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 9.6 12"
             >
+              <title>
+                storybook
+              </title>
               <path
                 d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
               />
@@ -895,9 +995,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Tabs"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 342.988 280"
             >
+              <title>
+                slash
+              </title>
               <path
                 d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
               />
@@ -911,9 +1016,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Tabs"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 9.6 12"
             >
+              <title>
+                storybook
+              </title>
               <path
                 d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
               />
@@ -949,9 +1059,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Button"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 342.988 280"
             >
+              <title>
+                slash
+              </title>
               <path
                 d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
               />
@@ -965,9 +1080,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Button"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 9.6 12"
             >
+              <title>
+                storybook
+              </title>
               <path
                 d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
               />
@@ -1003,9 +1123,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Menu"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 342.988 280"
             >
+              <title>
+                slash
+              </title>
               <path
                 d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
               />
@@ -1019,9 +1144,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Menu"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 9.6 12"
             >
+              <title>
+                storybook
+              </title>
               <path
                 d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
               />
@@ -1057,9 +1187,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title=""
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 342.988 280"
             >
+              <title>
+                slash
+              </title>
               <path
                 d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
               />
@@ -1073,9 +1208,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title=""
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 9.6 12"
             >
+              <title>
+                storybook
+              </title>
               <path
                 d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
               />
@@ -1111,9 +1251,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Checkbox"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 342.988 280"
             >
+              <title>
+                slash
+              </title>
               <path
                 d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
               />
@@ -1127,9 +1272,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Checkbox"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 9.6 12"
             >
+              <title>
+                storybook
+              </title>
               <path
                 d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
               />
@@ -1165,9 +1315,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Checkbox-card"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 342.988 280"
             >
+              <title>
+                slash
+              </title>
               <path
                 d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
               />
@@ -1181,9 +1336,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Checkbox-card"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 9.6 12"
             >
+              <title>
+                storybook
+              </title>
               <path
                 d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
               />
@@ -1219,9 +1379,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Radio-card"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 342.988 280"
             >
+              <title>
+                slash
+              </title>
               <path
                 d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
               />
@@ -1235,9 +1400,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Radio-card"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 9.6 12"
             >
+              <title>
+                storybook
+              </title>
               <path
                 d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
               />
@@ -1273,9 +1443,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Steps"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 342.988 280"
             >
+              <title>
+                slash
+              </title>
               <path
                 d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
               />
@@ -1289,9 +1464,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Steps"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 9.6 12"
             >
+              <title>
+                storybook
+              </title>
               <path
                 d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
               />
@@ -1327,9 +1507,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Number"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 342.988 280"
             >
+              <title>
+                slash
+              </title>
               <path
                 d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
               />
@@ -1343,9 +1528,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Number"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 9.6 12"
             >
+              <title>
+                storybook
+              </title>
               <path
                 d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
               />
@@ -1381,9 +1571,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Select-multi"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 342.988 280"
             >
+              <title>
+                slash
+              </title>
               <path
                 d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
               />
@@ -1397,9 +1592,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Select-multi"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 9.6 12"
             >
+              <title>
+                storybook
+              </title>
               <path
                 d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
               />
@@ -1435,9 +1635,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Pass"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 342.988 280"
             >
+              <title>
+                slash
+              </title>
               <path
                 d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
               />
@@ -1451,9 +1656,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Pass"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 9.6 12"
             >
+              <title>
+                storybook
+              </title>
               <path
                 d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
               />
@@ -1489,9 +1699,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Date"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 342.988 280"
             >
+              <title>
+                slash
+              </title>
               <path
                 d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
               />
@@ -1505,9 +1720,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Date"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 9.6 12"
             >
+              <title>
+                storybook
+              </title>
               <path
                 d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
               />
@@ -1543,9 +1763,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Toggle"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 342.988 280"
             >
+              <title>
+                slash
+              </title>
               <path
                 d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
               />
@@ -1559,9 +1784,14 @@ exports[`<App/> Should render App with all props 1`] = `
             title="Storybook : Toggle"
           >
             <svg
-              class="af-btn__img"
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
               viewBox="0 0 9.6 12"
             >
+              <title>
+                storybook
+              </title>
               <path
                 d="M9.6.6C9.6.2 9.3 0 9 0h-.7v1.4s0 .1-.1.1h-.1l-.3-.4-.5.4h-.1v-.1L7.3 0 .6.5c-.3 0-.6.3-.5.6L.4 11c0 .3.3.6.6.6l8 .4c.3 0 .6-.3.6-.6V.6zM5.1 9.7c-1.4 0-2.7-.6-2.5-2.6.1-.2 1.9-.2 1.9 0 0 .8.2 1.1.6 1.1.4 0 .5-.2.5-.5 0-1.2-3-1.3-3-3.5C2.6 2.9 3.5 2 5 2c1.6 0 2.4.8 2.4 2.4-.2.2-1.8.3-1.8 0 0-.9-.4-.9-.6-.9-.2 0-.6.1-.6.5 0 1.2 3 1.1 3 3.5.1 1.4-.9 2.2-2.3 2.2z"
               />
@@ -1592,7 +1822,7 @@ exports[`<App/> Should render App with all props 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.1.4
+        © 2022 AXA Tous droits réservés - v0.1.5
       </div>
     </div>
   </footer>

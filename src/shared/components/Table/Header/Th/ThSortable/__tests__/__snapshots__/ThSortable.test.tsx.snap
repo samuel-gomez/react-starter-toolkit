@@ -1,0 +1,107 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SortingIcon Should render SortingIcon with order equal -1 1`] = `
+<DocumentFragment>
+  <span
+    class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-arrow-xs-down"
+  />
+</DocumentFragment>
+`;
+
+exports[`SortingIcon Should render SortingIcon with order equal 1 1`] = `
+<DocumentFragment>
+  <span
+    class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-arrow-xs-up"
+  />
+</DocumentFragment>
+`;
+
+exports[`SortingIcon Should render SortingIcon with order equal NONE 1`] = `
+<DocumentFragment>
+  <span
+    class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-sorting"
+  />
+</DocumentFragment>
+`;
+
+exports[`ThSortable Should render <ThSortable/> when order: , children: undefined, className: $className, classModifier: undefined 1`] = `
+<tr>
+  <th
+    class="af-table__th"
+    role="button"
+  >
+    <span
+      class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-undefined"
+    />
+  </th>
+</tr>
+`;
+
+exports[`ThSortable Should render <ThSortable/> when order: -1, children: child, className: $className, classModifier: variant 1`] = `
+<tr>
+  <th
+    class="af-table__th af-table__th--variant"
+    role="button"
+  >
+    child
+    <span
+      class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-arrow-xs-down"
+    />
+  </th>
+</tr>
+`;
+
+exports[`ThSortable Should render <ThSortable/> when order: 1, children: child, className: $className, classModifier: variant 1`] = `
+<tr>
+  <th
+    class="af-table__th af-table__th--variant"
+    role="button"
+  >
+    child
+    <span
+      class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-arrow-xs-up"
+    />
+  </th>
+</tr>
+`;
+
+exports[`ThSortable Should render <ThSortable/> when order: NONE, children: child, className: $className, classModifier: undefined 1`] = `
+<tr>
+  <th
+    class="af-table__th"
+    role="button"
+  >
+    child
+    <span
+      class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-sorting"
+    />
+  </th>
+</tr>
+`;
+
+exports[`ThSortable Should render <ThSortable/> when order: NONE, children: child, className: $className, classModifier: variant 1`] = `
+<tr>
+  <th
+    class="af-table__th af-table__th--variant"
+    role="button"
+  >
+    child
+    <span
+      class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-sorting"
+    />
+  </th>
+</tr>
+`;
+
+exports[`ThSortable Should render <ThSortable/> when order: NONE, children: undefined, className: $className, classModifier: undefined 1`] = `
+<tr>
+  <th
+    class="af-table__th"
+    role="button"
+  >
+    <span
+      class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-sorting"
+    />
+  </th>
+</tr>
+`;

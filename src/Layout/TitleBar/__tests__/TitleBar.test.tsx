@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { emptyFunction, renderWithWrapperStaticRouter } from 'shared/testsUtils';
 import TitleBar from '../TitleBar';
 
@@ -21,8 +21,8 @@ describe('<TitleBar/>', () => {
   });
 
   it('Should contain back home <Link /> when backHome is true', () => {
-    const { asFragment, getByTitle } = renderWithWrapperStaticRouter(<TitleBar {...defaultProps} backHome />);
-    expect(getByTitle("Retour à l'accueil")).toBeDefined();
+    const { asFragment } = renderWithWrapperStaticRouter(<TitleBar {...defaultProps} backHome />);
+    expect(screen.getByLabelText("Retour à l'accueil")).toBeDefined();
     expect(asFragment()).toMatchSnapshot();
   });
 });

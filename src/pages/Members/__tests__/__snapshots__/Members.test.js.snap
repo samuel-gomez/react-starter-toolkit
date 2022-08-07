@@ -312,9 +312,9 @@ exports[`<Members/> Should render <Members /> with one member 1`] = `
         Gestion des membres
       </h1>
       <a
+        aria-label="Retour à l'accueil"
         class="btn af-btn--circle"
         href="/"
-        title="Retour à l'accueil"
       >
         <i
           class="glyphicon glyphicon-home"
@@ -346,51 +346,41 @@ exports[`<Members/> Should render <Members /> with one member 1`] = `
             class="af-table__tr"
           >
             <th
-              class="af-table__th af-table__th--sortable"
-              role="button"
-            >
-              <span
-                class="af-table__tr-label"
-              >
-                Prénom
-              </span>
-              <span
-                class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-sorting"
-              />
-            </th>
-            <th
-              class="af-table__th af-table__th--sortable"
-              role="button"
-            >
-              <span
-                class="af-table__tr-label"
-              >
-                Nom
-              </span>
-              <span
-                class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-sorting"
-              />
-            </th>
-            <th
-              class="af-table__th af-table__th--sortable"
-              role="button"
-            >
-              <span
-                class="af-table__tr-label"
-              >
-                Date de naissance
-              </span>
-              <span
-                class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-sorting"
-              />
-            </th>
-            <th
-              aria-label="table-body-line"
               class="af-table__th"
               role="columnheader"
             >
               <span
-                class="af-table__tr-label"
+                class="af-table__th-label"
+              >
+                Prénom
+              </span>
+            </th>
+            <th
+              class="af-table__th"
+              role="columnheader"
+            >
+              <span
+                class="af-table__th-label"
+              >
+                Nom
+              </span>
+            </th>
+            <th
+              class="af-table__th"
+              role="columnheader"
+            >
+              <span
+                class="af-table__th-label"
+              >
+                Date de naissance
+              </span>
+            </th>
+            <th
+              class="af-table__th"
+              role="columnheader"
+            >
+              <span
+                class="af-table__th-label"
               >
                 Sexe
               </span>
@@ -573,7 +563,7 @@ exports[`<Members/> Should render <Members /> with one member 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.1.4
+        © 2022 AXA Tous droits réservés - v0.1.5
       </div>
     </div>
   </footer>
@@ -892,9 +882,9 @@ exports[`<Members/> Should render Members 1`] = `
         Gestion des membres
       </h1>
       <a
+        aria-label="Retour à l'accueil"
         class="btn af-btn--circle"
         href="/"
-        title="Retour à l'accueil"
       >
         <i
           class="glyphicon glyphicon-home"
@@ -1058,7 +1048,7 @@ exports[`<Members/> Should render Members 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.1.4
+        © 2022 AXA Tous droits réservés - v0.1.5
       </div>
     </div>
   </footer>

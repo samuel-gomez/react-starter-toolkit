@@ -24,7 +24,7 @@ const MockProviders =
     );
   };
 
-const customRender = (ui, options, testMock) => render(ui, { wrapper: MockProviders(testMock), ...options });
+const customRender = (ui, options, testMock = { role: '' }) => render(ui, { wrapper: MockProviders(testMock), ...options });
 
 // re-export everything
 export * from '@testing-library/react';

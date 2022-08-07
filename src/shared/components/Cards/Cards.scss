@@ -70,10 +70,8 @@ $card-bg: #dadada;
     justify-content: center;
     &:hover {
       .af {
-        &-btn {
-          &__img {
-            fill: $color-storybook;
-          }
+        &-icon-svg {
+          fill: $color-storybook;
         }
       }
       background: $white;
@@ -88,10 +86,8 @@ $card-bg: #dadada;
     justify-content: center;
     &:hover {
       .af {
-        &-btn {
-          &__img {
-            fill: $color-blue-lighter;
-          }
+        &-icon-svg {
+          fill: $color-blue-lighter;
         }
       }
       background: $white;

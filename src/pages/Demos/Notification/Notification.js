@@ -9,7 +9,7 @@ import { TITLE_BAR, TITLE } from './constants';
 const scope = { Button };
 
 const code = `
-/* HOOK Example (this works because the App component use the NotificationProvider )
+/* HOOK Example (this works because the App component use the NotificationContext ) */
 const useNotify = ({ NotificationContextObj = NotificationContext }) => {
   const { addNotification } = useConNotificationContextObj);
 
@@ -44,7 +44,7 @@ const useNotify = ({ NotificationContextObj = NotificationContext }) => {
 
   return { notifyError, notifySuccess, notifyWarning };
 };
-*/`;
+`;
 
 const codeError = `
   <Button classModifier="danger" type="submit" onClick={notifyError} id="btn-danger">

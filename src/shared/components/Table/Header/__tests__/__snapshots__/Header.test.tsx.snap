@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Should render Header when headers: [[Object]], sorting: {"field": "name", "order": 1} 1`] = `
+<table>
+  <thead
+    aria-label="table-header"
+    class="af-table__thead"
+  >
+    <tr
+      aria-label="table-header-line"
+      class="af-table__tr"
+    >
+      <th
+        class="af-table__th af-table__th--sortable af-table__th--active"
+        role="button"
+      >
+        <span
+          class="af-table__th-label"
+        >
+          label
+        </span>
+        <span
+          class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-arrow-xs-up"
+        />
+      </th>
+    </tr>
+  </thead>
+</table>
+`;
+
+exports[`Header Should render Header when headers: [[Object]], sorting: {"field": "name", "order": 1} 2`] = `
+<table>
+  <thead
+    aria-label="table-header"
+    class="af-table__thead"
+  >
+    <tr
+      aria-label="table-header-line"
+      class="af-table__tr"
+    >
+      <th
+        class="af-table__th af-table__th--sortable af-table__th--active"
+        role="button"
+      >
+        <span
+          class="af-table__th-label"
+        >
+          label
+        </span>
+        <span
+          class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-arrow-xs-up"
+        />
+      </th>
+      <th>
+        child header
+      </th>
+    </tr>
+  </thead>
+</table>
+`;
+
+exports[`Header Should render Header when headers: [[Object]], sorting: undefined 1`] = `
+<table>
+  <thead
+    aria-label="table-header"
+    class="af-table__thead"
+  >
+    <tr
+      aria-label="table-header-line"
+      class="af-table__tr"
+    >
+      <th
+        class="af-table__th af-table__th--sortable af-table__th--active"
+        role="button"
+      >
+        <span
+          class="af-table__th-label"
+        >
+          label
+        </span>
+        <span
+          class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-sorting"
+        />
+      </th>
+    </tr>
+  </thead>
+</table>
+`;
+
+exports[`Header Should render Header when headers: [], sorting: undefined 1`] = `
+<table>
+  <thead
+    aria-label="table-header"
+    class="af-table__thead"
+  >
+    <tr
+      aria-label="table-header-line"
+      class="af-table__tr"
+    />
+  </thead>
+</table>
+`;
+
+exports[`Header Should render Header when headers: undefined, sorting: {"field": "name", "order": 1} 1`] = `
+<table>
+  <thead
+    aria-label="table-header"
+    class="af-table__thead"
+  >
+    <tr
+      aria-label="table-header-line"
+      class="af-table__tr"
+    />
+  </thead>
+</table>
+`;
+
+exports[`Header Should render Header when headers: undefined, sorting: undefined 1`] = `
+<table>
+  <thead
+    aria-label="table-header"
+    class="af-table__thead"
+  >
+    <tr
+      aria-label="table-header-line"
+      class="af-table__tr"
+    />
+  </thead>
+</table>
+`;

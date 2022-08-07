@@ -20,17 +20,19 @@ export const defaultProps = {
 export const membersFormattedMock = [
   {
     key: 99999,
-    firstname: {
-      label: 'Samuel',
-    },
-    lastname: {
-      label: 'Gomez',
-    },
-    birthdate: {
-      label: '20/10/1985',
-    },
-    sexe: {
-      label: 'M',
+    cols: {
+      firstname: {
+        label: 'Samuel',
+      },
+      lastname: {
+        label: 'Gomez',
+      },
+      birthdate: {
+        label: '20/10/1985',
+      },
+      sexe: {
+        label: 'M',
+      },
     },
   },
 ];
