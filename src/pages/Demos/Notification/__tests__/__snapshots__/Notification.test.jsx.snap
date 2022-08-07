@@ -364,7 +364,7 @@ exports[`<NotificationPage/> Should render NotificationPage 1`] = `
           >
             <div
               code="
-/* HOOK Example (this works because the App component use the NotificationProvider )
+/* HOOK Example (this works because the App component use the NotificationContext ) */
 const useNotify = ({ NotificationContextObj = NotificationContext }) => {
   const { addNotification } = useConNotificationContextObj);
 
@@ -399,7 +399,7 @@ const useNotify = ({ NotificationContextObj = NotificationContext }) => {
 
   return { notifyError, notifySuccess, notifyWarning };
 };
-*/"
+"
               language="jsx"
               style="position: relative; text-align: left; box-sizing: border-box; padding: 0px; overflow: hidden; white-space: pre; font-family: monospace; color: rgb(248, 248, 242); background-color: rgb(40, 42, 54); font-size: 12px;"
             >
@@ -412,7 +412,7 @@ const useNotify = ({ NotificationContextObj = NotificationContext }) => {
                 spellcheck="false"
                 style="margin: 0px; border: 0px; background: none; box-sizing: inherit; display: inherit; font-family: inherit; font-style: inherit; font-variant-ligatures: inherit; font-weight: inherit; letter-spacing: inherit; line-height: inherit; tab-size: inherit; text-indent: inherit; text-rendering: inherit; text-transform: inherit; white-space: pre-wrap; word-break: keep-all; overflow-wrap: break-word; position: absolute; top: 0px; left: 0px; height: 100%; width: 100%; resize: none; overflow: hidden; padding: 10px 10px 10px 10px;"
               >
-                /* HOOK Example (this works because the App component use the NotificationProvider )
+                /* HOOK Example (this works because the App component use the NotificationContext ) */
 const useNotify = ({ NotificationContextObj = NotificationContext }) =&gt; {
   const { addNotification } = useConNotificationContextObj);
 
@@ -447,7 +447,7 @@ const useNotify = ({ NotificationContextObj = NotificationContext }) =&gt; {
 
   return { notifyError, notifySuccess, notifyWarning };
 };
-*/
+
               </textarea>
               <pre
                 aria-hidden="true"
@@ -476,249 +476,210 @@ const useNotify = ({ NotificationContextObj = NotificationContext }) =&gt; {
                     class="token comment"
                     style="color: rgb(98, 114, 164);"
                   >
-                    /* HOOK Example (this works because the App component use the NotificationProvider )
+                    /* HOOK Example (this works because the App component use the NotificationContext ) */
                   </span>
+                  <span
+                    class="token plain"
+                  />
                 </div>
                 <div
                   class="token-line"
                   style="color: rgb(248, 248, 242);"
                 >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token plain"
+                  />
+                  <span
+                    class="token keyword"
+                    style="color: rgb(189, 147, 249); font-style: italic;"
                   >
-                    const useNotify = ({ NotificationContextObj = NotificationContext }) =&gt; {
+                    const
                   </span>
-                </div>
-                <div
-                  class="token-line"
-                  style="color: rgb(248, 248, 242);"
-                >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token plain"
                   >
-                      const { addNotification } = useConNotificationContextObj);
+                     
                   </span>
-                </div>
-                <div
-                  class="token-line"
-                  style="color: rgb(248, 248, 242);"
-                >
                   <span
-                    class="token comment"
-                    style="display: inline-block; color: rgb(98, 114, 164);"
+                    class="token function-variable function"
+                    style="color: rgb(80, 250, 123);"
                   >
-                    
-
+                    useNotify
                   </span>
-                </div>
-                <div
-                  class="token-line"
-                  style="color: rgb(248, 248, 242);"
-                >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token plain"
                   >
-                      const notifyError = useCallback(() =&gt; {
+                     
                   </span>
-                </div>
-                <div
-                  class="token-line"
-                  style="color: rgb(248, 248, 242);"
-                >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token operator"
                   >
-                        addNotification({
+                    =
                   </span>
-                </div>
-                <div
-                  class="token-line"
-                  style="color: rgb(248, 248, 242);"
-                >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token plain"
                   >
-                          code: 500,
+                     
                   </span>
-                </div>
-                <div
-                  class="token-line"
-                  style="color: rgb(248, 248, 242);"
-                >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
                   >
-                          detail: '',
+                    (
                   </span>
-                </div>
-                <div
-                  class="token-line"
-                  style="color: rgb(248, 248, 242);"
-                >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token parameter punctuation"
+                    style="color: rgb(248, 248, 242);"
                   >
-                          label: 'Erreur : Contactez le support',
+                    {
                   </span>
-                </div>
-                <div
-                  class="token-line"
-                  style="color: rgb(248, 248, 242);"
-                >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token parameter"
                   >
-                          id: 'idNotifyAnomaly',
+                     
                   </span>
-                </div>
-                <div
-                  class="token-line"
-                  style="color: rgb(248, 248, 242);"
-                >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token parameter maybe-class-name"
                   >
-                        });
+                    NotificationContextObj
                   </span>
-                </div>
-                <div
-                  class="token-line"
-                  style="color: rgb(248, 248, 242);"
-                >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token parameter"
                   >
-                      }, [addNotification]);
+                     
                   </span>
-                </div>
-                <div
-                  class="token-line"
-                  style="color: rgb(248, 248, 242);"
-                >
                   <span
-                    class="token comment"
-                    style="display: inline-block; color: rgb(98, 114, 164);"
+                    class="token parameter operator"
                   >
-                    
-
+                    =
                   </span>
-                </div>
-                <div
-                  class="token-line"
-                  style="color: rgb(248, 248, 242);"
-                >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token parameter"
                   >
-                      const notifySuccess = useCallback(() =&gt; {
+                     
                   </span>
-                </div>
-                <div
-                  class="token-line"
-                  style="color: rgb(248, 248, 242);"
-                >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token parameter maybe-class-name"
                   >
-                        addNotification({
+                    NotificationContext
                   </span>
-                </div>
-                <div
-                  class="token-line"
-                  style="color: rgb(248, 248, 242);"
-                >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token parameter"
                   >
-                          code: 200,
+                     
                   </span>
-                </div>
-                <div
-                  class="token-line"
-                  style="color: rgb(248, 248, 242);"
-                >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token parameter punctuation"
+                    style="color: rgb(248, 248, 242);"
                   >
-                          detail: '',
+                    }
                   </span>
-                </div>
-                <div
-                  class="token-line"
-                  style="color: rgb(248, 248, 242);"
-                >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
                   >
-                          type: 'success',
+                    )
                   </span>
-                </div>
-                <div
-                  class="token-line"
-                  style="color: rgb(248, 248, 242);"
-                >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token plain"
                   >
-                          label: 'Success : opération réussie',
+                     
                   </span>
-                </div>
-                <div
-                  class="token-line"
-                  style="color: rgb(248, 248, 242);"
-                >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token arrow operator"
                   >
-                          id: 'idNotifySuccess',
+                    =&gt;
                   </span>
-                </div>
-                <div
-                  class="token-line"
-                  style="color: rgb(248, 248, 242);"
-                >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token plain"
                   >
-                        });
+                     
                   </span>
-                </div>
-                <div
-                  class="token-line"
-                  style="color: rgb(248, 248, 242);"
-                >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
                   >
-                      }, [addNotification]);
+                    {
                   </span>
+                  <span
+                    class="token plain"
+                  />
                 </div>
                 <div
                   class="token-line"
                   style="color: rgb(248, 248, 242);"
                 >
                   <span
-                    class="token comment"
-                    style="display: inline-block; color: rgb(98, 114, 164);"
+                    class="token plain"
+                  >
+                      
+                  </span>
+                  <span
+                    class="token keyword"
+                    style="color: rgb(189, 147, 249); font-style: italic;"
+                  >
+                    const
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    {
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     addNotification 
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    }
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token operator"
+                  >
+                    =
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     useConNotificationContextObj
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    )
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ;
+                  </span>
+                  <span
+                    class="token plain"
+                  />
+                </div>
+                <div
+                  class="token-line"
+                  style="color: rgb(248, 248, 242);"
+                >
+                  <span
+                    class="token plain"
+                    style="display: inline-block;"
                   >
                     
 
@@ -729,107 +690,367 @@ const useNotify = ({ NotificationContextObj = NotificationContext }) =&gt; {
                   style="color: rgb(248, 248, 242);"
                 >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token plain"
                   >
-                      const notifyWarning = useCallback(() =&gt; {
+                      
                   </span>
+                  <span
+                    class="token keyword"
+                    style="color: rgb(189, 147, 249); font-style: italic;"
+                  >
+                    const
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     notifyError 
+                  </span>
+                  <span
+                    class="token operator"
+                  >
+                    =
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token function"
+                    style="color: rgb(80, 250, 123);"
+                  >
+                    useCallback
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    (
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    (
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    )
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token arrow operator"
+                  >
+                    =&gt;
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    {
+                  </span>
+                  <span
+                    class="token plain"
+                  />
                 </div>
                 <div
                   class="token-line"
                   style="color: rgb(248, 248, 242);"
                 >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token plain"
                   >
-                        addNotification({
+                        
                   </span>
+                  <span
+                    class="token function"
+                    style="color: rgb(80, 250, 123);"
+                  >
+                    addNotification
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    (
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    {
+                  </span>
+                  <span
+                    class="token plain"
+                  />
                 </div>
                 <div
                   class="token-line"
                   style="color: rgb(248, 248, 242);"
                 >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token plain"
                   >
-                          code: 404,
+                          
                   </span>
+                  <span
+                    class="token literal-property property"
+                  >
+                    code
+                  </span>
+                  <span
+                    class="token operator"
+                  >
+                    :
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token number"
+                  >
+                    500
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ,
+                  </span>
+                  <span
+                    class="token plain"
+                  />
                 </div>
                 <div
                   class="token-line"
                   style="color: rgb(248, 248, 242);"
                 >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token plain"
                   >
-                          detail: '',
+                          
                   </span>
+                  <span
+                    class="token literal-property property"
+                  >
+                    detail
+                  </span>
+                  <span
+                    class="token operator"
+                  >
+                    :
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token string"
+                    style="color: rgb(255, 121, 198);"
+                  >
+                    ''
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ,
+                  </span>
+                  <span
+                    class="token plain"
+                  />
                 </div>
                 <div
                   class="token-line"
                   style="color: rgb(248, 248, 242);"
                 >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token plain"
                   >
-                          type: 'danger',
+                          
                   </span>
+                  <span
+                    class="token literal-property property"
+                  >
+                    label
+                  </span>
+                  <span
+                    class="token operator"
+                  >
+                    :
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token string"
+                    style="color: rgb(255, 121, 198);"
+                  >
+                    'Erreur : Contactez le support'
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ,
+                  </span>
+                  <span
+                    class="token plain"
+                  />
                 </div>
                 <div
                   class="token-line"
                   style="color: rgb(248, 248, 242);"
                 >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token plain"
                   >
-                          label: 'Warning : opération not found',
+                          
                   </span>
+                  <span
+                    class="token literal-property property"
+                  >
+                    id
+                  </span>
+                  <span
+                    class="token operator"
+                  >
+                    :
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token string"
+                    style="color: rgb(255, 121, 198);"
+                  >
+                    'idNotifyAnomaly'
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ,
+                  </span>
+                  <span
+                    class="token plain"
+                  />
                 </div>
                 <div
                   class="token-line"
                   style="color: rgb(248, 248, 242);"
                 >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token plain"
                   >
-                          id: 'idNotifyDanger',
+                        
                   </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    }
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    )
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ;
+                  </span>
+                  <span
+                    class="token plain"
+                  />
                 </div>
                 <div
                   class="token-line"
                   style="color: rgb(248, 248, 242);"
                 >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token plain"
                   >
-                        });
+                      
                   </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    }
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ,
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    [
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                    addNotification
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ]
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    )
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ;
+                  </span>
+                  <span
+                    class="token plain"
+                  />
                 </div>
                 <div
                   class="token-line"
                   style="color: rgb(248, 248, 242);"
                 >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
-                  >
-                      }, [addNotification]);
-                  </span>
-                </div>
-                <div
-                  class="token-line"
-                  style="color: rgb(248, 248, 242);"
-                >
-                  <span
-                    class="token comment"
-                    style="display: inline-block; color: rgb(98, 114, 164);"
+                    class="token plain"
+                    style="display: inline-block;"
                   >
                     
 
@@ -840,10 +1061,410 @@ const useNotify = ({ NotificationContextObj = NotificationContext }) =&gt; {
                   style="color: rgb(248, 248, 242);"
                 >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token plain"
                   >
-                      return { notifyError, notifySuccess, notifyWarning };
+                      
+                  </span>
+                  <span
+                    class="token keyword"
+                    style="color: rgb(189, 147, 249); font-style: italic;"
+                  >
+                    const
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     notifySuccess 
+                  </span>
+                  <span
+                    class="token operator"
+                  >
+                    =
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token function"
+                    style="color: rgb(80, 250, 123);"
+                  >
+                    useCallback
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    (
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    (
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    )
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token arrow operator"
+                  >
+                    =&gt;
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    {
+                  </span>
+                  <span
+                    class="token plain"
+                  />
+                </div>
+                <div
+                  class="token-line"
+                  style="color: rgb(248, 248, 242);"
+                >
+                  <span
+                    class="token plain"
+                  >
+                        
+                  </span>
+                  <span
+                    class="token function"
+                    style="color: rgb(80, 250, 123);"
+                  >
+                    addNotification
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    (
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    {
+                  </span>
+                  <span
+                    class="token plain"
+                  />
+                </div>
+                <div
+                  class="token-line"
+                  style="color: rgb(248, 248, 242);"
+                >
+                  <span
+                    class="token plain"
+                  >
+                          
+                  </span>
+                  <span
+                    class="token literal-property property"
+                  >
+                    code
+                  </span>
+                  <span
+                    class="token operator"
+                  >
+                    :
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token number"
+                  >
+                    200
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ,
+                  </span>
+                  <span
+                    class="token plain"
+                  />
+                </div>
+                <div
+                  class="token-line"
+                  style="color: rgb(248, 248, 242);"
+                >
+                  <span
+                    class="token plain"
+                  >
+                          
+                  </span>
+                  <span
+                    class="token literal-property property"
+                  >
+                    detail
+                  </span>
+                  <span
+                    class="token operator"
+                  >
+                    :
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token string"
+                    style="color: rgb(255, 121, 198);"
+                  >
+                    ''
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ,
+                  </span>
+                  <span
+                    class="token plain"
+                  />
+                </div>
+                <div
+                  class="token-line"
+                  style="color: rgb(248, 248, 242);"
+                >
+                  <span
+                    class="token plain"
+                  >
+                          
+                  </span>
+                  <span
+                    class="token literal-property property"
+                  >
+                    type
+                  </span>
+                  <span
+                    class="token operator"
+                  >
+                    :
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token string"
+                    style="color: rgb(255, 121, 198);"
+                  >
+                    'success'
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ,
+                  </span>
+                  <span
+                    class="token plain"
+                  />
+                </div>
+                <div
+                  class="token-line"
+                  style="color: rgb(248, 248, 242);"
+                >
+                  <span
+                    class="token plain"
+                  >
+                          
+                  </span>
+                  <span
+                    class="token literal-property property"
+                  >
+                    label
+                  </span>
+                  <span
+                    class="token operator"
+                  >
+                    :
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token string"
+                    style="color: rgb(255, 121, 198);"
+                  >
+                    'Success : opération réussie'
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ,
+                  </span>
+                  <span
+                    class="token plain"
+                  />
+                </div>
+                <div
+                  class="token-line"
+                  style="color: rgb(248, 248, 242);"
+                >
+                  <span
+                    class="token plain"
+                  >
+                          
+                  </span>
+                  <span
+                    class="token literal-property property"
+                  >
+                    id
+                  </span>
+                  <span
+                    class="token operator"
+                  >
+                    :
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token string"
+                    style="color: rgb(255, 121, 198);"
+                  >
+                    'idNotifySuccess'
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ,
+                  </span>
+                  <span
+                    class="token plain"
+                  />
+                </div>
+                <div
+                  class="token-line"
+                  style="color: rgb(248, 248, 242);"
+                >
+                  <span
+                    class="token plain"
+                  >
+                        
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    }
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    )
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ;
+                  </span>
+                  <span
+                    class="token plain"
+                  />
+                </div>
+                <div
+                  class="token-line"
+                  style="color: rgb(248, 248, 242);"
+                >
+                  <span
+                    class="token plain"
+                  >
+                      
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    }
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ,
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    [
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                    addNotification
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ]
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    )
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ;
+                  </span>
+                  <span
+                    class="token plain"
+                  />
+                </div>
+                <div
+                  class="token-line"
+                  style="color: rgb(248, 248, 242);"
+                >
+                  <span
+                    class="token plain"
+                    style="display: inline-block;"
+                  >
+                    
+
                   </span>
                 </div>
                 <div
@@ -851,10 +1472,410 @@ const useNotify = ({ NotificationContextObj = NotificationContext }) =&gt; {
                   style="color: rgb(248, 248, 242);"
                 >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token plain"
                   >
-                    };
+                      
+                  </span>
+                  <span
+                    class="token keyword"
+                    style="color: rgb(189, 147, 249); font-style: italic;"
+                  >
+                    const
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     notifyWarning 
+                  </span>
+                  <span
+                    class="token operator"
+                  >
+                    =
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token function"
+                    style="color: rgb(80, 250, 123);"
+                  >
+                    useCallback
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    (
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    (
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    )
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token arrow operator"
+                  >
+                    =&gt;
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    {
+                  </span>
+                  <span
+                    class="token plain"
+                  />
+                </div>
+                <div
+                  class="token-line"
+                  style="color: rgb(248, 248, 242);"
+                >
+                  <span
+                    class="token plain"
+                  >
+                        
+                  </span>
+                  <span
+                    class="token function"
+                    style="color: rgb(80, 250, 123);"
+                  >
+                    addNotification
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    (
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    {
+                  </span>
+                  <span
+                    class="token plain"
+                  />
+                </div>
+                <div
+                  class="token-line"
+                  style="color: rgb(248, 248, 242);"
+                >
+                  <span
+                    class="token plain"
+                  >
+                          
+                  </span>
+                  <span
+                    class="token literal-property property"
+                  >
+                    code
+                  </span>
+                  <span
+                    class="token operator"
+                  >
+                    :
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token number"
+                  >
+                    404
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ,
+                  </span>
+                  <span
+                    class="token plain"
+                  />
+                </div>
+                <div
+                  class="token-line"
+                  style="color: rgb(248, 248, 242);"
+                >
+                  <span
+                    class="token plain"
+                  >
+                          
+                  </span>
+                  <span
+                    class="token literal-property property"
+                  >
+                    detail
+                  </span>
+                  <span
+                    class="token operator"
+                  >
+                    :
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token string"
+                    style="color: rgb(255, 121, 198);"
+                  >
+                    ''
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ,
+                  </span>
+                  <span
+                    class="token plain"
+                  />
+                </div>
+                <div
+                  class="token-line"
+                  style="color: rgb(248, 248, 242);"
+                >
+                  <span
+                    class="token plain"
+                  >
+                          
+                  </span>
+                  <span
+                    class="token literal-property property"
+                  >
+                    type
+                  </span>
+                  <span
+                    class="token operator"
+                  >
+                    :
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token string"
+                    style="color: rgb(255, 121, 198);"
+                  >
+                    'danger'
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ,
+                  </span>
+                  <span
+                    class="token plain"
+                  />
+                </div>
+                <div
+                  class="token-line"
+                  style="color: rgb(248, 248, 242);"
+                >
+                  <span
+                    class="token plain"
+                  >
+                          
+                  </span>
+                  <span
+                    class="token literal-property property"
+                  >
+                    label
+                  </span>
+                  <span
+                    class="token operator"
+                  >
+                    :
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token string"
+                    style="color: rgb(255, 121, 198);"
+                  >
+                    'Warning : opération not found'
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ,
+                  </span>
+                  <span
+                    class="token plain"
+                  />
+                </div>
+                <div
+                  class="token-line"
+                  style="color: rgb(248, 248, 242);"
+                >
+                  <span
+                    class="token plain"
+                  >
+                          
+                  </span>
+                  <span
+                    class="token literal-property property"
+                  >
+                    id
+                  </span>
+                  <span
+                    class="token operator"
+                  >
+                    :
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token string"
+                    style="color: rgb(255, 121, 198);"
+                  >
+                    'idNotifyDanger'
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ,
+                  </span>
+                  <span
+                    class="token plain"
+                  />
+                </div>
+                <div
+                  class="token-line"
+                  style="color: rgb(248, 248, 242);"
+                >
+                  <span
+                    class="token plain"
+                  >
+                        
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    }
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    )
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ;
+                  </span>
+                  <span
+                    class="token plain"
+                  />
+                </div>
+                <div
+                  class="token-line"
+                  style="color: rgb(248, 248, 242);"
+                >
+                  <span
+                    class="token plain"
+                  >
+                      
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    }
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ,
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    [
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                    addNotification
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ]
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    )
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ;
+                  </span>
+                  <span
+                    class="token plain"
+                  />
+                </div>
+                <div
+                  class="token-line"
+                  style="color: rgb(248, 248, 242);"
+                >
+                  <span
+                    class="token plain"
+                    style="display: inline-block;"
+                  >
+                    
+
                   </span>
                 </div>
                 <div
@@ -862,10 +1883,103 @@ const useNotify = ({ NotificationContextObj = NotificationContext }) =&gt; {
                   style="color: rgb(248, 248, 242);"
                 >
                   <span
-                    class="token comment"
-                    style="color: rgb(98, 114, 164);"
+                    class="token plain"
                   >
-                    */
+                      
+                  </span>
+                  <span
+                    class="token keyword control-flow"
+                    style="color: rgb(189, 147, 249); font-style: italic;"
+                  >
+                    return
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    {
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     notifyError
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ,
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     notifySuccess
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ,
+                  </span>
+                  <span
+                    class="token plain"
+                  >
+                     notifyWarning 
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    }
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ;
+                  </span>
+                  <span
+                    class="token plain"
+                  />
+                </div>
+                <div
+                  class="token-line"
+                  style="color: rgb(248, 248, 242);"
+                >
+                  <span
+                    class="token plain"
+                  />
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    }
+                  </span>
+                  <span
+                    class="token punctuation"
+                    style="color: rgb(248, 248, 242);"
+                  >
+                    ;
+                  </span>
+                  <span
+                    class="token plain"
+                  />
+                </div>
+                <div
+                  class="token-line"
+                  style="color: rgb(248, 248, 242);"
+                >
+                  <span
+                    class="token plain"
+                    style="display: inline-block;"
+                  >
+                    
+
                   </span>
                 </div>
               </pre>
@@ -2205,7 +3319,7 @@ const useNotify = ({ NotificationContextObj = NotificationContext }) =&gt; {
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.1.4
+        © 2022 AXA Tous droits réservés - v0.1.5
       </div>
     </div>
   </footer>

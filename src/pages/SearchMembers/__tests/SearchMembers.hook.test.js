@@ -1,5 +1,6 @@
 import { renderHook, act } from '@testing-library/react-hooks';
 import { SERVICE_NAME } from '../constants';
+import { DownloadLinkEnhanced } from '../SearchMembers';
 import { computeInfos, useSearchMembers, computeSuccess, useFormSearchMembers, INITIAL_STATE } from '../SearchMembers.hook';
 
 const membersMock = [
@@ -14,14 +15,20 @@ const membersMock = [
 const membersMockExpected = [
   {
     key: '00001',
-    firstname: {
-      label: 'Samuel',
-    },
-    lastname: {
-      label: 'Gomez',
-    },
-    _id: {
-      label: '00001',
+    cols: {
+      firstname: {
+        label: 'Samuel',
+      },
+      lastname: {
+        label: 'Gomez',
+      },
+      _id: {
+        label: '00001',
+      },
+      actions: {
+        children: <DownloadLinkEnhanced firstname="Samuel" idKey="00001" lastname="Gomez" />,
+        classModifier: 'actions',
+      },
     },
   },
 ];

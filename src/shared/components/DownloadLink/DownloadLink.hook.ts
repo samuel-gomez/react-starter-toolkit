@@ -59,7 +59,6 @@ type TsetDownloadFile = {
 
 export const setDownloadFile = ({ fileName, state, isEmptyOrNullFn = isEmptyOrNull, downloadjsFn = downloadjs }: TsetDownloadFile) => {
   const { downloadFile } = state;
-  console.log('downloadFile state', state);
   if (!isEmptyOrNullFn(downloadFile) && fileName) {
     downloadjsFn(downloadFile, fileName, 'text/csv');
   }

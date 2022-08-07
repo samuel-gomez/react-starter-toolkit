@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, ImgHTMLAttributes } from 'react';
 import loaderSVG from 'shared/images/puff.svg';
 import './LasyImage.scss';
 
@@ -12,6 +12,7 @@ type TuseLoadImage = {
   loadImageFn?: typeof loadImage;
   initState?: string | null;
 };
+
 export const useLoadImage = ({ name, loadImageFn = loadImage, initState = null }: TuseLoadImage) => {
   const [stateimage, setStateImage] = useState(initState);
 
@@ -26,7 +27,7 @@ export const useLoadImage = ({ name, loadImageFn = loadImage, initState = null }
   return { stateimage, setStateImage };
 };
 
-type TLasyImage = {
+type TLasyImage = ImgHTMLAttributes<HTMLImageElement> & {
   name: TloadImage;
   alt: string;
   useLoadImageFn?: typeof useLoadImage;

@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Body Render <Body/> with 1 item 1`] = `
+<table>
+  <tbody
+    aria-label="table-body"
+    class="af-table__body"
+  >
+    <tr
+      aria-label="table-body-line"
+      class="af-table__tr"
+    >
+      <td
+        class="af-table__cell"
+      >
+        Antonius
+      </td>
+      <td
+        class="af-table__cell"
+      >
+        Panketh
+      </td>
+      <td
+        class="af-table__cell"
+      >
+        20/12/1968
+      </td>
+      <td
+        class="af-table__cell"
+      >
+        F
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`Body Render <Body/> with empty items 1`] = `
+<table>
+  <tbody
+    aria-label="table-body"
+    class="af-table__body"
+  />
+</table>
+`;

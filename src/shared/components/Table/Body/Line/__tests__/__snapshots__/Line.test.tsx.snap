@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Line Should render <Line/> when columns: [[Object]], className: myclass, modifier: modifier, children: {"$typeof": Symbol(react.element), "_owner": null, "_store": [Object], "key": null, "props": [Object], "ref": null, "type": "td"} 1`] = `
+<tbody>
+  <tr
+    aria-label="table-body-line"
+    class="myclass myclass--modifier"
+  >
+    <td
+      class="af-table__cell"
+    >
+      F
+    </td>
+    <td>
+      child
+    </td>
+  </tr>
+</tbody>
+`;
+
+exports[`Line Should render <Line/> when columns: [[Object]], className: undefined, modifier: modifier, children: undefined 1`] = `
+<tbody>
+  <tr
+    aria-label="table-body-line"
+    class="af-table__tr af-table__tr--modifier"
+  >
+    <td
+      class="af-table__cell"
+    >
+      F
+    </td>
+  </tr>
+</tbody>
+`;
+
+exports[`Line Should render <Line/> when columns: [[Object]], className: undefined, modifier: undefined, children: undefined 1`] = `
+<tbody>
+  <tr
+    aria-label="table-body-line"
+    class="af-table__tr"
+  >
+    <td
+      class="af-table__cell"
+    >
+      F
+    </td>
+  </tr>
+</tbody>
+`;
+
+exports[`Line Should render <Line/> when columns: [], className: undefined, modifier: undefined, children: undefined 1`] = `
+<tbody>
+  <tr
+    aria-label="table-body-line"
+    class="af-table__tr"
+  />
+</tbody>
+`;
+
+exports[`Line Should render <Line/> when columns: undefined, className: undefined, modifier: undefined, children: undefined 1`] = `
+<tbody>
+  <tr
+    aria-label="table-body-line"
+    class="af-table__tr"
+  />
+</tbody>
+`;

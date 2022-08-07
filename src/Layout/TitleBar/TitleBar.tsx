@@ -10,14 +10,15 @@ type TTitleBar = WithClassModifierOptions & {
   className?: string;
   title?: ReactNode;
   handleClick?: () => void;
+  id?: string;
 };
 
 export const DEFAULT_CLASSNAME = 'af-title-bar';
 
-const TitleBar = ({ title = 'title', handleClick, children = <></>, backHome = false, className }: TTitleBar) => (
-  <Title className={className} toggleMenu={handleClick} title={title}>
+const TitleBar = ({ title = 'title', handleClick, children = <></>, backHome = false, id = '', className }: TTitleBar) => (
+  <Title id={id} className={className} toggleMenu={handleClick} title={title}>
     {backHome && (
-      <Link title="Retour à l'accueil" className="btn af-btn--circle" to="/">
+      <Link aria-label="Retour à l'accueil" className="btn af-btn--circle" to="/">
         <i className="glyphicon glyphicon-home" />
       </Link>
     )}

@@ -68,6 +68,21 @@
   height: 2rem;
 }
 
+.af-table__th--sortable {
+  padding: 0 1rem 0 0;
+  cursor: pointer;
+  &:hover {
+    background-color: $color-table-sorting;
+  }
+  .af-table__th-label {
+    padding: 1rem;
+  }
+}
+
+.af-table__th--active {
+  background-color: $color-table-sorting;
+}
+
 .af-table__cell--actions {
   padding: 0.2rem 0.5rem;
   text-align: center;

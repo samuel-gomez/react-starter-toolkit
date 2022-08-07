@@ -41,8 +41,8 @@ describe('<DownloadLinkEnhanced />', () => {
   const getDownloadPathFnMock = jest.fn();
   const defaultDownloadProps = {
     idKey: '09878817',
-    firstname: { label: 'samuel' },
-    lastname: { label: 'gomez' },
+    firstname: 'samuel',
+    lastname: 'gomez',
   };
   it('Should call getDownloadPathFn and setFileNameFn with proper params', () => {
     const { asFragment } = renderWithWrapperStaticRouter(

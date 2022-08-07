@@ -38,10 +38,12 @@ export const setPagination = ({ total, skip, max, setCurrentPageFn = setCurrentP
 export const computeInfos = ({ members = [], setDateFn = setDate, setDisplayFn = setDisplay }) =>
   members.map(({ _id, firstname, lastname, birthdate, sexe }) => ({
     key: _id,
-    ...setDisplayFn({ firstname }),
-    ...setDisplayFn({ lastname }),
-    ...setDisplayFn({ birthdate: setDateFn({ date: birthdate }) }),
-    ...setDisplayFn({ sexe }),
+    cols: {
+      ...setDisplayFn({ firstname }),
+      ...setDisplayFn({ lastname }),
+      ...setDisplayFn({ birthdate: setDateFn({ date: birthdate }) }),
+      ...setDisplayFn({ sexe }),
+    },
   }));
 
 export const computeSuccess = ({
