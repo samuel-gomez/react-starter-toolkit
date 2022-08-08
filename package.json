@@ -39,7 +39,7 @@
     "downloadjs": "1.4.7",
     "jest-cucumber": "3.0.1",
     "lodash": "4.17.21",
-    "moment": "2.29.3",
+    "moment": "2.29.4",
     "mw.validation": "1.0.15",
     "prism-react-renderer": "1.3.3",
     "prop-types": "15.8.1",
