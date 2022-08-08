@@ -61,7 +61,7 @@
     "@testing-library/user-event": "14.2.0",
     "@typescript-eslint/eslint-plugin": "5.26.0",
     "@typescript-eslint/parser": "5.26.0",
-    "commitizen": "4.2.4",
+    "commitizen": "4.2.5",
     "cross-env": "7.0.3",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "8.16.0",
