@@ -84,9 +84,13 @@ describe('useMembers', () => {
       anomaly: { members: null },
     },
   };
+  const useQueryFnMock = jest.fn().mockReturnValue({
+    data: {},
+    isFetching: true,
+  });
 
   it('Should update stateMembers when useMembers called', () => {
-    const { result } = renderHook(() => useMembers({}));
+    const { result } = renderHook(() => useMembers({ useQueryFn: useQueryFnMock }));
     const expected = {
       isLoading: true,
       isLoaded: false,
@@ -112,7 +116,7 @@ describe('useMembers', () => {
   });
 
   it('Should update stateMembers when useMembers called', () => {
-    const { result } = renderHook(() => useMembers(defaultUseMembersParams));
+    const { result } = renderHook(() => useMembers({ ...defaultUseMembersParams, useQueryFn: useQueryFnMock }));
     const expected = {
       isLoading: true,
       isLoaded: false,
@@ -132,13 +136,13 @@ describe('useMembers', () => {
   });
 
   it('Should update order state when onChangeSorting called', () => {
-    const { result } = renderHook(() => useMembers(defaultUseMembersParams));
+    const { result } = renderHook(() => useMembers({ ...defaultUseMembersParams, useQueryFn: useQueryFnMock }));
     act(() => result.current.onChangeSorting({ field: 'name', order: 1 }));
     expect(result.current.stateSorting).toEqual({ field: 'name', order: 1 });
   });
 
   it('Should update stateMembers when onChangeSorting called', () => {
-    const { result } = renderHook(() => useMembers(defaultUseMembersParams));
+    const { result } = renderHook(() => useMembers({ ...defaultUseMembersParams, useQueryFn: useQueryFnMock }));
     const expected = {
       isLoading: true,
       isLoaded: false,
@@ -159,7 +163,7 @@ describe('useMembers', () => {
   });
 
   it('Should update order state when onChangePaging called', () => {
-    const { result } = renderHook(() => useMembers(defaultUseMembersParams));
+    const { result } = renderHook(() => useMembers({ ...defaultUseMembersParams, useQueryFn: useQueryFnMock }));
     act(() =>
       result.current.onChangePaging({
         numberItems: 100,

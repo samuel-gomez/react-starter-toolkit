@@ -1,8 +1,9 @@
-import { useCallback, useState, useMemo } from 'react';
+import { useCallback, useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
 import { setDate } from 'shared/helpers/formatDate';
 import { ASCENDING } from 'shared/components/Table';
 import { setDisplay } from 'shared/helpers/formatDataTable';
-import { getApi, setInitialState, useFetchData } from 'shared/helpers/fetchHook';
+import { setInitialState } from 'shared/helpers/fetchHook';
 import setAnomalyEmptyItems from 'shared/helpers/setAnomalyEmptyItems';
 import { SERVICE_NAME } from './constants';
 
@@ -77,15 +78,19 @@ export const setOnChangePaging = ({ setStateFormPaging, paging, setPagingFn = se
   setStateFormPaging(setPagingFn(paging));
 };
 
+export const computeDataQuery = ({ data, computeSuccessFn = computeSuccess }) => {
+  const { responseBody } = data;
+  const response = computeSuccessFn({ responseBody });
+  return response;
+};
+
 export const useMembers = ({
   initialState = INITIAL_STATE,
-  serviceName = SERVICE_NAME,
   initStateSorting = INITIAL_STATE_SORTING,
   initStatePaging = INITIAL_STATE_PAGING,
-  getApiFn = getApi,
-  useFetchDataFn = useFetchData,
-  computeSuccessFn = computeSuccess,
+  computeDataQueryFn = computeDataQuery,
   setOnChangePagingFn = setOnChangePaging,
+  useQueryFn = useQuery,
 }) => {
   const [stateSorting, setStateSorting] = useState(initStateSorting);
   const [stateFormPaging, setStateFormPaging] = useState(initStatePaging);
@@ -97,15 +102,15 @@ export const useMembers = ({
 
   const onChangePaging = useCallback(paging => setOnChangePagingFn({ setStateFormPaging, paging }), [setOnChangePagingFn]);
 
-  const { state } = useFetchDataFn({
-    initialState,
-    serviceName,
-    computeSuccess: computeSuccessFn,
-    service: useMemo(
-      () => getApiFn(`members?max=${Number(numberItems)}&sort=${field}&dir=${order}&skip=${Number(page * numberItems)}`),
-      [field, getApiFn, numberItems, order, page],
-    ),
+  const { data, isFetching } = useQueryFn([`members?max=${Number(numberItems)}&sort=${field}&dir=${order}&skip=${Number(page * numberItems)}`], {
+    select: data => computeDataQueryFn({ data }),
   });
 
-  return { ...state, onChangeSorting, onChangePaging, stateSorting, stateFormPaging };
+  const stateQuery = {
+    ...initialState,
+    ...data,
+    isLoading: isFetching,
+  };
+
+  return { ...stateQuery, onChangeSorting, onChangePaging, stateSorting, stateFormPaging };
 };

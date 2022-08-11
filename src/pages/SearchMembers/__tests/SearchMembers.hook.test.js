@@ -1,7 +1,18 @@
 import { renderHook, act } from '@testing-library/react-hooks';
 import { SERVICE_NAME } from '../constants';
 import { DownloadLinkEnhanced } from '../SearchMembers';
-import { computeInfos, useSearchMembers, computeSuccess, useFormSearchMembers, INITIAL_STATE } from '../SearchMembers.hook';
+import { computeInfos, useSearchMembers, computeSuccess, useFormSearchMembers, computeDataQuery, selectComputeData } from '../SearchMembers.hook';
+
+const expectedDataCompute = {
+  anomaly: {
+    searchMembers: {
+      iconName: 'exclamation-sign',
+      label: 'Aucun membre ne correspond à votre recherche',
+      type: 'info',
+    },
+  },
+  searchMembers: [],
+};
 
 const membersMock = [
   {
@@ -111,7 +122,16 @@ describe('useFormSearchMembers', () => {
 
 describe('useSearchMembers', () => {
   it('Should return stateSearchMembers, stateSearch and submitSearch function when useSearchMembers called with empty stateFormSearchMembers', () => {
-    const { result } = renderHook(() => useSearchMembers({ stateFormSearchMembers: {} }));
+    const useQueryFnMock = jest.fn().mockReturnValue({
+      data: {
+        isLoaded: false,
+        anomaly: { [SERVICE_NAME]: null },
+        isLoading: true,
+        [SERVICE_NAME]: [],
+      },
+      isFetching: true,
+    });
+    const { result } = renderHook(() => useSearchMembers({ stateFormSearchMembers: {}, useQueryFn: useQueryFnMock }));
     const expected = {
       isLoaded: false,
       anomaly: { [SERVICE_NAME]: null },
@@ -129,7 +149,16 @@ describe('useSearchMembers', () => {
   };
 
   it('Should return stateSearchMembers, stateSearch and submitSearch function when useSearchMembers called', () => {
-    const { result } = renderHook(() => useSearchMembers({ stateFormSearchMembers }));
+    const useQueryFnMock = jest.fn().mockReturnValue({
+      data: {
+        isLoaded: false,
+        anomaly: { [SERVICE_NAME]: null },
+        isLoading: false,
+        [SERVICE_NAME]: [],
+      },
+      isFetching: false,
+    });
+    const { result } = renderHook(() => useSearchMembers({ stateFormSearchMembers, useQueryFn: useQueryFnMock }));
     const expected = {
       isLoaded: false,
 
@@ -141,23 +170,34 @@ describe('useSearchMembers', () => {
       expect(result.current).toEqual(expected);
     });
   });
+});
 
-  it('Should call useFetchDataFn with computed params and condition: true when useSearchMembers called with hasSubmit true', () => {
-    const useFetchDataFn = jest.fn();
-    const getApiFn = jest.fn().mockReturnValue('get search members service');
-    const computeSuccessFn = jest.fn();
-    renderHook(() =>
-      useSearchMembers({ stateFormSearchMembers: { ...stateFormSearchMembers, hasSubmit: true }, useFetchDataFn, getApiFn, computeSuccessFn }),
-    );
+describe('computeDataQuery', () => {
+  const data = { responseBody: [] };
+  const computeSuccessFn = jest.fn();
+  it('Should called computeSuccess when computeDataQuery is executing', () => {
+    computeDataQuery({ data, computeSuccessFn });
+    expect(computeSuccessFn).toBeCalledWith(data);
+  });
+  it('Should return data results computed without computeSuccess', () => {
+    const result = computeDataQuery({ data });
+    expect(result).toEqual(expectedDataCompute);
+  });
+  it('Should return data results computed with computeSuccess', () => {
+    const result = computeDataQuery({ data, computeSuccessFn: computeSuccess });
+    expect(result).toEqual(expectedDataCompute);
+  });
+});
 
-    act(() => {
-      expect(useFetchDataFn).toHaveBeenCalledWith({
-        condition: true,
-        initialState: INITIAL_STATE,
-        serviceName: SERVICE_NAME,
-        service: 'get search members service',
-        computeSuccess: computeSuccessFn,
-      });
-    });
+describe('selectComputeData', () => {
+  const data = { responseBody: [] };
+  const computeDataQueryFn = jest.fn();
+  it('Should called computeDataQuery when selectComputeData is executing', () => {
+    selectComputeData(data, computeDataQueryFn);
+    expect(computeDataQueryFn).toBeCalledWith({ data });
+  });
+  it('Should return data results computed without computeDataQuery', () => {
+    const result = selectComputeData(data);
+    expect(result).toEqual(expectedDataCompute);
   });
 });

@@ -1,4 +1,4 @@
-import { emptyFunction, renderWithWrapperStaticRouter } from 'shared/testsUtils';
+import { emptyFunction, renderWithWrapperStaticRouter, WrapperQuery } from 'shared/testsUtils';
 import SearchMembers, { getDownloadPath, setFileName, DownloadLinkEnhanced } from '../SearchMembers';
 
 const defaultProps = {
@@ -46,7 +46,9 @@ describe('<DownloadLinkEnhanced />', () => {
   };
   it('Should call getDownloadPathFn and setFileNameFn with proper params', () => {
     const { asFragment } = renderWithWrapperStaticRouter(
-      <DownloadLinkEnhanced {...defaultDownloadProps} getDownloadPathFn={getDownloadPathFnMock} setFileNameFn={setFileNameFnMock} />,
+      <WrapperQuery>
+        <DownloadLinkEnhanced {...defaultDownloadProps} getDownloadPathFn={getDownloadPathFnMock} setFileNameFn={setFileNameFnMock} />
+      </WrapperQuery>,
     );
     expect(asFragment()).toMatchSnapshot();
     expect(getDownloadPathFnMock).toBeCalledWith('09878817');
@@ -54,7 +56,11 @@ describe('<DownloadLinkEnhanced />', () => {
   });
 
   it('Should call getDownloadPathFn and setFileNameFn with proper params 2 ', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(<DownloadLinkEnhanced {...defaultDownloadProps} />);
+    const { asFragment } = renderWithWrapperStaticRouter(
+      <WrapperQuery>
+        <DownloadLinkEnhanced {...defaultDownloadProps} />
+      </WrapperQuery>,
+    );
     expect(asFragment()).toMatchSnapshot();
   });
 });
