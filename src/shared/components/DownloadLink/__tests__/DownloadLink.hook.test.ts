@@ -40,6 +40,7 @@ describe('setDownloadFile', () => {
     setDownloadFile({
       fileName: 'test.csv',
       state,
+      hasSubmit: false,
       downloadjsFn: downloadjsFnMock,
     });
 
@@ -54,6 +55,7 @@ describe('setDownloadFile', () => {
         ...state,
         downloadFile: blob,
       },
+      hasSubmit: true,
       downloadjsFn: downloadjsFnMock,
     });
 
@@ -65,6 +67,12 @@ describe('useDownload', () => {
   const defaultProps = {
     path: 'elections/12/resultats',
     hasSubmit: false,
+    clearSubmitDownload: jest.fn(),
+    useQueryFn: jest.fn().mockReturnValue({
+      data: undefined,
+      isFetching: false,
+      isFetched: false,
+    }),
   };
   it('Should return initial state when useDownload called with path: "elections/12/resultats" and hasSubmit: false', () => {
     const { result } = renderHook(() => useDownload({ ...defaultProps }));
@@ -73,53 +81,23 @@ describe('useDownload', () => {
       expect(result.current.state).toEqual(expectedState);
     });
   });
-
-  it('Should useFetchDataMock called  when useDownload called with path: "elections/12/resultats" and hasSubmit: true', () => {
-    const useFetchDataMock = jest.fn();
-    const getApiMock = jest.fn();
-
-    renderHook(() =>
-      useDownload({
-        ...defaultProps,
-        hasSubmit: true,
-        useFetchDataFn: useFetchDataMock,
-        getApiFn: getApiMock.mockReturnValue('downloadfileServiceResponse'),
-      }),
-    );
-
-    act(() => {
-      expect(useFetchDataMock).toBeCalledWith({
-        condition: true,
-        initialState: INITIAL_STATE,
-        serviceName: SERVICE_NAME,
-        service: 'downloadfileServiceResponse',
-      });
-      expect(getApiMock).toBeCalledWith('elections/12/resultats', { blob: true });
-    });
-  });
 });
 
 describe('useNotifyDownloadError', () => {
-  const clearStateMock = jest.fn();
-  const clearSubmitDownloadMock = jest.fn();
   const fetchNotifyErrorFnMock = jest.fn();
   const addNotificationMock = jest.fn();
   const NotificationContext = createContext<TNotificationContext>({ addNotification: addNotificationMock });
 
   const defaultProps = {
     path: 'elections/12/resultats',
-    clearState: clearStateMock,
     state: INITIAL_STATE,
     hasSubmit: false,
-    clearSubmitDownload: clearSubmitDownloadMock,
     NotificationContextObj: NotificationContext,
     fetchNotifyErrorFn: fetchNotifyErrorFnMock,
   };
 
   it('Should not call notify action functions when condition are not ok', () => {
     renderHook(() => useNotifyDownloadError(defaultProps));
-    expect(clearStateMock).not.toBeCalled();
-    expect(clearSubmitDownloadMock).not.toBeCalled();
     expect(fetchNotifyErrorFnMock).not.toBeCalled();
   });
 
@@ -132,8 +110,6 @@ describe('useNotifyDownloadError', () => {
       }),
     );
 
-    expect(clearStateMock).toBeCalled();
-    expect(clearSubmitDownloadMock).toBeCalled();
     expect(fetchNotifyErrorFnMock).toBeCalledWith({
       state: { ...INITIAL_STATE, anomaly: { [SERVICE_NAME]: 'error' } },
       addNotification: addNotificationMock,
@@ -144,26 +120,20 @@ describe('useNotifyDownloadError', () => {
 });
 
 describe('useNotifyDownloadSuccess', () => {
-  const clearStateMock = jest.fn();
-  const clearSubmitDownloadMock = jest.fn();
   const fetchNotifySuccessFnMock = jest.fn();
   const addNotificationMock = jest.fn();
   const NotificationContext = createContext<TNotificationContext>({ addNotification: addNotificationMock });
 
   const defaultProps = {
     path: 'elections/12/resultats',
-    clearState: clearStateMock,
     state: INITIAL_STATE,
     hasSubmit: false,
-    clearSubmitDownload: clearSubmitDownloadMock,
     NotificationContextObj: NotificationContext,
     fetchNotifySuccessFn: fetchNotifySuccessFnMock,
   };
 
   it('Should not call notify action functions when condition are not ok', () => {
     renderHook(() => useNotifyDownloadSuccess(defaultProps));
-    expect(clearStateMock).not.toBeCalled();
-    expect(clearSubmitDownloadMock).not.toBeCalled();
     expect(fetchNotifySuccessFnMock).not.toBeCalled();
   });
 
@@ -176,8 +146,6 @@ describe('useNotifyDownloadSuccess', () => {
       }),
     );
 
-    expect(clearStateMock).toBeCalled();
-    expect(clearSubmitDownloadMock).toBeCalled();
     expect(fetchNotifySuccessFnMock).toBeCalledWith({
       state: { ...INITIAL_STATE, [SERVICE_NAME]: 'success', label: SUCCESS_DOWNLOAD_MESSAGE },
       addNotification: addNotificationMock,

@@ -1,5 +1,6 @@
-import { useCallback, useState, useMemo } from 'react';
-import { getApi, setInitialState, useFetchData } from 'shared/helpers/fetchHook';
+import { useCallback, useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
+import { setInitialState } from 'shared/helpers/fetchHook';
 import setAnomalyEmptyItems from 'shared/helpers/setAnomalyEmptyItems';
 import { SERVICE_NAME } from './constants';
 import { DownloadLinkEnhanced } from './SearchMembers';
@@ -48,23 +49,28 @@ export const computeSuccess = ({ responseBody, setAnomalyEmptyItemsFn = setAnoma
   [SERVICE_NAME]: computeInfosFn({ members: responseBody }),
 });
 
-export const useSearchMembers = ({
-  stateFormSearchMembers,
-  initialState = INITIAL_STATE,
-  serviceName = SERVICE_NAME,
-  getApiFn = getApi,
-  useFetchDataFn = useFetchData,
-  computeSuccessFn = computeSuccess,
-}) => {
+export const computeDataQuery = ({ data, computeSuccessFn = computeSuccess }) => {
+  const { responseBody } = data;
+  const response = computeSuccessFn({ responseBody });
+  return response;
+};
+
+export const selectComputeData = (data, computeDataQueryFn = computeDataQuery) => computeDataQueryFn({ data });
+
+export const useSearchMembers = ({ stateFormSearchMembers, initialState = INITIAL_STATE, useQueryFn = useQuery }) => {
   const { name = '' } = stateFormSearchMembers;
   const condition = stateFormSearchMembers.hasSubmit;
 
-  const { state } = useFetchDataFn({
-    condition,
-    initialState,
-    serviceName,
-    computeSuccess: computeSuccessFn,
-    service: useMemo(() => getApiFn(`members/search?name=${name}`), [getApiFn, name]),
+  const { data, isFetching } = useQueryFn([`members/search?name=${name}`], {
+    select: selectComputeData,
+    enabled: condition,
   });
-  return { ...state };
+
+  const stateQuery = {
+    ...initialState,
+    ...data,
+    isLoading: isFetching,
+  };
+
+  return { ...stateQuery };
 };
