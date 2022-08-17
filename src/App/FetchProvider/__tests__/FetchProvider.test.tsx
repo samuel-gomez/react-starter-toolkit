@@ -1,6 +1,7 @@
 import { useContext } from 'react';
 import { render } from '@testing-library/react';
-import FetchProvider, { buildResponse, FetchContext, setFetchCustom, showReactQueryDevtools } from '../FetchProvider';
+import { STATUS_HTTP_MESSAGES } from 'shared/constants';
+import FetchProvider, { buildResponse, FetchContext, setFetchCustom, computeDataError, showReactQueryDevtools } from '../FetchProvider';
 
 const fetchConfigMock = {
   headers: {
@@ -78,6 +79,7 @@ describe('setFetchCustom', () => {
 });
 
 describe('buildResponse', () => {
+  const computeDataErrorFn = jest.fn();
   const responseMock = { status: 200, json: async () => ({ msg: 'test' }), blob: async () => ({ msg: 'testblob' }) };
   it('Should return response 200 and msg = test when status = 200 and blob is falsy', async () => {
     const result = await buildResponse(responseMock, { blob: false });
@@ -87,28 +89,28 @@ describe('buildResponse', () => {
     const result = await buildResponse(responseMock, { blob: true });
     expect(result).toEqual({ msg: 'testblob' });
   });
-  it('Should return throw error when status = 504', async () => {
+  it('Should called computeDataErrorFn when status = 504', async () => {
     responseMock.status = 504;
     try {
-      await buildResponse(responseMock, { blob: false });
+      await buildResponse(responseMock, { blob: false }, computeDataErrorFn);
     } catch (error) {
-      expect(error).toEqual(responseMock);
+      expect(computeDataErrorFn).toBeCalled();
     }
   });
-  it('Should return throw error when status = 500', async () => {
+  it('Should called computeDataErrorFn when status = 500', async () => {
     responseMock.status = 500;
     try {
-      await buildResponse(responseMock, { blob: false });
+      await buildResponse(responseMock, { blob: false }, computeDataErrorFn);
     } catch (error) {
-      expect(error).toEqual(responseMock);
+      expect(computeDataErrorFn).toBeCalled();
     }
   });
-  it('Should return throw error when status = 400', async () => {
+  it('Should called computeDataErrorFn when status = 400', async () => {
     responseMock.status = 400;
     try {
-      await buildResponse(responseMock, { blob: false });
+      await buildResponse(responseMock, { blob: false }, computeDataErrorFn);
     } catch (error) {
-      expect(error).toEqual(responseMock);
+      expect(computeDataErrorFn).toBeCalled();
     }
   });
   it('Should return response 204 when status = 204', async () => {
@@ -118,6 +120,46 @@ describe('buildResponse', () => {
   });
 });
 
+describe('computeDataError', () => {
+  const responseMock = {
+    status: 500,
+    json: async () => ({}),
+    blob: async () => ({ msg: 'testblob' }),
+  };
+  const setResponseFn = jest.fn();
+  it('Should called setResponseFn without setResponseFn', async () => {
+    responseMock.json = async () => ({
+      anomaly: { label: 'test' },
+      code: 500,
+    });
+    try {
+      await computeDataError(responseMock);
+      expect(setResponseFn).toBeCalledWith({ label: 'test' });
+    } catch (error) {}
+  });
+  it('Should called setResponseFn', async () => {
+    responseMock.json = async () => ({
+      anomaly: { label: 'test' },
+      code: 500,
+    });
+    try {
+      await computeDataError(responseMock, setResponseFn);
+      expect(setResponseFn).toBeCalledWith({ label: 'test' });
+    } catch (error) {}
+  });
+  it('Should called setResponseFn in throw', async () => {
+    responseMock.json = async () => {
+      throw new Error('');
+    };
+    try {
+      await computeDataError(responseMock, setResponseFn);
+    } catch (error) {
+      expect(setResponseFn).toBeCalledWith({
+        response: { anomaly: { label: STATUS_HTTP_MESSAGES[responseMock.status] }, code: responseMock.status },
+      });
+    }
+  });
+});
 describe('showReactQueryDevtools', () => {
   it('Should not return ReactQueryDevTools', () => {
     const process = 'test';

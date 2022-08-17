@@ -61,7 +61,7 @@ export const useSearchMembers = ({ stateFormSearchMembers, initialState = INITIA
   const { name = '' } = stateFormSearchMembers;
   const condition = stateFormSearchMembers.hasSubmit;
 
-  const { data, isFetching } = useQueryFn([`members/search?name=${name}`], {
+  const { data, error, isFetching } = useQueryFn([`members/search?name=${name}`], {
     select: selectComputeData,
     enabled: condition,
   });
@@ -70,6 +70,7 @@ export const useSearchMembers = ({ stateFormSearchMembers, initialState = INITIA
     ...initialState,
     ...data,
     isLoading: isFetching,
+    anomaly: error,
   };
 
   return { ...stateQuery };

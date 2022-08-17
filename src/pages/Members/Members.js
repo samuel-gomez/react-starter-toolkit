@@ -6,11 +6,11 @@ import Loader from 'shared/components/Loader';
 import Table from 'shared/components/Table';
 import { TITLE_BAR, TITLE, TABLE_HEADERS_MEMBERS } from './constants';
 
-const Members = ({ titleBar, title, loaderMode, members, anomaly, onChangePaging, pagination, onChangeSorting, sorting }) => (
+const Members = ({ titleBar, title, loaderMode, members, anomaly, refetch, onChangePaging, pagination, onChangeSorting, sorting }) => (
   <Layout propsTitle={{ title: titleBar, backHome: true }}>
     <h1 className="af-title--content">{title}</h1>
     <Loader mode={loaderMode}>
-      <Resilience anomaly={anomaly}>
+      <Resilience anomaly={anomaly} refetch={refetch}>
         <Table items={members} headers={TABLE_HEADERS_MEMBERS} onSort={onChangeSorting} sorting={sorting} aria-label={`Tableau ${title}`} />
         <Paging {...pagination} onChange={onChangePaging} id="paging" />
       </Resilience>

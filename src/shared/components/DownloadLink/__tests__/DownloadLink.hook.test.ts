@@ -1,15 +1,6 @@
-import { createContext } from 'react';
 import { renderHook, act } from '@testing-library/react-hooks';
-import { TNotificationContext } from 'App/NotificationProvider/NotificationProvider';
-import { SERVICE_NAME, SUBMIT_DOWNLOAD_ID_FAILURE, SUBMIT_DOWNLOAD_ID_SUCCESS, SUCCESS_DOWNLOAD_MESSAGE } from '../constants';
-import {
-  useDownload,
-  useSubmitDownload,
-  setDownloadFile,
-  INITIAL_STATE,
-  useNotifyDownloadError,
-  useNotifyDownloadSuccess,
-} from '../DownloadLink.hook';
+import { SUCCESS_DOWNLOAD_MESSAGE } from './../constants';
+import { useDownload, useSubmitDownload, setDownloadFile, onSuccessFn, onErrorFn, INITIAL_STATE } from '../DownloadLink.hook';
 
 describe('useSubmitDownload', () => {
   it('Should stateSubmitDownload to be false when clearSubmitDownload called', () => {
@@ -83,73 +74,28 @@ describe('useDownload', () => {
   });
 });
 
-describe('useNotifyDownloadError', () => {
-  const fetchNotifyErrorFnMock = jest.fn();
-  const addNotificationMock = jest.fn();
-  const NotificationContext = createContext<TNotificationContext>({ addNotification: addNotificationMock });
-
-  const defaultProps = {
-    path: 'elections/12/resultats',
-    state: INITIAL_STATE,
-    hasSubmit: false,
-    NotificationContextObj: NotificationContext,
-    fetchNotifyErrorFn: fetchNotifyErrorFnMock,
-  };
-
-  it('Should not call notify action functions when condition are not ok', () => {
-    renderHook(() => useNotifyDownloadError(defaultProps));
-    expect(fetchNotifyErrorFnMock).not.toBeCalled();
-  });
-
-  it('Should call action functions when condition are ok', () => {
-    renderHook(() =>
-      useNotifyDownloadError({
-        ...defaultProps,
-        state: { ...INITIAL_STATE, anomaly: { [SERVICE_NAME]: 'error' } },
-        hasSubmit: true,
-      }),
-    );
-
-    expect(fetchNotifyErrorFnMock).toBeCalledWith({
-      state: { ...INITIAL_STATE, anomaly: { [SERVICE_NAME]: 'error' } },
-      addNotification: addNotificationMock,
-      serviceName: SERVICE_NAME,
-      idNotifyAnomaly: `${SUBMIT_DOWNLOAD_ID_FAILURE}-elections/12/resultats`,
+describe('onSuccessFn', () => {
+  it('Should called clearSubmitDownloadMock and addNotificationMock', () => {
+    const clearSubmitDownloadMock = jest.fn();
+    const addNotificationMock = jest.fn();
+    onSuccessFn(clearSubmitDownloadMock, addNotificationMock)();
+    expect(clearSubmitDownloadMock).toBeCalled();
+    expect(addNotificationMock).toBeCalledWith({
+      label: SUCCESS_DOWNLOAD_MESSAGE,
+      id: 'idNotifySuccess',
+      type: 'success',
     });
   });
 });
 
-describe('useNotifyDownloadSuccess', () => {
-  const fetchNotifySuccessFnMock = jest.fn();
-  const addNotificationMock = jest.fn();
-  const NotificationContext = createContext<TNotificationContext>({ addNotification: addNotificationMock });
-
-  const defaultProps = {
-    path: 'elections/12/resultats',
-    state: INITIAL_STATE,
-    hasSubmit: false,
-    NotificationContextObj: NotificationContext,
-    fetchNotifySuccessFn: fetchNotifySuccessFnMock,
-  };
-
-  it('Should not call notify action functions when condition are not ok', () => {
-    renderHook(() => useNotifyDownloadSuccess(defaultProps));
-    expect(fetchNotifySuccessFnMock).not.toBeCalled();
-  });
-
-  it('Should call action functions when condition are ok', () => {
-    renderHook(() =>
-      useNotifyDownloadSuccess({
-        ...defaultProps,
-        state: { ...INITIAL_STATE, [SERVICE_NAME]: 'success' },
-        hasSubmit: true,
-      }),
-    );
-
-    expect(fetchNotifySuccessFnMock).toBeCalledWith({
-      state: { ...INITIAL_STATE, [SERVICE_NAME]: 'success', label: SUCCESS_DOWNLOAD_MESSAGE },
-      addNotification: addNotificationMock,
-      idNotifySuccess: `${SUBMIT_DOWNLOAD_ID_SUCCESS}-elections/12/resultats`,
+describe('onErrorFn', () => {
+  it('Should called addNotificationMock', () => {
+    const addNotificationMock = jest.fn();
+    const error = { label: 'test' };
+    onErrorFn(addNotificationMock)(error);
+    expect(addNotificationMock).toBeCalledWith({
+      label: error.label,
+      id: 'idNotifyAnomaly',
     });
   });
 });

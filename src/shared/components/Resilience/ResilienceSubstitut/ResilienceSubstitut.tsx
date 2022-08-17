@@ -1,5 +1,5 @@
 import { ElementType, ReactNode } from 'react';
-import { Alert } from '@axa-fr/react-toolkit-all';
+import { Alert, Button } from '@axa-fr/react-toolkit-all';
 import type { Tanomaly } from 'shared/types';
 import { ERESILIENCE_MODE, DEFAULT_CLASS_ALERT, DEFAULT_CLASS_CONTAINER } from './constants';
 
@@ -24,6 +24,7 @@ export const setClassName = ({ resilienceModifier, classAlertCt = DEFAULT_CLASS_
 
 type TResilienceSubstitut = {
   anomaly: Tanomaly;
+  refetch?: () => void | null;
   children?: ReactNode;
   resilienceMode?: keyof typeof ERESILIENCE_MODE;
   FallbackComponent?: ElementType;
@@ -34,12 +35,13 @@ type TResilienceSubstitut = {
 
 const ResilienceSubstitut = ({
   anomaly,
+  refetch,
   children,
   resilienceMode = ERESILIENCE_MODE.alert,
   FallbackComponent = Empty,
   resilienceModifier,
-  setClassModifierFn,
-  setClassNameFn,
+  setClassModifierFn = setClassModifier,
+  setClassNameFn = setClassName,
 }: TResilienceSubstitut) => {
   const { label, detail = '', type = 'error', iconName = 'exclamation-sign' } = anomaly;
   const classModifier = setClassModifierFn?.({ type, resilienceModifier });
@@ -49,6 +51,11 @@ const ResilienceSubstitut = ({
     [ERESILIENCE_MODE.alert]: (
       <Alert className={className} title={label} icon={iconName} classModifier={classModifier}>
         {detail && <p>{detail}</p>}
+        {refetch && (
+          <Button aria-label="Réessayer" type="button" className="af-link" onClick={refetch}>
+            <span className="af-link__text">Réessayer</span>
+          </Button>
+        )}
         {children}
       </Alert>
     ),

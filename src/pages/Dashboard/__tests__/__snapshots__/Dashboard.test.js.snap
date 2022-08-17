@@ -343,7 +343,7 @@ exports[`<Dashboard page/> Renders Dashboard page component without crashing 1`]
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.1.5
+        © 2022 AXA Tous droits réservés - v0.1.6
       </div>
     </div>
   </footer>

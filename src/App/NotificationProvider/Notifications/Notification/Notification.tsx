@@ -10,7 +10,7 @@ export enum EType {
 export type TNotification = {
   id: string;
   label: string;
-  onClose: () => void;
+  onClose?: () => void;
   detail?: string;
   classModifier?: string;
   type?: keyof typeof EType;

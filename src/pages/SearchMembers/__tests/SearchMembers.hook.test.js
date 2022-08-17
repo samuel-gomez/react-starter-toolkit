@@ -125,16 +125,16 @@ describe('useSearchMembers', () => {
     const useQueryFnMock = jest.fn().mockReturnValue({
       data: {
         isLoaded: false,
-        anomaly: { [SERVICE_NAME]: null },
         isLoading: true,
         [SERVICE_NAME]: [],
       },
       isFetching: true,
+      anomaly: undefined,
     });
     const { result } = renderHook(() => useSearchMembers({ stateFormSearchMembers: {}, useQueryFn: useQueryFnMock }));
     const expected = {
       isLoaded: false,
-      anomaly: { [SERVICE_NAME]: null },
+      anomaly: undefined,
       isLoading: true,
       [SERVICE_NAME]: [],
     };
@@ -152,7 +152,6 @@ describe('useSearchMembers', () => {
     const useQueryFnMock = jest.fn().mockReturnValue({
       data: {
         isLoaded: false,
-        anomaly: { [SERVICE_NAME]: null },
         isLoading: false,
         [SERVICE_NAME]: [],
       },
@@ -161,8 +160,7 @@ describe('useSearchMembers', () => {
     const { result } = renderHook(() => useSearchMembers({ stateFormSearchMembers, useQueryFn: useQueryFnMock }));
     const expected = {
       isLoaded: false,
-
-      anomaly: { [SERVICE_NAME]: null },
+      anomaly: undefined,
       isLoading: false,
       [SERVICE_NAME]: [],
     };

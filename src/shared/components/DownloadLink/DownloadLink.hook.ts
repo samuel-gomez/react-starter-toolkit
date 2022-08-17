@@ -3,9 +3,9 @@ import { useQuery } from '@tanstack/react-query';
 import downloadjs from 'downloadjs';
 import isEmptyOrNull from 'shared/helpers/isEmptyOrNull';
 import { setInitialState } from 'shared/helpers/fetchHook';
-import { fetchNotifyError, fetchNotifySuccess } from 'shared/helpers/fetchNotify';
 import { NotificationContext } from 'App/NotificationProvider';
-import { SERVICE_NAME, SUBMIT_DOWNLOAD_ID_FAILURE, SUBMIT_DOWNLOAD_ID_SUCCESS, SUCCESS_DOWNLOAD_MESSAGE } from './constants';
+import { TNotification } from 'App/NotificationProvider/Notifications';
+import { SERVICE_NAME, SUCCESS_DOWNLOAD_MESSAGE } from './constants';
 
 export const INITIAL_STATE = setInitialState(SERVICE_NAME);
 
@@ -13,6 +13,7 @@ type TuseQueryReturn = {
   data: unknown;
   isFetching: boolean;
   isFetched: boolean;
+  error: unknown;
 };
 
 type TuseDownload = {
@@ -20,15 +21,47 @@ type TuseDownload = {
   hasSubmit: boolean;
   clearSubmitDownload: () => void;
   initialState?: ReturnType<typeof setInitialState>;
-  useQueryFn?: (path: [string, { blob: boolean }], options: { enabled: boolean; onSuccess: () => void }) => TuseQueryReturn;
+  useQueryFn?: (
+    path: [string, { blob: boolean }],
+    options: { enabled: boolean; onSuccess: () => void; onError: (err: { label: string }) => void },
+  ) => TuseQueryReturn;
+  NotificationContextObj?: typeof NotificationContext;
+  onSuccess?: (arg1: () => void, arg2: (arg0: TNotification) => void) => () => void;
+  onError?: (arg1: (arg0: TNotification) => void) => (arg2: { label: string }) => void;
 };
 
-export const useDownload = ({ path, hasSubmit, clearSubmitDownload, initialState = INITIAL_STATE, useQueryFn = useQuery }: TuseDownload) => {
+export const onSuccessFn = (clearSubmitDownload: () => void, addNotification: (arg0: TNotification) => void) => () => {
+  clearSubmitDownload();
+  addNotification({
+    label: SUCCESS_DOWNLOAD_MESSAGE,
+    id: 'idNotifySuccess',
+    type: 'success',
+  });
+};
+
+export const onErrorFn = (addNotification: (arg0: TNotification) => void) => (err: { label: string }) => {
+  addNotification({
+    label: err?.label,
+    id: 'idNotifyAnomaly',
+  });
+};
+
+export const useDownload = ({
+  path,
+  hasSubmit,
+  clearSubmitDownload,
+  initialState = INITIAL_STATE,
+  useQueryFn = useQuery,
+  NotificationContextObj = NotificationContext,
+  onSuccess = onSuccessFn,
+  onError = onErrorFn,
+}: TuseDownload) => {
+  const { addNotification } = useContext(NotificationContextObj);
   const { data, isFetching, isFetched } = useQueryFn([path, { blob: true }], {
     enabled: hasSubmit,
-    onSuccess: clearSubmitDownload,
+    onSuccess: onSuccess(clearSubmitDownload, addNotification),
+    onError: onError(addNotification),
   });
-
   return { state: { ...initialState, isLoading: isFetching, isLoaded: isFetched, downloadFile: data || [] } };
 };
 
@@ -82,76 +115,4 @@ export const useDownloadFile = ({ state, fileName, hasSubmit, setDownloadFileFn 
       }),
     [setDownloadFileFn, state, fileName, hasSubmit],
   );
-};
-
-/* ***************************************************************************************
- * Notification en cas d'erreur du téléchargement
- ***************************************************************************************** */
-
-type TuseNotifyDownload = {
-  state: typeof INITIAL_STATE;
-  hasSubmit: boolean;
-  path: string;
-  initialStateCt?: typeof INITIAL_STATE;
-  NotificationContextObj?: typeof NotificationContext;
-  serviceName?: string;
-};
-
-type TuseNotifyDownloadError = TuseNotifyDownload & {
-  fetchNotifyErrorFn?: typeof fetchNotifyError;
-};
-
-export const useNotifyDownloadError = ({
-  state,
-  hasSubmit,
-  path,
-  fetchNotifyErrorFn = fetchNotifyError,
-  initialStateCt = INITIAL_STATE,
-  NotificationContextObj = NotificationContext,
-  serviceName = SERVICE_NAME,
-}: TuseNotifyDownloadError) => {
-  const { addNotification } = useContext(NotificationContextObj);
-  useEffect(() => {
-    if (state.anomaly[serviceName] !== null && hasSubmit) {
-      fetchNotifyErrorFn({
-        state,
-        addNotification,
-        serviceName,
-        idNotifyAnomaly: `${SUBMIT_DOWNLOAD_ID_FAILURE}-${path}`,
-      });
-    }
-  }, [addNotification, state, fetchNotifyErrorFn, initialStateCt, serviceName, path, hasSubmit]);
-};
-
-/* ***************************************************************************************
- * Notification en cas de succès du téléchargement
- ***************************************************************************************** */
-
-type TuseNotifyDownloadSuccess = TuseNotifyDownload & {
-  fetchNotifySuccessFn?: typeof fetchNotifySuccess;
-};
-
-export const useNotifyDownloadSuccess = ({
-  state,
-  hasSubmit,
-  path,
-  fetchNotifySuccessFn = fetchNotifySuccess,
-  initialStateCt = INITIAL_STATE,
-  NotificationContextObj = NotificationContext,
-  serviceName = SERVICE_NAME,
-}: TuseNotifyDownloadSuccess) => {
-  const { addNotification } = useContext(NotificationContextObj);
-
-  useEffect(() => {
-    if (!isEmptyOrNull(state[serviceName]) && hasSubmit) {
-      fetchNotifySuccessFn({
-        addNotification,
-        state: {
-          ...state,
-          label: SUCCESS_DOWNLOAD_MESSAGE,
-        },
-        idNotifySuccess: `${SUBMIT_DOWNLOAD_ID_SUCCESS}-${path}`,
-      });
-    }
-  }, [addNotification, state, fetchNotifySuccessFn, initialStateCt, serviceName, path, hasSubmit]);
 };

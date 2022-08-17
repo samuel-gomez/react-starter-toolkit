@@ -2,7 +2,6 @@ import { func } from 'prop-types';
 import setLoaderMode from 'shared/helpers/setLoaderMode';
 import SearchMembers from './SearchMembers';
 import { useSearchMembers, useFormSearchMembers } from './SearchMembers.hook';
-import { SERVICE_NAME } from './constants';
 
 export const SearchMembersEnhanced = ({ useSearchMembersFn, setLoaderModeFn, useFormSearchMembersFn, ...rest }) => {
   const { submitFormSearchMembers, stateFormSearchMembers } = useFormSearchMembersFn({});
@@ -13,7 +12,7 @@ export const SearchMembersEnhanced = ({ useSearchMembersFn, setLoaderModeFn, use
       {...rest}
       members={searchMembers}
       loaderMode={setLoaderModeFn({ isLoading })}
-      anomaly={anomaly[SERVICE_NAME]}
+      anomaly={anomaly}
       submitSearch={submitFormSearchMembers}
     />
   );
