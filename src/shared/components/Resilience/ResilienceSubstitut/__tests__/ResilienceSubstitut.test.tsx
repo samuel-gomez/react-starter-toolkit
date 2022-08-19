@@ -24,6 +24,13 @@ describe('<ResilienceSubstitut/>', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
+  it('Render <ResilienceSubstitut/> with default props and refetchMock', () => {
+    const refetchMock = jest.fn();
+    const { asFragment, getByText } = render(<ResilienceSubstitut {...defaultProps} refetch={refetchMock} />);
+    expect(getByText('Réessayer')).toBeDefined();
+    expect(asFragment()).toMatchSnapshot();
+  });
+
   it('Render <ResilienceSubstitut/> with classModifier="simple" and return Alert resilience with simple classModifier', () => {
     const customProps = { ...defaultProps, classModifier: 'simple', anomaly: { ...defaultProps.anomaly, iconName: 'icon2', type: 'warning' } };
     const { asFragment, getByText, container } = render(<ResilienceSubstitut {...customProps} />);

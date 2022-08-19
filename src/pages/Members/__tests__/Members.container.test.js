@@ -10,7 +10,11 @@ describe('Component <MembersEnhanced />', () => {
   });
 
   it('Should render <MembersEnhanced /> with empty members', async () => {
-    render(<MembersContainer {...defaultProps} />, {}, { responseBody: { totals, data: [] } });
+    const useMembersFnMock = jest.fn().mockReturnValue({
+      anomaly: { label: 'Info : Aucune donnée trouvée' },
+      members: [],
+    });
+    render(<MembersContainer {...defaultProps} useMembersFn={useMembersFnMock} />, {}, { responseBody: { totals, data: [] } });
     expect(await screen.findByText('Info : Aucune donnée trouvée')).toBeInTheDocument();
   });
 });

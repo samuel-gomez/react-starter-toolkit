@@ -2,8 +2,9 @@ import { createContext } from 'react';
 import { QueryClient, QueryClientProvider, QueryKey } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import mergeObj from 'shared/helpers/mergeObj';
-import { STATUS_API } from 'shared/constants';
+import { STATUS_API, STATUS_HTTP_MESSAGES } from 'shared/constants';
 import { useOidcAccessToken } from '@axa-fr/react-oidc-context';
+import { setResponse } from 'shared/helpers/fetchHook/setResponses';
 
 export type FetchContextType = {
   fetchCustom: (path: string, customConfig: object) => Promise<Response> | null;
@@ -30,12 +31,22 @@ type TConfig = {
   blob: boolean;
 };
 
-export const buildResponse = async (response: TResponse, config: TConfig) => {
+export const computeDataError = async (response: TResponse, setResponseFn = setResponse) => {
+  try {
+    const data = await response.json();
+    return setResponseFn({ response: data });
+  } catch (error) {
+    throw setResponseFn({ response: { anomaly: { label: STATUS_HTTP_MESSAGES[response.status] }, code: response.status } });
+  }
+};
+
+export const buildResponse = async (response: TResponse, config: TConfig, computeDataErrorFn = computeDataError) => {
   const { status } = response;
   switch (true) {
     case status.toString().startsWith(STATUS_API.ERROR.toString()):
-    case status.toString().startsWith(STATUS_API.WARNING.toString()):
-      throw response;
+    case status.toString().startsWith(STATUS_API.WARNING.toString()): {
+      throw await computeDataErrorFn(response);
+    }
     case status === STATUS_API.SUCCESS:
       if (config.blob) {
         return response.blob();

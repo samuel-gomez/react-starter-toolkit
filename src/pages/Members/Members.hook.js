@@ -102,14 +102,19 @@ export const useMembers = ({
 
   const onChangePaging = useCallback(paging => setOnChangePagingFn({ setStateFormPaging, paging }), [setOnChangePagingFn]);
 
-  const { data, isFetching } = useQueryFn([`members?max=${Number(numberItems)}&sort=${field}&dir=${order}&skip=${Number(page * numberItems)}`], {
-    select: data => computeDataQueryFn({ data }),
-  });
+  const { data, isFetching, error, refetch } = useQueryFn(
+    [`members?max=${Number(numberItems)}&sort=${field}&dir=${order}&skip=${Number(page * numberItems)}`],
+    {
+      select: data => computeDataQueryFn({ data }),
+    },
+  );
 
   const stateQuery = {
     ...initialState,
     ...data,
     isLoading: isFetching,
+    anomaly: error,
+    refetch,
   };
 
   return { ...stateQuery, onChangeSorting, onChangePaging, stateSorting, stateFormPaging };

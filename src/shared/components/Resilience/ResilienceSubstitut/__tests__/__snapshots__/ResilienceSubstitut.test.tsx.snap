@@ -5,7 +5,7 @@ exports[`<Empty/> Render <Empty/> 1`] = `<DocumentFragment />`;
 exports[`<ResilienceSubstitut/> Render <ResilienceSubstitut/> with classModifier="simple" and return Alert resilience with simple classModifier 1`] = `
 <DocumentFragment>
   <div
-    class=""
+    class="af-alert af-alert--warning"
     role="alert"
   >
     <div
@@ -42,10 +42,61 @@ exports[`<ResilienceSubstitut/> Render <ResilienceSubstitut/> with classModifier
 </DocumentFragment>
 `;
 
+exports[`<ResilienceSubstitut/> Render <ResilienceSubstitut/> with default props and refetchMock 1`] = `
+<DocumentFragment>
+  <div
+    class="af-alert af-alert--error"
+    role="alert"
+  >
+    <div
+      class="af-alert__title"
+    >
+      <div
+        class="af-alert__title-icon"
+      >
+        <i
+          class="glyphicon glyphicon-exclamation-sign"
+        />
+      </div>
+      <div
+        class="af-alert__title-text"
+      >
+        label
+      </div>
+    </div>
+    <div
+      class="af-alert__content"
+    >
+      <div
+        class="af-alert__content__left"
+      />
+      <div
+        class="af-alert__content__right"
+      >
+        <p>
+          detail
+        </p>
+        <button
+          aria-label="Réessayer"
+          class="af-link"
+          type="button"
+        >
+          <span
+            class="af-link__text"
+          >
+            Réessayer
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`<ResilienceSubstitut/> Render <ResilienceSubstitut/> with default props and return Alert resilience 1`] = `
 <DocumentFragment>
   <div
-    class=""
+    class="af-alert af-alert--error"
     role="alert"
   >
     <div

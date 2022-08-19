@@ -3,25 +3,24 @@ import { func } from 'prop-types';
 import setLoaderMode from 'shared/helpers/setLoaderMode';
 import Members from './Members';
 import { useMembers } from './Members.hook';
-import { SERVICE_NAME } from './constants';
 
 export const MembersContext = createContext({ onChangeSorting: null, sorting: {} });
 const { Provider: MembersProvider } = MembersContext;
 
 const MembersEnhanced = ({ useMembersFn, setLoaderModeFn, ...rest }) => {
-  const { anomaly, isLoading, members, onChangeSorting, stateSorting, onChangePaging } = useMembersFn({});
-
+  const { anomaly, isLoading, members, onChangeSorting, stateSorting, onChangePaging, refetch } = useMembersFn({});
   return (
     <MembersProvider value={{ onChangeSorting, sorting: stateSorting }}>
       <Members
         {...rest}
         members={members.data}
         loaderMode={setLoaderModeFn({ isLoading })}
-        anomaly={anomaly[SERVICE_NAME]}
+        anomaly={anomaly}
         pagination={members.pagination}
         onChangePaging={onChangePaging}
         onChangeSorting={onChangeSorting}
         sorting={stateSorting}
+        refetch={refetch}
       />
     </MembersProvider>
   );
