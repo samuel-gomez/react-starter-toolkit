@@ -268,3 +268,9 @@
     }
   }
 }
+
+@include media-breakpoint-up(sm) {
+  .af-menu-open {
+    overflow-y: auto;
+  }
+}
