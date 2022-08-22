@@ -1,7 +1,6 @@
 import { useCallback, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { setInitialState } from 'shared/helpers/fetchHook';
-import setAnomalyEmptyItems from 'shared/helpers/setAnomalyEmptyItems';
+import { setInitialState, setAnomalyEmptyItems } from 'shared/helpers';
 import { SERVICE_NAME } from './constants';
 import { DownloadLinkEnhanced } from './SearchMembers';
 
@@ -43,34 +42,26 @@ export const useFormSearchMembers = ({ initStateFormSearchMembers = INITIAL_STAT
 };
 
 export const computeSuccess = ({ responseBody, setAnomalyEmptyItemsFn = setAnomalyEmptyItems, computeInfosFn = computeInfos }) => ({
-  anomaly: {
-    [SERVICE_NAME]: setAnomalyEmptyItemsFn(responseBody, 'Aucun membre ne correspond à votre recherche'),
-  },
+  anomaly: setAnomalyEmptyItemsFn(responseBody, 'Aucun membre ne correspond à votre recherche'),
   [SERVICE_NAME]: computeInfosFn({ members: responseBody }),
 });
 
-export const computeDataQuery = ({ data, computeSuccessFn = computeSuccess }) => {
-  const { responseBody } = data;
-  const response = computeSuccessFn({ responseBody });
-  return response;
-};
-
-export const selectComputeData = (data, computeDataQueryFn = computeDataQuery) => computeDataQueryFn({ data });
+export const computeDataQuery = (data, computeSuccessFn = computeSuccess) => computeSuccessFn({ ...data });
 
 export const useSearchMembers = ({ stateFormSearchMembers, initialState = INITIAL_STATE, useQueryFn = useQuery }) => {
   const { name = '' } = stateFormSearchMembers;
   const condition = stateFormSearchMembers.hasSubmit;
 
   const { data, error, isFetching } = useQueryFn([`members/search?name=${name}`], {
-    select: selectComputeData,
+    select: computeDataQuery,
     enabled: condition,
   });
 
   const stateQuery = {
     ...initialState,
     ...data,
+    anomaly: error || data?.anomaly,
     isLoading: isFetching,
-    anomaly: error,
   };
 
   return { ...stateQuery };

@@ -5,11 +5,9 @@ import { computeInfos, useSearchMembers, computeSuccess, useFormSearchMembers, c
 
 const expectedDataCompute = {
   anomaly: {
-    searchMembers: {
-      iconName: 'exclamation-sign',
-      label: 'Aucun membre ne correspond à votre recherche',
-      type: 'info',
-    },
+    iconName: 'exclamation-sign',
+    label: 'Aucun membre ne correspond à votre recherche',
+    type: 'info',
   },
   searchMembers: [],
 };
@@ -50,9 +48,7 @@ describe('computeSuccess', () => {
       responseBody: [],
     });
     const expected = {
-      anomaly: {
-        [SERVICE_NAME]: { label: 'Aucun membre ne correspond à votre recherche', type: 'info', iconName: 'exclamation-sign' },
-      },
+      anomaly: { label: 'Aucun membre ne correspond à votre recherche', type: 'info', iconName: 'exclamation-sign' },
       [SERVICE_NAME]: [],
     };
 
@@ -64,9 +60,7 @@ describe('computeSuccess', () => {
       responseBody: membersMock,
     });
     const expected = {
-      anomaly: {
-        [SERVICE_NAME]: null,
-      },
+      anomaly: null,
       [SERVICE_NAME]: membersMockExpected,
     };
 
@@ -174,28 +168,15 @@ describe('computeDataQuery', () => {
   const data = { responseBody: [] };
   const computeSuccessFn = jest.fn();
   it('Should called computeSuccess when computeDataQuery is executing', () => {
-    computeDataQuery({ data, computeSuccessFn });
+    computeDataQuery(data, computeSuccessFn);
     expect(computeSuccessFn).toBeCalledWith(data);
   });
   it('Should return data results computed without computeSuccess', () => {
-    const result = computeDataQuery({ data });
+    const result = computeDataQuery(data);
     expect(result).toEqual(expectedDataCompute);
   });
   it('Should return data results computed with computeSuccess', () => {
-    const result = computeDataQuery({ data, computeSuccessFn: computeSuccess });
-    expect(result).toEqual(expectedDataCompute);
-  });
-});
-
-describe('selectComputeData', () => {
-  const data = { responseBody: [] };
-  const computeDataQueryFn = jest.fn();
-  it('Should called computeDataQuery when selectComputeData is executing', () => {
-    selectComputeData(data, computeDataQueryFn);
-    expect(computeDataQueryFn).toBeCalledWith({ data });
-  });
-  it('Should return data results computed without computeDataQuery', () => {
-    const result = selectComputeData(data);
+    const result = computeDataQuery(data, computeSuccess);
     expect(result).toEqual(expectedDataCompute);
   });
 });
