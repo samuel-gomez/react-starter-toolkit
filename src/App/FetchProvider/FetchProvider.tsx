@@ -1,10 +1,9 @@
 import { createContext } from 'react';
 import { QueryClient, QueryClientProvider, QueryKey } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import mergeObj from 'shared/helpers/mergeObj';
+import { setResponseError, mergeObj } from 'shared/helpers';
 import { STATUS_API, STATUS_HTTP_MESSAGES } from 'shared/constants';
 import { useOidcAccessToken } from '@axa-fr/react-oidc-context';
-import { setResponse } from 'shared/helpers/fetchHook/setResponses';
 
 export type FetchContextType = {
   fetchCustom: (path: string, customConfig: object) => Promise<Response> | null;
@@ -31,23 +30,23 @@ type TConfig = {
   blob: boolean;
 };
 
-export const computeDataError = async (response: TResponse, setResponseFn = setResponse) => {
+export const computeDataError = async (response: TResponse, setResponseErrorFn = setResponseError) => {
   try {
     const data = await response.json();
-    return setResponseFn({ response: data });
+    return setResponseErrorFn({ response: { ...data, status: response.status } });
   } catch (error) {
-    throw setResponseFn({ response: { anomaly: { label: STATUS_HTTP_MESSAGES[response.status] }, code: response.status } });
+    throw setResponseErrorFn({ response: { anomaly: { label: STATUS_HTTP_MESSAGES[response.status] }, status: response.status } });
   }
 };
 
 export const buildResponse = async (response: TResponse, config: TConfig, computeDataErrorFn = computeDataError) => {
   const { status } = response;
   switch (true) {
-    case status.toString().startsWith(STATUS_API.ERROR.toString()):
-    case status.toString().startsWith(STATUS_API.WARNING.toString()): {
+    case `${status}`.startsWith(`${STATUS_API.ERROR}`):
+    case `${status}`.startsWith(`${STATUS_API.WARNING}`): {
       throw await computeDataErrorFn(response);
     }
-    case status === STATUS_API.SUCCESS:
+    case `${status}` === `${STATUS_API.SUCCESS}`:
       if (config.blob) {
         return response.blob();
       }
