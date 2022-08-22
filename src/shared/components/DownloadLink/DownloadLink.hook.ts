@@ -1,13 +1,31 @@
-import { useCallback, useEffect, useContext, useState } from 'react';
+import { useCallback, useEffect, useContext, useState, useId } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import downloadjs from 'downloadjs';
-import isEmptyOrNull from 'shared/helpers/isEmptyOrNull';
-import { setInitialState } from 'shared/helpers/fetchHook';
-import { NotificationContext } from 'App/NotificationProvider';
-import { TNotification } from 'App/NotificationProvider/Notifications';
+import { setInitialState, isEmptyOrNull } from 'shared/helpers';
+import { NotificationContext, TaddNotification } from 'App/NotificationProvider';
 import { SERVICE_NAME, SUCCESS_DOWNLOAD_MESSAGE } from './constants';
 
 export const INITIAL_STATE = setInitialState(SERVICE_NAME);
+
+export const onSuccess =
+  (clearSubmitDownload: TclearSubmitDownload, addNotification: TaddNotification, id = 'success-alert-id') =>
+  () => {
+    clearSubmitDownload();
+    addNotification({
+      id,
+      label: SUCCESS_DOWNLOAD_MESSAGE,
+      type: 'success',
+    });
+  };
+
+export const onError =
+  (addNotification: TaddNotification, id = 'anomaly-alert-id') =>
+  (error: { label: string }) => {
+    addNotification({
+      id,
+      label: error?.label,
+    });
+  };
 
 type TuseQueryReturn = {
   data: unknown;
@@ -19,31 +37,16 @@ type TuseQueryReturn = {
 type TuseDownload = {
   path: string;
   hasSubmit: boolean;
-  clearSubmitDownload: () => void;
+  clearSubmitDownload: TclearSubmitDownload;
   initialState?: ReturnType<typeof setInitialState>;
   useQueryFn?: (
     path: [string, { blob: boolean }],
     options: { enabled: boolean; onSuccess: () => void; onError: (err: { label: string }) => void },
   ) => TuseQueryReturn;
   NotificationContextObj?: typeof NotificationContext;
-  onSuccess?: (arg1: () => void, arg2: (arg0: TNotification) => void) => () => void;
-  onError?: (arg1: (arg0: TNotification) => void) => (arg2: { label: string }) => void;
-};
-
-export const onSuccessFn = (clearSubmitDownload: () => void, addNotification: (arg0: TNotification) => void) => () => {
-  clearSubmitDownload();
-  addNotification({
-    label: SUCCESS_DOWNLOAD_MESSAGE,
-    id: 'idNotifySuccess',
-    type: 'success',
-  });
-};
-
-export const onErrorFn = (addNotification: (arg0: TNotification) => void) => (err: { label: string }) => {
-  addNotification({
-    label: err?.label,
-    id: 'idNotifyAnomaly',
-  });
+  onSuccessFn?: typeof onSuccess;
+  onErrorFn?: typeof onError;
+  useIdFn?: typeof useId;
 };
 
 export const useDownload = ({
@@ -53,16 +56,18 @@ export const useDownload = ({
   initialState = INITIAL_STATE,
   useQueryFn = useQuery,
   NotificationContextObj = NotificationContext,
-  onSuccess = onSuccessFn,
-  onError = onErrorFn,
+  onSuccessFn = onSuccess,
+  onErrorFn = onError,
+  useIdFn = useId,
 }: TuseDownload) => {
   const { addNotification } = useContext(NotificationContextObj);
+  const id = useIdFn();
   const { data, isFetching, isFetched } = useQueryFn([path, { blob: true }], {
     enabled: hasSubmit,
-    onSuccess: onSuccess(clearSubmitDownload, addNotification),
-    onError: onError(addNotification),
+    onSuccess: onSuccessFn(clearSubmitDownload, addNotification, id),
+    onError: onErrorFn(addNotification, id),
   });
-  return { state: { ...initialState, isLoading: isFetching, isLoaded: isFetched, downloadFile: data || [] } };
+  return { state: { ...initialState, isLoading: isFetching, isLoaded: isFetched, [SERVICE_NAME]: data || [] } };
 };
 
 export const useSubmitDownload = (initialState = false) => {
@@ -78,6 +83,9 @@ export const useSubmitDownload = (initialState = false) => {
 
   return { stateSubmitDownload, submitDownload, clearSubmitDownload };
 };
+
+type TReturnUseSubmitDownload = ReturnType<typeof useSubmitDownload>;
+type TclearSubmitDownload = TReturnUseSubmitDownload['clearSubmitDownload'];
 
 /* ***************************************************************************************
  * Téléchargement du fichier dans le navigateur
