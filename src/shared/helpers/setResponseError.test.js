@@ -1,16 +1,17 @@
 import { STATUS_HTTP_MESSAGES } from 'shared/constants';
-import { setResponse } from './setResponses';
+import setResponseError from './setResponseError';
 
-describe('setResponse', () => {
+describe('setResponseError', () => {
   it('Should return 404 danger', () => {
     const responseService = {
       anomaly: {
         label: 'test',
+        detail: '',
       },
-      code: 404,
+      status: 404,
       responseBody: {},
     };
-    const result = setResponse({ response: responseService });
+    const result = setResponseError({ response: responseService });
     expect(result).toEqual({
       ...responseService.anomaly,
       label: responseService.anomaly?.label,
@@ -18,55 +19,63 @@ describe('setResponse', () => {
       iconName: 'alert',
     });
   });
+
   it('Should return 404 danger with generic label when anomaly is null', () => {
     const responseService = {
       anomaly: null,
-      code: 404,
+      status: 404,
       responseBody: {},
     };
-    const result = setResponse({ response: responseService });
+    const result = setResponseError({ response: responseService });
     expect(result).toEqual({
       ...responseService.anomaly,
-      label: STATUS_HTTP_MESSAGES[responseService.code],
+      label: STATUS_HTTP_MESSAGES[responseService.status],
       type: 'danger',
       iconName: 'alert',
+      detail: '',
     });
   });
+
   it('Should return 500 error', () => {
     const responseService = {
       anomaly: {
         label: 'test',
+        detail: '',
       },
-      code: 500,
+      status: 500,
       responseBody: {},
     };
-    const result = setResponse({ response: responseService });
+    const result = setResponseError({ response: responseService });
     expect(result).toEqual({
       ...responseService.anomaly,
       label: responseService.anomaly?.label,
     });
   });
+
   it('Should return 500 error with generic label when anomaly is null', () => {
     const responseService = {
       anomaly: null,
-      code: 500,
+      status: 500,
       responseBody: {},
     };
-    const result = setResponse({ response: responseService });
+    const result = setResponseError({ response: responseService });
     expect(result).toEqual({
       ...responseService.anomaly,
-      label: STATUS_HTTP_MESSAGES[responseService.code],
+      label: STATUS_HTTP_MESSAGES[responseService.status],
+      detail: '',
     });
   });
+
   it('Should return empty object', () => {
     const responseService = {
       anomaly: {
         label: 'test',
+        detail: '',
       },
-      code: 100,
+      status: 100,
       responseBody: {},
     };
-    const result = setResponse({ response: responseService });
+    const result = setResponseError({ response: responseService });
     expect(result).toEqual({});
   });
 });
