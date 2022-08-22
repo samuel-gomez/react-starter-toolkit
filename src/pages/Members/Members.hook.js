@@ -1,10 +1,7 @@
 import { useCallback, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { setDate } from 'shared/helpers/formatDate';
 import { ASCENDING } from 'shared/components/Table';
-import { setDisplay } from 'shared/helpers/formatDataTable';
-import { setInitialState } from 'shared/helpers/fetchHook';
-import setAnomalyEmptyItems from 'shared/helpers/setAnomalyEmptyItems';
+import { setDisplay, setInitialState, setAnomalyEmptyItems, setDate } from 'shared/helpers';
 import { SERVICE_NAME } from './constants';
 
 export const INITIAL_STATE = setInitialState(SERVICE_NAME, {
@@ -29,7 +26,7 @@ const INITIAL_STATE_PAGING = {
 export const setNumberPages = ({ total = 1, max = 1 }) => Math.ceil(max >= total ? 1 : Number(total / max) - 1);
 export const setCurrentPage = ({ max, skip }) => (+max !== 0 && Math.ceil(Number(skip / max))) || 1;
 
-export const setPagination = ({ total, skip, max, setCurrentPageFn = setCurrentPage, setNumberPagesfn = setNumberPages }) => ({
+export const setPagination = ({ total = 1, skip = 1, max = 1, setCurrentPageFn = setCurrentPage, setNumberPagesfn = setNumberPages }) => ({
   total: Number(total),
   numberItems: Number(max),
   numberPages: setNumberPagesfn({ total, max }),
@@ -49,19 +46,17 @@ export const computeInfos = ({ members = [], setDateFn = setDate, setDisplayFn =
 
 export const computeSuccess = ({
   responseBody,
-  state,
+  state = INITIAL_STATE,
   setAnomalyEmptyItemsFn = setAnomalyEmptyItems,
   computeInfosFn = computeInfos,
   setPaginationFn = setPagination,
 }) => ({
-  anomaly: {
-    [SERVICE_NAME]: setAnomalyEmptyItemsFn(responseBody?.data),
-  },
+  anomaly: setAnomalyEmptyItemsFn(responseBody?.data),
   [SERVICE_NAME]: {
     data: computeInfosFn({ [SERVICE_NAME]: responseBody?.data }),
     pagination: {
       ...state?.pagination,
-      ...setPaginationFn(responseBody?.totals),
+      ...setPaginationFn(responseBody?.totals ?? { ...INITIAL_STATE.pagination }),
     },
   },
 });
@@ -112,8 +107,8 @@ export const useMembers = ({
   const stateQuery = {
     ...initialState,
     ...data,
+    anomaly: error || data?.anomaly,
     isLoading: isFetching,
-    anomaly: error,
     refetch,
   };
 

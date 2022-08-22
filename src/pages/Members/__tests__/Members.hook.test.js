@@ -1,6 +1,96 @@
 import { renderHook, act } from '@testing-library/react-hooks';
-import { computeInfos, useMembers, setPaging, setOnChangePaging, setNumberPages, setCurrentPage } from '../Members.hook';
+import { SERVICE_NAME } from '../constants';
+import { computeInfos, useMembers, setPaging, setOnChangePaging, setNumberPages, setCurrentPage, computeSuccess } from '../Members.hook';
 import { membersMock } from './Members.mock';
+
+const totals = {
+  total: 1001,
+  count: 50,
+  skip: 50,
+  max: 50,
+};
+
+describe('computeSuccess', () => {
+  it('Should return anomaly message when computeSuccess have been called with empty array responseBody and without totals', () => {
+    const result = computeSuccess({
+      responseBody: {
+        data: [],
+      },
+    });
+    const expected = {
+      anomaly: { label: 'Info : Aucune donnée trouvée', type: 'info', iconName: 'exclamation-sign' },
+      [SERVICE_NAME]: {
+        pagination: {
+          currentPage: 1,
+          numberItems: 1,
+          numberPages: 1,
+          total: 1,
+        },
+        data: [],
+      },
+    };
+
+    expect(result).toEqual(expected);
+  });
+  it('Should return anomaly message when computeSuccess have been called with empty array responseBody', () => {
+    const result = computeSuccess({
+      responseBody: {
+        totals,
+        data: [],
+      },
+    });
+    const expected = {
+      anomaly: { label: 'Info : Aucune donnée trouvée', type: 'info', iconName: 'exclamation-sign' },
+      [SERVICE_NAME]: {
+        pagination: {
+          currentPage: 1,
+          numberItems: 50,
+          numberPages: 20,
+          total: 1001,
+        },
+        data: [],
+      },
+    };
+
+    expect(result).toEqual(expected);
+  });
+
+  it('Should return null anomaly message and computed payload when computeSuccess have been called with responseBody', () => {
+    const result = computeSuccess({
+      responseBody: {
+        totals,
+        data: membersMock,
+      },
+    });
+    const expected = {
+      anomaly: null,
+      [SERVICE_NAME]: {
+        pagination: { currentPage: 1, numberItems: 50, numberPages: 20, total: 1001 },
+        data: [
+          {
+            cols: {
+              birthdate: {
+                label: '20/10/1985',
+              },
+              firstname: {
+                label: 'Samuel',
+              },
+              lastname: {
+                label: 'Gomez',
+              },
+              sexe: {
+                label: 'M',
+              },
+            },
+            key: 99999,
+          },
+        ],
+      },
+    };
+
+    expect(result).toEqual(expected);
+  });
+});
 
 describe('setCurrentPage', () => {
   it.each`

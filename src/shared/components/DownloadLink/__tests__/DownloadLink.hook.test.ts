@@ -1,6 +1,6 @@
 import { renderHook, act } from '@testing-library/react-hooks';
 import { SUCCESS_DOWNLOAD_MESSAGE } from './../constants';
-import { useDownload, useSubmitDownload, setDownloadFile, onSuccessFn, onErrorFn, INITIAL_STATE } from '../DownloadLink.hook';
+import { useDownload, useSubmitDownload, setDownloadFile, onSuccess, onError, INITIAL_STATE } from '../DownloadLink.hook';
 
 describe('useSubmitDownload', () => {
   it('Should stateSubmitDownload to be false when clearSubmitDownload called', () => {
@@ -74,28 +74,28 @@ describe('useDownload', () => {
   });
 });
 
-describe('onSuccessFn', () => {
+describe('onSuccess', () => {
   it('Should called clearSubmitDownloadMock and addNotificationMock', () => {
     const clearSubmitDownloadMock = jest.fn();
     const addNotificationMock = jest.fn();
-    onSuccessFn(clearSubmitDownloadMock, addNotificationMock)();
+    onSuccess(clearSubmitDownloadMock, addNotificationMock)();
     expect(clearSubmitDownloadMock).toBeCalled();
     expect(addNotificationMock).toBeCalledWith({
       label: SUCCESS_DOWNLOAD_MESSAGE,
-      id: 'idNotifySuccess',
+      id: 'success-alert-id',
       type: 'success',
     });
   });
 });
 
-describe('onErrorFn', () => {
+describe('onError', () => {
   it('Should called addNotificationMock', () => {
     const addNotificationMock = jest.fn();
     const error = { label: 'test' };
-    onErrorFn(addNotificationMock)(error);
+    onError(addNotificationMock)(error);
     expect(addNotificationMock).toBeCalledWith({
       label: error.label,
-      id: 'idNotifyAnomaly',
+      id: 'anomaly-alert-id',
     });
   });
 });

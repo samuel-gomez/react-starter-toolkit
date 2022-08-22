@@ -1,2 +1,2 @@
 export { default } from './Notifications.container';
-export type { TNotification } from './Notification';
+export type { TNotification, EType } from './Notification';

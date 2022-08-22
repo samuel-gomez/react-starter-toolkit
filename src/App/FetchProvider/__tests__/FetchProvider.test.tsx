@@ -155,7 +155,7 @@ describe('computeDataError', () => {
       await computeDataError(responseMock, setResponseFn);
     } catch (error) {
       expect(setResponseFn).toBeCalledWith({
-        response: { anomaly: { label: STATUS_HTTP_MESSAGES[responseMock.status] }, code: responseMock.status },
+        response: { anomaly: { label: STATUS_HTTP_MESSAGES[responseMock.status] }, status: responseMock.status },
       });
     }
   });
