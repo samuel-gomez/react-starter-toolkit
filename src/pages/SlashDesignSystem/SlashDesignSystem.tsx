@@ -1,7 +1,7 @@
 import Layout, { TLayout } from 'Layout';
 import { ReactNode } from 'react';
 import Cards from 'shared/components/Cards';
-import { COMPONENTS, TITLE_BAR, TITLE } from './constants';
+import COMPONENTS, { TITLE_BAR, TITLE } from './constants';
 
 export type TSlashDesignSystemPage = TLayout & {
   titleBar?: ReactNode;

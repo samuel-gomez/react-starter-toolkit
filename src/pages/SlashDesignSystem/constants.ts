@@ -2,7 +2,7 @@ export const TITLE_BAR = 'Slash Design System';
 export const TITLE = 'Liste des composants';
 export const ROUTE_URL_SLASH = '/';
 
-export const COMPONENTS = [
+const COMPONENTS = [
   {
     id: 'text',
     title: 'Champ texte',
@@ -364,3 +364,5 @@ export const COMPONENTS = [
     },
   },
 ];
+
+export default COMPONENTS;
