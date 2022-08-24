@@ -5,10 +5,10 @@ import TitleBar from 'Layout/TitleBar';
 import Menu from 'Layout/Menu';
 import { ComponentPropsWithoutRef, ReactNode } from 'react';
 
-type TLayout = WithClassModifierOptions & {
+export type TLayout = WithClassModifierOptions & {
   children?: ReactNode;
   className?: string;
-  disabled: {
+  disabled?: {
     header: boolean;
     menu: boolean;
     title: boolean;
