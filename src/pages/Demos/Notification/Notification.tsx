@@ -1,10 +1,11 @@
-import { func, string } from 'prop-types';
+import { ReactNode } from 'react';
 import dracula from 'prism-react-renderer/themes/dracula';
 import { LiveProvider, LiveEditor } from 'react-live';
 import { Button, Accordion, CollapseCardBase, CollapseCard } from '@axa-fr/react-toolkit-all';
-import Layout from 'Layout';
+import Layout, { TLayout } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { TITLE_BAR, TITLE } from './constants';
+import { TReturnUseNotify } from './Notification.hook';
 
 const scope = { Button };
 
@@ -15,7 +16,6 @@ const useNotify = ({ NotificationContextObj = NotificationContext }) => {
 
   const notifyError = useCallback(() => {
     addNotification({
-      code: 500,
       detail: '',
       label: 'Erreur : Contactez le support',
       id: 'idNotifyAnomaly',
@@ -24,7 +24,6 @@ const useNotify = ({ NotificationContextObj = NotificationContext }) => {
 
   const notifySuccess = useCallback(() => {
     addNotification({
-      code: 200,
       detail: '',
       type: 'success',
       label: 'Success : opération réussie',
@@ -34,7 +33,6 @@ const useNotify = ({ NotificationContextObj = NotificationContext }) => {
 
   const notifyWarning = useCallback(() => {
     addNotification({
-      code: 404,
       detail: '',
       type: 'danger',
       label: 'Warning : opération not found',
@@ -64,7 +62,13 @@ const codeWarning = `
   </Button>
 `;
 
-const NotificationPage = ({ notifyError, notifySuccess, notifyWarning, titleBar, title }) => (
+type TNotificationPage = TLayout &
+  TReturnUseNotify & {
+    titleBar?: ReactNode;
+    title?: ReactNode;
+  };
+
+const NotificationPage = ({ notifyError, notifySuccess, notifyWarning, titleBar = TITLE_BAR, title = TITLE }: TNotificationPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <Accordion>
@@ -118,18 +122,5 @@ const NotificationPage = ({ notifyError, notifySuccess, notifyWarning, titleBar,
     </Accordion>
   </Layout>
 );
-
-NotificationPage.propTypes = {
-  notifyError: func.isRequired,
-  notifySuccess: func.isRequired,
-  notifyWarning: func.isRequired,
-  titleBar: string,
-  title: string,
-};
-
-NotificationPage.defaultProps = {
-  titleBar: TITLE_BAR,
-  title: TITLE,
-};
 
 export default NotificationPage;
