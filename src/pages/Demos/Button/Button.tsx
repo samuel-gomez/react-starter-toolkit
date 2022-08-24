@@ -1,5 +1,5 @@
-import { string } from 'prop-types';
-import Layout from 'Layout';
+import { ReactNode } from 'react';
+import Layout, { TLayout } from 'Layout';
 import { TITLE_BAR, TITLE } from './constants';
 import ButtonClassic from './ButtonClassic';
 import ButtonReversed from './ButtonReversed';
@@ -11,7 +11,12 @@ import ButtonWithRightIcon from './ButtonWithRightIcon';
 import ButtonWithLeftIcon from './ButtonWithLeftIcon';
 import ButtonCircle from './ButtonCircle';
 
-const ButtonPage = ({ titleBar, title }) => (
+type TButtonPage = TLayout & {
+  titleBar?: ReactNode;
+  title?: ReactNode;
+};
+
+const ButtonPage = ({ titleBar = TITLE_BAR, title = TITLE }: TButtonPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <ButtonClassic />
@@ -25,15 +30,5 @@ const ButtonPage = ({ titleBar, title }) => (
     <ButtonCircle />
   </Layout>
 );
-
-ButtonPage.propTypes = {
-  titleBar: string,
-  title: string,
-};
-
-ButtonPage.defaultProps = {
-  titleBar: TITLE_BAR,
-  title: TITLE,
-};
 
 export default ButtonPage;

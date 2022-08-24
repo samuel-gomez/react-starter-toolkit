@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
+exports[`<ModalPageContainer/> Should render ModalPageContainer and called functions 1`] = `
 <body>
   <div>
     <div
@@ -343,16 +343,16 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
         <div
           code="
 <>
-  <Button type=\\"submit\\" onClick={openModalConfirm}>
+  <Button type=\\"submit\\" onClick={openModal}>
     <span className=\\"af-btn__text\\">Click me to launch modal</span>
   </Button>
-  <Modal isOpen={setIsOpen()} onOutsideTap={onCancel} classModifier={classModifier}>
+  <Modal isOpen={isOpen} onOutsideTap={onCancel} classModifier={classModifier}>
     <ModalCommonHeader onCancel={onCancel} title=\\"Validation des informations générales\\" />
     <ModalCommonBody>
       <Alert classModifier=\\"info\\" icon=\\"info-sign\\" title=\\"Vous allez créer un nouvel élément.\\" />
       <p>Confirmez-vous vouloir valider avec les informations suivantes ?</p>      
     </ModalCommonBody>
-    <ModalCommonFooter cancelLabel=\\"Annuler\\" onCancel={onCancel} onSubmit={onCancel} confirmLabel=\\"Valider\\" confirmClassModifier=\\"\\" />
+    <ModalCommonFooter cancelLabel=\\"Annuler\\" onCancel={onCancel} onSubmit={onCancel} confirmLabel=\\"Valider\\" classModifier=\\"\\" />
   </Modal>
 </>
 "
@@ -370,16 +370,16 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
           >
             
 &lt;&gt;
-  &lt;Button type="submit" onClick={openModalConfirm}&gt;
+  &lt;Button type="submit" onClick={openModal}&gt;
     &lt;span className="af-btn__text"&gt;Click me to launch modal&lt;/span&gt;
   &lt;/Button&gt;
-  &lt;Modal isOpen={setIsOpen()} onOutsideTap={onCancel} classModifier={classModifier}&gt;
+  &lt;Modal isOpen={isOpen} onOutsideTap={onCancel} classModifier={classModifier}&gt;
     &lt;ModalCommonHeader onCancel={onCancel} title="Validation des informations générales" /&gt;
     &lt;ModalCommonBody&gt;
       &lt;Alert classModifier="info" icon="info-sign" title="Vous allez créer un nouvel élément." /&gt;
       &lt;p&gt;Confirmez-vous vouloir valider avec les informations suivantes ?&lt;/p&gt;      
     &lt;/ModalCommonBody&gt;
-    &lt;ModalCommonFooter cancelLabel="Annuler" onCancel={onCancel} onSubmit={onCancel} confirmLabel="Valider" confirmClassModifier="" /&gt;
+    &lt;ModalCommonFooter cancelLabel="Annuler" onCancel={onCancel} onSubmit={onCancel} confirmLabel="Valider" classModifier="" /&gt;
   &lt;/Modal&gt;
 &lt;/&gt;
 
@@ -508,7 +508,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
                 class="token tag script language-javascript"
                 style="color: rgb(255, 121, 198);"
               >
-                openModalConfirm
+                openModal
               </span>
               <span
                 class="token tag script language-javascript punctuation"
@@ -693,22 +693,10 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
                 {
               </span>
               <span
-                class="token tag script language-javascript function"
-                style="color: rgb(80, 250, 123);"
+                class="token tag script language-javascript"
+                style="color: rgb(255, 121, 198);"
               >
-                setIsOpen
-              </span>
-              <span
-                class="token tag script language-javascript punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                (
-              </span>
-              <span
-                class="token tag script language-javascript punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                )
+                isOpen
               </span>
               <span
                 class="token tag script language-javascript punctuation"
@@ -1345,7 +1333,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer 1`] = `
                 class="token tag attr-name"
                 style="color: rgb(241, 250, 140);"
               >
-                confirmClassModifier
+                classModifier
               </span>
               <span
                 class="token tag attr-value punctuation attr-equals"

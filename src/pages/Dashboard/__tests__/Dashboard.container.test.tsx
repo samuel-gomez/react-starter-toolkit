@@ -1,10 +1,9 @@
 import { renderWithWrapperStaticRouter } from 'shared/testsUtils';
-import Dashboard from '../Dashboard';
+import Dashboard from '../Dashboard.container';
 
-const defaultProps = {};
 describe('<Dashboard page/>', () => {
   it('Renders Dashboard page component without crashing', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(<Dashboard {...defaultProps} />);
+    const { asFragment } = renderWithWrapperStaticRouter(<Dashboard />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

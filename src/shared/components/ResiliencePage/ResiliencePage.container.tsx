@@ -1,6 +1,6 @@
 import ResiliencePage, { TResiliencePage } from './ResiliencePage';
 
-type TResiliencePageContainer = TResiliencePage & {
+export type TResiliencePageContainer = TResiliencePage & {
   ResiliencePageCmpt?: typeof ResiliencePage;
 };
 

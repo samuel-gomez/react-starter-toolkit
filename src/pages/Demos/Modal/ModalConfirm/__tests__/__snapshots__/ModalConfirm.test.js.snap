@@ -1,3 +1,127 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ModalConfirm/> Should render ModalConfirm 1`] = `<DocumentFragment />`;
+exports[`<ModalConfirm/> Should render ModalConfirm 1`] = `
+<body>
+  <div />
+  <div
+    class="ReactModalPortal"
+  />
+</body>
+`;
+
+exports[`<ModalConfirm/> Should render ModalConfirm opened 1`] = `
+<body
+  aria-hidden="true"
+  class="ReactModal__Body--open"
+>
+  <div
+    data-react-modal-body-trap=""
+    style="position: absolute; opacity: 0;"
+    tabindex="0"
+  />
+  <div />
+  <div
+    data-react-modal-body-trap=""
+    style="position: absolute; opacity: 0;"
+    tabindex="0"
+  />
+  <div
+    class="ReactModalPortal"
+  >
+    <div
+      class="ReactModal__Overlay"
+      style="position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: rgba(255, 255, 255, 0.75);"
+    >
+      <div
+        aria-label=""
+        aria-modal="true"
+        class="ReactModal__Content af-modal"
+        role="dialog"
+        tabindex="-1"
+      >
+        <div
+          class="af-modal__dialog"
+        >
+          <div
+            class="af-modal__content"
+          >
+            <div
+              class="af-modal__header"
+            >
+              <h4
+                class="af-modal__header-title"
+              >
+                Validation des informations générales
+              </h4>
+              <button
+                aria-label="Close"
+                class="af-modal__header-close-btn"
+                type="button"
+              >
+                <span
+                  aria-hidden="true"
+                  class="glyphicon glyphicon-close"
+                />
+              </button>
+            </div>
+            <div
+              class="af-modal__body"
+            >
+              <div
+                class="af-alert af-alert--info"
+                role="alert"
+              >
+                <div
+                  class="af-alert__title"
+                >
+                  <div
+                    class="af-alert__title-icon"
+                  >
+                    <i
+                      class="glyphicon glyphicon-info-sign"
+                    />
+                  </div>
+                  <div
+                    class="af-alert__title-text"
+                  >
+                    Vous allez créer un nouvel élément.
+                  </div>
+                </div>
+              </div>
+              <p>
+                Confirmez-vous vouloir valider avec les informations suivantes ?
+              </p>
+            </div>
+            <div
+              class="af-modal__footer"
+            >
+              <button
+                class="btn af-btn af-btn--reverse"
+              >
+                <span
+                  class="af-btn__text"
+                >
+                  Annuler
+                </span>
+              </button>
+              <button
+                class="btn af-btn af-btn--hasiconRight"
+                type="button"
+              >
+                <span
+                  class="af-btn__text"
+                >
+                  Valider
+                </span>
+                <i
+                  class="glyphicon glyphicon-arrowthin-right"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
