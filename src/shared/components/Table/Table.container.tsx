@@ -7,7 +7,7 @@ type TTableContainer = TTable & {
 };
 
 const TableContainer = ({ children, TableCmpt = Table, items = [], headers = [], ...restTable }: TTableContainer) =>
-  !!(items.length > 0) ? (
+  !(items.length <= 0) ? (
     <TableCmpt items={items} headers={headers} {...restTable}>
       {children}
     </TableCmpt>
