@@ -40,6 +40,7 @@ exports[`<Unauthorize page/> Renders Unauthorize page component without crashing
         >
           forbidden
           <br />
+          found
         </span>
       </div>
     </h1>
