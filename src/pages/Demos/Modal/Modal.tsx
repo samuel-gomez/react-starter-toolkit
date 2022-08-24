@@ -1,29 +1,35 @@
-import { func, string } from 'prop-types';
 import { Button, Alert } from '@axa-fr/react-toolkit-all';
 import Modal from '@axa-fr/react-toolkit-modal-default';
-import Layout from 'Layout';
+import Layout, { TLayout } from 'Layout';
+import { ReactNode } from 'react';
 import LiveCode from 'shared/components/LiveCode';
-import { ModalCommonHeader, ModalCommonBody, ModalCommonFooter } from 'shared/components/ModalCommon';
+import { ModalCommonHeader, ModalCommonBody, ModalCommonFooter, TReturnUseToggleModal } from 'shared/components/ModalCommon';
 import { TITLE_BAR, TITLE } from './constants';
 
 const scope = { Button, Modal, ModalCommonHeader, ModalCommonBody, ModalCommonFooter, Alert };
 const code = `
 <>
-  <Button type="submit" onClick={openModalConfirm}>
+  <Button type="submit" onClick={openModal}>
     <span className="af-btn__text">Click me to launch modal</span>
   </Button>
-  <Modal isOpen={setIsOpen()} onOutsideTap={onCancel} classModifier={classModifier}>
+  <Modal isOpen={isOpen} onOutsideTap={onCancel} classModifier={classModifier}>
     <ModalCommonHeader onCancel={onCancel} title="Validation des informations générales" />
     <ModalCommonBody>
       <Alert classModifier="info" icon="info-sign" title="Vous allez créer un nouvel élément." />
       <p>Confirmez-vous vouloir valider avec les informations suivantes ?</p>      
     </ModalCommonBody>
-    <ModalCommonFooter cancelLabel="Annuler" onCancel={onCancel} onSubmit={onCancel} confirmLabel="Valider" confirmClassModifier="" />
+    <ModalCommonFooter cancelLabel="Annuler" onCancel={onCancel} onSubmit={onCancel} confirmLabel="Valider" classModifier="" />
   </Modal>
 </>
 `;
 
-const ModalPage = ({ titleBar, title, openModalConfirm, modalConfirmProps }) => (
+type TModalPage = TLayout &
+  TReturnUseToggleModal & {
+    titleBar?: ReactNode;
+    title?: ReactNode;
+  };
+
+const ModalPage = ({ titleBar = TITLE_BAR, title = TITLE, openModal, isOpen, onCancel }: TModalPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <a
@@ -39,24 +45,13 @@ const ModalPage = ({ titleBar, title, openModalConfirm, modalConfirmProps }) => 
       code={code}
       scope={{
         ...scope,
-        openModalConfirm,
-        onCancel: modalConfirmProps.onCancel,
+        openModal,
+        onCancel,
+        isOpen,
         classModifier: '',
-        setIsOpen: () => modalConfirmProps.isOpen,
       }}
     />
   </Layout>
 );
-
-ModalPage.propTypes = {
-  openModalConfirm: func.isRequired,
-  titleBar: string,
-  title: string,
-};
-
-ModalPage.defaultProps = {
-  titleBar: TITLE_BAR,
-  title: TITLE,
-};
 
 export default ModalPage;

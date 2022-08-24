@@ -9,7 +9,12 @@ const defaultProps = {
 
 describe('<ModalConfirm/>', () => {
   it('Should render ModalConfirm', () => {
-    const { asFragment } = render(<ModalConfirm {...defaultProps} />);
-    expect(asFragment()).toMatchSnapshot();
+    const { baseElement } = render(<ModalConfirm {...defaultProps} />);
+    expect(baseElement).toMatchSnapshot();
+  });
+
+  it('Should render ModalConfirm opened', () => {
+    const { baseElement } = render(<ModalConfirm {...defaultProps} isOpen />);
+    expect(baseElement).toMatchSnapshot();
   });
 });
