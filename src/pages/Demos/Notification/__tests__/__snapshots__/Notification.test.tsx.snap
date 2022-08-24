@@ -370,7 +370,6 @@ const useNotify = ({ NotificationContextObj = NotificationContext }) => {
 
   const notifyError = useCallback(() => {
     addNotification({
-      code: 500,
       detail: '',
       label: 'Erreur : Contactez le support',
       id: 'idNotifyAnomaly',
@@ -379,7 +378,6 @@ const useNotify = ({ NotificationContextObj = NotificationContext }) => {
 
   const notifySuccess = useCallback(() => {
     addNotification({
-      code: 200,
       detail: '',
       type: 'success',
       label: 'Success : opération réussie',
@@ -389,7 +387,6 @@ const useNotify = ({ NotificationContextObj = NotificationContext }) => {
 
   const notifyWarning = useCallback(() => {
     addNotification({
-      code: 404,
       detail: '',
       type: 'danger',
       label: 'Warning : opération not found',
@@ -418,7 +415,6 @@ const useNotify = ({ NotificationContextObj = NotificationContext }) =&gt; {
 
   const notifyError = useCallback(() =&gt; {
     addNotification({
-      code: 500,
       detail: '',
       label: 'Erreur : Contactez le support',
       id: 'idNotifyAnomaly',
@@ -427,7 +423,6 @@ const useNotify = ({ NotificationContextObj = NotificationContext }) =&gt; {
 
   const notifySuccess = useCallback(() =&gt; {
     addNotification({
-      code: 200,
       detail: '',
       type: 'success',
       label: 'Success : opération réussie',
@@ -437,7 +432,6 @@ const useNotify = ({ NotificationContextObj = NotificationContext }) =&gt; {
 
   const notifyWarning = useCallback(() =&gt; {
     addNotification({
-      code: 404,
       detail: '',
       type: 'danger',
       label: 'Warning : opération not found',
@@ -807,45 +801,6 @@ const useNotify = ({ NotificationContextObj = NotificationContext }) =&gt; {
                   <span
                     class="token literal-property property"
                   >
-                    code
-                  </span>
-                  <span
-                    class="token operator"
-                  >
-                    :
-                  </span>
-                  <span
-                    class="token plain"
-                  >
-                     
-                  </span>
-                  <span
-                    class="token number"
-                  >
-                    500
-                  </span>
-                  <span
-                    class="token punctuation"
-                    style="color: rgb(248, 248, 242);"
-                  >
-                    ,
-                  </span>
-                  <span
-                    class="token plain"
-                  />
-                </div>
-                <div
-                  class="token-line"
-                  style="color: rgb(248, 248, 242);"
-                >
-                  <span
-                    class="token plain"
-                  >
-                          
-                  </span>
-                  <span
-                    class="token literal-property property"
-                  >
                     detail
                   </span>
                   <span
@@ -1161,45 +1116,6 @@ const useNotify = ({ NotificationContextObj = NotificationContext }) =&gt; {
                     style="color: rgb(248, 248, 242);"
                   >
                     {
-                  </span>
-                  <span
-                    class="token plain"
-                  />
-                </div>
-                <div
-                  class="token-line"
-                  style="color: rgb(248, 248, 242);"
-                >
-                  <span
-                    class="token plain"
-                  >
-                          
-                  </span>
-                  <span
-                    class="token literal-property property"
-                  >
-                    code
-                  </span>
-                  <span
-                    class="token operator"
-                  >
-                    :
-                  </span>
-                  <span
-                    class="token plain"
-                  >
-                     
-                  </span>
-                  <span
-                    class="token number"
-                  >
-                    200
-                  </span>
-                  <span
-                    class="token punctuation"
-                    style="color: rgb(248, 248, 242);"
-                  >
-                    ,
                   </span>
                   <span
                     class="token plain"
@@ -1572,45 +1488,6 @@ const useNotify = ({ NotificationContextObj = NotificationContext }) =&gt; {
                     style="color: rgb(248, 248, 242);"
                   >
                     {
-                  </span>
-                  <span
-                    class="token plain"
-                  />
-                </div>
-                <div
-                  class="token-line"
-                  style="color: rgb(248, 248, 242);"
-                >
-                  <span
-                    class="token plain"
-                  >
-                          
-                  </span>
-                  <span
-                    class="token literal-property property"
-                  >
-                    code
-                  </span>
-                  <span
-                    class="token operator"
-                  >
-                    :
-                  </span>
-                  <span
-                    class="token plain"
-                  >
-                     
-                  </span>
-                  <span
-                    class="token number"
-                  >
-                    404
-                  </span>
-                  <span
-                    class="token punctuation"
-                    style="color: rgb(248, 248, 242);"
-                  >
-                    ,
                   </span>
                   <span
                     class="token plain"

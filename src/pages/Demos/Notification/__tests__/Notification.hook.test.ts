@@ -1,21 +1,23 @@
 import { renderHook, act } from '@testing-library/react-hooks';
+import { TNotificationContext } from 'App/NotificationProvider/NotificationProvider';
 import { createContext } from 'react';
 import useNotify from '../Notification.hook';
 
 describe('useNotify', () => {
   const addNotification = jest.fn();
   const useContextFn = jest.fn();
+
   it('Should return notifyError, notifySuccess, notifyWarning when notifyError called', () => {
     renderHook(() => useNotify({ useContextFn }));
     expect(useContextFn).toBeCalled();
   });
 
-  const NotificationContext = createContext({ addNotification });
+  const NotificationContext = createContext<TNotificationContext>({ addNotification });
+
   it('Should addNotification for error have been called when notifyError called', () => {
     const { result } = renderHook(() => useNotify({ NotificationContextObj: NotificationContext }));
     act(() => result.current.notifyError());
     expect(addNotification).toHaveBeenCalledWith({
-      code: 500,
       detail: '',
       id: 'idNotifyAnomaly',
       label: 'Erreur : Contactez le support',
@@ -26,7 +28,6 @@ describe('useNotify', () => {
     const { result } = renderHook(() => useNotify({ NotificationContextObj: NotificationContext }));
     act(() => result.current.notifySuccess());
     expect(addNotification).toHaveBeenCalledWith({
-      code: 200,
       detail: '',
       id: 'idNotifySuccess',
       type: 'success',
@@ -38,7 +39,6 @@ describe('useNotify', () => {
     const { result } = renderHook(() => useNotify({ NotificationContextObj: NotificationContext }));
     act(() => result.current.notifyWarning());
     expect(addNotification).toHaveBeenCalledWith({
-      code: 404,
       detail: '',
       id: 'idNotifyDanger',
       type: 'danger',

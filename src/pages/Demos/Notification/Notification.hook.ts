@@ -6,7 +6,6 @@ const useNotify = ({ useContextFn = useContext, NotificationContextObj = Notific
 
   const notifyError = useCallback(() => {
     addNotification({
-      code: 500,
       detail: '',
       label: 'Erreur : Contactez le support',
       id: 'idNotifyAnomaly',
@@ -15,7 +14,6 @@ const useNotify = ({ useContextFn = useContext, NotificationContextObj = Notific
 
   const notifySuccess = useCallback(() => {
     addNotification({
-      code: 200,
       detail: '',
       type: 'success',
       label: 'Success : opération réussie',
@@ -25,7 +23,6 @@ const useNotify = ({ useContextFn = useContext, NotificationContextObj = Notific
 
   const notifyWarning = useCallback(() => {
     addNotification({
-      code: 404,
       detail: '',
       type: 'danger',
       label: 'Warning : opération not found',
@@ -35,5 +32,7 @@ const useNotify = ({ useContextFn = useContext, NotificationContextObj = Notific
 
   return { notifyError, notifySuccess, notifyWarning };
 };
+
+export type TReturnUseNotify = ReturnType<typeof useNotify>;
 
 export default useNotify;
