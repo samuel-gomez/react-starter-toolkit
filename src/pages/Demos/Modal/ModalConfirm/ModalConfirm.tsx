@@ -1,4 +1,3 @@
-import { bool, func, string } from 'prop-types';
 import { Alert } from '@axa-fr/react-toolkit-all';
 import Modal from '@axa-fr/react-toolkit-modal-default';
 import { ModalCommonHeader, ModalCommonBody, ModalCommonFooter, TReturnUseToggleModal } from 'shared/components/ModalCommon';
