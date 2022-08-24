@@ -5,7 +5,7 @@ import { TNotification } from './Notifications/Notification';
 export type TaddNotification = (notification: TNotification) => void;
 export type TonDeleteNotification = ((id: string) => void) | null;
 
-type TReturnUseNotification = {
+export type TReturnUseNotification = {
   addNotification: TaddNotification;
   onDeleteNotification: TonDeleteNotification;
   clearAllNotifications: (() => void) | null;
