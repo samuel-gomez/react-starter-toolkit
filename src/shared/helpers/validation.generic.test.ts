@@ -1,6 +1,14 @@
-import { validate, genericHandleChange, computeInitialStateErrorMessage, hasErrorMessage, getErrorsList, getValuesList } from './validation.generic';
+import {
+  validate,
+  genericHandleChange,
+  computeInitialStateErrorMessage,
+  hasErrorMessage,
+  getErrorsList,
+  getValuesList,
+  setMessage,
+} from './validation.generic';
 
-import { MSG_REQUIRED } from '../constants';
+import { MSG_ERROR_FORMAT, MSG_REQUIRED } from '../constants';
 
 const rulesRequired = {
   required: {
@@ -9,71 +17,93 @@ const rulesRequired = {
 };
 
 const rules = {
-  NORME: [rulesRequired],
-  PROCESSUS: [rulesRequired],
+  NAME: [rulesRequired],
+  EMAIL: [rulesRequired],
   YEAR: [rulesRequired],
   QUARTER: [rulesRequired],
   ENTITY: [rulesRequired],
 };
 
-describe('validation.generic.js - Valid the form with the rules', () => {
-  it('Should valid the norme', () => {
-    // arrange
-    const givenNorme = 'IFRS17';
+describe('setMessage', () => {
+  const validateFn = jest.fn();
+  it.each`
+    inputRules   | viewValue       | value        | values       | errors       | mockReturnValue       | expected
+    ${undefined} | ${undefined}    | ${undefined} | ${undefined} | ${undefined} | ${undefined}          | ${null}
+    ${undefined} | ${undefined}    | ${undefined} | ${[]}        | ${undefined} | ${undefined}          | ${null}
+    ${undefined} | ${undefined}    | ${undefined} | ${[]}        | ${['error']} | ${undefined}          | ${MSG_ERROR_FORMAT}
+    ${['rule']}  | ${'01/01/2022'} | ${undefined} | ${undefined} | ${undefined} | ${'viewValueMessage'} | ${'viewValueMessage'}
+    ${['rule']}  | ${undefined}    | ${'text'}    | ${undefined} | ${undefined} | ${'valueMessage'}     | ${'valueMessage'}
+  `(
+    'Should return exoected: $expected when inputRules: $inputRules, viewValue: $viewValue, value: $value, values: $values, errors: $errors',
+    ({ inputRules, viewValue, value, values, errors, mockReturnValue, expected }) => {
+      validateFn.mockReturnValue(mockReturnValue);
 
-    // act
-    const valid = validate({ rules: rules.NORME, value: givenNorme });
+      const result = setMessage({
+        inputRules,
+        viewValue,
+        value,
+        values,
+        errors,
+        validateFn,
+      });
+      expect(result).toEqual(expected);
 
-    // assert
-    expect(valid).toBe(null);
-  });
+      if (viewValue !== undefined) {
+        expect(validateFn).toHaveBeenCalledWith({
+          rules: inputRules,
+          value: viewValue,
+        });
+      } else if (viewValue === undefined && value !== undefined) {
+        expect(validateFn).toHaveBeenCalledWith({
+          rules: inputRules,
+          value,
+        });
+      } else {
+        expect(validateFn).not.toHaveBeenCalled();
+      }
+    },
+  );
+});
 
-  it('Should valid the norme', () => {
-    // arrange
-    const givenNorme = 12345678;
+describe('validate', () => {
+  const expectedMessage = 'this is this first error';
+  const firstError = jest.fn();
+  const validateView = jest.fn();
+  const ValidateFn = {
+    validation: {
+      firstError,
+      validateView,
+      add: jest.fn(),
+      validateModel: jest.fn(),
+      validateDependencies: jest.fn(),
+    },
+    objectValidation: {
+      validateModel: jest.fn(),
+      getFunctions: jest.fn(),
+      getFunctionsResult: jest.fn(),
+    },
+  };
 
-    // act
-    const valid = validate({ rules: rules.NORME, value: givenNorme });
+  it.each`
+    value        | rules         | firstErrorValue                 | validateViewValue | expected
+    ${undefined} | ${undefined}  | ${null}                         | ${[]}             | ${null}
+    ${'myvalue'} | ${rules.NAME} | ${null}                         | ${[]}             | ${null}
+    ${12345678}  | ${rules.NAME} | ${null}                         | ${[]}             | ${null}
+    ${''}        | ${rules.NAME} | ${{ message: expectedMessage }} | ${[]}             | ${expectedMessage}
+  `(
+    'Should return exoected: $expected when value: $value, rules: $rules, firstErrorValue: $firstErrorValue, validateViewValue: $validateViewValue',
+    ({ value, rules, firstErrorValue, validateViewValue, expected }) => {
+      firstError.mockReturnValue(firstErrorValue);
+      validateView.mockReturnValue(validateViewValue);
 
-    // assert
-    expect(valid).toBe(null);
-  });
+      const result = validate({ rules, value, ValidateFn });
 
-  it('Should return null When NORME value equal "123456789" ', () => {
-    const ValidateMock = {
-      validation: {
-        firstError: jest.fn().mockReturnValue(null),
-        validateView: jest.fn().mockReturnValue([]),
-      },
-    };
+      expect(result).toEqual(expected);
+    },
+  );
+});
 
-    const result = validate({
-      ValidateFn: ValidateMock,
-      rules: rules.NORME,
-      value: '12345678',
-    });
-
-    expect(result).toBe(null);
-  });
-
-  it('Should return first message result the norme value is empty', () => {
-    const expectedMessage = 'this is this first error';
-    const ValidateMock = {
-      validation: {
-        firstError: jest.fn().mockReturnValue({ message: expectedMessage }),
-        validateView: jest.fn().mockReturnValue([]),
-      },
-    };
-
-    const result = validate({
-      ValidateFn: ValidateMock,
-      rules: rules.NORME,
-      value: '',
-    });
-
-    expect(result).toBe(expectedMessage);
-  });
-
+describe('genericHandleChange', () => {
   it('Should return state with message "Format de fichier incorrect" when event.errors not empty and event.values is defined', () => {
     const rules = {
       agent: [{ required: { message: 'Format de fichier incorrect' } }],
@@ -531,7 +561,7 @@ describe('Function getErrorsList', () => {
         message: null,
       },
     };
-    const expected = [];
+    const expected = [] as ReturnType<typeof getErrorsList>;
     const results = getErrorsList(fields);
     expect(results).toEqual(expected);
   });
@@ -542,12 +572,15 @@ describe('Function getValuesList', () => {
     const fields = {
       lastname: {
         value: 'doe',
+        message: null,
       },
       firstname: {
         value: 'john',
+        message: null,
       },
       birthdate: {
         value: '',
+        message: null,
       },
     };
     const expected = ['lastname', 'firstname'];
@@ -559,15 +592,18 @@ describe('Function getValuesList', () => {
     const fields = {
       lastname: {
         value: '',
+        message: null,
       },
       firstname: {
         value: '',
+        message: null,
       },
       birthdate: {
         value: null,
+        message: null,
       },
     };
-    const expected = [];
+    const expected = [] as ReturnType<typeof getErrorsList>;
     const results = getValuesList(fields);
     expect(results).toEqual(expected);
   });

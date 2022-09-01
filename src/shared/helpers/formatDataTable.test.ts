@@ -6,11 +6,6 @@ describe('setTextTooltip', () => {
     expect(result).toEqual({ '': { label: '' } });
   });
 
-  it('Should return {"item1": {"label": null}} when call text === null', () => {
-    const result = setTextTooltip({ text: null, name: 'item1', maxDisplay: 5 });
-    expect(result).toEqual({ item1: { label: null } });
-  });
-
   it('Should return {"item1": {"label": "txt"}} for when call text.length <= maxDisplay[item1]', () => {
     const result = setTextTooltip({ text: 'txt', name: 'item1', maxDisplay: 5 });
     expect(result).toEqual({ item1: { label: 'txt' } });

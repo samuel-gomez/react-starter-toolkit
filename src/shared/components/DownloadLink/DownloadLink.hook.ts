@@ -97,12 +97,20 @@ type TsetDownloadFile = {
   fileName: string;
   state: typeof INITIAL_STATE;
   hasSubmit: boolean;
+  type?: string;
 };
 
-export const setDownloadFile = ({ fileName, state, hasSubmit, isEmptyOrNullFn = isEmptyOrNull, downloadjsFn = downloadjs }: TsetDownloadFile) => {
+export const setDownloadFile = ({
+  fileName,
+  state,
+  hasSubmit,
+  type = 'text/csv',
+  isEmptyOrNullFn = isEmptyOrNull,
+  downloadjsFn = downloadjs,
+}: TsetDownloadFile) => {
   const { downloadFile, isLoading } = state;
   if (!isEmptyOrNullFn(downloadFile) && fileName && hasSubmit && !isLoading) {
-    downloadjsFn(downloadFile, fileName, 'text/csv');
+    downloadjsFn(downloadFile, fileName, type);
   }
 };
 
