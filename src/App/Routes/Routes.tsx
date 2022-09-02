@@ -2,13 +2,13 @@ import { useContext, ComponentProps } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import PageNotFound from 'pages/NotFound';
 import PageUnauthorize from 'pages/Unauthorize';
-import Members from 'pages/Members';
-import SearchMembers from 'pages/SearchMembers';
-import SlashDesignSystem from 'pages/SlashDesignSystem';
+import Members from 'pages/Demos/Members';
+import SearchMembers from 'pages/Demos/SearchMembers';
+import SlashDesignSystem from 'pages/Demos/SlashDesignSystem';
 import Modal from 'pages/Demos/Modal';
 import Button from 'pages/Demos/Button';
 import Notification from 'pages/Demos/Notification';
-import Dashboard from 'pages/Dashboard';
+import Home from 'pages/Home';
 import ROUTE_URL from 'App/Routes/constants';
 import { UserContext } from 'App/UserProvider';
 import Loader, { MODES } from 'shared/components/Loader';
@@ -39,7 +39,7 @@ export const withAuth = <T extends object>(
 
 type TRoutesCmpt = {
   SlashDesignSystemCmpt?: typeof SlashDesignSystem;
-  DashboardCmpt?: typeof Dashboard;
+  HomeCmpt?: typeof Home;
   MembersCmpt?: typeof Members;
   SearchMembersCmpt?: typeof SearchMembers;
   ModalCmpt?: typeof Modal;
@@ -51,7 +51,7 @@ type TRoutesCmpt = {
 
 const RoutesCmpt = ({
   SlashDesignSystemCmpt = SlashDesignSystem,
-  DashboardCmpt = Dashboard,
+  HomeCmpt = Home,
   MembersCmpt = Members,
   SearchMembersCmpt = SearchMembers,
   ModalCmpt = Modal,
@@ -61,13 +61,15 @@ const RoutesCmpt = ({
   withAuthFn = withAuth,
 }: TRoutesCmpt) => (
   <Routes>
-    <Route path={ROUTE_URL.SLASH} element={withAuthFn(SlashDesignSystemCmpt)} />
-    <Route path={ROUTE_URL.MEMBERS} element={withAuthFn(MembersCmpt)} />
-    <Route path={ROUTE_URL.SEARCHMEMBERS} element={withAuthFn(SearchMembersCmpt)} />
-    <Route path={ROUTE_URL.MODAL} element={withAuthFn(ModalCmpt)} />
-    <Route path={ROUTE_URL.BUTTON} element={withAuthFn(ButtonCmpt)} />
-    <Route path={ROUTE_URL.NOTIFICATION} element={withAuthFn(NotificationCmpt)} />
-    <Route path={ROUTE_URL.DASHBOARD} element={withAuthFn(DashboardCmpt)} />
+    <Route path={ROUTE_URL.HOME} element={withAuthFn(HomeCmpt)} />
+    <Route path="demos">
+      <Route index element={withAuthFn(SlashDesignSystemCmpt)} />
+      <Route path={ROUTE_URL.MEMBERS} element={withAuthFn(MembersCmpt)} />
+      <Route path={ROUTE_URL.SEARCHMEMBERS} element={withAuthFn(SearchMembersCmpt)} />
+      <Route path={ROUTE_URL.MODAL} element={withAuthFn(ModalCmpt)} />
+      <Route path={ROUTE_URL.BUTTON} element={withAuthFn(ButtonCmpt)} />
+      <Route path={ROUTE_URL.NOTIFICATION} element={withAuthFn(NotificationCmpt)} />
+    </Route>
     <Route path={ROUTE_URL.UNAUTHORIZE} element={<PageUnauthorizeCmpt />} />
     <Route path="*" element={<PageNotFound />} />
   </Routes>

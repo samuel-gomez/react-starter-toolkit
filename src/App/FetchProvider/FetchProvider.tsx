@@ -1,9 +1,10 @@
 import { createContext } from 'react';
 import { QueryClient, QueryClientProvider, QueryKey } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import { setResponseError, mergeObj } from 'shared/helpers';
+import { mergeObj } from 'shared/helpers';
 import { STATUS_API, STATUS_HTTP_MESSAGES } from 'shared/constants';
 import { useOidcAccessToken } from '@axa-fr/react-oidc-context';
+import setResponseError from './setResponseError';
 
 export type FetchContextType = {
   fetchCustom: (path: string, customConfig: object) => Promise<Response> | null;

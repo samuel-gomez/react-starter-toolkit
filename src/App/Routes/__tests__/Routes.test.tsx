@@ -10,9 +10,10 @@ const defaultPropsMock = {
   SlashDesignSystemCmpt: () => <div>SlashDesignSystemCmpt</div>,
   MembersCmpt: () => <div>MembersCmpt</div>,
   SearchMembersCmpt: () => <div>SearchMembersCmpt</div>,
-  DashboardCmpt: () => <div>DashboardCmpt</div>,
+  HomeCmpt: () => <div>HomeCmpt</div>,
   ModalCmpt: () => <div>ModalCmpt</div>,
   ButtonCmpt: () => <div>ButtonCmpt</div>,
+  NotificationCmpt: () => <div>NotificationCmpt</div>,
   PageUnauthorizeCmpt: () => <div>PageUnauthorizeCmpt</div>,
 };
 
@@ -41,11 +42,12 @@ describe('<Routes />', () => {
   it.each`
     role  | name        | route
     ${''} | ${'Samuel'} | ${'/'}
-    ${''} | ${'Samuel'} | ${'/members'}
-    ${''} | ${'Samuel'} | ${'/dashboard'}
-    ${''} | ${'Samuel'} | ${'/search-members'}
+    ${''} | ${'Samuel'} | ${'/demos'}
+    ${''} | ${'Samuel'} | ${'/demos/members'}
+    ${''} | ${'Samuel'} | ${'/demos/search-members'}
     ${''} | ${'Samuel'} | ${'/demos/modal'}
     ${''} | ${'Samuel'} | ${'/demos/button'}
+    ${''} | ${'Samuel'} | ${'/demos/notification'}
     ${''} | ${'Samuel'} | ${'/forbidden'}
   `('Should render page when user profil is authorized, role: $role, name: $name, route: $route', ({ role, name, route }) => {
     const { asFragment } = renderRoute({ role, name, route });
@@ -55,11 +57,12 @@ describe('<Routes />', () => {
   it.each`
     role                   | name     | route
     ${'user unauthorized'} | ${'sam'} | ${'/'}
-    ${'user unauthorized'} | ${'sam'} | ${'/members'}
-    ${'user unauthorized'} | ${'sam'} | ${'/dashboard'}
-    ${'user unauthorized'} | ${'sam'} | ${'/search-members'}
+    ${'user unauthorized'} | ${'sam'} | ${'/demos'}
+    ${'user unauthorized'} | ${'sam'} | ${'/demos/members'}
+    ${'user unauthorized'} | ${'sam'} | ${'/demos/search-members'}
     ${'user unauthorized'} | ${'sam'} | ${'/demos/modal'}
     ${'user unauthorized'} | ${'sam'} | ${'/demos/button'}
+    ${'user unauthorized'} | ${'sam'} | ${'/demos/notification'}
   `('Should render forbidden page when user profil is unauthorized, role: $role, name: $name, route: $route', ({ role, name, route }) => {
     const UserContextObjMock = createContext({ authName: '', authRole: role, authUid: '', isEnabled: true, isLoading: false });
     const { getByText } = renderRoute({

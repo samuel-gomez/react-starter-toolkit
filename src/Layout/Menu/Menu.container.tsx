@@ -43,11 +43,26 @@ export const useMenuVisible = (initState = false) => {
   return { isVisible, setIsMenuVisible };
 };
 
+export const computeMenuItems = (menuItems: TMenu['menuItems'] = [], basePathParent?: string) =>
+  menuItems.map(({ basePathChildren, ...item }) => {
+    if (item.children) {
+      const children: TMenuItemBase[] = basePathChildren ? computeMenuItems(item.children, basePathChildren) : computeMenuItems(item.children);
+
+      return { ...item, children };
+    }
+
+    if (basePathParent && item.url) {
+      return { ...item, url: `${basePathParent}/${item.url}` };
+    }
+    return item;
+  });
+
 type TMenuEnhanced = {
   setPositionInitFn?: typeof setPositionInit;
   setToggleMenuFn?: typeof setToggleMenu;
   useLocationFn?: typeof useLocation;
   useMenuVisibleFn?: typeof useMenuVisible;
+  computeMenuItemsFn?: typeof computeMenuItems;
   menuItems?: TMenu['menuItems'];
 } & TMenu;
 
@@ -57,17 +72,19 @@ const MenuEnhanced = ({
   setToggleMenuFn = setToggleMenu,
   useLocationFn = useLocation,
   useMenuVisibleFn = useMenuVisible,
+  computeMenuItemsFn = computeMenuItems,
   ...rest
 }: TMenuEnhanced) => {
+  const computedMenuItems = useMemo(() => computeMenuItemsFn(menuItems), [computeMenuItemsFn, menuItems]);
   const { pathname } = useLocationFn();
-  const positionInit = useMemo(() => setPositionInitFn({ menuItems, pathname }), [menuItems, pathname, setPositionInitFn]);
+  const positionInit = useMemo(() => setPositionInitFn({ menuItems: computedMenuItems, pathname }), [computedMenuItems, pathname, setPositionInitFn]);
   const { isVisible, setIsMenuVisible } = useMenuVisibleFn();
 
   const toggleMenu = useCallback(() => setToggleMenuFn({ setIsMenuVisible, isVisible }), [isVisible, setIsMenuVisible, setToggleMenuFn]);
 
   return (
     <>
-      <Menu {...rest} menuItems={menuItems} isVisible={isVisible} onClick={toggleMenu} positionInit={positionInit || 0} />
+      <Menu {...rest} menuItems={computedMenuItems} isVisible={isVisible} onClick={toggleMenu} positionInit={positionInit || 0} />
       <ToggleButton idControl="mainmenu">
         <Action
           className="btn af-title-bar__mobile-menu af-btn--circle"

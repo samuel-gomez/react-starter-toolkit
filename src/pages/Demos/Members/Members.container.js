@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 import { func } from 'prop-types';
-import setLoaderMode from 'shared/helpers/setLoaderMode';
+import { setLoaderMode } from 'shared/components/Loader';
 import Members from './Members';
 import { useMembers } from './Members.hook';
 

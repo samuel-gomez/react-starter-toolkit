@@ -1,72 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<DownloadLinkEnhanced /> Should call getDownloadPathFn and setFileNameFn with proper params 1`] = `
-<DocumentFragment>
-  <div
-    class="af-loader af-loader--fullscreen"
-  >
-    <button
-      aria-label="Télécharger"
-      class="af-link af-link--hasIconLeft af-link--download"
-      type="button"
-    >
-      <svg
-        aria-labelledby="title"
-        class="af-download-link__icon"
-        role="img"
-        viewBox="0 0 100 100"
-      >
-        <title>
-          download-csv
-        </title>
-        <path
-          d="M70.4 5H13.9v90h72.2V20.7L70.4 5zM83 91.2H50v-7.8h24.7V67.8H49.9v-5.2L63 39.8h-6.8V16.9H43.5v22.9h-6.8l13.1 22.7v5.2H25v15.6h24.8v7.8H16.7V8.4h53.8v12.3H83v70.5zM49.7 76.3l-1-.4c-.8-.3-1.6-1-1.6-2.2 0-1.3 1.2-2.4 2.9-2.4.9 0 1.9.3 2.6 1l-1 1.3c-.5-.4-1-.6-1.6-.6-.5 0-.8.2-.8.5 0 .4.4.5 1.2.8l.9.4c1 .4 1.5 1.1 1.5 2.1 0 1.3-1.1 2.5-3 2.5-1 0-2.1-.4-3-1.1l1.2-1.4c.6.4 1.2.8 1.8.8.6 0 .9-.2.9-.6 0-.3-.4-.4-1-.7zm3.4-4.8h2.2l.8 3.4c.2.8.4 1.6.6 2.5.2-.8.4-1.6.6-2.5l.8-3.4h2.1l-2.3 7.8h-2.5l-2.3-7.8zm-9 6.1c.6 0 1.1-.3 1.4-.7l1.1 1.3c-.7.8-1.6 1.2-2.6 1.2-2 0-3.7-1.3-3.7-4 0-2.6 1.8-4.1 3.8-4.1 1 0 1.9.5 2.4 1l-1.1 1.3c-.4-.3-.8-.6-1.3-.6-.9 0-1.7.8-1.7 2.3 0 1.5.7 2.3 1.7 2.3z"
-        />
-      </svg>
-      <span
-        class="af-link__text"
-      >
-        Télécharger
-      </span>
-    </button>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`<DownloadLinkEnhanced /> Should call getDownloadPathFn and setFileNameFn with proper params 2  1`] = `
-<DocumentFragment>
-  <div
-    class="af-loader af-loader--fullscreen"
-  >
-    <button
-      aria-label="Télécharger"
-      class="af-link af-link--hasIconLeft af-link--download"
-      type="button"
-    >
-      <svg
-        aria-labelledby="title"
-        class="af-download-link__icon"
-        role="img"
-        viewBox="0 0 100 100"
-      >
-        <title>
-          download-csv
-        </title>
-        <path
-          d="M70.4 5H13.9v90h72.2V20.7L70.4 5zM83 91.2H50v-7.8h24.7V67.8H49.9v-5.2L63 39.8h-6.8V16.9H43.5v22.9h-6.8l13.1 22.7v5.2H25v15.6h24.8v7.8H16.7V8.4h53.8v12.3H83v70.5zM49.7 76.3l-1-.4c-.8-.3-1.6-1-1.6-2.2 0-1.3 1.2-2.4 2.9-2.4.9 0 1.9.3 2.6 1l-1 1.3c-.5-.4-1-.6-1.6-.6-.5 0-.8.2-.8.5 0 .4.4.5 1.2.8l.9.4c1 .4 1.5 1.1 1.5 2.1 0 1.3-1.1 2.5-3 2.5-1 0-2.1-.4-3-1.1l1.2-1.4c.6.4 1.2.8 1.8.8.6 0 .9-.2.9-.6 0-.3-.4-.4-1-.7zm3.4-4.8h2.2l.8 3.4c.2.8.4 1.6.6 2.5.2-.8.4-1.6.6-2.5l.8-3.4h2.1l-2.3 7.8h-2.5l-2.3-7.8zm-9 6.1c.6 0 1.1-.3 1.4-.7l1.1 1.3c-.7.8-1.6 1.2-2.6 1.2-2 0-3.7-1.3-3.7-4 0-2.6 1.8-4.1 3.8-4.1 1 0 1.9.5 2.4 1l-1.1 1.3c-.4-.3-.8-.6-1.3-.6-.9 0-1.7.8-1.7 2.3 0 1.5.7 2.3 1.7 2.3z"
-        />
-      </svg>
-      <span
-        class="af-link__text"
-      >
-        Télécharger
-      </span>
-    </button>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`<SearchMembers/> Should render <SearchMembers /> with one member 1`] = `
+exports[`<SearchMembersContainer/> Should render <SearchMembersContainer /> with one member 1`] = `
 <DocumentFragment>
   <div
     class="af-header"
@@ -177,49 +111,20 @@ exports[`<SearchMembers/> Should render <SearchMembers /> with one member 1`] = 
             </a>
           </li>
           <li
-            class="af-nav__item "
-            role="none"
-          >
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-label="Membres"
-              class="af-nav__link"
-              href="/members"
-              role="menuitem"
-              tabindex="-1"
-            >
-              Membres
-            </a>
-          </li>
-          <li
-            class="af-nav__item "
-            role="none"
-          >
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-label="Rechercher"
-              class="af-nav__link"
-              href="/search-members"
-              role="menuitem"
-              tabindex="-1"
-            >
-              Rechercher
-            </a>
-          </li>
-          <li
             class="af-nav__item af-nav__item--haschild "
             role="none"
           >
-            <span
+            <a
               aria-expanded="false"
+              aria-haspopup="true"
+              aria-label="Démos"
               class="af-nav__link"
+              href="/demos"
               role="menuitem"
               tabindex="-1"
             >
-              Demos
-            </span>
+              Démos
+            </a>
             <i
               class="glyphicon glyphicon-arrow-xs-down"
             />
@@ -228,6 +133,64 @@ exports[`<SearchMembers/> Should render <SearchMembers /> with one member 1`] = 
               class="af-nav__list af-nav__list--children"
               role="menu"
             >
+              <li
+                class="af-nav__item af-nav__item--separator "
+                role="none"
+              >
+                <span
+                  aria-expanded="false"
+                  class="af-nav__link"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Pages
+                </span>
+              </li>
+              <li
+                class="af-nav__item "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Membres"
+                  class="af-nav__link"
+                  href="/demos/members"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Membres
+                </a>
+              </li>
+              <li
+                class="af-nav__item "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Rechercher"
+                  class="af-nav__link"
+                  href="/demos/search-members"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Rechercher
+                </a>
+              </li>
+              <li
+                class="af-nav__item af-nav__item--separator "
+                role="none"
+              >
+                <span
+                  aria-expanded="false"
+                  class="af-nav__link"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Composants
+                </span>
+              </li>
               <li
                 class="af-nav__item "
                 role="none"
@@ -298,22 +261,6 @@ exports[`<SearchMembers/> Should render <SearchMembers /> with one member 1`] = 
               class="af-nav__list af-nav__list--children"
               role="menu"
             >
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Empty page"
-                  class="af-nav__link"
-                  href="/dashboard"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Empty page
-                </a>
-              </li>
               <li
                 class="af-nav__item "
                 role="none"
@@ -462,69 +409,6 @@ exports[`<SearchMembers/> Should render <SearchMembers /> with one member 1`] = 
       >
         Tableau des membres
       </h2>
-      <table
-        class="af-table"
-      >
-        <thead
-          aria-label="table-header"
-          class="af-table__thead"
-        >
-          <tr
-            aria-label="table-header-line"
-            class="af-table__tr"
-          >
-            <th
-              class="af-table__th"
-              role="columnheader"
-            >
-              <span
-                class="af-table__th-label"
-              >
-                Prénom du membre
-              </span>
-            </th>
-            <th
-              class="af-table__th"
-              role="columnheader"
-            >
-              <span
-                class="af-table__th-label"
-              >
-                Nom du membre
-              </span>
-            </th>
-            <th
-              class="af-table__th"
-              role="columnheader"
-            >
-              <span
-                class="af-table__th-label"
-              >
-                Identifiant du membre
-              </span>
-            </th>
-            <th
-              class="af-table__th"
-              role="columnheader"
-            >
-              <span
-                class="af-table__th-label"
-              >
-                Actions
-              </span>
-            </th>
-          </tr>
-        </thead>
-        <tbody
-          aria-label="table-body"
-          class="af-table__body"
-        >
-          <tr
-            aria-label="table-body-line"
-            class="af-table__tr"
-          />
-        </tbody>
-      </table>
     </div>
   </section>
   <footer
@@ -555,7 +439,7 @@ exports[`<SearchMembers/> Should render <SearchMembers /> with one member 1`] = 
 </DocumentFragment>
 `;
 
-exports[`<SearchMembers/> Should render SearchMembers 1`] = `
+exports[`<SearchMembersContainer/> Should render SearchMembersContainer 1`] = `
 <DocumentFragment>
   <div
     class="af-header"
@@ -666,49 +550,20 @@ exports[`<SearchMembers/> Should render SearchMembers 1`] = `
             </a>
           </li>
           <li
-            class="af-nav__item "
-            role="none"
-          >
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-label="Membres"
-              class="af-nav__link"
-              href="/members"
-              role="menuitem"
-              tabindex="-1"
-            >
-              Membres
-            </a>
-          </li>
-          <li
-            class="af-nav__item "
-            role="none"
-          >
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-label="Rechercher"
-              class="af-nav__link"
-              href="/search-members"
-              role="menuitem"
-              tabindex="-1"
-            >
-              Rechercher
-            </a>
-          </li>
-          <li
             class="af-nav__item af-nav__item--haschild "
             role="none"
           >
-            <span
+            <a
               aria-expanded="false"
+              aria-haspopup="true"
+              aria-label="Démos"
               class="af-nav__link"
+              href="/demos"
               role="menuitem"
               tabindex="-1"
             >
-              Demos
-            </span>
+              Démos
+            </a>
             <i
               class="glyphicon glyphicon-arrow-xs-down"
             />
@@ -717,6 +572,64 @@ exports[`<SearchMembers/> Should render SearchMembers 1`] = `
               class="af-nav__list af-nav__list--children"
               role="menu"
             >
+              <li
+                class="af-nav__item af-nav__item--separator "
+                role="none"
+              >
+                <span
+                  aria-expanded="false"
+                  class="af-nav__link"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Pages
+                </span>
+              </li>
+              <li
+                class="af-nav__item "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Membres"
+                  class="af-nav__link"
+                  href="/demos/members"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Membres
+                </a>
+              </li>
+              <li
+                class="af-nav__item "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Rechercher"
+                  class="af-nav__link"
+                  href="/demos/search-members"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Rechercher
+                </a>
+              </li>
+              <li
+                class="af-nav__item af-nav__item--separator "
+                role="none"
+              >
+                <span
+                  aria-expanded="false"
+                  class="af-nav__link"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Composants
+                </span>
+              </li>
               <li
                 class="af-nav__item "
                 role="none"
@@ -787,22 +700,6 @@ exports[`<SearchMembers/> Should render SearchMembers 1`] = `
               class="af-nav__list af-nav__list--children"
               role="menu"
             >
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Empty page"
-                  class="af-nav__link"
-                  href="/dashboard"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Empty page
-                </a>
-              </li>
               <li
                 class="af-nav__item "
                 role="none"

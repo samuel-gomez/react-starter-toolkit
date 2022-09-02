@@ -1,5 +1,5 @@
 import { func } from 'prop-types';
-import setLoaderMode from 'shared/helpers/setLoaderMode';
+import { setLoaderMode } from 'shared/components/Loader';
 import SearchMembers from './SearchMembers';
 import { useSearchMembers, useFormSearchMembers } from './SearchMembers.hook';
 

@@ -10,6 +10,9 @@ export type TMenuItemBase = TActionElt & {
   children?: TMenuItemBase[];
   classModifier?: string;
   createMenuFn?: typeof createMenu;
+  basePathChildren?: string;
+  basePath?: string;
+  classModifierItem?: string;
 };
 
 // la vue reçoit les items avec des props fournies par le container

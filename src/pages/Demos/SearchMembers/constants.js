@@ -1,7 +1,7 @@
 export const TITLE_BAR = 'Recherche de membres';
 export const TITLE = 'Recherche par Nom';
 export const SUBTITLE = 'Tableau des membres';
-export const ROUTE_URL_SEARCHMEMBERS = '/search-members';
+export const ROUTE_URL_SEARCHMEMBERS = 'search-members';
 
 export const TABLE_HEADERS_SEARCHMEMBERS = [
   { label: 'Prénom du membre', key: 'firstname' },

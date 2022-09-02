@@ -111,49 +111,20 @@ exports[`<Members/> Should render <Members /> with one member 1`] = `
             </a>
           </li>
           <li
-            class="af-nav__item "
-            role="none"
-          >
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-label="Membres"
-              class="af-nav__link"
-              href="/members"
-              role="menuitem"
-              tabindex="-1"
-            >
-              Membres
-            </a>
-          </li>
-          <li
-            class="af-nav__item "
-            role="none"
-          >
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-label="Rechercher"
-              class="af-nav__link"
-              href="/search-members"
-              role="menuitem"
-              tabindex="-1"
-            >
-              Rechercher
-            </a>
-          </li>
-          <li
             class="af-nav__item af-nav__item--haschild "
             role="none"
           >
-            <span
+            <a
               aria-expanded="false"
+              aria-haspopup="true"
+              aria-label="Démos"
               class="af-nav__link"
+              href="/demos"
               role="menuitem"
               tabindex="-1"
             >
-              Demos
-            </span>
+              Démos
+            </a>
             <i
               class="glyphicon glyphicon-arrow-xs-down"
             />
@@ -162,6 +133,64 @@ exports[`<Members/> Should render <Members /> with one member 1`] = `
               class="af-nav__list af-nav__list--children"
               role="menu"
             >
+              <li
+                class="af-nav__item af-nav__item--separator "
+                role="none"
+              >
+                <span
+                  aria-expanded="false"
+                  class="af-nav__link"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Pages
+                </span>
+              </li>
+              <li
+                class="af-nav__item "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Membres"
+                  class="af-nav__link"
+                  href="/demos/members"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Membres
+                </a>
+              </li>
+              <li
+                class="af-nav__item "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Rechercher"
+                  class="af-nav__link"
+                  href="/demos/search-members"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Rechercher
+                </a>
+              </li>
+              <li
+                class="af-nav__item af-nav__item--separator "
+                role="none"
+              >
+                <span
+                  aria-expanded="false"
+                  class="af-nav__link"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Composants
+                </span>
+              </li>
               <li
                 class="af-nav__item "
                 role="none"
@@ -232,22 +261,6 @@ exports[`<Members/> Should render <Members /> with one member 1`] = `
               class="af-nav__list af-nav__list--children"
               role="menu"
             >
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Empty page"
-                  class="af-nav__link"
-                  href="/dashboard"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Empty page
-                </a>
-              </li>
               <li
                 class="af-nav__item "
                 role="none"
@@ -681,49 +694,20 @@ exports[`<Members/> Should render Members 1`] = `
             </a>
           </li>
           <li
-            class="af-nav__item "
-            role="none"
-          >
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-label="Membres"
-              class="af-nav__link"
-              href="/members"
-              role="menuitem"
-              tabindex="-1"
-            >
-              Membres
-            </a>
-          </li>
-          <li
-            class="af-nav__item "
-            role="none"
-          >
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-label="Rechercher"
-              class="af-nav__link"
-              href="/search-members"
-              role="menuitem"
-              tabindex="-1"
-            >
-              Rechercher
-            </a>
-          </li>
-          <li
             class="af-nav__item af-nav__item--haschild "
             role="none"
           >
-            <span
+            <a
               aria-expanded="false"
+              aria-haspopup="true"
+              aria-label="Démos"
               class="af-nav__link"
+              href="/demos"
               role="menuitem"
               tabindex="-1"
             >
-              Demos
-            </span>
+              Démos
+            </a>
             <i
               class="glyphicon glyphicon-arrow-xs-down"
             />
@@ -732,6 +716,64 @@ exports[`<Members/> Should render Members 1`] = `
               class="af-nav__list af-nav__list--children"
               role="menu"
             >
+              <li
+                class="af-nav__item af-nav__item--separator "
+                role="none"
+              >
+                <span
+                  aria-expanded="false"
+                  class="af-nav__link"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Pages
+                </span>
+              </li>
+              <li
+                class="af-nav__item "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Membres"
+                  class="af-nav__link"
+                  href="/demos/members"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Membres
+                </a>
+              </li>
+              <li
+                class="af-nav__item "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Rechercher"
+                  class="af-nav__link"
+                  href="/demos/search-members"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Rechercher
+                </a>
+              </li>
+              <li
+                class="af-nav__item af-nav__item--separator "
+                role="none"
+              >
+                <span
+                  aria-expanded="false"
+                  class="af-nav__link"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Composants
+                </span>
+              </li>
               <li
                 class="af-nav__item "
                 role="none"
@@ -802,22 +844,6 @@ exports[`<Members/> Should render Members 1`] = `
               class="af-nav__list af-nav__list--children"
               role="menu"
             >
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Empty page"
-                  class="af-nav__link"
-                  href="/dashboard"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Empty page
-                </a>
-              </li>
               <li
                 class="af-nav__item "
                 role="none"

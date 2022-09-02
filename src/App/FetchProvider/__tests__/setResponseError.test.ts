@@ -1,5 +1,5 @@
 import { STATUS_HTTP_MESSAGES } from 'shared/constants';
-import setResponseError from './setResponseError';
+import setResponseError from '../setResponseError';
 
 describe('setResponseError', () => {
   it('Should return 404 danger', () => {

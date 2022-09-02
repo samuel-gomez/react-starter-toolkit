@@ -1,5 +1,5 @@
 import { ComponentProps } from 'react';
-import setLoaderMode from 'shared/helpers/setLoaderMode';
+import { setLoaderMode } from 'shared/components/Loader';
 import DownloadLink from './DownloadLink';
 import { useDownload, useSubmitDownload, useDownloadFile } from './DownloadLink.hook';
 

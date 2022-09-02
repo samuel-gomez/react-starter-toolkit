@@ -14,9 +14,3 @@ export type TInitialState = {
     [x: string]: Tanomaly | null;
   };
 };
-
-export type TFetchState = TInitialState & {
-  label?: string;
-  code?: string | number;
-  detail?: string;
-};

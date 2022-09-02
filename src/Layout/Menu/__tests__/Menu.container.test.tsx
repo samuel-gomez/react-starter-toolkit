@@ -1,21 +1,53 @@
 import { screen, fireEvent } from '@testing-library/react';
 import { renderWithWrapperStaticRouter } from 'shared/testsUtils';
-import withUser from 'shared/hoc/withUser';
-import MenuEnhanced, { setPositionInit, setToggleMenu } from '../Menu.container';
+import MenuEnhanced, { setPositionInit, setToggleMenu, computeMenuItems } from '../Menu.container';
 import MENU_ITEMS, { CLASS_BODY_MENU_OPEN } from '../constants';
-
-const MenuEnhancedWithUser = withUser(MenuEnhanced);
 
 describe('<MenuEnhanced/>', () => {
   it('Render <Menu/>', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(<MenuEnhancedWithUser menuItems={MENU_ITEMS} />);
+    const { asFragment } = renderWithWrapperStaticRouter(<MenuEnhanced menuItems={MENU_ITEMS} />);
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('Should call toggle class body When click on button', () => {
-    renderWithWrapperStaticRouter(<MenuEnhancedWithUser menuItems={MENU_ITEMS} />);
+    renderWithWrapperStaticRouter(<MenuEnhanced menuItems={MENU_ITEMS} />);
     fireEvent.click(screen.getByTitle('Toggle menu'));
     expect(document.querySelector('body')?.getAttribute('class')).toEqual('af-menu-open');
+  });
+});
+
+describe('computeMenuItems', () => {
+  it('Should return computed menuitems when computeMenuItems have been called with MENU_ITEMS', () => {
+    const expected = [
+      { label: 'Accueil', url: '/' },
+      {
+        label: 'Démos',
+        url: '/demos',
+        children: [
+          { label: 'Pages', classModifierItem: 'separator' },
+          { label: 'Membres', url: '/demos/members' },
+          { label: 'Rechercher', url: '/demos/search-members' },
+          { label: 'Composants', classModifierItem: 'separator' },
+          { label: 'Modal', url: '/demos/modal' },
+          { label: 'Button', url: '/demos/button' },
+          { label: 'Notification', url: '/demos/notification' },
+        ],
+      },
+      {
+        label: 'Pages',
+        children: [
+          { label: 'Not found', url: '/notfound' },
+          { label: 'Forbidden', url: '/forbidden' },
+        ],
+      },
+    ];
+    const result = computeMenuItems(MENU_ITEMS);
+    expect(result).toEqual(expected);
+  });
+
+  it('Should return empty array when computeMenuItems have been called with no param', () => {
+    const result = computeMenuItems();
+    expect(result).toEqual([]);
   });
 });
 

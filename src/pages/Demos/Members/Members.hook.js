@@ -1,7 +1,8 @@
 import { useCallback, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { ASCENDING } from 'shared/components/Table';
-import { setDisplay, setInitialState, setAnomalyEmptyItems, setDate } from 'shared/helpers';
+import { ASCENDING, setDisplay } from 'shared/components/Table';
+import { setInitialState } from 'App/FetchProvider';
+import { setAnomalyEmptyItems, setDate } from 'shared/helpers';
 import { SERVICE_NAME } from './constants';
 
 export const INITIAL_STATE = setInitialState(SERVICE_NAME, {

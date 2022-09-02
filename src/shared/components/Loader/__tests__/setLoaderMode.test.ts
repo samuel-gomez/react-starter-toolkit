@@ -1,5 +1,5 @@
 import { LoaderModes } from '@axa-fr/react-toolkit-all';
-import setLoaderMode from './setLoaderMode';
+import setLoaderMode from '../setLoaderMode';
 
 describe('setLoaderMode', () => {
   it.each`

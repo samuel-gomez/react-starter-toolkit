@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Dashboard page/> Renders Dashboard page component without crashing 1`] = `
+exports[`<Home page/> Renders Home page component without crashing 1`] = `
 <DocumentFragment>
   <div
     class="af-header"
@@ -111,49 +111,20 @@ exports[`<Dashboard page/> Renders Dashboard page component without crashing 1`]
             </a>
           </li>
           <li
-            class="af-nav__item "
-            role="none"
-          >
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-label="Membres"
-              class="af-nav__link"
-              href="/members"
-              role="menuitem"
-              tabindex="-1"
-            >
-              Membres
-            </a>
-          </li>
-          <li
-            class="af-nav__item "
-            role="none"
-          >
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-label="Rechercher"
-              class="af-nav__link"
-              href="/search-members"
-              role="menuitem"
-              tabindex="-1"
-            >
-              Rechercher
-            </a>
-          </li>
-          <li
             class="af-nav__item af-nav__item--haschild "
             role="none"
           >
-            <span
+            <a
               aria-expanded="false"
+              aria-haspopup="true"
+              aria-label="Démos"
               class="af-nav__link"
+              href="/demos"
               role="menuitem"
               tabindex="-1"
             >
-              Demos
-            </span>
+              Démos
+            </a>
             <i
               class="glyphicon glyphicon-arrow-xs-down"
             />
@@ -162,6 +133,64 @@ exports[`<Dashboard page/> Renders Dashboard page component without crashing 1`]
               class="af-nav__list af-nav__list--children"
               role="menu"
             >
+              <li
+                class="af-nav__item af-nav__item--separator "
+                role="none"
+              >
+                <span
+                  aria-expanded="false"
+                  class="af-nav__link"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Pages
+                </span>
+              </li>
+              <li
+                class="af-nav__item "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Membres"
+                  class="af-nav__link"
+                  href="/demos/members"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Membres
+                </a>
+              </li>
+              <li
+                class="af-nav__item "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Rechercher"
+                  class="af-nav__link"
+                  href="/demos/search-members"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Rechercher
+                </a>
+              </li>
+              <li
+                class="af-nav__item af-nav__item--separator "
+                role="none"
+              >
+                <span
+                  aria-expanded="false"
+                  class="af-nav__link"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Composants
+                </span>
+              </li>
               <li
                 class="af-nav__item "
                 role="none"
@@ -239,22 +268,6 @@ exports[`<Dashboard page/> Renders Dashboard page component without crashing 1`]
                 <a
                   aria-expanded="false"
                   aria-haspopup="true"
-                  aria-label="Empty page"
-                  class="af-nav__link"
-                  href="/dashboard"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Empty page
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
                   aria-label="Not found"
                   class="af-nav__link"
                   href="/notfound"
@@ -309,17 +322,17 @@ exports[`<Dashboard page/> Renders Dashboard page component without crashing 1`]
       <h1
         class="af-title-bar__title"
       >
-        Empty page
+        Accueil
       </h1>
     </div>
   </div>
   <section
-    class="af-main container container--dashboard"
+    class="af-main container"
   >
     <h1
       class="af-title--content"
     >
-      Page title
+      Bienvenue sur la démo du starter Slash Design System
     </h1>
   </section>
   <footer

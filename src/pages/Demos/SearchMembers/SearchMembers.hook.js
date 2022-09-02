@@ -1,6 +1,7 @@
 import { useCallback, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { setInitialState, setAnomalyEmptyItems } from 'shared/helpers';
+import { setAnomalyEmptyItems } from 'shared/helpers';
+import { setInitialState } from 'App/FetchProvider';
 import { SERVICE_NAME } from './constants';
 import { DownloadLinkEnhanced } from './SearchMembers';
 

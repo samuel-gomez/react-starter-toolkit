@@ -1,4 +1,4 @@
-import { setTextTooltip } from './formatDataTable';
+import { setTextTooltip } from '../formatDataTable';
 
 describe('setTextTooltip', () => {
   it('Should return {"": {"label": ""}} when call with no params', () => {
