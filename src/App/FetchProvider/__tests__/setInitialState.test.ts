@@ -1,4 +1,4 @@
-import setInitialState from './setInitialState';
+import setInitialState from '../setInitialState';
 
 const serviceName = 'myservice';
 

@@ -1,6 +1,13 @@
 {
-  "extends": ["react-app", "plugin:prettier/recommended", "plugin:@typescript-eslint/recommended"],
-  "plugins": ["prettier", "@typescript-eslint"],
+  "extends": [
+    "react-app",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": [
+    "prettier",
+    "@typescript-eslint"
+  ],
   "env": {
     "browser": true,
     "node": true,
@@ -15,12 +22,17 @@
       }
     ],
     "react/function-component-definition": "off",
-    "import/no-anonymous-default-export": "off",
+    "import/no-anonymous-default-export": "warn",
     "no-restricted-exports": "off",
     "react/jsx-filename-extension": [
       1,
       {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
       }
     ],
     "react/prop-types": 0,
@@ -30,16 +42,28 @@
     "react/no-unused-prop-types": "off",
     "react/no-unused-state": "error",
     "no-underscore-dangle": 0,
-    "import/imports-first": ["error", "absolute-first"],
+    "import/imports-first": [
+      "error",
+      "absolute-first"
+    ],
     "import/newline-after-import": "error",
-    "quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true,
+        "allowTemplateLiterals": true
+      }
+    ],
     "indent": [
       "off",
       2,
       {
         "SwitchCase": 1,
         "offsetTernaryExpressions": true,
-        "ignoredNodes": ["TemplateLiteral"]
+        "ignoredNodes": [
+          "TemplateLiteral"
+        ]
       }
     ],
     "react-hooks/rules-of-hooks": "error",
@@ -47,7 +71,9 @@
     "jsx-a11y/label-has-for": [
       2,
       {
-        "components": ["label"],
+        "components": [
+          "label"
+        ],
         "required": {
           "every": []
         },
@@ -57,7 +83,10 @@
     "jsx-a11y/label-has-associated-control": [
       2,
       {
-        "controlComponents": ["Textarea", "File"],
+        "controlComponents": [
+          "Textarea",
+          "File"
+        ],
         "detch": 3
       }
     ],
@@ -66,6 +95,10 @@
       {
         "code": 1000
       }
+    ],
+    "max-lines-per-function": [
+      "warn",
+      50
     ]
   },
   "globals": {
@@ -82,9 +115,32 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "paths": ["src", "node_modules"],
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        "paths": [
+          "src",
+          "node_modules"
+        ],
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
       }
     }
-  }
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/*.test.ts",
+        "**/*.test.tsx",
+        "**/*.spec.ts",
+        "**/*.spec.js"
+      ],
+      "rules": {
+        "max-lines-per-function": [
+          "off"
+        ]
+      }
+    }
+  ]
 }

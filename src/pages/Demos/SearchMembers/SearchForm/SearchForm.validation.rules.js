@@ -1,5 +1,7 @@
 import { NAME, rulePatternName } from './constants';
 
-export default {
+const rules = {
   [NAME]: [rulePatternName],
 };
+
+export default rules;
