@@ -4,6 +4,7 @@
   display: none;
   background-color: $color-axa;
 }
+
 @include media-breakpoint-down(sm) {
   .af-title-bar__mobile-menu {
     position: fixed;
@@ -13,5 +14,21 @@
     z-index: 12;
     width: 2rem;
     height: 2rem;
+  }
+}
+
+.af-nav.af-drawer.left {
+  z-index: 3;
+}
+.af-nav__list--children {
+  .af-nav__item--separator {
+    text-transform: uppercase;
+    background: $color-gray-2;
+    &:hover {
+      .af-nav__link {
+        color: $color-texte;
+        background: $color-gray-2;
+      }
+    }
   }
 }

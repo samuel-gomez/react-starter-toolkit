@@ -80,45 +80,24 @@ const NotificationPage = ({ notifyError, notifySuccess, notifyWarning, titleBar 
           </LiveProvider>
         </CollapseCard.Body>
       </CollapseCardBase>
-
-      <CollapseCardBase id="collapse-error" key="error" collapse>
-        <CollapseCard.Header key="error-header">Error notification</CollapseCard.Header>
-        <CollapseCard.Body key="error-body">
-          <LiveCode
-            code={codeError}
-            scope={{
-              ...scope,
-              notifyError,
-            }}
-          />
-        </CollapseCard.Body>
-      </CollapseCardBase>
-
-      <CollapseCardBase id="collapse-success" key="success" collapse>
-        <CollapseCard.Header key="error-header">Success notification</CollapseCard.Header>
-        <CollapseCard.Body key="error-body">
-          <LiveCode
-            code={codeSuccess}
-            scope={{
-              ...scope,
-              notifySuccess,
-            }}
-          />
-        </CollapseCard.Body>
-      </CollapseCardBase>
-
-      <CollapseCardBase id="collapse-warning" key="warning" collapse>
-        <CollapseCard.Header key="error-warning">Warning notification</CollapseCard.Header>
-        <CollapseCard.Body key="error-body">
-          <LiveCode
-            code={codeWarning}
-            scope={{
-              ...scope,
-              notifyWarning,
-            }}
-          />
-        </CollapseCard.Body>
-      </CollapseCardBase>
+      {Object.entries({
+        error: { notifyError, code: codeError, collapse: true, title: 'Error notification' },
+        success: { notifySuccess, code: codeSuccess, collapse: true, title: 'Success notification' },
+        warning: { notifyWarning, code: codeWarning, collapse: true, title: 'Warning notification' },
+      }).map(([key, { collapse, title, code, ...rest }]) => (
+        <CollapseCardBase id={`collapse-${key}`} key={key} collapse={collapse}>
+          <CollapseCard.Header key={`${key}-header`}>{title}</CollapseCard.Header>
+          <CollapseCard.Body key={`${key}-body`}>
+            <LiveCode
+              code={code}
+              scope={{
+                ...scope,
+                ...rest,
+              }}
+            />
+          </CollapseCard.Body>
+        </CollapseCardBase>
+      ))}
     </Accordion>
   </Layout>
 );

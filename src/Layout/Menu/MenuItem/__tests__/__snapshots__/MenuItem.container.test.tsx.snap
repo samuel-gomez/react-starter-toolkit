@@ -11,7 +11,9 @@ exports[`<MenuItemEnhanced/> Render <Menu/> 1`] = `
       class="af-nav__link"
       role="menuitem"
       tabindex="-1"
-    />
+    >
+      test
+    </span>
   </li>
 </DocumentFragment>
 `;
@@ -27,7 +29,9 @@ exports[`<MenuItemEnhanced/> Render <Menu/> hasChild 1`] = `
       class="af-nav__link"
       role="menuitem"
       tabindex="-1"
-    />
+    >
+      test
+    </span>
     <i
       class="glyphicon glyphicon-arrow-xs-down"
     />
@@ -85,6 +89,27 @@ exports[`<MenuItemEnhanced/> Render <Menu/> hasChild 1`] = `
         </a>
       </li>
     </ul>
+  </li>
+</DocumentFragment>
+`;
+
+exports[`<MenuItemEnhanced/> Render <Menu/> with 1`] = `
+<DocumentFragment>
+  <li
+    class="af-nav__item "
+    role="none"
+  >
+    <a
+      aria-expanded="false"
+      aria-haspopup="true"
+      aria-label="test"
+      class="af-nav__link"
+      href="/demos/path"
+      role="menuitem"
+      tabindex="-1"
+    >
+      test
+    </a>
   </li>
 </DocumentFragment>
 `;

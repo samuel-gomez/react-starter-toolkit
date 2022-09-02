@@ -5,19 +5,29 @@ export const CLASS_BODY_MENU_OPEN = 'af-menu-open';
 const MENU_ITEMS = [
   {
     label: 'Accueil',
-    url: ROUTE_URL.SLASH,
+    url: ROUTE_URL.HOME,
   },
   {
-    label: 'Membres',
-    url: ROUTE_URL.MEMBERS,
-  },
-  {
-    label: 'Rechercher',
-    url: ROUTE_URL.SEARCHMEMBERS,
-  },
-  {
-    label: 'Demos',
+    label: 'Démos',
+    url: ROUTE_URL.DEMOS,
+    basePathChildren: ROUTE_URL.DEMOS,
     children: [
+      {
+        label: 'Pages',
+        classModifierItem: 'separator',
+      },
+      {
+        label: 'Membres',
+        url: ROUTE_URL.MEMBERS,
+      },
+      {
+        label: 'Rechercher',
+        url: ROUTE_URL.SEARCHMEMBERS,
+      },
+      {
+        label: 'Composants',
+        classModifierItem: 'separator',
+      },
       {
         label: 'Modal',
         url: ROUTE_URL.MODAL,
@@ -35,10 +45,6 @@ const MENU_ITEMS = [
   {
     label: 'Pages',
     children: [
-      {
-        label: 'Empty page',
-        url: ROUTE_URL.DASHBOARD,
-      },
       {
         label: 'Not found',
         url: ROUTE_URL.NOTFOUND,

@@ -1,7 +1,8 @@
 import { useCallback, useEffect, useContext, useState, useId } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import downloadjs from 'downloadjs';
-import { setInitialState, isEmptyOrNull } from 'shared/helpers';
+import { isEmptyOrNull } from 'shared/helpers';
+import { setInitialState } from 'App/FetchProvider';
 import { NotificationContext, TaddNotification } from 'App/NotificationProvider';
 import { SERVICE_NAME, SUCCESS_DOWNLOAD_MESSAGE } from './constants';
 
@@ -114,21 +115,19 @@ export const setDownloadFile = ({
   }
 };
 
-type TuseDownloadFile = {
-  state: typeof INITIAL_STATE;
-  fileName: string;
-  hasSubmit: boolean;
+type TuseDownloadFile = Omit<TsetDownloadFile, 'isEmptyOrNullFn' | 'downloadjsFn'> & {
   setDownloadFileFn?: typeof setDownloadFile;
 };
 
-export const useDownloadFile = ({ state, fileName, hasSubmit, setDownloadFileFn = setDownloadFile }: TuseDownloadFile) => {
+export const useDownloadFile = ({ state, fileName, hasSubmit, type, setDownloadFileFn = setDownloadFile }: TuseDownloadFile) => {
   useEffect(
     () =>
       setDownloadFileFn({
         state,
         fileName,
         hasSubmit,
+        type,
       }),
-    [setDownloadFileFn, state, fileName, hasSubmit],
+    [setDownloadFileFn, state, fileName, hasSubmit, type],
   );
 };

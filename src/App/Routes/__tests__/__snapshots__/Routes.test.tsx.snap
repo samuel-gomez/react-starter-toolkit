@@ -3,15 +3,15 @@
 exports[`<Routes /> Should render page when user profil is authorized, role: , name: Samuel, route: / 1`] = `
 <DocumentFragment>
   <div>
-    SlashDesignSystemCmpt
+    HomeCmpt
   </div>
 </DocumentFragment>
 `;
 
-exports[`<Routes /> Should render page when user profil is authorized, role: , name: Samuel, route: /dashboard 1`] = `
+exports[`<Routes /> Should render page when user profil is authorized, role: , name: Samuel, route: /demos 1`] = `
 <DocumentFragment>
   <div>
-    DashboardCmpt
+    SlashDesignSystemCmpt
   </div>
 </DocumentFragment>
 `;
@@ -24,6 +24,14 @@ exports[`<Routes /> Should render page when user profil is authorized, role: , n
 </DocumentFragment>
 `;
 
+exports[`<Routes /> Should render page when user profil is authorized, role: , name: Samuel, route: /demos/members 1`] = `
+<DocumentFragment>
+  <div>
+    MembersCmpt
+  </div>
+</DocumentFragment>
+`;
+
 exports[`<Routes /> Should render page when user profil is authorized, role: , name: Samuel, route: /demos/modal 1`] = `
 <DocumentFragment>
   <div>
@@ -32,26 +40,26 @@ exports[`<Routes /> Should render page when user profil is authorized, role: , n
 </DocumentFragment>
 `;
 
+exports[`<Routes /> Should render page when user profil is authorized, role: , name: Samuel, route: /demos/notification 1`] = `
+<DocumentFragment>
+  <div>
+    NotificationCmpt
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Routes /> Should render page when user profil is authorized, role: , name: Samuel, route: /demos/search-members 1`] = `
+<DocumentFragment>
+  <div>
+    SearchMembersCmpt
+  </div>
+</DocumentFragment>
+`;
+
 exports[`<Routes /> Should render page when user profil is authorized, role: , name: Samuel, route: /forbidden 1`] = `
 <DocumentFragment>
   <div>
     PageUnauthorizeCmpt
-  </div>
-</DocumentFragment>
-`;
-
-exports[`<Routes /> Should render page when user profil is authorized, role: , name: Samuel, route: /members 1`] = `
-<DocumentFragment>
-  <div>
-    MembersCmpt
-  </div>
-</DocumentFragment>
-`;
-
-exports[`<Routes /> Should render page when user profil is authorized, role: , name: Samuel, route: /search-members 1`] = `
-<DocumentFragment>
-  <div>
-    SearchMembersCmpt
   </div>
 </DocumentFragment>
 `;
