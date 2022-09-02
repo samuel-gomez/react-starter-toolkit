@@ -16,13 +16,34 @@ const rulesRequired = {
   },
 };
 
-const rules = {
-  NAME: [rulesRequired],
-  EMAIL: [rulesRequired],
-  YEAR: [rulesRequired],
-  QUARTER: [rulesRequired],
-  ENTITY: [rulesRequired],
+const MSG_ERROR_DATE = 'La date est invalide';
+
+const FIELDS = {
+  firstname: {},
+  agent: {},
+  contract: {
+    maxLength: {
+      maxLength: 8,
+      message: 'Le champ contient trop de caractères',
+    },
+    pattern: { regex: {}, message: 'Veuillez saisir un nombre' },
+  },
+  lastname: {},
+  birthdate: { date: { message: MSG_ERROR_DATE } },
+  begin: { date: { message: MSG_ERROR_DATE } },
 };
+
+const setAllRules = (fields: Record<string, Record<string, unknown>>) =>
+  Object.entries(fields).reduce((acc, curr) => {
+    const res = Object.entries(curr[1]).map(currRule => ({ [currRule[0]]: currRule[1] }), []);
+
+    return {
+      ...acc,
+      [curr[0]]: [...res, rulesRequired],
+    };
+  }, {});
+
+const rules = setAllRules(FIELDS);
 
 describe('setMessage', () => {
   const validateFn = jest.fn();
@@ -34,7 +55,7 @@ describe('setMessage', () => {
     ${['rule']}  | ${'01/01/2022'} | ${undefined} | ${undefined} | ${undefined} | ${'viewValueMessage'} | ${'viewValueMessage'}
     ${['rule']}  | ${undefined}    | ${'text'}    | ${undefined} | ${undefined} | ${'valueMessage'}     | ${'valueMessage'}
   `(
-    'Should return exoected: $expected when inputRules: $inputRules, viewValue: $viewValue, value: $value, values: $values, errors: $errors',
+    'Should return expected: $expected when inputRules: $inputRules, viewValue: $viewValue, value: $value, values: $values, errors: $errors',
     ({ inputRules, viewValue, value, values, errors, mockReturnValue, expected }) => {
       validateFn.mockReturnValue(mockReturnValue);
 
@@ -85,13 +106,13 @@ describe('validate', () => {
   };
 
   it.each`
-    value        | rules         | firstErrorValue                 | validateViewValue | expected
-    ${undefined} | ${undefined}  | ${null}                         | ${[]}             | ${null}
-    ${'myvalue'} | ${rules.NAME} | ${null}                         | ${[]}             | ${null}
-    ${12345678}  | ${rules.NAME} | ${null}                         | ${[]}             | ${null}
-    ${''}        | ${rules.NAME} | ${{ message: expectedMessage }} | ${[]}             | ${expectedMessage}
+    value        | rules              | firstErrorValue                 | validateViewValue | expected
+    ${undefined} | ${undefined}       | ${null}                         | ${[]}             | ${null}
+    ${'myvalue'} | ${[rulesRequired]} | ${null}                         | ${[]}             | ${null}
+    ${12345678}  | ${[rulesRequired]} | ${null}                         | ${[]}             | ${null}
+    ${''}        | ${[rulesRequired]} | ${{ message: expectedMessage }} | ${[]}             | ${expectedMessage}
   `(
-    'Should return exoected: $expected when value: $value, rules: $rules, firstErrorValue: $firstErrorValue, validateViewValue: $validateViewValue',
+    'Should return expected: $expected when value: $value, rules: $rules, firstErrorValue: $firstErrorValue, validateViewValue: $validateViewValue',
     ({ value, rules, firstErrorValue, validateViewValue, expected }) => {
       firstError.mockReturnValue(firstErrorValue);
       validateView.mockReturnValue(validateViewValue);
@@ -104,233 +125,131 @@ describe('validate', () => {
 });
 
 describe('genericHandleChange', () => {
-  it('Should return state with message "Format de fichier incorrect" when event.errors not empty and event.values is defined', () => {
-    const rules = {
-      agent: [{ required: { message: 'Format de fichier incorrect' } }],
-    };
-    const givenState = {
-      agent: {
-        name: 'agent',
-        value: '',
-        message: 'Format de fichier incorrect',
-      },
-    };
-    const givenEvent = {
-      values: ['Guillaume Chervet'],
-      errors: ['error'],
-      name: 'agent',
-    };
-    const expectedState = {
-      agent: {
-        message: 'Format de fichier incorrect',
-        name: 'agent',
-        value: '',
-        values: ['Guillaume Chervet'],
-      },
-    };
-
-    const result = genericHandleChange(rules, givenState, givenEvent);
-    expect(result).toMatchObject(expectedState);
+  type TsetRules = {
+    key?: string;
+    message?: string;
+  };
+  const setRules = ({ key = '', message }: TsetRules) => ({
+    [key]: [{ required: { message } }],
   });
 
-  it('Should return state with no error and no message when event.errors is empty and event.values is NOT empty', () => {
-    const rules = {
-      agent: [{ required: { message: 'Champ obligatoire' } }],
-    };
-    const givenState = {
-      agent: {
-        name: 'agent',
-        values: [''],
-      },
-    };
-    const givenEvent = {
-      values: ['Guillaume Chervet'],
-      errors: [],
-      name: 'agent',
-    };
-    const expectedState = {
-      agent: {
-        name: 'agent',
-        errors: [],
-        values: ['Guillaume Chervet'],
-      },
-    };
-
-    const result = genericHandleChange(rules, givenState, givenEvent);
-    expect(result).toMatchObject(expectedState);
+  type TState = {
+    key?: string;
+    name?: string;
+    value?: string;
+    viewValue?: string;
+    values?: string[];
+    message?: string;
+  };
+  const setGivenState = ({ name, value, values, viewValue, message, key = '' }: TState) => ({
+    [key]: {
+      name,
+      value,
+      message,
+      values,
+      viewValue,
+    },
   });
 
-  it('Should return state with viewValues when event.viewValue is defined', () => {
-    const rules = {
-      agent: [{ required: { message: 'Format de fichier incorrect' } }],
-    };
-    const givenState = {
-      agent: {
-        name: 'agent',
-        value: '',
-        message: 'Format de fichier incorrect',
-      },
-    };
-    const givenEvent = {
-      viewValue: 'Guillaume Chervet',
-      value: 'guillaume_chervet',
-      name: 'agent',
-    };
-    const expectedState = {
-      agent: {
-        message: null,
-        name: 'agent',
-        value: 'guillaume_chervet',
-        viewValue: 'Guillaume Chervet',
-      },
-    };
-
-    const result = genericHandleChange(rules, givenState, givenEvent);
-
-    expect(result).toMatchObject(expectedState);
+  type TsetGivenEvent = Omit<TState, 'key' | 'message'> & {
+    errors?: string[];
+    viewValue?: string;
+  };
+  const setGivenEvent = ({ value, values, viewValue, errors, name = '' }: TsetGivenEvent) => ({
+    value,
+    values,
+    errors,
+    name,
+    viewValue,
   });
+
+  const setExpectedState = ({ key = '', name, value, values, viewValue, message }: TState) => ({
+    [key]: {
+      name,
+      value,
+      message,
+      values,
+      viewValue,
+    },
+  });
+
+  it.each`
+    message             | key          | name         | stateValue   | eventValue             | eventViewValue         | stateValues              | eventValues              | errors       | expectedValue          | expectedViewValue      | expectedValues           | expectedName | expectedMessage
+    ${undefined}        | ${undefined} | ${undefined} | ${undefined} | ${undefined}           | ${undefined}           | ${undefined}             | ${undefined}             | ${undefined} | ${undefined}           | ${undefined}           | ${undefined}             | ${undefined} | ${null}
+    ${MSG_ERROR_FORMAT} | ${'agent'}   | ${'agent'}   | ${undefined} | ${undefined}           | ${undefined}           | ${['Guillaume Chervet']} | ${['Guillaume Chervet']} | ${['error']} | ${undefined}           | ${undefined}           | ${['Guillaume Chervet']} | ${'agent'}   | ${MSG_ERROR_FORMAT}
+    ${undefined}        | ${'agent'}   | ${'agent'}   | ${undefined} | ${undefined}           | ${undefined}           | ${['Guillaume Chervet']} | ${['Guillaume Chervet']} | ${['error']} | ${undefined}           | ${undefined}           | ${['Guillaume Chervet']} | ${'agent'}   | ${MSG_ERROR_FORMAT}
+    ${MSG_REQUIRED}     | ${'agent'}   | ${'agent'}   | ${undefined} | ${undefined}           | ${undefined}           | ${['']}                  | ${['Guillaume Chervet']} | ${[]}        | ${undefined}           | ${undefined}           | ${['Guillaume Chervet']} | ${'agent'}   | ${null}
+    ${MSG_REQUIRED}     | ${'agent'}   | ${'agent'}   | ${''}        | ${'guillaume_chervet'} | ${'Guillaume Chervet'} | ${undefined}             | ${undefined}             | ${[]}        | ${'guillaume_chervet'} | ${'Guillaume Chervet'} | ${undefined}             | ${'agent'}   | ${null}
+  `(
+    'Should return expectedViewValue: $expectedViewValue, expectedValues: $expectedValues, expectedValue: $expectedValue, expectedName: $expectedName and expectedMessage: $expectedMessage when message: $message, key: $key, name: $name, stateValue: $stateValue, eventValue: $eventValue, stateValues: $stateValues, eventValues: $eventValues, errors: $errors, eventViewValue: $eventViewValue',
+    ({
+      message,
+      key,
+      name,
+      stateValue,
+      eventValue,
+      eventViewValue,
+      stateValues,
+      eventValues,
+      errors,
+      expectedViewValue,
+      expectedName,
+      expectedMessage,
+      expectedValue,
+      expectedValues,
+    }) => {
+      const rules = setRules({ key, message });
+      const givenState = setGivenState({ key, name, value: stateValue, values: stateValues });
+      const givenEvent = setGivenEvent({ name, errors, value: eventValue, values: eventValues, viewValue: eventViewValue });
+      const result = genericHandleChange(rules, givenState, givenEvent);
+      expect(result).toMatchObject(
+        setExpectedState({
+          key,
+          name: expectedName,
+          value: expectedValue,
+          message: expectedMessage,
+          values: expectedValues,
+          viewValue: expectedViewValue,
+        }),
+      );
+    },
+  );
+
+  type TsetGivenStateField = {
+    name?: string;
+    message?: string;
+    value?: string | null;
+    [x: string]: unknown;
+  };
+  const setGivenStateField = ({ name = '', message = MSG_REQUIRED, value = '', ...others }: TsetGivenStateField) => ({
+    [name]: { name, message, value, ...others },
+  });
+
+  const state = {
+    ...setGivenStateField({ name: 'firstname' }),
+    ...setGivenStateField({ name: 'agent' }),
+    ...setGivenStateField({ name: 'lastname' }),
+    ...setGivenStateField({ name: 'contract' }),
+    ...setGivenStateField({ name: 'birthdate', value: null, viewValue: '' }),
+    ...setGivenStateField({ name: 'begin', value: null, viewValue: '' }),
+  };
 
   it('Should change the state when a field changed with one text change', () => {
-    // arrange
-    const rules = {
-      firstname: [{ required: { message: 'Le champs est obligatoire' } }],
-      agent: [{ required: { message: 'Le champs est obligatoire' } }],
-      contract: [
-        { required: { message: 'Le champs est obligatoire' } },
-        {
-          maxLength: {
-            maxLength: 8,
-            message: 'Le champ contient trop de caractères',
-          },
-        },
-        { pattern: { regex: {}, message: 'Veuillez saisir un nombre' } },
-      ],
-      lastname: [{ required: { message: 'Le champs est obligatoire' } }],
-      birthdate: [{ required: { message: 'Le champs est obligatoire' } }, { date: { message: 'La date est invalide' } }],
-      begin: [{ required: { message: 'Le champs est obligatoire' } }, { date: { message: 'La date est invalide' } }],
-    };
-    const givenState = {
-      firstname: {
-        name: 'firstname',
-        value: '',
-        message: 'Le champs est obligatoire',
-      },
-      agent: { name: 'agent', value: '', message: 'Le champs est obligatoire' },
-      lastname: {
-        name: 'lastname',
-        value: '',
-        message: 'Le champs est obligatoire',
-      },
-      contract: {
-        name: 'contract',
-        value: '',
-        message: 'Le champs est obligatoire',
-      },
-      birthdate: {
-        name: 'birthdate',
-        value: null,
-        viewValue: '',
-        message: 'Le champs est obligatoire',
-      },
-      begin: {
-        name: 'begin',
-        value: null,
-        viewValue: '',
-        message: 'Le champs est obligatoire',
-      },
-    };
     const givenEvent = {
       value: 'Martin',
       name: 'lastname',
       id: 'cjv3mxouh00063h5qzj5bw1xw',
     };
     const expectedState = {
-      agent: { message: 'Le champs est obligatoire', name: 'agent', value: '' },
-      begin: {
-        message: 'Le champs est obligatoire',
-        name: 'begin',
-        value: null,
-        viewValue: '',
-      },
-      birthdate: {
-        message: 'Le champs est obligatoire',
-        name: 'birthdate',
-        value: null,
-        viewValue: '',
-      },
-      contract: {
-        message: 'Le champs est obligatoire',
-        name: 'contract',
-        value: '',
-      },
-      firstname: {
-        message: 'Le champs est obligatoire',
-        name: 'firstname',
-        value: '',
-      },
+      ...state,
       lastname: { message: null, name: 'lastname', value: 'Martin' },
     };
 
-    // act
-    const valid = genericHandleChange(rules, givenState, givenEvent);
-
-    // assert
-    expect(valid).toMatchObject(expectedState);
+    const result = genericHandleChange(rules, state, givenEvent);
+    expect(result).toMatchObject(expectedState);
   });
 
   it('Should change the state when a field changed with multiple changes', () => {
-    // arrange
-    const rules = {
-      firstname: [{ required: { message: 'Le champs est obligatoire' } }],
-      agent: [{ required: { message: 'Le champs est obligatoire' } }],
-      contract: [
-        { required: { message: 'Le champs est obligatoire' } },
-        {
-          maxLength: {
-            maxLength: 8,
-            message: 'Le champ contient trop de caractères',
-          },
-        },
-        { pattern: { regex: {}, message: 'Veuillez saisir un nombre' } },
-      ],
-      lastname: [{ required: { message: 'Le champs est obligatoire' } }],
-      birthdate: [{ required: { message: 'Le champs est obligatoire' } }, { date: { message: 'La date est invalide' } }],
-      begin: [{ required: { message: 'Le champs est obligatoire' } }, { date: { message: 'La date est invalide' } }],
-    };
-    const givenState = {
-      firstname: {
-        name: 'firstname',
-        value: '',
-        message: 'Le champs est obligatoire',
-      },
-      agent: {
-        name: 'agent',
-        values: [''],
-        message: 'Le champs est obligatoire',
-      },
-      lastname: {
-        name: 'lastname',
-        value: '',
-        message: 'Le champs est obligatoire',
-      },
-      contract: {
-        name: 'contract',
-        value: '',
-        message: 'Le champs est obligatoire',
-      },
-      birthdate: {
-        name: 'birthdate',
-        value: null,
-        viewValue: '',
-        message: 'Le champs est obligatoire',
-      },
-      begin: {
-        name: 'begin',
-        value: null,
-        viewValue: '',
-        message: 'Le champs est obligatoire',
-      },
-    };
     const givenEvent = {
       values: ['Guillaume Chervet'],
       errors: ['error'],
@@ -338,88 +257,19 @@ describe('genericHandleChange', () => {
       id: 'agent',
     };
     const expectedState = {
+      ...state,
       agent: {
-        message: 'Format de fichier incorrect',
+        message: MSG_ERROR_FORMAT,
         name: 'agent',
         values: ['Guillaume Chervet'],
       },
-      begin: {
-        message: 'Le champs est obligatoire',
-        name: 'begin',
-        value: null,
-        viewValue: '',
-      },
-      birthdate: {
-        message: 'Le champs est obligatoire',
-        name: 'birthdate',
-        value: null,
-        viewValue: '',
-      },
-      contract: {
-        message: 'Le champs est obligatoire',
-        name: 'contract',
-        value: '',
-      },
-      firstname: {
-        message: 'Le champs est obligatoire',
-        name: 'firstname',
-        value: '',
-      },
-      lastname: {
-        message: 'Le champs est obligatoire',
-        name: 'lastname',
-        value: '',
-      },
     };
 
-    // act
-    const valid = genericHandleChange(rules, givenState, givenEvent);
-
-    // assert
-    expect(valid).toMatchObject(expectedState);
+    const result = genericHandleChange(rules, state, givenEvent);
+    expect(result).toMatchObject(expectedState);
   });
 
   it('Should change the state when a date field had a changed', () => {
-    // arrange
-    const rules = {
-      firstname: [{ required: { message: 'Le champs est obligatoire' } }],
-      agent: [{ required: { message: 'Le champs est obligatoire' } }],
-      contract: [
-        { required: { message: 'Le champs est obligatoire' } },
-        {
-          maxLength: {
-            maxLength: 8,
-            message: 'Le champ contient trop de caractères',
-          },
-        },
-        { pattern: { regex: {}, message: 'Veuillez saisir un nombre' } },
-      ],
-      lastname: [{ required: { message: 'Le champs est obligatoire' } }],
-      birthdate: [{ required: { message: 'Le champs est obligatoire' } }, { date: { message: 'La date est invalide' } }],
-      begin: [{ required: { message: 'Le champs est obligatoire' } }, { date: { message: 'La date est invalide' } }],
-    };
-    const givenState = {
-      firstname: { name: 'firstname', value: 'François', message: null },
-      agent: { name: 'agent', value: '', message: 'Le champs est obligatoire' },
-      lastname: { name: 'lastname', value: 'Martin', message: null },
-      contract: {
-        name: 'contract',
-        value: '',
-        message: 'Le champs est obligatoire',
-      },
-      birthdate: {
-        name: 'birthdate',
-        value: null,
-        viewValue: '',
-        message: 'Le champs est obligatoire',
-      },
-      begin: {
-        name: 'begin',
-        value: null,
-        viewValue: '',
-        message: 'Le champs est obligatoire',
-      },
-    };
     const givenEvent = {
       value: '2019-05-02T22:00:00.000Z',
       viewValue: '03/05/2019',
@@ -427,184 +277,107 @@ describe('genericHandleChange', () => {
       id: 'cjv6b2led000t3h5qe3e2ryzl',
     };
     const expectedState = {
-      agent: { message: 'Le champs est obligatoire', name: 'agent', value: '' },
-      begin: {
-        message: 'Le champs est obligatoire',
-        name: 'begin',
-        value: null,
-        viewValue: '',
-      },
+      ...state,
       birthdate: {
         message: null,
         name: 'birthdate',
         value: '2019-05-02T22:00:00.000Z',
         viewValue: '03/05/2019',
       },
-      contract: {
-        message: 'Le champs est obligatoire',
-        name: 'contract',
-        value: '',
-      },
-      firstname: { message: null, name: 'firstname', value: 'François' },
-      lastname: { message: null, name: 'lastname', value: 'Martin' },
     };
 
-    // act
-    const valid = genericHandleChange(rules, givenState, givenEvent);
-
-    // assert
-    expect(valid).toMatchObject(expectedState);
+    const result = genericHandleChange(rules, state, givenEvent);
+    expect(result).toMatchObject(expectedState);
   });
 
   it('Should not change the state if the rule is unknown', () => {
-    // arrange
     const unknownRules = {
       unknown: [{ required: { message: 'Le champs est obligatoire' } }],
     };
-    const givenState = {};
+
     const givenEvent = {
       value: '2019-05-02T22:00:00.000Z',
       viewValue: '03/05/2019',
       name: 'birthdate',
       id: 'cjv6b2led000t3h5qe3e2ryzl',
     };
-    const expectedState = {};
 
-    // act
-    const valid = genericHandleChange(unknownRules, givenState, givenEvent);
-
-    // assert
-    expect(valid).toMatchObject(expectedState);
+    const result = genericHandleChange(unknownRules, state, givenEvent);
+    expect(result).toMatchObject(state);
   });
+});
 
+describe('computeInitialStateErrorMessage', () => {
   it('Should initiate the state when rules are presents', () => {
-    // arrange
-    const givenRules = {
-      firstname: [{ required: { message: 'Le champs est obligatoire' } }],
-      agent: [{ required: { message: 'Le champs est obligatoire' } }],
-      contract: [
-        { required: { message: 'Le champs est obligatoire' } },
-        {
-          maxLength: {
-            maxLength: 8,
-            message: 'Le champ contient trop de caractères',
-          },
-        },
-        { pattern: { regex: {}, message: 'Veuillez saisir un nombre' } },
-      ],
-      lastname: [{ required: { message: 'Le champs est obligatoire' } }],
-      birthdate: [{ required: { message: 'Le champs est obligatoire' } }, { date: { message: 'La date est invalide' } }],
-      begin: [{ required: { message: 'Le champs est obligatoire' } }, { date: { message: 'La date est invalide' } }],
-    };
     const givenState = {
       firstname: { name: 'firstname', value: 'François', message: null },
     };
     const expectedState = {};
-
-    // act
-    const valid = computeInitialStateErrorMessage(givenState, givenRules);
-
-    // assert
-    expect(valid).toMatchObject(expectedState);
+    const result = computeInitialStateErrorMessage(givenState, rules);
+    expect(result).toMatchObject(expectedState);
   });
 });
 
-describe('Function hasErrorMessage', () => {
-  it('Should return true when message is not null', () => {
-    const fields = {
-      name: {
-        message: 'hello',
-      },
-    };
-    const results = hasErrorMessage(fields.name);
-    expect(results).toBe(true);
-  });
-
-  it('Should return false when message is null', () => {
-    const fields = {
-      name: {
-        message: null,
-      },
-    };
-    const results = hasErrorMessage(fields.name);
-    expect(results).toBe(false);
+describe('hasErrorMessage', () => {
+  it.each`
+    message    | expected
+    ${'hello'} | ${true}
+    ${null}    | ${false}
+  `('Should return expected: $expected when message: $message', ({ message, expected }) => {
+    const result = hasErrorMessage({ message });
+    expect(result).toEqual(expected);
   });
 });
 
-describe('Function getErrorsList', () => {
-  it('Should return error array with 2 items when 2 fields have error', () => {
-    const fields = {
-      lastname: {
-        message: 'doe',
-      },
-      firstname: {
-        message: 'john',
-      },
-      birthdate: {
-        message: null,
-      },
-    };
-    const expected = ['lastname', 'firstname'];
-    const results = getErrorsList(fields);
-    expect(results).toEqual(expected);
-  });
-
-  it('Should return empty array when all messages are null', () => {
-    const fields = {
-      lastname: {
-        message: null,
-      },
-      firstname: {
-        message: null,
-      },
-      birthdate: {
-        message: null,
-      },
-    };
-    const expected = [] as ReturnType<typeof getErrorsList>;
-    const results = getErrorsList(fields);
-    expect(results).toEqual(expected);
-  });
+describe('getErrorsList', () => {
+  it.each`
+    lastname | firstname | birthdate | expected
+    ${'doe'} | ${'john'} | ${null}   | ${['lastname', 'firstname']}
+    ${null}  | ${null}   | ${null}   | ${[]}
+  `(
+    'Should return expected: $expected when messages have lastname: $lastname, firstname: $firstname, birthdate: $birthdate',
+    ({ lastname, firstname, birthdate, expected }) => {
+      const fields = {
+        lastname: {
+          message: lastname,
+        },
+        firstname: {
+          message: firstname,
+        },
+        birthdate: {
+          message: birthdate,
+        },
+      };
+      const result = getErrorsList(fields);
+      expect(result).toEqual(expected);
+    },
+  );
 });
 
 describe('Function getValuesList', () => {
-  it('Should return values array with 2 items when 2 fields have value', () => {
-    const fields = {
-      lastname: {
-        value: 'doe',
-        message: null,
-      },
-      firstname: {
-        value: 'john',
-        message: null,
-      },
-      birthdate: {
-        value: '',
-        message: null,
-      },
-    };
-    const expected = ['lastname', 'firstname'];
-    const results = getValuesList(fields);
-    expect(results).toEqual(expected);
-  });
-
-  it('Should return empty array when all value are empty', () => {
-    const fields = {
-      lastname: {
-        value: '',
-        message: null,
-      },
-      firstname: {
-        value: '',
-        message: null,
-      },
-      birthdate: {
-        value: null,
-        message: null,
-      },
-    };
-    const expected = [] as ReturnType<typeof getErrorsList>;
-    const results = getValuesList(fields);
-    expect(results).toEqual(expected);
-  });
+  it.each`
+    lastname | firstname | birthdate | expected
+    ${'doe'} | ${'john'} | ${null}   | ${['lastname', 'firstname']}
+    ${''}    | ${''}     | ${null}   | ${[]}
+  `(
+    'Should return expected: $expected when messages have lastname: $lastname, firstname: $firstname, birthdate: $birthdate',
+    ({ lastname, firstname, birthdate, expected }) => {
+      const fields = {
+        lastname: {
+          value: lastname,
+          message: null,
+        },
+        firstname: {
+          value: firstname,
+          message: null,
+        },
+        birthdate: {
+          value: birthdate,
+          message: null,
+        },
+      };
+      const result = getValuesList(fields);
+      expect(result).toEqual(expected);
+    },
+  );
 });
