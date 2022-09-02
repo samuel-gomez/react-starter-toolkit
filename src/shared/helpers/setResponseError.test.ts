@@ -20,15 +20,14 @@ describe('setResponseError', () => {
     });
   });
 
-  it('Should return 404 danger with generic label when anomaly is null', () => {
+  it('Should return 404 danger with generic label when anomaly is undefined', () => {
     const responseService = {
-      anomaly: null,
+      anomaly: undefined,
       status: 404,
       responseBody: {},
     };
     const result = setResponseError({ response: responseService });
     expect(result).toEqual({
-      ...responseService.anomaly,
       label: STATUS_HTTP_MESSAGES[responseService.status],
       type: 'danger',
       iconName: 'alert',
@@ -52,15 +51,14 @@ describe('setResponseError', () => {
     });
   });
 
-  it('Should return 500 error with generic label when anomaly is null', () => {
+  it('Should return 500 error with generic label when anomaly is undefined', () => {
     const responseService = {
-      anomaly: null,
+      anomaly: undefined,
       status: 500,
       responseBody: {},
     };
     const result = setResponseError({ response: responseService });
     expect(result).toEqual({
-      ...responseService.anomaly,
       label: STATUS_HTTP_MESSAGES[responseService.status],
       detail: '',
     });

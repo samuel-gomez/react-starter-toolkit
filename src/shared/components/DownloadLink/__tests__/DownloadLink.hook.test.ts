@@ -39,18 +39,17 @@ describe('setDownloadFile', () => {
   });
 
   it('Should call downloadjsFn When state.downloadFile is NOT empty', () => {
-    const blob = new Blob([''], { type: 'text/csv' });
     setDownloadFile({
       fileName: 'test.csv',
       state: {
         ...state,
-        downloadFile: blob,
+        downloadFile: 'blob',
       },
       hasSubmit: true,
       downloadjsFn: downloadjsFnMock,
     });
 
-    expect(downloadjsFnMock).toBeCalledWith(blob, 'test.csv', 'text/csv');
+    expect(downloadjsFnMock).toBeCalledWith('blob', 'test.csv', 'text/csv');
   });
 });
 

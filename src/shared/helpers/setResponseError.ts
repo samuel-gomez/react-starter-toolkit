@@ -1,6 +1,16 @@
 import { STATUS_API, STATUS_HTTP_MESSAGES } from 'shared/constants';
 
-const setResponseError = ({ response }) => {
+type TsetResponseError = {
+  response: {
+    anomaly?: {
+      label?: string;
+      detail?: string;
+    };
+    status: number;
+  };
+};
+
+const setResponseError = ({ response }: TsetResponseError) => {
   const { anomaly, status } = response;
   switch (true) {
     case `${status}`.startsWith(`${STATUS_API.WARNING}`):

@@ -20,7 +20,7 @@ export type TFetchCustom = {
   mergeObjFn?: typeof mergeObj;
 };
 
-type TResponse = {
+export type TResponse = {
   status: number;
   blob: () => Promise<unknown>;
   json: () => Promise<object>;
