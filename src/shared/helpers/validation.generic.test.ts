@@ -141,7 +141,7 @@ describe('genericHandleChange', () => {
     values?: string[];
     message?: string;
   };
-  const setGivenState = ({ name, value, values, viewValue, message, key = '' }: TState) => ({
+  const setState = ({ name, value, values, viewValue, message, key = '' }: TState) => ({
     [key]: {
       name,
       value,
@@ -161,16 +161,6 @@ describe('genericHandleChange', () => {
     errors,
     name,
     viewValue,
-  });
-
-  const setExpectedState = ({ key = '', name, value, values, viewValue, message }: TState) => ({
-    [key]: {
-      name,
-      value,
-      message,
-      values,
-      viewValue,
-    },
   });
 
   it.each`
@@ -199,11 +189,11 @@ describe('genericHandleChange', () => {
       expectedValues,
     }) => {
       const rules = setRules({ key, message });
-      const givenState = setGivenState({ key, name, value: stateValue, values: stateValues });
+      const givenState = setState({ key, name, value: stateValue, values: stateValues });
       const givenEvent = setGivenEvent({ name, errors, value: eventValue, values: eventValues, viewValue: eventViewValue });
       const result = genericHandleChange(rules, givenState, givenEvent);
       expect(result).toMatchObject(
-        setExpectedState({
+        setState({
           key,
           name: expectedName,
           value: expectedValue,
