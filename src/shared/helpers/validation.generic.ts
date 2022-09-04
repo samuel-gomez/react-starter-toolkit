@@ -1,5 +1,6 @@
 import Validate from 'mw.validation';
 import { MSG_ERROR_FORMAT } from '../constants';
+import isEmptyOrNull from './isEmptyOrNull';
 
 type TinputRules = Record<string, unknown>[];
 
@@ -123,6 +124,4 @@ type Tfields = Record<string, Tfield>;
 export const getErrorsList = (fields: Tfields) => Object.keys(fields).filter(key => hasErrorMessage(fields[key]));
 
 export const getValuesList = (fields: Tfields) =>
-  Object.keys(fields).filter(
-    key => fields[key].value !== null && fields[key].value !== '' && fields[key].values !== [] && fields[key].values !== null,
-  );
+  Object.keys(fields).filter(key => !isEmptyOrNull(fields[key].value) || !isEmptyOrNull(fields[key].values));

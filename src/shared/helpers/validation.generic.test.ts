@@ -344,11 +344,17 @@ describe('getErrorsList', () => {
   );
 });
 
-describe('Function getValuesList', () => {
+describe('getValuesList', () => {
   it.each`
-    lastname | firstname | birthdate | expected
-    ${'doe'} | ${'john'} | ${null}   | ${['lastname', 'firstname']}
-    ${''}    | ${''}     | ${null}   | ${[]}
+    lastname     | firstname    | birthdate    | expected
+    ${null}      | ${null}      | ${null}      | ${[]}
+    ${undefined} | ${undefined} | ${undefined} | ${[]}
+    ${''}        | ${''}        | ${[]}        | ${[]}
+    ${'doe'}     | ${undefined} | ${null}      | ${['lastname']}
+    ${undefined} | ${'john'}    | ${null}      | ${['firstname']}
+    ${''}        | ${''}        | ${['test']}  | ${['birthdate']}
+    ${'doe'}     | ${'john'}    | ${null}      | ${['lastname', 'firstname']}
+    ${'doe'}     | ${'john'}    | ${['test']}  | ${['lastname', 'firstname', 'birthdate']}
   `(
     'Should return expected: $expected when messages have lastname: $lastname, firstname: $firstname, birthdate: $birthdate',
     ({ lastname, firstname, birthdate, expected }) => {
@@ -362,7 +368,7 @@ describe('Function getValuesList', () => {
           message: null,
         },
         birthdate: {
-          value: birthdate,
+          values: birthdate,
           message: null,
         },
       };
