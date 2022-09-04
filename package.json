@@ -24,7 +24,7 @@
     "@axa-fr/react-toolkit-all": "1.4.1",
     "@axa-fr/react-toolkit-core": "1.4.1",
     "@axa-fr/react-toolkit-modal-default": "1.4.1",
-    "@babel/parser": "7.18.11",
+    "@babel/parser": "7.18.13",
     "@tanstack/react-query": "4.2.3",
     "@tanstack/react-query-devtools": "4.0.10",
     "@types/downloadjs": "1.4.3",
@@ -146,7 +146,7 @@
     "resetMocks": false
   },
   "resolutions": {
-    "@babel/parser": "7.18.11"
+    "@babel/parser": "7.18.13"
   },
   "repository": {
     "type": "git",
