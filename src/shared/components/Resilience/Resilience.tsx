@@ -1,15 +1,22 @@
-import { ComponentProps, ReactNode } from 'react';
+import { ComponentProps, PropsWithChildren, ReactNode } from 'react';
 import ResilienceSubstitut from './ResilienceSubstitut';
 
-type TResilience = Omit<ComponentProps<typeof ResilienceSubstitut>, 'anomaly'> & {
+type TResilience<Trefetch> = Omit<ComponentProps<typeof ResilienceSubstitut>, 'anomaly'> & {
   anomaly?: ComponentProps<typeof ResilienceSubstitut>['anomaly'] | null;
-  refetch?: () => void | null;
+  refetch?: Trefetch;
   children?: ReactNode;
 };
 
-const Resilience = ({ resilienceMode, resilienceModifier, FallbackComponent, refetch, anomaly = null, children = null }: TResilience) =>
+const Resilience = <Trefetch,>({
+  resilienceMode,
+  resilienceModifier,
+  FallbackComponent,
+  refetch,
+  anomaly = null,
+  children = null,
+}: PropsWithChildren<TResilience<Trefetch>>) =>
   anomaly ? (
-    <ResilienceSubstitut
+    <ResilienceSubstitut<Trefetch>
       anomaly={anomaly}
       refetch={refetch}
       resilienceMode={resilienceMode}

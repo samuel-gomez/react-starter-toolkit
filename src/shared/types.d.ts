@@ -5,12 +5,3 @@ export type Tanomaly = {
   iconName?: string;
   code?: string | number;
 };
-
-export type TInitialState = {
-  isLoading: boolean;
-  isLoaded: boolean;
-  [x: string]: unknown;
-  anomaly: {
-    [x: string]: Tanomaly | null;
-  };
-};

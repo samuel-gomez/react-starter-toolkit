@@ -1,4 +1,4 @@
-import { setTextTooltip } from '../formatDataTable';
+import { setTextTooltip, setDisplay } from '../formatDataTable';
 
 describe('setTextTooltip', () => {
   it('Should return {"": {"label": ""}} when call with no params', () => {
@@ -20,5 +20,21 @@ describe('setTextTooltip', () => {
       },
     };
     expect(result).toEqual(expected);
+  });
+});
+
+describe('setDisplay', () => {
+  it('Should return {} when call with no column', () => {
+    const columns = {};
+    const result = setDisplay(columns);
+    expect(result).toEqual({});
+  });
+
+  it('Should return {name: {"label": "sam"}} when call with one column', () => {
+    const columns = {
+      name: 'sam',
+    };
+    const result = setDisplay(columns);
+    expect(result).toEqual({ name: { label: 'sam' } });
   });
 });

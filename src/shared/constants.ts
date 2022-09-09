@@ -1,9 +1,8 @@
-import { string, number, shape, oneOfType, arrayOf } from 'prop-types';
-
+/*************************************************************************
+ * FORM CONSTANTS
+ *************************************************************************/
 export const MSG_REQUIRED = 'Le champ est obligatoire';
-
 export const MSG_FORMAT = 'Format invalide';
-
 export const MSG_ERROR_FORMAT = 'Format de fichier incorrect';
 
 export const rulesRequired = {
@@ -25,6 +24,15 @@ export const rulesErrorFormat = {
   },
 };
 
+export const DEFAULT_OPTION_LABEL = '- Sélectionner -';
+export const DEFAULT_OPTION = {
+  value: '',
+  label: DEFAULT_OPTION_LABEL,
+};
+
+/*************************************************************************
+ * API STATUS CONSTANTS
+ *************************************************************************/
 export const STATUS_HTTP = {
   SUCCESS: 200,
   CREATED: 201,
@@ -52,61 +60,30 @@ export const STATUS_HTTP_MESSAGES = {
   [STATUS_HTTP.SERVER_ERROR]: 'Erreur: Problème technique ! Contacter votre support',
 };
 
-export const TIMEOUT = 20000;
-export const TIMEOUT_ERROR_MESSAGE = 'Erreur: la requête a mis trop de temps';
+/*************************************************************************
+ * USER CONSTANTS
+ *************************************************************************/
+
+export const ADMIN = 'Admin';
+export const READER = 'Reader';
+export const WRITER = 'Writer';
+export const USER = 'User';
+export const ALL = '';
+
+export const PROFILS = [ADMIN, READER, WRITER, USER, ALL];
+
+/*************************************************************************
+ * COMMONS CONSTANTS
+ *************************************************************************/
 
 export const MODIFIER_CLASS = {
   success: 'success',
   disabled: 'disabled',
 };
 
-export const COMMENT = {
-  NAME: 'comment',
-  LABEL: 'Commentaire',
-  SUBLABEL: 'Facultatif',
-  MAXLENGTH: '300',
-};
-
-export const JSON_CONTENT_HEADER = {
-  'Content-Type': 'application/json',
-};
+/*************************************************************************
+ * DEMO CONSTANTS
+ *************************************************************************/
 
 export const STORYBOOK = 'https://axaguildev.github.io/react-toolkit/latest/storybook/';
 export const DESIGN_SYSTEM = 'https://axaguildev.github.io/design-system/';
-
-export const ADMIN = 'Admin';
-export const READER = 'Reader';
-export const WRITER = 'Writer';
-export const USER = 'User';
-
-export const PROFILS = [ADMIN, READER, WRITER, USER];
-
-export const DEFAULT_OPTION_LABEL = '- Sélectionner -';
-export const DEFAULT_OPTION = {
-  value: '',
-  label: DEFAULT_OPTION_LABEL,
-};
-
-/**
- * Commons proptypes
- */
-
-export const ContextPropTypes = shape({
-  Provider: shape({ defaultValue: string, currentValue: string, changedBits: number }),
-  Consumer: shape({ defaultValue: string, currentValue: string, changedBits: number }),
-});
-
-export const SelectPropTypes = arrayOf(
-  shape({
-    value: oneOfType([string, number]),
-    label: string,
-  }),
-);
-
-export const AnomalyPropTypes = shape({
-  code: number,
-  detail: string,
-  label: string,
-});
-
-export const IdPropTypes = oneOfType([string, number]);

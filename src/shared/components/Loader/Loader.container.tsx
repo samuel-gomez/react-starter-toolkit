@@ -2,7 +2,7 @@ import { ComponentProps } from 'react';
 import { MODES, TEXTS } from './constants';
 import Loader from './Loader';
 
-type TLoaderContainer = Omit<ComponentProps<typeof Loader>, 'isVisible' | 'message'> & {
+export type TLoaderContainer = Omit<ComponentProps<typeof Loader>, 'isVisible' | 'message'> & {
   classModifier?: string;
   text?: string;
   mode: keyof typeof MODES;

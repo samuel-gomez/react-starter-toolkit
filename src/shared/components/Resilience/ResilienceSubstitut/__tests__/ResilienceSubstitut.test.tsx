@@ -14,7 +14,6 @@ describe('<ResilienceSubstitut/>', () => {
       label: 'label',
       detail: 'detail',
     },
-    resilienceModifier: '',
   };
   it('Render <ResilienceSubstitut/> with default props and return Alert resilience', () => {
     const { asFragment, getByText, container } = render(<ResilienceSubstitut {...defaultProps} />);
