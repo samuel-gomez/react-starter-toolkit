@@ -1,7 +1,6 @@
 import { useState, useCallback } from 'react';
 import { genericHandleChange, getErrorsList, computeInitialStateErrorMessage, getValuesList } from 'shared/helpers/validation.generic';
-import rules from './SearchForm.validation.rules';
-import { NAME } from './constants';
+import { NAME, rules } from './constants';
 
 /** ************************************************************************************************************************ */
 /* STATE FORM SEARCH DISTRIBUTORS  ***************************************************************************************** */

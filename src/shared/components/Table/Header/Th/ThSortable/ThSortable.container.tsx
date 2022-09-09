@@ -27,7 +27,7 @@ type TtoggleSorting = {
 
 export const toggleSorting = ({ field, sorting: { field: prevField, order } = { field, order: NONE }, setOrderFn = setOrder }: TtoggleSorting) => ({
   field,
-  order: setOrderFn({ field, prevField, order }),
+  order: setOrderFn({ field, prevField, order }) as Torder,
 });
 
 type TsetClassModifierActive = {

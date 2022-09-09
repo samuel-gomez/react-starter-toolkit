@@ -1,4 +1,4 @@
-import { createContext } from 'react';
+import { createContext, ReactNode } from 'react';
 import { QueryClient, QueryClientProvider, QueryKey } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { mergeObj } from 'shared/helpers';
@@ -74,16 +74,37 @@ export const setFetchCustom =
 
 export type TFetchProvider = Omit<TFetchCustom, 'fetchFn' | 'fetchAuthConfig'> & {
   fetchConfig: object;
-  children: JSX.Element;
+  children: ReactNode;
   useOidcAccessTokenFn: typeof useOidcAccessToken;
+  setQueryClientFn?: typeof setQueryClient;
   setFetchCustomFn?: typeof setFetchCustom;
   showReactQueryDevtoolsComponent?: (process: string | undefined) => JSX.Element | boolean;
 };
 
-export const defaultQueryWithAuthFn = async (queryKey: QueryKey, fetchCustom: ReturnType<typeof setFetchCustom>) => fetchCustom(queryKey);
+export const defaultQueryWithAuth = async (queryKey: QueryKey, fetchCustom: ReturnType<typeof setFetchCustom>) => fetchCustom(queryKey);
 
 export const showReactQueryDevtools = (process: string | undefined) =>
   process === 'development' && <ReactQueryDevtools initialIsOpen={false} position="bottom-right" />;
+
+type TsetQueryClient = {
+  fetchCustom: ReturnType<typeof setFetchCustom>;
+  setQueryFn?: typeof setQuery;
+};
+
+export const setQuery =
+  (fetchCustom: ReturnType<typeof setFetchCustom>) =>
+  ({ queryKey, defaultQueryWithAuthFn = defaultQueryWithAuth }: { queryKey: QueryKey; defaultQueryWithAuthFn?: typeof defaultQueryWithAuth }) =>
+    defaultQueryWithAuthFn(queryKey, fetchCustom);
+
+export const setQueryClient = ({ fetchCustom, setQueryFn = setQuery }: TsetQueryClient) =>
+  new QueryClient({
+    defaultOptions: {
+      queries: {
+        refetchOnWindowFocus: false,
+        queryFn: setQueryFn(fetchCustom),
+      },
+    },
+  });
 
 const FetchProvider = ({
   apiUrl,
@@ -93,6 +114,7 @@ const FetchProvider = ({
   mergeObjFn = mergeObj,
   setFetchCustomFn = setFetchCustom,
   showReactQueryDevtoolsComponent = showReactQueryDevtools,
+  setQueryClientFn = setQueryClient,
 }: TFetchProvider) => {
   const { accessToken } = useOidcAccessTokenFn();
   const authConfig = {
@@ -102,15 +124,7 @@ const FetchProvider = ({
   };
   const fetchAuthConfig = mergeObjFn(fetchConfig, authConfig);
   const fetchCustom = setFetchCustomFn({ apiUrl, fetchAuthConfig });
-
-  const queryClient = new QueryClient({
-    defaultOptions: {
-      queries: {
-        refetchOnWindowFocus: false,
-        queryFn: ({ queryKey }) => defaultQueryWithAuthFn(queryKey, fetchCustom),
-      },
-    },
-  });
+  const queryClient = setQueryClientFn({ fetchCustom });
 
   return (
     <FetchContext.Provider value={{ fetchCustom, queryClient }}>

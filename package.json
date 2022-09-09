@@ -6,7 +6,7 @@
   "scripts": {
     "start": "cross-env GENERATE_SOURCEMAP=false react-scripts start",
     "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
-    "build:local": "cross-env REACT_APP_NODE_ENV=production.local react-scripts build && serve -s build -p 5002",
+    "preview": "cross-env REACT_APP_NODE_ENV=production.local react-scripts build && serve -s build -p 5002",
     "test": "react-scripts test --watchAll=false",
     "test:sonar": "react-scripts test --testResultsProcessor ./node_modules/jest-sonar-reporter",
     "cover:local": "npm t -- --coverage --watchAll=false",
@@ -17,7 +17,8 @@
     "prepare": "husky install",
     "cz": "cz",
     "prettier": "prettier --check src",
-    "prettier:fix": "prettier --write src"
+    "prettier:fix": "prettier --write src",
+    "check": "npm run prettier && npm run lint"
   },
   "dependencies": {
     "@axa-fr/react-oidc-context": "5.14.2",
@@ -46,7 +47,6 @@
     "prop-types": "15.8.1",
     "react": "18.2.0",
     "react-apexcharts": "1.4.0",
-    "react-app-polyfill": "3.0.0",
     "react-dom": "18.2.0",
     "react-live": "2.4.1",
     "react-router-dom": "6.3.0",
@@ -120,11 +120,8 @@
       "!<rootDir>/src/**/index.{js,ts,tsx}",
       "!<rootDir>/src/**/constants.{js,ts}",
       "!<rootDir>/src/**/*.stories.{js,ts}",
-      "!<rootDir>/src/**/*.rules.{js,ts}",
-      "!<rootDir>/src/shared/hoc/withEnvAndAuth.{js,ts}",
       "!<rootDir>/node_modules/",
-      "!<rootDir>/src/shared/helpers/compose.{js,ts}",
-      "!<rootDir>/src/shared/testsUtils/**/*.{js,ts}",
+      "!<rootDir>/src/shared/testsUtils/**/*.{js,ts,tsx}",
       "!<rootDir>/src/**/__tests__/*.{js,ts}",
       "!<rootDir>/src/**/*.d.ts"
     ],

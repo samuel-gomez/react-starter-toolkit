@@ -8,7 +8,7 @@ import Th, { TThContainer } from './Th';
 type Theaders = {
   label: string;
   key: string;
-  field: string;
+  field?: string;
   infobulle?: ReactNode;
 };
 

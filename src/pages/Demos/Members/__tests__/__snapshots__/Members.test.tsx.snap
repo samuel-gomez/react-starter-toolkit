@@ -359,34 +359,43 @@ exports[`<Members/> Should render <Members /> with one member 1`] = `
             class="af-table__tr"
           >
             <th
-              class="af-table__th"
-              role="columnheader"
+              class="af-table__th af-table__th--sortable af-table__th--active"
+              role="button"
             >
               <span
                 class="af-table__th-label"
               >
                 Prénom
               </span>
+              <span
+                class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-arrow-xs-up"
+              />
             </th>
             <th
-              class="af-table__th"
-              role="columnheader"
+              class="af-table__th af-table__th--sortable"
+              role="button"
             >
               <span
                 class="af-table__th-label"
               >
                 Nom
               </span>
+              <span
+                class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-sorting"
+              />
             </th>
             <th
-              class="af-table__th"
-              role="columnheader"
+              class="af-table__th af-table__th--sortable"
+              role="button"
             >
               <span
                 class="af-table__th-label"
               >
                 Date de naissance
               </span>
+              <span
+                class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-sorting"
+              />
             </th>
             <th
               class="af-table__th"

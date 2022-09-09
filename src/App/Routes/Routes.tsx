@@ -12,11 +12,12 @@ import Home from 'pages/Home';
 import ROUTE_URL from 'App/Routes/constants';
 import { UserContext } from 'App/UserProvider';
 import Loader, { MODES } from 'shared/components/Loader';
+import { PROFILS } from 'shared/constants';
 
 export const withAuth = <T extends object>(
   Component: React.ComponentType<T>,
   UserContextObj = UserContext,
-  authorized = [''],
+  authorized = PROFILS,
   NavigateCmpt = Navigate,
   LoaderCmpt = Loader,
 ) => {

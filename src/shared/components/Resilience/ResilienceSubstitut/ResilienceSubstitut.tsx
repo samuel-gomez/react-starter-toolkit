@@ -22,27 +22,27 @@ type TsetClassName = {
 export const setClassName = ({ resilienceModifier, classAlertCt = DEFAULT_CLASS_ALERT, classContainerCt = DEFAULT_CLASS_CONTAINER }: TsetClassName) =>
   resilienceModifier === classContainerCt ? `${classContainerCt} ${classAlertCt}` : classAlertCt;
 
-type TResilienceSubstitut = {
+type TResilienceSubstitut<Trefetch> = {
   anomaly: Tanomaly;
-  refetch?: () => void | null;
+  refetch?: Trefetch;
   children?: ReactNode;
   resilienceMode?: keyof typeof ERESILIENCE_MODE;
   FallbackComponent?: ElementType;
-  resilienceModifier: string;
+  resilienceModifier?: string;
   setClassModifierFn?: typeof setClassModifier;
   setClassNameFn?: typeof setClassName;
 };
 
-const ResilienceSubstitut = ({
+const ResilienceSubstitut = <Trefetch,>({
   anomaly,
   refetch,
   children,
   resilienceMode = ERESILIENCE_MODE.alert,
   FallbackComponent = Empty,
-  resilienceModifier,
+  resilienceModifier = '',
   setClassModifierFn = setClassModifier,
   setClassNameFn = setClassName,
-}: TResilienceSubstitut) => {
+}: TResilienceSubstitut<Trefetch>) => {
   const { label, detail = '', type = 'error', iconName = 'exclamation-sign' } = anomaly;
   const classModifier = setClassModifierFn?.({ type, resilienceModifier });
   const className = setClassNameFn?.({ resilienceModifier });

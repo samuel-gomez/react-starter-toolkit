@@ -1,7 +1,16 @@
 import { useContext } from 'react';
 import { render } from '@testing-library/react';
 import { STATUS_HTTP_MESSAGES } from 'shared/constants';
-import FetchProvider, { buildResponse, FetchContext, setFetchCustom, computeDataError, showReactQueryDevtools } from '../FetchProvider';
+import { QueryKey } from '@tanstack/react-query';
+import FetchProvider, {
+  buildResponse,
+  FetchContext,
+  setFetchCustom,
+  computeDataError,
+  showReactQueryDevtools,
+  setQueryClient,
+  setQuery,
+} from '../FetchProvider';
 
 const fetchConfigMock = {
   headers: {
@@ -36,6 +45,32 @@ describe('FetchProvider', () => {
 
     expect(getByText(/haveFetchCustom/)).toBeInTheDocument();
     expect(asFragment()).toMatchSnapshot();
+  });
+});
+
+describe('setQuery', () => {
+  it('Should call setQueryFn with fetchcustom and querykey when defaultQueryWithAuthFn have been called with fetchcustom and querykey', async () => {
+    const fetchCustom = jest.fn();
+    const defaultQueryWithAuthFn = jest.fn();
+    setQuery(fetchCustom)({ queryKey: 'queryKey' as unknown as QueryKey, defaultQueryWithAuthFn });
+
+    expect(defaultQueryWithAuthFn).toHaveBeenCalledWith('queryKey', fetchCustom);
+  });
+  it('Should return when setQueryClient have been called with fetchcustom', async () => {
+    const fetchCustom = jest.fn();
+    const result = setQuery(fetchCustom)({ queryKey: 'queryKey' as unknown as QueryKey });
+
+    expect(result).toEqual(Promise.resolve({}));
+  });
+});
+
+describe('setQueryClient', () => {
+  it('Should call setQueryFn with fetch custom when setQueryClient have been called with fetchcustom', async () => {
+    const fetchCustom = jest.fn();
+    const setQueryFn = jest.fn();
+    setQueryClient({ fetchCustom, setQueryFn });
+
+    expect(setQueryFn).toHaveBeenCalledWith(fetchCustom);
   });
 });
 

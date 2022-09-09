@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { OidcProvider, useOidcUser, useOidcAccessToken, OidcSecure } from '@axa-fr/react-oidc-context';
 import Routes from 'App/Routes';
@@ -5,14 +6,67 @@ import UserProvider from 'App/UserProvider';
 import FetchProvider from 'App/FetchProvider';
 import NotificationProvider from 'App/NotificationProvider';
 import type { TEnvironment } from './EnvironmentProvider';
+import { useOidcAccessTokenFnMock, useOidcUserFnMock } from './constants';
+
+type TUserAndFetchProviders = Omit<TEnvironment, 'oidc' | 'baseUrl'> & {
+  isEnabled: boolean;
+  UserProviderCmpt: typeof UserProvider;
+  FetchProviderCmpt: typeof FetchProvider;
+  useOidcUserFn: typeof useOidcUser;
+  useOidcAccessTokenFn: typeof useOidcAccessToken;
+  children: ReactNode;
+};
+
+const UserAndFetchProviders = ({
+  apiUrl,
+  fetchConfig,
+  isEnabled,
+  useOidcUserFn,
+  useOidcAccessTokenFn,
+  UserProviderCmpt,
+  FetchProviderCmpt,
+  children,
+}: TUserAndFetchProviders) => (
+  <UserProviderCmpt isEnabled={isEnabled} useOidcUserFn={useOidcUserFn}>
+    <FetchProviderCmpt apiUrl={apiUrl} fetchConfig={fetchConfig} useOidcAccessTokenFn={useOidcAccessTokenFn}>
+      {children}
+    </FetchProviderCmpt>
+  </UserProviderCmpt>
+);
+
+type TOidc = Omit<TUserAndFetchProviders, 'isEnabled'> &
+  Omit<TEnvironment, 'baseUrl'> & {
+    children: ReactNode;
+    OidcProviderCmpt: typeof OidcProvider;
+    OidcSecureCmpt: typeof OidcSecure;
+    useOidcUserFn: typeof useOidcUser;
+    useOidcAccessTokenFn: typeof useOidcAccessToken;
+  };
+
+const Oidc = ({ oidc, OidcProviderCmpt, OidcSecureCmpt, ...restProps }: TOidc) =>
+  oidc.isEnabled ? (
+    <OidcProviderCmpt configuration={oidc}>
+      <OidcSecureCmpt>
+        <UserAndFetchProviders {...restProps} isEnabled={Boolean(oidc.isEnabled)} />
+      </OidcSecureCmpt>
+    </OidcProviderCmpt>
+  ) : (
+    <UserAndFetchProviders
+      {...restProps}
+      isEnabled={Boolean(oidc.isEnabled)}
+      useOidcUserFn={useOidcUserFnMock}
+      useOidcAccessTokenFn={useOidcAccessTokenFnMock}
+    />
+  );
 
 type TApp = TEnvironment & {
-  OidcProviderCmpt?: typeof OidcProvider;
-  UserProviderCmpt?: typeof UserProvider;
-  OidcSecureCmpt?: typeof OidcSecure;
-  FetchProviderCmpt?: typeof FetchProvider;
+  OidcCmpt?: typeof Oidc;
   useOidcUserFn?: typeof useOidcUser;
   useOidcAccessTokenFn?: typeof useOidcAccessToken;
+  OidcProviderCmpt?: typeof OidcProvider;
+  OidcSecureCmpt?: typeof OidcSecure;
+  UserProviderCmpt?: typeof UserProvider;
+  FetchProviderCmpt?: typeof FetchProvider;
 };
 
 const App = ({
@@ -20,26 +74,31 @@ const App = ({
   fetchConfig,
   apiUrl,
   baseUrl,
-  OidcProviderCmpt = OidcProvider,
-  UserProviderCmpt = UserProvider,
-  OidcSecureCmpt = OidcSecure,
-  FetchProviderCmpt = FetchProvider,
-  useOidcAccessTokenFn = useOidcAccessToken,
+  OidcCmpt = Oidc,
   useOidcUserFn = useOidcUser,
+  useOidcAccessTokenFn = useOidcAccessToken,
+  OidcProviderCmpt = OidcProvider,
+  OidcSecureCmpt = OidcSecure,
+  UserProviderCmpt = UserProvider,
+  FetchProviderCmpt = FetchProvider,
 }: TApp) => (
-  <OidcProviderCmpt configuration={oidc}>
-    <UserProviderCmpt useOidcUserFn={useOidcUserFn}>
-      <OidcSecureCmpt>
-        <FetchProviderCmpt apiUrl={apiUrl} fetchConfig={fetchConfig} useOidcAccessTokenFn={useOidcAccessTokenFn}>
-          <NotificationProvider>
-            <Router basename={baseUrl}>
-              <Routes />
-            </Router>
-          </NotificationProvider>
-        </FetchProviderCmpt>
-      </OidcSecureCmpt>
-    </UserProviderCmpt>
-  </OidcProviderCmpt>
+  <OidcCmpt
+    OidcProviderCmpt={OidcProviderCmpt}
+    OidcSecureCmpt={OidcSecureCmpt}
+    UserProviderCmpt={UserProviderCmpt}
+    FetchProviderCmpt={FetchProviderCmpt}
+    fetchConfig={fetchConfig}
+    apiUrl={apiUrl}
+    oidc={oidc}
+    useOidcUserFn={useOidcUserFn}
+    useOidcAccessTokenFn={useOidcAccessTokenFn}
+  >
+    <NotificationProvider>
+      <Router basename={baseUrl}>
+        <Routes />
+      </Router>
+    </NotificationProvider>
+  </OidcCmpt>
 );
 
 export default App;

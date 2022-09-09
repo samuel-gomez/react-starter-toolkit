@@ -15,5 +15,6 @@ export const setTextTooltip = ({ text = '', name = '', maxDisplay = 0 }) =>
 type Tcolumn = {
   [key: string]: string;
 };
-export const setDisplay = (column: Tcolumn, maxDisplay: number, setTextTooltipFn = setTextTooltip) =>
-  Object.keys(column).map(keyColumn => setTextTooltipFn({ text: column[keyColumn], name: keyColumn, maxDisplay }))[0];
+
+export const setDisplay = (column: Tcolumn, maxDisplay?: number, setTextTooltipFn = setTextTooltip) =>
+  Object.keys(column)?.map(keyColumn => setTextTooltipFn({ text: column[keyColumn], name: keyColumn, maxDisplay }))[0] ?? {};

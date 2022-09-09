@@ -1,12 +1,17 @@
-import { render } from '@testing-library/react';
+import { render, RenderOptions } from '@testing-library/react';
 import { StaticRouter } from 'react-router-dom/server';
 import FetchProvider from 'App/FetchProvider';
 import UserProvider from 'App/UserProvider';
+import { ReactElement, ReactNode } from 'react';
 import { MOCK_API_URL } from '.';
 
+type TMockProvider = {
+  [x: string]: Record<string, unknown | number | string> | string;
+};
+
 const MockProviders =
-  ({ role, ...testMock }) =>
-  ({ children }) => {
+  ({ role = '', ...testMock }: TMockProvider) =>
+  ({ children }: { children: ReactNode }) => {
     const useOidcAccessTokenFn = jest.fn().mockReturnValue({ accessToken: 'accessToken' });
     const useOidcUserFn = jest.fn().mockReturnValueOnce({ oidcUser: { member_of: [`CN=${role}`] } });
     return (
@@ -18,13 +23,14 @@ const MockProviders =
           }}
           useOidcAccessTokenFn={useOidcAccessTokenFn}
         >
-          <StaticRouter context={{}}>{children}</StaticRouter>
+          <StaticRouter location="">{children}</StaticRouter>
         </FetchProvider>
       </UserProvider>
     );
   };
 
-const customRender = (ui, options, testMock = { role: '' }) => render(ui, { wrapper: MockProviders(testMock), ...options });
+const customRender = (ui: ReactElement, options?: Omit<RenderOptions, 'wrapper'>, testMock: TMockProvider = { role: '' }) =>
+  render(ui, { wrapper: MockProviders(testMock), ...options });
 
 // re-export everything
 export * from '@testing-library/react';
