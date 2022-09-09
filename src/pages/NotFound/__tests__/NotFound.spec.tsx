@@ -3,7 +3,7 @@ import { defineFeature, loadFeature } from 'jest-cucumber';
 import { renderWithWrapperStaticRouter, emptyFunction } from 'shared/testsUtils';
 import NotFound from '../NotFound';
 
-const feature = loadFeature('src/pages/NotFound/NotFound.feature');
+const feature = loadFeature('features/NotFound/NotFound.feature');
 
 defineFeature(feature, test => {
   test('Chargement de la page 404', ({ given, when, then, and }) => {

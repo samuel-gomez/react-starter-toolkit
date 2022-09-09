@@ -3,7 +3,7 @@ import { renderWithWrapperStaticRouter, emptyFunction } from 'shared/testsUtils'
 import { defineFeature, loadFeature } from 'jest-cucumber';
 import Unauthorize from '../Unauthorize';
 
-const feature = loadFeature('src/pages/Unauthorize/Unauthorize.feature');
+const feature = loadFeature('features/Unauthorize/Unauthorize.feature');
 
 defineFeature(feature, test => {
   test('Chargement de la page 403', ({ given, when, then, and }) => {
