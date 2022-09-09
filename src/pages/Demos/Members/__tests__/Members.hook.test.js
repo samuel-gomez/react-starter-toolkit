@@ -146,17 +146,6 @@ describe('computeInfos', () => {
   });
 });
 
-const initialState = {
-  isLoading: true,
-  isLoaded: false,
-  members: {
-    pagination: { total: 0, currentPage: 1, numberPages: 1 },
-    data: [],
-  },
-  anomaly: { members: null },
-  refetch: emptyFunction,
-};
-
 const useQueryFnMock = jest.fn().mockReturnValue({
   data: {},
   isFetching: true,
@@ -173,8 +162,8 @@ const setExpectedUseMembers = ({
   currentPage = 1,
   numberPages = 1,
   total = 0,
+  isLoading = true,
 }) => ({
-  ...initialState,
   anomaly,
   members,
   sorting: {
@@ -191,6 +180,7 @@ const setExpectedUseMembers = ({
     numberPages,
     total,
   },
+  isLoading,
 });
 
 describe('useMembers', () => {

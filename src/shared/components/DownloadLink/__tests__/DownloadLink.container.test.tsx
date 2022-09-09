@@ -1,7 +1,6 @@
 import { render } from '@testing-library/react';
 import { WrapperQuery } from 'shared/testsUtils';
 import DownloadLinkContainer from '../DownloadLink.container';
-import { SERVICE_NAME } from '../constants';
 
 describe('DownloadLinkContainer', () => {
   it('Render <DownloadLinkContainer/> ', () => {
@@ -23,7 +22,8 @@ describe('DownloadLinkContainer', () => {
     });
     const useDownloadFnMock = jest.fn().mockReturnValue({
       submitDownload: jest.fn(),
-      state: { isLoading: false, anomaly: { [SERVICE_NAME]: null } },
+      isLoading: false,
+      anomaly: null,
     });
     const useDownloadFileMock = jest.fn();
 

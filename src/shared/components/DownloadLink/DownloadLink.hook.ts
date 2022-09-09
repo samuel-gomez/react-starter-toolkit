@@ -1,12 +1,8 @@
 import { useCallback, useEffect, useContext, useState, useId } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import downloadjs from 'downloadjs';
-import { isEmptyOrNull } from 'shared/helpers';
-import { setInitialState } from 'App/FetchProvider';
 import { NotificationContext, TaddNotification } from 'App/NotificationProvider';
 import { SERVICE_NAME, SUCCESS_DOWNLOAD_MESSAGE } from './constants';
-
-export const INITIAL_STATE = setInitialState(SERVICE_NAME);
 
 export const onSuccess =
   (clearSubmitDownload: TclearSubmitDownload, addNotification: TaddNotification, id = 'success-alert-id') =>
@@ -39,7 +35,6 @@ type TuseDownload = {
   path: string;
   hasSubmit: boolean;
   clearSubmitDownload: TclearSubmitDownload;
-  initialState?: ReturnType<typeof setInitialState>;
   useQueryFn?: (
     path: [string, { blob: boolean }],
     options: { enabled: boolean; onSuccess: () => void; onError: (err: { label: string }) => void },
@@ -54,7 +49,6 @@ export const useDownload = ({
   path,
   hasSubmit,
   clearSubmitDownload,
-  initialState = INITIAL_STATE,
   useQueryFn = useQuery,
   NotificationContextObj = NotificationContext,
   onSuccessFn = onSuccess,
@@ -63,12 +57,12 @@ export const useDownload = ({
 }: TuseDownload) => {
   const { addNotification } = useContext(NotificationContextObj);
   const id = useIdFn();
-  const { data, isFetching, isFetched } = useQueryFn([path, { blob: true }], {
+  const { data, isFetching } = useQueryFn([path, { blob: true }], {
     enabled: hasSubmit,
     onSuccess: onSuccessFn(clearSubmitDownload, addNotification, id),
     onError: onErrorFn(addNotification, id),
   });
-  return { state: { ...initialState, isLoading: isFetching, isLoaded: isFetched, [SERVICE_NAME]: data || [] } };
+  return { isLoading: isFetching, [SERVICE_NAME]: (data || []) as Blob };
 };
 
 export const useSubmitDownload = (initialState = false) => {
@@ -93,24 +87,16 @@ type TclearSubmitDownload = TReturnUseSubmitDownload['clearSubmitDownload'];
  ***************************************************************************************** */
 
 type TsetDownloadFile = {
-  isEmptyOrNullFn?: typeof isEmptyOrNull;
   downloadjsFn?: typeof downloadjs;
   fileName: string;
-  state: typeof INITIAL_STATE;
+  isLoading: boolean;
+  downloadFile: Blob;
   hasSubmit: boolean;
   type?: string;
 };
 
-export const setDownloadFile = ({
-  fileName,
-  state,
-  hasSubmit,
-  type = 'text/csv',
-  isEmptyOrNullFn = isEmptyOrNull,
-  downloadjsFn = downloadjs,
-}: TsetDownloadFile) => {
-  const { downloadFile, isLoading } = state;
-  if (!isEmptyOrNullFn(downloadFile) && fileName && hasSubmit && !isLoading) {
+export const setDownloadFile = ({ fileName, isLoading, downloadFile, hasSubmit, type = 'text/csv', downloadjsFn = downloadjs }: TsetDownloadFile) => {
+  if (downloadFile.size && fileName && hasSubmit && !isLoading) {
     downloadjsFn(downloadFile, fileName, type);
   }
 };
@@ -119,15 +105,16 @@ type TuseDownloadFile = Omit<TsetDownloadFile, 'isEmptyOrNullFn' | 'downloadjsFn
   setDownloadFileFn?: typeof setDownloadFile;
 };
 
-export const useDownloadFile = ({ state, fileName, hasSubmit, type, setDownloadFileFn = setDownloadFile }: TuseDownloadFile) => {
+export const useDownloadFile = ({ downloadFile, isLoading, fileName, hasSubmit, type, setDownloadFileFn = setDownloadFile }: TuseDownloadFile) => {
   useEffect(
     () =>
       setDownloadFileFn({
-        state,
+        downloadFile,
+        isLoading,
         fileName,
         hasSubmit,
         type,
       }),
-    [setDownloadFileFn, state, fileName, hasSubmit, type],
+    [setDownloadFileFn, downloadFile, isLoading, fileName, hasSubmit, type],
   );
 };

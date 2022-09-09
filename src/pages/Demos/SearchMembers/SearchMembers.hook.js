@@ -1,11 +1,8 @@
 import { useCallback, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { setAnomalyEmptyItems } from 'shared/helpers';
-import { setInitialState } from 'App/FetchProvider';
 import { SERVICE_NAME } from './constants';
 import { DownloadLinkEnhanced } from './SearchMembers';
-
-export const INITIAL_STATE = setInitialState(SERVICE_NAME);
 
 export const INITIAL_STATE_FORM_SEARCH_MEMBERS = {
   name: '',
@@ -49,21 +46,17 @@ export const computeSuccess = ({ responseBody, setAnomalyEmptyItemsFn = setAnoma
 
 export const computeDataQuery = (data, computeSuccessFn = computeSuccess) => computeSuccessFn({ ...data });
 
-export const useSearchMembers = ({ stateFormSearchMembers, initialState = INITIAL_STATE, useQueryFn = useQuery }) => {
-  const { name = '' } = stateFormSearchMembers;
-  const condition = stateFormSearchMembers.hasSubmit;
+export const useSearchMembers = ({ stateFormSearchMembers, useQueryFn = useQuery }) => {
+  const { name = '', hasSubmit } = stateFormSearchMembers;
 
   const { data, error, isFetching } = useQueryFn([`members/search?name=${name}`], {
     select: computeDataQuery,
-    enabled: condition,
+    enabled: hasSubmit,
   });
 
-  const stateQuery = {
-    ...initialState,
+  return {
     ...data,
     anomaly: error || data?.anomaly,
     isLoading: isFetching,
   };
-
-  return { ...stateQuery };
 };
