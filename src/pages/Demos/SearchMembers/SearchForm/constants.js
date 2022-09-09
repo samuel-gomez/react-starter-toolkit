@@ -16,3 +16,7 @@ export const rulePatternName = {
     message: MSG_FORMAT,
   },
 };
+
+export const rules = {
+  [NAME]: [rulePatternName],
+};

@@ -1,6 +1,4 @@
 import { createRoot } from 'react-dom/client';
-import 'react-app-polyfill/ie11';
-import 'react-app-polyfill/stable';
 import 'shared/scss/grid.css';
 import 'shared/scss/reboot.css';
 import '@axa-fr/react-toolkit-all/dist/style/af-components.scss';
