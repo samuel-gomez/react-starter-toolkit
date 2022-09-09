@@ -1,12 +1,21 @@
-import { TInitialState } from 'shared/types';
+import { Tanomaly } from 'shared/types';
 
-const setInitialState = (serviceName: string, defaultValue: object | [] = []): TInitialState => ({
+export type TInitialState<TdefaultValue = []> = {
+  [x: string]:
+    | unknown
+    | TdefaultValue
+    | {
+        [y: string]: Tanomaly | null;
+      };
+};
+
+const setInitialState = <TdefaultValue = []>(serviceName: string, defaultValue: TdefaultValue | never[] = []): TInitialState<TdefaultValue> => ({
   isLoading: false,
   isLoaded: false,
-  [serviceName]: defaultValue,
   anomaly: {
     [serviceName]: null,
   },
+  [serviceName]: defaultValue,
 });
 
 export default setInitialState;

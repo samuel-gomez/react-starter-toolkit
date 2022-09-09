@@ -6,7 +6,7 @@ export type TEnvironment = {
   apiUrl: string;
   baseUrl: string;
   fetchConfig: object;
-  oidc: object;
+  oidc: Record<string, boolean | string>;
 };
 
 export type TEnvironmentState = {
