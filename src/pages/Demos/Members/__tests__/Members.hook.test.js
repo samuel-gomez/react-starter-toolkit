@@ -1,6 +1,16 @@
 import { renderHook, act } from '@testing-library/react-hooks';
+import { emptyFunction } from 'shared/testsUtils';
 import { SERVICE_NAME } from '../constants';
-import { computeInfos, useMembers, setPaging, setOnChangePaging, setNumberPages, setCurrentPage, computeSuccess } from '../Members.hook';
+import {
+  computeInfos,
+  useMembers,
+  setPaging,
+  setOnChangePaging,
+  setNumberPages,
+  setCurrentPage,
+  computeSuccess,
+  computeDataQuery,
+} from '../Members.hook';
 import { membersMock } from './Members.mock';
 
 const totals = {
@@ -10,84 +20,62 @@ const totals = {
   max: 50,
 };
 
+const expectedData = [
+  {
+    cols: {
+      birthdate: {
+        label: '20/10/1985',
+      },
+      firstname: {
+        label: 'Samuel',
+      },
+      lastname: {
+        label: 'Gomez',
+      },
+      sexe: {
+        label: 'M',
+      },
+    },
+    key: 99999,
+  },
+];
+
+const defaultAnomaly = { label: 'Info : Aucune donnée trouvée', type: 'info', iconName: 'exclamation-sign' };
+
+const setExpected = ({ anomaly = defaultAnomaly, currentPage = 1, numberItems = 1, numberPages = 1, total = 1, data = [] }) => ({
+  anomaly,
+  [SERVICE_NAME]: {
+    pagination: {
+      currentPage,
+      numberItems,
+      numberPages,
+      total,
+    },
+    data,
+  },
+});
+
+describe('computeDataQuery', () => {
+  const computeSuccessFn = jest.fn();
+  it.each`
+    data                                 | callWith
+    ${undefined}                         | ${{ responseBody: {} }}
+    ${{ responseBody: { name: 'sam' } }} | ${{ responseBody: { name: 'sam' } }}
+  `('Should return expected: $expected when computeSuccess have neen called with responseBody: $responseBody', ({ data, callWith }) => {
+    computeDataQuery(data, computeSuccessFn);
+    expect(computeSuccessFn).toHaveBeenCalledWith(callWith);
+  });
+});
+
 describe('computeSuccess', () => {
-  it('Should return anomaly message when computeSuccess have been called with empty array responseBody and without totals', () => {
-    const result = computeSuccess({
-      responseBody: {
-        data: [],
-      },
-    });
-    const expected = {
-      anomaly: { label: 'Info : Aucune donnée trouvée', type: 'info', iconName: 'exclamation-sign' },
-      [SERVICE_NAME]: {
-        pagination: {
-          currentPage: 1,
-          numberItems: 1,
-          numberPages: 1,
-          total: 1,
-        },
-        data: [],
-      },
-    };
-
-    expect(result).toEqual(expected);
-  });
-  it('Should return anomaly message when computeSuccess have been called with empty array responseBody', () => {
-    const result = computeSuccess({
-      responseBody: {
-        totals,
-        data: [],
-      },
-    });
-    const expected = {
-      anomaly: { label: 'Info : Aucune donnée trouvée', type: 'info', iconName: 'exclamation-sign' },
-      [SERVICE_NAME]: {
-        pagination: {
-          currentPage: 1,
-          numberItems: 50,
-          numberPages: 20,
-          total: 1001,
-        },
-        data: [],
-      },
-    };
-
-    expect(result).toEqual(expected);
-  });
-
-  it('Should return null anomaly message and computed payload when computeSuccess have been called with responseBody', () => {
-    const result = computeSuccess({
-      responseBody: {
-        totals,
-        data: membersMock,
-      },
-    });
-    const expected = {
-      anomaly: null,
-      [SERVICE_NAME]: {
-        pagination: { currentPage: 1, numberItems: 50, numberPages: 20, total: 1001 },
-        data: [
-          {
-            cols: {
-              birthdate: {
-                label: '20/10/1985',
-              },
-              firstname: {
-                label: 'Samuel',
-              },
-              lastname: {
-                label: 'Gomez',
-              },
-              sexe: {
-                label: 'M',
-              },
-            },
-            key: 99999,
-          },
-        ],
-      },
-    };
-
+  it.each`
+    responseBody                     | expected
+    ${undefined}                     | ${setExpected({})}
+    ${{ data: [] }}                  | ${setExpected({})}
+    ${{ data: [], totals }}          | ${setExpected({ currentPage: 1, numberItems: 50, numberPages: 20, total: 1001 })}
+    ${{ data: membersMock, totals }} | ${setExpected({ anomaly: null, currentPage: 1, numberItems: 50, numberPages: 20, total: 1001, data: expectedData })}
+  `('Should return expected: $expected when computeSuccess have neen called with responseBody: $responseBody', ({ responseBody, expected }) => {
+    const result = computeSuccess({ responseBody });
     expect(result).toEqual(expected);
   });
 });
@@ -143,119 +131,86 @@ describe('setStateFormPaging', () => {
 
 describe('computeInfos', () => {
   it('Should computed members when computeInfos have been called with members', () => {
-    const computedMembers = computeInfos({
-      members: membersMock,
-    });
+    const computedMembers = computeInfos(membersMock);
 
     expect(computedMembers[0].cols.birthdate).toEqual({ label: '20/10/1985' });
   });
 
   it('Should empty array when computeInfos have been called with empty members', () => {
-    const computedMembers = computeInfos({
-      members: [],
-    });
+    const computedMembers = computeInfos([]);
     expect(computedMembers).toEqual([]);
   });
   it('Should empty array when computeInfos have been called with no params', () => {
-    const computedMembers = computeInfos({});
+    const computedMembers = computeInfos();
     expect(computedMembers).toEqual([]);
   });
 });
 
-describe('useMembers', () => {
-  const defaultUseMembersParams = {
-    initState: {
-      isLoading: true,
-      isLoaded: false,
-      members: {
-        pagination: { total: 0, currentPage: 1, numberPages: 1 },
-        data: [],
-      },
-      anomaly: { members: null },
-    },
-  };
-  const useQueryFnMock = jest.fn().mockReturnValue({
-    data: {},
-    isFetching: true,
-  });
+const initialState = {
+  isLoading: true,
+  isLoaded: false,
+  members: {
+    pagination: { total: 0, currentPage: 1, numberPages: 1 },
+    data: [],
+  },
+  anomaly: { members: null },
+  refetch: emptyFunction,
+};
 
-  it('Should update stateMembers when useMembers called', () => {
+const useQueryFnMock = jest.fn().mockReturnValue({
+  data: {},
+  isFetching: true,
+  refetch: emptyFunction,
+});
+
+const setExpectedUseMembers = ({
+  members = [],
+  anomaly = undefined,
+  field = 'firstname',
+  order = 1,
+  numberItems = 50,
+  page = 1,
+  currentPage = 1,
+  numberPages = 1,
+  total = 0,
+}) => ({
+  ...initialState,
+  anomaly,
+  members,
+  sorting: {
+    field,
+    order,
+  },
+  stateFormPaging: {
+    numberItems,
+    page,
+  },
+  refetch: emptyFunction,
+  pagination: {
+    currentPage,
+    numberPages,
+    total,
+  },
+});
+
+describe('useMembers', () => {
+  it.each`
+    expectedValues
+    ${{}}
+  `('Should return expectedValues: $expectedValues when useMembers have neen called with responseBody: $responseBody', ({ expectedValues }) => {
     const { result } = renderHook(() => useMembers({ useQueryFn: useQueryFnMock }));
     const expected = {
-      isLoading: true,
-      isLoaded: false,
-      members: {
-        pagination: { total: 0, currentPage: 1, numberPages: 1 },
-        data: [],
-      },
-      anomaly: undefined,
+      ...setExpectedUseMembers({ ...expectedValues }),
       onChangeSorting: result.current.onChangeSorting,
-      stateSorting: {
-        field: 'firstname',
-        order: 1,
-      },
       onChangePaging: result.current.onChangePaging,
-      stateFormPaging: {
-        numberItems: 50,
-        page: 1,
-      },
     };
     act(() => {
       expect(result.current).toEqual(expected);
     });
-  });
 
-  it('Should update stateMembers when useMembers called', () => {
-    const { result } = renderHook(() => useMembers({ ...defaultUseMembersParams, useQueryFn: useQueryFnMock }));
-    const expected = {
-      isLoading: true,
-      isLoaded: false,
-      members: {
-        pagination: { total: 0, currentPage: 1, numberPages: 1 },
-        data: [],
-      },
-      anomaly: undefined,
-      refetch: undefined,
-      onChangeSorting: result.current.onChangeSorting,
-      onChangePaging: result.current.onChangePaging,
-      stateSorting: { field: 'firstname', order: 1 },
-      stateFormPaging: { numberItems: 50, page: 1 },
-    };
-    act(() => {
-      expect(result.current).toEqual(expected);
-    });
-  });
+    act(() => result.current.onChangeSorting({ field: 'name', order: -1 }));
+    expect(result.current.sorting).toEqual({ field: 'name', order: -1 });
 
-  it('Should update order state when onChangeSorting called', () => {
-    const { result } = renderHook(() => useMembers({ ...defaultUseMembersParams, useQueryFn: useQueryFnMock }));
-    act(() => result.current.onChangeSorting({ field: 'name', order: 1 }));
-    expect(result.current.stateSorting).toEqual({ field: 'name', order: 1 });
-  });
-
-  it('Should update stateMembers when onChangeSorting called', () => {
-    const { result } = renderHook(() => useMembers({ ...defaultUseMembersParams, useQueryFn: useQueryFnMock }));
-    const expected = {
-      isLoading: true,
-      isLoaded: false,
-      members: {
-        pagination: { total: 0, currentPage: 1, numberPages: 1 },
-        data: [],
-      },
-      anomaly: undefined,
-      refetch: undefined,
-      onChangeSorting: result.current.onChangeSorting,
-      onChangePaging: result.current.onChangePaging,
-      stateSorting: { field: 'firstname', order: 1 },
-      stateFormPaging: { numberItems: 50, page: 1 },
-    };
-
-    act(() => {
-      expect(result.current).toEqual(expected);
-    });
-  });
-
-  it('Should update order state when onChangePaging called', () => {
-    const { result } = renderHook(() => useMembers({ ...defaultUseMembersParams, useQueryFn: useQueryFnMock }));
     act(() =>
       result.current.onChangePaging({
         numberItems: 100,
