@@ -2,7 +2,6 @@ import { Dispatch, SetStateAction, useCallback, useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { ASCENDING, setDisplay, Torder } from 'shared/components/Table';
 import { Tanomaly } from 'shared/types';
-import { setInitialState } from 'App/FetchProvider';
 import { setAnomalyEmptyItems, setDate } from 'shared/helpers';
 import { SERVICE_NAME } from './constants';
 
@@ -14,8 +13,6 @@ export const DEFAULT_STATE_VALUE = {
   },
   data: [],
 };
-
-export const INITIAL_STATE = setInitialState<typeof DEFAULT_STATE_VALUE>(SERVICE_NAME, DEFAULT_STATE_VALUE);
 
 export const INITIAL_STATE_SORTING = {
   field: 'firstname',
@@ -52,7 +49,6 @@ type TcomputeSuccess = {
   setAnomalyEmptyItemsFn?: typeof setAnomalyEmptyItems;
   computeInfosFn?: typeof computeInfos;
   setPaginationFn?: typeof setPagination;
-  state?: typeof INITIAL_STATE;
   responseBody: {
     data?: Record<string, string>[];
     totals?: {
@@ -66,7 +62,6 @@ type TcomputeSuccess = {
 
 export const computeSuccess = ({
   responseBody,
-  state = INITIAL_STATE,
   setAnomalyEmptyItemsFn = setAnomalyEmptyItems,
   computeInfosFn = computeInfos,
   setPaginationFn = setPagination,
@@ -75,7 +70,6 @@ export const computeSuccess = ({
   [SERVICE_NAME]: {
     data: computeInfosFn(responseBody?.data ?? []),
     pagination: {
-      ...(state?.pagination ?? { ...DEFAULT_STATE_VALUE.pagination }),
       ...setPaginationFn(responseBody?.totals ?? {}),
     },
   },
@@ -105,7 +99,6 @@ export const computeDataQuery = (data: { responseBody: TcomputeSuccess['response
   computeSuccessFn({ ...data });
 
 type TuseMembers = {
-  initialState?: typeof INITIAL_STATE;
   initStateSorting?: Omit<typeof INITIAL_STATE_SORTING, 'order'> & { order: Torder };
   initStatePaging?: typeof INITIAL_STATE_PAGING;
   computeDataQueryFn?: typeof computeDataQuery;
@@ -114,7 +107,6 @@ type TuseMembers = {
 };
 
 export const useMembers = ({
-  initialState = INITIAL_STATE,
   initStateSorting = INITIAL_STATE_SORTING,
   initStatePaging = INITIAL_STATE_PAGING,
   computeDataQueryFn = computeDataQuery,
@@ -142,7 +134,6 @@ export const useMembers = ({
   );
 
   return {
-    ...initialState,
     members: data?.members?.data ?? DEFAULT_STATE_VALUE.data,
     pagination: data?.members?.pagination ?? DEFAULT_STATE_VALUE.pagination,
     anomaly: (error || data?.anomaly) as Tanomaly,

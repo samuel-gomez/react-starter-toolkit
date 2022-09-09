@@ -1,6 +1,6 @@
 import { renderHook, act } from '@testing-library/react-hooks';
 import { SUCCESS_DOWNLOAD_MESSAGE } from './../constants';
-import { useDownload, useSubmitDownload, setDownloadFile, onSuccess, onError, INITIAL_STATE } from '../DownloadLink.hook';
+import { useDownload, useSubmitDownload, setDownloadFile, onSuccess, onError } from '../DownloadLink.hook';
 
 describe('useSubmitDownload', () => {
   it('Should stateSubmitDownload to be false when clearSubmitDownload called', () => {
@@ -18,19 +18,12 @@ describe('useSubmitDownload', () => {
 
 describe('setDownloadFile', () => {
   const downloadjsFnMock = jest.fn();
-  const state = {
-    downloadFile: [],
-    isLoading: false,
-    isLoaded: false,
-    anomaly: {
-      downloadFile: null,
-    },
-  };
 
   it('Should not call downloadjsFn When state.downloadFile is empty', () => {
     setDownloadFile({
       fileName: 'test.csv',
-      state,
+      downloadFile: new Blob(),
+      isLoading: false,
       hasSubmit: false,
       downloadjsFn: downloadjsFnMock,
     });
@@ -41,15 +34,13 @@ describe('setDownloadFile', () => {
   it('Should call downloadjsFn When state.downloadFile is NOT empty', () => {
     setDownloadFile({
       fileName: 'test.csv',
-      state: {
-        ...state,
-        downloadFile: 'blob',
-      },
+      downloadFile: new Blob(['test']),
+      isLoading: false,
       hasSubmit: true,
       downloadjsFn: downloadjsFnMock,
     });
 
-    expect(downloadjsFnMock).toBeCalledWith('blob', 'test.csv', 'text/csv');
+    expect(downloadjsFnMock).toBeCalledWith(new Blob(['test']), 'test.csv', 'text/csv');
   });
 });
 
@@ -59,16 +50,18 @@ describe('useDownload', () => {
     hasSubmit: false,
     clearSubmitDownload: jest.fn(),
     useQueryFn: jest.fn().mockReturnValue({
-      data: undefined,
+      data: new Blob(['test']),
       isFetching: false,
-      isFetched: false,
     }),
   };
   it('Should return initial state when useDownload called with path: "elections/12/resultats" and hasSubmit: false', () => {
     const { result } = renderHook(() => useDownload({ ...defaultProps }));
-    const expectedState = INITIAL_STATE;
+
     act(() => {
-      expect(result.current.state).toEqual(expectedState);
+      expect(result.current).toEqual({
+        isLoading: false,
+        downloadFile: new Blob(['test']),
+      });
     });
   });
 });
