@@ -40,7 +40,7 @@ export const computeInfos = <T extends Record<string, string>[]>(data: T, setDat
     cols: {
       ...setDisplayFn({ firstname }),
       ...setDisplayFn({ lastname }),
-      ...setDisplayFn({ birthdate: setDateFn({ date: birthdate as string }) }),
+      ...setDisplayFn({ birthdate: setDateFn({ date: birthdate }) }),
       ...setDisplayFn({ sexe }),
     },
   }));
