@@ -10,7 +10,9 @@ exports[`<SkeletonInputField/> Render <SkeletonInputField/> 1`] = `
     >
       <label
         class="af-form__group-label"
-      />
+      >
+        hello
+      </label>
     </div>
     <div
       aria-busy="true"

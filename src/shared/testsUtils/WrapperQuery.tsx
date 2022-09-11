@@ -1,6 +1,7 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactNode } from 'react';
 
-const WrapperQuery = ({ children, queryData = {} }) => {
+const WrapperQuery = ({ children, queryData = {} }: { children: ReactNode; queryData?: Record<string, unknown> }) => {
   const queryClient = new QueryClient({
     defaultOptions: {
       queries: {

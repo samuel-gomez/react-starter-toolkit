@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { renderWithContainer } from 'shared/testsUtils';
 import TdContainer from '../Td.container';
 
 const defaultProps = {
@@ -8,22 +8,18 @@ const defaultProps = {
 };
 const container = document.createElement('tr');
 
-const renderWithContainer = Component =>
-  render(<Component />, {
-    container: document.body.appendChild(container),
-  });
-
 describe('TdContainer', () => {
   it('Render <TdContainer/> without hover', () => {
-    const { asFragment } = renderWithContainer(() => <TdContainer {...defaultProps}>child th</TdContainer>);
+    const { asFragment } = renderWithContainer(<TdContainer {...defaultProps}>child th</TdContainer>, container);
     expect(asFragment()).toMatchSnapshot();
   });
   it('Render <TdContainer/> with hover', () => {
-    const { asFragment } = renderWithContainer(() => (
+    const { asFragment } = renderWithContainer(
       <TdContainer {...defaultProps} hover={<p>Hover content</p>}>
         child td
-      </TdContainer>
-    ));
+      </TdContainer>,
+      container,
+    );
     expect(asFragment()).toMatchSnapshot();
   });
 });

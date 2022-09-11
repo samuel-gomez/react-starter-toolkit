@@ -134,7 +134,11 @@
         "**/*.test.ts",
         "**/*.test.tsx",
         "**/*.spec.ts",
-        "**/*.spec.js"
+        "**/*.spec.tsx",
+        "**/*.spec.js",
+        "**/*.steps.ts",
+        "**/*.steps.tsx",
+        "**/*.steps.js"
       ],
       "rules": {
         "max-lines-per-function": [

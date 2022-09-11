@@ -47,7 +47,6 @@ export const setOnChangeSearchForm = ({
   const handleFields = genericHandleChangeFn(rules, fields, event);
   const errors = getErrorsListFn(handleFields);
   const values = getValuesListFn(handleFields);
-  console.log(errors, values);
 
   setStateSearchForm({
     ...stateSearchForm,
