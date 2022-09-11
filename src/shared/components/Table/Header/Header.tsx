@@ -1,5 +1,3 @@
-/* eslint-disable react/forbid-prop-types */
-
 import { ReactNode } from 'react';
 import { Table } from '@axa-fr/react-toolkit-all';
 import HelpHover from 'shared/components/HelpInfo';
