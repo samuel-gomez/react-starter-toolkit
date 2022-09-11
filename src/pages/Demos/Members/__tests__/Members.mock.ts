@@ -53,5 +53,6 @@ export const membersMock = [
     lastname: 'Gomez',
     birthdate: '1985-10-20T13:44:20.540000',
     sexe: 'M',
+    active: true,
   },
 ];

@@ -1,4 +1,5 @@
 import { renderHook, act } from '@testing-library/react-hooks';
+import { TCols } from 'shared/components/Table/Body/Body';
 import { emptyFunction } from 'shared/testsUtils';
 import { SERVICE_NAME } from '../constants';
 import {
@@ -39,10 +40,20 @@ const expectedData = [
     key: 99999,
   },
 ];
+const defaultAnomaly = { label: 'Info : Aucune donnée trouvée', type: 'info', iconName: 'exclamation-sign' } || null;
 
-const defaultAnomaly = { label: 'Info : Aucune donnée trouvée', type: 'info', iconName: 'exclamation-sign' };
+type TsetExpected = {
+  anomaly?: typeof defaultAnomaly | null;
+  currentPage?: number;
+  numberItems?: number;
+  numberPages?: number;
+  total?: number;
+  data?: {
+    cols: TCols;
+  }[];
+};
 
-const setExpected = ({ anomaly = defaultAnomaly, currentPage = 1, numberItems = 1, numberPages = 1, total = 1, data = [] }) => ({
+const setExpected = ({ anomaly = defaultAnomaly, currentPage = 1, numberItems = 1, numberPages = 1, total = 1, data = [] }: TsetExpected) => ({
   anomaly,
   [SERVICE_NAME]: {
     pagination: {
@@ -121,10 +132,16 @@ describe('setPaging', () => {
   });
 });
 
-describe('setStateFormPaging', () => {
+describe('setOnChangePaging', () => {
   it('Should call setStateFormPaging when call setOnChangePaging', () => {
     const setStateFormPagingMock = jest.fn();
-    setOnChangePaging({ setStateFormPaging: setStateFormPagingMock, paging: {} });
+    setOnChangePaging({
+      setStateFormPaging: setStateFormPagingMock,
+      paging: {
+        numberItems: 10,
+        page: 2,
+      },
+    });
     expect(setStateFormPagingMock).toBeCalled();
   });
 });
@@ -138,10 +155,6 @@ describe('computeInfos', () => {
 
   it('Should empty array when computeInfos have been called with empty members', () => {
     const computedMembers = computeInfos([]);
-    expect(computedMembers).toEqual([]);
-  });
-  it('Should empty array when computeInfos have been called with no params', () => {
-    const computedMembers = computeInfos();
     expect(computedMembers).toEqual([]);
   });
 });
@@ -204,6 +217,7 @@ describe('useMembers', () => {
     act(() =>
       result.current.onChangePaging({
         numberItems: 100,
+        page: 5,
       }),
     );
     expect(result.current.stateFormPaging).toEqual({

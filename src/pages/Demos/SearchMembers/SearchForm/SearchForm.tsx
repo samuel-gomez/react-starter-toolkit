@@ -1,9 +1,20 @@
-import { func, string, objectOf, bool, object } from 'prop-types';
+import { Tfields } from 'shared/helpers/validation.generic';
 import { Text, Button, FieldForm, HelpMessage, FieldInput } from '@axa-fr/react-toolkit-all';
+import { setConfirmClassModifier } from 'shared/helpers';
 import { NAME, LABEL_NAME, PLACEHOLDER_NAME, FORM_SEARCH_MEMBERS, LABEL_SUBMIT, MIN_SEARCH_BY_NAME } from './constants';
 import './SearchForm.scss';
+import { TReturnUseSearchForm } from './SearchForm.hook';
 
-const SearchForm = ({ className, fields, hasErrors, onSubmit, onChange, confirmClassModifier }) => (
+type TSearchForm<TonSubmit> = {
+  className: string;
+  hasErrors: boolean;
+  fields: Tfields;
+  onSubmit: TonSubmit;
+  onChange: TReturnUseSearchForm['onChangeSearchForm'];
+  confirmClassModifier: ReturnType<typeof setConfirmClassModifier>;
+};
+
+const SearchForm = <TonSubmit,>({ className, fields, hasErrors, onSubmit, onChange, confirmClassModifier }: TSearchForm<TonSubmit>) => (
   <form className={className} id={FORM_SEARCH_MEMBERS} name={FORM_SEARCH_MEMBERS} autoComplete="off">
     <div className="af-filter-inline__default af-filter-inline__default--search-distributors">
       <div className="af-filter-inline__field">
@@ -30,14 +41,5 @@ const SearchForm = ({ className, fields, hasErrors, onSubmit, onChange, confirmC
     </div>
   </form>
 );
-
-SearchForm.propTypes = {
-  onChange: func.isRequired,
-  className: string.isRequired,
-  fields: objectOf(object).isRequired,
-  hasErrors: bool.isRequired,
-  onSubmit: func.isRequired,
-  confirmClassModifier: string.isRequired,
-};
 
 export default SearchForm;

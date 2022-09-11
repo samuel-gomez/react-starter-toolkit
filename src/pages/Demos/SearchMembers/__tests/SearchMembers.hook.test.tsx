@@ -1,7 +1,7 @@
 import { renderHook, act } from '@testing-library/react-hooks';
 import { SERVICE_NAME } from '../constants';
 import { DownloadLinkEnhanced } from '../SearchMembers';
-import { computeInfos, useSearchMembers, computeSuccess, useFormSearchMembers, computeDataQuery, selectComputeData } from '../SearchMembers.hook';
+import { computeInfos, useSearchMembers, computeSuccess, useFormSearchMembers, computeDataQuery } from '../SearchMembers.hook';
 
 const expectedDataCompute = {
   anomaly: {
@@ -83,8 +83,11 @@ describe('computeInfos', () => {
     });
     expect(computedSearchMembers).toEqual([]);
   });
-  it('Should empty array when computeInfos have been called with no params', () => {
-    const computedSearchMembers = computeInfos({});
+
+  it('Should empty array when computeInfos have been called with undefined members', () => {
+    const computedSearchMembers = computeInfos({
+      members: undefined,
+    });
     expect(computedSearchMembers).toEqual([]);
   });
 });
@@ -125,7 +128,7 @@ describe('useSearchMembers', () => {
       isFetching: true,
       anomaly: undefined,
     });
-    const { result } = renderHook(() => useSearchMembers({ stateFormSearchMembers: {}, useQueryFn: useQueryFnMock }));
+    const { result } = renderHook(() => useSearchMembers({ stateFormSearchMembers: { name: '', hasSubmit: false }, useQueryFn: useQueryFnMock }));
     const expected = {
       isLoaded: false,
       anomaly: undefined,

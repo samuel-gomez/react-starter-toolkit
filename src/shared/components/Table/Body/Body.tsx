@@ -1,11 +1,14 @@
 import { ReactNode } from 'react';
 import Line from './Line';
 
-type TCols = {
-  [k: string]: {
-    label: string;
-    hover?: string;
-  };
+export type Tcol = {
+  label?: string;
+  hover?: string;
+  children?: ReactNode;
+  classModifier?: string;
+};
+export type TCols = {
+  [k: string]: Tcol;
 };
 
 type TItems = {

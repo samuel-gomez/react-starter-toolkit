@@ -35,15 +35,15 @@ export const setPagination = ({ total = 1, skip = 1, max = 1, setCurrentPageFn =
 });
 
 export const computeInfos = <T extends Record<string, string>[]>(data: T, setDateFn = setDate, setDisplayFn = setDisplay) =>
-  data?.map(({ _id, firstname, lastname, birthdate, sexe }) => ({
+  data.map(({ _id, firstname, lastname, birthdate, sexe }) => ({
     key: _id,
     cols: {
       ...setDisplayFn({ firstname }),
       ...setDisplayFn({ lastname }),
-      ...setDisplayFn({ birthdate: setDateFn({ date: birthdate }) }),
+      ...setDisplayFn({ birthdate: setDateFn({ date: birthdate as string }) }),
       ...setDisplayFn({ sexe }),
     },
-  })) ?? [];
+  }));
 
 type TcomputeSuccess = {
   setAnomalyEmptyItemsFn?: typeof setAnomalyEmptyItems;
@@ -75,7 +75,7 @@ export const computeSuccess = ({
   },
 });
 
-export const setPaging = (paging: typeof INITIAL_STATE_PAGING) => (prevPaging: typeof INITIAL_STATE_PAGING) =>
+export const setPaging = (paging: typeof INITIAL_STATE_PAGING) => (prevPaging: Partial<typeof INITIAL_STATE_PAGING>) =>
   prevPaging?.numberItems !== paging?.numberItems
     ? {
         numberItems: paging?.numberItems,
@@ -136,7 +136,7 @@ export const useMembers = ({
   return {
     members: data?.members?.data ?? DEFAULT_STATE_VALUE.data,
     pagination: data?.members?.pagination ?? DEFAULT_STATE_VALUE.pagination,
-    anomaly: (error || data?.anomaly) as Tanomaly,
+    anomaly: (error || data?.anomaly) as Tanomaly | null,
     isLoading: isFetching,
     refetch,
     onChangeSorting,

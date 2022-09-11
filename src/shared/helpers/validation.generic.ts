@@ -15,7 +15,8 @@ export const validate = ({ ValidateFn = Validate, rules, value = '' }: Tvalidate
   return validationResult !== null ? validationResult.message : null;
 };
 
-type TEvent = {
+export type TEvent = {
+  id?: string;
   name: string;
   viewValue?: string;
   value?: string;
@@ -44,61 +45,67 @@ export const setMessage = ({
     [`${viewValue === undefined && value !== undefined}`]: () => validateFn({ rules: inputRules, value }),
   }['true']?.() || null);
 
-type Tstate = {
-  [x: string]: Record<string, unknown>;
-};
+export type Tfields = Record<string, Tfield>;
+export type Trules = Record<string, TinputRules>;
 
 type TsetEventState = TEvent & {
-  state: Tstate;
+  fields: Tfields;
 };
 
-type Trules = Record<string, TinputRules>;
+type Tfield = {
+  name?: string;
+  value?: string | null;
+  viewValue?: string | null;
+  message: string | null;
+  values?: string[] | null;
+  errors?: string[] | null;
+};
 
-export const setEventState = ({ state, name, viewValue, value, values }: TsetEventState) =>
+export const setEventState = ({ fields, name, viewValue, value, values }: TsetEventState) =>
   ({
     [`${values !== undefined}`]: {
-      ...state[name],
+      ...fields[name],
       values,
     },
     [`${viewValue !== undefined}`]: {
-      ...state[name],
+      ...fields[name],
       value,
       viewValue,
     },
   }['true'] || {
-    ...state[name],
+    ...fields[name],
     value,
   });
 
-export const genericHandleChange = (rules: Trules, state: Tstate, event: TEvent) => {
+export const genericHandleChange = (rules: Trules, fields: Tfields, event: TEvent, isEmptyOrNullFn = isEmptyOrNull) => {
   if (rules[event.name]) {
     const { viewValue, value, values, errors, name } = event;
     const inputRules = rules[event.name];
     const message = setMessage({ inputRules, viewValue, value, values, errors });
-    const eventState = setEventState({ state, name, viewValue, value, values });
+    const eventState = setEventState({ fields, name, viewValue, value, values });
 
     return {
-      ...state,
+      ...fields,
       [event.name]: {
         ...eventState,
-        errors,
+        ...(isEmptyOrNullFn(errors) ? {} : { errors }),
         message,
       },
     };
   }
-  return state;
+  return fields;
 };
 
-export const computeInitialStateErrorMessage = (state: Tstate, rules: Trules) => {
-  let newState = state;
+export const computeInitialStateErrorMessage = (fields: Tfields, rules: Trules) => {
+  let newState = fields;
   Object.keys(rules).forEach(propertyName => {
-    const input = state[propertyName];
+    const input = fields[propertyName];
     if (input && input instanceof Object) {
       const event = {
         name: propertyName,
-        value: `${input.value}`,
-        viewValue: `${input.viewValue}`,
-        values: input.values as [],
+        ...(input.value !== undefined ? { value: `${input.value}` } : {}),
+        ...(input.viewValue !== undefined ? { viewValue: `${input.viewValue}` } : {}),
+        ...(input.values !== undefined ? { values: input.values as [] } : {}),
       };
       newState = genericHandleChange(rules, newState, event);
     }
@@ -111,15 +118,6 @@ type ThasErrorMessage = {
 };
 
 export const hasErrorMessage = ({ message }: ThasErrorMessage) => message !== null;
-
-type Tfield = {
-  name?: string;
-  value?: string | null;
-  message: string | null;
-  values?: string[] | null;
-};
-
-type Tfields = Record<string, Tfield>;
 
 export const getErrorsList = (fields: Tfields) => Object.keys(fields).filter(key => hasErrorMessage(fields[key]));
 

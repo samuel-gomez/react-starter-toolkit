@@ -1,29 +1,25 @@
 import { render } from '@testing-library/react';
-import { emptyFunction } from 'shared/testsUtils';
 import SearchFormContainer, { setOnSubmitSearchForm } from '../SearchForm.container';
 
+const SearchFormCmpt = jest.fn();
+const onChangeSearchForm = jest.fn();
+const onSubmitSearchForm = jest.fn();
 const defaultProps = {
-  submitSearchForm: jest.fn(),
+  submitFormSearchMembers: jest.fn(),
+  SearchFormCmpt,
 };
 
 describe('SearchFormContainer', () => {
-  it('Render <SearchFormContainer/>', () => {
-    const { asFragment } = render(<SearchFormContainer {...defaultProps} />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-
   it('useSearchFormFn and setConfirmClassModifierFn when Render <SearchFormContainer/>', () => {
     const useSearchFormFnMock = jest.fn().mockReturnValue({
-      onChangeSearchForm: emptyFunction,
-      stateSearchForm: {
-        hasErrors: true,
-        fields: {
-          name: { name: 'name', value: '', message: null },
-        },
+      onChangeSearchForm,
+      hasErrors: true,
+      fields: {
+        name: { name: 'name', value: '', message: null },
       },
     });
     const setConfirmClassModifierFnMock = jest.fn().mockReturnValue('confirmClassModifier');
-    const setOnSubmitSearchFormFnMock = jest.fn().mockReturnValue(emptyFunction);
+    const setOnSubmitSearchFormFnMock = jest.fn().mockReturnValue(onSubmitSearchForm);
 
     render(
       <SearchFormContainer
@@ -36,21 +32,34 @@ describe('SearchFormContainer', () => {
     expect(useSearchFormFnMock).toBeCalled();
     expect(setConfirmClassModifierFnMock).toBeCalled();
     expect(setOnSubmitSearchFormFnMock).toBeCalled();
+    expect(SearchFormCmpt).toBeCalledWith(
+      {
+        className: 'af-filter-inline',
+        confirmClassModifier: 'confirmClassModifier',
+        fields: {
+          name: { name: 'name', value: '', message: null },
+        },
+        hasErrors: true,
+        onChange: onChangeSearchForm,
+        onSubmit: onSubmitSearchForm,
+      },
+      {},
+    );
   });
 });
 
 describe('setOnSubmitSearchForm', () => {
-  it('Should call submitSearchForm with fields values When called with fields', () => {
-    const submitSearchFormMock = jest.fn();
+  it('Should call submitFormSearchMembers with fields values When called with fields', () => {
+    const submitFormSearchMembersMock = jest.fn();
 
     setOnSubmitSearchForm({
-      submitSearchForm: submitSearchFormMock,
+      submitFormSearchMembers: submitFormSearchMembersMock,
       fields: {
         name: { name: 'name', value: 'valuename', message: null },
       },
     })();
 
-    expect(submitSearchFormMock).toBeCalledWith({
+    expect(submitFormSearchMembersMock).toBeCalledWith({
       name: 'valuename',
     });
   });
