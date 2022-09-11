@@ -1,6 +1,6 @@
 import { screen } from '@testing-library/react';
 import { MODES } from 'shared/components/Loader';
-import { render, renderWithWrapperStaticRouter, WrapperQuery } from 'shared/testsUtils';
+import { render, renderWithWrapperStaticRouter } from 'shared/testsUtils';
 import SearchMembersContainer from '../SearchMembers.container';
 
 const useSearchMembersFn = jest.fn();

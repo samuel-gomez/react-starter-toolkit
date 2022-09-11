@@ -13,7 +13,7 @@ export const setTextTooltip = ({ text = '', name = '', maxDisplay = 0 }: TsetTex
       }
     : {
         [name]: {
-          label: `${`${text}`.substring(0, maxDisplay)}...`,
+          label: `${text.substring(0, maxDisplay)}...`,
           hover: text,
         },
       };
