@@ -4,11 +4,11 @@ import { ModalCommonHeader, ModalCommonBody, ModalCommonFooter, TReturnUseToggle
 import withClassNameModifier from 'shared/hoc/WithClassNameModifier';
 
 /**
- * NOTE: Ce composant est un exemple, il n'est pas utilisé dans la démo
+ * NOTE: Ce composant est un snippet, il n'est pas utilisé dans la démo
  */
 
 type TModalConfirm = Pick<TReturnUseToggleModal, 'isOpen' | 'onCancel'> & {
-  className: string;
+  className?: string;
 };
 
 const DEFAULT_CLASSNAME = 'af-modal';

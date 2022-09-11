@@ -1,5 +1,5 @@
 import { isNull } from 'lodash';
-import { defineFeature, loadFeature } from 'jest-cucumber';
+import { defineFeature, DefineStepFunction, loadFeature } from 'jest-cucumber';
 import { screen, within } from '@testing-library/react';
 import { render } from 'shared/testsUtils/customRender';
 import { JeSuisUnUtilisateurConnuEtConnecteAvecleProfil } from 'shared/testsUtils/sharedScenarii';
@@ -9,13 +9,13 @@ import { totals, defaultProps } from './Members.mock';
 const feature = loadFeature('features/Demos/Members/Members.feature');
 
 defineFeature(feature, test => {
-  let role;
-  let members;
-  let tableMembers;
+  let role: string;
+  let members: Record<string, string>[];
+  let tableMembers: HTMLElement;
 
-  const LeTableauPresenteDesEntetesDeColonnesDansLOrdreSuivant = (instruction, headers) =>
-    instruction(`le tableau présente des entêtes de colonnes dans l’ordre suivant : ${headers}`, (...args) => {
-      const thead = within(tableMembers).getByRole('rowgroup', { selector: 'thead', name: 'table-header' });
+  const LeTableauPresenteDesEntetesDeColonnesDansLOrdreSuivant = (instruction: DefineStepFunction, headers: string) =>
+    instruction(`le tableau présente des entêtes de colonnes dans l’ordre suivant : ${headers}`, (...args: string[]) => {
+      const thead = within(tableMembers).getByRole('rowgroup', { name: 'table-header' });
       const theadLine = within(thead).getByRole('row', { name: 'table-header-line' });
       const cells = within(theadLine).getAllByRole('columnheader');
       args
@@ -25,9 +25,9 @@ defineFeature(feature, test => {
         });
     });
 
-  const LeTableauContientLesLignesCorrespondantAuxDonneesRecues = (instruction, scenarioName) =>
-    instruction(`${scenarioName}`, candidats => {
-      const tbody = within(tableMembers).getByRole('rowgroup', { selector: 'tbody', name: 'table-body' });
+  const LeTableauContientLesLignesCorrespondantAuxDonneesRecues = (instruction: DefineStepFunction, scenarioName: string) =>
+    instruction(`${scenarioName}`, (candidats: string[]) => {
+      const tbody = within(tableMembers).getByRole('rowgroup', { name: 'table-body' });
       const tbodyLines = within(tbody).getAllByRole('row', { name: 'table-body-line' });
 
       tbodyLines.forEach((tbodyLine, index) => {
@@ -39,7 +39,7 @@ defineFeature(feature, test => {
     });
 
   test('Affichage de la liste des membres', ({ given, and, when, then }) => {
-    JeSuisUnUtilisateurConnuEtConnecteAvecleProfil(given, roleMock => {
+    JeSuisUnUtilisateurConnuEtConnecteAvecleProfil(given, (roleMock: string) => {
       role = roleMock;
     });
 

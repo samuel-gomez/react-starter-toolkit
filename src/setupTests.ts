@@ -7,7 +7,7 @@ import 'whatwg-fetch';
 import IntlPolyfill from 'intl';
 import 'intl/locale-data/jsonp/fr-FR';
 
-import { server } from './shared/testsUtils/mocks/server.js';
+import { server } from './shared/testsUtils/msw';
 
 if (global.Intl) {
   Intl.NumberFormat = IntlPolyfill.NumberFormat;
