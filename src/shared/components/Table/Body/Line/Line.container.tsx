@@ -1,10 +1,11 @@
+import { Tcol } from '../Body';
 import Line from './Line';
 
 export type TLineContainer = {
   className?: string;
   modifier?: string;
   LineCmpt?: typeof Line;
-  cols: [string, { label: string; hover?: string; children?: string; classModifier?: string }][];
+  cols: [string, Tcol][];
 };
 
 const LineContainer = ({ className, modifier = '', LineCmpt = Line, cols }: TLineContainer) => {

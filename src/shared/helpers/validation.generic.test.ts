@@ -139,9 +139,9 @@ describe('genericHandleChange', () => {
     value?: string;
     viewValue?: string;
     values?: string[];
-    message?: string;
+    message?: string | null;
   };
-  const setState = ({ name, value, values, viewValue, message, key = '' }: TState) => ({
+  const setState = ({ name, value, values, viewValue, message = null, key = '' }: TState) => ({
     [key]: {
       name,
       value,
@@ -298,13 +298,18 @@ describe('genericHandleChange', () => {
 });
 
 describe('computeInitialStateErrorMessage', () => {
-  it('Should initiate the state when rules are presents', () => {
-    const givenState = {
-      firstname: { name: 'firstname', value: 'François', message: null },
-    };
-    const expectedState = {};
+  const setGivenState = (customState: { value?: string; values?: string[]; viewValue?: string }) => ({
+    firstname: { name: 'firstname', message: null, ...customState },
+  });
+
+  it.each`
+    givenState                                  | rules    | expectedState
+    ${setGivenState({ value: 'françois' })}     | ${rules} | ${{ firstname: { name: 'firstname', message: null, value: 'françois' } }}
+    ${setGivenState({ values: ['françois'] })}  | ${rules} | ${{ firstname: { name: 'firstname', message: null, values: ['françois'] } }}
+    ${setGivenState({ viewValue: 'François' })} | ${rules} | ${{ firstname: { name: 'firstname', message: null, viewValue: 'François' } }}
+  `('Should return expectedState: $expectedState when givenState: $givenState, rules: $rules', ({ givenState, expectedState }) => {
     const result = computeInitialStateErrorMessage(givenState, rules);
-    expect(result).toMatchObject(expectedState);
+    expect(result).toEqual(expectedState);
   });
 });
 

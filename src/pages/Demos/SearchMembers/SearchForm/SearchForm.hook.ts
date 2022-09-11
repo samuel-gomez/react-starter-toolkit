@@ -1,20 +1,39 @@
-import { useState, useCallback } from 'react';
-import { genericHandleChange, getErrorsList, computeInitialStateErrorMessage, getValuesList } from 'shared/helpers/validation.generic';
+import { useState, useCallback, Dispatch, SetStateAction } from 'react';
+import {
+  genericHandleChange,
+  getErrorsList,
+  computeInitialStateErrorMessage,
+  getValuesList,
+  Tfields,
+  TEvent,
+} from 'shared/helpers/validation.generic';
 import { NAME, rules } from './constants';
 
 /** ************************************************************************************************************************ */
 /* STATE FORM SEARCH DISTRIBUTORS  ***************************************************************************************** */
 /** ************************************************************************************************************************ */
 
-export const initStateSearchForm = computeInitialStateErrorMessage(
-  {
-    hasErrors: true,
-    fields: {
-      [NAME]: { name: NAME, value: '', message: null },
-    },
+export const initStateSearchForm = {
+  hasErrors: true,
+  fields: {
+    ...computeInitialStateErrorMessage(
+      {
+        [NAME]: { name: NAME, value: '', message: null },
+      },
+      rules,
+    ),
   },
-  rules,
-);
+};
+
+type TsetOnChangeSearchForm = {
+  genericHandleChangeFn?: typeof genericHandleChange;
+  getErrorsListFn?: typeof getErrorsList;
+  getValuesListFn?: typeof getValuesList;
+  event: TEvent;
+  fields: Tfields;
+  setStateSearchForm: Dispatch<SetStateAction<typeof initStateSearchForm>>;
+  stateSearchForm: typeof initStateSearchForm;
+};
 
 export const setOnChangeSearchForm = ({
   stateSearchForm,
@@ -24,10 +43,12 @@ export const setOnChangeSearchForm = ({
   genericHandleChangeFn = genericHandleChange,
   getErrorsListFn = getErrorsList,
   getValuesListFn = getValuesList,
-}) => {
+}: TsetOnChangeSearchForm) => {
   const handleFields = genericHandleChangeFn(rules, fields, event);
   const errors = getErrorsListFn(handleFields);
   const values = getValuesListFn(handleFields);
+  console.log(errors, values);
+
   setStateSearchForm({
     ...stateSearchForm,
     fields: handleFields,
@@ -40,9 +61,11 @@ export const useSearchForm = ({ initStateSearchFormCt = initStateSearchForm, set
   const { fields } = stateSearchForm;
 
   const onChangeSearchForm = useCallback(
-    event => setOnChangeSearchFormFn({ stateSearchForm, setStateSearchForm, fields, event }),
+    (event: TEvent) => setOnChangeSearchFormFn({ stateSearchForm, setStateSearchForm, fields, event }),
     [fields, setOnChangeSearchFormFn, stateSearchForm],
   );
 
-  return { onChangeSearchForm, stateSearchForm };
+  return { onChangeSearchForm, ...stateSearchForm };
 };
+
+export type TReturnUseSearchForm = ReturnType<typeof useSearchForm>;

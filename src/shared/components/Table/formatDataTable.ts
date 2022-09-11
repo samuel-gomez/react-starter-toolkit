@@ -1,5 +1,11 @@
-export const setTextTooltip = ({ text = '', name = '', maxDisplay = 0 }) =>
-  !text || text.length <= maxDisplay || text === '' || !maxDisplay
+type TsetTextTooltip = {
+  text?: string;
+  name?: string;
+  maxDisplay?: number;
+};
+
+export const setTextTooltip = ({ text = '', name = '', maxDisplay = 0 }: TsetTextTooltip) =>
+  !text || `${text}`.length <= maxDisplay || text === '' || !maxDisplay
     ? {
         [name]: {
           label: text,
@@ -7,7 +13,7 @@ export const setTextTooltip = ({ text = '', name = '', maxDisplay = 0 }) =>
       }
     : {
         [name]: {
-          label: `${text.substring(0, maxDisplay)}...`,
+          label: `${`${text}`.substring(0, maxDisplay)}...`,
           hover: text,
         },
       };
