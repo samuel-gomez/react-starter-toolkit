@@ -27,7 +27,7 @@
     "@axa-fr/react-toolkit-modal-default": "1.4.1",
     "@babel/parser": "7.18.13",
     "@tanstack/react-query": "4.2.3",
-    "@tanstack/react-query-devtools": "4.2.3",
+    "@tanstack/react-query-devtools": "4.3.5",
     "@types/downloadjs": "1.4.3",
     "@types/intl": "1.2.0",
     "@types/jest": "29.0.0",
