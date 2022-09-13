@@ -1,40 +1,54 @@
-import { Tfields } from 'shared/helpers/validation.generic';
-import { Text, Button, FieldForm, HelpMessage, FieldInput } from '@axa-fr/react-toolkit-all';
+import { Controller, UseFormStateReturn, ControllerRenderProps } from 'react-hook-form';
+import { Text, Button, FieldForm, HelpMessage, FieldInput, FieldError } from '@axa-fr/react-toolkit-all';
 import { setConfirmClassModifier } from 'shared/helpers';
-import { NAME, LABEL_NAME, PLACEHOLDER_NAME, FORM_SEARCH_MEMBERS, LABEL_SUBMIT, MIN_SEARCH_BY_NAME } from './constants';
+import { NAME, LABEL_NAME, PLACEHOLDER_NAME, FORM_SEARCH_MEMBERS, LABEL_SUBMIT, MIN_SEARCH_BY_NAME, rules } from './constants';
 import './SearchForm.scss';
-import { TReturnUseSearchForm } from './SearchForm.hook';
+import { FormValues, setOnSubmitSearchForm, TUseForm } from './SearchForm.container';
 
-type TSearchForm<TonSubmit> = {
+type TSearchForm = {
   className: string;
   hasErrors: boolean;
-  fields: Tfields;
-  onSubmit: TonSubmit;
-  onChange: TReturnUseSearchForm['onChangeSearchForm'];
+  onSubmit: ReturnType<typeof setOnSubmitSearchForm>;
+  handleSubmit: TUseForm['handleSubmit'];
+  control: TUseForm['control'];
   confirmClassModifier: ReturnType<typeof setConfirmClassModifier>;
 };
 
-const SearchForm = <TonSubmit,>({ className, fields, hasErrors, onSubmit, onChange, confirmClassModifier }: TSearchForm<TonSubmit>) => (
-  <form className={className} id={FORM_SEARCH_MEMBERS} name={FORM_SEARCH_MEMBERS} autoComplete="off">
+type TInputCustom = {
+  field: ControllerRenderProps<FormValues>;
+  formState: UseFormStateReturn<FormValues>;
+};
+
+export const onChangeValue =
+  (field: ControllerRenderProps<FormValues>) =>
+  ({ value }: { value: string }) =>
+    field.onChange(value);
+
+export const InputCustom = ({ field, formState }: TInputCustom) => (
+  <div className="af-filter-inline__field">
+    <FieldForm message={formState.errors[NAME]?.message} forceDisplayMessage className="col-md-12" messageType="error">
+      <FieldInput className="af-form__text">
+        <label className="af-form__group-label" htmlFor={NAME}>
+          {LABEL_NAME}
+        </label>
+        <Text {...field} id={NAME} placeholder={PLACEHOLDER_NAME} autoComplete="search-name" onChange={onChangeValue(field)} />
+        <HelpMessage message={`Minimum ${MIN_SEARCH_BY_NAME} caractères pour un nom`} />
+      </FieldInput>
+      <FieldError />
+    </FieldForm>
+  </div>
+);
+
+const SearchForm = ({ handleSubmit, className, control, onSubmit, confirmClassModifier, hasErrors }: TSearchForm) => (
+  <form onSubmit={handleSubmit(onSubmit)} className={className} id={FORM_SEARCH_MEMBERS} name={FORM_SEARCH_MEMBERS} autoComplete="off">
     <div className="af-filter-inline__default af-filter-inline__default--search-distributors">
-      <div className="af-filter-inline__field">
-        <FieldForm className="col-md-12">
-          <FieldInput className="af-form__text">
-            <label className="af-form__group-label" htmlFor={NAME}>
-              {LABEL_NAME}
-            </label>
-            <Text {...fields[NAME]} id={NAME} name={NAME} onChange={onChange} placeholder={PLACEHOLDER_NAME} autoComplete="search-name" />
-            <HelpMessage message={`Minimum ${MIN_SEARCH_BY_NAME} caractères pour un nom`} />
-          </FieldInput>
-        </FieldForm>
-      </div>
-      <Button
-        disabled={hasErrors}
-        classModifier={`hasiconLeft submit${confirmClassModifier}`}
-        type="submit"
-        form={FORM_SEARCH_MEMBERS}
-        onClick={onSubmit}
-      >
+      <Controller
+        name="name"
+        control={control}
+        rules={rules}
+        render={({ field, formState }) => <InputCustom field={field} formState={formState} />}
+      />
+      <Button disabled={hasErrors} classModifier={`hasiconLeft submit${confirmClassModifier}`} type="submit" form={FORM_SEARCH_MEMBERS}>
         <span className="af-btn__text">{LABEL_SUBMIT}</span>
         <i className="glyphicon glyphicon-search" />
       </Button>

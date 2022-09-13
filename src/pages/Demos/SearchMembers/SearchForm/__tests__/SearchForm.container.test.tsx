@@ -2,46 +2,39 @@ import { render } from '@testing-library/react';
 import SearchFormContainer, { setOnSubmitSearchForm } from '../SearchForm.container';
 
 const SearchFormCmpt = jest.fn();
-const onChangeSearchForm = jest.fn();
 const onSubmitSearchForm = jest.fn();
+const useFormFnMockReturn = {
+  handleSubmit: jest.fn(),
+  control: {},
+};
 const defaultProps = {
   submitFormSearchMembers: jest.fn(),
   SearchFormCmpt,
 };
 
 describe('SearchFormContainer', () => {
-  it('useSearchFormFn and setConfirmClassModifierFn when Render <SearchFormContainer/>', () => {
-    const useSearchFormFnMock = jest.fn().mockReturnValue({
-      onChangeSearchForm,
-      hasErrors: true,
-      fields: {
-        name: { name: 'name', value: '', message: null },
-      },
-    });
+  it('setConfirmClassModifierFn when Render <SearchFormContainer/>', () => {
     const setConfirmClassModifierFnMock = jest.fn().mockReturnValue('confirmClassModifier');
     const setOnSubmitSearchFormFnMock = jest.fn().mockReturnValue(onSubmitSearchForm);
+    const useFormFnMock = jest.fn().mockReturnValue({ ...useFormFnMockReturn, formState: { isValid: true }, watch: jest.fn() });
 
     render(
       <SearchFormContainer
         {...defaultProps}
         setOnSubmitSearchFormFn={setOnSubmitSearchFormFnMock}
-        useSearchFormFn={useSearchFormFnMock}
         setConfirmClassModifierFn={setConfirmClassModifierFnMock}
+        useFormFn={useFormFnMock}
       />,
     );
-    expect(useSearchFormFnMock).toBeCalled();
     expect(setConfirmClassModifierFnMock).toBeCalled();
     expect(setOnSubmitSearchFormFnMock).toBeCalled();
     expect(SearchFormCmpt).toBeCalledWith(
       {
         className: 'af-filter-inline',
         confirmClassModifier: 'confirmClassModifier',
-        fields: {
-          name: { name: 'name', value: '', message: null },
-        },
-        hasErrors: true,
-        onChange: onChangeSearchForm,
+        hasErrors: false,
         onSubmit: onSubmitSearchForm,
+        ...useFormFnMockReturn,
       },
       {},
     );
@@ -55,7 +48,7 @@ describe('setOnSubmitSearchForm', () => {
     setOnSubmitSearchForm({
       submitFormSearchMembers: submitFormSearchMembersMock,
       fields: {
-        name: { name: 'name', value: 'valuename', message: null },
+        name: 'valuename',
       },
     })();
 

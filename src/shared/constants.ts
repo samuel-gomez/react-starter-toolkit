@@ -2,6 +2,7 @@
  * FORM CONSTANTS
  *************************************************************************/
 export const MSG_REQUIRED = 'Le champ est obligatoire';
+export const MSG_LENGTH_3 = 'Le champ doit faire au moins 3 caractères';
 export const MSG_FORMAT = 'Format invalide';
 export const MSG_ERROR_FORMAT = 'Format de fichier incorrect';
 

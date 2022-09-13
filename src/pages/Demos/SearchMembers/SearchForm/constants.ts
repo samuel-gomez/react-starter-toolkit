@@ -1,4 +1,4 @@
-import { MSG_FORMAT } from 'shared/constants';
+import { MSG_REQUIRED, MSG_LENGTH_3 } from 'shared/constants';
 
 export const LABEL_NAME = 'Nom du membre';
 export const NAME = 'name';
@@ -8,15 +8,13 @@ export const LABEL_SUBMIT = 'Rechercher';
 
 export const MIN_SEARCH_BY_NAME = 3;
 
-export const regExp = /^[\w\s-]{3,}$/;
-
-export const rulePatternName = {
-  pattern: {
-    regex: regExp,
-    message: MSG_FORMAT,
-  },
-};
-
 export const rules = {
-  [NAME]: [rulePatternName],
+  required: MSG_REQUIRED,
+  minLength: { value: MIN_SEARCH_BY_NAME, message: MSG_LENGTH_3 },
 };
+
+export const defaultValues = {
+  [NAME]: '',
+};
+
+export const modeValidationStrategy = 'onChange';

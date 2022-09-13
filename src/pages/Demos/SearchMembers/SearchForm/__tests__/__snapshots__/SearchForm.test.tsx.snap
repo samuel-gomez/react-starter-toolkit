@@ -1,6 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SearchForm Render <SearchForm/> 1`] = `
+exports[`InputCustom Render <InputCustom /> 1`] = `
+<DocumentFragment>
+  <div
+    class="af-filter-inline__field"
+  >
+    <div
+      class="col-md-12"
+    >
+      <div
+        class="af-form__text"
+      >
+        <label
+          class="af-form__group-label"
+          for="name"
+        >
+          Nom du membre
+        </label>
+        <input
+          autocomplete="search-name"
+          class="af-form__input-text"
+          id="name"
+          name="name"
+          placeholder="John Doe"
+          type="text"
+          value=""
+        />
+        <small
+          class="af-form__help"
+        >
+          Minimum 3 caractères pour un nom
+        </small>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`SearchForm Render <SearchForm /> 1`] = `
 <DocumentFragment>
   <form
     autocomplete="off"
@@ -33,7 +70,7 @@ exports[`SearchForm Render <SearchForm/> 1`] = `
               name="name"
               placeholder="John Doe"
               type="text"
-              value="sam"
+              value=""
             />
             <small
               class="af-form__help"
