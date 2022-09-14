@@ -1,12 +1,11 @@
+import { useForm, UseFormReturn } from 'react-hook-form';
 import setConfirmClassModifier from 'shared/helpers/setConfirmClassModifier';
-import { Tfields } from 'shared/helpers/validation.generic';
 import SearchForm from './SearchForm';
-import { useSearchForm } from './SearchForm.hook';
-import { NAME } from './constants';
+import { NAME, defaultValues, modeValidationStrategy } from './constants';
 import { TReturnUseFormSearchMembers } from '../SearchMembers.hook';
 
 type TsetOnSubmitSearchForm = {
-  fields: Tfields;
+  fields: FormValues;
   submitFormSearchMembers: TSearchFormEnhanced['submitFormSearchMembers'];
 };
 
@@ -14,40 +13,55 @@ export const setOnSubmitSearchForm =
   ({ fields, submitFormSearchMembers }: TsetOnSubmitSearchForm) =>
   () =>
     submitFormSearchMembers({
-      [NAME]: fields[NAME].value,
+      [NAME]: fields[NAME],
     });
 
 type TSearchFormEnhanced = {
   submitFormSearchMembers: TReturnUseFormSearchMembers['submitFormSearchMembers'];
   className?: string;
-  useSearchFormFn?: typeof useSearchForm;
   setConfirmClassModifierFn?: typeof setConfirmClassModifier;
   setOnSubmitSearchFormFn?: typeof setOnSubmitSearchForm;
   SearchFormCmpt?: typeof SearchForm;
+  useFormFn?: typeof useForm;
 };
+
+export type FormValues = {
+  [NAME]: string;
+};
+
+export type TUseForm = UseFormReturn<FormValues>;
 
 export const SearchFormEnhanced = ({
   submitFormSearchMembers,
   className = 'af-filter-inline',
-  useSearchFormFn = useSearchForm,
   setConfirmClassModifierFn = setConfirmClassModifier,
   setOnSubmitSearchFormFn = setOnSubmitSearchForm,
   SearchFormCmpt = SearchForm,
+  useFormFn = useForm,
   ...rest
 }: TSearchFormEnhanced) => {
-  const { onChangeSearchForm, fields, hasErrors } = useSearchFormFn({});
-  const confirmClassModifier = setConfirmClassModifierFn(hasErrors);
+  const {
+    handleSubmit,
+    control,
+    watch,
+    formState: { isValid },
+  } = useFormFn<FormValues>({
+    defaultValues,
+    mode: modeValidationStrategy,
+  });
+  const fields = watch();
+  const confirmClassModifier = setConfirmClassModifierFn(!isValid);
   const onSubmitSearchForm = setOnSubmitSearchFormFn({ submitFormSearchMembers, fields });
 
   return (
-    <SearchFormCmpt<typeof onSubmitSearchForm>
+    <SearchFormCmpt
       {...rest}
       className={className}
-      fields={fields}
-      onChange={onChangeSearchForm}
+      hasErrors={!isValid}
       confirmClassModifier={confirmClassModifier}
-      hasErrors={hasErrors}
       onSubmit={onSubmitSearchForm}
+      handleSubmit={handleSubmit}
+      control={control}
     />
   );
 };

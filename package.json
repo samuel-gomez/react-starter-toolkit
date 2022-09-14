@@ -1,7 +1,7 @@
 {
   "name": "react-starter-toolkit",
   "description": "This repository is a starter project that use React Toolkit Axa and CRA.",
-  "version": "0.1.6",
+  "version": "0.2.6",
   "private": true,
   "scripts": {
     "start": "cross-env GENERATE_SOURCEMAP=false react-scripts start",
@@ -46,6 +46,7 @@
     "prism-react-renderer": "1.3.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "7.35.0",
     "react-live": "2.4.1",
     "react-router-dom": "6.3.0",
     "react-scripts": "5.0.1"
