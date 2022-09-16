@@ -1,0 +1,47 @@
+@import '@axa-fr/react-toolkit-core/dist/assets/scss/core.scss';
+
+.af-main {
+  &--demo {
+    background: $color-gray-2;
+  }
+}
+.af-editor {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  margin-bottom: 2rem;
+}
+
+.af-livecode {
+  &--with-editor {
+    grid-gap: 0;
+    grid-template-columns: 1fr;
+  }
+}
+
+.af-form-editor {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-left: 1px solid $color-gray-2;
+  background-color: $color-gray-2;
+  background-color: white;
+  &__field {
+    padding: 1rem;
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-gray-2;
+    }
+    & > label {
+      display: block;
+      width: 100%;
+    }
+    .af-form__group-label {
+      color: $color-scorpion;
+      font-size: 0.8rem;
+    }
+    .af-form__input-text {
+      padding: 0.2rem 0.5rem;
+    }
+    .af-form__input-select {
+      padding: 0.2rem 2.7rem 0.2rem 1rem;
+    }
+  }
+}

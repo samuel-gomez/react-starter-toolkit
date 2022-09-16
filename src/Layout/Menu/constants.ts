@@ -29,6 +29,10 @@ const MENU_ITEMS = [
         classModifierItem: 'separator',
       },
       {
+        label: 'Editor',
+        url: 'editor',
+      },
+      {
         label: 'Modal',
         url: ROUTE_URL.MODAL,
       },

@@ -8,6 +8,7 @@ import SlashDesignSystem from 'pages/Demos/SlashDesignSystem';
 import Modal from 'pages/Demos/Modal';
 import Button from 'pages/Demos/Button';
 import Notification from 'pages/Demos/Notification';
+import ButtonLab from 'pages/Demos/ButtonLab';
 import Home from 'pages/Home';
 import ROUTE_URL from 'App/Routes/constants';
 import { UserContext } from 'App/UserProvider';
@@ -70,6 +71,7 @@ const RoutesCmpt = ({
       <Route path={ROUTE_URL.MODAL} element={withAuthFn(ModalCmpt)} />
       <Route path={ROUTE_URL.BUTTON} element={withAuthFn(ButtonCmpt)} />
       <Route path={ROUTE_URL.NOTIFICATION} element={withAuthFn(NotificationCmpt)} />
+      <Route path={'editor'} element={<ButtonLab />} />
     </Route>
     <Route path={ROUTE_URL.UNAUTHORIZE} element={<PageUnauthorizeCmpt />} />
     <Route path="*" element={<PageNotFound />} />
