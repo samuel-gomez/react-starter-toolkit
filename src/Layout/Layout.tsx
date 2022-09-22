@@ -26,14 +26,14 @@ const disabledDefault = {
   title: false,
   footer: false,
 };
-const DEFAULT_CLASSNAME = 'af-main container';
+const DEFAULT_CLASSNAME = 'container af-main';
 
 const Layout = ({ className, children, propsHeader, propsMenu, propsTitle, propsFooter, disabled = disabledDefault }: TLayout) => (
   <>
     {!disabled.header && <Header {...propsHeader} />}
     {!disabled.menu && <Menu {...propsMenu} />}
     {!disabled.title && <TitleBar {...propsTitle} />}
-    <section className={className}>{children}</section>
+    <main className={className}>{children}</main>
     {!disabled.footer && <Footer {...propsFooter} />}
   </>
 );

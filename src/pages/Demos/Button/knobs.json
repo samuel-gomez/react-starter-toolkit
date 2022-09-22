@@ -1,0 +1,201 @@
+{
+  "classModifier": {
+    "value": "",
+    "options": [
+      {
+        "label": "Success",
+        "value": "success"
+      },
+      {
+        "label": "Danger",
+        "value": "danger"
+      },
+      {
+        "label": "Reverse",
+        "value": "reverse"
+      },
+      {
+        "label": "Disabled",
+        "value": "disabled"
+      },
+      {
+        "label": "Small",
+        "value": "small"
+      },
+      {
+        "label": "HasiconLeft",
+        "value": "hasiconLeft"
+      },
+      {
+        "label": "HasiconRight",
+        "value": "hasiconRight"
+      },
+      {
+        "label": "Success & hasiconLeft",
+        "value": "success hasiconLeft"
+      },
+      {
+        "label": "Danger & hasiconLeft",
+        "value": "danger hasiconLeft"
+      },
+      {
+        "label": "Reverse & hasiconLeft",
+        "value": "reverse hasiconLeft"
+      },
+      {
+        "label": "Disabled & hasiconLeft",
+        "value": "disabled hasiconLeft"
+      },
+      {
+        "label": "Success & hasiconRight",
+        "value": "success hasiconRight"
+      },
+      {
+        "label": "Danger & hasiconRight",
+        "value": "danger hasiconRight"
+      },
+      {
+        "label": "Reverse & hasiconRight",
+        "value": "reverse hasiconRight"
+      },
+      {
+        "label": "Disabled & hasiconRight",
+        "value": "disabled hasiconRight"
+      }
+    ]
+  },
+  "icon": {
+    "value": "",
+    "options": [
+      {
+        "label": "adjust",
+        "value": "adjust"
+      },
+      {
+        "label": "alert",
+        "value": "alert"
+      },
+      {
+        "label": "arrowthin-right",
+        "value": "arrowthin-right"
+      },
+      {
+        "label": "arrowthin-left",
+        "value": "arrowthin-left"
+      },
+      {
+        "label": "ban-circle",
+        "value": "ban-circle"
+      },
+      {
+        "label": "axa-switch",
+        "value": "axa-switch"
+      },
+      {
+        "label": "bookmark",
+        "value": "bookmark"
+      },
+      {
+        "label": "close",
+        "value": "close"
+      },
+      {
+        "label": "comment",
+        "value": "comment"
+      },
+      {
+        "label": "download",
+        "value": "download"
+      },
+      {
+        "label": "duplicate",
+        "value": "duplicate"
+      },
+      {
+        "label": "earphone",
+        "value": "earphone"
+      },
+      {
+        "label": "education",
+        "value": "education"
+      },
+      {
+        "label": "envelope",
+        "value": "envelope"
+      },
+      {
+        "label": "euro-symbol",
+        "value": "euro-symbol"
+      },
+
+      {
+        "label": "eye-open",
+        "value": "eye-open"
+      },
+      {
+        "label": "file",
+        "value": "file"
+      },
+      {
+        "label": "filter",
+        "value": "filter"
+      },
+      {
+        "label": "flag",
+        "value": "flag"
+      },
+      {
+        "label": "flash",
+        "value": "flash"
+      },
+      {
+        "label": "floppy-disk",
+        "value": "floppy-disk"
+      },
+      {
+        "label": "fullscreen",
+        "value": "fullscreen"
+      },
+      {
+        "label": "heart",
+        "value": "heart"
+      },
+      {
+        "label": "home",
+        "value": "home"
+      },
+      {
+        "label": "imprimer",
+        "value": "imprimer"
+      },
+      {
+        "label": "map-marker",
+        "value": "map-marker"
+      },
+      {
+        "label": "ok",
+        "value": "ok"
+      },
+      {
+        "label": "paperclip",
+        "value": "paperclip"
+      },
+      {
+        "label": "play",
+        "value": "play"
+      },
+      {
+        "label": "plus",
+        "value": "plus"
+      },
+      {
+        "label": "refresh",
+        "value": "refresh"
+      },
+      {
+        "label": "trash",
+        "value": "trash"
+      }
+    ]
+  }
+}

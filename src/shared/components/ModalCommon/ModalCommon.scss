@@ -3,6 +3,7 @@
   overflow: auto;
   &--after-open {
     background: rgba(48, 50, 191, 0.62) !important;
+    backdrop-filter: blur(5px);
   }
 }
 

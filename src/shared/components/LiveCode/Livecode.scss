@@ -6,7 +6,10 @@
   grid-gap: 1rem;
   grid-auto-flow: dense;
   width: 100%;
-  margin-bottom: 1rem;
+  background-color: white;
+  pre {
+    margin: 0;
+  }
 }
 
 @include media-breakpoint-down(sm) {

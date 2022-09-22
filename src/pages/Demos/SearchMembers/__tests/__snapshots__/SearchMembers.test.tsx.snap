@@ -245,19 +245,6 @@ exports[`<SearchMembers/> Should render <SearchMembers /> with one member 1`] = 
                 </a>
               </li>
               <li
-                class="af-nav__item af-nav__item--separator "
-                role="none"
-              >
-                <span
-                  aria-expanded="false"
-                  class="af-nav__link"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Composants
-                </span>
-              </li>
-              <li
                 class="af-nav__item "
                 role="none"
               >
@@ -280,14 +267,27 @@ exports[`<SearchMembers/> Should render <SearchMembers /> with one member 1`] = 
                 <a
                   aria-expanded="false"
                   aria-haspopup="true"
-                  aria-label="Button"
+                  aria-label="Notification"
                   class="af-nav__link"
-                  href="/demos/button"
+                  href="/demos/notification"
                   role="menuitem"
                   tabindex="-1"
                 >
-                  Button
+                  Notification
                 </a>
+              </li>
+              <li
+                class="af-nav__item af-nav__item--separator "
+                role="none"
+              >
+                <span
+                  aria-expanded="false"
+                  class="af-nav__link"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Composants Toolkit
+                </span>
               </li>
               <li
                 class="af-nav__item "
@@ -296,13 +296,13 @@ exports[`<SearchMembers/> Should render <SearchMembers /> with one member 1`] = 
                 <a
                   aria-expanded="false"
                   aria-haspopup="true"
-                  aria-label="Notification"
+                  aria-label="Button"
                   class="af-nav__link"
-                  href="/demos/notification"
+                  href="/demos/button"
                   role="menuitem"
                   tabindex="-1"
                 >
-                  Notification
+                  Button
                 </a>
               </li>
             </ul>
@@ -401,8 +401,8 @@ exports[`<SearchMembers/> Should render <SearchMembers /> with one member 1`] = 
       </a>
     </div>
   </div>
-  <section
-    class="af-main container"
+  <main
+    class="container af-main"
   >
     <h1
       class="af-title--content"
@@ -562,7 +562,7 @@ exports[`<SearchMembers/> Should render <SearchMembers /> with one member 1`] = 
         </tbody>
       </table>
     </div>
-  </section>
+  </main>
   <footer
     class="af-footer"
   >
@@ -770,19 +770,6 @@ exports[`<SearchMembers/> Should render SearchMembers 1`] = `
                 </a>
               </li>
               <li
-                class="af-nav__item af-nav__item--separator "
-                role="none"
-              >
-                <span
-                  aria-expanded="false"
-                  class="af-nav__link"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Composants
-                </span>
-              </li>
-              <li
                 class="af-nav__item "
                 role="none"
               >
@@ -805,14 +792,27 @@ exports[`<SearchMembers/> Should render SearchMembers 1`] = `
                 <a
                   aria-expanded="false"
                   aria-haspopup="true"
-                  aria-label="Button"
+                  aria-label="Notification"
                   class="af-nav__link"
-                  href="/demos/button"
+                  href="/demos/notification"
                   role="menuitem"
                   tabindex="-1"
                 >
-                  Button
+                  Notification
                 </a>
+              </li>
+              <li
+                class="af-nav__item af-nav__item--separator "
+                role="none"
+              >
+                <span
+                  aria-expanded="false"
+                  class="af-nav__link"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Composants Toolkit
+                </span>
               </li>
               <li
                 class="af-nav__item "
@@ -821,13 +821,13 @@ exports[`<SearchMembers/> Should render SearchMembers 1`] = `
                 <a
                   aria-expanded="false"
                   aria-haspopup="true"
-                  aria-label="Notification"
+                  aria-label="Button"
                   class="af-nav__link"
-                  href="/demos/notification"
+                  href="/demos/button"
                   role="menuitem"
                   tabindex="-1"
                 >
-                  Notification
+                  Button
                 </a>
               </li>
             </ul>
@@ -926,8 +926,8 @@ exports[`<SearchMembers/> Should render SearchMembers 1`] = `
       </a>
     </div>
   </div>
-  <section
-    class="af-main container"
+  <main
+    class="container af-main"
   >
     <h1
       class="af-title--content"
@@ -1001,7 +1001,7 @@ exports[`<SearchMembers/> Should render SearchMembers 1`] = `
         Tableau des membres
       </h2>
     </div>
-  </section>
+  </main>
   <footer
     class="af-footer"
   >
