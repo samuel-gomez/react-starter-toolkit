@@ -130,19 +130,6 @@ exports[`<Menu/> Render <Menu/> 1`] = `
                 </a>
               </li>
               <li
-                class="af-nav__item af-nav__item--separator "
-                role="none"
-              >
-                <span
-                  aria-expanded="false"
-                  class="af-nav__link"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Composants
-                </span>
-              </li>
-              <li
                 class="af-nav__item "
                 role="none"
               >
@@ -165,14 +152,27 @@ exports[`<Menu/> Render <Menu/> 1`] = `
                 <a
                   aria-expanded="false"
                   aria-haspopup="true"
-                  aria-label="Button"
+                  aria-label="Notification"
                   class="af-nav__link"
-                  href="/button"
+                  href="/notification"
                   role="menuitem"
                   tabindex="-1"
                 >
-                  Button
+                  Notification
                 </a>
+              </li>
+              <li
+                class="af-nav__item af-nav__item--separator "
+                role="none"
+              >
+                <span
+                  aria-expanded="false"
+                  class="af-nav__link"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Composants Toolkit
+                </span>
               </li>
               <li
                 class="af-nav__item "
@@ -181,13 +181,13 @@ exports[`<Menu/> Render <Menu/> 1`] = `
                 <a
                   aria-expanded="false"
                   aria-haspopup="true"
-                  aria-label="Notification"
+                  aria-label="Button"
                   class="af-nav__link"
-                  href="/notification"
+                  href="/button"
                   role="menuitem"
                   tabindex="-1"
                 >
-                  Notification
+                  Button
                 </a>
               </li>
             </ul>

@@ -1,8 +1,8 @@
-import theme from 'prism-react-renderer/themes/dracula';
+import dracula from 'prism-react-renderer/themes/dracula';
 import { LiveProviderProps, LiveProvider, LiveError, LivePreview } from 'react-live';
 import withClassNameModifier from 'shared/hoc/WithClassNameModifier';
 import Highlight, { defaultProps } from 'prism-react-renderer';
-import './livecode.scss';
+import './Livecode.scss';
 
 type TLiveCode = {
   code: string;
@@ -15,7 +15,7 @@ type TLiveCode = {
 };
 
 const LiveCode = withClassNameModifier(
-  ({ code, scope, className, styleLivePreview = { background: 'white', padding: '2rem' } }: TLiveCode) => (
+  ({ code, scope, className, styleLivePreview = { background: 'white', padding: '2rem', placeSelf: 'center' }, theme = dracula }: TLiveCode) => (
     <article className={className}>
       <LiveProvider theme={theme} code={code} scope={scope}>
         <LivePreview style={styleLivePreview} />

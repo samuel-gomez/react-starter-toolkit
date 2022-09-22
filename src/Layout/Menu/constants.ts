@@ -25,24 +25,20 @@ const MENU_ITEMS = [
         url: ROUTE_URL.SEARCHMEMBERS,
       },
       {
-        label: 'Composants',
-        classModifierItem: 'separator',
-      },
-      {
-        label: 'Editor',
-        url: 'editor',
-      },
-      {
         label: 'Modal',
         url: ROUTE_URL.MODAL,
       },
       {
-        label: 'Button',
-        url: ROUTE_URL.BUTTON,
-      },
-      {
         label: 'Notification',
         url: ROUTE_URL.NOTIFICATION,
+      },
+      {
+        label: 'Composants Toolkit',
+        classModifierItem: 'separator',
+      },
+      {
+        label: 'Button',
+        url: ROUTE_URL.BUTTON,
       },
     ],
   },
