@@ -1,6 +1,8 @@
 import { ComponentType, useCallback, useState } from 'react';
 import { Text, CheckboxItem, CheckboxModes, Select } from '@axa-fr/react-toolkit-all';
 import { ClickEvent } from '@axa-fr/react-toolkit-core';
+import { DEFAULT_OPTION_LABEL } from 'shared/constants';
+import './Editor.scss';
 
 export type TEvent = {
   value: string;
@@ -24,14 +26,13 @@ type TFieldEditor = {
 
 type Tknobs = Record<string, Record<string, unknown>>;
 
-const FieldEditor = ({ value, name, onChange }: TFieldEditor) => (
+export const FieldEditor = ({ value, name, onChange }: TFieldEditor) => (
   <>
     {(() => {
       switch (true) {
         case typeof value === 'boolean':
           return (
             <CheckboxItem
-              disabled={false}
               isChecked={value}
               onChange={onChange}
               id={name}
@@ -45,7 +46,16 @@ const FieldEditor = ({ value, name, onChange }: TFieldEditor) => (
           return (
             typeof value === 'object' && (
               <div className="af-form__select">
-                <Select name={name} id={name} options={value.options} onChange={onChange} value={value.value} aria-label={`select-${name}`} />
+                <Select
+                  forceDisplayPlaceholder
+                  placeholder={DEFAULT_OPTION_LABEL}
+                  name={name}
+                  id={name}
+                  options={value.options}
+                  onChange={onChange}
+                  value={value.value}
+                  aria-label={`select-${name}`}
+                />
               </div>
             )
           );
@@ -62,17 +72,21 @@ type TmergePropsAndKnobs<P> = {
   knobs: Tknobs;
 };
 
-const mergePropsAndKnobs = <P extends object>({ props, knobs }: TmergePropsAndKnobs<P>) =>
-  Object.keys(props).reduce((acc, key) => {
-    const res = knobs[key] ? { ...knobs[key], value: props[key] } : props[key];
-
-    return {
+export const mergePropsAndKnobs = <P extends object>({ props, knobs }: TmergePropsAndKnobs<P>) =>
+  Object.keys(props).reduce(
+    (acc, key) => ({
       ...acc,
-      [key]: res,
-    };
-  }, {});
+      [key]: knobs[key] ? { ...knobs[key], value: props[key] } : props[key],
+    }),
+    {},
+  );
 
-const FormEditor = <P extends object>({
+/**
+ * @param onChange : function for update state fields value
+ * @param knobs : overrided props (for object type)
+ * @returns Form fields editor
+ */
+export const FormEditor = <P extends object>({
   onChange,
   knobs,
   ...props
@@ -86,7 +100,7 @@ const FormEditor = <P extends object>({
             <label className="af-form__group-label" htmlFor={name}>
               {name}
             </label>
-            <FieldEditor name={name} value={value as TFieldEditor['value']} onChange={onChange(name)} />
+            <FieldEditor key={name} name={name} value={value as TFieldEditor['value']} onChange={onChange(name)} />
           </div>
         ))}
     </>
@@ -109,25 +123,33 @@ export const withEditor =
       </section>
     );
 
-const setValue = (value: string) => {
+export const setValue = (value: string) => {
   if (value === 'false') return true;
   if (value === 'true') return false;
 
   return value;
 };
 
-export const useEditable = <T extends object>(initialState: T) => {
+type TuseEditable<T> = {
+  initialState: T;
+  logEventFn?: typeof console.log;
+  setValueFn?: typeof setValue;
+};
+export const useEditable = <T extends object>({ initialState, logEventFn = console.log, setValueFn = setValue }: TuseEditable<T>) => {
   const [state, setState] = useState(initialState);
 
-  const onClick = useCallback((e: ClickEvent) => {
-    console.log('click button event', e);
-  }, []);
+  const onClick = useCallback(
+    (e: ClickEvent) => {
+      logEventFn('click button event', e);
+    },
+    [logEventFn],
+  );
 
   const onChange = useCallback(
     (key: string) => (e: TEvent) => {
-      setState(prevState => ({ ...prevState, [key]: setValue(e.value) }));
+      setState(prevState => ({ ...prevState, [key]: setValueFn(e.value) }));
     },
-    [],
+    [setValueFn],
   );
   return { onClick, onChange, state };
 };

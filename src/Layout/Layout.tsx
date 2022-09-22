@@ -33,7 +33,7 @@ const Layout = ({ className, children, propsHeader, propsMenu, propsTitle, props
     {!disabled.header && <Header {...propsHeader} />}
     {!disabled.menu && <Menu {...propsMenu} />}
     {!disabled.title && <TitleBar {...propsTitle} />}
-    <section className={className}>{children}</section>
+    <main className={className}>{children}</main>
     {!disabled.footer && <Footer {...propsFooter} />}
   </>
 );

@@ -7,7 +7,7 @@ describe('useNotify', () => {
   const addNotification = jest.fn();
   const useContextFn = jest.fn();
 
-  it('Should return notifyError, notifySuccess, notifyWarning when notifyError called', () => {
+  it('Should return notifyError, notifySuccess, notifyWarning useNotify have been called', () => {
     renderHook(() => useNotify({ useContextFn }));
     expect(useContextFn).toBeCalled();
   });

@@ -1,10 +1,5 @@
 @import '@axa-fr/react-toolkit-core/dist/assets/scss/core.scss';
 
-.af-main {
-  &--demo {
-    background: $color-gray-2;
-  }
-}
 .af-editor {
   display: grid;
   grid-template-columns: 3fr 1fr;

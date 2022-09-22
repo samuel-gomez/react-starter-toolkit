@@ -1,12 +1,7 @@
 @import '@axa-fr/react-toolkit-core/dist/assets/scss/core.scss';
 @import './variables.scss';
 
-@include media-breakpoint-down(sm) {
-  .container {
-    max-width: 100%;
-  }
-}
-
+/* FIX : LINK ***********************************************************/
 .af-link {
   background: transparent;
   border: 0;
@@ -52,22 +47,35 @@
   }
 }
 
+/* CUSTOM : LAYOUT *************************************************************/
 .af-main {
   padding-top: 1rem;
   min-height: calc(100vh - #{$headerHeight} - #{$footerHeight});
+  &--demo {
+    background: $color-gray-2;
+  }
 }
 
+@include media-breakpoint-down(sm) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+/* CUSTOM : TITLE CONTENT ******************************************************/
 .af-title--content {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
 }
 
+/* CUSTOM : BTN CIRCLE SMALL ****************************************************/
 .af-btn--circle-small {
   width: 2rem;
   height: 2rem;
 }
 
+/* FIX/CUSTOM : TABLE ***********************************************************/
 .af-table__th--sortable {
   padding: 0 1rem 0 0;
   cursor: pointer;
@@ -87,6 +95,7 @@
   padding: 0.2rem 0.5rem;
   text-align: center;
 }
+
 .af-btn.af-btn--table-sorting {
   box-shadow: none;
   padding: 1em;
@@ -95,10 +104,7 @@
   }
 }
 
-.af-body__content {
-  max-height: calc(100vh - 60px);
-}
-
+/* FIX MODAL ***************************************************************/
 .af-modal {
   position: absolute;
   &__body {
@@ -111,10 +117,12 @@
   }
 }
 
+/* FIX : POPOVER **********************************************************/
 .af-popover__container-pop {
   width: auto;
 }
 
+/* CUSTOM : ALERT SIMPLE **************************************************/
 .af-alert {
   &--simple {
     border: 0;
@@ -182,11 +190,18 @@
   }
 }
 
+/* ************************************************************************/
+/* FORM *******************************************************************/
+/* ************************************************************************/
+
+/* RADIO CUSTOM ***********************************************************/
 .af-form__radio-custom {
   .af-form__input-radio {
     visibility: inherit;
   }
 }
+
+/* CHECKBOX TOGGLE *********************************************************/
 .af-form__checkbox-toggle {
   .af-form__input-checkbox {
     visibility: inherit;
@@ -196,6 +211,7 @@
   }
 }
 
+/* CUSTOM : REQUIRED FIELDS **************************************************/
 .af-form__group {
   &--required &-label {
     &:after {
@@ -205,14 +221,12 @@
   }
 }
 
+/* FIX : TEXTAREA ************************************************************/
 .af-form__input-textarea {
   font-size: 1rem;
 }
 
-.af-logo__brand {
-  height: auto;
-}
-
+/* CUSTOM/FIX : INLINE FIELDS *************************************************/
 .af-form__group--inline {
   margin-bottom: 0;
 }
@@ -262,6 +276,24 @@
         text-decoration: none;
       }
     }
+  }
+}
+
+/* CUSTOM/FIX : MOBILE MENU *************************************************/
+.mask {
+  background: rgba(48, 50, 191, 0.62);
+  backdrop-filter: blur(5px);
+  &:after {
+    content: 'Fermer le menu';
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 100px;
+    color: $color-axa;
+    background: white;
+    border-radius: 20px;
+    line-height: 1;
+    padding: 0.1rem;
   }
 }
 
