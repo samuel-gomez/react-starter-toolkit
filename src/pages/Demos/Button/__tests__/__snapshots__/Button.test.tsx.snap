@@ -875,11 +875,10 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               disabled
             </label>
             <div
-              class="af-form__checkbox-toggle af-form__checkbox-toggle--disabled"
+              class="af-form__checkbox-toggle"
             >
               <input
                 class="af-form__input-checkbox"
-                disabled=""
                 id="disabled"
                 mode="toggle"
                 name="disabled"

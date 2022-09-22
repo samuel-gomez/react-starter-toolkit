@@ -3,8 +3,9 @@ import { Button } from '@axa-fr/react-toolkit-all';
 import { ClickEvent } from '@axa-fr/react-toolkit-core';
 import Layout, { TLayout } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
-import { withEditor, useEditable, TEvent } from 'shared/components/Editor';
-import { TITLE_BAR, TITLE, buttonKnobs } from './constants';
+import { withEditor, useEditable, TEvent, Tknobs } from 'shared/components/Editor';
+import { TITLE_BAR, TITLE } from './constants';
+import buttonKnobs from './knobs.json';
 
 const INITIAL_STATE = {
   classModifier: '',
@@ -37,7 +38,7 @@ const ButtonWithEditor = withEditor<Props>(
       }}
     />
   ),
-  buttonKnobs,
+  buttonKnobs as unknown as Tknobs,
 );
 
 const ButtonEditable = () => {

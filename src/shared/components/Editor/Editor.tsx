@@ -24,7 +24,7 @@ type TFieldEditor = {
   options?: { label: string; value: string }[];
 };
 
-type Tknobs = Record<string, Record<string, unknown>>;
+export type Tknobs = Record<string, Record<string, unknown>>;
 
 export const FieldEditor = ({ value, name, onChange }: TFieldEditor) => (
   <>
@@ -33,6 +33,7 @@ export const FieldEditor = ({ value, name, onChange }: TFieldEditor) => (
         case typeof value === 'boolean':
           return (
             <CheckboxItem
+              disabled={false}
               isChecked={value}
               onChange={onChange}
               id={name}
@@ -118,7 +119,7 @@ export const withEditor =
   (props: P) =>
     (
       <section className="af-editor">
-        <Component {...(props as P)} />
+        <Component {...props} />
         <FormEditor<P> {...(props as P & { onChange: ReturnType<typeof useEditable>['onChange'] })} knobs={knobs} />
       </section>
     );

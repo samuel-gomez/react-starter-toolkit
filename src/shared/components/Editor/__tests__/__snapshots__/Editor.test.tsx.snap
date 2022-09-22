@@ -26,12 +26,11 @@ exports[`FieldEditor Should render when value: {"options": [Array], "value": "va
 exports[`FieldEditor Should render when value: true 1`] = `
 <DocumentFragment>
   <div
-    class="af-form__checkbox-toggle af-form__checkbox-toggle--disabled"
+    class="af-form__checkbox-toggle"
   >
     <input
       checked=""
       class="af-form__input-checkbox"
-      disabled=""
       id="name"
       mode="toggle"
       name="name"
