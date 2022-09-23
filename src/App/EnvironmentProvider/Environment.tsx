@@ -1,6 +1,4 @@
-import { useState, useEffect, createContext } from 'react';
-
-const NODE_ENV = process.env.REACT_APP_NODE_ENV || process.env.NODE_ENV;
+import { useState, useEffect, createContext, Dispatch, SetStateAction } from 'react';
 
 export type TEnvironment = {
   apiUrl: string;
@@ -10,8 +8,8 @@ export type TEnvironment = {
 };
 
 export type TEnvironmentState = {
-  environment: null | TEnvironment;
-  error: null | string | object;
+  environment?: null | TEnvironment;
+  error?: unknown;
 };
 
 const initState: TEnvironmentState = {
@@ -20,23 +18,35 @@ const initState: TEnvironmentState = {
 };
 
 export const EnvironmentContext = createContext<TEnvironmentState>(initState);
-const { Provider } = EnvironmentContext;
 EnvironmentContext.displayName = 'EnvironmentContext';
 
-export const getImport = () => import(`../../../public/environment.${NODE_ENV}.json`);
+export const getFileEnv = (nodeEnv = process.env.REACT_APP_NODE_ENV || process.env.NODE_ENV) => `environment.${nodeEnv}.json`;
+
+type TfetchEnv = {
+  setEnvState: Dispatch<SetStateAction<TEnvironmentState>>;
+  signal: AbortSignal;
+  fetchFn?: typeof fetch;
+  getFileEnvFn?: typeof getFileEnv;
+};
+
+export const fetchEnv = async ({ setEnvState, signal, fetchFn = fetch, getFileEnvFn = getFileEnv }: TfetchEnv) => {
+  const fileName = getFileEnvFn();
+  const response = await fetchFn(`/${fileName}`, { signal }).catch(error => setEnvState({ error }));
+  setEnvState({ environment: await response?.json() });
+};
 
 /**
  * Hook to setState environment
  */
-export const useEnv = (getImportFn = getImport, initStateCt = initState) => {
+export const useEnv = (fetchEnvFn = fetchEnv, initStateCt = initState) => {
   const [envState, setEnvState] = useState(initStateCt);
   useEffect(() => {
+    const abortController = new AbortController();
     if (envState.environment === null) {
-      getImportFn()
-        .then(environment => setEnvState({ environment, error: null }))
-        .catch(error => setEnvState({ environment: null, error }));
+      fetchEnvFn({ setEnvState, signal: abortController.signal });
     }
-  }, [envState.environment, getImportFn]);
+    return () => abortController.abort();
+  }, [envState.environment, fetchEnvFn]);
 
   return { envState, setEnvState };
 };
@@ -47,7 +57,7 @@ export const useEnv = (getImportFn = getImport, initStateCt = initState) => {
  */
 const EnvironmentProvider = ({ children, useEnvFn = useEnv }: { children: JSX.Element; useEnvFn?: typeof useEnv }) => {
   const { envState } = useEnvFn();
-  return <Provider value={envState}>{children}</Provider>;
+  return <EnvironmentContext.Provider value={envState}>{children}</EnvironmentContext.Provider>;
 };
 
 export default EnvironmentProvider;

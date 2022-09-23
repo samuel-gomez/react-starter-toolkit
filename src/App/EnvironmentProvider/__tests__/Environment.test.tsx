@@ -1,10 +1,10 @@
 import { useContext } from 'react';
-import { renderHook, act } from '@testing-library/react-hooks';
+import { renderHook } from '@testing-library/react-hooks';
 import { render } from '@testing-library/react';
-import EnvironmentProvider, { useEnv, EnvironmentContext } from '..';
-import type { TEnvironment, TEnvironmentState } from '..';
+import EnvironmentProvider, { useEnv, EnvironmentContext, fetchEnv } from '..';
+import type { TEnvironment } from '..';
 
-const BaseWithEnvironment = ({ environment }: { environment: TEnvironment | null }) => <div>{environment?.baseUrl}</div>;
+const BaseWithEnvironment = ({ environment }: { environment?: TEnvironment | null }) => <div>{environment?.baseUrl}</div>;
 
 const BaseUseEnvContext = () => {
   const envProps = useContext(EnvironmentContext);
@@ -34,6 +34,66 @@ describe('Render App with Base have env props', () => {
 });
 
 describe('useEnv', () => {
+  const fetchEnvFn = jest.fn();
+  it('Should import file when state environment is null', () => {
+    const initStateCt = {
+      environment: null,
+    };
+    const { result } = renderHook(() => useEnv(fetchEnvFn, initStateCt));
+
+    expect(result.current).toEqual({ envState: { environment: null }, setEnvState: result.current.setEnvState });
+    expect(fetchEnvFn).toHaveBeenCalled();
+  });
+  it('Should not import file config when state environment is not null', () => {
+    const environment = {
+      apiUrl: '/api',
+      baseUrl: '/',
+      fetchConfig: {},
+      oidc: {},
+    };
+    const { result } = renderHook(() => useEnv(fetchEnvFn, { environment }));
+
+    expect(result.current).toEqual({ envState: { environment }, setEnvState: result.current.setEnvState });
+    expect(fetchEnvFn).not.toHaveBeenCalled();
+  });
+});
+
+describe('fetchEnv', () => {
+  const resolvedValue = { json: () => ({ data: 'data' }), blob: () => ({ blob: 'blob' }), status: 200 };
+  const fetchMock = jest.fn(() =>
+    Promise.resolve({
+      json: () => Promise.resolve({ data: 'data' }),
+    }),
+  ) as jest.Mock;
+
+  const setEnvStateMock = jest.fn();
+  const getFileEnvFnMock = jest.fn();
+
+  it('Should getFileEnvFn called and fetchMock called with "/filename" when call fetchEnv', async () => {
+    getFileEnvFnMock.mockReturnValue('filename');
+    fetchMock.mockResolvedValue(resolvedValue);
+    await fetchEnv({ setEnvState: setEnvStateMock, signal: {} as AbortSignal, fetchFn: fetchMock, getFileEnvFn: getFileEnvFnMock });
+
+    expect(getFileEnvFnMock).toBeCalled();
+    expect(fetchMock).toBeCalledWith('/filename', { signal: {} });
+  });
+  it('Should setEnvState called when call fetchEnv', async () => {
+    fetchMock.mockResolvedValue(resolvedValue);
+    await fetchEnv({ setEnvState: setEnvStateMock, signal: {} as AbortSignal, fetchFn: fetchMock });
+    expect(setEnvStateMock).toBeCalled();
+  });
+
+  it('Should setEnvState called when call fetchEnv', async () => {
+    fetchMock.mockRejectedValue('error');
+    try {
+      await fetchEnv({ setEnvState: setEnvStateMock, signal: {} as AbortSignal, fetchFn: fetchMock });
+    } catch (error) {
+      expect(error).toMatch('error');
+    }
+  });
+});
+
+/* describe('useEnv', () => {
   it('Should import file when state environment is null', async () => {
     const getImportMock = jest.fn().mockImplementation(() => Promise.resolve({ client_id: 'test' }));
     const { result } = renderHook(() => useEnv(getImportMock));
@@ -67,4 +127,4 @@ describe('useEnv', () => {
 
     expect(result.current).toEqual(expectedEnv);
   });
-});
+}); */
