@@ -2,8 +2,36 @@
 
 .af-editor {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 1fr;
   margin-bottom: 2rem;
+  &__header {
+    background-color: black;
+    padding: 0.5rem 1rem;
+    color: $color-gray-2;
+    display: flex;
+    gap: 1rem;
+    .af-link {
+      color: $color-gray-2;
+      display: flex;
+      height: 18px;
+      fill: $color-gray-2;
+      line-height: 1;
+      &:has(.glyphicon.glyphicon-cog) {
+        text-decoration: none;
+        cursor: pointer;
+        * {
+          color: red;
+        }
+      }
+      .af-icon-svg {
+        margin-right: 0.5rem;
+      }
+      .glyphicon-cog {
+        margin-right: 0.4rem;
+        text-decoration: none;
+      }
+    }
+  }
 }
 
 .af-livecode {
@@ -16,11 +44,9 @@
 .af-form-editor {
   display: grid;
   grid-template-columns: 1fr;
-  border-left: 1px solid $color-gray-2;
-  background-color: $color-gray-2;
   background-color: white;
   &__field {
-    padding: 1rem;
+    padding: 0.4rem 1rem;
     &:not(:last-child) {
       border-bottom: 1px solid $color-gray-2;
     }
@@ -38,5 +64,51 @@
     .af-form__input-select {
       padding: 0.2rem 2.7rem 0.2rem 1rem;
     }
+  }
+}
+
+.af-draggable {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  box-shadow: 2px 2px 10px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+
+  &-container {
+    position: fixed;
+    top: 200px;
+    right: 100px;
+    z-index: 20;
+    display: none;
+    &--open {
+      display: flex;
+    }
+  }
+
+  &__title {
+    background-color: $color-axa;
+    color: white;
+    padding: 0.4rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+  }
+  &__tools {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  &__content {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    resize: vertical;
+  }
+  .glyphicon-move {
+    font-size: 1.6rem;
+    cursor: grab;
+  }
+  .glyphicon-close {
+    cursor: pointer;
   }
 }

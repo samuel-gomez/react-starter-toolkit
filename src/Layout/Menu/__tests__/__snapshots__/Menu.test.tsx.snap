@@ -162,6 +162,22 @@ exports[`<Menu/> Render <Menu/> 1`] = `
                 </a>
               </li>
               <li
+                class="af-nav__item "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Layout"
+                  class="af-nav__link"
+                  href="/layout"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Layout
+                </a>
+              </li>
+              <li
                 class="af-nav__item af-nav__item--separator "
                 role="none"
               >

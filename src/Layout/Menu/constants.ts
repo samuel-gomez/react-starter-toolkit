@@ -33,6 +33,10 @@ const MENU_ITEMS = [
         url: ROUTE_URL.NOTIFICATION,
       },
       {
+        label: 'Layout',
+        url: ROUTE_URL.LAYOUT,
+      },
+      {
         label: 'Composants Toolkit',
         classModifierItem: 'separator',
       },

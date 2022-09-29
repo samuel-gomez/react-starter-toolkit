@@ -7,8 +7,10 @@ import { ROUTE_URL_SEARCHMEMBERS as SEARCHMEMBERS } from 'pages/Demos/SearchMemb
 import { ROUTE_URL_MODAL as MODAL } from 'pages/Demos/Modal/constants';
 import { ROUTE_URL_BUTTON as BUTTON } from 'pages/Demos/Button/constants';
 import { ROUTE_URL_NOTIFICATION as NOTIFICATION } from 'pages/Demos/Notification/constants';
+import { ROUTE_URL_LAYOUT as LAYOUT } from 'pages/Demos/Layout/constants';
 
 const DEMOS = '/demos';
+const LAYOUTS = '/layouts';
 
 const ROUTE_URL = {
   HOME,
@@ -21,6 +23,8 @@ const ROUTE_URL = {
   MODAL,
   BUTTON,
   NOTIFICATION,
+  LAYOUTS,
+  LAYOUT,
 };
 
 export default ROUTE_URL;

@@ -28,7 +28,7 @@ type THeaderApp = {
 
 export const HeaderApp = ({ infos, title, subtitle, link = '#', authName = 'Non Connecté', authRole = 'Profil', anomaly }: THeaderApp) => (
   <Header>
-    <Name title={title} img={logo} alt={title} subtitle={subtitle} />
+    <Name title={title} img={logo} alt={title} subtitle={subtitle} classModifier="slash" />
     {infos && (
       <Resilience anomaly={anomaly} resilienceModifier="simple infos">
         <HeaderInfo isLoaded={infos.length > 0}>

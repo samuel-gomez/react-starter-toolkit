@@ -1,5 +1,15 @@
 @import '@axa-fr/react-toolkit-core/dist/assets/scss/core.scss';
 
+/* to delete, just for démo ********************************/
+/* dont forget to delete the classModifier in <Name> component*/
+.af-header__name--slash {
+  .af-logo__brand {
+    width: 41px;
+    margin-top: 5px;
+  }
+}
+/* just for démo ********************************/
+
 .af {
   &-alert {
     &--infos {

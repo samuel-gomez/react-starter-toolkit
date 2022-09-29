@@ -9,10 +9,10 @@ export type TLayout = WithClassModifierOptions & {
   children?: ReactNode;
   className?: string;
   disabled?: {
-    header: boolean;
-    menu: boolean;
-    title: boolean;
-    footer: boolean;
+    header?: boolean;
+    menu?: boolean;
+    title?: boolean;
+    footer?: boolean;
   };
   propsHeader?: ComponentPropsWithoutRef<typeof Header>;
   propsMenu?: ComponentPropsWithoutRef<typeof Menu>;
