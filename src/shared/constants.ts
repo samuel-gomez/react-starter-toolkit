@@ -88,3 +88,4 @@ export const MODIFIER_CLASS = {
 
 export const STORYBOOK = 'https://axaguildev.github.io/react-toolkit/latest/storybook/';
 export const DESIGN_SYSTEM = 'https://axaguildev.github.io/design-system/';
+export const GITHUB = 'https://github.com/AxaGuilDEv/react-toolkit/tree/master/packages/';

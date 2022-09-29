@@ -9,6 +9,7 @@ import Modal from 'pages/Demos/Modal';
 import Button from 'pages/Demos/Button';
 import Notification from 'pages/Demos/Notification';
 import Home from 'pages/Home';
+import Layout from 'pages/Demos/Layout';
 import ROUTE_URL from 'App/Routes/constants';
 import { UserContext } from 'App/UserProvider';
 import Loader, { MODES } from 'shared/components/Loader';
@@ -48,6 +49,7 @@ type TRoutesCmpt = {
   NotificationCmpt?: typeof Notification;
   PageUnauthorizeCmpt?: typeof PageUnauthorize;
   withAuthFn?: typeof withAuth;
+  LayoutCmpt?: typeof Layout;
 };
 
 const RoutesCmpt = ({
@@ -59,6 +61,7 @@ const RoutesCmpt = ({
   ButtonCmpt = Button,
   NotificationCmpt = Notification,
   PageUnauthorizeCmpt = PageUnauthorize,
+  LayoutCmpt = Layout,
   withAuthFn = withAuth,
 }: TRoutesCmpt) => (
   <Routes>
@@ -70,6 +73,7 @@ const RoutesCmpt = ({
       <Route path={ROUTE_URL.MODAL} element={withAuthFn(ModalCmpt)} />
       <Route path={ROUTE_URL.BUTTON} element={withAuthFn(ButtonCmpt)} />
       <Route path={ROUTE_URL.NOTIFICATION} element={withAuthFn(NotificationCmpt)} />
+      <Route path={ROUTE_URL.LAYOUT} element={withAuthFn(LayoutCmpt)} />
     </Route>
     <Route path={ROUTE_URL.UNAUTHORIZE} element={<PageUnauthorizeCmpt />} />
     <Route path="*" element={<PageNotFound />} />

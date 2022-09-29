@@ -13,7 +13,7 @@ exports[`<Header/> Render <Header/> 1`] = `
         role="banner"
       >
         <div
-          class="af-header__name"
+          class="af-header__name af-header__name--slash"
         >
           <a
             class="af-logo"

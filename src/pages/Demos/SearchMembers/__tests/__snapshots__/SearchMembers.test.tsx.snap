@@ -79,7 +79,7 @@ exports[`<SearchMembers/> Should render <SearchMembers /> with one member 1`] = 
         role="banner"
       >
         <div
-          class="af-header__name"
+          class="af-header__name af-header__name--slash"
         >
           <a
             class="af-logo"
@@ -274,6 +274,22 @@ exports[`<SearchMembers/> Should render <SearchMembers /> with one member 1`] = 
                   tabindex="-1"
                 >
                   Notification
+                </a>
+              </li>
+              <li
+                class="af-nav__item "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Layout"
+                  class="af-nav__link"
+                  href="/demos/layout"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Layout
                 </a>
               </li>
               <li
@@ -604,7 +620,7 @@ exports[`<SearchMembers/> Should render SearchMembers 1`] = `
         role="banner"
       >
         <div
-          class="af-header__name"
+          class="af-header__name af-header__name--slash"
         >
           <a
             class="af-logo"
@@ -799,6 +815,22 @@ exports[`<SearchMembers/> Should render SearchMembers 1`] = `
                   tabindex="-1"
                 >
                   Notification
+                </a>
+              </li>
+              <li
+                class="af-nav__item "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Layout"
+                  class="af-nav__link"
+                  href="/demos/layout"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Layout
                 </a>
               </li>
               <li

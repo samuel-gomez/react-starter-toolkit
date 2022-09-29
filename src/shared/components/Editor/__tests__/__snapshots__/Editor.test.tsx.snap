@@ -77,27 +77,118 @@ exports[`withEditor Should render Component with FormEditor when apply withEdito
     >
       Hello
     </div>
-    <form
-      class="af-form-editor"
+    <div
+      class="af-draggable-container"
     >
       <div
-        class="af-form-editor__field"
+        class="af-draggable react-draggable"
+        style="transform: translate(0px,0px);"
       >
-        <label
-          class="af-form__group-label"
-          for="className"
+        <h3
+          class="af-draggable__title"
         >
-          className
-        </label>
-        <input
-          class="af-form__input-text"
-          id="className"
-          name="className"
-          type="text"
-          value="af-component"
-        />
+          Props Editor
+          <div
+            class="af-draggable__tools"
+          >
+            <strong
+              class="glyphicon glyphicon-move"
+            />
+            <i
+              class="glyphicon glyphicon-close no-cursor"
+            />
+          </div>
+        </h3>
+        <div
+          class="af-draggable__content"
+        >
+          <form
+            class="af-form-editor"
+          >
+            <div
+              class="af-form-editor__field"
+            >
+              <label
+                class="af-form__group-label"
+                for="className"
+              >
+                className
+              </label>
+              <input
+                class="af-form__input-text"
+                id="className"
+                name="className"
+                type="text"
+                value="af-component"
+              />
+            </div>
+          </form>
+        </div>
       </div>
-    </form>
+    </div>
+  </section>
+</DocumentFragment>
+`;
+
+exports[`withEditor Should render Component with FormEditor when apply withEditor HOC and isOpenEditor true 1`] = `
+<DocumentFragment>
+  <section
+    class=""
+  >
+    <div
+      class="af-component"
+    >
+      Hello
+    </div>
+    <div
+      class="af-draggable-container af-draggable-container--open"
+    >
+      <div
+        class="af-draggable react-draggable"
+        style="transform: translate(0px,0px);"
+      >
+        <h3
+          class="af-draggable__title"
+        >
+          Props Editor
+          <div
+            class="af-draggable__tools"
+          >
+            <strong
+              class="glyphicon glyphicon-move"
+            />
+            <i
+              class="glyphicon glyphicon-close no-cursor"
+            />
+          </div>
+        </h3>
+        <div
+          class="af-draggable__content"
+        >
+          <form
+            class="af-form-editor"
+          >
+            <div
+              class="af-form-editor__field"
+            >
+              <label
+                class="af-form__group-label"
+                for="className"
+              >
+                className
+              </label>
+              <input
+                class="af-form__input-text"
+                id="className"
+                name="className"
+                type="text"
+                value="af-component"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </section>
 </DocumentFragment>
 `;

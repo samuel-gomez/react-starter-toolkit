@@ -1,2 +1,2 @@
-export { withEditor, useEditable } from './Editor';
-export type { TEvent, Tknobs } from './Editor';
+export { withEditor, useEditable, EditorHeader } from './Editor';
+export type { TEvent, Tknobs, TReturnUseToggleEditor } from './Editor';

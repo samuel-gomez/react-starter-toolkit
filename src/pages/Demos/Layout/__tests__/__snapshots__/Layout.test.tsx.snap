@@ -1,0 +1,1358 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<WithoutHeader page/> Renders WithoutHeader page component without crashing 1`] = `
+<DocumentFragment>
+  <section
+    class=""
+  >
+    <header
+      class="af-editor__header"
+    >
+      <span
+        class="af-link"
+      >
+        <i
+          class="glyphicon glyphicon-cog"
+        />
+        <span
+          class="af-link"
+        >
+          Edit props
+        </span>
+      </span>
+    </header>
+    <article
+      class="af-livecode af-livecode--with-editor"
+    >
+      <div>
+        <div
+          class="af-header"
+        >
+          <div
+            class="container af-header__wrapper"
+          >
+            <header
+              class="af-header__content"
+              role="banner"
+            >
+              <div
+                class="af-header__name af-header__name--slash"
+              >
+                <a
+                  class="af-logo"
+                  href="/"
+                >
+                  <img
+                    alt="Toolkit React Starter"
+                    class="af-logo__brand"
+                    src="slash-logo.svg"
+                  />
+                </a>
+                <h2
+                  class="af-header__title"
+                >
+                  Toolkit React Starter
+                  <span
+                    class="af-header__subtitle"
+                  >
+                    by Slash Design System
+                  </span>
+                </h2>
+              </div>
+              <div
+                class="af-info-user"
+              >
+                <a
+                  class="af-info-user__link"
+                  href="#"
+                  title="Voir mon profil"
+                >
+                  <span
+                    class="af-info-user__name"
+                  />
+                </a>
+              </div>
+            </header>
+          </div>
+        </div>
+        <div
+          class="af-nav-container"
+        >
+          <button
+            aria-controls="mainmenu"
+            aria-haspopup="true"
+            class="mask fade "
+            id="togglemenu"
+            type="button"
+          />
+          <nav
+            aria-label="Menu principal"
+            class="af-nav af-drawer left "
+            role="navigation"
+          >
+            <div
+              class="container af-nav__wrapper"
+            >
+              <div
+                class="af-nav__aside-header"
+              >
+                <h4
+                  class="af-nav__aside-title"
+                >
+                  Menu
+                </h4>
+                <button
+                  aria-controls="mainmenu"
+                  aria-haspopup="true"
+                  class="af-nav__aside-close"
+                  id="togglemenu"
+                  type="button"
+                >
+                  ×
+                </button>
+              </div>
+              <ul
+                aria-labelledby="togglemenu"
+                class="af-nav__list "
+                id="mainmenu"
+                role="menubar"
+              >
+                <li
+                  class="af-nav__item af-nav__item--active "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Accueil"
+                    class="af-nav__link"
+                    href="/"
+                    role="menuitem"
+                    tabindex="0"
+                  >
+                    Accueil
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item af-nav__item--haschild "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Démos"
+                    class="af-nav__link"
+                    href="/demos"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Démos
+                  </a>
+                  <i
+                    class="glyphicon glyphicon-arrow-xs-down"
+                  />
+                  <ul
+                    aria-label=""
+                    class="af-nav__list af-nav__list--children"
+                    role="menu"
+                  >
+                    <li
+                      class="af-nav__item af-nav__item--separator "
+                      role="none"
+                    >
+                      <span
+                        aria-expanded="false"
+                        class="af-nav__link"
+                        role="menuitem"
+                        tabindex="-1"
+                      >
+                        Pages
+                      </span>
+                    </li>
+                    <li
+                      class="af-nav__item "
+                      role="none"
+                    >
+                      <a
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        aria-label="Membres"
+                        class="af-nav__link"
+                        href="/demos/members"
+                        role="menuitem"
+                        tabindex="-1"
+                      >
+                        Membres
+                      </a>
+                    </li>
+                    <li
+                      class="af-nav__item "
+                      role="none"
+                    >
+                      <a
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        aria-label="Rechercher"
+                        class="af-nav__link"
+                        href="/demos/search-members"
+                        role="menuitem"
+                        tabindex="-1"
+                      >
+                        Rechercher
+                      </a>
+                    </li>
+                    <li
+                      class="af-nav__item "
+                      role="none"
+                    >
+                      <a
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        aria-label="Modal"
+                        class="af-nav__link"
+                        href="/demos/modal"
+                        role="menuitem"
+                        tabindex="-1"
+                      >
+                        Modal
+                      </a>
+                    </li>
+                    <li
+                      class="af-nav__item "
+                      role="none"
+                    >
+                      <a
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        aria-label="Notification"
+                        class="af-nav__link"
+                        href="/demos/notification"
+                        role="menuitem"
+                        tabindex="-1"
+                      >
+                        Notification
+                      </a>
+                    </li>
+                    <li
+                      class="af-nav__item "
+                      role="none"
+                    >
+                      <a
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        aria-label="Layout"
+                        class="af-nav__link"
+                        href="/demos/layout"
+                        role="menuitem"
+                        tabindex="-1"
+                      >
+                        Layout
+                      </a>
+                    </li>
+                    <li
+                      class="af-nav__item af-nav__item--separator "
+                      role="none"
+                    >
+                      <span
+                        aria-expanded="false"
+                        class="af-nav__link"
+                        role="menuitem"
+                        tabindex="-1"
+                      >
+                        Composants Toolkit
+                      </span>
+                    </li>
+                    <li
+                      class="af-nav__item "
+                      role="none"
+                    >
+                      <a
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        aria-label="Button"
+                        class="af-nav__link"
+                        href="/demos/button"
+                        role="menuitem"
+                        tabindex="-1"
+                      >
+                        Button
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                <li
+                  class="af-nav__item af-nav__item--haschild "
+                  role="none"
+                >
+                  <span
+                    aria-expanded="false"
+                    class="af-nav__link"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Pages
+                  </span>
+                  <i
+                    class="glyphicon glyphicon-arrow-xs-down"
+                  />
+                  <ul
+                    aria-label=""
+                    class="af-nav__list af-nav__list--children"
+                    role="menu"
+                  >
+                    <li
+                      class="af-nav__item "
+                      role="none"
+                    >
+                      <a
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        aria-label="Not found"
+                        class="af-nav__link"
+                        href="/notfound"
+                        role="menuitem"
+                        tabindex="-1"
+                      >
+                        Not found
+                      </a>
+                    </li>
+                    <li
+                      class="af-nav__item "
+                      role="none"
+                    >
+                      <a
+                        aria-expanded="false"
+                        aria-haspopup="true"
+                        aria-label="Forbidden"
+                        class="af-nav__link"
+                        href="/forbidden"
+                        role="menuitem"
+                        tabindex="-1"
+                      >
+                        Forbidden
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <a
+          aria-controls="mainmenu"
+          aria-haspopup="true"
+          class="btn af-title-bar__mobile-menu af-btn--circle"
+          href="#"
+          id="togglemenu"
+          role="button"
+          tabindex="0"
+          title="Toggle menu"
+        >
+          <i
+            class="glyphicon glyphicon-menu-hamburger"
+          />
+        </a>
+        <div
+          class="af-title-bar"
+        >
+          <div
+            class="container af-title-bar__wrapper"
+          >
+            <h1
+              class="af-title-bar__title"
+            >
+              Layout demo
+            </h1>
+          </div>
+        </div>
+        <main
+          class="af-main af-main--demo"
+        >
+          <section
+            class="container"
+          >
+            <h1
+              class="af-title--content"
+            >
+              Layout playground
+            </h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sunt repudiandae corporis expedita illo minima, aut nostrum vitae. Fuga quo facilis dolorum fugit? Cumque necessitatibus unde nostrum possimus voluptas nisi.
+            </p>
+          </section>
+        </main>
+        <footer
+          class="af-footer"
+        >
+          <div
+            class="container-fluid container"
+          >
+            <a
+              class="af-logo"
+              href="https://www.axa.fr/"
+              target="blank"
+              title="Site Axa"
+            >
+              <img
+                alt="Logo Axa"
+                class="af-logo__brand"
+                src="logo-axa.svg"
+              />
+            </a>
+            <div
+              class="af-footer-content"
+            >
+              © 2022 AXA Tous droits réservés - v0.2.6
+            </div>
+          </div>
+        </footer>
+      </div>
+      <pre
+        class="prism-code language-jsx"
+        style="color: rgb(248, 248, 242); background-color: rgb(40, 42, 54); font-size: 0.8rem;"
+      >
+        <div
+          class="token-line"
+          style="color: rgb(248, 248, 242);"
+        >
+          <span
+            class="token plain"
+            style="display: inline-block;"
+          >
+            
+
+          </span>
+        </div>
+        <div
+          class="token-line"
+          style="color: rgb(248, 248, 242);"
+        >
+          <span
+            class="token plain"
+          />
+          <span
+            class="token tag punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            &lt;
+          </span>
+          <span
+            class="token tag class-name"
+            style="color: rgb(255, 121, 198);"
+          >
+            Layout
+          </span>
+          <span
+            class="token tag"
+            style="color: rgb(255, 121, 198);"
+          >
+             
+          </span>
+          <span
+            class="token tag attr-name"
+            style="color: rgb(241, 250, 140);"
+          >
+            propsTitle
+          </span>
+          <span
+            class="token tag script language-javascript script-punctuation punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            =
+          </span>
+          <span
+            class="token tag script language-javascript punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            {
+          </span>
+          <span
+            class="token tag script language-javascript punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            {
+          </span>
+          <span
+            class="token tag script language-javascript"
+            style="color: rgb(255, 121, 198);"
+          >
+             
+          </span>
+          <span
+            class="token tag script language-javascript literal-property property"
+            style="color: rgb(255, 121, 198);"
+          >
+            title
+          </span>
+          <span
+            class="token tag script language-javascript operator"
+            style="color: rgb(255, 121, 198);"
+          >
+            :
+          </span>
+          <span
+            class="token tag script language-javascript"
+            style="color: rgb(255, 121, 198);"
+          >
+             
+          </span>
+          <span
+            class="token tag script language-javascript string"
+            style="color: rgb(255, 121, 198);"
+          >
+            'Layout demo'
+          </span>
+          <span
+            class="token tag script language-javascript"
+            style="color: rgb(255, 121, 198);"
+          >
+             
+          </span>
+          <span
+            class="token tag script language-javascript punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            }
+          </span>
+          <span
+            class="token tag script language-javascript punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            }
+          </span>
+          <span
+            class="token tag"
+            style="color: rgb(255, 121, 198);"
+          >
+             
+          </span>
+          <span
+            class="token tag attr-name"
+            style="color: rgb(241, 250, 140);"
+          >
+            disabled
+          </span>
+          <span
+            class="token tag script language-javascript script-punctuation punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            =
+          </span>
+          <span
+            class="token tag script language-javascript punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            {
+          </span>
+          <span
+            class="token tag script language-javascript punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            {
+          </span>
+          <span
+            class="token tag script language-javascript"
+            style="color: rgb(255, 121, 198);"
+          >
+             
+          </span>
+          <span
+            class="token tag script language-javascript literal-property property"
+            style="color: rgb(255, 121, 198);"
+          >
+            header
+          </span>
+          <span
+            class="token tag script language-javascript operator"
+            style="color: rgb(255, 121, 198);"
+          >
+            :
+          </span>
+          <span
+            class="token tag script language-javascript"
+            style="color: rgb(255, 121, 198);"
+          >
+             
+          </span>
+          <span
+            class="token tag script language-javascript boolean"
+            style="color: rgb(255, 121, 198);"
+          >
+            false
+          </span>
+          <span
+            class="token tag script language-javascript punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            ,
+          </span>
+          <span
+            class="token tag script language-javascript"
+            style="color: rgb(255, 121, 198);"
+          >
+             
+          </span>
+          <span
+            class="token tag script language-javascript literal-property property"
+            style="color: rgb(255, 121, 198);"
+          >
+            menu
+          </span>
+          <span
+            class="token tag script language-javascript operator"
+            style="color: rgb(255, 121, 198);"
+          >
+            :
+          </span>
+          <span
+            class="token tag script language-javascript"
+            style="color: rgb(255, 121, 198);"
+          >
+             
+          </span>
+          <span
+            class="token tag script language-javascript boolean"
+            style="color: rgb(255, 121, 198);"
+          >
+            false
+          </span>
+          <span
+            class="token tag script language-javascript punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            ,
+          </span>
+          <span
+            class="token tag script language-javascript"
+            style="color: rgb(255, 121, 198);"
+          >
+             
+          </span>
+          <span
+            class="token tag script language-javascript literal-property property"
+            style="color: rgb(255, 121, 198);"
+          >
+            title
+          </span>
+          <span
+            class="token tag script language-javascript operator"
+            style="color: rgb(255, 121, 198);"
+          >
+            :
+          </span>
+          <span
+            class="token tag script language-javascript"
+            style="color: rgb(255, 121, 198);"
+          >
+             
+          </span>
+          <span
+            class="token tag script language-javascript boolean"
+            style="color: rgb(255, 121, 198);"
+          >
+            false
+          </span>
+          <span
+            class="token tag script language-javascript punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            ,
+          </span>
+          <span
+            class="token tag script language-javascript"
+            style="color: rgb(255, 121, 198);"
+          >
+             
+          </span>
+          <span
+            class="token tag script language-javascript literal-property property"
+            style="color: rgb(255, 121, 198);"
+          >
+            footer
+          </span>
+          <span
+            class="token tag script language-javascript operator"
+            style="color: rgb(255, 121, 198);"
+          >
+            :
+          </span>
+          <span
+            class="token tag script language-javascript"
+            style="color: rgb(255, 121, 198);"
+          >
+             
+          </span>
+          <span
+            class="token tag script language-javascript boolean"
+            style="color: rgb(255, 121, 198);"
+          >
+            false
+          </span>
+          <span
+            class="token tag script language-javascript"
+            style="color: rgb(255, 121, 198);"
+          >
+             
+          </span>
+          <span
+            class="token tag script language-javascript punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            }
+          </span>
+          <span
+            class="token tag script language-javascript punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            }
+          </span>
+          <span
+            class="token tag"
+            style="color: rgb(255, 121, 198);"
+          >
+             
+          </span>
+          <span
+            class="token tag attr-name"
+            style="color: rgb(241, 250, 140);"
+          >
+            className
+          </span>
+          <span
+            class="token tag attr-value punctuation attr-equals"
+            style="color: rgb(248, 248, 242);"
+          >
+            =
+          </span>
+          <span
+            class="token tag attr-value punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            "
+          </span>
+          <span
+            class="token tag attr-value"
+            style="color: rgb(255, 121, 198);"
+          >
+            af-main
+          </span>
+          <span
+            class="token tag attr-value punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            "
+          </span>
+          <span
+            class="token tag"
+            style="color: rgb(255, 121, 198);"
+          >
+             
+          </span>
+          <span
+            class="token tag attr-name"
+            style="color: rgb(241, 250, 140);"
+          >
+            classModifier
+          </span>
+          <span
+            class="token tag attr-value punctuation attr-equals"
+            style="color: rgb(248, 248, 242);"
+          >
+            =
+          </span>
+          <span
+            class="token tag attr-value punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            "
+          </span>
+          <span
+            class="token tag attr-value"
+            style="color: rgb(255, 121, 198);"
+          >
+            demo
+          </span>
+          <span
+            class="token tag attr-value punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            "
+          </span>
+          <span
+            class="token tag"
+            style="color: rgb(255, 121, 198);"
+          >
+             
+          </span>
+          <span
+            class="token tag punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            &gt;
+          </span>
+          <span
+            class="token plain-text"
+          />
+        </div>
+        <div
+          class="token-line"
+          style="color: rgb(248, 248, 242);"
+        >
+          <span
+            class="token plain-text"
+          >
+              
+          </span>
+          <span
+            class="token tag punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            &lt;
+          </span>
+          <span
+            class="token tag"
+            style="color: rgb(255, 121, 198);"
+          >
+            section
+          </span>
+          <span
+            class="token tag"
+            style="color: rgb(255, 121, 198);"
+          >
+             
+          </span>
+          <span
+            class="token tag attr-name"
+            style="color: rgb(241, 250, 140);"
+          >
+            className
+          </span>
+          <span
+            class="token tag attr-value punctuation attr-equals"
+            style="color: rgb(248, 248, 242);"
+          >
+            =
+          </span>
+          <span
+            class="token tag attr-value punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            "
+          </span>
+          <span
+            class="token tag attr-value"
+            style="color: rgb(255, 121, 198);"
+          >
+            container
+          </span>
+          <span
+            class="token tag attr-value punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            "
+          </span>
+          <span
+            class="token tag punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            &gt;
+          </span>
+          <span
+            class="token plain-text"
+          />
+        </div>
+        <div
+          class="token-line"
+          style="color: rgb(248, 248, 242);"
+        >
+          <span
+            class="token plain-text"
+          >
+                
+          </span>
+          <span
+            class="token tag punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            &lt;
+          </span>
+          <span
+            class="token tag"
+            style="color: rgb(255, 121, 198);"
+          >
+            h1
+          </span>
+          <span
+            class="token tag"
+            style="color: rgb(255, 121, 198);"
+          >
+             
+          </span>
+          <span
+            class="token tag attr-name"
+            style="color: rgb(241, 250, 140);"
+          >
+            className
+          </span>
+          <span
+            class="token tag attr-value punctuation attr-equals"
+            style="color: rgb(248, 248, 242);"
+          >
+            =
+          </span>
+          <span
+            class="token tag attr-value punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            "
+          </span>
+          <span
+            class="token tag attr-value"
+            style="color: rgb(255, 121, 198);"
+          >
+            af-title--content
+          </span>
+          <span
+            class="token tag attr-value punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            "
+          </span>
+          <span
+            class="token tag punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            &gt;
+          </span>
+          <span
+            class="token plain-text"
+          >
+            Layout playground
+          </span>
+          <span
+            class="token tag punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            &lt;/
+          </span>
+          <span
+            class="token tag"
+            style="color: rgb(255, 121, 198);"
+          >
+            h1
+          </span>
+          <span
+            class="token tag punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            &gt;
+          </span>
+          <span
+            class="token plain-text"
+          />
+        </div>
+        <div
+          class="token-line"
+          style="color: rgb(248, 248, 242);"
+        >
+          <span
+            class="token plain-text"
+          >
+                
+          </span>
+          <span
+            class="token tag punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            &lt;
+          </span>
+          <span
+            class="token tag"
+            style="color: rgb(255, 121, 198);"
+          >
+            p
+          </span>
+          <span
+            class="token tag punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            &gt;
+          </span>
+          <span
+            class="token plain-text"
+          />
+        </div>
+        <div
+          class="token-line"
+          style="color: rgb(248, 248, 242);"
+        >
+          <span
+            class="token plain-text"
+          >
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sunt repudiandae corporis expedita illo minima, aut nostrum vitae. Fuga quo
+          </span>
+        </div>
+        <div
+          class="token-line"
+          style="color: rgb(248, 248, 242);"
+        >
+          <span
+            class="token plain-text"
+          >
+                  facilis dolorum fugit? Cumque necessitatibus unde nostrum possimus voluptas nisi.
+          </span>
+        </div>
+        <div
+          class="token-line"
+          style="color: rgb(248, 248, 242);"
+        >
+          <span
+            class="token plain-text"
+          >
+                
+          </span>
+          <span
+            class="token tag punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            &lt;/
+          </span>
+          <span
+            class="token tag"
+            style="color: rgb(255, 121, 198);"
+          >
+            p
+          </span>
+          <span
+            class="token tag punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            &gt;
+          </span>
+          <span
+            class="token plain-text"
+          />
+        </div>
+        <div
+          class="token-line"
+          style="color: rgb(248, 248, 242);"
+        >
+          <span
+            class="token plain-text"
+          >
+              
+          </span>
+          <span
+            class="token tag punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            &lt;/
+          </span>
+          <span
+            class="token tag"
+            style="color: rgb(255, 121, 198);"
+          >
+            section
+          </span>
+          <span
+            class="token tag punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            &gt;
+          </span>
+          <span
+            class="token plain-text"
+          />
+        </div>
+        <div
+          class="token-line"
+          style="color: rgb(248, 248, 242);"
+        >
+          <span
+            class="token plain-text"
+          />
+          <span
+            class="token tag punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            &lt;/
+          </span>
+          <span
+            class="token tag class-name"
+            style="color: rgb(255, 121, 198);"
+          >
+            Layout
+          </span>
+          <span
+            class="token tag punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            &gt;
+          </span>
+          <span
+            class="token plain"
+          >
+             
+          </span>
+        </div>
+        <div
+          class="token-line"
+          style="color: rgb(248, 248, 242);"
+        >
+          <span
+            class="token plain"
+            style="display: inline-block;"
+          >
+            
+
+          </span>
+        </div>
+      </pre>
+    </article>
+    <div
+      class="af-draggable-container"
+    >
+      <div
+        class="af-draggable react-draggable"
+        style="transform: translate(0px,0px);"
+      >
+        <h3
+          class="af-draggable__title"
+        >
+          Props Editor
+          <div
+            class="af-draggable__tools"
+          >
+            <strong
+              class="glyphicon glyphicon-move"
+            />
+            <i
+              class="glyphicon glyphicon-close no-cursor"
+            />
+          </div>
+        </h3>
+        <div
+          class="af-draggable__content"
+        >
+          <form
+            class="af-form-editor"
+          >
+            <div
+              class="af-form-editor__field"
+            >
+              <label
+                class="af-form__group-label"
+                for="className"
+              >
+                className
+              </label>
+              <input
+                class="af-form__input-text"
+                id="className"
+                name="className"
+                type="text"
+                value="af-main"
+              />
+            </div>
+            <div
+              class="af-form-editor__field"
+            >
+              <label
+                class="af-form__group-label"
+                for="classModifier"
+              >
+                classModifier
+              </label>
+              <input
+                class="af-form__input-text"
+                id="classModifier"
+                name="classModifier"
+                type="text"
+                value="demo"
+              />
+            </div>
+            <div
+              class="af-form-editor__field"
+            >
+              <label
+                class="af-form__group-label"
+                for="disabledHeader"
+              >
+                disabledHeader
+              </label>
+              <div
+                class="af-form__checkbox-toggle"
+              >
+                <input
+                  class="af-form__input-checkbox"
+                  id="disabledHeader"
+                  mode="toggle"
+                  name="disabledHeader"
+                  type="checkbox"
+                />
+                <label
+                  class="af-form__label"
+                  for="disabledHeader"
+                >
+                  <span
+                    class="af-form__indicator"
+                  >
+                    <i
+                      class="glyphicon glyphicon-ok"
+                    />
+                  </span>
+                  <span
+                    class="af-form__description"
+                  />
+                </label>
+              </div>
+            </div>
+            <div
+              class="af-form-editor__field"
+            >
+              <label
+                class="af-form__group-label"
+                for="disabledMenu"
+              >
+                disabledMenu
+              </label>
+              <div
+                class="af-form__checkbox-toggle"
+              >
+                <input
+                  class="af-form__input-checkbox"
+                  id="disabledMenu"
+                  mode="toggle"
+                  name="disabledMenu"
+                  type="checkbox"
+                />
+                <label
+                  class="af-form__label"
+                  for="disabledMenu"
+                >
+                  <span
+                    class="af-form__indicator"
+                  >
+                    <i
+                      class="glyphicon glyphicon-ok"
+                    />
+                  </span>
+                  <span
+                    class="af-form__description"
+                  />
+                </label>
+              </div>
+            </div>
+            <div
+              class="af-form-editor__field"
+            >
+              <label
+                class="af-form__group-label"
+                for="disabledFooter"
+              >
+                disabledFooter
+              </label>
+              <div
+                class="af-form__checkbox-toggle"
+              >
+                <input
+                  class="af-form__input-checkbox"
+                  id="disabledFooter"
+                  mode="toggle"
+                  name="disabledFooter"
+                  type="checkbox"
+                />
+                <label
+                  class="af-form__label"
+                  for="disabledFooter"
+                >
+                  <span
+                    class="af-form__indicator"
+                  >
+                    <i
+                      class="glyphicon glyphicon-ok"
+                    />
+                  </span>
+                  <span
+                    class="af-form__description"
+                  />
+                </label>
+              </div>
+            </div>
+            <div
+              class="af-form-editor__field"
+            >
+              <label
+                class="af-form__group-label"
+                for="disabledTitle"
+              >
+                disabledTitle
+              </label>
+              <div
+                class="af-form__checkbox-toggle"
+              >
+                <input
+                  class="af-form__input-checkbox"
+                  id="disabledTitle"
+                  mode="toggle"
+                  name="disabledTitle"
+                  type="checkbox"
+                />
+                <label
+                  class="af-form__label"
+                  for="disabledTitle"
+                >
+                  <span
+                    class="af-form__indicator"
+                  >
+                    <i
+                      class="glyphicon glyphicon-ok"
+                    />
+                  </span>
+                  <span
+                    class="af-form__description"
+                  />
+                </label>
+              </div>
+            </div>
+            <div
+              class="af-form-editor__field"
+            >
+              <label
+                class="af-form__group-label"
+                for="titleBar"
+              >
+                titleBar
+              </label>
+              <input
+                class="af-form__input-text"
+                id="titleBar"
+                name="titleBar"
+                type="text"
+                value="Layout demo"
+              />
+            </div>
+            <div
+              class="af-form-editor__field"
+            >
+              <label
+                class="af-form__group-label"
+                for="title"
+              >
+                title
+              </label>
+              <input
+                class="af-form__input-text"
+                id="title"
+                name="title"
+                type="text"
+                value="Layout playground"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</DocumentFragment>
+`;

@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import { renderHook, act } from '@testing-library/react-hooks';
-import { FieldEditor, mergePropsAndKnobs, withEditor, setValue, useEditable } from '../Editor';
+import { FieldEditor, mergePropsAndKnobs, withEditor, setValue, useEditable, useToggleEditor } from '../Editor';
 
 describe('setValue', () => {
   it.each`
@@ -89,11 +89,38 @@ describe('useEditable', () => {
 describe('withEditor', () => {
   type Props = { className?: string; onChange: ReturnType<typeof useEditable>['onChange'] };
   const Component = ({ className }: Props) => <div className={className}>Hello</div>;
-  const ComponentWithEditor = withEditor<Props>(Component);
   const onChange = jest.fn();
 
-  it('Should render Component with FormEditor when apply withEditor HOC', () => {
+  it('Should render Component with FormEditor when apply withEditor HOC and isOpenEditor true', () => {
+    const useToggleEditorFn = jest.fn().mockReturnValue({
+      closeEditor: jest.fn(),
+      openEditor: jest.fn(),
+      isOpenEditor: true,
+    });
+    const ComponentWithEditor = withEditor<Props>(Component, {}, '', useToggleEditorFn);
     const { asFragment } = render(<ComponentWithEditor className="af-component" onChange={onChange} />);
     expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('Should render Component with FormEditor when apply withEditor HOC', () => {
+    const ComponentWithEditor = withEditor<Props>(Component);
+    const { asFragment } = render(<ComponentWithEditor className="af-component" onChange={onChange} />);
+    expect(asFragment()).toMatchSnapshot();
+  });
+});
+
+describe('useToggleEditor', () => {
+  it('Should isOpenEditor to be false when closeEditor called', () => {
+    const { result } = renderHook(() => useToggleEditor());
+    act(() => result.current.closeEditor());
+    const resIsOpenEditor = result.current.isOpenEditor;
+    expect(resIsOpenEditor).toBe(false);
+  });
+
+  it('Should isOpenEditor to be true when openEditor called', () => {
+    const { result } = renderHook(() => useToggleEditor());
+    act(() => result.current.openEditor());
+    const resIsOpenEditor = result.current.isOpenEditor;
+    expect(resIsOpenEditor).toBe(true);
   });
 });
