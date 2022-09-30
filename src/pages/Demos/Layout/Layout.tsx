@@ -29,24 +29,20 @@ export const code = ({ titleBar, title, className, classModifier, disabledHeader
 </Layout> 
 `;
 
-const LayoutWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
-  ({ openEditor, ...props }) => (
-    <>
-      <EditorHeader openEditor={openEditor} />
-      <LiveCode
-        styleLivePreview={{}}
-        classModifier="with-editor"
-        code={code(props)}
-        scope={{
-          Layout,
-          ...props,
-        }}
-      />
-    </>
-  ),
-  {},
-  '',
-);
+const LayoutWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(({ openEditor, ...props }) => (
+  <>
+    <EditorHeader openEditor={openEditor} />
+    <LiveCode
+      styleLivePreview={{}}
+      classModifier="with-editor"
+      code={code(props)}
+      scope={{
+        Layout,
+        ...props,
+      }}
+    />
+  </>
+));
 
 const LayoutEditable = () => {
   const { state, onChange } = useEditable<typeof INITIAL_STATE>({ initialState: INITIAL_STATE });

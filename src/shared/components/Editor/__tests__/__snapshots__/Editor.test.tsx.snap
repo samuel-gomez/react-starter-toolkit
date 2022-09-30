@@ -72,11 +72,13 @@ exports[`withEditor Should render Component with FormEditor when apply withEdito
   <section
     class="af-editor"
   >
-    <div
+    <input
       class="af-component"
-    >
-      Hello
-    </div>
+      id="idtext"
+      name="nametext"
+      type="text"
+      value="hello"
+    />
     <div
       class="af-draggable-container"
     >
@@ -91,11 +93,11 @@ exports[`withEditor Should render Component with FormEditor when apply withEdito
           <div
             class="af-draggable__tools"
           >
-            <strong
+            <i
               class="glyphicon glyphicon-move"
             />
             <i
-              class="glyphicon glyphicon-close no-cursor"
+              class="glyphicon glyphicon-close"
             />
           </div>
         </h3>
@@ -133,13 +135,15 @@ exports[`withEditor Should render Component with FormEditor when apply withEdito
 exports[`withEditor Should render Component with FormEditor when apply withEditor HOC and isOpenEditor true 1`] = `
 <DocumentFragment>
   <section
-    class=""
+    class="af-editor"
   >
-    <div
+    <input
       class="af-component"
-    >
-      Hello
-    </div>
+      id="idtext"
+      name="nametext"
+      type="text"
+      value="hello"
+    />
     <div
       class="af-draggable-container af-draggable-container--open"
     >
@@ -154,11 +158,11 @@ exports[`withEditor Should render Component with FormEditor when apply withEdito
           <div
             class="af-draggable__tools"
           >
-            <strong
+            <i
               class="glyphicon glyphicon-move"
             />
             <i
-              class="glyphicon glyphicon-close no-cursor"
+              class="glyphicon glyphicon-close"
             />
           </div>
         </h3>

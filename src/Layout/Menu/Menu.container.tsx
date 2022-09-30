@@ -88,9 +88,9 @@ const MenuEnhanced = ({
       <ToggleButton idControl="mainmenu">
         <Action
           className="btn af-title-bar__mobile-menu af-btn--circle"
-          id="togglemenu"
+          id="opentogglemenu"
           icon="menu-hamburger"
-          title="Toggle menu"
+          title="Open toggle menu"
           onClick={toggleMenu}
         />
       </ToggleButton>

@@ -1,4 +1,4 @@
-import { renderWithWrapperStaticRouter } from 'shared/testsUtils';
+import { clearString, renderWithWrapperStaticRouter } from 'shared/testsUtils';
 import ButtonPage, { code } from '../Button';
 
 describe('<ButtonPage/>', () => {
@@ -7,8 +7,6 @@ describe('<ButtonPage/>', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 });
-
-const cleanString = (str: string) => str.replace(/\s/g, '').replace(/\n/g, '').replace(/\t/g, '').trim();
 
 describe('code', () => {
   const onChange = jest.fn();
@@ -20,8 +18,8 @@ describe('code', () => {
 
   it('Should render ButtonPage with icon', () => {
     const result = code({ label, className, classModifier, icon, disabled, onChange });
-    expect(cleanString(result)).toEqual(
-      cleanString(`<Button disabled={${disabled}} className="${className}" classModifier="${classModifier}" type="submit" onClick={onClick} >
+    expect(clearString(result)).toEqual(
+      clearString(`<Button disabled={${disabled}} className="${className}" classModifier="${classModifier}" type="submit" onClick={onClick} >
           <i className="glyphicon glyphicon-${icon}"></i><span className="af-btn__text">${label}</span>
         </Button>
     `),
@@ -30,8 +28,8 @@ describe('code', () => {
 
   it('Should render ButtonPage without icon', () => {
     const result = code({ label, className, classModifier, disabled, onChange });
-    expect(cleanString(result)).toEqual(
-      cleanString(`<Button disabled={${disabled}} className="${className}" classModifier="${classModifier}" type="submit" onClick={onClick} >
+    expect(clearString(result)).toEqual(
+      clearString(`<Button disabled={${disabled}} className="${className}" classModifier="${classModifier}" type="submit" onClick={onClick} >
           <span className="af-btn__text">${label}</span>
         </Button>
     `),

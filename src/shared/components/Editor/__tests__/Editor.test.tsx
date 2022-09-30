@@ -1,6 +1,7 @@
 import { render } from '@testing-library/react';
 import { renderHook, act } from '@testing-library/react-hooks';
-import { FieldEditor, mergePropsAndKnobs, withEditor, setValue, useEditable, useToggleEditor } from '../Editor';
+import { Text } from '@axa-fr/react-toolkit-all';
+import { FieldEditor, mergePropsAndKnobs, withEditor, setValue, useEditable, useToggleEditor, TEvent } from '../Editor';
 
 describe('setValue', () => {
   it.each`
@@ -73,8 +74,8 @@ describe('useEditable', () => {
   it('Should logEventFn have been called when onClick have been called', () => {
     const logEventFn = jest.fn();
     const { result } = renderHook(() => useEditable({ initialState, logEventFn }));
-    act(() => result.current.onClick({ id: 'id' }));
-    expect(logEventFn).toHaveBeenCalledWith('click button event', { id: 'id' });
+    act(() => result.current.onClick('name')({ id: 'id' }));
+    expect(logEventFn).toHaveBeenCalledWith('click event', 'name', { id: 'id' });
   });
 
   it('Should setValueFn have been called and return updated state when onChange have been called with event', () => {
@@ -88,8 +89,12 @@ describe('useEditable', () => {
 
 describe('withEditor', () => {
   type Props = { className?: string; onChange: ReturnType<typeof useEditable>['onChange'] };
-  const Component = ({ className }: Props) => <div className={className}>Hello</div>;
-  const onChange = jest.fn();
+  const onChange = jest.fn().mockImplementation(name => (e: TEvent) => {
+    console.log('onChange');
+  });
+  const Component = ({ className, onChange }: Props) => (
+    <Text id="idtext" name="nametext" type="text" value="hello" onChange={onChange} className={className} />
+  );
 
   it('Should render Component with FormEditor when apply withEditor HOC and isOpenEditor true', () => {
     const useToggleEditorFn = jest.fn().mockReturnValue({
@@ -97,7 +102,7 @@ describe('withEditor', () => {
       openEditor: jest.fn(),
       isOpenEditor: true,
     });
-    const ComponentWithEditor = withEditor<Props>(Component, {}, '', useToggleEditorFn);
+    const ComponentWithEditor = withEditor<Props>(Component, {}, useToggleEditorFn);
     const { asFragment } = render(<ComponentWithEditor className="af-component" onChange={onChange} />);
     expect(asFragment()).toMatchSnapshot();
   });

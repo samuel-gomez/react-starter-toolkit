@@ -10,6 +10,7 @@
     color: $color-gray-2;
     display: flex;
     gap: 1rem;
+    line-height: 1;
     .af-link {
       color: $color-gray-2;
       display: flex;
@@ -17,6 +18,7 @@
       fill: $color-gray-2;
       line-height: 1;
       &:has(.glyphicon.glyphicon-cog) {
+        margin-left: auto;
         text-decoration: none;
         cursor: pointer;
         * {
@@ -60,9 +62,17 @@
     }
     .af-form__input-text {
       padding: 0.2rem 0.5rem;
+      width: 100%;
+    }
+    .af-form__select-container {
+      display: block;
     }
     .af-form__input-select {
       padding: 0.2rem 2.7rem 0.2rem 1rem;
+      width: 100%;
+    }
+    .af-form__input-textarea {
+      width: 100%;
     }
   }
 }
@@ -93,6 +103,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 0;
+    cursor: grab;
   }
   &__tools {
     display: flex;
@@ -106,7 +117,6 @@
   }
   .glyphicon-move {
     font-size: 1.6rem;
-    cursor: grab;
   }
   .glyphicon-close {
     cursor: pointer;

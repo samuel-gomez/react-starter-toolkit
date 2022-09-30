@@ -44,6 +44,10 @@ const MENU_ITEMS = [
         label: 'Button',
         url: ROUTE_URL.BUTTON,
       },
+      {
+        label: 'Alert',
+        url: ROUTE_URL.ALERT,
+      },
     ],
   },
   {

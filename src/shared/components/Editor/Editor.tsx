@@ -5,6 +5,7 @@ import Icons from 'shared/components/Icons';
 import { ClickEvent } from '@axa-fr/react-toolkit-core';
 import { DEFAULT_OPTION_LABEL, DESIGN_SYSTEM, GITHUB, STORYBOOK } from 'shared/constants';
 import './Editor.scss';
+import CodeEditor from './CodeEditor';
 
 export type TEvent = {
   value: string;
@@ -15,14 +16,17 @@ export type TEvent = {
 const omittedProps = ['onChange', 'knobs', 'onClick'];
 
 type TListSelect = {
-  value: string | number;
-  options: Record<string, string>;
+  value: string;
+  options?: Record<string, string>;
+  type?: string;
 };
+
+export type TonChange = (e: TEvent) => void;
 
 type TFieldEditor = {
   value: string | boolean | TListSelect;
   name: string;
-  onChange: (e: TEvent) => void;
+  onChange: TonChange;
   options?: { label: string; value: string }[];
 };
 
@@ -31,7 +35,10 @@ export type Tknobs = Record<string, Record<string, unknown>>;
 export const FieldEditor = ({ value, name, onChange }: TFieldEditor) => (
   <>
     {(() => {
+      // console.log('type: ', typeof value, ', name : ', name, ', type : ', value?.type);
       switch (true) {
+        case typeof value === 'function':
+          return <Text type="text" value={`${value}`} id={name} name={name} readonly disabled />;
         case typeof value === 'boolean':
           return (
             <CheckboxItem
@@ -45,6 +52,8 @@ export const FieldEditor = ({ value, name, onChange }: TFieldEditor) => (
               className="af-form__checkbox-toggle"
             />
           );
+        case typeof value === 'object' && !!value.type && value.type === 'jsx':
+          return typeof value === 'object' && <CodeEditor id={name} name={name} onChange={onChange} value={value.value} />;
         case typeof value === 'object':
           return (
             typeof value === 'object' && (
@@ -97,7 +106,7 @@ export const FormEditor = <P extends object>({
   <form className="af-form-editor">
     <>
       {Object.entries(mergePropsAndKnobs({ props, knobs }))
-        .filter(([key]) => !omittedProps.includes(key))
+        .filter(([key, val]) => !omittedProps.includes(key) && typeof val !== 'function')
         .map(([name, value]) => (
           <div className="af-form-editor__field" key={name}>
             <label className="af-form__group-label" htmlFor={name}>
@@ -133,25 +142,20 @@ export type TReturnUseToggleEditor = ReturnType<typeof useToggleEditor>;
  * @returns Component Editable
  */
 export const withEditor =
-  <P extends object>(
-    Component: ComponentType<P>,
-    knobs: Tknobs = {},
-    className = 'af-editor',
-    useToggleEditorFn = useToggleEditor,
-  ): ComponentType<P> =>
+  <P extends object>(Component: ComponentType<P>, knobs: Tknobs = {}, useToggleEditorFn = useToggleEditor): ComponentType<P> =>
   (props: P) => {
     const { closeEditor, openEditor, isOpenEditor } = useToggleEditorFn();
     return (
-      <section className={className}>
+      <section className={'af-editor'}>
         <Component {...props} openEditor={openEditor} />
         <div className={`af-draggable-container${isOpenEditor ? ' af-draggable-container--open' : ''}`}>
-          <Draggable handle="strong">
+          <Draggable cancel=".glyphicon-close" handle=".af-draggable__title">
             <div className="af-draggable">
               <h3 className="af-draggable__title">
                 Props Editor
                 <div className="af-draggable__tools">
-                  <strong className="glyphicon glyphicon-move"></strong>
-                  <i className="glyphicon glyphicon-close no-cursor" onClick={closeEditor}></i>
+                  <i className="glyphicon glyphicon-move"></i>
+                  <i className="glyphicon glyphicon-close" onClick={closeEditor}></i>
                 </div>
               </h3>
 
@@ -181,8 +185,8 @@ export const useEditable = <T extends object>({ initialState, logEventFn = conso
   const [state, setState] = useState(initialState);
 
   const onClick = useCallback(
-    (e: ClickEvent) => {
-      logEventFn('click button event', e);
+    (name: string) => (e: ClickEvent) => {
+      logEventFn('click event', name, e);
     },
     [logEventFn],
   );
@@ -200,9 +204,10 @@ type TEditorHeader = {
   storybookPath?: string;
   designSystemPath?: string;
   githubPackage?: string;
+  npmName?: string;
 } & Partial<TReturnUseToggleEditor>;
 
-export const EditorHeader = ({ storybookPath = '', designSystemPath = '', githubPackage = '', openEditor }: TEditorHeader) => (
+export const EditorHeader = ({ storybookPath = '', designSystemPath = '', githubPackage = '', npmName = '', openEditor }: TEditorHeader) => (
   <header className="af-editor__header">
     {!!designSystemPath && (
       <a className="af-link" href={`${DESIGN_SYSTEM}${designSystemPath}`} target="_blank" rel="noopener noreferrer">
@@ -222,6 +227,12 @@ export const EditorHeader = ({ storybookPath = '', designSystemPath = '', github
       <a className="af-link" href={`${GITHUB}${githubPackage}`} target="_blank" rel="noopener noreferrer">
         <Icons icon="github" viewBox="0 0 438 438" />
         Github
+      </a>
+    )}
+
+    {!!npmName && (
+      <a target="_blank" rel="noopener noreferrer" href={`https://badge.fury.io/js/${npmName}`}>
+        <img src={`https://badge.fury.io/js/${npmName}.svg`} alt="npm version" />
       </a>
     )}
 

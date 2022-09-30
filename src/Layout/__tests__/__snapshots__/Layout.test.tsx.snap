@@ -255,6 +255,22 @@ exports[`Layout Should render when disabled: {"footer": true} 1`] = `
                   Button
                 </a>
               </li>
+              <li
+                class="af-nav__item "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Alert"
+                  class="af-nav__link"
+                  href="/demos/alert"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Alert
+                </a>
+              </li>
             </ul>
           </li>
           <li
@@ -320,10 +336,10 @@ exports[`Layout Should render when disabled: {"footer": true} 1`] = `
     aria-haspopup="true"
     class="btn af-title-bar__mobile-menu af-btn--circle"
     href="#"
-    id="togglemenu"
+    id="opentogglemenu"
     role="button"
     tabindex="0"
-    title="Toggle menu"
+    title="Open toggle menu"
   >
     <i
       class="glyphicon glyphicon-menu-hamburger"
@@ -553,6 +569,22 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
                   Button
                 </a>
               </li>
+              <li
+                class="af-nav__item "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Alert"
+                  class="af-nav__link"
+                  href="/demos/alert"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Alert
+                </a>
+              </li>
             </ul>
           </li>
           <li
@@ -618,10 +650,10 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
     aria-haspopup="true"
     class="btn af-title-bar__mobile-menu af-btn--circle"
     href="#"
-    id="togglemenu"
+    id="opentogglemenu"
     role="button"
     tabindex="0"
-    title="Toggle menu"
+    title="Open toggle menu"
   >
     <i
       class="glyphicon glyphicon-menu-hamburger"
@@ -1022,6 +1054,22 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
                   Button
                 </a>
               </li>
+              <li
+                class="af-nav__item "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Alert"
+                  class="af-nav__link"
+                  href="/demos/alert"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Alert
+                </a>
+              </li>
             </ul>
           </li>
           <li
@@ -1087,10 +1135,10 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
     aria-haspopup="true"
     class="btn af-title-bar__mobile-menu af-btn--circle"
     href="#"
-    id="togglemenu"
+    id="opentogglemenu"
     role="button"
     tabindex="0"
-    title="Toggle menu"
+    title="Open toggle menu"
   >
     <i
       class="glyphicon glyphicon-menu-hamburger"

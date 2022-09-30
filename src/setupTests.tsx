@@ -25,3 +25,9 @@ afterEach(() => server.resetHandlers());
 
 // Clean up after the tests are finished.
 afterAll(() => server.close());
+
+// Just for demo, to delete
+jest.mock('@uiw/react-textarea-code-editor', () => ({
+  __esModule: true,
+  default: () => <div>code editor</div>,
+}));

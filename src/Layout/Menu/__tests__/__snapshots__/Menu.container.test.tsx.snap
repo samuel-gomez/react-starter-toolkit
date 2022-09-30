@@ -254,10 +254,10 @@ exports[`<MenuEnhanced/> Render <Menu/> 1`] = `
     aria-haspopup="true"
     class="btn af-title-bar__mobile-menu af-btn--circle"
     href="#"
-    id="togglemenu"
+    id="opentogglemenu"
     role="button"
     tabindex="0"
-    title="Toggle menu"
+    title="Open toggle menu"
   >
     <i
       class="glyphicon glyphicon-menu-hamburger"

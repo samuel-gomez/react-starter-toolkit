@@ -8,6 +8,7 @@ import { ROUTE_URL_MODAL as MODAL } from 'pages/Demos/Modal/constants';
 import { ROUTE_URL_BUTTON as BUTTON } from 'pages/Demos/Button/constants';
 import { ROUTE_URL_NOTIFICATION as NOTIFICATION } from 'pages/Demos/Notification/constants';
 import { ROUTE_URL_LAYOUT as LAYOUT } from 'pages/Demos/Layout/constants';
+import { ROUTE_URL_ALERT as ALERT } from 'pages/Demos/Alert/constants';
 
 const DEMOS = '/demos';
 const LAYOUTS = '/layouts';
@@ -25,6 +26,7 @@ const ROUTE_URL = {
   NOTIFICATION,
   LAYOUTS,
   LAYOUT,
+  ALERT,
 };
 
 export default ROUTE_URL;
