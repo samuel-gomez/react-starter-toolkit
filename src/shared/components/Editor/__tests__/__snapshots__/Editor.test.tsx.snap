@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`FieldEditor Should render when value: [Function emptyFuncion] 1`] = `
+<DocumentFragment>
+  <input
+    class="af-form__input-text"
+    disabled=""
+    id="name"
+    name="name"
+    type="text"
+    value="() => null"
+  />
+</DocumentFragment>
+`;
+
 exports[`FieldEditor Should render when value: {"options": [Array], "value": "value"} 1`] = `
 <DocumentFragment>
   <div

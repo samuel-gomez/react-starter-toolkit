@@ -3,16 +3,27 @@ import '@uiw/react-textarea-code-editor/dist.css';
 import { ChangeEvent, useState } from 'react';
 import { TEvent, TonChange } from '../Editor';
 
-type TCodeEditor = TEvent & {
+type TuseCodeEditor = TEvent & {
   onChange: TonChange;
 };
 
-const CodeEditor = ({ value, onChange, name, id }: TCodeEditor) => {
+export const useCodeEditor = ({ value, id, name, onChange }: TCodeEditor) => {
   const [code, setCode] = useState(value);
+
   const onChangeCodeEditor = (evn: ChangeEvent<HTMLTextAreaElement>) => {
     onChange({ value: evn.target.value, name, id });
     setCode(evn.target.value);
   };
+
+  return { onChangeCodeEditor, code };
+};
+
+type TCodeEditor = TuseCodeEditor & {
+  useCodeEditorFn?: typeof useCodeEditor;
+};
+
+const CodeEditor = ({ value, onChange, name, id, useCodeEditorFn = useCodeEditor }: TCodeEditor) => {
+  const { code, onChangeCodeEditor } = useCodeEditorFn({ value, onChange, name, id });
   return (
     <ReactCodeEditor
       value={code}

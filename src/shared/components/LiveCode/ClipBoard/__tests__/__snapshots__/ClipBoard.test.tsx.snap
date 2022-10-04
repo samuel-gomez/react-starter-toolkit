@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ClipBoard/> Should render ClipBoard 1`] = `
+<DocumentFragment>
+  <button
+    class="af-btn--circle af-clipboard"
+    title="Copy to clipboard"
+  >
+    <i
+      class="glyphicon glyphicon-copy"
+    />
+    <span
+      class="af-clipboard__message"
+    >
+      Copied !
+    </span>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`<ClipBoard/> Should render ClipBoard with clicked classModifier 1`] = `
+<DocumentFragment>
+  <button
+    class="af-btn--circle af-clipboard af-clipboard--clicked"
+    title="Copy to clipboard"
+  >
+    <i
+      class="glyphicon glyphicon-copy"
+    />
+    <span
+      class="af-clipboard__message"
+    >
+      Copied !
+    </span>
+  </button>
+</DocumentFragment>
+`;

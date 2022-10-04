@@ -35,7 +35,6 @@ export type Tknobs = Record<string, Record<string, unknown>>;
 export const FieldEditor = ({ value, name, onChange }: TFieldEditor) => (
   <>
     {(() => {
-      // console.log('type: ', typeof value, ', name : ', name, ', type : ', value?.type);
       switch (true) {
         case typeof value === 'function':
           return <Text type="text" value={`${value}`} id={name} name={name} readonly disabled />;

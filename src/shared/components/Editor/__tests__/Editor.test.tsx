@@ -1,6 +1,7 @@
 import { render } from '@testing-library/react';
 import { renderHook, act } from '@testing-library/react-hooks';
 import { Text } from '@axa-fr/react-toolkit-all';
+import { emptyFunction } from 'shared/testsUtils';
 import { FieldEditor, mergePropsAndKnobs, withEditor, setValue, useEditable, useToggleEditor, TEvent } from '../Editor';
 
 describe('setValue', () => {
@@ -56,6 +57,7 @@ describe('FieldEditor', () => {
     ${true}
     ${'value'}
     ${{ value: 'value', options: [] }}
+    ${emptyFunction}
   `('Should render when value: $value', ({ value }) => {
     const { asFragment } = render(<FieldEditor value={value} name="name" onChange={onChange} />);
     expect(asFragment()).toMatchSnapshot();
