@@ -1,5 +1,7 @@
 import dracula from 'prism-react-renderer/themes/dracula';
+import { useState } from 'react';
 import { LiveProviderProps, LiveProvider, LiveError, LivePreview } from 'react-live';
+import * as reactTookitAll from '@axa-fr/react-toolkit-all';
 import withClassNameModifier from 'shared/hoc/WithClassNameModifier';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import ClipBoard from './ClipBoard';
@@ -24,7 +26,7 @@ const LiveCode = withClassNameModifier(
     theme = dracula,
   }: TLiveCode) => (
     <article className={className}>
-      <LiveProvider theme={theme} code={code} scope={scope}>
+      <LiveProvider theme={theme} code={code} scope={{ ...reactTookitAll, useState, ...scope }}>
         <LivePreview style={styleLivePreview} />
         <LiveError />
       </LiveProvider>

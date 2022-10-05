@@ -1,8 +1,8 @@
 @import '@axa-fr/react-toolkit-core/dist/assets/scss/core.scss';
 
 .af-editor {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   margin-bottom: 2rem;
   &__header {
     background-color: black;
@@ -22,7 +22,7 @@
         text-decoration: none;
         cursor: pointer;
         * {
-          color: red;
+          color: $color-red-error;
         }
       }
       .af-icon-svg {
@@ -114,6 +114,7 @@
     overflow-y: scroll;
     overflow-x: hidden;
     resize: vertical;
+    max-height: 80vh;
   }
   .glyphicon-move {
     font-size: 1.6rem;

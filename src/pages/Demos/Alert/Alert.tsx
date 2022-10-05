@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import { Alert } from '@axa-fr/react-toolkit-all';
 import { ClickEvent } from '@axa-fr/react-toolkit-core';
 import Layout, { TLayout } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
@@ -42,14 +41,7 @@ const AlertWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
         openEditor={openEditor}
         npmName={NPM_NAME}
       />
-      <LiveCode
-        classModifier="with-editor"
-        code={code(props)}
-        scope={{
-          Alert,
-          ...props,
-        }}
-      />
+      <LiveCode classModifier="with-editor" code={code(props)} scope={props} />
     </>
   ),
   knobs as unknown as Tknobs,
