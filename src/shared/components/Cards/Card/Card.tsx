@@ -33,7 +33,7 @@ const Card = ({ storybook, designSystem, title, picture: { name, alt } }: TCard)
       </a>
       <a
         className="btn af-btn--circle af-btn--storybook"
-        href={`${STORYBOOK}?path=/story/${storybook?.path ?? ''}`}
+        href={`${STORYBOOK}${storybook?.path ?? ''}`}
         title={storybook?.text ?? ''}
         target="_blank"
         rel="noopener noreferrer"

@@ -12,7 +12,7 @@ describe('<MenuEnhanced/>', () => {
 
   it('Should call toggle class body When click on button', () => {
     renderWithWrapperStaticRouter(<MenuEnhanced menuItems={MENU_ITEMS_MOCK} />);
-    fireEvent.click(screen.getByTitle('Toggle menu'));
+    fireEvent.click(screen.getByTitle('Open toggle menu'));
     expect(document.querySelector('body')?.getAttribute('class')).toEqual('af-menu-open');
   });
 });

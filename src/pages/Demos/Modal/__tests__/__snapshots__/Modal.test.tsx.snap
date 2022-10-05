@@ -255,6 +255,22 @@ exports[`<ModalPage/> Should render ModalPage 1`] = `
                   Button
                 </a>
               </li>
+              <li
+                class="af-nav__item "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Alert"
+                  class="af-nav__link"
+                  href="/demos/alert"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Alert
+                </a>
+              </li>
             </ul>
           </li>
           <li
@@ -320,10 +336,10 @@ exports[`<ModalPage/> Should render ModalPage 1`] = `
     aria-haspopup="true"
     class="btn af-title-bar__mobile-menu af-btn--circle"
     href="#"
-    id="togglemenu"
+    id="opentogglemenu"
     role="button"
     tabindex="0"
-    title="Toggle menu"
+    title="Open toggle menu"
   >
     <i
       class="glyphicon glyphicon-menu-hamburger"
@@ -369,7 +385,7 @@ exports[`<ModalPage/> Should render ModalPage 1`] = `
       class="af-livecode"
     >
       <div
-        style="background: white; padding: 2rem; place-self: center;"
+        style="background: white; padding: 2rem; text-align: center; width: 100%;"
       >
         <button
           class="btn af-btn"
@@ -384,8 +400,21 @@ exports[`<ModalPage/> Should render ModalPage 1`] = `
       </div>
       <pre
         class="prism-code language-jsx"
-        style="color: rgb(248, 248, 242); background-color: rgb(40, 42, 54); font-size: 0.8rem;"
+        style="color: rgb(248, 248, 242); background-color: rgb(40, 42, 54); padding: 1rem; font-size: 0.8rem; position: relative;"
       >
+        <button
+          class="af-btn--circle af-clipboard"
+          title="Copy to clipboard"
+        >
+          <i
+            class="glyphicon glyphicon-copy"
+          />
+          <span
+            class="af-clipboard__message"
+          >
+            Copied !
+          </span>
+        </button>
         <div
           class="token-line"
           style="color: rgb(248, 248, 242);"
@@ -1719,6 +1748,22 @@ exports[`<ModalPage/> Should render ModalPage with modal opened 1`] = `
                   Button
                 </a>
               </li>
+              <li
+                class="af-nav__item "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Alert"
+                  class="af-nav__link"
+                  href="/demos/alert"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Alert
+                </a>
+              </li>
             </ul>
           </li>
           <li
@@ -1784,10 +1829,10 @@ exports[`<ModalPage/> Should render ModalPage with modal opened 1`] = `
     aria-haspopup="true"
     class="btn af-title-bar__mobile-menu af-btn--circle"
     href="#"
-    id="togglemenu"
+    id="opentogglemenu"
     role="button"
     tabindex="0"
-    title="Toggle menu"
+    title="Open toggle menu"
   >
     <i
       class="glyphicon glyphicon-menu-hamburger"
@@ -1833,7 +1878,7 @@ exports[`<ModalPage/> Should render ModalPage with modal opened 1`] = `
       class="af-livecode"
     >
       <div
-        style="background: white; padding: 2rem; place-self: center;"
+        style="background: white; padding: 2rem; text-align: center; width: 100%;"
       >
         <button
           class="btn af-btn"
@@ -1848,8 +1893,21 @@ exports[`<ModalPage/> Should render ModalPage with modal opened 1`] = `
       </div>
       <pre
         class="prism-code language-jsx"
-        style="color: rgb(248, 248, 242); background-color: rgb(40, 42, 54); font-size: 0.8rem;"
+        style="color: rgb(248, 248, 242); background-color: rgb(40, 42, 54); padding: 1rem; font-size: 0.8rem; position: relative;"
       >
+        <button
+          class="af-btn--circle af-clipboard"
+          title="Copy to clipboard"
+        >
+          <i
+            class="glyphicon glyphicon-copy"
+          />
+          <span
+            class="af-clipboard__message"
+          >
+            Copied !
+          </span>
+        </button>
         <div
           class="token-line"
           style="color: rgb(248, 248, 242);"

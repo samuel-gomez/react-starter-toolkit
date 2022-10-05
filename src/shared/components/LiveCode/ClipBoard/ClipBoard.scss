@@ -1,0 +1,33 @@
+@import '@axa-fr/react-toolkit-core/src/common/scss/core.scss';
+
+$bgColorEditor: #282a36;
+
+.af-clipboard {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  .glyphicon {
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: text-shadow ease-in 0.25s;
+  }
+  &:hover {
+    .glyphicon {
+      color: $color-flamingo;
+    }
+  }
+  &__message {
+    color: $bgColorEditor;
+    transition: color linear 0.5s;
+    position: absolute;
+    bottom: -25px;
+    right: -17px;
+  }
+  &--clicked &__message {
+    color: white;
+  }
+}

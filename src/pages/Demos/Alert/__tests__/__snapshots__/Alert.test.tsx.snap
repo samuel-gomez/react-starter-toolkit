@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<ButtonPage/> Should render ButtonPage 1`] = `
+exports[`<AlertPage/> Should render AlertPage 1`] = `
 <DocumentFragment>
   <div
     class="af-header"
@@ -354,7 +354,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
       <h1
         class="af-title-bar__title"
       >
-        Demo button
+        Demo alert
       </h1>
     </div>
   </div>
@@ -367,7 +367,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
       <h1
         class="af-title--content"
       >
-        Button playground
+        Alert playground
       </h1>
       <section
         class="af-editor"
@@ -377,7 +377,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
         >
           <a
             class="af-link"
-            href="https://axaguildev.github.io/design-system/atoms/button/"
+            href="https://axaguildev.github.io/design-system/molecules/alert/"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -398,7 +398,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
           </a>
           <a
             class="af-link"
-            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/button--simple-button"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/alert-alert--default"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -419,7 +419,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
           </a>
           <a
             class="af-link"
-            href="https://github.com/AxaGuilDEv/react-toolkit/tree/v1.4.1/packages/button"
+            href="https://github.com/AxaGuilDEv/react-toolkit/tree/v1.4.1/packages/alert"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -439,13 +439,13 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             Github
           </a>
           <a
-            href="https://badge.fury.io/js/%40axa-fr%2Freact-toolkit-button"
+            href="https://badge.fury.io/js/%40axa-fr%2Freact-toolkit-alert"
             rel="noopener noreferrer"
             target="_blank"
           >
             <img
               alt="npm version"
-              src="https://badge.fury.io/js/%40axa-fr%2Freact-toolkit-button.svg"
+              src="https://badge.fury.io/js/%40axa-fr%2Freact-toolkit-alert.svg"
             />
           </a>
           <span
@@ -467,16 +467,49 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
           <div
             style="background: white; padding: 2rem; text-align: center; width: 100%;"
           >
-            <button
-              class="af-btn"
-              type="submit"
+            <div
+              class="af-alert af-alert--danger"
+              role="alert"
             >
-              <span
-                class="af-btn__text"
+              <div
+                class="af-alert__title"
               >
-                valider
-              </span>
-            </button>
+                <div
+                  class="af-alert__title-icon"
+                >
+                  <i
+                    class="glyphicon glyphicon-alert"
+                  />
+                </div>
+                <div
+                  class="af-alert__title-text"
+                >
+                  Attention : des informations sont manquantes
+                </div>
+                <button
+                  class="af-alert__title-icon-close"
+                  type="button"
+                >
+                  <i
+                    class="glyphicon glyphicon-close"
+                  />
+                </button>
+              </div>
+              <div
+                class="af-alert__content"
+              >
+                <div
+                  class="af-alert__content__left"
+                />
+                <div
+                  class="af-alert__content__right"
+                >
+                  <p>
+                    hello child
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
           <pre
             class="prism-code language-jsx"
@@ -526,7 +559,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
                 class="token tag class-name"
                 style="color: rgb(255, 121, 198);"
               >
-                Button
+                Alert
               </span>
               <span
                 class="token tag"
@@ -538,31 +571,61 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
                 class="token tag attr-name"
                 style="color: rgb(241, 250, 140);"
               >
-                disabled
+                title
               </span>
               <span
-                class="token tag script language-javascript script-punctuation punctuation"
+                class="token tag attr-value punctuation attr-equals"
                 style="color: rgb(248, 248, 242);"
               >
                 =
               </span>
               <span
-                class="token tag script language-javascript punctuation"
+                class="token tag attr-value punctuation"
                 style="color: rgb(248, 248, 242);"
               >
-                {
+                "
               </span>
               <span
-                class="token tag script language-javascript boolean"
+                class="token tag attr-value"
                 style="color: rgb(255, 121, 198);"
               >
-                false
+                Attention : des informations sont manquantes
               </span>
               <span
-                class="token tag script language-javascript punctuation"
+                class="token tag attr-value punctuation"
                 style="color: rgb(248, 248, 242);"
               >
-                }
+                "
+              </span>
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                 
+              </span>
+              <span
+                class="token tag attr-name"
+                style="color: rgb(241, 250, 140);"
+              >
+                icon
+              </span>
+              <span
+                class="token tag attr-value punctuation attr-equals"
+                style="color: rgb(248, 248, 242);"
+              >
+                =
+              </span>
+              <span
+                class="token tag attr-value punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                "
+              </span>
+              <span
+                class="token tag attr-value punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                "
               </span>
               <span
                 class="token tag"
@@ -592,7 +655,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
                 class="token tag attr-value"
                 style="color: rgb(255, 121, 198);"
               >
-                af-btn
+                af-alert
               </span>
               <span
                 class="token tag attr-value punctuation"
@@ -623,6 +686,12 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
                 style="color: rgb(248, 248, 242);"
               >
                 "
+              </span>
+              <span
+                class="token tag attr-value"
+                style="color: rgb(255, 121, 198);"
+              >
+                danger
               </span>
               <span
                 class="token tag attr-value punctuation"
@@ -676,7 +745,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
                 class="token tag attr-name"
                 style="color: rgb(241, 250, 140);"
               >
-                onClick
+                onClose
               </span>
               <span
                 class="token tag script language-javascript script-punctuation punctuation"
@@ -694,7 +763,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
                 class="token tag script language-javascript"
                 style="color: rgb(255, 121, 198);"
               >
-                onClick
+                onClose
               </span>
               <span
                 class="token tag script language-javascript punctuation"
@@ -737,43 +806,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
                 class="token tag"
                 style="color: rgb(255, 121, 198);"
               >
-                span
-              </span>
-              <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
-              >
-                 
-              </span>
-              <span
-                class="token tag attr-name"
-                style="color: rgb(241, 250, 140);"
-              >
-                className
-              </span>
-              <span
-                class="token tag attr-value punctuation attr-equals"
-                style="color: rgb(248, 248, 242);"
-              >
-                =
-              </span>
-              <span
-                class="token tag attr-value punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                "
-              </span>
-              <span
-                class="token tag attr-value"
-                style="color: rgb(255, 121, 198);"
-              >
-                af-btn__text
-              </span>
-              <span
-                class="token tag attr-value punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                "
+                p
               </span>
               <span
                 class="token tag punctuation"
@@ -784,7 +817,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               <span
                 class="token plain-text"
               >
-                valider
+                hello child
               </span>
               <span
                 class="token tag punctuation"
@@ -796,7 +829,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
                 class="token tag"
                 style="color: rgb(255, 121, 198);"
               >
-                span
+                p
               </span>
               <span
                 class="token tag punctuation"
@@ -827,7 +860,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
                 class="token tag class-name"
                 style="color: rgb(255, 121, 198);"
               >
-                Button
+                Alert
               </span>
               <span
                 class="token tag punctuation"
@@ -903,9 +936,9 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
                         name="classModifier"
                       >
                         <option
-                          value=""
+                          value="danger"
                         >
-                          - Sélectionner -
+                          Danger
                         </option>
                         <option
                           value="success"
@@ -913,74 +946,14 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
                           Success
                         </option>
                         <option
-                          value="danger"
+                          value="error"
                         >
-                          Danger
+                          Error
                         </option>
                         <option
-                          value="reverse"
+                          value="info"
                         >
-                          Reverse
-                        </option>
-                        <option
-                          value="disabled"
-                        >
-                          Disabled
-                        </option>
-                        <option
-                          value="small"
-                        >
-                          Small
-                        </option>
-                        <option
-                          value="hasiconLeft"
-                        >
-                          HasiconLeft
-                        </option>
-                        <option
-                          value="hasiconRight"
-                        >
-                          HasiconRight
-                        </option>
-                        <option
-                          value="success hasiconLeft"
-                        >
-                          Success & hasiconLeft
-                        </option>
-                        <option
-                          value="danger hasiconLeft"
-                        >
-                          Danger & hasiconLeft
-                        </option>
-                        <option
-                          value="reverse hasiconLeft"
-                        >
-                          Reverse & hasiconLeft
-                        </option>
-                        <option
-                          value="disabled hasiconLeft"
-                        >
-                          Disabled & hasiconLeft
-                        </option>
-                        <option
-                          value="success hasiconRight"
-                        >
-                          Success & hasiconRight
-                        </option>
-                        <option
-                          value="danger hasiconRight"
-                        >
-                          Danger & hasiconRight
-                        </option>
-                        <option
-                          value="reverse hasiconRight"
-                        >
-                          Reverse & hasiconRight
-                        </option>
-                        <option
-                          value="disabled hasiconRight"
-                        >
-                          Disabled & hasiconRight
+                          Info
                         </option>
                       </select>
                       <span
@@ -1004,61 +977,8 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
                     id="className"
                     name="className"
                     type="text"
-                    value="af-btn"
+                    value="af-alert"
                   />
-                </div>
-                <div
-                  class="af-form-editor__field"
-                >
-                  <label
-                    class="af-form__group-label"
-                    for="label"
-                  >
-                    label
-                  </label>
-                  <input
-                    class="af-form__input-text"
-                    id="label"
-                    name="label"
-                    type="text"
-                    value="valider"
-                  />
-                </div>
-                <div
-                  class="af-form-editor__field"
-                >
-                  <label
-                    class="af-form__group-label"
-                    for="disabled"
-                  >
-                    disabled
-                  </label>
-                  <div
-                    class="af-form__checkbox-toggle"
-                  >
-                    <input
-                      class="af-form__input-checkbox"
-                      id="disabled"
-                      mode="toggle"
-                      name="disabled"
-                      type="checkbox"
-                    />
-                    <label
-                      class="af-form__label"
-                      for="disabled"
-                    >
-                      <span
-                        class="af-form__indicator"
-                      >
-                        <i
-                          class="glyphicon glyphicon-ok"
-                        />
-                      </span>
-                      <span
-                        class="af-form__description"
-                      />
-                    </label>
-                  </div>
                 </div>
                 <div
                   class="af-form-editor__field"
@@ -1252,6 +1172,73 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
                         class="glyphicon glyphicon-menu-down"
                       />
                     </div>
+                  </div>
+                </div>
+                <div
+                  class="af-form-editor__field"
+                >
+                  <label
+                    class="af-form__group-label"
+                    for="title"
+                  >
+                    title
+                  </label>
+                  <input
+                    class="af-form__input-text"
+                    id="title"
+                    name="title"
+                    type="text"
+                    value="Attention : des informations sont manquantes"
+                  />
+                </div>
+                <div
+                  class="af-form-editor__field"
+                >
+                  <label
+                    class="af-form__group-label"
+                    for="children"
+                  >
+                    children
+                  </label>
+                  <div>
+                    code editor
+                  </div>
+                </div>
+                <div
+                  class="af-form-editor__field"
+                >
+                  <label
+                    class="af-form__group-label"
+                    for="toggleOnCloseProps"
+                  >
+                    toggleOnCloseProps
+                  </label>
+                  <div
+                    class="af-form__checkbox-toggle"
+                  >
+                    <input
+                      checked=""
+                      class="af-form__input-checkbox"
+                      id="toggleOnCloseProps"
+                      mode="toggle"
+                      name="toggleOnCloseProps"
+                      type="checkbox"
+                    />
+                    <label
+                      class="af-form__label"
+                      for="toggleOnCloseProps"
+                    >
+                      <span
+                        class="af-form__indicator"
+                      >
+                        <i
+                          class="glyphicon glyphicon-ok"
+                        />
+                      </span>
+                      <span
+                        class="af-form__description"
+                      />
+                    </label>
                   </div>
                 </div>
               </form>

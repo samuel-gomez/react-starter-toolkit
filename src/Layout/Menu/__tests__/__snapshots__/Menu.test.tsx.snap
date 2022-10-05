@@ -206,6 +206,22 @@ exports[`<Menu/> Render <Menu/> 1`] = `
                   Button
                 </a>
               </li>
+              <li
+                class="af-nav__item "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Alert"
+                  class="af-nav__link"
+                  href="/alert"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Alert
+                </a>
+              </li>
             </ul>
           </li>
           <li

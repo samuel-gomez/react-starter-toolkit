@@ -36,6 +36,7 @@
     "@types/react-dom": "18.0.6",
     "@types/react-router": "5.1.18",
     "@types/react-router-dom": "5.3.3",
+    "@uiw/react-textarea-code-editor": "2.0.3",
     "classnames": "2.3.1",
     "downloadjs": "1.4.7",
     "jest-cucumber": "3.0.1",
@@ -44,9 +45,9 @@
     "prism-react-renderer": "1.3.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-draggable": "4.4.5",
     "react-hook-form": "7.35.0",
     "react-live": "2.4.1",
-    "react-draggable": "4.4.5",
     "react-router-dom": "6.3.0",
     "react-scripts": "5.0.1"
   },

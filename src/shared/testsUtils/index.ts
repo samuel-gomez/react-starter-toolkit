@@ -1,4 +1,5 @@
 export { default as emptyFunction } from './emptyFunction';
+export { default as clearString } from './clearString';
 export { default as WrapperStaticRouter } from './WrapperStaticRouter';
 export { default as WrapperQuery } from './WrapperQuery';
 export { default as renderWithWrapperStaticRouter } from './renderWithWrapperStaticRouter';

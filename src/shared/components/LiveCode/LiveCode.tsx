@@ -2,6 +2,7 @@ import dracula from 'prism-react-renderer/themes/dracula';
 import { LiveProviderProps, LiveProvider, LiveError, LivePreview } from 'react-live';
 import withClassNameModifier from 'shared/hoc/WithClassNameModifier';
 import Highlight, { defaultProps } from 'prism-react-renderer';
+import ClipBoard from './ClipBoard';
 import './Livecode.scss';
 
 type TLiveCode = {
@@ -15,7 +16,13 @@ type TLiveCode = {
 };
 
 const LiveCode = withClassNameModifier(
-  ({ code, scope, className, styleLivePreview = { background: 'white', padding: '2rem', placeSelf: 'center' }, theme = dracula }: TLiveCode) => (
+  ({
+    code,
+    scope,
+    className,
+    styleLivePreview = { background: 'white', padding: '2rem', textAlign: 'center', width: '100%' },
+    theme = dracula,
+  }: TLiveCode) => (
     <article className={className}>
       <LiveProvider theme={theme} code={code} scope={scope}>
         <LivePreview style={styleLivePreview} />
@@ -23,7 +30,8 @@ const LiveCode = withClassNameModifier(
       </LiveProvider>
       <Highlight {...defaultProps} theme={theme} code={code} language="jsx">
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
-          <pre className={className} style={{ ...style, fontSize: '0.8rem' }}>
+          <pre className={className} style={{ ...style, padding: '1rem', fontSize: '0.8rem', position: 'relative' }}>
+            <ClipBoard content={code} />
             {tokens.map((line, i) => (
               <div {...getLineProps({ line, key: i })}>
                 {line.map((token, key) => (
