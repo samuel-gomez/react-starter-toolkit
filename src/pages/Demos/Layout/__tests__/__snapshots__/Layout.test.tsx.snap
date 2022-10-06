@@ -897,7 +897,7 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
           <span
             class="token plain-text"
           >
-                
+              
           </span>
           <span
             class="token tag punctuation"
@@ -954,9 +954,21 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
             &gt;
           </span>
           <span
-            class="token plain-text"
+            class="token punctuation"
+            style="color: rgb(248, 248, 242);"
           >
-            Layout playground
+            {
+          </span>
+          <span
+            class="token plain"
+          >
+            title
+          </span>
+          <span
+            class="token punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            }
           </span>
           <span
             class="token tag punctuation"
@@ -987,7 +999,7 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
           <span
             class="token plain-text"
           >
-                
+              
           </span>
           <span
             class="token tag punctuation"
@@ -1018,7 +1030,7 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
           <span
             class="token plain-text"
           >
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sunt repudiandae corporis expedita illo minima, aut nostrum vitae. Fuga quo
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sunt repudiandae corporis expedita illo minima, aut nostrum vitae. Fuga quo
           </span>
         </div>
         <div
@@ -1028,7 +1040,7 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
           <span
             class="token plain-text"
           >
-                  facilis dolorum fugit? Cumque necessitatibus unde nostrum possimus voluptas nisi.
+                facilis dolorum fugit? Cumque necessitatibus unde nostrum possimus voluptas nisi.
           </span>
         </div>
         <div
@@ -1038,7 +1050,7 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
           <span
             class="token plain-text"
           >
-                
+              
           </span>
           <span
             class="token tag punctuation"
@@ -1068,9 +1080,7 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
         >
           <span
             class="token plain-text"
-          >
-              
-          </span>
+          />
           <span
             class="token tag punctuation"
             style="color: rgb(248, 248, 242);"
@@ -1192,13 +1202,65 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
               >
                 classModifier
               </label>
-              <input
-                class="af-form__input-text"
-                id="classModifier"
-                name="classModifier"
-                type="text"
-                value="demo"
-              />
+              <div
+                class="af-form__select"
+              >
+                <div
+                  class="af-form__select-container"
+                >
+                  <select
+                    aria-label="select-classModifier"
+                    class="af-form__input-select"
+                    id="classModifier"
+                    name="classModifier"
+                  >
+                    <option
+                      value="danger"
+                    >
+                      Danger
+                    </option>
+                    <option
+                      value="success"
+                    >
+                      Success
+                    </option>
+                    <option
+                      value="error"
+                    >
+                      Error
+                    </option>
+                    <option
+                      value="info"
+                    >
+                      Info
+                    </option>
+                  </select>
+                  <span
+                    aria-controls="classModifier"
+                    class="glyphicon glyphicon-menu-down"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="af-form-editor__field"
+            >
+              <label
+                class="af-form__group-label"
+                for="children"
+              >
+                children
+              </label>
+              <button
+                class="btn af-btn"
+                type="submit"
+              >
+                <span
+                  class="af-btn__text"
+                >
+                  Edit children
+                </span>
+              </button>
             </div>
             <div
               class="af-form-editor__field"

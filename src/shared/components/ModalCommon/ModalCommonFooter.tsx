@@ -3,8 +3,8 @@ import Modal from '@axa-fr/react-toolkit-modal-default';
 import { MouseEventHandler, ReactNode } from 'react';
 
 export type TModalCommonFooter = {
-  onCancel: MouseEventHandler<HTMLButtonElement>;
-  onSubmit: MouseEventHandler<HTMLButtonElement>;
+  onCancel?: MouseEventHandler<HTMLButtonElement>;
+  onSubmit?: MouseEventHandler<HTMLButtonElement>;
   cancelLabel?: ReactNode;
   confirmLabel?: ReactNode;
   hasErrors?: boolean;

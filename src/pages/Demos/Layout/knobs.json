@@ -1,0 +1,26 @@
+{
+  "classModifier": {
+    "value": "",
+    "options": [
+      {
+        "label": "Danger",
+        "value": "danger"
+      },
+      {
+        "label": "Success",
+        "value": "success"
+      },
+      {
+        "label": "Error",
+        "value": "error"
+      },
+      {
+        "label": "Info",
+        "value": "info"
+      }
+    ]
+  },
+  "children": {
+    "type": "jsx"
+  }
+}

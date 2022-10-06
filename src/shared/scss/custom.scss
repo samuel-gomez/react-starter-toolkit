@@ -302,3 +302,10 @@
     overflow-y: auto;
   }
 }
+
+// FIX: RESTITUTION
+.af-restitution {
+  & :where(&__listul-item, &__listdef-value) {
+    text-align: left;
+  }
+}

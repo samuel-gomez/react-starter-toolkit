@@ -1,9 +1,12 @@
 import dracula from 'prism-react-renderer/themes/dracula';
+import { useState } from 'react';
 import { LiveProviderProps, LiveProvider, LiveError, LivePreview } from 'react-live';
+import * as reactTookitAll from '@axa-fr/react-toolkit-all';
 import withClassNameModifier from 'shared/hoc/WithClassNameModifier';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import ClipBoard from './ClipBoard';
 import './Livecode.scss';
+import { TReturnUseToggleModal } from '../ModalCommon';
 
 type TLiveCode = {
   code: string;
@@ -13,6 +16,7 @@ type TLiveCode = {
   onChange?: (arg: string) => void;
   styleLiveEditor?: React.CSSProperties;
   styleLivePreview?: React.CSSProperties;
+  modalProps?: TReturnUseToggleModal;
 };
 
 const LiveCode = withClassNameModifier(
@@ -22,9 +26,10 @@ const LiveCode = withClassNameModifier(
     className,
     styleLivePreview = { background: 'white', padding: '2rem', textAlign: 'center', width: '100%' },
     theme = dracula,
+    modalProps,
   }: TLiveCode) => (
     <article className={className}>
-      <LiveProvider theme={theme} code={code} scope={scope}>
+      <LiveProvider theme={theme} code={code} scope={{ ...reactTookitAll, useState, ...scope, modalProps }}>
         <LivePreview style={styleLivePreview} />
         <LiveError />
       </LiveProvider>

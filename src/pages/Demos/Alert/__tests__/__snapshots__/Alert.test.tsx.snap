@@ -1200,9 +1200,16 @@ exports[`<AlertPage/> Should render AlertPage 1`] = `
                   >
                     children
                   </label>
-                  <div>
-                    code editor
-                  </div>
+                  <button
+                    class="btn af-btn"
+                    type="submit"
+                  >
+                    <span
+                      class="af-btn__text"
+                    >
+                      Edit children
+                    </span>
+                  </button>
                 </div>
                 <div
                   class="af-form-editor__field"
