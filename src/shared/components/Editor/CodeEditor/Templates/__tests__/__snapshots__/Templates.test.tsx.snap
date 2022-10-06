@@ -1,0 +1,156 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Templates/> Should render Templates 1`] = `
+<DocumentFragment>
+  <div
+    class="af-templates"
+  >
+    <button
+      class="af-btn--circle af-btn--delete"
+    >
+      <i
+        class="glyphicon glyphicon-trash"
+      />
+    </button>
+    <div
+      class="af-popover__wrapper"
+    >
+      <div
+        class="af-popover__container af-popover__container--editor"
+      >
+        <div
+          class="af-popover__container-over"
+          role="presentation"
+        >
+          <button
+            class="af-btn--circle"
+            id="add-list"
+          >
+            <i
+              class="glyphicon glyphicon-list"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="af-popover__wrapper"
+    >
+      <div
+        class="af-popover__container af-popover__container--editor"
+      >
+        <div
+          class="af-popover__container-over"
+          role="presentation"
+        >
+          <button
+            class="af-btn--circle"
+            id="add-title__h1"
+          >
+            H1
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="af-popover__wrapper"
+    >
+      <div
+        class="af-popover__container af-popover__container--editor"
+      >
+        <div
+          class="af-popover__container-over"
+          role="presentation"
+        >
+          <button
+            class="af-btn--circle"
+            id="add-title__h2"
+          >
+            H2
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="af-popover__wrapper"
+    >
+      <div
+        class="af-popover__container af-popover__container--editor"
+      >
+        <div
+          class="af-popover__container-over"
+          role="presentation"
+        >
+          <button
+            class="af-btn--circle"
+            id="add-title__h3"
+          >
+            H3
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="af-popover__wrapper"
+    >
+      <div
+        class="af-popover__container af-popover__container--editor"
+      >
+        <div
+          class="af-popover__container-over"
+          role="presentation"
+        >
+          <button
+            class="af-btn--circle"
+            id="add-title__h4"
+          >
+            H4
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="af-popover__wrapper"
+    >
+      <div
+        class="af-popover__container af-popover__container--editor"
+      >
+        <div
+          class="af-popover__container-over"
+          role="presentation"
+        >
+          <button
+            class="af-btn--circle"
+            id="add-restitution__basic"
+          >
+            <i
+              class="glyphicon glyphicon-list-alt"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="af-popover__wrapper"
+    >
+      <div
+        class="af-popover__container af-popover__container--editor"
+      >
+        <div
+          class="af-popover__container-over"
+          role="presentation"
+        >
+          <button
+            class="af-btn--circle"
+            id="add-modal"
+          >
+            <i
+              class="glyphicon glyphicon-modal-window"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

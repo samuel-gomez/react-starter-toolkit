@@ -2,7 +2,7 @@ import { Button } from '@axa-fr/react-toolkit-all';
 import HelpInfo from 'shared/components/HelpInfo';
 import { TReturnUseCodeEditor } from '../CodeEditor';
 
-const DEFAULT_LIST = [
+export const DEFAULT_LIST = [
   {
     id: 'add-list',
     icon: 'list',
@@ -46,19 +46,22 @@ type TlistElement = {
   icon?: string;
   tooltipLabel?: string;
 };
+export type Tlistelements = TlistElement[];
+
 type TTemplates = {
-  list?: TlistElement[];
+  list?: Tlistelements;
   submitTemplate: TReturnUseCodeEditor['submitTemplate'];
   onClearCodeEditor: TReturnUseCodeEditor['onClearCodeEditor'];
 };
+
 const Templates = ({ list = DEFAULT_LIST, submitTemplate, onClearCodeEditor }: TTemplates) => (
   <div className="af-templates">
     <Button className="af-btn--circle af-btn--delete" onClick={onClearCodeEditor}>
       <i className="glyphicon glyphicon-trash"></i>
     </Button>
     {list.map(({ id, label, icon, tooltipLabel }) => (
-      <HelpInfo mode="click" content={tooltipLabel} classModifier="editor">
-        <Button key={id} className="af-btn--circle" id={id} onClick={submitTemplate}>
+      <HelpInfo key={id} content={tooltipLabel} classModifier="editor">
+        <Button className="af-btn--circle" id={id} onClick={submitTemplate}>
           {!!icon && <i className={`glyphicon glyphicon-${icon}`}></i>}
           {label}
         </Button>

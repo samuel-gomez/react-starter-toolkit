@@ -7,20 +7,21 @@ import { ChangeEvent, useCallback, useEffect, useState } from 'react';
 import { ModalCommonHeader, ModalCommonBody, ModalCommonFooter, useToggleModal } from 'shared/components/ModalCommon';
 import { TEvent, TonChange } from '../Editor';
 import './CodeEditor.scss';
-import Templates from './Templates';
+import Templates, { Tlistelements } from './Templates';
 
 export const getTemplate = (temlateName: string) => import(`../../../../../public/templates/${temlateName}.js`);
+
+const INITIAL_STATE = { name: '', hasSubmit: false };
 
 type TuseCodeEditor = TEvent & {
   onChange: TonChange;
   getTemplateFn?: typeof getTemplate;
+  initialState?: typeof INITIAL_STATE;
 };
 
-const INITIAL_STATE = { name: '', hasSubmit: false };
-
-export const useCodeEditor = ({ value, id, name, onChange, getTemplateFn = getTemplate }: TCodeEditor) => {
+export const useCodeEditor = ({ value, id, name, onChange, initialState = INITIAL_STATE, getTemplateFn = getTemplate }: TuseCodeEditor) => {
   const [code, setCode] = useState(value);
-  const [template, setTemplate] = useState(INITIAL_STATE);
+  const [template, setTemplate] = useState(initialState);
 
   const submitTemplate = useCallback((evn: ClickEvent) => {
     setTemplate({ name: evn?.id ?? '', hasSubmit: true });
@@ -53,14 +54,13 @@ export const useCodeEditor = ({ value, id, name, onChange, getTemplateFn = getTe
   useEffect(() => {
     if (template.name !== '' && template.hasSubmit) {
       const [filename, module = 'default'] = template.name.split('__');
-      console.log(filename, module);
       getTemplateFn(filename)
         .then(templateResponse => onAddTemplateEditor({ target: { value: `\n${templateResponse[module]}` } } as ChangeEvent<HTMLTextAreaElement>))
         .catch(error => setCode(error));
     }
   }, [getTemplateFn, onAddTemplateEditor, template]);
 
-  return { onChangeCodeEditor, code, submitTemplate, onClearCodeEditor };
+  return { onChangeCodeEditor, code, submitTemplate, onClearCodeEditor, template, onAddTemplateEditor };
 };
 
 export type TReturnUseCodeEditor = ReturnType<typeof useCodeEditor>;
@@ -68,8 +68,9 @@ export type TReturnUseCodeEditor = ReturnType<typeof useCodeEditor>;
 type TCodeEditor = TuseCodeEditor & {
   useCodeEditorFn?: typeof useCodeEditor;
   useToggleModalFn?: typeof useToggleModal;
+  list?: Tlistelements;
 };
-const CodeEditor = ({ value, onChange, name, id, useCodeEditorFn = useCodeEditor, useToggleModalFn = useToggleModal }: TCodeEditor) => {
+const CodeEditor = ({ value, onChange, name, id, list, useCodeEditorFn = useCodeEditor, useToggleModalFn = useToggleModal }: TCodeEditor) => {
   const { code, onChangeCodeEditor, submitTemplate, onClearCodeEditor } = useCodeEditorFn({ value, onChange, name, id });
   const { onCancel, openModal, isOpen } = useToggleModalFn();
   return (
@@ -80,7 +81,7 @@ const CodeEditor = ({ value, onChange, name, id, useCodeEditorFn = useCodeEditor
       <Modal isOpen={isOpen} onOutsideTap={onCancel} className="af-modal af-modal--editor">
         <ModalCommonHeader onCancel={onCancel} title="Saisir la value de children" />
         <ModalCommonBody>
-          <Templates submitTemplate={submitTemplate} onClearCodeEditor={onClearCodeEditor} />
+          <Templates list={list} submitTemplate={submitTemplate} onClearCodeEditor={onClearCodeEditor} />
           <ReactCodeEditor
             value={code}
             language="jsx"

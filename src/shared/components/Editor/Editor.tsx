@@ -6,6 +6,7 @@ import { ClickEvent } from '@axa-fr/react-toolkit-core';
 import { DEFAULT_OPTION_LABEL, DESIGN_SYSTEM, GITHUB, STORYBOOK } from 'shared/constants';
 import './Editor.scss';
 import CodeEditor from './CodeEditor';
+import { Tlistelements } from './CodeEditor/Templates';
 
 export type TEvent = {
   value: string;
@@ -19,6 +20,7 @@ type TListSelect = {
   value: string;
   options?: Record<string, string>;
   type?: string;
+  list?: Tlistelements;
 };
 
 export type TonChange = (e: TEvent) => void;
@@ -52,7 +54,7 @@ export const FieldEditor = ({ value, name, onChange }: TFieldEditor) => (
             />
           );
         case typeof value === 'object' && !!value.type && value.type === 'jsx':
-          return typeof value === 'object' && <CodeEditor id={name} name={name} onChange={onChange} value={value.value} />;
+          return typeof value === 'object' && <CodeEditor list={value?.list} id={name} name={name} onChange={onChange} value={value.value} />;
         case typeof value === 'object':
           return (
             typeof value === 'object' && (

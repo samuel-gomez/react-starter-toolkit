@@ -2,8 +2,15 @@
 
 exports[`<CodeEditor/> Should render CodeEditor 1`] = `
 <DocumentFragment>
-  <div>
-    code editor
-  </div>
+  <button
+    class="btn af-btn"
+    type="submit"
+  >
+    <span
+      class="af-btn__text"
+    >
+      Edit children
+    </span>
+  </button>
 </DocumentFragment>
 `;
