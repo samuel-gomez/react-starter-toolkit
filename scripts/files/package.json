@@ -73,7 +73,7 @@
     "husky": "8.0.1",
     "intl": "1.2.5",
     "jest-sonar-reporter": "2.0.0",
-    "msw": "0.47.0",
+    "msw": "0.47.4",
     "precise-commits": "1.0.2",
     "prettier": "2.7.1",
     "sass": "1.54.8",
