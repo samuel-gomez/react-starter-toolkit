@@ -1,4 +1,3 @@
-import { LoaderModes } from '@axa-fr/react-toolkit-all';
 import setLoaderMode from '../setLoaderMode';
 
 describe('setLoaderMode', () => {
@@ -7,7 +6,7 @@ describe('setLoaderMode', () => {
     ${true}   | ${'get'}
     ${false}  | ${'none'}
   `('Should return $expected when isLoading: $isLoading', ({ isLoading, expected }) => {
-    const result = setLoaderMode({ isLoading, LoaderModes });
+    const result = setLoaderMode({ isLoading });
     expect(result).toEqual(expected);
   });
 });

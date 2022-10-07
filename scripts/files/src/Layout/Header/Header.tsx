@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import type { Tanomaly } from 'shared/types';
 import { Header, Name, User, Infos } from '@axa-fr/react-toolkit-all';
-import logo from 'shared/images/slash-logo.svg';
+import logo from '@axa-fr/react-toolkit-core/dist/assets/logo-axa.svg';
 import Skeleton from 'shared/components/Skeleton';
 import Resilience from 'shared/components/Resilience';
 import './Header.scss';
@@ -28,7 +28,7 @@ type THeaderApp = {
 
 export const HeaderApp = ({ infos, title, subtitle, link = '#', authName = 'Non Connecté', authRole = 'Profil', anomaly }: THeaderApp) => (
   <Header>
-    <Name title={title} img={logo} alt={title} subtitle={subtitle} classModifier="slash" />
+    <Name title={title} img={logo} alt={title} subtitle={subtitle} />
     {infos && (
       <Resilience anomaly={anomaly} resilienceModifier="simple infos">
         <HeaderInfo isLoaded={infos.length > 0}>
@@ -36,7 +36,7 @@ export const HeaderApp = ({ infos, title, subtitle, link = '#', authName = 'Non 
         </HeaderInfo>
       </Resilience>
     )}
-    <User name={authName} href={link} profile={!!authRole ? authRole : 'inconnu'} />
+    <User name={authName} href={link} profile={authRole} />
   </Header>
 );
 

@@ -47,6 +47,11 @@ exports[`<ModalPage/> Should render ModalPage 1`] = `
             <span
               class="af-info-user__name"
             />
+            <span
+              class="af-info-user__profile"
+            >
+              [inconnu]
+            </span>
           </a>
         </div>
       </header>
@@ -1540,6 +1545,11 @@ exports[`<ModalPage/> Should render ModalPage with modal opened 1`] = `
             <span
               class="af-info-user__name"
             />
+            <span
+              class="af-info-user__profile"
+            >
+              [inconnu]
+            </span>
           </a>
         </div>
       </header>

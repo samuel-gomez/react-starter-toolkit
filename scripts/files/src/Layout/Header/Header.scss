@@ -1,0 +1,58 @@
+@import '@axa-fr/react-toolkit-core/dist/assets/scss/core.scss';
+
+.af {
+  &-alert {
+    &--infos {
+      margin: 0;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid $color-mercury;
+      border-radius: 25px;
+      padding: 0.4rem 0.3rem 0.4rem 3rem;
+      font-size: 0.9em;
+      order: 2;
+    }
+  }
+  &-skeleton {
+    &--info {
+      margin: 0;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid $color-mercury;
+      height: 36px;
+      border-radius: 25px;
+      padding: 0.4rem 0.3rem 0.4rem 3rem;
+      font-size: 0.9em;
+      order: 2;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .af-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    &__wrapper {
+      margin: 0;
+      width: 100%;
+      background: #eee;
+    }
+    &__content {
+      padding-top: 15px;
+      padding-bottom: 0;
+      width: 100%;
+    }
+    &__title {
+      font-size: 1.2rem;
+      width: 150px;
+    }
+    &__subtitle {
+      display: none;
+    }
+  }
+}

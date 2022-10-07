@@ -1,7 +1,7 @@
 {
-  "name": "react-starter-toolkit",
+  "name": "my-name-application",
   "description": "This repository is a starter project that use React Toolkit Axa and CRA.",
-  "version": "0.2.6",
+  "version": "0.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -19,8 +19,7 @@
     "cz": "cz",
     "prettier": "prettier --check src",
     "prettier:fix": "prettier --write src",
-    "check": "npm run prettier && npm run lint",
-    "clean": "node scripts/clean.js"
+    "check": "npm run prettier && npm run lint"
   },
   "dependencies": {
     "@axa-fr/react-oidc-context": "5.14.2",
@@ -29,7 +28,6 @@
     "@babel/parser": "7.18.13",
     "@tanstack/react-query": "4.2.3",
     "@tanstack/react-query-devtools": "4.2.3",
-    "@types/downloadjs": "1.4.3",
     "@types/intl": "1.2.0",
     "@types/jest": "29.0.0",
     "@types/lodash": "4.14.184",
@@ -38,18 +36,14 @@
     "@types/react-dom": "18.0.6",
     "@types/react-router": "5.1.18",
     "@types/react-router-dom": "5.3.3",
-    "@uiw/react-textarea-code-editor": "2.0.3",
     "classnames": "2.3.1",
-    "downloadjs": "1.4.7",
     "jest-cucumber": "3.0.1",
     "lodash": "4.17.21",
     "moment": "2.29.4",
-    "prism-react-renderer": "1.3.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-draggable": "4.4.5",
     "react-hook-form": "7.35.0",
-    "react-live": "2.4.1",
     "react-router-dom": "6.3.0",
     "react-scripts": "5.0.1"
   },
@@ -144,10 +138,5 @@
   },
   "resolutions": {
     "@babel/parser": "7.18.11"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/samuel-gomez/react-starter-toolkit.git"
-  },
-  "license": "MIT"
+  }
 }

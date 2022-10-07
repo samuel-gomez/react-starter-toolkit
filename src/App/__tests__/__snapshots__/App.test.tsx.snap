@@ -453,6 +453,11 @@ exports[`<App/> Should render App with all props and authentication enabled 1`] 
             >
               Samuel Gomez
             </span>
+            <span
+              class="af-info-user__profile"
+            >
+              [inconnu]
+            </span>
           </a>
         </div>
       </header>

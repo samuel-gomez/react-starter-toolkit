@@ -47,6 +47,11 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
             <span
               class="af-info-user__name"
             />
+            <span
+              class="af-info-user__profile"
+            >
+              [inconnu]
+            </span>
           </a>
         </div>
       </header>

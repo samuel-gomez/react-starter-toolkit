@@ -113,6 +113,11 @@ exports[`<SearchMembers/> Should render <SearchMembers /> with one member 1`] = 
             <span
               class="af-info-user__name"
             />
+            <span
+              class="af-info-user__profile"
+            >
+              [inconnu]
+            </span>
           </a>
         </div>
       </header>
@@ -670,6 +675,11 @@ exports[`<SearchMembers/> Should render SearchMembers 1`] = `
             <span
               class="af-info-user__name"
             />
+            <span
+              class="af-info-user__profile"
+            >
+              [inconnu]
+            </span>
           </a>
         </div>
       </header>
