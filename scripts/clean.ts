@@ -1,4 +1,3 @@
-// var fs = require('fs-extra');
 import fs from 'fs-extra';
 
 function deleteFolderRecursive(path) {
@@ -6,7 +5,7 @@ function deleteFolderRecursive(path) {
   if (fs.existsSync(path)) {
     if (fs.lstatSync(path).isDirectory()) {
       fs.readdirSync(path).forEach(function (file) {
-        var curPath = path + '/' + file;
+        const curPath = `${path}/${file}`;
 
         if (fs.lstatSync(curPath).isDirectory()) {
           deleteFolderRecursive(curPath);
@@ -47,7 +46,7 @@ pathsAll.forEach(path => deleteFolderRecursive(path));
 console.log('Successfully cleaned working tree!');
 
 function replaceContentsSync(file, replacement) {
-  var contents = fs.readFileSync(replacement);
+  const contents = fs.readFileSync(replacement);
   fs.writeFileSync(file, contents);
 }
 
