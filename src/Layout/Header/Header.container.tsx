@@ -1,6 +1,7 @@
 import { ComponentProps, useContext } from 'react';
 import { UserContext } from 'App/UserProvider';
 import Header from './Header';
+import { SUBTITLE, TITLE } from './constants';
 
 type THeaderContainer = Omit<ComponentProps<typeof Header>, 'title' | 'subtitle'> & {
   UserContextObj?: typeof UserContext;
@@ -9,13 +10,7 @@ type THeaderContainer = Omit<ComponentProps<typeof Header>, 'title' | 'subtitle'
   subtitle?: string;
 };
 
-const HeaderContainer = ({
-  UserContextObj = UserContext,
-  HeaderCmpt = Header,
-  title = 'Toolkit React Starter',
-  subtitle = 'by Slash Design System',
-  ...props
-}: THeaderContainer) => {
+const HeaderContainer = ({ UserContextObj = UserContext, HeaderCmpt = Header, title = TITLE, subtitle = SUBTITLE, ...props }: THeaderContainer) => {
   const userContext = useContext(UserContextObj);
   return <HeaderCmpt {...props} {...userContext} title={title} subtitle={subtitle} />;
 };

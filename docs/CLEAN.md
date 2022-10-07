@@ -1,7 +1,7 @@
+# Script de nettoyage
+
 ## Clean github / CI
 
-- [ ] Suppression du dossier .git
-- [ ] Renommage et modification du fichier workspace (nom du fichier, couleurs, etc.)
 - [ ] Suppression du dossier .git
 - [ ] Suppression du dossier .github
 - [ ] Suppression du fichier netlify.toml
@@ -24,7 +24,6 @@
 - [ ] Modifier le fichier de Routes et supprimer les routes de la démo (src/App/Routes/Routes.tsx)
 - [ ] Supprimer les imports inutiles des constantes URL : src/App/Routes/constants.ts
 - [ ] Fixer le fichier de test src/App/Routes/**tests**/Routes.test.tsx (en fonction des routes supprimées ou ajoutées)
-- [ ] Fixer le fichier de test src/Layout/Menu/**tests**/Menu.container.test.tsx (en fonction des liens supprimées ou ajoutées)
 
 ### Pages
 
@@ -37,7 +36,8 @@
 - [ ] Suppression du dossier src/shared/components/LiveCode
 - [ ] Suppression du dossier src/shared/components/Cards
 - [ ] Suppression du dossier src/shared/components/LasyImage
-- [ ] Suppression du dossier src/shared/components/DownloadLink (sauf si vous avez besoin de faire des liens de téléchargement)
+- [ ] Suppression du dossier src/shared/components/DownloadLink
+- [ ] Suppression du dossier src/shared/components/Editor
 
 ### Assets
 
@@ -45,12 +45,11 @@
 - [ ] Dossier Public
   - [ ] Suppression du fichier public/\_redirect
   - [ ] Modifier la configuration du fichier public/environment.production.local.json
-  - [ ] Modifier la configuration du fichier public/environment.production.json
-  - [ ] Modifier la configuration du fichier public/environment.development.json
   - [ ] Changer le favicon pour celui d’Axa
-  - [ ] Supprimer les fichiers logo192.png et logo512.png
+  - [ ] Modifier les fichiers logo192.png et logo512.png
   - [ ] Modifier le manifest : changer le nom, supprimer les objets des images supprimées
   - [ ] Modifier le fichier index.html : le title et les métadonnées
+  - [ ] Supprimer le dossier public/templates
 
 ### Docs
 
@@ -60,17 +59,12 @@
 
 ### Package.json :
 
-- [ ] Modifier le nom du projet
-- [ ] Modifier la version
-- [ ] Modifier la description
-- [ ] Supprimer/modifier l'auteur
-- [ ] Modifier l’url du repository
-- [ ] Modifier la licence ?
-- [ ] Scripts (husky)
-  - [ ] prepare": "cd ../.. && husky install Sources/client/.husky",
-  - [ ] Ne pas oublier d’ajouter la commande « cd Sources/client » en haut des scripts Husky
-- [ ] Packages à supprimer
-  - [ ] prism-react-renderer (utilisé pour la démo live code)
-  - [ ] react-live (utilisé pour la démo live code)
-  - [ ] react-hook-form (si vous souhaitez utiliser autre chose ou si pas de formulaire)
-  - [ ] downloadjs (sauf si vous avez besoin de faire des liens de téléchargement)
+- [ ] Packages supprimés
+  - [ ] prism-react-renderer
+  - [ ] react-live
+  - [ ] downloadjs
+  - [ ] @uiw/react-textarea-code-editor
+  - [ ] @types/downloadjs
+  - [ ] prism-react-renderer
+  - [ ] react-draggable
+  - [ ] react-live

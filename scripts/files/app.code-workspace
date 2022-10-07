@@ -1,0 +1,19 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "sonarlint.connectedMode.project": {
+      "connectionId": "SonarCloud",
+      "projectKey": "your-project-key"
+    },
+    "workbench.colorCustomizations": {
+      "activityBar.background": "#051a49",
+      "titleBar.activeBackground": "#01329d",
+      "titleBar.activeForeground": "#bfe3ff"
+    },
+    "typescript.tsdk": "node_modules/typescript/lib"
+  }
+}

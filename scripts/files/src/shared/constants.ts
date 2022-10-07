@@ -1,5 +1,3 @@
-import packageJson from '../../package.json';
-
 /*************************************************************************
  * FORM CONSTANTS
  *************************************************************************/
@@ -64,11 +62,3 @@ export const MODIFIER_CLASS = {
   success: 'success',
   disabled: 'disabled',
 };
-
-/*************************************************************************
- * DEMO CONSTANTS
- *************************************************************************/
-
-export const STORYBOOK = 'https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/';
-export const DESIGN_SYSTEM = 'https://axaguildev.github.io/design-system/';
-export const GITHUB = `https://github.com/AxaGuilDEv/react-toolkit/tree/v${packageJson['dependencies']['@axa-fr/react-toolkit-all']}/packages/`;

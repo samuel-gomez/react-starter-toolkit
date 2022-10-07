@@ -47,6 +47,11 @@ exports[`Layout Should render when disabled: {"footer": true} 1`] = `
             <span
               class="af-info-user__name"
             />
+            <span
+              class="af-info-user__profile"
+            >
+              [inconnu]
+            </span>
           </a>
         </div>
       </header>
@@ -750,6 +755,11 @@ exports[`Layout Should render when disabled: {"menu": true} 1`] = `
             <span
               class="af-info-user__name"
             />
+            <span
+              class="af-info-user__profile"
+            >
+              [inconnu]
+            </span>
           </a>
         </div>
       </header>
@@ -846,6 +856,11 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
             <span
               class="af-info-user__name"
             />
+            <span
+              class="af-info-user__profile"
+            >
+              [inconnu]
+            </span>
           </a>
         </div>
       </header>

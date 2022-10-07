@@ -1,0 +1,20 @@
+{
+  "apiUrl": "https://react-starter-api.vercel.app/api/",
+  "baseUrl": "",
+  "fetchConfig": {
+    "crossDomain": true,
+    "withCredentials": true,
+    "method": "GET",
+    "Access-Control-Allow-Origin": "*",
+    "headers": {
+      "accept": "application/json"
+    }
+  },
+  "oidc": {
+    "isEnabled": true,
+    "client_id": "interactive.public",
+    "redirect_uri": "http://localhost:3000/authentication/callback",
+    "scope": "openid profile email api offline_access",
+    "authority": "https://demo.duendesoftware.com"
+  }
+}
