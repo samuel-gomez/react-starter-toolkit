@@ -10,6 +10,13 @@
 }
 /* just for démo ********************************/
 
+.af-header {
+  &--fullscreen {
+    .container {
+      width: 100%;
+    }
+  }
+}
 .af {
   &-alert {
     &--infos {

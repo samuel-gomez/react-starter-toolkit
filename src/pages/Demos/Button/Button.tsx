@@ -61,11 +61,9 @@ type TButtonPage = TLayout & {
 };
 
 const ButtonPage = ({ titleBar = TITLE_BAR, title = TITLE }: TButtonPage) => (
-  <Layout propsTitle={{ title: titleBar }} className="af-main" classModifier="demo">
-    <section className="container">
-      <h1 className="af-title--content">{title}</h1>
-      <ButtonEditable />
-    </section>
+  <Layout propsTitle={{ title: titleBar }}>
+    <h1 className="af-title--content">{title}</h1>
+    <ButtonEditable />
   </Layout>
 );
 

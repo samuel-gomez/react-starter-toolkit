@@ -3,7 +3,7 @@ import { QueryClient, QueryClientProvider, QueryKey } from '@tanstack/react-quer
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { mergeObj } from 'shared/helpers';
 import { STATUS_API, STATUS_HTTP_MESSAGES } from 'shared/constants';
-import { useOidcAccessToken } from '@axa-fr/react-oidc-context';
+import { useOidcAccessToken } from '@axa-fr/react-oidc';
 import setResponseError from './setResponseError';
 
 export type FetchContextType = {

@@ -10,6 +10,11 @@ describe('<MenuEnhanced/>', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
+  it('Render <Menu/> fullscreen', () => {
+    const { asFragment } = renderWithWrapperStaticRouter(<MenuEnhanced menuItems={MENU_ITEMS_MOCK} fullScreen />);
+    expect(asFragment()).toMatchSnapshot();
+  });
+
   it('Should call toggle class body When click on button', () => {
     renderWithWrapperStaticRouter(<MenuEnhanced menuItems={MENU_ITEMS_MOCK} />);
     fireEvent.click(screen.getByTitle('Open toggle menu'));

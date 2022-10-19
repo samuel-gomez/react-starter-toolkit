@@ -8,6 +8,7 @@ import { ComponentPropsWithoutRef, ReactNode } from 'react';
 export type TLayout = WithClassModifierOptions & {
   children?: ReactNode;
   className?: string;
+  fullScreen?: boolean;
   disabled?: {
     header?: boolean;
     menu?: boolean;
@@ -26,15 +27,15 @@ const disabledDefault = {
   title: false,
   footer: false,
 };
-const DEFAULT_CLASSNAME = 'container af-main';
+const DEFAULT_CLASSNAME = 'af-main';
 
-const Layout = ({ className, children, propsHeader, propsMenu, propsTitle, propsFooter, disabled = disabledDefault }: TLayout) => (
+const Layout = ({ className, children, propsHeader, propsMenu, propsTitle, propsFooter, fullScreen, disabled = disabledDefault }: TLayout) => (
   <>
-    {!disabled.header && <Header {...propsHeader} />}
-    {!disabled.menu && <Menu {...propsMenu} />}
-    {!disabled.title && <TitleBar {...propsTitle} />}
-    <main className={className}>{children}</main>
-    {!disabled.footer && <Footer {...propsFooter} />}
+    {!disabled.header && <Header {...propsHeader} fullScreen={fullScreen} />}
+    {!disabled.menu && <Menu {...propsMenu} fullScreen={fullScreen} />}
+    {!disabled.title && <TitleBar {...propsTitle} fullScreen={fullScreen} />}
+    <main className={className}>{fullScreen ? children : <section className="container">{children}</section>}</main>
+    {!disabled.footer && <Footer {...propsFooter} fullScreen={fullScreen} />}
   </>
 );
 

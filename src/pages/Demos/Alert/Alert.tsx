@@ -59,11 +59,9 @@ type TAlertPage = TLayout & {
 };
 
 const AlertPage = ({ titleBar = TITLE_BAR, title = TITLE }: TAlertPage) => (
-  <Layout propsTitle={{ title: titleBar }} className="af-main" classModifier="demo">
-    <section className="container">
-      <h1 className="af-title--content">{title}</h1>
-      <AlertEditable />
-    </section>
+  <Layout propsTitle={{ title: titleBar }}>
+    <h1 className="af-title--content">{title}</h1>
+    <AlertEditable />
   </Layout>
 );
 

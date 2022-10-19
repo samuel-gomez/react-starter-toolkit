@@ -11,8 +11,8 @@ const scope = { Button };
 
 const code = `
 /* HOOK Example (this works because the App component use the NotificationContext ) */
-const useNotify = ({ NotificationContextObj = NotificationContext }) => {
-  const { addNotification } = useConNotificationContextObj);
+const useNotify = ({  useContextFn = useContext, NotificationContextObj = NotificationContext }) => {
+  const { addNotification } = useContextFn(NotificationContextObj);
 
   const notifyError = useCallback(() => {
     addNotification({

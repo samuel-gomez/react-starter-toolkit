@@ -2,7 +2,6 @@ import { Controller, UseFormStateReturn, ControllerRenderProps } from 'react-hoo
 import { Text, Button, FieldForm, HelpMessage, FieldInput, FieldError } from '@axa-fr/react-toolkit-all';
 import { setConfirmClassModifier } from 'shared/helpers';
 import { NAME, LABEL_NAME, PLACEHOLDER_NAME, FORM_SEARCH_MEMBERS, LABEL_SUBMIT, MIN_SEARCH_BY_NAME, rules } from './constants';
-import './SearchForm.scss';
 import { FormValues, setOnSubmitSearchForm, TUseForm } from './SearchForm.container';
 
 type TSearchForm = {

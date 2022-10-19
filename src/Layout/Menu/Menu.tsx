@@ -8,10 +8,13 @@ export type TMenu = {
   isVisible?: boolean;
   onClick?: (event: React.MouseEvent<HTMLElement>) => void;
   positionInit?: number;
+  fullScreen?: boolean;
 };
 
-export const Menu = ({ menuItems, createMenuFn = createMenu, onClick, ...navBarProps }: TMenu) => (
-  <NavBar {...navBarProps} onClick={onClick}>
-    {menuItems && createMenuFn(menuItems, onClick)}
-  </NavBar>
+export const Menu = ({ fullScreen, menuItems, createMenuFn = createMenu, onClick, ...navBarProps }: TMenu) => (
+  <section className={`af-menu${fullScreen ? ' af-menu--fullscreen' : ''}`}>
+    <NavBar {...navBarProps} onClick={onClick}>
+      {menuItems && createMenuFn(menuItems, onClick)}
+    </NavBar>
+  </section>
 );

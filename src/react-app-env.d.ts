@@ -1,4 +1,4 @@
-declare module '@axa-fr/react-oidc-context';
+declare module '@axa-fr/react-oidc';
 declare module '@axa-fr/react-toolkit-all';
 declare module '@axa-fr/react-toolkit-loader';
 declare module '@axa-fr/react-toolkit-help';

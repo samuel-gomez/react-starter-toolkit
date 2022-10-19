@@ -123,285 +123,289 @@ exports[`<SearchMembers/> Should render <SearchMembers /> with one member 1`] = 
       </header>
     </div>
   </div>
-  <div
-    class="af-nav-container"
+  <section
+    class="af-menu"
   >
-    <button
-      aria-controls="mainmenu"
-      aria-haspopup="true"
-      class="mask fade "
-      id="togglemenu"
-      type="button"
-    />
-    <nav
-      aria-label="Menu principal"
-      class="af-nav af-drawer left "
-      role="navigation"
+    <div
+      class="af-nav-container"
     >
-      <div
-        class="container af-nav__wrapper"
+      <button
+        aria-controls="mainmenu"
+        aria-haspopup="true"
+        class="mask fade "
+        id="togglemenu"
+        type="button"
+      />
+      <nav
+        aria-label="Menu principal"
+        class="af-nav af-drawer left "
+        role="navigation"
       >
         <div
-          class="af-nav__aside-header"
+          class="container af-nav__wrapper"
         >
-          <h4
-            class="af-nav__aside-title"
+          <div
+            class="af-nav__aside-header"
           >
-            Menu
-          </h4>
-          <button
-            aria-controls="mainmenu"
-            aria-haspopup="true"
-            class="af-nav__aside-close"
-            id="togglemenu"
-            type="button"
+            <h4
+              class="af-nav__aside-title"
+            >
+              Menu
+            </h4>
+            <button
+              aria-controls="mainmenu"
+              aria-haspopup="true"
+              class="af-nav__aside-close"
+              id="togglemenu"
+              type="button"
+            >
+              ×
+            </button>
+          </div>
+          <ul
+            aria-labelledby="togglemenu"
+            class="af-nav__list "
+            id="mainmenu"
+            role="menubar"
           >
-            ×
-          </button>
+            <li
+              class="af-nav__item af-nav__item--active "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Accueil"
+                class="af-nav__link"
+                href="/"
+                role="menuitem"
+                tabindex="0"
+              >
+                Accueil
+              </a>
+            </li>
+            <li
+              class="af-nav__item af-nav__item--haschild "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Démos"
+                class="af-nav__link"
+                href="/demos"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Démos
+              </a>
+              <i
+                class="glyphicon glyphicon-arrow-xs-down"
+              />
+              <ul
+                aria-label=""
+                class="af-nav__list af-nav__list--children"
+                role="menu"
+              >
+                <li
+                  class="af-nav__item af-nav__item--separator "
+                  role="none"
+                >
+                  <span
+                    aria-expanded="false"
+                    class="af-nav__link"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Pages
+                  </span>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Membres"
+                    class="af-nav__link"
+                    href="/demos/members"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Membres
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Rechercher"
+                    class="af-nav__link"
+                    href="/demos/search-members"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Rechercher
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Modal"
+                    class="af-nav__link"
+                    href="/demos/modal"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Modal
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Notification"
+                    class="af-nav__link"
+                    href="/demos/notification"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Notification
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Layout"
+                    class="af-nav__link"
+                    href="/demos/layout"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Layout
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item af-nav__item--separator "
+                  role="none"
+                >
+                  <span
+                    aria-expanded="false"
+                    class="af-nav__link"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Composants Toolkit
+                  </span>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Button"
+                    class="af-nav__link"
+                    href="/demos/button"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Button
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Alert"
+                    class="af-nav__link"
+                    href="/demos/alert"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Alert
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li
+              class="af-nav__item af-nav__item--haschild "
+              role="none"
+            >
+              <span
+                aria-expanded="false"
+                class="af-nav__link"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Pages
+              </span>
+              <i
+                class="glyphicon glyphicon-arrow-xs-down"
+              />
+              <ul
+                aria-label=""
+                class="af-nav__list af-nav__list--children"
+                role="menu"
+              >
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Not found"
+                    class="af-nav__link"
+                    href="/notfound"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Not found
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Forbidden"
+                    class="af-nav__link"
+                    href="/forbidden"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Forbidden
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
-        <ul
-          aria-labelledby="togglemenu"
-          class="af-nav__list "
-          id="mainmenu"
-          role="menubar"
-        >
-          <li
-            class="af-nav__item af-nav__item--active "
-            role="none"
-          >
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-label="Accueil"
-              class="af-nav__link"
-              href="/"
-              role="menuitem"
-              tabindex="0"
-            >
-              Accueil
-            </a>
-          </li>
-          <li
-            class="af-nav__item af-nav__item--haschild "
-            role="none"
-          >
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-label="Démos"
-              class="af-nav__link"
-              href="/demos"
-              role="menuitem"
-              tabindex="-1"
-            >
-              Démos
-            </a>
-            <i
-              class="glyphicon glyphicon-arrow-xs-down"
-            />
-            <ul
-              aria-label=""
-              class="af-nav__list af-nav__list--children"
-              role="menu"
-            >
-              <li
-                class="af-nav__item af-nav__item--separator "
-                role="none"
-              >
-                <span
-                  aria-expanded="false"
-                  class="af-nav__link"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Pages
-                </span>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Membres"
-                  class="af-nav__link"
-                  href="/demos/members"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Membres
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Rechercher"
-                  class="af-nav__link"
-                  href="/demos/search-members"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Rechercher
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Modal"
-                  class="af-nav__link"
-                  href="/demos/modal"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Modal
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Notification"
-                  class="af-nav__link"
-                  href="/demos/notification"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Notification
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Layout"
-                  class="af-nav__link"
-                  href="/demos/layout"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Layout
-                </a>
-              </li>
-              <li
-                class="af-nav__item af-nav__item--separator "
-                role="none"
-              >
-                <span
-                  aria-expanded="false"
-                  class="af-nav__link"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Composants Toolkit
-                </span>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Button"
-                  class="af-nav__link"
-                  href="/demos/button"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Button
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Alert"
-                  class="af-nav__link"
-                  href="/demos/alert"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Alert
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li
-            class="af-nav__item af-nav__item--haschild "
-            role="none"
-          >
-            <span
-              aria-expanded="false"
-              class="af-nav__link"
-              role="menuitem"
-              tabindex="-1"
-            >
-              Pages
-            </span>
-            <i
-              class="glyphicon glyphicon-arrow-xs-down"
-            />
-            <ul
-              aria-label=""
-              class="af-nav__list af-nav__list--children"
-              role="menu"
-            >
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Not found"
-                  class="af-nav__link"
-                  href="/notfound"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Not found
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Forbidden"
-                  class="af-nav__link"
-                  href="/forbidden"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Forbidden
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
+      </nav>
+    </div>
+  </section>
   <a
     aria-controls="mainmenu"
     aria-haspopup="true"
@@ -439,166 +443,170 @@ exports[`<SearchMembers/> Should render <SearchMembers /> with one member 1`] = 
     </div>
   </div>
   <main
-    class="container af-main"
+    class="af-main"
   >
-    <h1
-      class="af-title--content"
+    <section
+      class="container"
     >
-      Recherche par Nom
-    </h1>
-    <form
-      autocomplete="off"
-      class="af-filter-inline"
-      id="form-search-members"
-      name="form-search-members"
-    >
-      <div
-        class="af-filter-inline__default af-filter-inline__default--search-distributors"
+      <h1
+        class="af-title--content"
+      >
+        Recherche par Nom
+      </h1>
+      <form
+        autocomplete="off"
+        class="af-filter-inline"
+        id="form-search-members"
+        name="form-search-members"
       >
         <div
-          class="af-filter-inline__field"
+          class="af-filter-inline__default af-filter-inline__default--search-distributors"
         >
           <div
-            class="col-md-12"
+            class="af-filter-inline__field"
           >
             <div
-              class="af-form__text"
+              class="col-md-12"
             >
-              <label
-                class="af-form__group-label"
-                for="name"
+              <div
+                class="af-form__text"
               >
-                Nom du membre
-              </label>
-              <input
-                autocomplete="search-name"
-                class="af-form__input-text"
-                id="name"
-                name="name"
-                placeholder="John Doe"
-                type="text"
-                value=""
-              />
-              <small
-                class="af-form__help"
-              >
-                Minimum 3 caractères pour un nom
-              </small>
+                <label
+                  class="af-form__group-label"
+                  for="name"
+                >
+                  Nom du membre
+                </label>
+                <input
+                  autocomplete="search-name"
+                  class="af-form__input-text"
+                  id="name"
+                  name="name"
+                  placeholder="John Doe"
+                  type="text"
+                  value=""
+                />
+                <small
+                  class="af-form__help"
+                >
+                  Minimum 3 caractères pour un nom
+                </small>
+              </div>
             </div>
           </div>
+          <button
+            class="btn af-btn af-btn--hasiconLeft af-btn--submitconfirm af-btn--disabled"
+            disabled=""
+            form="form-search-members"
+            type="submit"
+          >
+            <span
+              class="af-btn__text"
+            >
+              Rechercher
+            </span>
+            <i
+              class="glyphicon glyphicon-search"
+            />
+          </button>
         </div>
-        <button
-          class="btn af-btn af-btn--hasiconLeft af-btn--submitconfirm af-btn--disabled"
-          disabled=""
-          form="form-search-members"
-          type="submit"
+      </form>
+      <div
+        class="af-loader"
+      >
+        <h2
+          class="af-title"
         >
-          <span
-            class="af-btn__text"
+          Tableau des membres
+        </h2>
+        <table
+          class="af-table"
+        >
+          <thead
+            aria-label="table-header"
+            class="af-table__thead"
           >
-            Rechercher
-          </span>
-          <i
-            class="glyphicon glyphicon-search"
-          />
-        </button>
+            <tr
+              aria-label="table-header-line"
+              class="af-table__tr"
+            >
+              <th
+                class="af-table__th"
+                role="columnheader"
+              >
+                <span
+                  class="af-table__th-label"
+                >
+                  Prénom du membre
+                </span>
+              </th>
+              <th
+                class="af-table__th"
+                role="columnheader"
+              >
+                <span
+                  class="af-table__th-label"
+                >
+                  Nom du membre
+                </span>
+              </th>
+              <th
+                class="af-table__th"
+                role="columnheader"
+              >
+                <span
+                  class="af-table__th-label"
+                >
+                  Identifiant du membre
+                </span>
+              </th>
+              <th
+                class="af-table__th"
+                role="columnheader"
+              >
+                <span
+                  class="af-table__th-label"
+                >
+                  Actions
+                </span>
+              </th>
+            </tr>
+          </thead>
+          <tbody
+            aria-label="table-body"
+            class="af-table__body"
+          >
+            <tr
+              aria-label="table-body-line"
+              class="af-table__tr"
+            >
+              <td
+                class="af-table__cell"
+              >
+                nom du membre
+              </td>
+              <td
+                class="af-table__cell"
+              >
+                nom du membre
+              </td>
+              <td
+                class="af-table__cell"
+              >
+                1254689759
+              </td>
+              <td
+                class="af-table__cell af-table__cell--actions"
+              >
+                <p>
+                  hello
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </form>
-    <div
-      class="af-loader"
-    >
-      <h2
-        class="af-title"
-      >
-        Tableau des membres
-      </h2>
-      <table
-        class="af-table"
-      >
-        <thead
-          aria-label="table-header"
-          class="af-table__thead"
-        >
-          <tr
-            aria-label="table-header-line"
-            class="af-table__tr"
-          >
-            <th
-              class="af-table__th"
-              role="columnheader"
-            >
-              <span
-                class="af-table__th-label"
-              >
-                Prénom du membre
-              </span>
-            </th>
-            <th
-              class="af-table__th"
-              role="columnheader"
-            >
-              <span
-                class="af-table__th-label"
-              >
-                Nom du membre
-              </span>
-            </th>
-            <th
-              class="af-table__th"
-              role="columnheader"
-            >
-              <span
-                class="af-table__th-label"
-              >
-                Identifiant du membre
-              </span>
-            </th>
-            <th
-              class="af-table__th"
-              role="columnheader"
-            >
-              <span
-                class="af-table__th-label"
-              >
-                Actions
-              </span>
-            </th>
-          </tr>
-        </thead>
-        <tbody
-          aria-label="table-body"
-          class="af-table__body"
-        >
-          <tr
-            aria-label="table-body-line"
-            class="af-table__tr"
-          >
-            <td
-              class="af-table__cell"
-            >
-              nom du membre
-            </td>
-            <td
-              class="af-table__cell"
-            >
-              nom du membre
-            </td>
-            <td
-              class="af-table__cell"
-            >
-              1254689759
-            </td>
-            <td
-              class="af-table__cell af-table__cell--actions"
-            >
-              <p>
-                hello
-              </p>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    </section>
   </main>
   <footer
     class="af-footer"
@@ -621,7 +629,7 @@ exports[`<SearchMembers/> Should render <SearchMembers /> with one member 1`] = 
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.2.6
+        © 2022 AXA Tous droits réservés - v0.2.7
       </div>
     </div>
   </footer>
@@ -685,285 +693,289 @@ exports[`<SearchMembers/> Should render SearchMembers 1`] = `
       </header>
     </div>
   </div>
-  <div
-    class="af-nav-container"
+  <section
+    class="af-menu"
   >
-    <button
-      aria-controls="mainmenu"
-      aria-haspopup="true"
-      class="mask fade "
-      id="togglemenu"
-      type="button"
-    />
-    <nav
-      aria-label="Menu principal"
-      class="af-nav af-drawer left "
-      role="navigation"
+    <div
+      class="af-nav-container"
     >
-      <div
-        class="container af-nav__wrapper"
+      <button
+        aria-controls="mainmenu"
+        aria-haspopup="true"
+        class="mask fade "
+        id="togglemenu"
+        type="button"
+      />
+      <nav
+        aria-label="Menu principal"
+        class="af-nav af-drawer left "
+        role="navigation"
       >
         <div
-          class="af-nav__aside-header"
+          class="container af-nav__wrapper"
         >
-          <h4
-            class="af-nav__aside-title"
+          <div
+            class="af-nav__aside-header"
           >
-            Menu
-          </h4>
-          <button
-            aria-controls="mainmenu"
-            aria-haspopup="true"
-            class="af-nav__aside-close"
-            id="togglemenu"
-            type="button"
+            <h4
+              class="af-nav__aside-title"
+            >
+              Menu
+            </h4>
+            <button
+              aria-controls="mainmenu"
+              aria-haspopup="true"
+              class="af-nav__aside-close"
+              id="togglemenu"
+              type="button"
+            >
+              ×
+            </button>
+          </div>
+          <ul
+            aria-labelledby="togglemenu"
+            class="af-nav__list "
+            id="mainmenu"
+            role="menubar"
           >
-            ×
-          </button>
+            <li
+              class="af-nav__item af-nav__item--active "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Accueil"
+                class="af-nav__link"
+                href="/"
+                role="menuitem"
+                tabindex="0"
+              >
+                Accueil
+              </a>
+            </li>
+            <li
+              class="af-nav__item af-nav__item--haschild "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Démos"
+                class="af-nav__link"
+                href="/demos"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Démos
+              </a>
+              <i
+                class="glyphicon glyphicon-arrow-xs-down"
+              />
+              <ul
+                aria-label=""
+                class="af-nav__list af-nav__list--children"
+                role="menu"
+              >
+                <li
+                  class="af-nav__item af-nav__item--separator "
+                  role="none"
+                >
+                  <span
+                    aria-expanded="false"
+                    class="af-nav__link"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Pages
+                  </span>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Membres"
+                    class="af-nav__link"
+                    href="/demos/members"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Membres
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Rechercher"
+                    class="af-nav__link"
+                    href="/demos/search-members"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Rechercher
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Modal"
+                    class="af-nav__link"
+                    href="/demos/modal"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Modal
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Notification"
+                    class="af-nav__link"
+                    href="/demos/notification"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Notification
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Layout"
+                    class="af-nav__link"
+                    href="/demos/layout"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Layout
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item af-nav__item--separator "
+                  role="none"
+                >
+                  <span
+                    aria-expanded="false"
+                    class="af-nav__link"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Composants Toolkit
+                  </span>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Button"
+                    class="af-nav__link"
+                    href="/demos/button"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Button
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Alert"
+                    class="af-nav__link"
+                    href="/demos/alert"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Alert
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li
+              class="af-nav__item af-nav__item--haschild "
+              role="none"
+            >
+              <span
+                aria-expanded="false"
+                class="af-nav__link"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Pages
+              </span>
+              <i
+                class="glyphicon glyphicon-arrow-xs-down"
+              />
+              <ul
+                aria-label=""
+                class="af-nav__list af-nav__list--children"
+                role="menu"
+              >
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Not found"
+                    class="af-nav__link"
+                    href="/notfound"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Not found
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Forbidden"
+                    class="af-nav__link"
+                    href="/forbidden"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Forbidden
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
-        <ul
-          aria-labelledby="togglemenu"
-          class="af-nav__list "
-          id="mainmenu"
-          role="menubar"
-        >
-          <li
-            class="af-nav__item af-nav__item--active "
-            role="none"
-          >
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-label="Accueil"
-              class="af-nav__link"
-              href="/"
-              role="menuitem"
-              tabindex="0"
-            >
-              Accueil
-            </a>
-          </li>
-          <li
-            class="af-nav__item af-nav__item--haschild "
-            role="none"
-          >
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-label="Démos"
-              class="af-nav__link"
-              href="/demos"
-              role="menuitem"
-              tabindex="-1"
-            >
-              Démos
-            </a>
-            <i
-              class="glyphicon glyphicon-arrow-xs-down"
-            />
-            <ul
-              aria-label=""
-              class="af-nav__list af-nav__list--children"
-              role="menu"
-            >
-              <li
-                class="af-nav__item af-nav__item--separator "
-                role="none"
-              >
-                <span
-                  aria-expanded="false"
-                  class="af-nav__link"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Pages
-                </span>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Membres"
-                  class="af-nav__link"
-                  href="/demos/members"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Membres
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Rechercher"
-                  class="af-nav__link"
-                  href="/demos/search-members"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Rechercher
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Modal"
-                  class="af-nav__link"
-                  href="/demos/modal"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Modal
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Notification"
-                  class="af-nav__link"
-                  href="/demos/notification"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Notification
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Layout"
-                  class="af-nav__link"
-                  href="/demos/layout"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Layout
-                </a>
-              </li>
-              <li
-                class="af-nav__item af-nav__item--separator "
-                role="none"
-              >
-                <span
-                  aria-expanded="false"
-                  class="af-nav__link"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Composants Toolkit
-                </span>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Button"
-                  class="af-nav__link"
-                  href="/demos/button"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Button
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Alert"
-                  class="af-nav__link"
-                  href="/demos/alert"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Alert
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li
-            class="af-nav__item af-nav__item--haschild "
-            role="none"
-          >
-            <span
-              aria-expanded="false"
-              class="af-nav__link"
-              role="menuitem"
-              tabindex="-1"
-            >
-              Pages
-            </span>
-            <i
-              class="glyphicon glyphicon-arrow-xs-down"
-            />
-            <ul
-              aria-label=""
-              class="af-nav__list af-nav__list--children"
-              role="menu"
-            >
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Not found"
-                  class="af-nav__link"
-                  href="/notfound"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Not found
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Forbidden"
-                  class="af-nav__link"
-                  href="/forbidden"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Forbidden
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
+      </nav>
+    </div>
+  </section>
   <a
     aria-controls="mainmenu"
     aria-haspopup="true"
@@ -1001,80 +1013,84 @@ exports[`<SearchMembers/> Should render SearchMembers 1`] = `
     </div>
   </div>
   <main
-    class="container af-main"
+    class="af-main"
   >
-    <h1
-      class="af-title--content"
+    <section
+      class="container"
     >
-      Recherche par Nom
-    </h1>
-    <form
-      autocomplete="off"
-      class="af-filter-inline"
-      id="form-search-members"
-      name="form-search-members"
-    >
-      <div
-        class="af-filter-inline__default af-filter-inline__default--search-distributors"
+      <h1
+        class="af-title--content"
+      >
+        Recherche par Nom
+      </h1>
+      <form
+        autocomplete="off"
+        class="af-filter-inline"
+        id="form-search-members"
+        name="form-search-members"
       >
         <div
-          class="af-filter-inline__field"
+          class="af-filter-inline__default af-filter-inline__default--search-distributors"
         >
           <div
-            class="col-md-12"
+            class="af-filter-inline__field"
           >
             <div
-              class="af-form__text"
+              class="col-md-12"
             >
-              <label
-                class="af-form__group-label"
-                for="name"
+              <div
+                class="af-form__text"
               >
-                Nom du membre
-              </label>
-              <input
-                autocomplete="search-name"
-                class="af-form__input-text"
-                id="name"
-                name="name"
-                placeholder="John Doe"
-                type="text"
-                value=""
-              />
-              <small
-                class="af-form__help"
-              >
-                Minimum 3 caractères pour un nom
-              </small>
+                <label
+                  class="af-form__group-label"
+                  for="name"
+                >
+                  Nom du membre
+                </label>
+                <input
+                  autocomplete="search-name"
+                  class="af-form__input-text"
+                  id="name"
+                  name="name"
+                  placeholder="John Doe"
+                  type="text"
+                  value=""
+                />
+                <small
+                  class="af-form__help"
+                >
+                  Minimum 3 caractères pour un nom
+                </small>
+              </div>
             </div>
           </div>
-        </div>
-        <button
-          class="btn af-btn af-btn--hasiconLeft af-btn--submitconfirm af-btn--disabled"
-          disabled=""
-          form="form-search-members"
-          type="submit"
-        >
-          <span
-            class="af-btn__text"
+          <button
+            class="btn af-btn af-btn--hasiconLeft af-btn--submitconfirm af-btn--disabled"
+            disabled=""
+            form="form-search-members"
+            type="submit"
           >
-            Rechercher
-          </span>
-          <i
-            class="glyphicon glyphicon-search"
-          />
-        </button>
-      </div>
-    </form>
-    <div
-      class="af-loader"
-    >
-      <h2
-        class="af-title"
+            <span
+              class="af-btn__text"
+            >
+              Rechercher
+            </span>
+            <i
+              class="glyphicon glyphicon-search"
+            />
+          </button>
+        </div>
+      </form>
+      <div
+        class="af-loader"
       >
-        Tableau des membres
-      </h2>
-    </div>
+        <h2
+          class="af-title"
+        >
+          Tableau des membres
+        </h2>
+      </div>
+    </section>
   </main>
   <footer
     class="af-footer"
@@ -1097,7 +1113,7 @@ exports[`<SearchMembers/> Should render SearchMembers 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.2.6
+        © 2022 AXA Tous droits réservés - v0.2.7
       </div>
     </div>
   </footer>

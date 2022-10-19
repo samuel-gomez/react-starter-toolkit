@@ -1,5 +1,14 @@
 @import '@axa-fr/react-toolkit-core/dist/assets/scss/core.scss';
 
+@mixin editPropLink {
+  margin-left: auto;
+  text-decoration: none;
+  cursor: pointer;
+  * {
+    color: $color-red-error;
+  }
+}
+
 .af-editor {
   display: flex;
   flex-direction: column;
@@ -18,19 +27,25 @@
       fill: $color-gray-2;
       line-height: 1;
       &:has(.glyphicon.glyphicon-cog) {
-        margin-left: auto;
-        text-decoration: none;
-        cursor: pointer;
-        * {
-          color: $color-red-error;
-        }
+        @include editPropLink;
       }
       .af-icon-svg {
         margin-right: 0.5rem;
+        height: 100%;
       }
       .glyphicon-cog {
         margin-right: 0.4rem;
         text-decoration: none;
+      }
+    }
+  }
+}
+
+@supports not selector(:has) {
+  .af-editor {
+    &__header {
+      .af-link:last-child {
+        @include editPropLink;
       }
     }
   }

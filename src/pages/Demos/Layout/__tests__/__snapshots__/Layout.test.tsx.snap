@@ -22,7 +22,7 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
       </span>
     </header>
     <article
-      class="af-livecode af-livecode--with-editor"
+      class="af-livecode af-livecode--with-editor af-livecode--layout"
     >
       <div>
         <div
@@ -80,285 +80,289 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
             </header>
           </div>
         </div>
-        <div
-          class="af-nav-container"
+        <section
+          class="af-menu"
         >
-          <button
-            aria-controls="mainmenu"
-            aria-haspopup="true"
-            class="mask fade "
-            id="togglemenu"
-            type="button"
-          />
-          <nav
-            aria-label="Menu principal"
-            class="af-nav af-drawer left "
-            role="navigation"
+          <div
+            class="af-nav-container"
           >
-            <div
-              class="container af-nav__wrapper"
+            <button
+              aria-controls="mainmenu"
+              aria-haspopup="true"
+              class="mask fade "
+              id="togglemenu"
+              type="button"
+            />
+            <nav
+              aria-label="Menu principal"
+              class="af-nav af-drawer left "
+              role="navigation"
             >
               <div
-                class="af-nav__aside-header"
+                class="container af-nav__wrapper"
               >
-                <h4
-                  class="af-nav__aside-title"
+                <div
+                  class="af-nav__aside-header"
                 >
-                  Menu
-                </h4>
-                <button
-                  aria-controls="mainmenu"
-                  aria-haspopup="true"
-                  class="af-nav__aside-close"
-                  id="togglemenu"
-                  type="button"
+                  <h4
+                    class="af-nav__aside-title"
+                  >
+                    Menu
+                  </h4>
+                  <button
+                    aria-controls="mainmenu"
+                    aria-haspopup="true"
+                    class="af-nav__aside-close"
+                    id="togglemenu"
+                    type="button"
+                  >
+                    ×
+                  </button>
+                </div>
+                <ul
+                  aria-labelledby="togglemenu"
+                  class="af-nav__list "
+                  id="mainmenu"
+                  role="menubar"
                 >
-                  ×
-                </button>
+                  <li
+                    class="af-nav__item af-nav__item--active "
+                    role="none"
+                  >
+                    <a
+                      aria-expanded="false"
+                      aria-haspopup="true"
+                      aria-label="Accueil"
+                      class="af-nav__link"
+                      href="/"
+                      role="menuitem"
+                      tabindex="0"
+                    >
+                      Accueil
+                    </a>
+                  </li>
+                  <li
+                    class="af-nav__item af-nav__item--haschild "
+                    role="none"
+                  >
+                    <a
+                      aria-expanded="false"
+                      aria-haspopup="true"
+                      aria-label="Démos"
+                      class="af-nav__link"
+                      href="/demos"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      Démos
+                    </a>
+                    <i
+                      class="glyphicon glyphicon-arrow-xs-down"
+                    />
+                    <ul
+                      aria-label=""
+                      class="af-nav__list af-nav__list--children"
+                      role="menu"
+                    >
+                      <li
+                        class="af-nav__item af-nav__item--separator "
+                        role="none"
+                      >
+                        <span
+                          aria-expanded="false"
+                          class="af-nav__link"
+                          role="menuitem"
+                          tabindex="-1"
+                        >
+                          Pages
+                        </span>
+                      </li>
+                      <li
+                        class="af-nav__item "
+                        role="none"
+                      >
+                        <a
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          aria-label="Membres"
+                          class="af-nav__link"
+                          href="/demos/members"
+                          role="menuitem"
+                          tabindex="-1"
+                        >
+                          Membres
+                        </a>
+                      </li>
+                      <li
+                        class="af-nav__item "
+                        role="none"
+                      >
+                        <a
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          aria-label="Rechercher"
+                          class="af-nav__link"
+                          href="/demos/search-members"
+                          role="menuitem"
+                          tabindex="-1"
+                        >
+                          Rechercher
+                        </a>
+                      </li>
+                      <li
+                        class="af-nav__item "
+                        role="none"
+                      >
+                        <a
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          aria-label="Modal"
+                          class="af-nav__link"
+                          href="/demos/modal"
+                          role="menuitem"
+                          tabindex="-1"
+                        >
+                          Modal
+                        </a>
+                      </li>
+                      <li
+                        class="af-nav__item "
+                        role="none"
+                      >
+                        <a
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          aria-label="Notification"
+                          class="af-nav__link"
+                          href="/demos/notification"
+                          role="menuitem"
+                          tabindex="-1"
+                        >
+                          Notification
+                        </a>
+                      </li>
+                      <li
+                        class="af-nav__item "
+                        role="none"
+                      >
+                        <a
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          aria-label="Layout"
+                          class="af-nav__link"
+                          href="/demos/layout"
+                          role="menuitem"
+                          tabindex="-1"
+                        >
+                          Layout
+                        </a>
+                      </li>
+                      <li
+                        class="af-nav__item af-nav__item--separator "
+                        role="none"
+                      >
+                        <span
+                          aria-expanded="false"
+                          class="af-nav__link"
+                          role="menuitem"
+                          tabindex="-1"
+                        >
+                          Composants Toolkit
+                        </span>
+                      </li>
+                      <li
+                        class="af-nav__item "
+                        role="none"
+                      >
+                        <a
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          aria-label="Button"
+                          class="af-nav__link"
+                          href="/demos/button"
+                          role="menuitem"
+                          tabindex="-1"
+                        >
+                          Button
+                        </a>
+                      </li>
+                      <li
+                        class="af-nav__item "
+                        role="none"
+                      >
+                        <a
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          aria-label="Alert"
+                          class="af-nav__link"
+                          href="/demos/alert"
+                          role="menuitem"
+                          tabindex="-1"
+                        >
+                          Alert
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li
+                    class="af-nav__item af-nav__item--haschild "
+                    role="none"
+                  >
+                    <span
+                      aria-expanded="false"
+                      class="af-nav__link"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      Pages
+                    </span>
+                    <i
+                      class="glyphicon glyphicon-arrow-xs-down"
+                    />
+                    <ul
+                      aria-label=""
+                      class="af-nav__list af-nav__list--children"
+                      role="menu"
+                    >
+                      <li
+                        class="af-nav__item "
+                        role="none"
+                      >
+                        <a
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          aria-label="Not found"
+                          class="af-nav__link"
+                          href="/notfound"
+                          role="menuitem"
+                          tabindex="-1"
+                        >
+                          Not found
+                        </a>
+                      </li>
+                      <li
+                        class="af-nav__item "
+                        role="none"
+                      >
+                        <a
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          aria-label="Forbidden"
+                          class="af-nav__link"
+                          href="/forbidden"
+                          role="menuitem"
+                          tabindex="-1"
+                        >
+                          Forbidden
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
               </div>
-              <ul
-                aria-labelledby="togglemenu"
-                class="af-nav__list "
-                id="mainmenu"
-                role="menubar"
-              >
-                <li
-                  class="af-nav__item af-nav__item--active "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Accueil"
-                    class="af-nav__link"
-                    href="/"
-                    role="menuitem"
-                    tabindex="0"
-                  >
-                    Accueil
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item af-nav__item--haschild "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Démos"
-                    class="af-nav__link"
-                    href="/demos"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Démos
-                  </a>
-                  <i
-                    class="glyphicon glyphicon-arrow-xs-down"
-                  />
-                  <ul
-                    aria-label=""
-                    class="af-nav__list af-nav__list--children"
-                    role="menu"
-                  >
-                    <li
-                      class="af-nav__item af-nav__item--separator "
-                      role="none"
-                    >
-                      <span
-                        aria-expanded="false"
-                        class="af-nav__link"
-                        role="menuitem"
-                        tabindex="-1"
-                      >
-                        Pages
-                      </span>
-                    </li>
-                    <li
-                      class="af-nav__item "
-                      role="none"
-                    >
-                      <a
-                        aria-expanded="false"
-                        aria-haspopup="true"
-                        aria-label="Membres"
-                        class="af-nav__link"
-                        href="/demos/members"
-                        role="menuitem"
-                        tabindex="-1"
-                      >
-                        Membres
-                      </a>
-                    </li>
-                    <li
-                      class="af-nav__item "
-                      role="none"
-                    >
-                      <a
-                        aria-expanded="false"
-                        aria-haspopup="true"
-                        aria-label="Rechercher"
-                        class="af-nav__link"
-                        href="/demos/search-members"
-                        role="menuitem"
-                        tabindex="-1"
-                      >
-                        Rechercher
-                      </a>
-                    </li>
-                    <li
-                      class="af-nav__item "
-                      role="none"
-                    >
-                      <a
-                        aria-expanded="false"
-                        aria-haspopup="true"
-                        aria-label="Modal"
-                        class="af-nav__link"
-                        href="/demos/modal"
-                        role="menuitem"
-                        tabindex="-1"
-                      >
-                        Modal
-                      </a>
-                    </li>
-                    <li
-                      class="af-nav__item "
-                      role="none"
-                    >
-                      <a
-                        aria-expanded="false"
-                        aria-haspopup="true"
-                        aria-label="Notification"
-                        class="af-nav__link"
-                        href="/demos/notification"
-                        role="menuitem"
-                        tabindex="-1"
-                      >
-                        Notification
-                      </a>
-                    </li>
-                    <li
-                      class="af-nav__item "
-                      role="none"
-                    >
-                      <a
-                        aria-expanded="false"
-                        aria-haspopup="true"
-                        aria-label="Layout"
-                        class="af-nav__link"
-                        href="/demos/layout"
-                        role="menuitem"
-                        tabindex="-1"
-                      >
-                        Layout
-                      </a>
-                    </li>
-                    <li
-                      class="af-nav__item af-nav__item--separator "
-                      role="none"
-                    >
-                      <span
-                        aria-expanded="false"
-                        class="af-nav__link"
-                        role="menuitem"
-                        tabindex="-1"
-                      >
-                        Composants Toolkit
-                      </span>
-                    </li>
-                    <li
-                      class="af-nav__item "
-                      role="none"
-                    >
-                      <a
-                        aria-expanded="false"
-                        aria-haspopup="true"
-                        aria-label="Button"
-                        class="af-nav__link"
-                        href="/demos/button"
-                        role="menuitem"
-                        tabindex="-1"
-                      >
-                        Button
-                      </a>
-                    </li>
-                    <li
-                      class="af-nav__item "
-                      role="none"
-                    >
-                      <a
-                        aria-expanded="false"
-                        aria-haspopup="true"
-                        aria-label="Alert"
-                        class="af-nav__link"
-                        href="/demos/alert"
-                        role="menuitem"
-                        tabindex="-1"
-                      >
-                        Alert
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <li
-                  class="af-nav__item af-nav__item--haschild "
-                  role="none"
-                >
-                  <span
-                    aria-expanded="false"
-                    class="af-nav__link"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Pages
-                  </span>
-                  <i
-                    class="glyphicon glyphicon-arrow-xs-down"
-                  />
-                  <ul
-                    aria-label=""
-                    class="af-nav__list af-nav__list--children"
-                    role="menu"
-                  >
-                    <li
-                      class="af-nav__item "
-                      role="none"
-                    >
-                      <a
-                        aria-expanded="false"
-                        aria-haspopup="true"
-                        aria-label="Not found"
-                        class="af-nav__link"
-                        href="/notfound"
-                        role="menuitem"
-                        tabindex="-1"
-                      >
-                        Not found
-                      </a>
-                    </li>
-                    <li
-                      class="af-nav__item "
-                      role="none"
-                    >
-                      <a
-                        aria-expanded="false"
-                        aria-haspopup="true"
-                        aria-label="Forbidden"
-                        class="af-nav__link"
-                        href="/forbidden"
-                        role="menuitem"
-                        tabindex="-1"
-                      >
-                        Forbidden
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
+            </nav>
+          </div>
+        </section>
         <a
           aria-controls="mainmenu"
           aria-haspopup="true"
@@ -387,7 +391,7 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
           </div>
         </div>
         <main
-          class="af-main af-main--demo"
+          class="af-main"
         >
           <section
             class="container"
@@ -423,7 +427,7 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
             <div
               class="af-footer-content"
             >
-              © 2022 AXA Tous droits réservés - v0.2.6
+              © 2022 AXA Tous droits réservés - v0.2.7
             </div>
           </div>
         </footer>
@@ -475,6 +479,42 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
             style="color: rgb(255, 121, 198);"
           >
             Layout
+          </span>
+          <span
+            class="token tag"
+            style="color: rgb(255, 121, 198);"
+          >
+             
+          </span>
+          <span
+            class="token tag attr-name"
+            style="color: rgb(241, 250, 140);"
+          >
+            fullScreen
+          </span>
+          <span
+            class="token tag script language-javascript script-punctuation punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            =
+          </span>
+          <span
+            class="token tag script language-javascript punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            {
+          </span>
+          <span
+            class="token tag script language-javascript boolean"
+            style="color: rgb(255, 121, 198);"
+          >
+            false
+          </span>
+          <span
+            class="token tag script language-javascript punctuation"
+            style="color: rgb(248, 248, 242);"
+          >
+            }
           </span>
           <span
             class="token tag"
@@ -801,12 +841,6 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
             "
           </span>
           <span
-            class="token tag attr-value"
-            style="color: rgb(255, 121, 198);"
-          >
-            demo
-          </span>
-          <span
             class="token tag attr-value punctuation"
             style="color: rgb(248, 248, 242);"
           >
@@ -837,63 +871,6 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
           >
               
           </span>
-          <span
-            class="token tag punctuation"
-            style="color: rgb(248, 248, 242);"
-          >
-            &lt;
-          </span>
-          <span
-            class="token tag"
-            style="color: rgb(255, 121, 198);"
-          >
-            section
-          </span>
-          <span
-            class="token tag"
-            style="color: rgb(255, 121, 198);"
-          >
-             
-          </span>
-          <span
-            class="token tag attr-name"
-            style="color: rgb(241, 250, 140);"
-          >
-            className
-          </span>
-          <span
-            class="token tag attr-value punctuation attr-equals"
-            style="color: rgb(248, 248, 242);"
-          >
-            =
-          </span>
-          <span
-            class="token tag attr-value punctuation"
-            style="color: rgb(248, 248, 242);"
-          >
-            "
-          </span>
-          <span
-            class="token tag attr-value"
-            style="color: rgb(255, 121, 198);"
-          >
-            container
-          </span>
-          <span
-            class="token tag attr-value punctuation"
-            style="color: rgb(248, 248, 242);"
-          >
-            "
-          </span>
-          <span
-            class="token tag punctuation"
-            style="color: rgb(248, 248, 242);"
-          >
-            &gt;
-          </span>
-          <span
-            class="token plain-text"
-          />
         </div>
         <div
           class="token-line"
@@ -1085,28 +1062,11 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
         >
           <span
             class="token plain-text"
-          />
-          <span
-            class="token tag punctuation"
-            style="color: rgb(248, 248, 242);"
+            style="display: inline-block;"
           >
-            &lt;/
+            
+
           </span>
-          <span
-            class="token tag"
-            style="color: rgb(255, 121, 198);"
-          >
-            section
-          </span>
-          <span
-            class="token tag punctuation"
-            style="color: rgb(248, 248, 242);"
-          >
-            &gt;
-          </span>
-          <span
-            class="token plain-text"
-          />
         </div>
         <div
           class="token-line"
@@ -1207,45 +1167,13 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
               >
                 classModifier
               </label>
-              <div
-                class="af-form__select"
-              >
-                <div
-                  class="af-form__select-container"
-                >
-                  <select
-                    aria-label="select-classModifier"
-                    class="af-form__input-select"
-                    id="classModifier"
-                    name="classModifier"
-                  >
-                    <option
-                      value="danger"
-                    >
-                      Danger
-                    </option>
-                    <option
-                      value="success"
-                    >
-                      Success
-                    </option>
-                    <option
-                      value="error"
-                    >
-                      Error
-                    </option>
-                    <option
-                      value="info"
-                    >
-                      Info
-                    </option>
-                  </select>
-                  <span
-                    aria-controls="classModifier"
-                    class="glyphicon glyphicon-menu-down"
-                  />
-                </div>
-              </div>
+              <input
+                class="af-form__input-text"
+                id="classModifier"
+                name="classModifier"
+                type="text"
+                value=""
+              />
             </div>
             <div
               class="af-form-editor__field"
@@ -1266,6 +1194,42 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
                   Edit children
                 </span>
               </button>
+            </div>
+            <div
+              class="af-form-editor__field"
+            >
+              <label
+                class="af-form__group-label"
+                for="fullScreen"
+              >
+                fullScreen
+              </label>
+              <div
+                class="af-form__checkbox-toggle"
+              >
+                <input
+                  class="af-form__input-checkbox"
+                  id="fullScreen"
+                  mode="toggle"
+                  name="fullScreen"
+                  type="checkbox"
+                />
+                <label
+                  class="af-form__label"
+                  for="fullScreen"
+                >
+                  <span
+                    class="af-form__indicator"
+                  >
+                    <i
+                      class="glyphicon glyphicon-ok"
+                    />
+                  </span>
+                  <span
+                    class="af-form__description"
+                  />
+                </label>
+              </div>
             </div>
             <div
               class="af-form-editor__field"
