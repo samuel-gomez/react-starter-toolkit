@@ -39,3 +39,32 @@
     }
   }
 }
+
+/* CUSTOM mixin : shadow scroll horizontal & vertical *************************************************/
+
+@mixin scroll-horizontal-shadow($maxWidth: 100%) {
+  max-width: $maxWidth;
+  overflow: auto;
+  background: linear-gradient(90deg, rgba(255, 255, 245, 0.6) 30%, rgba(255, 255, 255, 0)) left center,
+    linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 245, 0.6) 80%) right center,
+    radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)) 0 50%,
+    radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)) right center;
+  background-repeat: no-repeat;
+  background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
+  background-attachment: local, local, scroll, scroll;
+}
+
+@mixin scroll-vertical-shadow($maxHeight: auto) {
+  max-height: $maxHeight;
+  overflow: auto;
+  background: linear-gradient(white 30%, rgba(255, 255, 255, 0)), linear-gradient(rgba(255, 255, 255, 0), white 70%) 0 100%,
+    radial-gradient(50% 0, farthest-side, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
+    radial-gradient(50% 100%, farthest-side, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) 0 100%;
+  background: linear-gradient(white 30%, rgba(255, 255, 255, 0)), linear-gradient(rgba(255, 255, 255, 0), white 70%) 0 100%,
+    radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
+    radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) 0 100%;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+  background-attachment: local, local, scroll, scroll;
+}

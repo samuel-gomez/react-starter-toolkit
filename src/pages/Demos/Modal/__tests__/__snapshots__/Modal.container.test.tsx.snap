@@ -60,285 +60,289 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer and called funct
         </header>
       </div>
     </div>
-    <div
-      class="af-nav-container"
+    <section
+      class="af-menu"
     >
-      <button
-        aria-controls="mainmenu"
-        aria-haspopup="true"
-        class="mask fade "
-        id="togglemenu"
-        type="button"
-      />
-      <nav
-        aria-label="Menu principal"
-        class="af-nav af-drawer left "
-        role="navigation"
+      <div
+        class="af-nav-container"
       >
-        <div
-          class="container af-nav__wrapper"
+        <button
+          aria-controls="mainmenu"
+          aria-haspopup="true"
+          class="mask fade "
+          id="togglemenu"
+          type="button"
+        />
+        <nav
+          aria-label="Menu principal"
+          class="af-nav af-drawer left "
+          role="navigation"
         >
           <div
-            class="af-nav__aside-header"
+            class="container af-nav__wrapper"
           >
-            <h4
-              class="af-nav__aside-title"
+            <div
+              class="af-nav__aside-header"
             >
-              Menu
-            </h4>
-            <button
-              aria-controls="mainmenu"
-              aria-haspopup="true"
-              class="af-nav__aside-close"
-              id="togglemenu"
-              type="button"
+              <h4
+                class="af-nav__aside-title"
+              >
+                Menu
+              </h4>
+              <button
+                aria-controls="mainmenu"
+                aria-haspopup="true"
+                class="af-nav__aside-close"
+                id="togglemenu"
+                type="button"
+              >
+                ×
+              </button>
+            </div>
+            <ul
+              aria-labelledby="togglemenu"
+              class="af-nav__list "
+              id="mainmenu"
+              role="menubar"
             >
-              ×
-            </button>
+              <li
+                class="af-nav__item af-nav__item--active "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Accueil"
+                  class="af-nav__link"
+                  href="/"
+                  role="menuitem"
+                  tabindex="0"
+                >
+                  Accueil
+                </a>
+              </li>
+              <li
+                class="af-nav__item af-nav__item--haschild "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Démos"
+                  class="af-nav__link"
+                  href="/demos"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Démos
+                </a>
+                <i
+                  class="glyphicon glyphicon-arrow-xs-down"
+                />
+                <ul
+                  aria-label=""
+                  class="af-nav__list af-nav__list--children"
+                  role="menu"
+                >
+                  <li
+                    class="af-nav__item af-nav__item--separator "
+                    role="none"
+                  >
+                    <span
+                      aria-expanded="false"
+                      class="af-nav__link"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      Pages
+                    </span>
+                  </li>
+                  <li
+                    class="af-nav__item "
+                    role="none"
+                  >
+                    <a
+                      aria-expanded="false"
+                      aria-haspopup="true"
+                      aria-label="Membres"
+                      class="af-nav__link"
+                      href="/demos/members"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      Membres
+                    </a>
+                  </li>
+                  <li
+                    class="af-nav__item "
+                    role="none"
+                  >
+                    <a
+                      aria-expanded="false"
+                      aria-haspopup="true"
+                      aria-label="Rechercher"
+                      class="af-nav__link"
+                      href="/demos/search-members"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      Rechercher
+                    </a>
+                  </li>
+                  <li
+                    class="af-nav__item "
+                    role="none"
+                  >
+                    <a
+                      aria-expanded="false"
+                      aria-haspopup="true"
+                      aria-label="Modal"
+                      class="af-nav__link"
+                      href="/demos/modal"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      Modal
+                    </a>
+                  </li>
+                  <li
+                    class="af-nav__item "
+                    role="none"
+                  >
+                    <a
+                      aria-expanded="false"
+                      aria-haspopup="true"
+                      aria-label="Notification"
+                      class="af-nav__link"
+                      href="/demos/notification"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      Notification
+                    </a>
+                  </li>
+                  <li
+                    class="af-nav__item "
+                    role="none"
+                  >
+                    <a
+                      aria-expanded="false"
+                      aria-haspopup="true"
+                      aria-label="Layout"
+                      class="af-nav__link"
+                      href="/demos/layout"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      Layout
+                    </a>
+                  </li>
+                  <li
+                    class="af-nav__item af-nav__item--separator "
+                    role="none"
+                  >
+                    <span
+                      aria-expanded="false"
+                      class="af-nav__link"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      Composants Toolkit
+                    </span>
+                  </li>
+                  <li
+                    class="af-nav__item "
+                    role="none"
+                  >
+                    <a
+                      aria-expanded="false"
+                      aria-haspopup="true"
+                      aria-label="Button"
+                      class="af-nav__link"
+                      href="/demos/button"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      Button
+                    </a>
+                  </li>
+                  <li
+                    class="af-nav__item "
+                    role="none"
+                  >
+                    <a
+                      aria-expanded="false"
+                      aria-haspopup="true"
+                      aria-label="Alert"
+                      class="af-nav__link"
+                      href="/demos/alert"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      Alert
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li
+                class="af-nav__item af-nav__item--haschild "
+                role="none"
+              >
+                <span
+                  aria-expanded="false"
+                  class="af-nav__link"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Pages
+                </span>
+                <i
+                  class="glyphicon glyphicon-arrow-xs-down"
+                />
+                <ul
+                  aria-label=""
+                  class="af-nav__list af-nav__list--children"
+                  role="menu"
+                >
+                  <li
+                    class="af-nav__item "
+                    role="none"
+                  >
+                    <a
+                      aria-expanded="false"
+                      aria-haspopup="true"
+                      aria-label="Not found"
+                      class="af-nav__link"
+                      href="/notfound"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      Not found
+                    </a>
+                  </li>
+                  <li
+                    class="af-nav__item "
+                    role="none"
+                  >
+                    <a
+                      aria-expanded="false"
+                      aria-haspopup="true"
+                      aria-label="Forbidden"
+                      class="af-nav__link"
+                      href="/forbidden"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      Forbidden
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
-          <ul
-            aria-labelledby="togglemenu"
-            class="af-nav__list "
-            id="mainmenu"
-            role="menubar"
-          >
-            <li
-              class="af-nav__item af-nav__item--active "
-              role="none"
-            >
-              <a
-                aria-expanded="false"
-                aria-haspopup="true"
-                aria-label="Accueil"
-                class="af-nav__link"
-                href="/"
-                role="menuitem"
-                tabindex="0"
-              >
-                Accueil
-              </a>
-            </li>
-            <li
-              class="af-nav__item af-nav__item--haschild "
-              role="none"
-            >
-              <a
-                aria-expanded="false"
-                aria-haspopup="true"
-                aria-label="Démos"
-                class="af-nav__link"
-                href="/demos"
-                role="menuitem"
-                tabindex="-1"
-              >
-                Démos
-              </a>
-              <i
-                class="glyphicon glyphicon-arrow-xs-down"
-              />
-              <ul
-                aria-label=""
-                class="af-nav__list af-nav__list--children"
-                role="menu"
-              >
-                <li
-                  class="af-nav__item af-nav__item--separator "
-                  role="none"
-                >
-                  <span
-                    aria-expanded="false"
-                    class="af-nav__link"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Pages
-                  </span>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Membres"
-                    class="af-nav__link"
-                    href="/demos/members"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Membres
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Rechercher"
-                    class="af-nav__link"
-                    href="/demos/search-members"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Rechercher
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Modal"
-                    class="af-nav__link"
-                    href="/demos/modal"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Modal
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Notification"
-                    class="af-nav__link"
-                    href="/demos/notification"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Notification
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Layout"
-                    class="af-nav__link"
-                    href="/demos/layout"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Layout
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item af-nav__item--separator "
-                  role="none"
-                >
-                  <span
-                    aria-expanded="false"
-                    class="af-nav__link"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Composants Toolkit
-                  </span>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Button"
-                    class="af-nav__link"
-                    href="/demos/button"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Button
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Alert"
-                    class="af-nav__link"
-                    href="/demos/alert"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Alert
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li
-              class="af-nav__item af-nav__item--haschild "
-              role="none"
-            >
-              <span
-                aria-expanded="false"
-                class="af-nav__link"
-                role="menuitem"
-                tabindex="-1"
-              >
-                Pages
-              </span>
-              <i
-                class="glyphicon glyphicon-arrow-xs-down"
-              />
-              <ul
-                aria-label=""
-                class="af-nav__list af-nav__list--children"
-                role="menu"
-              >
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Not found"
-                    class="af-nav__link"
-                    href="/notfound"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Not found
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Forbidden"
-                    class="af-nav__link"
-                    href="/forbidden"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Forbidden
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
+        </nav>
+      </div>
+    </section>
     <a
       aria-controls="mainmenu"
       aria-haspopup="true"
@@ -362,1116 +366,1120 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer and called funct
         <h1
           class="af-title-bar__title"
         >
-          Demo modal
+          Demo custom modal
         </h1>
       </div>
     </div>
     <main
-      class="container af-main"
+      class="af-main"
     >
-      <h1
-        class="af-title--content"
+      <section
+        class="container"
       >
-        Example
-      </h1>
-      <a
-        class="af-link af-link--hasIconRight"
-        href="https://codesandbox.io/embed/modal-default-l6sq5"
-        rel="nofollow noreferrer noopener"
-        target="blank"
-      >
-        <span
-          class="af-link__text"
+        <h1
+          class="af-title--content"
         >
-          CodeSandBox
-        </span>
-        <i
-          class="glyphicon glyphicon-new-window"
-        />
-      </a>
-      <article
-        class="af-livecode"
-      >
-        <div
-          style="background: white; padding: 2rem; text-align: center; width: 100%;"
+          Custom Modal
+        </h1>
+        <a
+          class="af-link af-link--hasIconRight"
+          href="https://codesandbox.io/embed/modal-default-l6sq5"
+          rel="nofollow noreferrer noopener"
+          target="blank"
         >
-          <button
-            class="btn af-btn"
-            type="submit"
+          <span
+            class="af-link__text"
           >
-            <span
-              class="af-btn__text"
-            >
-              Click me to launch modal
-            </span>
-          </button>
-        </div>
-        <pre
-          class="prism-code language-jsx"
-          style="color: rgb(248, 248, 242); background-color: rgb(40, 42, 54); padding: 1rem; font-size: 0.8rem; position: relative;"
+            CodeSandBox
+          </span>
+          <i
+            class="glyphicon glyphicon-new-window"
+          />
+        </a>
+        <article
+          class="af-livecode"
         >
-          <button
-            class="af-btn--circle af-clipboard"
-            title="Copy to clipboard"
-          >
-            <i
-              class="glyphicon glyphicon-copy"
-            />
-            <span
-              class="af-clipboard__message"
-            >
-              Copied !
-            </span>
-          </button>
           <div
-            class="token-line"
-            style="color: rgb(248, 248, 242);"
+            style="background: white; padding: 2rem; text-align: center; width: 100%;"
           >
-            <span
-              class="token plain"
-              style="display: inline-block;"
+            <button
+              class="btn af-btn"
+              type="submit"
             >
-              
+              <span
+                class="af-btn__text"
+              >
+                Click me to launch modal
+              </span>
+            </button>
+          </div>
+          <pre
+            class="prism-code language-jsx"
+            style="color: rgb(248, 248, 242); background-color: rgb(40, 42, 54); padding: 1rem; font-size: 0.8rem; position: relative;"
+          >
+            <button
+              class="af-btn--circle af-clipboard"
+              title="Copy to clipboard"
+            >
+              <i
+                class="glyphicon glyphicon-copy"
+              />
+              <span
+                class="af-clipboard__message"
+              >
+                Copied !
+              </span>
+            </button>
+            <div
+              class="token-line"
+              style="color: rgb(248, 248, 242);"
+            >
+              <span
+                class="token plain"
+                style="display: inline-block;"
+              >
+                
 
-            </span>
-          </div>
-          <div
-            class="token-line"
-            style="color: rgb(248, 248, 242);"
-          >
-            <span
-              class="token plain"
-            />
-            <span
-              class="token tag punctuation"
+              </span>
+            </div>
+            <div
+              class="token-line"
               style="color: rgb(248, 248, 242);"
             >
-              &lt;
-            </span>
-            <span
-              class="token tag punctuation"
+              <span
+                class="token plain"
+              />
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &lt;
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &gt;
+              </span>
+              <span
+                class="token plain-text"
+              />
+            </div>
+            <div
+              class="token-line"
               style="color: rgb(248, 248, 242);"
             >
-              &gt;
-            </span>
-            <span
-              class="token plain-text"
-            />
-          </div>
-          <div
-            class="token-line"
-            style="color: rgb(248, 248, 242);"
-          >
-            <span
-              class="token plain-text"
-            >
-                
-            </span>
-            <span
-              class="token tag punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              &lt;
-            </span>
-            <span
-              class="token tag class-name"
-              style="color: rgb(255, 121, 198);"
-            >
-              Button
-            </span>
-            <span
-              class="token tag"
-              style="color: rgb(255, 121, 198);"
-            >
-               
-            </span>
-            <span
-              class="token tag attr-name"
-              style="color: rgb(241, 250, 140);"
-            >
-              type
-            </span>
-            <span
-              class="token tag attr-value punctuation attr-equals"
-              style="color: rgb(248, 248, 242);"
-            >
-              =
-            </span>
-            <span
-              class="token tag attr-value punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              "
-            </span>
-            <span
-              class="token tag attr-value"
-              style="color: rgb(255, 121, 198);"
-            >
-              submit
-            </span>
-            <span
-              class="token tag attr-value punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              "
-            </span>
-            <span
-              class="token tag"
-              style="color: rgb(255, 121, 198);"
-            >
-               
-            </span>
-            <span
-              class="token tag attr-name"
-              style="color: rgb(241, 250, 140);"
-            >
-              onClick
-            </span>
-            <span
-              class="token tag script language-javascript script-punctuation punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              =
-            </span>
-            <span
-              class="token tag script language-javascript punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              {
-            </span>
-            <span
-              class="token tag script language-javascript"
-              style="color: rgb(255, 121, 198);"
-            >
-              openModal
-            </span>
-            <span
-              class="token tag script language-javascript punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              }
-            </span>
-            <span
-              class="token tag punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              &gt;
-            </span>
-            <span
-              class="token plain-text"
-            />
-          </div>
-          <div
-            class="token-line"
-            style="color: rgb(248, 248, 242);"
-          >
-            <span
-              class="token plain-text"
-            >
+              <span
+                class="token plain-text"
+              >
                   
-            </span>
-            <span
-              class="token tag punctuation"
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &lt;
+              </span>
+              <span
+                class="token tag class-name"
+                style="color: rgb(255, 121, 198);"
+              >
+                Button
+              </span>
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                 
+              </span>
+              <span
+                class="token tag attr-name"
+                style="color: rgb(241, 250, 140);"
+              >
+                type
+              </span>
+              <span
+                class="token tag attr-value punctuation attr-equals"
+                style="color: rgb(248, 248, 242);"
+              >
+                =
+              </span>
+              <span
+                class="token tag attr-value punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                "
+              </span>
+              <span
+                class="token tag attr-value"
+                style="color: rgb(255, 121, 198);"
+              >
+                submit
+              </span>
+              <span
+                class="token tag attr-value punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                "
+              </span>
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                 
+              </span>
+              <span
+                class="token tag attr-name"
+                style="color: rgb(241, 250, 140);"
+              >
+                onClick
+              </span>
+              <span
+                class="token tag script language-javascript script-punctuation punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                =
+              </span>
+              <span
+                class="token tag script language-javascript punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                {
+              </span>
+              <span
+                class="token tag script language-javascript"
+                style="color: rgb(255, 121, 198);"
+              >
+                openModal
+              </span>
+              <span
+                class="token tag script language-javascript punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                }
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &gt;
+              </span>
+              <span
+                class="token plain-text"
+              />
+            </div>
+            <div
+              class="token-line"
               style="color: rgb(248, 248, 242);"
             >
-              &lt;
-            </span>
-            <span
-              class="token tag"
-              style="color: rgb(255, 121, 198);"
-            >
-              span
-            </span>
-            <span
-              class="token tag"
-              style="color: rgb(255, 121, 198);"
-            >
-               
-            </span>
-            <span
-              class="token tag attr-name"
-              style="color: rgb(241, 250, 140);"
-            >
-              className
-            </span>
-            <span
-              class="token tag attr-value punctuation attr-equals"
-              style="color: rgb(248, 248, 242);"
-            >
-              =
-            </span>
-            <span
-              class="token tag attr-value punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              "
-            </span>
-            <span
-              class="token tag attr-value"
-              style="color: rgb(255, 121, 198);"
-            >
-              af-btn__text
-            </span>
-            <span
-              class="token tag attr-value punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              "
-            </span>
-            <span
-              class="token tag punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              &gt;
-            </span>
-            <span
-              class="token plain-text"
-            >
-              Click me to launch modal
-            </span>
-            <span
-              class="token tag punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              &lt;/
-            </span>
-            <span
-              class="token tag"
-              style="color: rgb(255, 121, 198);"
-            >
-              span
-            </span>
-            <span
-              class="token tag punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              &gt;
-            </span>
-            <span
-              class="token plain-text"
-            />
-          </div>
-          <div
-            class="token-line"
-            style="color: rgb(248, 248, 242);"
-          >
-            <span
-              class="token plain-text"
-            >
-                
-            </span>
-            <span
-              class="token tag punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              &lt;/
-            </span>
-            <span
-              class="token tag class-name"
-              style="color: rgb(255, 121, 198);"
-            >
-              Button
-            </span>
-            <span
-              class="token tag punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              &gt;
-            </span>
-            <span
-              class="token plain-text"
-            />
-          </div>
-          <div
-            class="token-line"
-            style="color: rgb(248, 248, 242);"
-          >
-            <span
-              class="token plain-text"
-            >
-                
-            </span>
-            <span
-              class="token tag punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              &lt;
-            </span>
-            <span
-              class="token tag class-name"
-              style="color: rgb(255, 121, 198);"
-            >
-              Modal
-            </span>
-            <span
-              class="token tag"
-              style="color: rgb(255, 121, 198);"
-            >
-               
-            </span>
-            <span
-              class="token tag attr-name"
-              style="color: rgb(241, 250, 140);"
-            >
-              isOpen
-            </span>
-            <span
-              class="token tag script language-javascript script-punctuation punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              =
-            </span>
-            <span
-              class="token tag script language-javascript punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              {
-            </span>
-            <span
-              class="token tag script language-javascript"
-              style="color: rgb(255, 121, 198);"
-            >
-              isOpen
-            </span>
-            <span
-              class="token tag script language-javascript punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              }
-            </span>
-            <span
-              class="token tag"
-              style="color: rgb(255, 121, 198);"
-            >
-               
-            </span>
-            <span
-              class="token tag attr-name"
-              style="color: rgb(241, 250, 140);"
-            >
-              onOutsideTap
-            </span>
-            <span
-              class="token tag script language-javascript script-punctuation punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              =
-            </span>
-            <span
-              class="token tag script language-javascript punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              {
-            </span>
-            <span
-              class="token tag script language-javascript"
-              style="color: rgb(255, 121, 198);"
-            >
-              onCancel
-            </span>
-            <span
-              class="token tag script language-javascript punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              }
-            </span>
-            <span
-              class="token tag"
-              style="color: rgb(255, 121, 198);"
-            >
-               
-            </span>
-            <span
-              class="token tag attr-name"
-              style="color: rgb(241, 250, 140);"
-            >
-              classModifier
-            </span>
-            <span
-              class="token tag script language-javascript script-punctuation punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              =
-            </span>
-            <span
-              class="token tag script language-javascript punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              {
-            </span>
-            <span
-              class="token tag script language-javascript"
-              style="color: rgb(255, 121, 198);"
-            >
-              classModifier
-            </span>
-            <span
-              class="token tag script language-javascript punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              }
-            </span>
-            <span
-              class="token tag punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              &gt;
-            </span>
-            <span
-              class="token plain-text"
-            />
-          </div>
-          <div
-            class="token-line"
-            style="color: rgb(248, 248, 242);"
-          >
-            <span
-              class="token plain-text"
-            >
-                  
-            </span>
-            <span
-              class="token tag punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              &lt;
-            </span>
-            <span
-              class="token tag class-name"
-              style="color: rgb(255, 121, 198);"
-            >
-              ModalCommonHeader
-            </span>
-            <span
-              class="token tag"
-              style="color: rgb(255, 121, 198);"
-            >
-               
-            </span>
-            <span
-              class="token tag attr-name"
-              style="color: rgb(241, 250, 140);"
-            >
-              onCancel
-            </span>
-            <span
-              class="token tag script language-javascript script-punctuation punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              =
-            </span>
-            <span
-              class="token tag script language-javascript punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              {
-            </span>
-            <span
-              class="token tag script language-javascript"
-              style="color: rgb(255, 121, 198);"
-            >
-              onCancel
-            </span>
-            <span
-              class="token tag script language-javascript punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              }
-            </span>
-            <span
-              class="token tag"
-              style="color: rgb(255, 121, 198);"
-            >
-               
-            </span>
-            <span
-              class="token tag attr-name"
-              style="color: rgb(241, 250, 140);"
-            >
-              title
-            </span>
-            <span
-              class="token tag attr-value punctuation attr-equals"
-              style="color: rgb(248, 248, 242);"
-            >
-              =
-            </span>
-            <span
-              class="token tag attr-value punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              "
-            </span>
-            <span
-              class="token tag attr-value"
-              style="color: rgb(255, 121, 198);"
-            >
-              Validation des informations générales
-            </span>
-            <span
-              class="token tag attr-value punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              "
-            </span>
-            <span
-              class="token tag"
-              style="color: rgb(255, 121, 198);"
-            >
-               
-            </span>
-            <span
-              class="token tag punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              /&gt;
-            </span>
-            <span
-              class="token plain-text"
-            />
-          </div>
-          <div
-            class="token-line"
-            style="color: rgb(248, 248, 242);"
-          >
-            <span
-              class="token plain-text"
-            >
-                  
-            </span>
-            <span
-              class="token tag punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              &lt;
-            </span>
-            <span
-              class="token tag class-name"
-              style="color: rgb(255, 121, 198);"
-            >
-              ModalCommonBody
-            </span>
-            <span
-              class="token tag punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              &gt;
-            </span>
-            <span
-              class="token plain-text"
-            />
-          </div>
-          <div
-            class="token-line"
-            style="color: rgb(248, 248, 242);"
-          >
-            <span
-              class="token plain-text"
-            >
+              <span
+                class="token plain-text"
+              >
                     
-            </span>
-            <span
-              class="token tag punctuation"
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &lt;
+              </span>
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                span
+              </span>
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                 
+              </span>
+              <span
+                class="token tag attr-name"
+                style="color: rgb(241, 250, 140);"
+              >
+                className
+              </span>
+              <span
+                class="token tag attr-value punctuation attr-equals"
+                style="color: rgb(248, 248, 242);"
+              >
+                =
+              </span>
+              <span
+                class="token tag attr-value punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                "
+              </span>
+              <span
+                class="token tag attr-value"
+                style="color: rgb(255, 121, 198);"
+              >
+                af-btn__text
+              </span>
+              <span
+                class="token tag attr-value punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                "
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &gt;
+              </span>
+              <span
+                class="token plain-text"
+              >
+                Click me to launch modal
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &lt;/
+              </span>
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                span
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &gt;
+              </span>
+              <span
+                class="token plain-text"
+              />
+            </div>
+            <div
+              class="token-line"
               style="color: rgb(248, 248, 242);"
             >
-              &lt;
-            </span>
-            <span
-              class="token tag class-name"
-              style="color: rgb(255, 121, 198);"
-            >
-              Alert
-            </span>
-            <span
-              class="token tag"
-              style="color: rgb(255, 121, 198);"
-            >
-               
-            </span>
-            <span
-              class="token tag attr-name"
-              style="color: rgb(241, 250, 140);"
-            >
-              classModifier
-            </span>
-            <span
-              class="token tag attr-value punctuation attr-equals"
-              style="color: rgb(248, 248, 242);"
-            >
-              =
-            </span>
-            <span
-              class="token tag attr-value punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              "
-            </span>
-            <span
-              class="token tag attr-value"
-              style="color: rgb(255, 121, 198);"
-            >
-              info
-            </span>
-            <span
-              class="token tag attr-value punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              "
-            </span>
-            <span
-              class="token tag"
-              style="color: rgb(255, 121, 198);"
-            >
-               
-            </span>
-            <span
-              class="token tag attr-name"
-              style="color: rgb(241, 250, 140);"
-            >
-              icon
-            </span>
-            <span
-              class="token tag attr-value punctuation attr-equals"
-              style="color: rgb(248, 248, 242);"
-            >
-              =
-            </span>
-            <span
-              class="token tag attr-value punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              "
-            </span>
-            <span
-              class="token tag attr-value"
-              style="color: rgb(255, 121, 198);"
-            >
-              info-sign
-            </span>
-            <span
-              class="token tag attr-value punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              "
-            </span>
-            <span
-              class="token tag"
-              style="color: rgb(255, 121, 198);"
-            >
-               
-            </span>
-            <span
-              class="token tag attr-name"
-              style="color: rgb(241, 250, 140);"
-            >
-              title
-            </span>
-            <span
-              class="token tag attr-value punctuation attr-equals"
-              style="color: rgb(248, 248, 242);"
-            >
-              =
-            </span>
-            <span
-              class="token tag attr-value punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              "
-            </span>
-            <span
-              class="token tag attr-value"
-              style="color: rgb(255, 121, 198);"
-            >
-              Vous allez créer un nouvel élément.
-            </span>
-            <span
-              class="token tag attr-value punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              "
-            </span>
-            <span
-              class="token tag"
-              style="color: rgb(255, 121, 198);"
-            >
-               
-            </span>
-            <span
-              class="token tag punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              /&gt;
-            </span>
-            <span
-              class="token plain-text"
-            />
-          </div>
-          <div
-            class="token-line"
-            style="color: rgb(248, 248, 242);"
-          >
-            <span
-              class="token plain-text"
-            >
-                    
-            </span>
-            <span
-              class="token tag punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              &lt;
-            </span>
-            <span
-              class="token tag"
-              style="color: rgb(255, 121, 198);"
-            >
-              p
-            </span>
-            <span
-              class="token tag punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              &gt;
-            </span>
-            <span
-              class="token plain-text"
-            >
-              Confirmez-vous vouloir valider avec les informations suivantes ?
-            </span>
-            <span
-              class="token tag punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              &lt;/
-            </span>
-            <span
-              class="token tag"
-              style="color: rgb(255, 121, 198);"
-            >
-              p
-            </span>
-            <span
-              class="token tag punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              &gt;
-            </span>
-            <span
-              class="token plain-text"
-            >
-                    
-            </span>
-          </div>
-          <div
-            class="token-line"
-            style="color: rgb(248, 248, 242);"
-          >
-            <span
-              class="token plain-text"
-            >
+              <span
+                class="token plain-text"
+              >
                   
-            </span>
-            <span
-              class="token tag punctuation"
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &lt;/
+              </span>
+              <span
+                class="token tag class-name"
+                style="color: rgb(255, 121, 198);"
+              >
+                Button
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &gt;
+              </span>
+              <span
+                class="token plain-text"
+              />
+            </div>
+            <div
+              class="token-line"
               style="color: rgb(248, 248, 242);"
             >
-              &lt;/
-            </span>
-            <span
-              class="token tag class-name"
-              style="color: rgb(255, 121, 198);"
-            >
-              ModalCommonBody
-            </span>
-            <span
-              class="token tag punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              &gt;
-            </span>
-            <span
-              class="token plain-text"
-            />
-          </div>
-          <div
-            class="token-line"
-            style="color: rgb(248, 248, 242);"
-          >
-            <span
-              class="token plain-text"
-            >
+              <span
+                class="token plain-text"
+              >
                   
-            </span>
-            <span
-              class="token tag punctuation"
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &lt;
+              </span>
+              <span
+                class="token tag class-name"
+                style="color: rgb(255, 121, 198);"
+              >
+                Modal
+              </span>
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                 
+              </span>
+              <span
+                class="token tag attr-name"
+                style="color: rgb(241, 250, 140);"
+              >
+                isOpen
+              </span>
+              <span
+                class="token tag script language-javascript script-punctuation punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                =
+              </span>
+              <span
+                class="token tag script language-javascript punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                {
+              </span>
+              <span
+                class="token tag script language-javascript"
+                style="color: rgb(255, 121, 198);"
+              >
+                isOpen
+              </span>
+              <span
+                class="token tag script language-javascript punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                }
+              </span>
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                 
+              </span>
+              <span
+                class="token tag attr-name"
+                style="color: rgb(241, 250, 140);"
+              >
+                onOutsideTap
+              </span>
+              <span
+                class="token tag script language-javascript script-punctuation punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                =
+              </span>
+              <span
+                class="token tag script language-javascript punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                {
+              </span>
+              <span
+                class="token tag script language-javascript"
+                style="color: rgb(255, 121, 198);"
+              >
+                onCancel
+              </span>
+              <span
+                class="token tag script language-javascript punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                }
+              </span>
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                 
+              </span>
+              <span
+                class="token tag attr-name"
+                style="color: rgb(241, 250, 140);"
+              >
+                classModifier
+              </span>
+              <span
+                class="token tag script language-javascript script-punctuation punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                =
+              </span>
+              <span
+                class="token tag script language-javascript punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                {
+              </span>
+              <span
+                class="token tag script language-javascript"
+                style="color: rgb(255, 121, 198);"
+              >
+                classModifier
+              </span>
+              <span
+                class="token tag script language-javascript punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                }
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &gt;
+              </span>
+              <span
+                class="token plain-text"
+              />
+            </div>
+            <div
+              class="token-line"
               style="color: rgb(248, 248, 242);"
             >
-              &lt;
-            </span>
-            <span
-              class="token tag class-name"
-              style="color: rgb(255, 121, 198);"
-            >
-              ModalCommonFooter
-            </span>
-            <span
-              class="token tag"
-              style="color: rgb(255, 121, 198);"
-            >
-               
-            </span>
-            <span
-              class="token tag attr-name"
-              style="color: rgb(241, 250, 140);"
-            >
-              cancelLabel
-            </span>
-            <span
-              class="token tag attr-value punctuation attr-equals"
+              <span
+                class="token plain-text"
+              >
+                    
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &lt;
+              </span>
+              <span
+                class="token tag class-name"
+                style="color: rgb(255, 121, 198);"
+              >
+                ModalCommonHeader
+              </span>
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                 
+              </span>
+              <span
+                class="token tag attr-name"
+                style="color: rgb(241, 250, 140);"
+              >
+                onCancel
+              </span>
+              <span
+                class="token tag script language-javascript script-punctuation punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                =
+              </span>
+              <span
+                class="token tag script language-javascript punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                {
+              </span>
+              <span
+                class="token tag script language-javascript"
+                style="color: rgb(255, 121, 198);"
+              >
+                onCancel
+              </span>
+              <span
+                class="token tag script language-javascript punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                }
+              </span>
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                 
+              </span>
+              <span
+                class="token tag attr-name"
+                style="color: rgb(241, 250, 140);"
+              >
+                title
+              </span>
+              <span
+                class="token tag attr-value punctuation attr-equals"
+                style="color: rgb(248, 248, 242);"
+              >
+                =
+              </span>
+              <span
+                class="token tag attr-value punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                "
+              </span>
+              <span
+                class="token tag attr-value"
+                style="color: rgb(255, 121, 198);"
+              >
+                Validation des informations générales
+              </span>
+              <span
+                class="token tag attr-value punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                "
+              </span>
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                 
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                /&gt;
+              </span>
+              <span
+                class="token plain-text"
+              />
+            </div>
+            <div
+              class="token-line"
               style="color: rgb(248, 248, 242);"
             >
-              =
-            </span>
-            <span
-              class="token tag attr-value punctuation"
+              <span
+                class="token plain-text"
+              >
+                    
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &lt;
+              </span>
+              <span
+                class="token tag class-name"
+                style="color: rgb(255, 121, 198);"
+              >
+                ModalCommonBody
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &gt;
+              </span>
+              <span
+                class="token plain-text"
+              />
+            </div>
+            <div
+              class="token-line"
               style="color: rgb(248, 248, 242);"
             >
-              "
-            </span>
-            <span
-              class="token tag attr-value"
-              style="color: rgb(255, 121, 198);"
-            >
-              Annuler
-            </span>
-            <span
-              class="token tag attr-value punctuation"
+              <span
+                class="token plain-text"
+              >
+                      
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &lt;
+              </span>
+              <span
+                class="token tag class-name"
+                style="color: rgb(255, 121, 198);"
+              >
+                Alert
+              </span>
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                 
+              </span>
+              <span
+                class="token tag attr-name"
+                style="color: rgb(241, 250, 140);"
+              >
+                classModifier
+              </span>
+              <span
+                class="token tag attr-value punctuation attr-equals"
+                style="color: rgb(248, 248, 242);"
+              >
+                =
+              </span>
+              <span
+                class="token tag attr-value punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                "
+              </span>
+              <span
+                class="token tag attr-value"
+                style="color: rgb(255, 121, 198);"
+              >
+                info
+              </span>
+              <span
+                class="token tag attr-value punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                "
+              </span>
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                 
+              </span>
+              <span
+                class="token tag attr-name"
+                style="color: rgb(241, 250, 140);"
+              >
+                icon
+              </span>
+              <span
+                class="token tag attr-value punctuation attr-equals"
+                style="color: rgb(248, 248, 242);"
+              >
+                =
+              </span>
+              <span
+                class="token tag attr-value punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                "
+              </span>
+              <span
+                class="token tag attr-value"
+                style="color: rgb(255, 121, 198);"
+              >
+                info-sign
+              </span>
+              <span
+                class="token tag attr-value punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                "
+              </span>
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                 
+              </span>
+              <span
+                class="token tag attr-name"
+                style="color: rgb(241, 250, 140);"
+              >
+                title
+              </span>
+              <span
+                class="token tag attr-value punctuation attr-equals"
+                style="color: rgb(248, 248, 242);"
+              >
+                =
+              </span>
+              <span
+                class="token tag attr-value punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                "
+              </span>
+              <span
+                class="token tag attr-value"
+                style="color: rgb(255, 121, 198);"
+              >
+                Vous allez créer un nouvel élément.
+              </span>
+              <span
+                class="token tag attr-value punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                "
+              </span>
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                 
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                /&gt;
+              </span>
+              <span
+                class="token plain-text"
+              />
+            </div>
+            <div
+              class="token-line"
               style="color: rgb(248, 248, 242);"
             >
-              "
-            </span>
-            <span
-              class="token tag"
-              style="color: rgb(255, 121, 198);"
-            >
-               
-            </span>
-            <span
-              class="token tag attr-name"
-              style="color: rgb(241, 250, 140);"
-            >
-              onCancel
-            </span>
-            <span
-              class="token tag script language-javascript script-punctuation punctuation"
+              <span
+                class="token plain-text"
+              >
+                      
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &lt;
+              </span>
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                p
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &gt;
+              </span>
+              <span
+                class="token plain-text"
+              >
+                Confirmez-vous vouloir valider avec les informations suivantes ?
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &lt;/
+              </span>
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                p
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &gt;
+              </span>
+              <span
+                class="token plain-text"
+              >
+                      
+              </span>
+            </div>
+            <div
+              class="token-line"
               style="color: rgb(248, 248, 242);"
             >
-              =
-            </span>
-            <span
-              class="token tag script language-javascript punctuation"
+              <span
+                class="token plain-text"
+              >
+                    
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &lt;/
+              </span>
+              <span
+                class="token tag class-name"
+                style="color: rgb(255, 121, 198);"
+              >
+                ModalCommonBody
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &gt;
+              </span>
+              <span
+                class="token plain-text"
+              />
+            </div>
+            <div
+              class="token-line"
               style="color: rgb(248, 248, 242);"
             >
-              {
-            </span>
-            <span
-              class="token tag script language-javascript"
-              style="color: rgb(255, 121, 198);"
-            >
-              onCancel
-            </span>
-            <span
-              class="token tag script language-javascript punctuation"
+              <span
+                class="token plain-text"
+              >
+                    
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &lt;
+              </span>
+              <span
+                class="token tag class-name"
+                style="color: rgb(255, 121, 198);"
+              >
+                ModalCommonFooter
+              </span>
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                 
+              </span>
+              <span
+                class="token tag attr-name"
+                style="color: rgb(241, 250, 140);"
+              >
+                cancelLabel
+              </span>
+              <span
+                class="token tag attr-value punctuation attr-equals"
+                style="color: rgb(248, 248, 242);"
+              >
+                =
+              </span>
+              <span
+                class="token tag attr-value punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                "
+              </span>
+              <span
+                class="token tag attr-value"
+                style="color: rgb(255, 121, 198);"
+              >
+                Annuler
+              </span>
+              <span
+                class="token tag attr-value punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                "
+              </span>
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                 
+              </span>
+              <span
+                class="token tag attr-name"
+                style="color: rgb(241, 250, 140);"
+              >
+                onCancel
+              </span>
+              <span
+                class="token tag script language-javascript script-punctuation punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                =
+              </span>
+              <span
+                class="token tag script language-javascript punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                {
+              </span>
+              <span
+                class="token tag script language-javascript"
+                style="color: rgb(255, 121, 198);"
+              >
+                onCancel
+              </span>
+              <span
+                class="token tag script language-javascript punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                }
+              </span>
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                 
+              </span>
+              <span
+                class="token tag attr-name"
+                style="color: rgb(241, 250, 140);"
+              >
+                onSubmit
+              </span>
+              <span
+                class="token tag script language-javascript script-punctuation punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                =
+              </span>
+              <span
+                class="token tag script language-javascript punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                {
+              </span>
+              <span
+                class="token tag script language-javascript"
+                style="color: rgb(255, 121, 198);"
+              >
+                onCancel
+              </span>
+              <span
+                class="token tag script language-javascript punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                }
+              </span>
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                 
+              </span>
+              <span
+                class="token tag attr-name"
+                style="color: rgb(241, 250, 140);"
+              >
+                confirmLabel
+              </span>
+              <span
+                class="token tag attr-value punctuation attr-equals"
+                style="color: rgb(248, 248, 242);"
+              >
+                =
+              </span>
+              <span
+                class="token tag attr-value punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                "
+              </span>
+              <span
+                class="token tag attr-value"
+                style="color: rgb(255, 121, 198);"
+              >
+                Valider
+              </span>
+              <span
+                class="token tag attr-value punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                "
+              </span>
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                 
+              </span>
+              <span
+                class="token tag attr-name"
+                style="color: rgb(241, 250, 140);"
+              >
+                classModifier
+              </span>
+              <span
+                class="token tag attr-value punctuation attr-equals"
+                style="color: rgb(248, 248, 242);"
+              >
+                =
+              </span>
+              <span
+                class="token tag attr-value punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                "
+              </span>
+              <span
+                class="token tag attr-value punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                "
+              </span>
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                 
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                /&gt;
+              </span>
+              <span
+                class="token plain-text"
+              />
+            </div>
+            <div
+              class="token-line"
               style="color: rgb(248, 248, 242);"
             >
-              }
-            </span>
-            <span
-              class="token tag"
-              style="color: rgb(255, 121, 198);"
-            >
-               
-            </span>
-            <span
-              class="token tag attr-name"
-              style="color: rgb(241, 250, 140);"
-            >
-              onSubmit
-            </span>
-            <span
-              class="token tag script language-javascript script-punctuation punctuation"
+              <span
+                class="token plain-text"
+              >
+                  
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &lt;/
+              </span>
+              <span
+                class="token tag class-name"
+                style="color: rgb(255, 121, 198);"
+              >
+                Modal
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &gt;
+              </span>
+              <span
+                class="token plain-text"
+              />
+            </div>
+            <div
+              class="token-line"
               style="color: rgb(248, 248, 242);"
             >
-              =
-            </span>
-            <span
-              class="token tag script language-javascript punctuation"
+              <span
+                class="token plain-text"
+              />
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &lt;/
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &gt;
+              </span>
+              <span
+                class="token plain"
+              />
+            </div>
+            <div
+              class="token-line"
               style="color: rgb(248, 248, 242);"
             >
-              {
-            </span>
-            <span
-              class="token tag script language-javascript"
-              style="color: rgb(255, 121, 198);"
-            >
-              onCancel
-            </span>
-            <span
-              class="token tag script language-javascript punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              }
-            </span>
-            <span
-              class="token tag"
-              style="color: rgb(255, 121, 198);"
-            >
-               
-            </span>
-            <span
-              class="token tag attr-name"
-              style="color: rgb(241, 250, 140);"
-            >
-              confirmLabel
-            </span>
-            <span
-              class="token tag attr-value punctuation attr-equals"
-              style="color: rgb(248, 248, 242);"
-            >
-              =
-            </span>
-            <span
-              class="token tag attr-value punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              "
-            </span>
-            <span
-              class="token tag attr-value"
-              style="color: rgb(255, 121, 198);"
-            >
-              Valider
-            </span>
-            <span
-              class="token tag attr-value punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              "
-            </span>
-            <span
-              class="token tag"
-              style="color: rgb(255, 121, 198);"
-            >
-               
-            </span>
-            <span
-              class="token tag attr-name"
-              style="color: rgb(241, 250, 140);"
-            >
-              classModifier
-            </span>
-            <span
-              class="token tag attr-value punctuation attr-equals"
-              style="color: rgb(248, 248, 242);"
-            >
-              =
-            </span>
-            <span
-              class="token tag attr-value punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              "
-            </span>
-            <span
-              class="token tag attr-value punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              "
-            </span>
-            <span
-              class="token tag"
-              style="color: rgb(255, 121, 198);"
-            >
-               
-            </span>
-            <span
-              class="token tag punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              /&gt;
-            </span>
-            <span
-              class="token plain-text"
-            />
-          </div>
-          <div
-            class="token-line"
-            style="color: rgb(248, 248, 242);"
-          >
-            <span
-              class="token plain-text"
-            >
+              <span
+                class="token plain"
+                style="display: inline-block;"
+              >
                 
-            </span>
-            <span
-              class="token tag punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              &lt;/
-            </span>
-            <span
-              class="token tag class-name"
-              style="color: rgb(255, 121, 198);"
-            >
-              Modal
-            </span>
-            <span
-              class="token tag punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              &gt;
-            </span>
-            <span
-              class="token plain-text"
-            />
-          </div>
-          <div
-            class="token-line"
-            style="color: rgb(248, 248, 242);"
-          >
-            <span
-              class="token plain-text"
-            />
-            <span
-              class="token tag punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              &lt;/
-            </span>
-            <span
-              class="token tag punctuation"
-              style="color: rgb(248, 248, 242);"
-            >
-              &gt;
-            </span>
-            <span
-              class="token plain"
-            />
-          </div>
-          <div
-            class="token-line"
-            style="color: rgb(248, 248, 242);"
-          >
-            <span
-              class="token plain"
-              style="display: inline-block;"
-            >
-              
 
-            </span>
-          </div>
-        </pre>
-      </article>
+              </span>
+            </div>
+          </pre>
+        </article>
+      </section>
     </main>
     <footer
       class="af-footer"
@@ -1494,7 +1502,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer and called funct
         <div
           class="af-footer-content"
         >
-          © 2022 AXA Tous droits réservés - v0.2.6
+          © 2022 AXA Tous droits réservés - v0.2.7
         </div>
       </div>
     </footer>

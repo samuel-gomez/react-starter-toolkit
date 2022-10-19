@@ -15,13 +15,18 @@
       }
     }
   }
+  &--fullscreen {
+    .container {
+      width: 100%;
+    }
+  }
 }
 
 @include media-breakpoint-down(sm) {
   .af-title-bar {
     position: sticky;
     width: 100%;
-    top: 69px;
+    top: 76px;
     z-index: 8;
     &__title {
       font-size: 1.2rem;

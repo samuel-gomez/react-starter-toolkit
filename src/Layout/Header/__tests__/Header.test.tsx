@@ -13,6 +13,11 @@ describe('<Header/>', () => {
     expect(asFragment()).toMatchSnapshot();
   });
 
+  it('Render <Header/> fullscreen', () => {
+    const { asFragment } = render(<Header {...defaultProps} fullScreen />);
+    expect(asFragment()).toMatchSnapshot();
+  });
+
   it('Should contain <Infos /> with "mydefinition" text when infos equal [{ word: "word", definition: "mydefinition" }]', () => {
     const { getByText } = render(<Header {...defaultProps} infos={[{ word: 'word', definition: 'mydefinition' }]} />);
     expect(getByText('mydefinition')).toBeDefined();

@@ -1,5 +1,6 @@
 @import '@axa-fr/react-toolkit-core/dist/assets/scss/core.scss';
 @import './variables.scss';
+@import './mixins.scss';
 
 /* FIX : LINK ***********************************************************/
 .af-link {
@@ -52,12 +53,26 @@
   color: $color-axa;
 }
 
+@include media-breakpoint-down(sm) {
+  .af-info-user__name {
+    display: block;
+  }
+  .af-header__name {
+    flex-basis: inherit;
+    align-self: inherit;
+  }
+}
+
 /* CUSTOM : LAYOUT *************************************************************/
 .af-main {
-  padding-top: 1rem;
+  padding: 1rem;
   min-height: calc(100vh - #{$headerHeight} - #{$footerHeight});
-  &--demo {
-    background: $color-gray-2;
+  background: $color-gray-2;
+}
+
+@include media-breakpoint-down(sm) {
+  .af-main {
+    padding: 0;
   }
 }
 
@@ -106,6 +121,37 @@
   padding: 1em;
   &:hover {
     padding: 1em;
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .af-table__tr:nth-child(2n + 1) .af-table__cell {
+    background-color: rgba(205, 205, 205, 0.5);
+  }
+  .af-table {
+    display: block;
+    margin: 0 auto;
+    @include scroll-horizontal-shadow(90%);
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .af-paging__pager {
+    margin-top: 2rem;
+  }
+  .af-paging__limit {
+    margin: 1rem auto;
+    text-align: center;
+    width: 100%;
+    [class^='col'] {
+      padding: inherit;
+      flex-basis: inherit;
+      flex-grow: inherit;
+      width: inherit;
+    }
+    .af-form__group {
+      justify-content: space-evenly;
+    }
   }
 }
 
@@ -238,10 +284,13 @@
 
 .af-filter-inline {
   margin-bottom: 2rem;
-  padding-bottom: 4rem;
   position: relative;
   flex-direction: column;
   align-items: flex-start;
+  background-color: white;
+  &:has(.af-link--toggle-filter) {
+    padding-bottom: 4rem;
+  }
 
   &__hidden {
     overflow: hidden;
@@ -259,8 +308,13 @@
     flex-wrap: nowrap;
     width: 100%;
     margin-bottom: 1rem;
-    justify-content: space-between;
     align-items: flex-end;
+    .af-form__group-label {
+      display: block;
+    }
+    .af-btn {
+      padding: 0.625rem 0.3125rem;
+    }
   }
 
   .af-btn--submit {
@@ -280,6 +334,22 @@
       .af-btn__text {
         text-decoration: none;
       }
+    }
+  }
+}
+
+@include media-breakpoint-down(xs) {
+  .af-filter-inline {
+    padding-bottom: 0;
+    &__default {
+      flex-direction: column;
+      align-items: center;
+      .af-btn {
+        padding: 0.8rem 1.2rem;
+      }
+    }
+    &__field {
+      margin-bottom: 2rem;
     }
   }
 }

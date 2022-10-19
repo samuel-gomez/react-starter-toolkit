@@ -1,5 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Layout Should render when disabled: {"footer": true, "header": true, "menu": true, "title": true} 1`] = `
+<DocumentFragment>
+  <main
+    class="af-main"
+  />
+</DocumentFragment>
+`;
+
 exports[`Layout Should render when disabled: {"footer": true} 1`] = `
 <DocumentFragment>
   <div
@@ -57,285 +65,289 @@ exports[`Layout Should render when disabled: {"footer": true} 1`] = `
       </header>
     </div>
   </div>
-  <div
-    class="af-nav-container"
+  <section
+    class="af-menu"
   >
-    <button
-      aria-controls="mainmenu"
-      aria-haspopup="true"
-      class="mask fade "
-      id="togglemenu"
-      type="button"
-    />
-    <nav
-      aria-label="Menu principal"
-      class="af-nav af-drawer left "
-      role="navigation"
+    <div
+      class="af-nav-container"
     >
-      <div
-        class="container af-nav__wrapper"
+      <button
+        aria-controls="mainmenu"
+        aria-haspopup="true"
+        class="mask fade "
+        id="togglemenu"
+        type="button"
+      />
+      <nav
+        aria-label="Menu principal"
+        class="af-nav af-drawer left "
+        role="navigation"
       >
         <div
-          class="af-nav__aside-header"
+          class="container af-nav__wrapper"
         >
-          <h4
-            class="af-nav__aside-title"
+          <div
+            class="af-nav__aside-header"
           >
-            Menu
-          </h4>
-          <button
-            aria-controls="mainmenu"
-            aria-haspopup="true"
-            class="af-nav__aside-close"
-            id="togglemenu"
-            type="button"
+            <h4
+              class="af-nav__aside-title"
+            >
+              Menu
+            </h4>
+            <button
+              aria-controls="mainmenu"
+              aria-haspopup="true"
+              class="af-nav__aside-close"
+              id="togglemenu"
+              type="button"
+            >
+              ×
+            </button>
+          </div>
+          <ul
+            aria-labelledby="togglemenu"
+            class="af-nav__list "
+            id="mainmenu"
+            role="menubar"
           >
-            ×
-          </button>
+            <li
+              class="af-nav__item af-nav__item--active "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Accueil"
+                class="af-nav__link"
+                href="/"
+                role="menuitem"
+                tabindex="0"
+              >
+                Accueil
+              </a>
+            </li>
+            <li
+              class="af-nav__item af-nav__item--haschild "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Démos"
+                class="af-nav__link"
+                href="/demos"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Démos
+              </a>
+              <i
+                class="glyphicon glyphicon-arrow-xs-down"
+              />
+              <ul
+                aria-label=""
+                class="af-nav__list af-nav__list--children"
+                role="menu"
+              >
+                <li
+                  class="af-nav__item af-nav__item--separator "
+                  role="none"
+                >
+                  <span
+                    aria-expanded="false"
+                    class="af-nav__link"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Pages
+                  </span>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Membres"
+                    class="af-nav__link"
+                    href="/demos/members"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Membres
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Rechercher"
+                    class="af-nav__link"
+                    href="/demos/search-members"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Rechercher
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Modal"
+                    class="af-nav__link"
+                    href="/demos/modal"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Modal
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Notification"
+                    class="af-nav__link"
+                    href="/demos/notification"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Notification
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Layout"
+                    class="af-nav__link"
+                    href="/demos/layout"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Layout
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item af-nav__item--separator "
+                  role="none"
+                >
+                  <span
+                    aria-expanded="false"
+                    class="af-nav__link"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Composants Toolkit
+                  </span>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Button"
+                    class="af-nav__link"
+                    href="/demos/button"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Button
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Alert"
+                    class="af-nav__link"
+                    href="/demos/alert"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Alert
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li
+              class="af-nav__item af-nav__item--haschild "
+              role="none"
+            >
+              <span
+                aria-expanded="false"
+                class="af-nav__link"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Pages
+              </span>
+              <i
+                class="glyphicon glyphicon-arrow-xs-down"
+              />
+              <ul
+                aria-label=""
+                class="af-nav__list af-nav__list--children"
+                role="menu"
+              >
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Not found"
+                    class="af-nav__link"
+                    href="/notfound"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Not found
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Forbidden"
+                    class="af-nav__link"
+                    href="/forbidden"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Forbidden
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
-        <ul
-          aria-labelledby="togglemenu"
-          class="af-nav__list "
-          id="mainmenu"
-          role="menubar"
-        >
-          <li
-            class="af-nav__item af-nav__item--active "
-            role="none"
-          >
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-label="Accueil"
-              class="af-nav__link"
-              href="/"
-              role="menuitem"
-              tabindex="0"
-            >
-              Accueil
-            </a>
-          </li>
-          <li
-            class="af-nav__item af-nav__item--haschild "
-            role="none"
-          >
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-label="Démos"
-              class="af-nav__link"
-              href="/demos"
-              role="menuitem"
-              tabindex="-1"
-            >
-              Démos
-            </a>
-            <i
-              class="glyphicon glyphicon-arrow-xs-down"
-            />
-            <ul
-              aria-label=""
-              class="af-nav__list af-nav__list--children"
-              role="menu"
-            >
-              <li
-                class="af-nav__item af-nav__item--separator "
-                role="none"
-              >
-                <span
-                  aria-expanded="false"
-                  class="af-nav__link"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Pages
-                </span>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Membres"
-                  class="af-nav__link"
-                  href="/demos/members"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Membres
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Rechercher"
-                  class="af-nav__link"
-                  href="/demos/search-members"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Rechercher
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Modal"
-                  class="af-nav__link"
-                  href="/demos/modal"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Modal
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Notification"
-                  class="af-nav__link"
-                  href="/demos/notification"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Notification
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Layout"
-                  class="af-nav__link"
-                  href="/demos/layout"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Layout
-                </a>
-              </li>
-              <li
-                class="af-nav__item af-nav__item--separator "
-                role="none"
-              >
-                <span
-                  aria-expanded="false"
-                  class="af-nav__link"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Composants Toolkit
-                </span>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Button"
-                  class="af-nav__link"
-                  href="/demos/button"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Button
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Alert"
-                  class="af-nav__link"
-                  href="/demos/alert"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Alert
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li
-            class="af-nav__item af-nav__item--haschild "
-            role="none"
-          >
-            <span
-              aria-expanded="false"
-              class="af-nav__link"
-              role="menuitem"
-              tabindex="-1"
-            >
-              Pages
-            </span>
-            <i
-              class="glyphicon glyphicon-arrow-xs-down"
-            />
-            <ul
-              aria-label=""
-              class="af-nav__list af-nav__list--children"
-              role="menu"
-            >
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Not found"
-                  class="af-nav__link"
-                  href="/notfound"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Not found
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Forbidden"
-                  class="af-nav__link"
-                  href="/forbidden"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Forbidden
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
+      </nav>
+    </div>
+  </section>
   <a
     aria-controls="mainmenu"
     aria-haspopup="true"
@@ -364,292 +376,300 @@ exports[`Layout Should render when disabled: {"footer": true} 1`] = `
     </div>
   </div>
   <main
-    class="container af-main"
-  />
+    class="af-main"
+  >
+    <section
+      class="container"
+    />
+  </main>
 </DocumentFragment>
 `;
 
 exports[`Layout Should render when disabled: {"header": true} 1`] = `
 <DocumentFragment>
-  <div
-    class="af-nav-container"
+  <section
+    class="af-menu"
   >
-    <button
-      aria-controls="mainmenu"
-      aria-haspopup="true"
-      class="mask fade "
-      id="togglemenu"
-      type="button"
-    />
-    <nav
-      aria-label="Menu principal"
-      class="af-nav af-drawer left "
-      role="navigation"
+    <div
+      class="af-nav-container"
     >
-      <div
-        class="container af-nav__wrapper"
+      <button
+        aria-controls="mainmenu"
+        aria-haspopup="true"
+        class="mask fade "
+        id="togglemenu"
+        type="button"
+      />
+      <nav
+        aria-label="Menu principal"
+        class="af-nav af-drawer left "
+        role="navigation"
       >
         <div
-          class="af-nav__aside-header"
+          class="container af-nav__wrapper"
         >
-          <h4
-            class="af-nav__aside-title"
+          <div
+            class="af-nav__aside-header"
           >
-            Menu
-          </h4>
-          <button
-            aria-controls="mainmenu"
-            aria-haspopup="true"
-            class="af-nav__aside-close"
-            id="togglemenu"
-            type="button"
+            <h4
+              class="af-nav__aside-title"
+            >
+              Menu
+            </h4>
+            <button
+              aria-controls="mainmenu"
+              aria-haspopup="true"
+              class="af-nav__aside-close"
+              id="togglemenu"
+              type="button"
+            >
+              ×
+            </button>
+          </div>
+          <ul
+            aria-labelledby="togglemenu"
+            class="af-nav__list "
+            id="mainmenu"
+            role="menubar"
           >
-            ×
-          </button>
+            <li
+              class="af-nav__item af-nav__item--active "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Accueil"
+                class="af-nav__link"
+                href="/"
+                role="menuitem"
+                tabindex="0"
+              >
+                Accueil
+              </a>
+            </li>
+            <li
+              class="af-nav__item af-nav__item--haschild "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Démos"
+                class="af-nav__link"
+                href="/demos"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Démos
+              </a>
+              <i
+                class="glyphicon glyphicon-arrow-xs-down"
+              />
+              <ul
+                aria-label=""
+                class="af-nav__list af-nav__list--children"
+                role="menu"
+              >
+                <li
+                  class="af-nav__item af-nav__item--separator "
+                  role="none"
+                >
+                  <span
+                    aria-expanded="false"
+                    class="af-nav__link"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Pages
+                  </span>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Membres"
+                    class="af-nav__link"
+                    href="/demos/members"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Membres
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Rechercher"
+                    class="af-nav__link"
+                    href="/demos/search-members"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Rechercher
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Modal"
+                    class="af-nav__link"
+                    href="/demos/modal"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Modal
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Notification"
+                    class="af-nav__link"
+                    href="/demos/notification"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Notification
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Layout"
+                    class="af-nav__link"
+                    href="/demos/layout"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Layout
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item af-nav__item--separator "
+                  role="none"
+                >
+                  <span
+                    aria-expanded="false"
+                    class="af-nav__link"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Composants Toolkit
+                  </span>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Button"
+                    class="af-nav__link"
+                    href="/demos/button"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Button
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Alert"
+                    class="af-nav__link"
+                    href="/demos/alert"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Alert
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li
+              class="af-nav__item af-nav__item--haschild "
+              role="none"
+            >
+              <span
+                aria-expanded="false"
+                class="af-nav__link"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Pages
+              </span>
+              <i
+                class="glyphicon glyphicon-arrow-xs-down"
+              />
+              <ul
+                aria-label=""
+                class="af-nav__list af-nav__list--children"
+                role="menu"
+              >
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Not found"
+                    class="af-nav__link"
+                    href="/notfound"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Not found
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Forbidden"
+                    class="af-nav__link"
+                    href="/forbidden"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Forbidden
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
-        <ul
-          aria-labelledby="togglemenu"
-          class="af-nav__list "
-          id="mainmenu"
-          role="menubar"
-        >
-          <li
-            class="af-nav__item af-nav__item--active "
-            role="none"
-          >
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-label="Accueil"
-              class="af-nav__link"
-              href="/"
-              role="menuitem"
-              tabindex="0"
-            >
-              Accueil
-            </a>
-          </li>
-          <li
-            class="af-nav__item af-nav__item--haschild "
-            role="none"
-          >
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-label="Démos"
-              class="af-nav__link"
-              href="/demos"
-              role="menuitem"
-              tabindex="-1"
-            >
-              Démos
-            </a>
-            <i
-              class="glyphicon glyphicon-arrow-xs-down"
-            />
-            <ul
-              aria-label=""
-              class="af-nav__list af-nav__list--children"
-              role="menu"
-            >
-              <li
-                class="af-nav__item af-nav__item--separator "
-                role="none"
-              >
-                <span
-                  aria-expanded="false"
-                  class="af-nav__link"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Pages
-                </span>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Membres"
-                  class="af-nav__link"
-                  href="/demos/members"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Membres
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Rechercher"
-                  class="af-nav__link"
-                  href="/demos/search-members"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Rechercher
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Modal"
-                  class="af-nav__link"
-                  href="/demos/modal"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Modal
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Notification"
-                  class="af-nav__link"
-                  href="/demos/notification"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Notification
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Layout"
-                  class="af-nav__link"
-                  href="/demos/layout"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Layout
-                </a>
-              </li>
-              <li
-                class="af-nav__item af-nav__item--separator "
-                role="none"
-              >
-                <span
-                  aria-expanded="false"
-                  class="af-nav__link"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Composants Toolkit
-                </span>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Button"
-                  class="af-nav__link"
-                  href="/demos/button"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Button
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Alert"
-                  class="af-nav__link"
-                  href="/demos/alert"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Alert
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li
-            class="af-nav__item af-nav__item--haschild "
-            role="none"
-          >
-            <span
-              aria-expanded="false"
-              class="af-nav__link"
-              role="menuitem"
-              tabindex="-1"
-            >
-              Pages
-            </span>
-            <i
-              class="glyphicon glyphicon-arrow-xs-down"
-            />
-            <ul
-              aria-label=""
-              class="af-nav__list af-nav__list--children"
-              role="menu"
-            >
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Not found"
-                  class="af-nav__link"
-                  href="/notfound"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Not found
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Forbidden"
-                  class="af-nav__link"
-                  href="/forbidden"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Forbidden
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
+      </nav>
+    </div>
+  </section>
   <a
     aria-controls="mainmenu"
     aria-haspopup="true"
@@ -678,8 +698,12 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
     </div>
   </div>
   <main
-    class="container af-main"
-  />
+    class="af-main"
+  >
+    <section
+      class="container"
+    />
+  </main>
   <footer
     class="af-footer"
   >
@@ -701,7 +725,7 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.2.6
+        © 2022 AXA Tous droits réservés - v0.2.7
       </div>
     </div>
   </footer>
@@ -779,8 +803,12 @@ exports[`Layout Should render when disabled: {"menu": true} 1`] = `
     </div>
   </div>
   <main
-    class="container af-main"
-  />
+    class="af-main"
+  >
+    <section
+      class="container"
+    />
+  </main>
   <footer
     class="af-footer"
   >
@@ -802,7 +830,7 @@ exports[`Layout Should render when disabled: {"menu": true} 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.2.6
+        © 2022 AXA Tous droits réservés - v0.2.7
       </div>
     </div>
   </footer>
@@ -866,285 +894,289 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
       </header>
     </div>
   </div>
-  <div
-    class="af-nav-container"
+  <section
+    class="af-menu"
   >
-    <button
-      aria-controls="mainmenu"
-      aria-haspopup="true"
-      class="mask fade "
-      id="togglemenu"
-      type="button"
-    />
-    <nav
-      aria-label="Menu principal"
-      class="af-nav af-drawer left "
-      role="navigation"
+    <div
+      class="af-nav-container"
     >
-      <div
-        class="container af-nav__wrapper"
+      <button
+        aria-controls="mainmenu"
+        aria-haspopup="true"
+        class="mask fade "
+        id="togglemenu"
+        type="button"
+      />
+      <nav
+        aria-label="Menu principal"
+        class="af-nav af-drawer left "
+        role="navigation"
       >
         <div
-          class="af-nav__aside-header"
+          class="container af-nav__wrapper"
         >
-          <h4
-            class="af-nav__aside-title"
+          <div
+            class="af-nav__aside-header"
           >
-            Menu
-          </h4>
-          <button
-            aria-controls="mainmenu"
-            aria-haspopup="true"
-            class="af-nav__aside-close"
-            id="togglemenu"
-            type="button"
+            <h4
+              class="af-nav__aside-title"
+            >
+              Menu
+            </h4>
+            <button
+              aria-controls="mainmenu"
+              aria-haspopup="true"
+              class="af-nav__aside-close"
+              id="togglemenu"
+              type="button"
+            >
+              ×
+            </button>
+          </div>
+          <ul
+            aria-labelledby="togglemenu"
+            class="af-nav__list "
+            id="mainmenu"
+            role="menubar"
           >
-            ×
-          </button>
+            <li
+              class="af-nav__item af-nav__item--active "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Accueil"
+                class="af-nav__link"
+                href="/"
+                role="menuitem"
+                tabindex="0"
+              >
+                Accueil
+              </a>
+            </li>
+            <li
+              class="af-nav__item af-nav__item--haschild "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Démos"
+                class="af-nav__link"
+                href="/demos"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Démos
+              </a>
+              <i
+                class="glyphicon glyphicon-arrow-xs-down"
+              />
+              <ul
+                aria-label=""
+                class="af-nav__list af-nav__list--children"
+                role="menu"
+              >
+                <li
+                  class="af-nav__item af-nav__item--separator "
+                  role="none"
+                >
+                  <span
+                    aria-expanded="false"
+                    class="af-nav__link"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Pages
+                  </span>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Membres"
+                    class="af-nav__link"
+                    href="/demos/members"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Membres
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Rechercher"
+                    class="af-nav__link"
+                    href="/demos/search-members"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Rechercher
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Modal"
+                    class="af-nav__link"
+                    href="/demos/modal"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Modal
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Notification"
+                    class="af-nav__link"
+                    href="/demos/notification"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Notification
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Layout"
+                    class="af-nav__link"
+                    href="/demos/layout"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Layout
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item af-nav__item--separator "
+                  role="none"
+                >
+                  <span
+                    aria-expanded="false"
+                    class="af-nav__link"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Composants Toolkit
+                  </span>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Button"
+                    class="af-nav__link"
+                    href="/demos/button"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Button
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Alert"
+                    class="af-nav__link"
+                    href="/demos/alert"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Alert
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li
+              class="af-nav__item af-nav__item--haschild "
+              role="none"
+            >
+              <span
+                aria-expanded="false"
+                class="af-nav__link"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Pages
+              </span>
+              <i
+                class="glyphicon glyphicon-arrow-xs-down"
+              />
+              <ul
+                aria-label=""
+                class="af-nav__list af-nav__list--children"
+                role="menu"
+              >
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Not found"
+                    class="af-nav__link"
+                    href="/notfound"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Not found
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Forbidden"
+                    class="af-nav__link"
+                    href="/forbidden"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Forbidden
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
-        <ul
-          aria-labelledby="togglemenu"
-          class="af-nav__list "
-          id="mainmenu"
-          role="menubar"
-        >
-          <li
-            class="af-nav__item af-nav__item--active "
-            role="none"
-          >
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-label="Accueil"
-              class="af-nav__link"
-              href="/"
-              role="menuitem"
-              tabindex="0"
-            >
-              Accueil
-            </a>
-          </li>
-          <li
-            class="af-nav__item af-nav__item--haschild "
-            role="none"
-          >
-            <a
-              aria-expanded="false"
-              aria-haspopup="true"
-              aria-label="Démos"
-              class="af-nav__link"
-              href="/demos"
-              role="menuitem"
-              tabindex="-1"
-            >
-              Démos
-            </a>
-            <i
-              class="glyphicon glyphicon-arrow-xs-down"
-            />
-            <ul
-              aria-label=""
-              class="af-nav__list af-nav__list--children"
-              role="menu"
-            >
-              <li
-                class="af-nav__item af-nav__item--separator "
-                role="none"
-              >
-                <span
-                  aria-expanded="false"
-                  class="af-nav__link"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Pages
-                </span>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Membres"
-                  class="af-nav__link"
-                  href="/demos/members"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Membres
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Rechercher"
-                  class="af-nav__link"
-                  href="/demos/search-members"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Rechercher
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Modal"
-                  class="af-nav__link"
-                  href="/demos/modal"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Modal
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Notification"
-                  class="af-nav__link"
-                  href="/demos/notification"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Notification
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Layout"
-                  class="af-nav__link"
-                  href="/demos/layout"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Layout
-                </a>
-              </li>
-              <li
-                class="af-nav__item af-nav__item--separator "
-                role="none"
-              >
-                <span
-                  aria-expanded="false"
-                  class="af-nav__link"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Composants Toolkit
-                </span>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Button"
-                  class="af-nav__link"
-                  href="/demos/button"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Button
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Alert"
-                  class="af-nav__link"
-                  href="/demos/alert"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Alert
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li
-            class="af-nav__item af-nav__item--haschild "
-            role="none"
-          >
-            <span
-              aria-expanded="false"
-              class="af-nav__link"
-              role="menuitem"
-              tabindex="-1"
-            >
-              Pages
-            </span>
-            <i
-              class="glyphicon glyphicon-arrow-xs-down"
-            />
-            <ul
-              aria-label=""
-              class="af-nav__list af-nav__list--children"
-              role="menu"
-            >
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Not found"
-                  class="af-nav__link"
-                  href="/notfound"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Not found
-                </a>
-              </li>
-              <li
-                class="af-nav__item "
-                role="none"
-              >
-                <a
-                  aria-expanded="false"
-                  aria-haspopup="true"
-                  aria-label="Forbidden"
-                  class="af-nav__link"
-                  href="/forbidden"
-                  role="menuitem"
-                  tabindex="-1"
-                >
-                  Forbidden
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </div>
+      </nav>
+    </div>
+  </section>
   <a
     aria-controls="mainmenu"
     aria-haspopup="true"
@@ -1160,8 +1192,12 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
     />
   </a>
   <main
-    class="container af-main"
-  />
+    class="af-main"
+  >
+    <section
+      class="container"
+    />
+  </main>
   <footer
     class="af-footer"
   >
@@ -1183,7 +1219,7 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.2.6
+        © 2022 AXA Tous droits réservés - v0.2.7
       </div>
     </div>
   </footer>

@@ -1,5 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Component <TitleBarEnhanced /> Should render TitleBarEnhanced with customProps: {"backHome": true, "classModifier": "custom", "className": "otherclassname", "fullScreen": true} 1`] = `
+<DocumentFragment>
+  <div
+    class="otherclassname otherclassname--custom otherclassname--backhome otherclassname--fullscreen"
+  >
+    <div
+      class="container af-title-bar__wrapper"
+    >
+      <div
+        class="burger-container"
+      >
+        <a
+          aria-controls="mainmenu"
+          aria-haspopup="true"
+          class="btn af-title-bar__mobile-menu af-btn--circle"
+          href="#"
+          id="togglemenu"
+          role="button"
+          tabindex="0"
+          title="Toggle menu"
+        >
+          <i
+            class="glyphicon glyphicon-menu-hamburger"
+          />
+        </a>
+      </div>
+      <h1
+        class="af-title-bar__title"
+      >
+        title
+      </h1>
+      <a
+        aria-label="Retour à l'accueil"
+        class="btn af-btn--circle"
+        href="/"
+      >
+        <i
+          class="glyphicon glyphicon-home"
+        />
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Component <TitleBarEnhanced /> Should render TitleBarEnhanced with customProps: {"backHome": true, "classModifier": "custom", "className": "otherclassname"} 1`] = `
 <DocumentFragment>
   <div
