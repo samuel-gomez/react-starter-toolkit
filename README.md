@@ -1,22 +1,49 @@
-[![Build](https://github.com/samuel-gomez/react-starter-toolkit/actions/workflows/build.yml/badge.svg)](https://github.com/samuel-gomez/react-starter-toolkit/actions/workflows/build.yml)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![codecov](https://codecov.io/gh/samuel-gomez/react-starter-toolkit/branch/master/graph/badge.svg?token=N75VO37VG7)](https://codecov.io/gh/samuel-gomez/react-starter-toolkit)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c496aa9a-8801-4a32-9571-547bd4ea5ea3/deploy-status)](https://app.netlify.com/sites/react-starter-toolkit/deploys)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=samuel-gomez_react-starter-toolkit&metric=alert_status)](https://sonarcloud.io/dashboard?id=samuel-gomez_react-starter-toolkit)
-[![Reliability](https://sonarcloud.io/api/project_badges/measure?project=samuel-gomez_react-starter-toolkit&metric=reliability_rating)](https://sonarcloud.io/component_measures?id=samuel-gomez_react-starter-toolkit&metric=reliability_rating)
-[![Security](https://sonarcloud.io/api/project_badges/measure?project=samuel-gomez_react-starter-toolkit&metric=security_rating)](https://sonarcloud.io/component_measures?id=samuel-gomez_react-starter-toolkit&metric=security_rating)
+<p style="text-align: center;"><img src="src/shared/images/slash-logo.svg" width=250></p>
+<h2 style="text-align: center;">React Starter Toolkit</h2>
+<p style="text-align: center;">
+<a href="https://github.com/samuel-gomez/react-starter-toolkit/actions/workflows/build.yml">
+  <img alt="Build" src="https://github.com/samuel-gomez/react-starter-toolkit/actions/workflows/build.yml/badge.svg" >
+</a>
+<a href="http://commitizen.github.io/cz-cli/">
+  <img alt="Commitizen friendly" src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg" >
+</a>
+</a>
+<a href="https://codecov.io/gh/samuel-gomez/react-starter-toolkit">
+  <img alt="codecov" src="https://codecov.io/gh/samuel-gomez/react-starter-toolkit/branch/master/graph/badge.svg?token=N75VO37VG7" >
+</a>
+</a>
+<a href="https://app.netlify.com/sites/react-starter-toolkit/deploys">
+  <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/c496aa9a-8801-4a32-9571-547bd4ea5ea3/deploy-status" >
+</a>
+</a>
+<a href="https://sonarcloud.io/dashboard?id=samuel-gomez_react-starter-toolkit">
+  <img alt="Quality Gate Status" src="https://sonarcloud.io/api/project_badges/measure?project=samuel-gomez_react-starter-toolkit&metric=alert_status" >
+</a>
+</a>
+<a href="https://sonarcloud.io/component_measures?id=samuel-gomez_react-starter-toolkit&metric=reliability_rating">
+  <img alt="Reliability" src="https://sonarcloud.io/api/project_badges/measure?project=samuel-gomez_react-starter-toolkit&metric=reliability_rating" >
+</a>
+<a href="https://sonarcloud.io/component_measures?id=samuel-gomez_react-starter-toolkit&metric=security_rating">
+  <img alt="Security" src="https://sonarcloud.io/api/project_badges/measure?project=samuel-gomez_react-starter-toolkit&metric=security_rating" >
+</a>
+</p>
+<p style="text-align: center;">
+<strong>A starter based on <a href="https://github.com/facebook/create-react-app" >Create React App</a> and Slash Design System (<a href="https://axaguildev.github.io/design-system/" >Guidelines</a>, <a href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/alert-alert--default" >Storybook</a>)</strong>
+<br><br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Demo 😎
-
-You can see a demo here : https://react-starter-toolkit.netlify.app/
+  <h2 style="text-align: center;">Demo 😎</h2>
+<p style="text-align: center;">
+  <img src="src/shared/images/screenshot-demo.png" style="width: 50%;" >
+</p>
+  <p style="text-align: center;"><a href="https://react-starter-toolkit.netlify.app/">You can see a demo here</a></p>
 
 ## Installation 🚀
 
 ```
 git clone https://github.com/samuel-gomez/react-starter-toolkit.git
 ```
+
+> For VSCode users, you can open the workspace directly by double clicking on the app.code-workspace file
 
 ### 🚨 Before installation 🚨
 
