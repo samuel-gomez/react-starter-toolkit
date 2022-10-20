@@ -725,7 +725,7 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.2.7
+        © 2022 AXA Tous droits réservés - v0.2.8
       </div>
     </div>
   </footer>
@@ -830,7 +830,7 @@ exports[`Layout Should render when disabled: {"menu": true} 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.2.7
+        © 2022 AXA Tous droits réservés - v0.2.8
       </div>
     </div>
   </footer>
@@ -1219,7 +1219,7 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.2.7
+        © 2022 AXA Tous droits réservés - v0.2.8
       </div>
     </div>
   </footer>

@@ -3166,7 +3166,7 @@ const useNotify = ({  useContextFn = useContext, NotificationContextObj = Notifi
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.2.7
+        © 2022 AXA Tous droits réservés - v0.2.8
       </div>
     </div>
   </footer>

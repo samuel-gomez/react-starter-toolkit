@@ -1,2 +1,48 @@
-$headerHeight: 206px;
-$footerHeight: 53px;
+:root {
+  --headerHeight: 92px;
+  --menuHeight: 56px;
+  --titlebarHeight: 54px;
+  --footerHeight: 38px;
+  --fullheaderHeight: calc(var(--headerHeight) + var(--menuHeight) + var(--titlebarHeight));
+  --layoutHeight: calc(var(--fullheaderHeight) + var(--footerHeight));
+}
+
+body:has(.af-title-bar, .af-header):not(:has(.af-menu)) {
+  --fullheaderHeight: calc(var(--headerHeight) + var(--titlebarHeight));
+}
+
+body:has(.af-title-bar, .af-menu):not(:has(.af-header)) {
+  --fullheaderHeight: calc(var(--menuHeight) + var(--titlebarHeight));
+}
+
+body:has(.af-header, .af-menu):not(:has(.af-title-bar)) {
+  --fullheaderHeight: calc(var(--menuHeight) + var(--headerHeight));
+}
+
+body:has(.af-title-bar):not(:has(.af-header, .af-menu)) {
+  --fullheaderHeight: var(--titlebarHeight);
+}
+
+body:has(.af-header):not(:has(.af-title-bar, .af-menu)) {
+  --fullheaderHeight: var(--headerHeight);
+}
+
+body:has(.af-menu):not(:has(.af-title-bar, .af-header)) {
+  --fullheaderHeight: var(--menuHeight);
+}
+
+body:not(:has(.af-header, .af-menu, .af-title-bar)) {
+  --fullheaderHeight: 0px;
+}
+
+body:not(:has(.af-footer)) {
+  --footerHeight: 0px;
+}
+
+@include media-breakpoint-down(sm) {
+  :root {
+    --headerHeight: 79px;
+    --menuHeight: 0px;
+    --titlebarHeight: 49px;
+  }
+}

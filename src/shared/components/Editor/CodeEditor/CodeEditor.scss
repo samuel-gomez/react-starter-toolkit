@@ -32,3 +32,17 @@
 .af-popover__container--editor .af-popover__container-pop {
   width: 100px;
 }
+
+@include media-breakpoint-down(sm) {
+  .af-modal--editor {
+    width: 100vw;
+  }
+  .af-templates {
+    overflow: auto;
+    width: 100%;
+    .af-popover__wrapper {
+      display: inline-block;
+      margin: 0;
+    }
+  }
+}

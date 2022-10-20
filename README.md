@@ -1,6 +1,10 @@
-<p style="text-align: center;"><img src="src/shared/images/slash-logo.svg" width=250></p>
-<h2 style="text-align: center;">React Starter Toolkit</h2>
+<p align="center" style="text-align: center;" ><img src="src/shared/images/slash-logo.svg" width=250></p>
+<h2 align="center" style="text-align: center;">React Starter Toolkit</h2>
+
 <p style="text-align: center;">
+<strong align="center" >A starter based on <a href="https://github.com/facebook/create-react-app" >Create React App</a> and Slash Design System (<a href="https://axaguildev.github.io/design-system/" >Guidelines</a>, <a href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/alert-alert--default" >Storybook</a>)</strong>
+<br><br>
+<p align="center" style="text-align: center;">
 <a href="https://github.com/samuel-gomez/react-starter-toolkit/actions/workflows/build.yml">
   <img alt="Build" src="https://github.com/samuel-gomez/react-starter-toolkit/actions/workflows/build.yml/badge.svg" >
 </a>
@@ -27,15 +31,12 @@
   <img alt="Security" src="https://sonarcloud.io/api/project_badges/measure?project=samuel-gomez_react-starter-toolkit&metric=security_rating" >
 </a>
 </p>
-<p style="text-align: center;">
-<strong>A starter based on <a href="https://github.com/facebook/create-react-app" >Create React App</a> and Slash Design System (<a href="https://axaguildev.github.io/design-system/" >Guidelines</a>, <a href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/alert-alert--default" >Storybook</a>)</strong>
-<br><br>
 
-  <h2 style="text-align: center;">Demo 😎</h2>
-<p style="text-align: center;">
-  <img src="src/shared/images/screenshot-demo.png" style="width: 50%;" >
+  <h2 align="center" style="text-align: center;">Demo 😎</h2>
+<p align="center" style="text-align: center;">
+  <img src="src/shared/images/screenshot-demo.png" style="width: 70%;" >
 </p>
-  <p style="text-align: center;"><a href="https://react-starter-toolkit.netlify.app/">You can see a demo here</a></p>
+  <p align="center" style="text-align: center;"><a href="https://react-starter-toolkit.netlify.app/">You can see a demo here</a></p>
 
 ## Installation 🚀
 

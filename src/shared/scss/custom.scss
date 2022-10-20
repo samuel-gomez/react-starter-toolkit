@@ -66,7 +66,7 @@
 /* CUSTOM : LAYOUT *************************************************************/
 .af-main {
   padding: 1rem;
-  min-height: calc(100vh - #{$headerHeight} - #{$footerHeight});
+  min-height: calc(100vh - (calc(var(--fullheaderHeight) + var(--footerHeight))));
   background: $color-gray-2;
 }
 
@@ -74,9 +74,6 @@
   .af-main {
     padding: 0;
   }
-}
-
-@include media-breakpoint-down(sm) {
   .container {
     max-width: 100%;
   }
@@ -131,7 +128,7 @@
   .af-table {
     display: block;
     margin: 0 auto;
-    @include scroll-horizontal-shadow(90%);
+    @include scroll-horizontal-shadow(100%);
   }
 }
 

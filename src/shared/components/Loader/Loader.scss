@@ -9,7 +9,7 @@ $classBase: af-loader;
   position: relative;
   width: 100%;
   &--active {
-    min-height: calc(100vh - #{$headerHeight} - #{$footerHeight});
+    min-height: calc(100vh - (calc(var(--fullheaderHeight) + var(--footerHeight))));
   }
   &__spinner {
     display: flex;
