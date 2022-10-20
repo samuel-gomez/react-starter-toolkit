@@ -5,13 +5,26 @@ exports[`<Templates/> Should render Templates 1`] = `
   <div
     class="af-templates"
   >
-    <button
-      class="af-btn--circle af-btn--delete"
+    <div
+      class="af-popover__wrapper"
     >
-      <i
-        class="glyphicon glyphicon-trash"
-      />
-    </button>
+      <div
+        class="af-popover__container af-popover__container--editor"
+      >
+        <div
+          class="af-popover__container-over"
+          role="presentation"
+        >
+          <button
+            class="af-btn--circle af-btn--delete"
+          >
+            <i
+              class="glyphicon glyphicon-trash"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
     <div
       class="af-popover__wrapper"
     >
