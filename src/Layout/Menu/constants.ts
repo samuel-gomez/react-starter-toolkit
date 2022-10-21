@@ -13,10 +13,6 @@ const MENU_ITEMS = [
     basePathChildren: ROUTE_URL.DEMOS,
     children: [
       {
-        label: 'Pages',
-        classModifierItem: 'separator',
-      },
-      {
         label: 'Membres',
         url: ROUTE_URL.MEMBERS,
       },
@@ -36,10 +32,13 @@ const MENU_ITEMS = [
         label: 'Layout',
         url: ROUTE_URL.LAYOUT,
       },
-      {
-        label: 'Composants Toolkit',
-        classModifierItem: 'separator',
-      },
+    ],
+  },
+  {
+    label: 'Toolkit components',
+    url: ROUTE_URL.DEMOS,
+    basePathChildren: ROUTE_URL.DEMOS,
+    children: [
       {
         label: 'Button',
         url: ROUTE_URL.BUTTON,
@@ -47,6 +46,17 @@ const MENU_ITEMS = [
       {
         label: 'Alert',
         url: ROUTE_URL.ALERT,
+      },
+    ],
+  },
+  {
+    label: 'Toolkit form components',
+    url: ROUTE_URL.DEMOS,
+    basePathChildren: ROUTE_URL.DEMOS,
+    children: [
+      {
+        label: 'Text Input',
+        url: ROUTE_URL.TEXT_INPUT,
       },
     ],
   },

@@ -11,6 +11,7 @@ import Notification from 'pages/Demos/Notification';
 import Home from 'pages/Home';
 import Layout from 'pages/Demos/Layout';
 import Alert from 'pages/Demos/Alert';
+import TextInput from 'pages/Demos/TextInput';
 import ROUTE_URL from 'App/Routes/constants';
 import { UserContext } from 'App/UserProvider';
 import Loader, { MODES } from 'shared/components/Loader';
@@ -52,6 +53,7 @@ type TRoutesCmpt = {
   withAuthFn?: typeof withAuth;
   LayoutCmpt?: typeof Layout;
   AlertCmpt?: typeof Alert;
+  TextInputCmpt?: typeof TextInput;
 };
 
 const RoutesCmpt = ({
@@ -65,6 +67,7 @@ const RoutesCmpt = ({
   PageUnauthorizeCmpt = PageUnauthorize,
   LayoutCmpt = Layout,
   AlertCmpt = Alert,
+  TextInputCmpt = TextInput,
   withAuthFn = withAuth,
 }: TRoutesCmpt) => (
   <Routes>
@@ -78,6 +81,7 @@ const RoutesCmpt = ({
       <Route path={ROUTE_URL.NOTIFICATION} element={withAuthFn(NotificationCmpt)} />
       <Route path={ROUTE_URL.LAYOUT} element={withAuthFn(LayoutCmpt)} />
       <Route path={ROUTE_URL.ALERT} element={withAuthFn(AlertCmpt)} />
+      <Route path={ROUTE_URL.TEXT_INPUT} element={withAuthFn(TextInputCmpt)} />
     </Route>
     <Route path={ROUTE_URL.UNAUTHORIZE} element={<PageUnauthorizeCmpt />} />
     <Route path="*" element={<PageNotFound />} />

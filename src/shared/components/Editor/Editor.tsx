@@ -21,6 +21,7 @@ type TListSelect = {
   options?: Record<string, string>;
   type?: string;
   list?: Tlistelements;
+  labelBtnOpenCodeEditor?: string;
 };
 
 export type TonChange = (e: TEvent) => void;
@@ -34,47 +35,53 @@ type TFieldEditor = {
 
 export type Tknobs = Record<string, Record<string, unknown>>;
 
-export const FieldEditor = ({ value, name, onChange }: TFieldEditor) => (
+const commonProps = ({ onChange, name }: Omit<TFieldEditor, 'value'>) => ({
+  onChange,
+  name,
+  id: name,
+});
+
+export const FieldEditor = ({ value, ...props }: TFieldEditor) => (
   <>
     {(() => {
       switch (true) {
         case typeof value === 'function':
-          return <Text type="text" value={`${value}`} id={name} name={name} readonly disabled />;
+          return <Text {...commonProps(props)} type="text" value={`${value}`} readonly disabled />;
         case typeof value === 'boolean':
           return (
             <CheckboxItem
+              {...commonProps(props)}
               disabled={false}
               isChecked={value}
-              onChange={onChange}
-              id={name}
-              name={name}
               value={`${value}`}
               mode={CheckboxModes.toggle}
               className="af-form__checkbox-toggle"
             />
           );
         case typeof value === 'object' && !!value.type && value.type === 'jsx':
-          return typeof value === 'object' && <CodeEditor list={value?.list} id={name} name={name} onChange={onChange} value={value.value} />;
+          return (
+            typeof value === 'object' && (
+              <CodeEditor {...commonProps(props)} labelBtnOpenCodeEditor={value.labelBtnOpenCodeEditor} list={value?.list} value={value.value} />
+            )
+          );
         case typeof value === 'object':
           return (
             typeof value === 'object' && (
               <div className="af-form__select">
                 <Select
+                  {...commonProps(props)}
                   forceDisplayPlaceholder={true}
                   placeholder={DEFAULT_OPTION_LABEL}
-                  name={name}
-                  id={name}
                   options={value.options}
-                  onChange={onChange}
                   value={value.value}
-                  aria-label={`select-${name}`}
+                  aria-label={`select-${props.name}`}
                 />
               </div>
             )
           );
 
         default:
-          return <Text type="text" value={value} id={name} name={name} onChange={onChange} />;
+          return <Text {...commonProps(props)} type="text" autoFocus={true} value={value} />;
       }
     })()}
   </>
@@ -148,7 +155,7 @@ export const withEditor =
     const { closeEditor, openEditor, isOpenEditor } = useToggleEditorFn();
     return (
       <section className={'af-editor'}>
-        <Component {...props} openEditor={openEditor} />
+        <Component {...props} openEditor={openEditor} isOpenEditor={isOpenEditor} />
         <div className={`af-draggable-container${isOpenEditor ? ' af-draggable-container--open' : ''}`}>
           <Draggable cancel=".glyphicon-close" handle=".af-draggable__title">
             <div className="af-draggable">

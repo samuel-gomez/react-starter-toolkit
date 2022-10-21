@@ -69,14 +69,24 @@ type TCodeEditor = TuseCodeEditor & {
   useCodeEditorFn?: typeof useCodeEditor;
   useToggleModalFn?: typeof useToggleModal;
   list?: Tlistelements;
+  labelBtnOpenCodeEditor?: string;
 };
-const CodeEditor = ({ value, onChange, name, id, list, useCodeEditorFn = useCodeEditor, useToggleModalFn = useToggleModal }: TCodeEditor) => {
+const CodeEditor = ({
+  value,
+  onChange,
+  name,
+  id,
+  list,
+  labelBtnOpenCodeEditor = 'Edit children',
+  useCodeEditorFn = useCodeEditor,
+  useToggleModalFn = useToggleModal,
+}: TCodeEditor) => {
   const { code, onChangeCodeEditor, submitTemplate, onClearCodeEditor } = useCodeEditorFn({ value, onChange, name, id });
   const { onCancel, openModal, isOpen } = useToggleModalFn();
   return (
     <>
       <Button type="submit" onClick={openModal}>
-        <span className="af-btn__text">Edit children</span>
+        <span className="af-btn__text">{labelBtnOpenCodeEditor}</span>
       </Button>
       <Modal isOpen={isOpen} onOutsideTap={onCancel} className="af-modal af-modal--editor">
         <ModalCommonHeader onCancel={onCancel} title="Saisir la value de children" />
