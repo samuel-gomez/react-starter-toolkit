@@ -1,42 +1,49 @@
-<p align="center" style="text-align: center;" ><img src="src/shared/images/slash-logo.svg" width=250></p>
-<h2 align="center" style="text-align: center;">React Starter Toolkit</h2>
+<p align="center"><img src="src/shared/images/slash-logo.svg" width=250></p>
+<h2 align="center">React Starter Toolkit</h2>
 
-<p style="text-align: center;">
-<strong align="center" >A starter based on <a href="https://github.com/facebook/create-react-app" >Create React App</a> and Slash Design System (<a href="https://axaguildev.github.io/design-system/" >Guidelines</a>, <a href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/alert-alert--default" >Storybook</a>)</strong>
-<br><br>
-<p align="center" style="text-align: center;">
-<a href="https://github.com/samuel-gomez/react-starter-toolkit/actions/workflows/build.yml">
-  <img alt="Build" src="https://github.com/samuel-gomez/react-starter-toolkit/actions/workflows/build.yml/badge.svg" >
-</a>
-<a href="http://commitizen.github.io/cz-cli/">
-  <img alt="Commitizen friendly" src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg" >
-</a>
-</a>
-<a href="https://codecov.io/gh/samuel-gomez/react-starter-toolkit">
-  <img alt="codecov" src="https://codecov.io/gh/samuel-gomez/react-starter-toolkit/branch/master/graph/badge.svg?token=N75VO37VG7" >
-</a>
-</a>
-<a href="https://app.netlify.com/sites/react-starter-toolkit/deploys">
-  <img alt="Netlify Status" src="https://api.netlify.com/api/v1/badges/c496aa9a-8801-4a32-9571-547bd4ea5ea3/deploy-status" >
-</a>
-</a>
-<a href="https://sonarcloud.io/dashboard?id=samuel-gomez_react-starter-toolkit">
-  <img alt="Quality Gate Status" src="https://sonarcloud.io/api/project_badges/measure?project=samuel-gomez_react-starter-toolkit&metric=alert_status" >
-</a>
-</a>
-<a href="https://sonarcloud.io/component_measures?id=samuel-gomez_react-starter-toolkit&metric=reliability_rating">
-  <img alt="Reliability" src="https://sonarcloud.io/api/project_badges/measure?project=samuel-gomez_react-starter-toolkit&metric=reliability_rating" >
-</a>
-<a href="https://sonarcloud.io/component_measures?id=samuel-gomez_react-starter-toolkit&metric=security_rating">
-  <img alt="Security" src="https://sonarcloud.io/api/project_badges/measure?project=samuel-gomez_react-starter-toolkit&metric=security_rating" >
-</a>
+<p align="center">
+  <strong>A starter based on <a href="https://github.com/facebook/create-react-app">Create React App</a> and Slash
+    Design System (<a href="https://axaguildev.github.io/design-system/">Guidelines</a>, <a
+      href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/alert-alert--default">Storybook</a>)</strong>
+  <br><br>
+<p align="center">
+  <a href="https://github.com/samuel-gomez/react-starter-toolkit/actions/workflows/build.yml">
+    <img alt="Build" src="https://github.com/samuel-gomez/react-starter-toolkit/actions/workflows/build.yml/badge.svg">
+  </a>
+  <a href="http://commitizen.github.io/cz-cli/">
+    <img alt="Commitizen friendly" src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg">
+  </a>
+  </a>
+  <a href="https://codecov.io/gh/samuel-gomez/react-starter-toolkit">
+    <img alt="codecov"
+      src="https://codecov.io/gh/samuel-gomez/react-starter-toolkit/branch/master/graph/badge.svg?token=N75VO37VG7">
+  </a>
+  </a>
+  <a href="https://app.netlify.com/sites/react-starter-toolkit/deploys">
+    <img alt="Netlify Status"
+      src="https://api.netlify.com/api/v1/badges/c496aa9a-8801-4a32-9571-547bd4ea5ea3/deploy-status">
+  </a>
+  </a>
+  <a href="https://sonarcloud.io/dashboard?id=samuel-gomez_react-starter-toolkit">
+    <img alt="Quality Gate Status"
+      src="https://sonarcloud.io/api/project_badges/measure?project=samuel-gomez_react-starter-toolkit&metric=alert_status">
+  </a>
+  </a>
+  <a href="https://sonarcloud.io/component_measures?id=samuel-gomez_react-starter-toolkit&metric=reliability_rating">
+    <img alt="Reliability"
+      src="https://sonarcloud.io/api/project_badges/measure?project=samuel-gomez_react-starter-toolkit&metric=reliability_rating">
+  </a>
+  <a href="https://sonarcloud.io/component_measures?id=samuel-gomez_react-starter-toolkit&metric=security_rating">
+    <img alt="Security"
+      src="https://sonarcloud.io/api/project_badges/measure?project=samuel-gomez_react-starter-toolkit&metric=security_rating">
+  </a>
 </p>
 
-  <h2 align="center" style="text-align: center;">Demo 😎</h2>
-<p align="center" style="text-align: center;">
-  <img src="src/shared/images/screenshot-demo.png" style="width: 70%;" >
+<h2 align="center">Demo 😎</h2>
+<p align="center">
+  <img src="src/shared/images/screenshot-demo.png" style="width: 70%;">
 </p>
-  <p align="center" style="text-align: center;"><a href="https://react-starter-toolkit.netlify.app/">You can see a demo here</a></p>
+<p align="center"><a href="https://react-starter-toolkit.netlify.app/">You can see a demo here</a></p>
 
 ## Installation 🚀
 
@@ -81,7 +88,8 @@ You will also see any lint errors in the console.
 ### `npm test` or `npm t` 🔬
 
 Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more
+information.
 
 ### `npm run cover:local`
 
@@ -117,14 +125,14 @@ With these plugins :
 
 ```json
 "extends": [
-    "react-app",
-    "plugin:prettier/recommended",
-    "plugin:@typescript-eslint/recommended"
-  ],
-  "plugins": [
-    "prettier",
-    "@typescript-eslint"
-  ],
+"react-app",
+"plugin:prettier/recommended",
+"plugin:@typescript-eslint/recommended"
+],
+"plugins": [
+"prettier",
+"@typescript-eslint"
+],
 ```
 
 ### `npm run lint:fix` 👮‍♂️⛑
