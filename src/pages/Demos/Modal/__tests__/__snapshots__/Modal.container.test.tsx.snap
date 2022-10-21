@@ -145,19 +145,6 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer and called funct
                   role="menu"
                 >
                   <li
-                    class="af-nav__item af-nav__item--separator "
-                    role="none"
-                  >
-                    <span
-                      aria-expanded="false"
-                      class="af-nav__link"
-                      role="menuitem"
-                      tabindex="-1"
-                    >
-                      Pages
-                    </span>
-                  </li>
-                  <li
                     class="af-nav__item "
                     role="none"
                   >
@@ -237,19 +224,31 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer and called funct
                       Layout
                     </a>
                   </li>
-                  <li
-                    class="af-nav__item af-nav__item--separator "
-                    role="none"
-                  >
-                    <span
-                      aria-expanded="false"
-                      class="af-nav__link"
-                      role="menuitem"
-                      tabindex="-1"
-                    >
-                      Composants Toolkit
-                    </span>
-                  </li>
+                </ul>
+              </li>
+              <li
+                class="af-nav__item af-nav__item--haschild "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Toolkit components"
+                  class="af-nav__link"
+                  href="/demos"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Toolkit components
+                </a>
+                <i
+                  class="glyphicon glyphicon-arrow-xs-down"
+                />
+                <ul
+                  aria-label=""
+                  class="af-nav__list af-nav__list--children"
+                  role="menu"
+                >
                   <li
                     class="af-nav__item "
                     role="none"
@@ -280,6 +279,47 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer and called funct
                       tabindex="-1"
                     >
                       Alert
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li
+                class="af-nav__item af-nav__item--haschild "
+                role="none"
+              >
+                <a
+                  aria-expanded="false"
+                  aria-haspopup="true"
+                  aria-label="Toolkit form components"
+                  class="af-nav__link"
+                  href="/demos"
+                  role="menuitem"
+                  tabindex="-1"
+                >
+                  Toolkit form components
+                </a>
+                <i
+                  class="glyphicon glyphicon-arrow-xs-down"
+                />
+                <ul
+                  aria-label=""
+                  class="af-nav__list af-nav__list--children"
+                  role="menu"
+                >
+                  <li
+                    class="af-nav__item "
+                    role="none"
+                  >
+                    <a
+                      aria-expanded="false"
+                      aria-haspopup="true"
+                      aria-label="Text Input"
+                      class="af-nav__link"
+                      href="/demos/text-input"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      Text Input
                     </a>
                   </li>
                 </ul>
