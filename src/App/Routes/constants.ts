@@ -10,6 +10,7 @@ import { ROUTE_URL_NOTIFICATION as NOTIFICATION } from 'pages/Demos/Notification
 import { ROUTE_URL_LAYOUT as LAYOUT } from 'pages/Demos/Layout/constants';
 import { ROUTE_URL_ALERT as ALERT } from 'pages/Demos/Alert/constants';
 import { ROUTE_URL_TEXT_INPUT as TEXT_INPUT } from 'pages/Demos/TextInput/constants';
+import { ROUTE_URL_TABS as TABS } from 'pages/Demos/Tabs/constants';
 
 const DEMOS = '/demos';
 const LAYOUTS = '/layouts';
@@ -29,6 +30,7 @@ const ROUTE_URL = {
   LAYOUT,
   ALERT,
   TEXT_INPUT,
+  TABS,
 };
 
 export default ROUTE_URL;

@@ -267,6 +267,22 @@ exports[`<Menu/> Render <Menu/> 1`] = `
                     Text Input
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Tabs"
+                    class="af-nav__link"
+                    href="/tabs"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Tabs
+                  </a>
+                </li>
               </ul>
             </li>
             <li
