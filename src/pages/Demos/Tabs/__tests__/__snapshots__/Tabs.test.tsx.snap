@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<TextInputPage/> Should render TextInputPage 1`] = `
+exports[`<Tabs /> Should render Tabs 1`] = `
 <DocumentFragment>
   <div
     class="af-header"
@@ -419,7 +419,7 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
       <h1
         class="af-title-bar__title"
       >
-        Demo TextInput
+        Demo Tabs
       </h1>
     </div>
   </div>
@@ -432,7 +432,7 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
       <h1
         class="af-title--content"
       >
-        TextInput playground
+        Tabs playground
       </h1>
       <section
         class="af-editor"
@@ -442,7 +442,7 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
         >
           <a
             class="af-link"
-            href="https://axaguildev.github.io/design-system/molecules/form-text/"
+            href="https://axaguildev.github.io/design-system/molecules/tabs/"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -463,7 +463,7 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
           </a>
           <a
             class="af-link"
-            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/form-input-text--textinput"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/tabs--default"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -484,7 +484,7 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
           </a>
           <a
             class="af-link"
-            href="https://github.com/AxaGuilDEv/react-toolkit/tree/v1.4.1/packages/Form/Input/text"
+            href="https://github.com/AxaGuilDEv/react-toolkit/tree/v1.4.1/packages/tabs"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -504,13 +504,13 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
             Github
           </a>
           <a
-            href="https://badge.fury.io/js/%40axa-fr%2Freact-toolkit-form-input-text"
+            href="https://badge.fury.io/js/%40axa-fr%2Freact-toolkit-tabs"
             rel="noopener noreferrer"
             target="_blank"
           >
             <img
               alt="npm version"
-              src="https://badge.fury.io/js/%40axa-fr%2Freact-toolkit-form-input-text.svg"
+              src="https://badge.fury.io/js/%40axa-fr%2Freact-toolkit-tabs.svg"
             />
           </a>
           <span
@@ -533,38 +533,61 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
             style="background: white; padding: 2rem; text-align: left; width: 100%;"
           >
             <div
-              class="af-form__group row"
+              class="af-tabs"
             >
-              <div
-                class="col-md-2"
+              <ul
+                class="af-tabs__control"
               >
-                <label
-                  class="af-form__group-label"
-                  for="uniqueid"
+                <li
+                  class="af-tabs__item af-tabs__item--has-icon-left"
                 >
-                  My Label
-                </label>
-              </div>
+                  <button
+                    class="af-tabs__link"
+                    id="0"
+                  >
+                    <i
+                      class="glyphicon glyphicon-briefcase"
+                    />
+                     Title with left icon
+                  </button>
+                </li>
+                <li
+                  class="af-tabs__item af-tabs__item--has-icon-right af-tabs__item--active"
+                >
+                  <button
+                    class="af-tabs__link"
+                    id="1"
+                  >
+                    <i
+                      class="glyphicon glyphicon-user"
+                    />
+                     Title with right icon
+                  </button>
+                </li>
+                <li
+                  class="af-tabs__item"
+                >
+                  <button
+                    class="af-tabs__link"
+                    id="2"
+                  >
+                    Title with badge 
+                    <span
+                      class="af-badge af-badge--info"
+                    >
+                       21 
+                    </span>
+                  </button>
+                </li>
+              </ul>
               <div
-                class="col-md-10"
+                class="af-tabs__content"
               >
                 <div
-                  class="af-form__text"
+                  class="af-tabs__pane"
                 >
-                  <input
-                    class="af-form__input-text"
-                    id="uniqueid"
-                    name="name-field"
-                    placeholder="Ex: Samuel"
-                    type="text"
-                    value="my value"
-                  />
+                  Content second tab
                 </div>
-                <small
-                  class="af-form__help"
-                >
-                  Enter your name
-                </small>
               </div>
             </div>
           </div>
@@ -604,7 +627,7 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
               <span
                 class="token plain"
               >
-                  
+                    
               </span>
               <span
                 class="token tag punctuation"
@@ -616,7 +639,7 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
                 class="token tag class-name"
                 style="color: rgb(255, 121, 198);"
               >
-                TextInput
+                Tabs
               </span>
               <span
                 class="token tag"
@@ -624,304 +647,11 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
               >
                  
               </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(248, 248, 242);"
-            >
-              <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
-              >
-                    
-              </span>
               <span
                 class="token tag attr-name"
                 style="color: rgb(241, 250, 140);"
               >
-                autoFocus
-              </span>
-              <span
-                class="token tag script language-javascript script-punctuation punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                =
-              </span>
-              <span
-                class="token tag script language-javascript punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                {
-              </span>
-              <span
-                class="token tag script language-javascript boolean"
-                style="color: rgb(255, 121, 198);"
-              >
-                true
-              </span>
-              <span
-                class="token tag script language-javascript punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                }
-              </span>
-              <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
-              >
-                 
-              </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(248, 248, 242);"
-            >
-              <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
-              >
-                    
-              </span>
-              <span
-                class="token tag attr-name"
-                style="color: rgb(241, 250, 140);"
-              >
-                readOnly
-              </span>
-              <span
-                class="token tag script language-javascript script-punctuation punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                =
-              </span>
-              <span
-                class="token tag script language-javascript punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                {
-              </span>
-              <span
-                class="token tag script language-javascript boolean"
-                style="color: rgb(255, 121, 198);"
-              >
-                false
-              </span>
-              <span
-                class="token tag script language-javascript punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                }
-              </span>
-              <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
-              >
-                 
-              </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(248, 248, 242);"
-            >
-              <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
-              >
-                    
-              </span>
-              <span
-                class="token tag attr-name"
-                style="color: rgb(241, 250, 140);"
-              >
-                isVisible
-              </span>
-              <span
-                class="token tag script language-javascript script-punctuation punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                =
-              </span>
-              <span
-                class="token tag script language-javascript punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                {
-              </span>
-              <span
-                class="token tag script language-javascript boolean"
-                style="color: rgb(255, 121, 198);"
-              >
-                true
-              </span>
-              <span
-                class="token tag script language-javascript punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                }
-              </span>
-              <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
-              >
-                 
-              </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(248, 248, 242);"
-            >
-              <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
-              >
-                    
-              </span>
-              <span
-                class="token tag attr-name"
-                style="color: rgb(241, 250, 140);"
-              >
-                required
-              </span>
-              <span
-                class="token tag script language-javascript script-punctuation punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                =
-              </span>
-              <span
-                class="token tag script language-javascript punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                {
-              </span>
-              <span
-                class="token tag script language-javascript boolean"
-                style="color: rgb(255, 121, 198);"
-              >
-                false
-              </span>
-              <span
-                class="token tag script language-javascript punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                }
-              </span>
-              <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
-              >
-                 
-              </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(248, 248, 242);"
-            >
-              <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
-              >
-                    
-              </span>
-              <span
-                class="token tag attr-name"
-                style="color: rgb(241, 250, 140);"
-              >
-                forceDisplayMessage
-              </span>
-              <span
-                class="token tag script language-javascript script-punctuation punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                =
-              </span>
-              <span
-                class="token tag script language-javascript punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                {
-              </span>
-              <span
-                class="token tag script language-javascript boolean"
-                style="color: rgb(255, 121, 198);"
-              >
-                false
-              </span>
-              <span
-                class="token tag script language-javascript punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                }
-              </span>
-              <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
-              >
-                 
-              </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(248, 248, 242);"
-            >
-              <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
-              >
-                    
-              </span>
-              <span
-                class="token tag attr-name"
-                style="color: rgb(241, 250, 140);"
-              >
-                disabled
-              </span>
-              <span
-                class="token tag script language-javascript script-punctuation punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                =
-              </span>
-              <span
-                class="token tag script language-javascript punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                {
-              </span>
-              <span
-                class="token tag script language-javascript boolean"
-                style="color: rgb(255, 121, 198);"
-              >
-                false
-              </span>
-              <span
-                class="token tag script language-javascript punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                }
-              </span>
-              <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
-              >
-                 
-              </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(248, 248, 242);"
-            >
-              <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
-              >
-                    
-              </span>
-              <span
-                class="token tag attr-name"
-                style="color: rgb(241, 250, 140);"
-              >
-                id
+                className
               </span>
               <span
                 class="token tag attr-value punctuation attr-equals"
@@ -939,7 +669,7 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
                 class="token tag attr-value"
                 style="color: rgb(255, 121, 198);"
               >
-                uniqueid
+                af-tabs
               </span>
               <span
                 class="token tag attr-value punctuation"
@@ -953,40 +683,35 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
               >
                  
               </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(248, 248, 242);"
-            >
-              <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
-              >
-                    
-              </span>
               <span
                 class="token tag attr-name"
                 style="color: rgb(241, 250, 140);"
               >
-                message
+                onChange
               </span>
               <span
-                class="token tag attr-value punctuation attr-equals"
+                class="token tag script language-javascript script-punctuation punctuation"
                 style="color: rgb(248, 248, 242);"
               >
                 =
               </span>
               <span
-                class="token tag attr-value punctuation"
+                class="token tag script language-javascript punctuation"
                 style="color: rgb(248, 248, 242);"
               >
-                "
+                {
               </span>
               <span
-                class="token tag attr-value punctuation"
+                class="token tag script language-javascript"
+                style="color: rgb(255, 121, 198);"
+              >
+                onChangeTab
+              </span>
+              <span
+                class="token tag script language-javascript punctuation"
                 style="color: rgb(248, 248, 242);"
               >
-                "
+                }
               </span>
               <span
                 class="token tag"
@@ -994,22 +719,11 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
               >
                  
               </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(248, 248, 242);"
-            >
-              <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
-              >
-                    
-              </span>
               <span
                 class="token tag attr-name"
                 style="color: rgb(241, 250, 140);"
               >
-                placeholder
+                activeIndex
               </span>
               <span
                 class="token tag attr-value punctuation attr-equals"
@@ -1027,7 +741,7 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
                 class="token tag attr-value"
                 style="color: rgb(255, 121, 198);"
               >
-                Ex: Samuel
+                1
               </span>
               <span
                 class="token tag attr-value punctuation"
@@ -1036,27 +750,167 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
                 "
               </span>
               <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
               >
-                 
+                &gt;
               </span>
+              <span
+                class="token plain-text"
+              />
             </div>
             <div
               class="token-line"
               style="color: rgb(248, 248, 242);"
             >
               <span
+                class="token plain-text"
+              >
+                        
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &lt;
+              </span>
+              <span
+                class="token tag class-name"
+                style="color: rgb(255, 121, 198);"
+              >
+                Tabs.Tab
+              </span>
+              <span
                 class="token tag"
                 style="color: rgb(255, 121, 198);"
               >
-                    
+                 
               </span>
               <span
                 class="token tag attr-name"
                 style="color: rgb(241, 250, 140);"
               >
-                helpMessage
+                title
+              </span>
+              <span
+                class="token tag script language-javascript script-punctuation punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                =
+              </span>
+              <span
+                class="token tag script language-javascript punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                {
+              </span>
+              <span
+                class="token tag script language-javascript tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &lt;
+              </span>
+              <span
+                class="token tag script language-javascript tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &gt;
+              </span>
+              <span
+                class="token tag script language-javascript tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &lt;
+              </span>
+              <span
+                class="token tag script language-javascript tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                i
+              </span>
+              <span
+                class="token tag script language-javascript tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                 
+              </span>
+              <span
+                class="token tag script language-javascript tag attr-name"
+                style="color: rgb(241, 250, 140);"
+              >
+                className
+              </span>
+              <span
+                class="token tag script language-javascript tag attr-value punctuation attr-equals"
+                style="color: rgb(248, 248, 242);"
+              >
+                =
+              </span>
+              <span
+                class="token tag script language-javascript tag attr-value punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                "
+              </span>
+              <span
+                class="token tag script language-javascript tag attr-value"
+                style="color: rgb(255, 121, 198);"
+              >
+                glyphicon glyphicon-briefcase
+              </span>
+              <span
+                class="token tag script language-javascript tag attr-value punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                "
+              </span>
+              <span
+                class="token tag script language-javascript tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                 
+              </span>
+              <span
+                class="token tag script language-javascript tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                /&gt;
+              </span>
+              <span
+                class="token tag script language-javascript plain-text"
+                style="color: rgb(255, 121, 198);"
+              >
+                 Title with left icon
+              </span>
+              <span
+                class="token tag script language-javascript tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &lt;/
+              </span>
+              <span
+                class="token tag script language-javascript tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &gt;
+              </span>
+              <span
+                class="token tag script language-javascript punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                }
+              </span>
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                 
+              </span>
+              <span
+                class="token tag attr-name"
+                style="color: rgb(241, 250, 140);"
+              >
+                classModifier
               </span>
               <span
                 class="token tag attr-value punctuation attr-equals"
@@ -1074,7 +928,7 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
                 class="token tag attr-value"
                 style="color: rgb(255, 121, 198);"
               >
-                Enter your name
+                has-icon-left
               </span>
               <span
                 class="token tag attr-value punctuation"
@@ -1083,10 +937,23 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
                 "
               </span>
               <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
               >
-                 
+                &gt;
+              </span>
+              <span
+                class="token plain-text"
+              />
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(248, 248, 242);"
+            >
+              <span
+                class="token plain-text"
+              >
+                            Content first tab
               </span>
             </div>
             <div
@@ -1094,16 +961,184 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
               style="color: rgb(248, 248, 242);"
             >
               <span
+                class="token plain-text"
+              >
+                        
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &lt;/
+              </span>
+              <span
+                class="token tag class-name"
+                style="color: rgb(255, 121, 198);"
+              >
+                Tabs.Tab
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &gt;
+              </span>
+              <span
+                class="token plain-text"
+              />
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(248, 248, 242);"
+            >
+              <span
+                class="token plain-text"
+              >
+                        
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &lt;
+              </span>
+              <span
+                class="token tag class-name"
+                style="color: rgb(255, 121, 198);"
+              >
+                Tabs.Tab
+              </span>
+              <span
                 class="token tag"
                 style="color: rgb(255, 121, 198);"
               >
-                    
+                 
               </span>
               <span
                 class="token tag attr-name"
                 style="color: rgb(241, 250, 140);"
               >
-                name
+                title
+              </span>
+              <span
+                class="token tag script language-javascript script-punctuation punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                =
+              </span>
+              <span
+                class="token tag script language-javascript punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                {
+              </span>
+              <span
+                class="token tag script language-javascript tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &lt;
+              </span>
+              <span
+                class="token tag script language-javascript tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &gt;
+              </span>
+              <span
+                class="token tag script language-javascript tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &lt;
+              </span>
+              <span
+                class="token tag script language-javascript tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                i
+              </span>
+              <span
+                class="token tag script language-javascript tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                 
+              </span>
+              <span
+                class="token tag script language-javascript tag attr-name"
+                style="color: rgb(241, 250, 140);"
+              >
+                className
+              </span>
+              <span
+                class="token tag script language-javascript tag attr-value punctuation attr-equals"
+                style="color: rgb(248, 248, 242);"
+              >
+                =
+              </span>
+              <span
+                class="token tag script language-javascript tag attr-value punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                "
+              </span>
+              <span
+                class="token tag script language-javascript tag attr-value"
+                style="color: rgb(255, 121, 198);"
+              >
+                glyphicon glyphicon-user
+              </span>
+              <span
+                class="token tag script language-javascript tag attr-value punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                "
+              </span>
+              <span
+                class="token tag script language-javascript tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                 
+              </span>
+              <span
+                class="token tag script language-javascript tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                /&gt;
+              </span>
+              <span
+                class="token tag script language-javascript plain-text"
+                style="color: rgb(255, 121, 198);"
+              >
+                 Title with right icon
+              </span>
+              <span
+                class="token tag script language-javascript tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &lt;/
+              </span>
+              <span
+                class="token tag script language-javascript tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &gt;
+              </span>
+              <span
+                class="token tag script language-javascript punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                }
+              </span>
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                 
+              </span>
+              <span
+                class="token tag attr-name"
+                style="color: rgb(241, 250, 140);"
+              >
+                classModifier
               </span>
               <span
                 class="token tag attr-value punctuation attr-equals"
@@ -1121,7 +1156,7 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
                 class="token tag attr-value"
                 style="color: rgb(255, 121, 198);"
               >
-                name-field
+                has-icon-right
               </span>
               <span
                 class="token tag attr-value punctuation"
@@ -1135,46 +1170,77 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
               >
                  
               </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &gt;
+              </span>
+              <span
+                class="token plain-text"
+              />
             </div>
             <div
               class="token-line"
               style="color: rgb(248, 248, 242);"
             >
               <span
-                class="token tag"
+                class="token plain-text"
+              >
+                            Content second tab
+              </span>
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(248, 248, 242);"
+            >
+              <span
+                class="token plain-text"
+              >
+                        
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &lt;/
+              </span>
+              <span
+                class="token tag class-name"
                 style="color: rgb(255, 121, 198);"
               >
-                    
+                Tabs.Tab
               </span>
               <span
-                class="token tag attr-name"
-                style="color: rgb(241, 250, 140);"
-              >
-                value
-              </span>
-              <span
-                class="token tag attr-value punctuation attr-equals"
+                class="token tag punctuation"
                 style="color: rgb(248, 248, 242);"
               >
-                =
+                &gt;
               </span>
               <span
-                class="token tag attr-value punctuation"
+                class="token plain-text"
+              />
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(248, 248, 242);"
+            >
+              <span
+                class="token plain-text"
+              >
+                        
+              </span>
+              <span
+                class="token tag punctuation"
                 style="color: rgb(248, 248, 242);"
               >
-                "
+                &lt;
               </span>
               <span
-                class="token tag attr-value"
+                class="token tag class-name"
                 style="color: rgb(255, 121, 198);"
               >
-                my value
-              </span>
-              <span
-                class="token tag attr-value punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                "
+                Tabs.Tab
               </span>
               <span
                 class="token tag"
@@ -1182,22 +1248,11 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
               >
                  
               </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(248, 248, 242);"
-            >
-              <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
-              >
-                    
-              </span>
               <span
                 class="token tag attr-name"
                 style="color: rgb(241, 250, 140);"
               >
-                label
+                title
               </span>
               <span
                 class="token tag script language-javascript script-punctuation punctuation"
@@ -1227,7 +1282,85 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
                 class="token tag script language-javascript plain-text"
                 style="color: rgb(255, 121, 198);"
               >
-                My Label
+                Title with badge 
+              </span>
+              <span
+                class="token tag script language-javascript tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &lt;
+              </span>
+              <span
+                class="token tag script language-javascript tag class-name"
+                style="color: rgb(255, 121, 198);"
+              >
+                Badge
+              </span>
+              <span
+                class="token tag script language-javascript tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                 
+              </span>
+              <span
+                class="token tag script language-javascript tag attr-name"
+                style="color: rgb(241, 250, 140);"
+              >
+                classModifier
+              </span>
+              <span
+                class="token tag script language-javascript tag attr-value punctuation attr-equals"
+                style="color: rgb(248, 248, 242);"
+              >
+                =
+              </span>
+              <span
+                class="token tag script language-javascript tag attr-value punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                "
+              </span>
+              <span
+                class="token tag script language-javascript tag attr-value"
+                style="color: rgb(255, 121, 198);"
+              >
+                info
+              </span>
+              <span
+                class="token tag script language-javascript tag attr-value punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                "
+              </span>
+              <span
+                class="token tag script language-javascript tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &gt;
+              </span>
+              <span
+                class="token tag script language-javascript plain-text"
+                style="color: rgb(255, 121, 198);"
+              >
+                 21 
+              </span>
+              <span
+                class="token tag script language-javascript tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &lt;/
+              </span>
+              <span
+                class="token tag script language-javascript tag class-name"
+                style="color: rgb(255, 121, 198);"
+              >
+                Badge
+              </span>
+              <span
+                class="token tag script language-javascript tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &gt;
               </span>
               <span
                 class="token tag script language-javascript tag punctuation"
@@ -1248,192 +1381,6 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
                 }
               </span>
               <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
-              />
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(248, 248, 242);"
-            >
-              <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
-              >
-                    
-              </span>
-              <span
-                class="token tag attr-name"
-                style="color: rgb(241, 250, 140);"
-              >
-                className
-              </span>
-              <span
-                class="token tag attr-value punctuation attr-equals"
-                style="color: rgb(248, 248, 242);"
-              >
-                =
-              </span>
-              <span
-                class="token tag attr-value punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                "
-              </span>
-              <span
-                class="token tag attr-value"
-                style="color: rgb(255, 121, 198);"
-              >
-                af-form__group row
-              </span>
-              <span
-                class="token tag attr-value punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                "
-              </span>
-              <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
-              >
-                 
-              </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(248, 248, 242);"
-            >
-              <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
-              >
-                    
-              </span>
-              <span
-                class="token tag attr-name"
-                style="color: rgb(241, 250, 140);"
-              >
-                classModifier
-              </span>
-              <span
-                class="token tag attr-value punctuation attr-equals"
-                style="color: rgb(248, 248, 242);"
-              >
-                =
-              </span>
-              <span
-                class="token tag attr-value punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                "
-              </span>
-              <span
-                class="token tag attr-value punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                "
-              </span>
-              <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
-              >
-                 
-              </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(248, 248, 242);"
-            >
-              <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
-              >
-                    
-              </span>
-              <span
-                class="token tag attr-name"
-                style="color: rgb(241, 250, 140);"
-              >
-                messageType
-              </span>
-              <span
-                class="token tag attr-value punctuation attr-equals"
-                style="color: rgb(248, 248, 242);"
-              >
-                =
-              </span>
-              <span
-                class="token tag attr-value punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                "
-              </span>
-              <span
-                class="token tag attr-value"
-                style="color: rgb(255, 121, 198);"
-              >
-                error
-              </span>
-              <span
-                class="token tag attr-value punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                "
-              </span>
-              <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
-              >
-                 
-              </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(248, 248, 242);"
-            >
-              <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
-              >
-                    
-              </span>
-              <span
-                class="token tag attr-name"
-                style="color: rgb(241, 250, 140);"
-              >
-                onChange
-              </span>
-              <span
-                class="token tag script language-javascript script-punctuation punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                =
-              </span>
-              <span
-                class="token tag script language-javascript punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                {
-              </span>
-              <span
-                class="token tag script language-javascript"
-                style="color: rgb(255, 121, 198);"
-              >
-                onChangeInput
-              </span>
-              <span
-                class="token tag script language-javascript punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                }
-              </span>
-              <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
-              >
-                 
-              </span>
-              <span
                 class="token tag punctuation"
                 style="color: rgb(248, 248, 242);"
               >
@@ -1450,7 +1397,7 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
               <span
                 class="token plain-text"
               >
-                    
+                            Content third tab
               </span>
             </div>
             <div
@@ -1460,7 +1407,7 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
               <span
                 class="token plain-text"
               >
-                  
+                        
               </span>
               <span
                 class="token tag punctuation"
@@ -1472,7 +1419,38 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
                 class="token tag class-name"
                 style="color: rgb(255, 121, 198);"
               >
-                TextInput
+                Tabs.Tab
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &gt;
+              </span>
+              <span
+                class="token plain-text"
+              />
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(248, 248, 242);"
+            >
+              <span
+                class="token plain-text"
+              >
+                    
+              </span>
+              <span
+                class="token tag punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                &lt;/
+              </span>
+              <span
+                class="token tag class-name"
+                style="color: rgb(255, 121, 198);"
+              >
+                Tabs
               </span>
               <span
                 class="token tag punctuation"
@@ -1490,10 +1468,8 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
             >
               <span
                 class="token plain"
-                style="display: inline-block;"
               >
-                
-
+                  
               </span>
             </div>
           </pre>
@@ -1531,16 +1507,136 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
                 >
                   <label
                     class="af-form__group-label"
-                    for="name"
+                    for="labelFirstTab"
                   >
-                    name
+                    labelFirstTab
+                  </label>
+                  <button
+                    class="btn af-btn"
+                    type="submit"
+                  >
+                    <span
+                      class="af-btn__text"
+                    >
+                      Edit first label
+                    </span>
+                  </button>
+                </div>
+                <div
+                  class="af-form-editor__field"
+                >
+                  <label
+                    class="af-form__group-label"
+                    for="labelSecondTab"
+                  >
+                    labelSecondTab
+                  </label>
+                  <button
+                    class="btn af-btn"
+                    type="submit"
+                  >
+                    <span
+                      class="af-btn__text"
+                    >
+                      Edit second label
+                    </span>
+                  </button>
+                </div>
+                <div
+                  class="af-form-editor__field"
+                >
+                  <label
+                    class="af-form__group-label"
+                    for="labelThirdTab"
+                  >
+                    labelThirdTab
+                  </label>
+                  <button
+                    class="btn af-btn"
+                    type="submit"
+                  >
+                    <span
+                      class="af-btn__text"
+                    >
+                      Edit third label
+                    </span>
+                  </button>
+                </div>
+                <div
+                  class="af-form-editor__field"
+                >
+                  <label
+                    class="af-form__group-label"
+                    for="contentFirstTab"
+                  >
+                    contentFirstTab
+                  </label>
+                  <button
+                    class="btn af-btn"
+                    type="submit"
+                  >
+                    <span
+                      class="af-btn__text"
+                    >
+                      Edit first content
+                    </span>
+                  </button>
+                </div>
+                <div
+                  class="af-form-editor__field"
+                >
+                  <label
+                    class="af-form__group-label"
+                    for="contentSecondTab"
+                  >
+                    contentSecondTab
+                  </label>
+                  <button
+                    class="btn af-btn"
+                    type="submit"
+                  >
+                    <span
+                      class="af-btn__text"
+                    >
+                      Edit second content
+                    </span>
+                  </button>
+                </div>
+                <div
+                  class="af-form-editor__field"
+                >
+                  <label
+                    class="af-form__group-label"
+                    for="contentThirdTab"
+                  >
+                    contentThirdTab
+                  </label>
+                  <button
+                    class="btn af-btn"
+                    type="submit"
+                  >
+                    <span
+                      class="af-btn__text"
+                    >
+                      Edit third content
+                    </span>
+                  </button>
+                </div>
+                <div
+                  class="af-form-editor__field"
+                >
+                  <label
+                    class="af-form__group-label"
+                    for="classModifierFirstTab"
+                  >
+                    classModifierFirstTab
                   </label>
                   <input
                     class="af-form__input-text"
-                    id="name"
-                    name="name"
+                    id="classModifierFirstTab"
+                    name="classModifierFirstTab"
                     type="text"
-                    value="name-field"
+                    value="has-icon-left"
                   />
                 </div>
                 <div
@@ -1548,33 +1644,16 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
                 >
                   <label
                     class="af-form__group-label"
-                    for="id"
+                    for="classModifierSecondTab"
                   >
-                    id
+                    classModifierSecondTab
                   </label>
                   <input
                     class="af-form__input-text"
-                    id="id"
-                    name="id"
+                    id="classModifierSecondTab"
+                    name="classModifierSecondTab"
                     type="text"
-                    value="uniqueid"
-                  />
-                </div>
-                <div
-                  class="af-form-editor__field"
-                >
-                  <label
-                    class="af-form__group-label"
-                    for="classModifier"
-                  >
-                    classModifier
-                  </label>
-                  <input
-                    class="af-form__input-text"
-                    id="classModifier"
-                    name="classModifier"
-                    type="text"
-                    value=""
+                    value="has-icon-right"
                   />
                 </div>
                 <div
@@ -1591,7 +1670,7 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
                     id="className"
                     name="className"
                     type="text"
-                    value="af-form__group row"
+                    value="af-tabs"
                   />
                 </div>
                 <div
@@ -1599,97 +1678,9 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
                 >
                   <label
                     class="af-form__group-label"
-                    for="label"
+                    for="activeIndex"
                   >
-                    label
-                  </label>
-                  <button
-                    class="btn af-btn"
-                    type="submit"
-                  >
-                    <span
-                      class="af-btn__text"
-                    >
-                      Edit label
-                    </span>
-                  </button>
-                </div>
-                <div
-                  class="af-form-editor__field"
-                >
-                  <label
-                    class="af-form__group-label"
-                    for="value"
-                  >
-                    value
-                  </label>
-                  <input
-                    class="af-form__input-text"
-                    id="value"
-                    name="value"
-                    type="text"
-                    value="my value"
-                  />
-                </div>
-                <div
-                  class="af-form-editor__field"
-                >
-                  <label
-                    class="af-form__group-label"
-                    for="helpMessage"
-                  >
-                    helpMessage
-                  </label>
-                  <input
-                    class="af-form__input-text"
-                    id="helpMessage"
-                    name="helpMessage"
-                    type="text"
-                    value="Enter your name"
-                  />
-                </div>
-                <div
-                  class="af-form-editor__field"
-                >
-                  <label
-                    class="af-form__group-label"
-                    for="placeholder"
-                  >
-                    placeholder
-                  </label>
-                  <input
-                    class="af-form__input-text"
-                    id="placeholder"
-                    name="placeholder"
-                    type="text"
-                    value="Ex: Samuel"
-                  />
-                </div>
-                <div
-                  class="af-form-editor__field"
-                >
-                  <label
-                    class="af-form__group-label"
-                    for="message"
-                  >
-                    message
-                  </label>
-                  <input
-                    class="af-form__input-text"
-                    id="message"
-                    name="message"
-                    type="text"
-                    value=""
-                  />
-                </div>
-                <div
-                  class="af-form-editor__field"
-                >
-                  <label
-                    class="af-form__group-label"
-                    for="messageType"
-                  >
-                    messageType
+                    activeIndex
                   </label>
                   <div
                     class="af-form__select"
@@ -1698,320 +1689,32 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
                       class="af-form__select-container"
                     >
                       <select
-                        aria-label="select-messageType"
+                        aria-label="select-activeIndex"
                         class="af-form__input-select"
-                        id="messageType"
-                        name="messageType"
+                        id="activeIndex"
+                        name="activeIndex"
                       >
                         <option
-                          value="success"
+                          value="0"
                         >
-                          success
+                          first tab
                         </option>
                         <option
-                          value="warning"
+                          value="1"
                         >
-                          warning
+                          second tab
                         </option>
                         <option
-                          value="error"
+                          value="2"
                         >
-                          error
+                          third tab
                         </option>
                       </select>
                       <span
-                        aria-controls="messageType"
+                        aria-controls="activeIndex"
                         class="glyphicon glyphicon-menu-down"
                       />
                     </div>
-                  </div>
-                </div>
-                <div
-                  class="af-form-editor__field"
-                >
-                  <label
-                    class="af-form__group-label"
-                    for="forceDisplayMessage"
-                  >
-                    forceDisplayMessage
-                  </label>
-                  <div
-                    class="af-form__checkbox-toggle"
-                  >
-                    <input
-                      class="af-form__input-checkbox"
-                      id="forceDisplayMessage"
-                      mode="toggle"
-                      name="forceDisplayMessage"
-                      type="checkbox"
-                    />
-                    <label
-                      class="af-form__label"
-                      for="forceDisplayMessage"
-                    >
-                      <span
-                        class="af-form__indicator"
-                      >
-                        <i
-                          class="glyphicon glyphicon-ok"
-                        />
-                      </span>
-                      <span
-                        class="af-form__description"
-                      />
-                    </label>
-                  </div>
-                </div>
-                <div
-                  class="af-form-editor__field"
-                >
-                  <label
-                    class="af-form__group-label"
-                    for="autoFocus"
-                  >
-                    autoFocus
-                  </label>
-                  <div
-                    class="af-form__checkbox-toggle"
-                  >
-                    <input
-                      checked=""
-                      class="af-form__input-checkbox"
-                      id="autoFocus"
-                      mode="toggle"
-                      name="autoFocus"
-                      type="checkbox"
-                    />
-                    <label
-                      class="af-form__label"
-                      for="autoFocus"
-                    >
-                      <span
-                        class="af-form__indicator"
-                      >
-                        <i
-                          class="glyphicon glyphicon-ok"
-                        />
-                      </span>
-                      <span
-                        class="af-form__description"
-                      />
-                    </label>
-                  </div>
-                </div>
-                <div
-                  class="af-form-editor__field"
-                >
-                  <label
-                    class="af-form__group-label"
-                    for="disabled"
-                  >
-                    disabled
-                  </label>
-                  <div
-                    class="af-form__checkbox-toggle"
-                  >
-                    <input
-                      class="af-form__input-checkbox"
-                      id="disabled"
-                      mode="toggle"
-                      name="disabled"
-                      type="checkbox"
-                    />
-                    <label
-                      class="af-form__label"
-                      for="disabled"
-                    >
-                      <span
-                        class="af-form__indicator"
-                      >
-                        <i
-                          class="glyphicon glyphicon-ok"
-                        />
-                      </span>
-                      <span
-                        class="af-form__description"
-                      />
-                    </label>
-                  </div>
-                </div>
-                <div
-                  class="af-form-editor__field"
-                >
-                  <label
-                    class="af-form__group-label"
-                    for="required"
-                  >
-                    required
-                  </label>
-                  <div
-                    class="af-form__checkbox-toggle"
-                  >
-                    <input
-                      class="af-form__input-checkbox"
-                      id="required"
-                      mode="toggle"
-                      name="required"
-                      type="checkbox"
-                    />
-                    <label
-                      class="af-form__label"
-                      for="required"
-                    >
-                      <span
-                        class="af-form__indicator"
-                      >
-                        <i
-                          class="glyphicon glyphicon-ok"
-                        />
-                      </span>
-                      <span
-                        class="af-form__description"
-                      />
-                    </label>
-                  </div>
-                </div>
-                <div
-                  class="af-form-editor__field"
-                >
-                  <label
-                    class="af-form__group-label"
-                    for="readOnly"
-                  >
-                    readOnly
-                  </label>
-                  <div
-                    class="af-form__checkbox-toggle"
-                  >
-                    <input
-                      class="af-form__input-checkbox"
-                      id="readOnly"
-                      mode="toggle"
-                      name="readOnly"
-                      type="checkbox"
-                    />
-                    <label
-                      class="af-form__label"
-                      for="readOnly"
-                    >
-                      <span
-                        class="af-form__indicator"
-                      >
-                        <i
-                          class="glyphicon glyphicon-ok"
-                        />
-                      </span>
-                      <span
-                        class="af-form__description"
-                      />
-                    </label>
-                  </div>
-                </div>
-                <div
-                  class="af-form-editor__field"
-                >
-                  <label
-                    class="af-form__group-label"
-                    for="isVisible"
-                  >
-                    isVisible
-                  </label>
-                  <div
-                    class="af-form__checkbox-toggle"
-                  >
-                    <input
-                      checked=""
-                      class="af-form__input-checkbox"
-                      id="isVisible"
-                      mode="toggle"
-                      name="isVisible"
-                      type="checkbox"
-                    />
-                    <label
-                      class="af-form__label"
-                      for="isVisible"
-                    >
-                      <span
-                        class="af-form__indicator"
-                      >
-                        <i
-                          class="glyphicon glyphicon-ok"
-                        />
-                      </span>
-                      <span
-                        class="af-form__description"
-                      />
-                    </label>
-                  </div>
-                </div>
-                <div
-                  class="af-form-editor__field"
-                >
-                  <label
-                    class="af-form__group-label"
-                    for="classNameContainerLabel"
-                  >
-                    classNameContainerLabel
-                  </label>
-                  <input
-                    class="af-form__input-text"
-                    id="classNameContainerLabel"
-                    name="classNameContainerLabel"
-                    type="text"
-                    value="col-md-2"
-                  />
-                </div>
-                <div
-                  class="af-form-editor__field"
-                >
-                  <label
-                    class="af-form__group-label"
-                    for="classNameContainerInput"
-                  >
-                    classNameContainerInput
-                  </label>
-                  <input
-                    class="af-form__input-text"
-                    id="classNameContainerInput"
-                    name="classNameContainerInput"
-                    type="text"
-                    value="col-md-10"
-                  />
-                </div>
-                <div
-                  class="af-form-editor__field"
-                >
-                  <label
-                    class="af-form__group-label"
-                    for="helpButton"
-                  >
-                    helpButton
-                  </label>
-                  <div
-                    class="af-form__checkbox-toggle"
-                  >
-                    <input
-                      class="af-form__input-checkbox"
-                      id="helpButton"
-                      mode="toggle"
-                      name="helpButton"
-                      type="checkbox"
-                    />
-                    <label
-                      class="af-form__label"
-                      for="helpButton"
-                    >
-                      <span
-                        class="af-form__indicator"
-                      >
-                        <i
-                          class="glyphicon glyphicon-ok"
-                        />
-                      </span>
-                      <span
-                        class="af-form__description"
-                      />
-                    </label>
                   </div>
                 </div>
               </form>

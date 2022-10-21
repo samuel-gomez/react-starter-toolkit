@@ -319,6 +319,22 @@ exports[`<Members/> Should render <Members /> with one member 1`] = `
                     Text Input
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Tabs"
+                    class="af-nav__link"
+                    href="/demos/tabs"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Tabs
+                  </a>
+                </li>
               </ul>
             </li>
             <li
@@ -670,7 +686,7 @@ exports[`<Members/> Should render <Members /> with one member 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.2.8
+        © 2022 AXA Tous droits réservés - v0.2.9
       </div>
     </div>
   </footer>
@@ -996,6 +1012,22 @@ exports[`<Members/> Should render Members 1`] = `
                     Text Input
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Tabs"
+                    class="af-nav__link"
+                    href="/demos/tabs"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Tabs
+                  </a>
+                </li>
               </ul>
             </li>
             <li
@@ -1253,7 +1285,7 @@ exports[`<Members/> Should render Members 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.2.8
+        © 2022 AXA Tous droits réservés - v0.2.9
       </div>
     </div>
   </footer>

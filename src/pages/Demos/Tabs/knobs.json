@@ -1,0 +1,43 @@
+{
+  "labelFirstTab": {
+    "type": "jsx",
+    "labelBtnOpenCodeEditor": "Edit first label"
+  },
+  "labelSecondTab": {
+    "type": "jsx",
+    "labelBtnOpenCodeEditor": "Edit second label"
+  },
+  "labelThirdTab": {
+    "type": "jsx",
+    "labelBtnOpenCodeEditor": "Edit third label"
+  },
+  "contentFirstTab": {
+    "type": "jsx",
+    "labelBtnOpenCodeEditor": "Edit first content"
+  },
+  "contentSecondTab": {
+    "type": "jsx",
+    "labelBtnOpenCodeEditor": "Edit second content"
+  },
+  "contentThirdTab": {
+    "type": "jsx",
+    "labelBtnOpenCodeEditor": "Edit third content"
+  },
+  "activeIndex": {
+    "value": "1",
+    "options": [
+      {
+        "label": "first tab",
+        "value": "0"
+      },
+      {
+        "label": "second tab",
+        "value": "1"
+      },
+      {
+        "label": "third tab",
+        "value": "2"
+      }
+    ]
+  }
+}

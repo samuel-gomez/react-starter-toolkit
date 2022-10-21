@@ -58,6 +58,10 @@ const MENU_ITEMS = [
         label: 'Text Input',
         url: ROUTE_URL.TEXT_INPUT,
       },
+      {
+        label: 'Tabs',
+        url: ROUTE_URL.TABS,
+      },
     ],
   },
   {
