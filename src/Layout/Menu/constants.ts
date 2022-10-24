@@ -62,6 +62,10 @@ const MENU_ITEMS = [
         label: 'Tabs',
         url: ROUTE_URL.TABS,
       },
+      {
+        label: 'Radio Input',
+        url: ROUTE_URL.RADIO_INPUT,
+      },
     ],
   },
   {

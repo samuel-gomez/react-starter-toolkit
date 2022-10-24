@@ -335,6 +335,22 @@ exports[`<ModalPage/> Should render ModalPage 1`] = `
                     Tabs
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Radio Input"
+                    class="af-nav__link"
+                    href="/demos/radio-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Radio Input
+                  </a>
+                </li>
               </ul>
             </li>
             <li
@@ -1555,7 +1571,7 @@ exports[`<ModalPage/> Should render ModalPage 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.2.9
+        © 2022 AXA Tous droits réservés - v0.2.10
       </div>
     </div>
   </footer>
@@ -1897,6 +1913,22 @@ exports[`<ModalPage/> Should render ModalPage with modal opened 1`] = `
                     Tabs
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Radio Input"
+                    class="af-nav__link"
+                    href="/demos/radio-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Radio Input
+                  </a>
+                </li>
               </ul>
             </li>
             <li
@@ -3117,7 +3149,7 @@ exports[`<ModalPage/> Should render ModalPage with modal opened 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.2.9
+        © 2022 AXA Tous droits réservés - v0.2.10
       </div>
     </div>
   </footer>

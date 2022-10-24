@@ -283,6 +283,22 @@ exports[`<Menu/> Render <Menu/> 1`] = `
                     Tabs
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Radio Input"
+                    class="af-nav__link"
+                    href="/radio-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Radio Input
+                  </a>
+                </li>
               </ul>
             </li>
             <li

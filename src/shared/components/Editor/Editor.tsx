@@ -156,23 +156,25 @@ export const withEditor =
     return (
       <section className={'af-editor'}>
         <Component {...props} openEditor={openEditor} isOpenEditor={isOpenEditor} />
-        <div className={`af-draggable-container${isOpenEditor ? ' af-draggable-container--open' : ''}`}>
+        {isOpenEditor && (
           <Draggable cancel=".glyphicon-close" handle=".af-draggable__title">
-            <div className="af-draggable">
-              <h3 className="af-draggable__title">
-                Props Editor
-                <div className="af-draggable__tools">
-                  <i className="glyphicon glyphicon-move"></i>
-                  <i className="glyphicon glyphicon-close" onClick={closeEditor}></i>
-                </div>
-              </h3>
+            <div className="af-draggable-container">
+              <div className="af-draggable">
+                <h3 className="af-draggable__title">
+                  Props Editor
+                  <div className="af-draggable__tools">
+                    <i className="glyphicon glyphicon-move"></i>
+                    <i className="glyphicon glyphicon-close" onClick={closeEditor}></i>
+                  </div>
+                </h3>
 
-              <div className="af-draggable__content">
-                <FormEditor<P> {...(props as P & { onChange: ReturnType<typeof useEditable>['onChange'] })} knobs={knobs} />
+                <div className="af-draggable__content">
+                  <FormEditor<P> {...(props as P & { onChange: ReturnType<typeof useEditable>['onChange'] })} knobs={knobs} />
+                </div>
               </div>
             </div>
           </Draggable>
-        </div>
+        )}
       </section>
     );
   };

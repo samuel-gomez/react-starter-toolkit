@@ -57,6 +57,7 @@ describe('FieldEditor', () => {
     ${true}
     ${'value'}
     ${{ value: 'value', options: [] }}
+    ${{ value: 'value', type: 'jsx', labelBtnOpenCodeEditor: 'Edit label' }}
     ${emptyFunction}
   `('Should render when value: $value', ({ value }) => {
     const { asFragment } = render(<FieldEditor value={value} name="name" onChange={onChange} />);
@@ -111,6 +112,17 @@ describe('withEditor', () => {
 
   it('Should render Component with FormEditor when apply withEditor HOC', () => {
     const ComponentWithEditor = withEditor<Props>(Component);
+    const { asFragment } = render(<ComponentWithEditor className="af-component" onChange={onChange} />);
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  const useToggleEditorFnNoOpen = jest.fn().mockReturnValue({
+    closeEditor: jest.fn(),
+    openEditor: jest.fn(),
+    isOpenEditor: false,
+  });
+  it("Shouldn't render Component with isOpenEditor false", () => {
+    const ComponentWithEditor = withEditor<Props>(Component, {}, useToggleEditorFnNoOpen);
     const { asFragment } = render(<ComponentWithEditor className="af-component" onChange={onChange} />);
     expect(asFragment()).toMatchSnapshot();
   });

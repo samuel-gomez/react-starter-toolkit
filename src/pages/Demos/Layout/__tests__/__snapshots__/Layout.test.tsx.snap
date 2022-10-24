@@ -360,6 +360,22 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
                           Tabs
                         </a>
                       </li>
+                      <li
+                        class="af-nav__item "
+                        role="none"
+                      >
+                        <a
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          aria-label="Radio Input"
+                          class="af-nav__link"
+                          href="/demos/radio-input"
+                          role="menuitem"
+                          tabindex="-1"
+                        >
+                          Radio Input
+                        </a>
+                      </li>
                     </ul>
                   </li>
                   <li
@@ -485,7 +501,7 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
             <div
               class="af-footer-content"
             >
-              © 2022 AXA Tous droits réservés - v0.2.9
+              © 2022 AXA Tous droits réservés - v0.2.10
             </div>
           </div>
         </footer>
@@ -1171,306 +1187,6 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
         </div>
       </pre>
     </article>
-    <div
-      class="af-draggable-container"
-    >
-      <div
-        class="af-draggable react-draggable"
-        style="transform: translate(0px,0px);"
-      >
-        <h3
-          class="af-draggable__title"
-        >
-          Props Editor
-          <div
-            class="af-draggable__tools"
-          >
-            <i
-              class="glyphicon glyphicon-move"
-            />
-            <i
-              class="glyphicon glyphicon-close"
-            />
-          </div>
-        </h3>
-        <div
-          class="af-draggable__content"
-        >
-          <form
-            class="af-form-editor"
-          >
-            <div
-              class="af-form-editor__field"
-            >
-              <label
-                class="af-form__group-label"
-                for="className"
-              >
-                className
-              </label>
-              <input
-                class="af-form__input-text"
-                id="className"
-                name="className"
-                type="text"
-                value="af-main"
-              />
-            </div>
-            <div
-              class="af-form-editor__field"
-            >
-              <label
-                class="af-form__group-label"
-                for="classModifier"
-              >
-                classModifier
-              </label>
-              <input
-                class="af-form__input-text"
-                id="classModifier"
-                name="classModifier"
-                type="text"
-                value=""
-              />
-            </div>
-            <div
-              class="af-form-editor__field"
-            >
-              <label
-                class="af-form__group-label"
-                for="children"
-              >
-                children
-              </label>
-              <button
-                class="btn af-btn"
-                type="submit"
-              >
-                <span
-                  class="af-btn__text"
-                >
-                  Edit children
-                </span>
-              </button>
-            </div>
-            <div
-              class="af-form-editor__field"
-            >
-              <label
-                class="af-form__group-label"
-                for="fullScreen"
-              >
-                fullScreen
-              </label>
-              <div
-                class="af-form__checkbox-toggle"
-              >
-                <input
-                  class="af-form__input-checkbox"
-                  id="fullScreen"
-                  mode="toggle"
-                  name="fullScreen"
-                  type="checkbox"
-                />
-                <label
-                  class="af-form__label"
-                  for="fullScreen"
-                >
-                  <span
-                    class="af-form__indicator"
-                  >
-                    <i
-                      class="glyphicon glyphicon-ok"
-                    />
-                  </span>
-                  <span
-                    class="af-form__description"
-                  />
-                </label>
-              </div>
-            </div>
-            <div
-              class="af-form-editor__field"
-            >
-              <label
-                class="af-form__group-label"
-                for="disabledHeader"
-              >
-                disabledHeader
-              </label>
-              <div
-                class="af-form__checkbox-toggle"
-              >
-                <input
-                  class="af-form__input-checkbox"
-                  id="disabledHeader"
-                  mode="toggle"
-                  name="disabledHeader"
-                  type="checkbox"
-                />
-                <label
-                  class="af-form__label"
-                  for="disabledHeader"
-                >
-                  <span
-                    class="af-form__indicator"
-                  >
-                    <i
-                      class="glyphicon glyphicon-ok"
-                    />
-                  </span>
-                  <span
-                    class="af-form__description"
-                  />
-                </label>
-              </div>
-            </div>
-            <div
-              class="af-form-editor__field"
-            >
-              <label
-                class="af-form__group-label"
-                for="disabledMenu"
-              >
-                disabledMenu
-              </label>
-              <div
-                class="af-form__checkbox-toggle"
-              >
-                <input
-                  class="af-form__input-checkbox"
-                  id="disabledMenu"
-                  mode="toggle"
-                  name="disabledMenu"
-                  type="checkbox"
-                />
-                <label
-                  class="af-form__label"
-                  for="disabledMenu"
-                >
-                  <span
-                    class="af-form__indicator"
-                  >
-                    <i
-                      class="glyphicon glyphicon-ok"
-                    />
-                  </span>
-                  <span
-                    class="af-form__description"
-                  />
-                </label>
-              </div>
-            </div>
-            <div
-              class="af-form-editor__field"
-            >
-              <label
-                class="af-form__group-label"
-                for="disabledFooter"
-              >
-                disabledFooter
-              </label>
-              <div
-                class="af-form__checkbox-toggle"
-              >
-                <input
-                  class="af-form__input-checkbox"
-                  id="disabledFooter"
-                  mode="toggle"
-                  name="disabledFooter"
-                  type="checkbox"
-                />
-                <label
-                  class="af-form__label"
-                  for="disabledFooter"
-                >
-                  <span
-                    class="af-form__indicator"
-                  >
-                    <i
-                      class="glyphicon glyphicon-ok"
-                    />
-                  </span>
-                  <span
-                    class="af-form__description"
-                  />
-                </label>
-              </div>
-            </div>
-            <div
-              class="af-form-editor__field"
-            >
-              <label
-                class="af-form__group-label"
-                for="disabledTitle"
-              >
-                disabledTitle
-              </label>
-              <div
-                class="af-form__checkbox-toggle"
-              >
-                <input
-                  class="af-form__input-checkbox"
-                  id="disabledTitle"
-                  mode="toggle"
-                  name="disabledTitle"
-                  type="checkbox"
-                />
-                <label
-                  class="af-form__label"
-                  for="disabledTitle"
-                >
-                  <span
-                    class="af-form__indicator"
-                  >
-                    <i
-                      class="glyphicon glyphicon-ok"
-                    />
-                  </span>
-                  <span
-                    class="af-form__description"
-                  />
-                </label>
-              </div>
-            </div>
-            <div
-              class="af-form-editor__field"
-            >
-              <label
-                class="af-form__group-label"
-                for="titleBar"
-              >
-                titleBar
-              </label>
-              <input
-                class="af-form__input-text"
-                id="titleBar"
-                name="titleBar"
-                type="text"
-                value="Layout demo"
-              />
-            </div>
-            <div
-              class="af-form-editor__field"
-            >
-              <label
-                class="af-form__group-label"
-                for="title"
-              >
-                title
-              </label>
-              <input
-                class="af-form__input-text"
-                id="title"
-                name="title"
-                type="text"
-                value="Layout playground"
-              />
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
   </section>
 </DocumentFragment>
 `;
