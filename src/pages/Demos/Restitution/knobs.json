@@ -1,0 +1,17 @@
+{
+  "children": {
+    "type": "jsx",
+    "list": [
+      {
+        "id": "add-restitution__twoColumns",
+        "icon": "list-alt",
+        "tooltipLabel": "Restitution two columns"
+      },
+      {
+        "id": "add-restitution__oneColumn",
+        "icon": "list-alt",
+        "tooltipLabel": "Restitution one column"
+      }
+    ]
+  }
+}

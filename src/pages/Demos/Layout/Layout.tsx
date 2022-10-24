@@ -1,3 +1,4 @@
+import { ClickEvent } from '@axa-fr/react-toolkit-core';
 import { withEditor, useEditable, TEvent, EditorHeader, TReturnUseToggleEditor, Tknobs } from 'shared/components/Editor';
 import LiveCode from 'shared/components/LiveCode';
 import { useToggleModal } from 'shared/components/ModalCommon';
@@ -9,7 +10,7 @@ const INITIAL_STATE = {
   className: 'af-main',
   classModifier: '',
   children: `
-  <h1 className="af-title--content">{title}</h1>
+  <h1 className="af-title--content">Layout playground</h1>
   <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus sunt repudiandae corporis expedita illo minima, aut nostrum vitae. Fuga quo
     facilis dolorum fugit? Cumque necessitatibus unde nostrum possimus voluptas nisi.
@@ -21,10 +22,10 @@ const INITIAL_STATE = {
   disabledFooter: false,
   disabledTitle: false,
   titleBar: 'Layout demo',
-  title: 'Layout playground',
 };
 
 type Props = Omit<typeof INITIAL_STATE, 'icon'> & {
+  onClick?: (arg: ClickEvent) => void;
   onChange: (name: keyof typeof INITIAL_STATE) => (arg: TEvent) => void;
 };
 
@@ -50,7 +51,7 @@ const LayoutWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(({ 
     <>
       <EditorHeader openEditor={openEditor} />
       <LiveCode
-        styleLivePreview={{}}
+        styleLivePreview={{ padding: '0' }}
         classModifier="with-editor layout"
         code={code(props)}
         scope={{
@@ -64,8 +65,8 @@ const LayoutWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(({ 
 }, knobs as unknown as Tknobs);
 
 const LayoutEditable = () => {
-  const { state, onChange } = useEditable<typeof INITIAL_STATE>({ initialState: INITIAL_STATE });
-  return <LayoutWithEditor {...state} onChange={onChange} />;
+  const { state, onChange, onClick } = useEditable<typeof INITIAL_STATE>({ initialState: INITIAL_STATE });
+  return <LayoutWithEditor {...state} onClick={onClick('onClick démo Layout')} onChange={onChange} />;
 };
 
 export default LayoutEditable;

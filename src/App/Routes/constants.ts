@@ -12,6 +12,7 @@ import { ROUTE_URL_ALERT as ALERT } from 'pages/Demos/Alert/constants';
 import { ROUTE_URL_TEXT_INPUT as TEXT_INPUT } from 'pages/Demos/TextInput/constants';
 import { ROUTE_URL_TABS as TABS } from 'pages/Demos/Tabs/constants';
 import { ROUTE_URL_RADIO_INPUT as RADIO_INPUT } from 'pages/Demos/RadioInput/constants';
+import { ROUTE_URL_RESTITUTION as RESTITUTION } from 'pages/Demos/Restitution/constants';
 
 const DEMOS = '/demos';
 const LAYOUTS = '/layouts';
@@ -33,6 +34,7 @@ const ROUTE_URL = {
   TEXT_INPUT,
   TABS,
   RADIO_INPUT,
+  RESTITUTION,
 };
 
 export default ROUTE_URL;

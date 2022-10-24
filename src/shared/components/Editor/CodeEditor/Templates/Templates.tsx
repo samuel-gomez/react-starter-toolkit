@@ -29,14 +29,29 @@ export const DEFAULT_LIST = [
     tooltipLabel: 'Titre h4',
   },
   {
-    id: 'add-restitution__basic',
+    id: 'add-text',
+    label: 'P',
+    tooltipLabel: 'Paragraph',
+  },
+  {
+    id: 'add-restitution__twoColumns',
     icon: 'list-alt',
-    tooltipLabel: 'Restitution',
+    tooltipLabel: 'Restitution two columns',
+  },
+  {
+    id: 'add-restitution__oneColumn',
+    icon: 'list-alt',
+    tooltipLabel: 'Restitution one column',
   },
   {
     id: 'add-modal',
     icon: 'modal-window',
     tooltipLabel: 'Modal',
+  },
+  {
+    id: 'add-panel__basic',
+    icon: 'credit-card',
+    tooltipLabel: 'Panel basic',
   },
 ];
 
