@@ -13,6 +13,21 @@ exports[`FieldEditor Should render when value: [Function emptyFuncion] 1`] = `
 </DocumentFragment>
 `;
 
+exports[`FieldEditor Should render when value: {"labelBtnOpenCodeEditor": "Edit label", "type": "jsx", "value": "value"} 1`] = `
+<DocumentFragment>
+  <button
+    class="btn af-btn"
+    type="submit"
+  >
+    <span
+      class="af-btn__text"
+    >
+      Edit label
+    </span>
+  </button>
+</DocumentFragment>
+`;
+
 exports[`FieldEditor Should render when value: {"options": [Array], "value": "value"} 1`] = `
 <DocumentFragment>
   <div
@@ -92,12 +107,28 @@ exports[`withEditor Should render Component with FormEditor when apply withEdito
       type="text"
       value="hello"
     />
+  </section>
+</DocumentFragment>
+`;
+
+exports[`withEditor Should render Component with FormEditor when apply withEditor HOC and isOpenEditor true 1`] = `
+<DocumentFragment>
+  <section
+    class="af-editor"
+  >
+    <input
+      class="af-component"
+      id="idtext"
+      name="nametext"
+      type="text"
+      value="hello"
+    />
     <div
-      class="af-draggable-container"
+      class="af-draggable-container react-draggable"
+      style="transform: translate(0px,0px);"
     >
       <div
-        class="af-draggable react-draggable"
-        style="transform: translate(0px,0px);"
+        class="af-draggable"
       >
         <h3
           class="af-draggable__title"
@@ -145,7 +176,7 @@ exports[`withEditor Should render Component with FormEditor when apply withEdito
 </DocumentFragment>
 `;
 
-exports[`withEditor Should render Component with FormEditor when apply withEditor HOC and isOpenEditor true 1`] = `
+exports[`withEditor Shouldn't render Component with isOpenEditor false 1`] = `
 <DocumentFragment>
   <section
     class="af-editor"
@@ -157,55 +188,6 @@ exports[`withEditor Should render Component with FormEditor when apply withEdito
       type="text"
       value="hello"
     />
-    <div
-      class="af-draggable-container af-draggable-container--open"
-    >
-      <div
-        class="af-draggable react-draggable"
-        style="transform: translate(0px,0px);"
-      >
-        <h3
-          class="af-draggable__title"
-        >
-          Props Editor
-          <div
-            class="af-draggable__tools"
-          >
-            <i
-              class="glyphicon glyphicon-move"
-            />
-            <i
-              class="glyphicon glyphicon-close"
-            />
-          </div>
-        </h3>
-        <div
-          class="af-draggable__content"
-        >
-          <form
-            class="af-form-editor"
-          >
-            <div
-              class="af-form-editor__field"
-            >
-              <label
-                class="af-form__group-label"
-                for="className"
-              >
-                className
-              </label>
-              <input
-                class="af-form__input-text"
-                id="className"
-                name="className"
-                type="text"
-                value="af-component"
-              />
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
   </section>
 </DocumentFragment>
 `;

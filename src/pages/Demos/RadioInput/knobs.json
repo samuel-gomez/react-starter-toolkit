@@ -1,0 +1,23 @@
+{
+  "label": {
+    "type": "jsx",
+    "labelBtnOpenCodeEditor": "Edit label"
+  },
+  "mode": {
+    "value": "default",
+    "options": [
+      {
+        "label": "classic",
+        "value": "classic"
+      },
+      {
+        "label": "default",
+        "value": "default"
+      },
+      {
+        "label": "inline",
+        "value": "inline"
+      }
+    ]
+  }
+}

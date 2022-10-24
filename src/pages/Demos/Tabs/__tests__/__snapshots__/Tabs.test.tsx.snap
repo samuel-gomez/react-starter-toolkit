@@ -335,6 +335,22 @@ exports[`<Tabs /> Should render Tabs 1`] = `
                     Tabs
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Radio Input"
+                    class="af-nav__link"
+                    href="/demos/radio-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Radio Input
+                  </a>
+                </li>
               </ul>
             </li>
             <li
@@ -1474,253 +1490,6 @@ exports[`<Tabs /> Should render Tabs 1`] = `
             </div>
           </pre>
         </article>
-        <div
-          class="af-draggable-container"
-        >
-          <div
-            class="af-draggable react-draggable"
-            style="transform: translate(0px,0px);"
-          >
-            <h3
-              class="af-draggable__title"
-            >
-              Props Editor
-              <div
-                class="af-draggable__tools"
-              >
-                <i
-                  class="glyphicon glyphicon-move"
-                />
-                <i
-                  class="glyphicon glyphicon-close"
-                />
-              </div>
-            </h3>
-            <div
-              class="af-draggable__content"
-            >
-              <form
-                class="af-form-editor"
-              >
-                <div
-                  class="af-form-editor__field"
-                >
-                  <label
-                    class="af-form__group-label"
-                    for="labelFirstTab"
-                  >
-                    labelFirstTab
-                  </label>
-                  <button
-                    class="btn af-btn"
-                    type="submit"
-                  >
-                    <span
-                      class="af-btn__text"
-                    >
-                      Edit first label
-                    </span>
-                  </button>
-                </div>
-                <div
-                  class="af-form-editor__field"
-                >
-                  <label
-                    class="af-form__group-label"
-                    for="labelSecondTab"
-                  >
-                    labelSecondTab
-                  </label>
-                  <button
-                    class="btn af-btn"
-                    type="submit"
-                  >
-                    <span
-                      class="af-btn__text"
-                    >
-                      Edit second label
-                    </span>
-                  </button>
-                </div>
-                <div
-                  class="af-form-editor__field"
-                >
-                  <label
-                    class="af-form__group-label"
-                    for="labelThirdTab"
-                  >
-                    labelThirdTab
-                  </label>
-                  <button
-                    class="btn af-btn"
-                    type="submit"
-                  >
-                    <span
-                      class="af-btn__text"
-                    >
-                      Edit third label
-                    </span>
-                  </button>
-                </div>
-                <div
-                  class="af-form-editor__field"
-                >
-                  <label
-                    class="af-form__group-label"
-                    for="contentFirstTab"
-                  >
-                    contentFirstTab
-                  </label>
-                  <button
-                    class="btn af-btn"
-                    type="submit"
-                  >
-                    <span
-                      class="af-btn__text"
-                    >
-                      Edit first content
-                    </span>
-                  </button>
-                </div>
-                <div
-                  class="af-form-editor__field"
-                >
-                  <label
-                    class="af-form__group-label"
-                    for="contentSecondTab"
-                  >
-                    contentSecondTab
-                  </label>
-                  <button
-                    class="btn af-btn"
-                    type="submit"
-                  >
-                    <span
-                      class="af-btn__text"
-                    >
-                      Edit second content
-                    </span>
-                  </button>
-                </div>
-                <div
-                  class="af-form-editor__field"
-                >
-                  <label
-                    class="af-form__group-label"
-                    for="contentThirdTab"
-                  >
-                    contentThirdTab
-                  </label>
-                  <button
-                    class="btn af-btn"
-                    type="submit"
-                  >
-                    <span
-                      class="af-btn__text"
-                    >
-                      Edit third content
-                    </span>
-                  </button>
-                </div>
-                <div
-                  class="af-form-editor__field"
-                >
-                  <label
-                    class="af-form__group-label"
-                    for="classModifierFirstTab"
-                  >
-                    classModifierFirstTab
-                  </label>
-                  <input
-                    class="af-form__input-text"
-                    id="classModifierFirstTab"
-                    name="classModifierFirstTab"
-                    type="text"
-                    value="has-icon-left"
-                  />
-                </div>
-                <div
-                  class="af-form-editor__field"
-                >
-                  <label
-                    class="af-form__group-label"
-                    for="classModifierSecondTab"
-                  >
-                    classModifierSecondTab
-                  </label>
-                  <input
-                    class="af-form__input-text"
-                    id="classModifierSecondTab"
-                    name="classModifierSecondTab"
-                    type="text"
-                    value="has-icon-right"
-                  />
-                </div>
-                <div
-                  class="af-form-editor__field"
-                >
-                  <label
-                    class="af-form__group-label"
-                    for="className"
-                  >
-                    className
-                  </label>
-                  <input
-                    class="af-form__input-text"
-                    id="className"
-                    name="className"
-                    type="text"
-                    value="af-tabs"
-                  />
-                </div>
-                <div
-                  class="af-form-editor__field"
-                >
-                  <label
-                    class="af-form__group-label"
-                    for="activeIndex"
-                  >
-                    activeIndex
-                  </label>
-                  <div
-                    class="af-form__select"
-                  >
-                    <div
-                      class="af-form__select-container"
-                    >
-                      <select
-                        aria-label="select-activeIndex"
-                        class="af-form__input-select"
-                        id="activeIndex"
-                        name="activeIndex"
-                      >
-                        <option
-                          value="0"
-                        >
-                          first tab
-                        </option>
-                        <option
-                          value="1"
-                        >
-                          second tab
-                        </option>
-                        <option
-                          value="2"
-                        >
-                          third tab
-                        </option>
-                      </select>
-                      <span
-                        aria-controls="activeIndex"
-                        class="glyphicon glyphicon-menu-down"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
       </section>
     </section>
   </main>
@@ -1745,7 +1514,7 @@ exports[`<Tabs /> Should render Tabs 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.2.9
+        © 2022 AXA Tous droits réservés - v0.2.10
       </div>
     </div>
   </footer>

@@ -13,6 +13,7 @@ import Layout from 'pages/Demos/Layout';
 import Alert from 'pages/Demos/Alert';
 import TextInput from 'pages/Demos/TextInput';
 import Tabs from 'pages/Demos/Tabs';
+import RadioInput from 'pages/Demos/RadioInput';
 import ROUTE_URL from 'App/Routes/constants';
 import { UserContext } from 'App/UserProvider';
 import Loader, { MODES } from 'shared/components/Loader';
@@ -56,6 +57,7 @@ type TRoutesCmpt = {
   AlertCmpt?: typeof Alert;
   TextInputCmpt?: typeof TextInput;
   TabsCmpt?: typeof Tabs;
+  RadioInputCmpt?: typeof RadioInput;
 };
 
 const RoutesCmpt = ({
@@ -71,6 +73,7 @@ const RoutesCmpt = ({
   AlertCmpt = Alert,
   TextInputCmpt = TextInput,
   TabsCmpt = Tabs,
+  RadioInputCmpt = RadioInput,
   withAuthFn = withAuth,
 }: TRoutesCmpt) => (
   <Routes>
@@ -86,6 +89,7 @@ const RoutesCmpt = ({
       <Route path={ROUTE_URL.ALERT} element={withAuthFn(AlertCmpt)} />
       <Route path={ROUTE_URL.TEXT_INPUT} element={withAuthFn(TextInputCmpt)} />
       <Route path={ROUTE_URL.TABS} element={withAuthFn(TabsCmpt)} />
+      <Route path={ROUTE_URL.RADIO_INPUT} element={withAuthFn(RadioInputCmpt)} />
     </Route>
     <Route path={ROUTE_URL.UNAUTHORIZE} element={<PageUnauthorizeCmpt />} />
     <Route path="*" element={<PageNotFound />} />

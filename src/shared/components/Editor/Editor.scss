@@ -122,12 +122,9 @@
   &-container {
     position: fixed;
     top: 20px;
-    left: 45%;
+    right: 20px;
     z-index: 20;
-    display: none;
-    &--open {
-      display: flex;
-    }
+    display: flex;
   }
 
   &__title {
