@@ -15,6 +15,7 @@ import TextInput from 'pages/Demos/TextInput';
 import Tabs from 'pages/Demos/Tabs';
 import RadioInput from 'pages/Demos/RadioInput';
 import Restitution from 'pages/Demos/Restitution';
+import SelectInput from 'pages/Demos/SelectInput';
 import ROUTE_URL from 'App/Routes/constants';
 import { UserContext } from 'App/UserProvider';
 import Loader, { MODES } from 'shared/components/Loader';
@@ -60,6 +61,7 @@ type TRoutesCmpt = {
   TabsCmpt?: typeof Tabs;
   RadioInputCmpt?: typeof RadioInput;
   RestitutionCmpt?: typeof Restitution;
+  SelectInputCmpt?: typeof SelectInput;
 };
 
 const RoutesCmpt = ({
@@ -77,6 +79,7 @@ const RoutesCmpt = ({
   TabsCmpt = Tabs,
   RadioInputCmpt = RadioInput,
   RestitutionCmpt = Restitution,
+  SelectInputCmpt = SelectInput,
   withAuthFn = withAuth,
 }: TRoutesCmpt) => (
   <Routes>
@@ -93,6 +96,7 @@ const RoutesCmpt = ({
       <Route path={ROUTE_URL.TABS} element={withAuthFn(TabsCmpt)} />
       <Route path={ROUTE_URL.RADIO_INPUT} element={withAuthFn(RadioInputCmpt)} />
       <Route path={ROUTE_URL.RESTITUTION} element={withAuthFn(RestitutionCmpt)} />
+      <Route path={ROUTE_URL.SELECT_INPUT} element={withAuthFn(SelectInputCmpt)} />
     </Route>
     <Route path={ROUTE_URL.LAYOUT} element={withAuthFn(LayoutCmpt)} />
     <Route path={ROUTE_URL.UNAUTHORIZE} element={<PageUnauthorizeCmpt />} />

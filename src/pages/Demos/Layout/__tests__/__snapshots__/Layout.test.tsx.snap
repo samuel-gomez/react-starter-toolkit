@@ -303,6 +303,22 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
                           Restitution
                         </a>
                       </li>
+                      <li
+                        class="af-nav__item "
+                        role="none"
+                      >
+                        <a
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          aria-label="Tabs"
+                          class="af-nav__link"
+                          href="/demos/tabs"
+                          role="menuitem"
+                          tabindex="-1"
+                        >
+                          Tabs
+                        </a>
+                      </li>
                     </ul>
                   </li>
                   <li
@@ -351,13 +367,13 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
                         <a
                           aria-expanded="false"
                           aria-haspopup="true"
-                          aria-label="Tabs"
+                          aria-label="Radio Input"
                           class="af-nav__link"
-                          href="/demos/tabs"
+                          href="/demos/radio-input"
                           role="menuitem"
                           tabindex="-1"
                         >
-                          Tabs
+                          Radio Input
                         </a>
                       </li>
                       <li
@@ -367,13 +383,13 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
                         <a
                           aria-expanded="false"
                           aria-haspopup="true"
-                          aria-label="Radio Input"
+                          aria-label="Select Input"
                           class="af-nav__link"
-                          href="/demos/radio-input"
+                          href="/demos/select-input"
                           role="menuitem"
                           tabindex="-1"
                         >
-                          Radio Input
+                          Select Input
                         </a>
                       </li>
                     </ul>
