@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
+exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
 <DocumentFragment>
   <div
     class="af-header"
@@ -467,7 +467,7 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
       <h1
         class="af-title-bar__title"
       >
-        Demo RadioInput
+        Demo SelectInput
       </h1>
     </div>
   </div>
@@ -480,7 +480,7 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
       <h1
         class="af-title--content"
       >
-        RadioInput playground
+        SelectInput playground
       </h1>
       <section
         class="af-editor"
@@ -490,7 +490,7 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
         >
           <a
             class="af-link"
-            href="https://axaguildev.github.io/design-system/molecules/form-radio/"
+            href="https://axaguildev.github.io/design-system/molecules/form-select/"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -511,7 +511,7 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
           </a>
           <a
             class="af-link"
-            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/form-input-radio--radio"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/form-input-radio--select"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -532,7 +532,7 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
           </a>
           <a
             class="af-link"
-            href="https://github.com/AxaGuilDEv/react-toolkit/tree/v1.4.1/packages/Form/Input/radio"
+            href="https://github.com/AxaGuilDEv/react-toolkit/tree/v1.4.1/packages/Form/Input/select"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -552,13 +552,13 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
             Github
           </a>
           <a
-            href="https://badge.fury.io/js/%40axa-fr%2Freact-toolkit-form-input-radio"
+            href="https://badge.fury.io/js/%40axa-fr%2Freact-toolkit-form-input-select"
             rel="noopener noreferrer"
             target="_blank"
           >
             <img
               alt="npm version"
-              src="https://badge.fury.io/js/%40axa-fr%2Freact-toolkit-form-input-radio.svg"
+              src="https://badge.fury.io/js/%40axa-fr%2Freact-toolkit-form-input-select.svg"
             />
           </a>
           <span
@@ -588,7 +588,7 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
               >
                 <label
                   class="af-form__group-label"
-                  for="fun"
+                  for="uniqueid"
                 >
                   My Label
                 </label>
@@ -597,91 +597,48 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                 class="col-md-10"
               >
                 <div
-                  class="af-form__radio-custom"
+                  class="af-form__select"
                 >
-                  <input
-                    class="af-form__input-radio"
-                    id="fun"
-                    name="name-field"
-                    type="radio"
-                    value="fun"
-                  />
-                  <label
-                    class="af-form__label"
-                    for="fun"
+                  <div
+                    class="af-form__select-container"
                   >
-                    <span
-                      class="af-form__description"
+                    <select
+                      class="af-form__input-select"
+                      id="uniqueid"
+                      name="name-field"
                     >
-                      For fun
-                    </span>
-                  </label>
+                      <option
+                        value=""
+                      >
+                        - Select -
+                      </option>
+                      <option
+                        value="fun"
+                      >
+                        For fun
+                      </option>
+                      <option
+                        value="work"
+                      >
+                        For work
+                      </option>
+                      <option
+                        value="drink"
+                      >
+                        For drink
+                      </option>
+                    </select>
+                    <span
+                      aria-controls="uniqueid"
+                      class="glyphicon glyphicon-menu-down"
+                    />
+                  </div>
                 </div>
-                <div
-                  class="af-form__radio-custom"
+                <small
+                  class="af-form__help"
                 >
-                  <input
-                    checked=""
-                    class="af-form__input-radio"
-                    id="work"
-                    name="name-field"
-                    type="radio"
-                    value="work"
-                  />
-                  <label
-                    class="af-form__label"
-                    for="work"
-                  >
-                    <span
-                      class="af-form__description"
-                    >
-                      For work
-                    </span>
-                  </label>
-                </div>
-                <div
-                  class="af-form__radio-custom"
-                >
-                  <input
-                    class="af-form__input-radio"
-                    id="drink"
-                    name="name-field"
-                    type="radio"
-                    value="drink"
-                  />
-                  <label
-                    class="af-form__label"
-                    for="drink"
-                  >
-                    <span
-                      class="af-form__description"
-                    >
-                      For drink
-                    </span>
-                  </label>
-                </div>
-                <div
-                  class="af-form__radio-custom af-form__radio-custom--disabled"
-                >
-                  <input
-                    class="af-form__input-radio"
-                    disabled=""
-                    id="life"
-                    name="name-field"
-                    type="radio"
-                    value="life"
-                  />
-                  <label
-                    class="af-form__label"
-                    for="life"
-                  >
-                    <span
-                      class="af-form__description"
-                    >
-                      For the life
-                    </span>
-                  </label>
-                </div>
+                  Enter your name
+                </small>
               </div>
             </div>
           </div>
@@ -733,7 +690,7 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                 class="token tag class-name"
                 style="color: rgb(255, 121, 198);"
               >
-                RadioInput
+                SelectInput
               </span>
               <span
                 class="token tag"
@@ -1183,114 +1140,6 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                 class="token tag script language-javascript punctuation"
                 style="color: rgb(248, 248, 242);"
               >
-                ,
-              </span>
-              <span
-                class="token tag script language-javascript punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                {
-              </span>
-              <span
-                class="token tag script language-javascript string-property property"
-                style="color: rgb(255, 121, 198);"
-              >
-                "label"
-              </span>
-              <span
-                class="token tag script language-javascript operator"
-                style="color: rgb(255, 121, 198);"
-              >
-                :
-              </span>
-              <span
-                class="token tag script language-javascript string"
-                style="color: rgb(255, 121, 198);"
-              >
-                "For the life"
-              </span>
-              <span
-                class="token tag script language-javascript punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                ,
-              </span>
-              <span
-                class="token tag script language-javascript string-property property"
-                style="color: rgb(255, 121, 198);"
-              >
-                "value"
-              </span>
-              <span
-                class="token tag script language-javascript operator"
-                style="color: rgb(255, 121, 198);"
-              >
-                :
-              </span>
-              <span
-                class="token tag script language-javascript string"
-                style="color: rgb(255, 121, 198);"
-              >
-                "life"
-              </span>
-              <span
-                class="token tag script language-javascript punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                ,
-              </span>
-              <span
-                class="token tag script language-javascript string-property property"
-                style="color: rgb(255, 121, 198);"
-              >
-                "id"
-              </span>
-              <span
-                class="token tag script language-javascript operator"
-                style="color: rgb(255, 121, 198);"
-              >
-                :
-              </span>
-              <span
-                class="token tag script language-javascript string"
-                style="color: rgb(255, 121, 198);"
-              >
-                "life"
-              </span>
-              <span
-                class="token tag script language-javascript punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                ,
-              </span>
-              <span
-                class="token tag script language-javascript string-property property"
-                style="color: rgb(255, 121, 198);"
-              >
-                "disabled"
-              </span>
-              <span
-                class="token tag script language-javascript operator"
-                style="color: rgb(255, 121, 198);"
-              >
-                :
-              </span>
-              <span
-                class="token tag script language-javascript boolean"
-                style="color: rgb(255, 121, 198);"
-              >
-                true
-              </span>
-              <span
-                class="token tag script language-javascript punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                }
-              </span>
-              <span
-                class="token tag script language-javascript punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
                 ]
               </span>
               <span
@@ -1336,7 +1185,7 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                 class="token tag script language-javascript"
                 style="color: rgb(255, 121, 198);"
               >
-                onChangeRadio
+                onChangeSelect
               </span>
               <span
                 class="token tag script language-javascript punctuation"
@@ -1421,12 +1270,6 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                 style="color: rgb(248, 248, 242);"
               >
                 "
-              </span>
-              <span
-                class="token tag attr-value"
-                style="color: rgb(255, 121, 198);"
-              >
-                work
               </span>
               <span
                 class="token tag attr-value punctuation"
@@ -1844,6 +1687,96 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                 class="token tag attr-name"
                 style="color: rgb(241, 250, 140);"
               >
+                placeholder
+              </span>
+              <span
+                class="token tag attr-value punctuation attr-equals"
+                style="color: rgb(248, 248, 242);"
+              >
+                =
+              </span>
+              <span
+                class="token tag attr-value punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                "
+              </span>
+              <span
+                class="token tag attr-value"
+                style="color: rgb(255, 121, 198);"
+              >
+                - Select -
+              </span>
+              <span
+                class="token tag attr-value punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                "
+              </span>
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              />
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(248, 248, 242);"
+            >
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                    
+              </span>
+              <span
+                class="token tag attr-name"
+                style="color: rgb(241, 250, 140);"
+              >
+                forceDisplayPlaceholder
+              </span>
+              <span
+                class="token tag script language-javascript script-punctuation punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                =
+              </span>
+              <span
+                class="token tag script language-javascript punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                {
+              </span>
+              <span
+                class="token tag script language-javascript boolean"
+                style="color: rgb(255, 121, 198);"
+              >
+                false
+              </span>
+              <span
+                class="token tag script language-javascript punctuation"
+                style="color: rgb(248, 248, 242);"
+              >
+                }
+              </span>
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              />
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(248, 248, 242);"
+            >
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                    
+              </span>
+              <span
+                class="token tag attr-name"
+                style="color: rgb(241, 250, 140);"
+              >
                 classNameContainerLabel
               </span>
               <span
@@ -1916,6 +1849,21 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                 "
               </span>
               <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              />
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(248, 248, 242);"
+            >
+              <span
+                class="token tag"
+                style="color: rgb(255, 121, 198);"
+              >
+                  
+              </span>
+              <span
                 class="token tag punctuation"
                 style="color: rgb(248, 248, 242);"
               >
@@ -1954,7 +1902,7 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                 class="token tag class-name"
                 style="color: rgb(255, 121, 198);"
               >
-                RadioInput
+                SelectInput
               </span>
               <span
                 class="token tag punctuation"

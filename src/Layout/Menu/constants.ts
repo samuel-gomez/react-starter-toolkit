@@ -47,6 +47,10 @@ const MENU_ITEMS = [
         label: 'Restitution',
         url: ROUTE_URL.RESTITUTION,
       },
+      {
+        label: 'Tabs',
+        url: ROUTE_URL.TABS,
+      },
     ],
   },
   {
@@ -59,12 +63,12 @@ const MENU_ITEMS = [
         url: ROUTE_URL.TEXT_INPUT,
       },
       {
-        label: 'Tabs',
-        url: ROUTE_URL.TABS,
-      },
-      {
         label: 'Radio Input',
         url: ROUTE_URL.RADIO_INPUT,
+      },
+      {
+        label: 'Select Input',
+        url: ROUTE_URL.SELECT_INPUT,
       },
     ],
   },

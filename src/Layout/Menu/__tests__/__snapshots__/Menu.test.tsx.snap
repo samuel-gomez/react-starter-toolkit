@@ -225,6 +225,22 @@ exports[`<Menu/> Render <Menu/> 1`] = `
                     Restitution
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Tabs"
+                    class="af-nav__link"
+                    href="/tabs"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Tabs
+                  </a>
+                </li>
               </ul>
             </li>
             <li
@@ -274,13 +290,13 @@ exports[`<Menu/> Render <Menu/> 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Tabs"
+                    aria-label="Radio Input"
                     class="af-nav__link"
-                    href="/tabs"
+                    href="/radio-input"
                     role="menuitem"
                     tabindex="-1"
                   >
-                    Tabs
+                    Radio Input
                   </a>
                 </li>
                 <li
@@ -290,13 +306,13 @@ exports[`<Menu/> Render <Menu/> 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Radio Input"
+                    aria-label="Select Input"
                     class="af-nav__link"
-                    href="/radio-input"
+                    href="/select-input"
                     role="menuitem"
                     tabindex="-1"
                   >
-                    Radio Input
+                    Select Input
                   </a>
                 </li>
               </ul>

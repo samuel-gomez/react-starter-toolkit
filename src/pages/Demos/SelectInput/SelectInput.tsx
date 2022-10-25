@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { RadioInput, HelpButton, MessageTypes, RadioModes } from '@axa-fr/react-toolkit-all';
+import { SelectInput, HelpButton, MessageTypes, SelectModes } from '@axa-fr/react-toolkit-all';
 import Layout, { TLayout } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
@@ -13,13 +13,14 @@ const INITIAL_STATE = {
     { label: 'For fun', value: 'fun', id: 'fun' },
     { label: 'For work', value: 'work', id: 'work' },
     { label: 'For drink', value: 'drink', id: 'drink' },
-    { label: 'For the life', value: 'life', id: 'life', disabled: true },
   ]),
-  mode: RadioModes.default,
+  mode: SelectModes.default,
+  placeholder: '- Select -',
+  forceDisplayPlaceholder: false,
   classModifier: '',
   className: '',
   label: 'My Label',
-  value: 'work',
+  value: '',
   helpMessage: 'Enter your name',
   message: '',
   messageType: MessageTypes.error,
@@ -34,7 +35,7 @@ const INITIAL_STATE = {
 
 type Props = Partial<typeof INITIAL_STATE> & {
   onChange: (name: keyof typeof INITIAL_STATE) => (arg: TEvent) => void;
-  onChangeRadio: (arg: TEvent) => void;
+  onChangeSelect: (arg: TEvent) => void;
 };
 
 export const code = ({
@@ -54,15 +55,17 @@ export const code = ({
   readOnly,
   forceDisplayMessage,
   isVisible,
+  placeholder,
+  forceDisplayPlaceholder,
   classNameContainerLabel,
   classNameContainerInput,
 }: Props) => `
-  <RadioInput
+  <SelectInput
     label={<>${label}</>}
     name="${name}"
     id="${id}"
     options={${options}}
-    onChange={onChangeRadio}
+    onChange={onChangeSelect}
     mode="${mode}"
     value="${value}"
     helpMessage="${helpMessage}"
@@ -74,13 +77,16 @@ export const code = ({
     isVisible={${isVisible}}
     classModifier="${classModifier}"
     className="${className}"
+    placeholder="${placeholder}"
+    forceDisplayPlaceholder={${forceDisplayPlaceholder}}
     classNameContainerLabel="${classNameContainerLabel}"
-    classNameContainerInput="${classNameContainerInput}">
-    ${helpButton ? `<HelpButton>Hello Radio</HelpButton>` : ''}
-  </RadioInput>
+    classNameContainerInput="${classNameContainerInput}"
+  >
+    ${helpButton ? `<HelpButton>Hello Select</HelpButton>` : ''}
+  </SelectInput>
 `;
 
-const RadioInputWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
+const SelectInputWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
   ({ openEditor, ...props }) => (
     <>
       <EditorHeader
@@ -95,7 +101,7 @@ const RadioInputWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>
         styleLivePreview={{ textAlign: 'left' }}
         code={code(props)}
         scope={{
-          RadioInput,
+          SelectInput,
           HelpButton,
           ...props,
         }}
@@ -105,10 +111,10 @@ const RadioInputWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>
   knobs as unknown as Tknobs,
 );
 
-const RadioInputEditable = () => {
+const SelectInputEditable = () => {
   const { state, onChange } = useEditable<typeof INITIAL_STATE>({ initialState: INITIAL_STATE });
 
-  return <RadioInputWithEditor {...state} onChange={onChange} onChangeRadio={onChange('value')} />;
+  return <SelectInputWithEditor {...state} onChange={onChange} onChangeSelect={onChange('value')} />;
 };
 
 type TTabsPage = TLayout & {
@@ -116,11 +122,11 @@ type TTabsPage = TLayout & {
   title?: ReactNode;
 };
 
-const RadioInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TTabsPage) => (
+const SelectInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TTabsPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
-    <RadioInputEditable />
+    <SelectInputEditable />
   </Layout>
 );
 
-export default RadioInputPage;
+export default SelectInputPage;
