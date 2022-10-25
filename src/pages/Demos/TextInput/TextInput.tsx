@@ -87,7 +87,6 @@ const TextInputWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
       />
       <LiveCode
         classModifier="with-editor"
-        styleLivePreview={{ textAlign: 'left' }}
         code={code(props)}
         scope={{
           TextInput,

@@ -19,12 +19,12 @@ type TLiveCode = {
   modalProps?: TReturnUseToggleModal;
 };
 
-const styleLivePreviewDefault = { background: 'white', padding: '2rem', textAlign: 'center', width: '100%' } as const;
+const styleLivePreviewDefault = { background: 'white', padding: '2rem', width: '100%' } as const;
 
 const LiveCode = withClassNameModifier(
   ({ code, scope, className, styleLivePreview = {}, theme = dracula, modalProps }: TLiveCode) => (
     <article className={className}>
-      <LiveProvider theme={theme} code={code} scope={{ ...reactTookitAll, useState, ...scope, modalProps }}>
+      <LiveProvider theme={theme} code={`<>${code}</>`} scope={{ ...reactTookitAll, useState, ...scope, modalProps }}>
         <LivePreview style={{ ...styleLivePreviewDefault, ...styleLivePreview }} />
         <LiveError />
       </LiveProvider>

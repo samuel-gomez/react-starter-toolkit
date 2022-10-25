@@ -213,22 +213,6 @@ exports[`Layout Should render when disabled: {"footer": true} 1`] = `
                     Notification
                   </a>
                 </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Layout"
-                    class="af-nav__link"
-                    href="/demos/layout"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Layout
-                  </a>
-                </li>
               </ul>
             </li>
             <li
@@ -284,6 +268,22 @@ exports[`Layout Should render when disabled: {"footer": true} 1`] = `
                     tabindex="-1"
                   >
                     Alert
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Restitution"
+                    class="af-nav__link"
+                    href="/demos/restitution"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Restitution
                   </a>
                 </li>
               </ul>
@@ -414,6 +414,22 @@ exports[`Layout Should render when disabled: {"footer": true} 1`] = `
                   </a>
                 </li>
               </ul>
+            </li>
+            <li
+              class="af-nav__item "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Layout"
+                class="af-nav__link"
+                href="/layout"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Layout
+              </a>
             </li>
           </ul>
         </div>
@@ -607,22 +623,6 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
                     Notification
                   </a>
                 </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Layout"
-                    class="af-nav__link"
-                    href="/demos/layout"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Layout
-                  </a>
-                </li>
               </ul>
             </li>
             <li
@@ -678,6 +678,22 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
                     tabindex="-1"
                   >
                     Alert
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Restitution"
+                    class="af-nav__link"
+                    href="/demos/restitution"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Restitution
                   </a>
                 </li>
               </ul>
@@ -809,6 +825,22 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
                 </li>
               </ul>
             </li>
+            <li
+              class="af-nav__item "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Layout"
+                class="af-nav__link"
+                href="/layout"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Layout
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -869,7 +901,7 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.2.10
+        © 2022 AXA Tous droits réservés - v0.2.11
       </div>
     </div>
   </footer>
@@ -974,7 +1006,7 @@ exports[`Layout Should render when disabled: {"menu": true} 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.2.10
+        © 2022 AXA Tous droits réservés - v0.2.11
       </div>
     </div>
   </footer>
@@ -1186,22 +1218,6 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
                     Notification
                   </a>
                 </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Layout"
-                    class="af-nav__link"
-                    href="/demos/layout"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Layout
-                  </a>
-                </li>
               </ul>
             </li>
             <li
@@ -1257,6 +1273,22 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
                     tabindex="-1"
                   >
                     Alert
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Restitution"
+                    class="af-nav__link"
+                    href="/demos/restitution"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Restitution
                   </a>
                 </li>
               </ul>
@@ -1388,6 +1420,22 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
                 </li>
               </ul>
             </li>
+            <li
+              class="af-nav__item "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Layout"
+                class="af-nav__link"
+                href="/layout"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Layout
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -1435,7 +1483,7 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.2.10
+        © 2022 AXA Tous droits réservés - v0.2.11
       </div>
     </div>
   </footer>

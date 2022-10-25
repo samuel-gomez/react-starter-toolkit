@@ -205,22 +205,6 @@ exports[`<NotificationPage/> Should render NotificationPage 1`] = `
                     Notification
                   </a>
                 </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Layout"
-                    class="af-nav__link"
-                    href="/demos/layout"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Layout
-                  </a>
-                </li>
               </ul>
             </li>
             <li
@@ -276,6 +260,22 @@ exports[`<NotificationPage/> Should render NotificationPage 1`] = `
                     tabindex="-1"
                   >
                     Alert
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Restitution"
+                    class="af-nav__link"
+                    href="/demos/restitution"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Restitution
                   </a>
                 </li>
               </ul>
@@ -406,6 +406,22 @@ exports[`<NotificationPage/> Should render NotificationPage 1`] = `
                   </a>
                 </li>
               </ul>
+            </li>
+            <li
+              class="af-nav__item "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Layout"
+                class="af-nav__link"
+                href="/layout"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Layout
+              </a>
             </li>
           </ul>
         </div>
@@ -2102,7 +2118,7 @@ const useNotify = ({  useContextFn = useContext, NotificationContextObj = Notifi
                 class="af-livecode"
               >
                 <div
-                  style="background: white; padding: 2rem; text-align: center; width: 100%;"
+                  style="background: white; padding: 2rem; width: 100%;"
                 >
                   <button
                     class="btn af-btn af-btn--danger"
@@ -2498,7 +2514,7 @@ const useNotify = ({  useContextFn = useContext, NotificationContextObj = Notifi
                 class="af-livecode"
               >
                 <div
-                  style="background: white; padding: 2rem; text-align: center; width: 100%;"
+                  style="background: white; padding: 2rem; width: 100%;"
                 >
                   <button
                     class="btn af-btn af-btn--success"
@@ -2894,7 +2910,7 @@ const useNotify = ({  useContextFn = useContext, NotificationContextObj = Notifi
                 class="af-livecode"
               >
                 <div
-                  style="background: white; padding: 2rem; text-align: center; width: 100%;"
+                  style="background: white; padding: 2rem; width: 100%;"
                 >
                   <button
                     class="btn af-btn"
@@ -3238,7 +3254,7 @@ const useNotify = ({  useContextFn = useContext, NotificationContextObj = Notifi
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.2.10
+        © 2022 AXA Tous droits réservés - v0.2.11
       </div>
     </div>
   </footer>

@@ -208,22 +208,6 @@ exports[`<App/> Should render App with all props and authentication NOT enabled 
                     Notification
                   </a>
                 </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Layout"
-                    class="af-nav__link"
-                    href="/demos/layout"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Layout
-                  </a>
-                </li>
               </ul>
             </li>
             <li
@@ -279,6 +263,22 @@ exports[`<App/> Should render App with all props and authentication NOT enabled 
                     tabindex="-1"
                   >
                     Alert
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Restitution"
+                    class="af-nav__link"
+                    href="/demos/restitution"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Restitution
                   </a>
                 </li>
               </ul>
@@ -410,6 +410,22 @@ exports[`<App/> Should render App with all props and authentication NOT enabled 
                 </li>
               </ul>
             </li>
+            <li
+              class="af-nav__item "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Layout"
+                class="af-nav__link"
+                href="/layout"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Layout
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -476,7 +492,7 @@ exports[`<App/> Should render App with all props and authentication NOT enabled 
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.2.10
+        © 2022 AXA Tous droits réservés - v0.2.11
       </div>
     </div>
   </footer>
@@ -691,22 +707,6 @@ exports[`<App/> Should render App with all props and authentication enabled 1`] 
                     Notification
                   </a>
                 </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Layout"
-                    class="af-nav__link"
-                    href="/demos/layout"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Layout
-                  </a>
-                </li>
               </ul>
             </li>
             <li
@@ -762,6 +762,22 @@ exports[`<App/> Should render App with all props and authentication enabled 1`] 
                     tabindex="-1"
                   >
                     Alert
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Restitution"
+                    class="af-nav__link"
+                    href="/demos/restitution"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Restitution
                   </a>
                 </li>
               </ul>
@@ -893,6 +909,22 @@ exports[`<App/> Should render App with all props and authentication enabled 1`] 
                 </li>
               </ul>
             </li>
+            <li
+              class="af-nav__item "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Layout"
+                class="af-nav__link"
+                href="/layout"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Layout
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -959,7 +991,7 @@ exports[`<App/> Should render App with all props and authentication enabled 1`] 
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.2.10
+        © 2022 AXA Tous droits réservés - v0.2.11
       </div>
     </div>
   </footer>

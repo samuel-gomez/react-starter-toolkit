@@ -28,10 +28,6 @@ const MENU_ITEMS = [
         label: 'Notification',
         url: ROUTE_URL.NOTIFICATION,
       },
-      {
-        label: 'Layout',
-        url: ROUTE_URL.LAYOUT,
-      },
     ],
   },
   {
@@ -46,6 +42,10 @@ const MENU_ITEMS = [
       {
         label: 'Alert',
         url: ROUTE_URL.ALERT,
+      },
+      {
+        label: 'Restitution',
+        url: ROUTE_URL.RESTITUTION,
       },
     ],
   },
@@ -80,6 +80,10 @@ const MENU_ITEMS = [
         url: ROUTE_URL.UNAUTHORIZE,
       },
     ],
+  },
+  {
+    label: 'Layout',
+    url: `/${ROUTE_URL.LAYOUT}`,
   },
 ];
 

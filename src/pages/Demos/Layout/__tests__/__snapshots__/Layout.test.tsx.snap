@@ -25,7 +25,7 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
       class="af-livecode af-livecode--with-editor af-livecode--layout"
     >
       <div
-        style="background: white; padding: 2rem; text-align: center; width: 100%;"
+        style="background: white; padding: 0px; width: 100%;"
       >
         <div
           class="af-header"
@@ -230,22 +230,6 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
                           Notification
                         </a>
                       </li>
-                      <li
-                        class="af-nav__item "
-                        role="none"
-                      >
-                        <a
-                          aria-expanded="false"
-                          aria-haspopup="true"
-                          aria-label="Layout"
-                          class="af-nav__link"
-                          href="/demos/layout"
-                          role="menuitem"
-                          tabindex="-1"
-                        >
-                          Layout
-                        </a>
-                      </li>
                     </ul>
                   </li>
                   <li
@@ -301,6 +285,22 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
                           tabindex="-1"
                         >
                           Alert
+                        </a>
+                      </li>
+                      <li
+                        class="af-nav__item "
+                        role="none"
+                      >
+                        <a
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          aria-label="Restitution"
+                          class="af-nav__link"
+                          href="/demos/restitution"
+                          role="menuitem"
+                          tabindex="-1"
+                        >
+                          Restitution
                         </a>
                       </li>
                     </ul>
@@ -432,6 +432,22 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
                       </li>
                     </ul>
                   </li>
+                  <li
+                    class="af-nav__item "
+                    role="none"
+                  >
+                    <a
+                      aria-expanded="false"
+                      aria-haspopup="true"
+                      aria-label="Layout"
+                      class="af-nav__link"
+                      href="/layout"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      Layout
+                    </a>
+                  </li>
                 </ul>
               </div>
             </nav>
@@ -501,7 +517,7 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
             <div
               class="af-footer-content"
             >
-              © 2022 AXA Tous droits réservés - v0.2.10
+              © 2022 AXA Tous droits réservés - v0.2.11
             </div>
           </div>
         </footer>
@@ -1010,21 +1026,9 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
             &gt;
           </span>
           <span
-            class="token punctuation"
-            style="color: rgb(248, 248, 242);"
+            class="token plain-text"
           >
-            {
-          </span>
-          <span
-            class="token plain"
-          >
-            title
-          </span>
-          <span
-            class="token punctuation"
-            style="color: rgb(248, 248, 242);"
-          >
-            }
+            Layout playground
           </span>
           <span
             class="token tag punctuation"

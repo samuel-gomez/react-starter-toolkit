@@ -38,6 +38,7 @@ const ButtonWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
         openEditor={openEditor}
       />
       <LiveCode
+        styleLivePreview={{ display: 'flex', placeContent: 'center' }}
         classModifier="with-editor"
         code={code(props)}
         scope={{

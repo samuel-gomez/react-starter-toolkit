@@ -134,7 +134,47 @@ exports[`<Templates/> Should render Templates 1`] = `
         >
           <button
             class="af-btn--circle"
-            id="add-restitution__basic"
+            id="add-text"
+          >
+            P
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="af-popover__wrapper"
+    >
+      <div
+        class="af-popover__container af-popover__container--editor"
+      >
+        <div
+          class="af-popover__container-over"
+          role="presentation"
+        >
+          <button
+            class="af-btn--circle"
+            id="add-restitution__twoColumns"
+          >
+            <i
+              class="glyphicon glyphicon-list-alt"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="af-popover__wrapper"
+    >
+      <div
+        class="af-popover__container af-popover__container--editor"
+      >
+        <div
+          class="af-popover__container-over"
+          role="presentation"
+        >
+          <button
+            class="af-btn--circle"
+            id="add-restitution__oneColumn"
           >
             <i
               class="glyphicon glyphicon-list-alt"
@@ -159,6 +199,27 @@ exports[`<Templates/> Should render Templates 1`] = `
           >
             <i
               class="glyphicon glyphicon-modal-window"
+            />
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="af-popover__wrapper"
+    >
+      <div
+        class="af-popover__container af-popover__container--editor"
+      >
+        <div
+          class="af-popover__container-over"
+          role="presentation"
+        >
+          <button
+            class="af-btn--circle"
+            id="add-panel__basic"
+          >
+            <i
+              class="glyphicon glyphicon-credit-card"
             />
           </button>
         </div>

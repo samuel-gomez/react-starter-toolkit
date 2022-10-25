@@ -89,7 +89,7 @@ const CodeEditor = ({
         <span className="af-btn__text">{labelBtnOpenCodeEditor}</span>
       </Button>
       <Modal isOpen={isOpen} onOutsideTap={onCancel} className="af-modal af-modal--editor">
-        <ModalCommonHeader onCancel={onCancel} title="Saisir la value de children" />
+        <ModalCommonHeader onCancel={onCancel} title={`Saisir la value de ${name}`} />
         <ModalCommonBody>
           <Templates list={list} submitTemplate={submitTemplate} onClearCodeEditor={onClearCodeEditor} />
           <ReactCodeEditor
