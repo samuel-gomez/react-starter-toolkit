@@ -1,0 +1,27 @@
+{
+  "children": {
+    "type": "jsx",
+    "labelBtnOpenCodeEditor": "Edit label"
+  },
+  "classModifier": {
+    "value": "success",
+    "options": [
+      {
+        "label": "success",
+        "value": "success"
+      },
+      {
+        "label": "info",
+        "value": "info"
+      },
+      {
+        "label": "error",
+        "value": "error"
+      },
+      {
+        "label": "danger",
+        "value": "danger"
+      }
+    ]
+  }
+}

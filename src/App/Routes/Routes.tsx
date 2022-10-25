@@ -16,6 +16,7 @@ import Tabs from 'pages/Demos/Tabs';
 import RadioInput from 'pages/Demos/RadioInput';
 import Restitution from 'pages/Demos/Restitution';
 import SelectInput from 'pages/Demos/SelectInput';
+import Badge from 'pages/Demos/Badge';
 import ROUTE_URL from 'App/Routes/constants';
 import { UserContext } from 'App/UserProvider';
 import Loader, { MODES } from 'shared/components/Loader';
@@ -62,6 +63,7 @@ type TRoutesCmpt = {
   RadioInputCmpt?: typeof RadioInput;
   RestitutionCmpt?: typeof Restitution;
   SelectInputCmpt?: typeof SelectInput;
+  BadgeCmpt?: typeof Badge;
 };
 
 const RoutesCmpt = ({
@@ -80,6 +82,7 @@ const RoutesCmpt = ({
   RadioInputCmpt = RadioInput,
   RestitutionCmpt = Restitution,
   SelectInputCmpt = SelectInput,
+  BadgeCmpt = Badge,
   withAuthFn = withAuth,
 }: TRoutesCmpt) => (
   <Routes>
@@ -97,6 +100,7 @@ const RoutesCmpt = ({
       <Route path={ROUTE_URL.RADIO_INPUT} element={withAuthFn(RadioInputCmpt)} />
       <Route path={ROUTE_URL.RESTITUTION} element={withAuthFn(RestitutionCmpt)} />
       <Route path={ROUTE_URL.SELECT_INPUT} element={withAuthFn(SelectInputCmpt)} />
+      <Route path={ROUTE_URL.BADGE} element={withAuthFn(BadgeCmpt)} />
     </Route>
     <Route path={ROUTE_URL.LAYOUT} element={withAuthFn(LayoutCmpt)} />
     <Route path={ROUTE_URL.UNAUTHORIZE} element={<PageUnauthorizeCmpt />} />

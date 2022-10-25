@@ -319,6 +319,22 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
                           Tabs
                         </a>
                       </li>
+                      <li
+                        class="af-nav__item "
+                        role="none"
+                      >
+                        <a
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          aria-label="Badge"
+                          class="af-nav__link"
+                          href="/demos/badge"
+                          role="menuitem"
+                          tabindex="-1"
+                        >
+                          Badge
+                        </a>
+                      </li>
                     </ul>
                   </li>
                   <li
