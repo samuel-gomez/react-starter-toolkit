@@ -521,7 +521,7 @@ exports[`<Home page/> Renders Home page component without crashing 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.2.11
+        © 2022 AXA Tous droits réservés - v0.2.12
       </div>
     </div>
   </footer>

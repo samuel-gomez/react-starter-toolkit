@@ -1,7 +1,7 @@
 {
   "name": "react-starter-toolkit",
   "description": "This repository is a starter project that use React Toolkit Axa and CRA.",
-  "version": "0.2.11",
+  "version": "0.2.12",
   "private": true,
   "type": "module",
   "scripts": {
@@ -20,7 +20,7 @@
     "prettier": "prettier --check src",
     "prettier:fix": "prettier --write src",
     "check": "npm run prettier && npm run lint",
-    "clean": "node scripts/clean.js"
+    "clean": "cd ./scripts && npm i && npm start"
   },
   "dependencies": {
     "@axa-fr/react-oidc": "6.9.2",

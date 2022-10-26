@@ -207,7 +207,16 @@ export const useEditable = <T extends object>({ initialState, logEventFn = conso
     },
     [setValueFn],
   );
-  return { onClick, onChange, state };
+
+  const onBlur = useCallback(() => {
+    setState(prevState => ({ ...prevState, autoFocus: false }));
+  }, []);
+
+  const onFocus = useCallback(() => {
+    setState(prevState => ({ ...prevState, autoFocus: true }));
+  }, []);
+
+  return { onClick, onChange, state, onFocus, onBlur };
 };
 
 type TEditorHeader = {

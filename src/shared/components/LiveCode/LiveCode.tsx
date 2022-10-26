@@ -1,5 +1,5 @@
-import dracula from 'prism-react-renderer/themes/dracula';
-import { useState } from 'react';
+import vsDark from 'prism-react-renderer/themes/vsDark';
+import React from 'react';
 import { LiveProviderProps, LiveProvider, LiveError, LivePreview } from 'react-live';
 import * as reactTookitAll from '@axa-fr/react-toolkit-all';
 import withClassNameModifier from 'shared/hoc/WithClassNameModifier';
@@ -22,9 +22,9 @@ type TLiveCode = {
 const styleLivePreviewDefault = { background: 'white', padding: '2rem', width: '100%' } as const;
 
 const LiveCode = withClassNameModifier(
-  ({ code, scope, className, styleLivePreview = {}, theme = dracula, modalProps }: TLiveCode) => (
+  ({ code, scope, className, styleLivePreview = {}, theme = vsDark, modalProps }: TLiveCode) => (
     <article className={className}>
-      <LiveProvider theme={theme} code={`<>${code}</>`} scope={{ ...reactTookitAll, useState, ...scope, modalProps }}>
+      <LiveProvider theme={theme} code={`<>${code}</>`} scope={{ ...reactTookitAll, ...scope, modalProps }}>
         <LivePreview style={{ ...styleLivePreviewDefault, ...styleLivePreview }} />
         <LiveError />
       </LiveProvider>
@@ -34,9 +34,12 @@ const LiveCode = withClassNameModifier(
             <ClipBoard content={code} />
             {tokens.map((line, i) => (
               <div {...getLineProps({ line, key: i })}>
-                {line.map((token, key) => (
-                  <span {...getTokenProps({ token, key })} />
-                ))}
+                <span className="token-line__number">{i + 1}</span>
+                <span className="token-line__content">
+                  {line.map((token, key) => (
+                    <span {...getTokenProps({ token, key })} />
+                  ))}
+                </span>
               </div>
             ))}
           </pre>

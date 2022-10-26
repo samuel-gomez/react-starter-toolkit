@@ -1,5 +1,6 @@
-import { ReactNode } from 'react';
-import { TextInput, HelpButton, MessageTypes } from '@axa-fr/react-toolkit-all';
+import { isEqual } from 'lodash';
+import React, { ReactNode } from 'react';
+import { MessageTypes } from '@axa-fr/react-toolkit-all';
 import Layout, { TLayout } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
@@ -9,8 +10,8 @@ import knobs from './knobs.json';
 const INITIAL_STATE = {
   name: 'name-field',
   id: 'uniqueid',
-  classModifier: '',
-  className: 'af-form__group row',
+  classModifier: 'required',
+  className: 'row af-form__group',
   label: 'My Label',
   value: 'my value',
   helpMessage: 'Enter your name',
@@ -30,8 +31,8 @@ const INITIAL_STATE = {
 
 type Props = Partial<typeof INITIAL_STATE> & {
   onChange: (name: keyof typeof INITIAL_STATE) => (arg: TEvent) => void;
-  onChangeInput: (arg: TEvent) => void;
-  isOpenEditor?: boolean;
+  onBlur?: (arg: TEvent) => void;
+  onFocus?: (arg: TEvent) => void;
 };
 
 export const code = ({
@@ -49,30 +50,31 @@ export const code = ({
   messageType,
   readOnly,
   forceDisplayMessage,
-  isOpenEditor,
   isVisible,
   required,
-}: Props) => `
-  <TextInput 
-    autoFocus={${!isOpenEditor}} 
-    readOnly={${readOnly}} 
-    isVisible={${isVisible}} 
-    required={${required}} 
-    forceDisplayMessage={${forceDisplayMessage}} 
-    disabled={${disabled}} 
-    id="${id}" 
-    message="${message}" 
-    placeholder="${placeholder}" 
-    helpMessage="${helpMessage}" 
-    name="${name}" 
-    value="${value}" 
-    label={<>${label}</>}
-    className="${className}" 
-    classModifier="${classModifier}" 
-    messageType="${messageType}" 
-    onChange={onChangeInput} >
-    ${helpButton ? `<HelpButton>tooltip avec du text</HelpButton>` : ''}
-  </TextInput>
+  autoFocus,
+}: Props) => `<TextInput required={${required}} 
+  forceDisplayMessage={${forceDisplayMessage}} 
+  disabled={${disabled}} 
+  id="${id}" 
+  message="${message}" 
+  placeholder="${placeholder}" 
+  helpMessage="${helpMessage}" 
+  name="${name}" 
+  value="${value}" 
+  label={<>${label}</>}
+  className="${className}" 
+  classModifier="${classModifier}" 
+  messageType="${messageType}" 
+  onChange={onChange('value')} 
+  autoComplete="none"
+  onBlur={onBlur} 
+  onFocus={onFocus} 
+  autoFocus={${autoFocus}} 
+  readOnly={${readOnly}} 
+  isVisible={${isVisible}} >
+  ${helpButton ? `<HelpButton>tooltip avec du text</HelpButton>` : ''}
+</TextInput>  
 `;
 
 const TextInputWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
@@ -85,23 +87,18 @@ const TextInputWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
         npmName={NPM_NAME}
         openEditor={openEditor}
       />
-      <LiveCode
-        classModifier="with-editor"
-        code={code(props)}
-        scope={{
-          TextInput,
-          HelpButton,
-          ...props,
-        }}
-      />
+      <LiveCode classModifier="with-editor" code={code(props)} scope={props} />
     </>
   ),
   knobs as unknown as Tknobs,
 );
 
+const MemoizedTextInputWithEditor = React.memo(TextInputWithEditor, (prev: Props, next: Props) => isEqual(prev, next));
+
 const TextInputEditable = () => {
-  const { state, onChange } = useEditable<typeof INITIAL_STATE>({ initialState: INITIAL_STATE });
-  return <TextInputWithEditor {...state} onChangeInput={onChange('value')} onChange={onChange} />;
+  const { state, onChange, onBlur, onFocus } = useEditable<typeof INITIAL_STATE>({ initialState: INITIAL_STATE });
+
+  return <MemoizedTextInputWithEditor {...state} onBlur={onBlur} onFocus={onFocus} onChange={onChange} />;
 };
 
 type TTextInputPage = TLayout & {
