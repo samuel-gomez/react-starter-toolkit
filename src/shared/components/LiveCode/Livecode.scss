@@ -10,6 +10,19 @@
   pre {
     margin: 0;
   }
+  .token-line {
+    display: table-row;
+    &__number {
+      display: table-cell;
+      text-align: right;
+      padding-right: 1em;
+      user-select: none;
+      opacity: 0.5;
+    }
+    &__content {
+      display: table-cell;
+    }
+  }
 }
 
 @include media-breakpoint-down(sm) {

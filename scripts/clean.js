@@ -1,4 +1,5 @@
 import fs from 'fs-extra';
+const basePath = '../';
 
 function deleteFolderRecursive(path) {
   if (!fs.existsSync(path)) return console.log(`${path} does not exist!`);
@@ -42,7 +43,7 @@ const pathsAll = [
 ];
 
 console.log('Cleaning working tree...');
-pathsAll.forEach(path => deleteFolderRecursive(path));
+pathsAll.forEach(path => deleteFolderRecursive(`${basePath}${path}`));
 console.log('Successfully cleaned working tree!');
 
 function replaceContentsSync(file, replacement) {
@@ -73,7 +74,7 @@ const pathsReplace = [
 ];
 
 console.log('Cleaning files...');
-pathsReplace.forEach(file => replaceContentsSync(`./${file}`, `./scripts/files/${file}`));
+pathsReplace.forEach(file => replaceContentsSync(`${basePath}${file}`, `./files/${file}`));
 console.log('Successfully cleaned files!');
 
-deleteFolderRecursive('./scripts');
+deleteFolderRecursive(`${basePath}scripts`);

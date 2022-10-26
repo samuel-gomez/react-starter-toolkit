@@ -72,6 +72,7 @@ describe('useEditable', () => {
     label: 'valider',
     disabled: false,
     icon: '',
+    autoFocus: false,
   };
 
   it('Should logEventFn have been called when onClick have been called', () => {
@@ -87,6 +88,18 @@ describe('useEditable', () => {
     act(() => result.current.onChange('classModifier')({ value: 'newvalue' }));
     expect(setValueFn).toHaveBeenCalledWith('newvalue');
     expect(result.current.state.classModifier).toEqual('setted value');
+  });
+
+  it('Should set autofocus state to false when onBlur have been called', () => {
+    const { result } = renderHook(() => useEditable({ initialState: { autoFocus: true } }));
+    act(() => result.current.onBlur());
+    expect(result.current.state.autoFocus).toBeFalsy();
+  });
+
+  it('Should set autofocus state to true when onBlur have been called', () => {
+    const { result } = renderHook(() => useEditable({ initialState: { autoFocus: false } }));
+    act(() => result.current.onFocus());
+    expect(result.current.state.autoFocus).toBeTruthy();
   });
 });
 

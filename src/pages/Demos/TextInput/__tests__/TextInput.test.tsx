@@ -11,7 +11,6 @@ describe('<TextInputPage/>', () => {
 
 describe('code', () => {
   const onChange = jest.fn();
-  const onChangeInput = jest.fn();
 
   const defaultProps = {
     id: 'id',
@@ -22,7 +21,7 @@ describe('code', () => {
     message: '',
     placeholder: '',
     helpMessage: '',
-    isOpenEditor: false,
+    autoFocus: false,
     helpButton: false,
     disabled: false,
     readOnly: false,
@@ -31,7 +30,6 @@ describe('code', () => {
     forceDisplayMessage: false,
     messageType: MessageTypes.error,
     onChange,
-    onChangeInput,
     value: '',
   };
 
@@ -39,9 +37,6 @@ describe('code', () => {
     const result = code(defaultProps);
     expect(clearString(result)).toEqual(
       clearString(`<TextInput 
-      autoFocus={${!defaultProps.isOpenEditor}} 
-      readOnly={${defaultProps.readOnly}} 
-      isVisible={${defaultProps.isVisible}} 
       required={${defaultProps.required}} 
       forceDisplayMessage={${defaultProps.forceDisplayMessage}} 
       disabled={${defaultProps.disabled}} 
@@ -55,7 +50,14 @@ describe('code', () => {
       className="${defaultProps.className}" 
       classModifier="${defaultProps.classModifier}" 
       messageType="${defaultProps.messageType}" 
-      onChange={onChangeInput} ></TextInput>
+      onChange={onChange('value')} 
+      autoComplete="none"
+      onBlur={onBlur} 
+      onFocus={onFocus} 
+      autoFocus={${defaultProps.autoFocus}} 
+      readOnly={${defaultProps.readOnly}} 
+      isVisible={${defaultProps.isVisible}}
+      ></TextInput>
     `),
     );
   });
@@ -64,9 +66,6 @@ describe('code', () => {
     const result = code({ ...defaultProps, helpButton: true });
     expect(clearString(result)).toEqual(
       clearString(`<TextInput 
-      autoFocus={${!defaultProps.isOpenEditor}} 
-      readOnly={${defaultProps.readOnly}} 
-      isVisible={${defaultProps.isVisible}} 
       required={${defaultProps.required}} 
       forceDisplayMessage={${defaultProps.forceDisplayMessage}} 
       disabled={${defaultProps.disabled}} 
@@ -80,7 +79,14 @@ describe('code', () => {
       className="${defaultProps.className}" 
       classModifier="${defaultProps.classModifier}" 
       messageType="${defaultProps.messageType}" 
-      onChange={onChangeInput} >
+      onChange={onChange('value')} 
+      autoComplete="none"
+      onBlur={onBlur} 
+      onFocus={onFocus} 
+      autoFocus={${defaultProps.autoFocus}} 
+      readOnly={${defaultProps.readOnly}} 
+      isVisible={${defaultProps.isVisible}}
+      >
       <HelpButton>tooltip avec du text</HelpButton>
     </TextInput>
     `),

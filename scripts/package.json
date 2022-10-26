@@ -1,0 +1,13 @@
+{
+  "name": "cleaner",
+  "description": "Depencencies just for cleaner script",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node ./clean.js"
+  },
+  "rootDir": "../",
+  "dependencies": {
+    "fs-extra": "10.1.0"
+  }
+}

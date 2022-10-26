@@ -604,7 +604,7 @@ exports[`<Badge /> Should render Badge 1`] = `
           </div>
           <pre
             class="prism-code language-jsx"
-            style="color: rgb(248, 248, 242); background-color: rgb(40, 42, 54); padding: 1rem; font-size: 0.8rem; position: relative;"
+            style="color: rgb(156, 220, 254); background-color: rgb(30, 30, 30); padding: 1rem; font-size: 0.8rem; position: relative;"
           >
             <button
               class="af-btn--circle af-clipboard"
@@ -621,168 +621,213 @@ exports[`<Badge /> Should render Badge 1`] = `
             </button>
             <div
               class="token-line"
-              style="color: rgb(248, 248, 242);"
+              style="color: rgb(156, 220, 254);"
             >
               <span
-                class="token plain"
-                style="display: inline-block;"
+                class="token-line__number"
               >
-                
+                1
+              </span>
+              <span
+                class="token-line__content"
+              >
+                <span
+                  class="token plain"
+                  style="display: inline-block;"
+                >
+                  
 
+                </span>
               </span>
             </div>
             <div
               class="token-line"
-              style="color: rgb(248, 248, 242);"
+              style="color: rgb(156, 220, 254);"
             >
               <span
-                class="token plain"
+                class="token-line__number"
               >
-                  
+                2
               </span>
               <span
-                class="token tag punctuation"
-                style="color: rgb(248, 248, 242);"
+                class="token-line__content"
               >
-                &lt;
+                <span
+                  class="token plain"
+                >
+                    
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &lt;
+                </span>
+                <span
+                  class="token tag class-name"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  Badge
+                </span>
+                <span
+                  class="token tag"
+                  style="color: rgb(78, 201, 176);"
+                >
+                   
+                </span>
+                <span
+                  class="token tag attr-name"
+                  style="color: rgb(156, 220, 254);"
+                >
+                  classModifier
+                </span>
+                <span
+                  class="token tag attr-value punctuation attr-equals"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  =
+                </span>
+                <span
+                  class="token tag attr-value punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  "
+                </span>
+                <span
+                  class="token tag attr-value"
+                  style="color: rgb(206, 145, 120);"
+                >
+                  success
+                </span>
+                <span
+                  class="token tag attr-value punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  "
+                </span>
+                <span
+                  class="token tag"
+                  style="color: rgb(78, 201, 176);"
+                >
+                   
+                </span>
+                <span
+                  class="token tag attr-name"
+                  style="color: rgb(156, 220, 254);"
+                >
+                  disabled
+                </span>
+                <span
+                  class="token tag script language-javascript script-punctuation punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  =
+                </span>
+                <span
+                  class="token tag script language-javascript punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  {
+                </span>
+                <span
+                  class="token tag script language-javascript boolean"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  false
+                </span>
+                <span
+                  class="token tag script language-javascript punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  }
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &gt;
+                </span>
+                <span
+                  class="token plain-text"
+                />
               </span>
-              <span
-                class="token tag class-name"
-                style="color: rgb(255, 121, 198);"
-              >
-                Badge
-              </span>
-              <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
-              >
-                 
-              </span>
-              <span
-                class="token tag attr-name"
-                style="color: rgb(241, 250, 140);"
-              >
-                classModifier
-              </span>
-              <span
-                class="token tag attr-value punctuation attr-equals"
-                style="color: rgb(248, 248, 242);"
-              >
-                =
-              </span>
-              <span
-                class="token tag attr-value punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                "
-              </span>
-              <span
-                class="token tag attr-value"
-                style="color: rgb(255, 121, 198);"
-              >
-                success
-              </span>
-              <span
-                class="token tag attr-value punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                "
-              </span>
-              <span
-                class="token tag"
-                style="color: rgb(255, 121, 198);"
-              >
-                 
-              </span>
-              <span
-                class="token tag attr-name"
-                style="color: rgb(241, 250, 140);"
-              >
-                disabled
-              </span>
-              <span
-                class="token tag script language-javascript script-punctuation punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                =
-              </span>
-              <span
-                class="token tag script language-javascript punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                {
-              </span>
-              <span
-                class="token tag script language-javascript boolean"
-                style="color: rgb(255, 121, 198);"
-              >
-                false
-              </span>
-              <span
-                class="token tag script language-javascript punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                }
-              </span>
-              <span
-                class="token tag punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                &gt;
-              </span>
-              <span
-                class="token plain-text"
-              />
             </div>
             <div
               class="token-line"
-              style="color: rgb(248, 248, 242);"
+              style="color: rgb(156, 220, 254);"
             >
               <span
-                class="token plain-text"
+                class="token-line__number"
               >
-                    Coucou
+                3
+              </span>
+              <span
+                class="token-line__content"
+              >
+                <span
+                  class="token plain-text"
+                >
+                      Coucou
+                </span>
               </span>
             </div>
             <div
               class="token-line"
-              style="color: rgb(248, 248, 242);"
+              style="color: rgb(156, 220, 254);"
             >
               <span
-                class="token plain-text"
+                class="token-line__number"
               >
-                  
+                4
               </span>
               <span
-                class="token tag punctuation"
-                style="color: rgb(248, 248, 242);"
+                class="token-line__content"
               >
-                &lt;/
+                <span
+                  class="token plain-text"
+                >
+                    
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &lt;/
+                </span>
+                <span
+                  class="token tag class-name"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  Badge
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &gt;
+                </span>
+                <span
+                  class="token plain"
+                />
               </span>
-              <span
-                class="token tag class-name"
-                style="color: rgb(255, 121, 198);"
-              >
-                Badge
-              </span>
-              <span
-                class="token tag punctuation"
-                style="color: rgb(248, 248, 242);"
-              >
-                &gt;
-              </span>
-              <span
-                class="token plain"
-              />
             </div>
             <div
               class="token-line"
-              style="color: rgb(248, 248, 242);"
+              style="color: rgb(156, 220, 254);"
             >
               <span
-                class="token plain"
+                class="token-line__number"
               >
-                  
+                5
+              </span>
+              <span
+                class="token-line__content"
+              >
+                <span
+                  class="token plain"
+                >
+                    
+                </span>
               </span>
             </div>
           </pre>
@@ -811,7 +856,7 @@ exports[`<Badge /> Should render Badge 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.2.11
+        © 2022 AXA Tous droits réservés - v0.2.12
       </div>
     </div>
   </footer>
