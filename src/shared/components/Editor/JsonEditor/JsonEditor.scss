@@ -1,0 +1,16 @@
+@import '@axa-fr/react-toolkit-core/dist/assets/scss/core.scss';
+
+.af-modal--editorjson {
+  width: 60vw;
+  max-width: inherit;
+  height: 100vh;
+  .af-modal__body {
+    min-height: 70vh;
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .af-modal--editorjson {
+    width: 100vw;
+  }
+}

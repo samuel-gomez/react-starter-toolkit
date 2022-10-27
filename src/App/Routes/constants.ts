@@ -15,6 +15,7 @@ import { ROUTE_URL_RADIO_INPUT as RADIO_INPUT } from 'pages/Demos/RadioInput/con
 import { ROUTE_URL_SELECT_INPUT as SELECT_INPUT } from 'pages/Demos/SelectInput/constants';
 import { ROUTE_URL_RESTITUTION as RESTITUTION } from 'pages/Demos/Restitution/constants';
 import { ROUTE_URL_BADGE as BADGE } from 'pages/Demos/Badge/constants';
+import { ROUTE_URL_TABLE as TABLE } from 'pages/Demos/Table/constants';
 
 const DEMOS = '/demos';
 const LAYOUTS = '/layouts';
@@ -39,6 +40,7 @@ const ROUTE_URL = {
   SELECT_INPUT,
   RESTITUTION,
   BADGE,
+  TABLE,
 };
 
 export default ROUTE_URL;
