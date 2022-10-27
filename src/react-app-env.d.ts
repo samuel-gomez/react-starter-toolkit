@@ -12,3 +12,4 @@ declare module '*.svg';
 declare module '*.png';
 declare module '*.pdf';
 declare module 'downloadjs';
+declare module 'vanilla-jsoneditor/index.d.ts';

@@ -1,0 +1,12 @@
+@import '@axa-fr/react-toolkit-core/dist/assets/scss/core.scss';
+
+.af-modal--editor {
+  width: 60vw;
+  max-width: inherit;
+}
+
+@include media-breakpoint-down(sm) {
+  .af-modal--editor {
+    width: 100vw;
+  }
+}
