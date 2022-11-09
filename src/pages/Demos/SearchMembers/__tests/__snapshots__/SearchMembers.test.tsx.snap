@@ -376,6 +376,22 @@ exports[`<SearchMembers/> Should render <SearchMembers /> with one member 1`] = 
                     Badge
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Title"
+                    class="af-nav__link"
+                    href="/demos/Title"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Title
+                  </a>
+                </li>
               </ul>
             </li>
             <li
@@ -1064,6 +1080,22 @@ exports[`<SearchMembers/> Should render SearchMembers 1`] = `
                     tabindex="-1"
                   >
                     Badge
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Title"
+                    class="af-nav__link"
+                    href="/demos/Title"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Title
                   </a>
                 </li>
               </ul>

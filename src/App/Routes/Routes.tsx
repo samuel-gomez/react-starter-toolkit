@@ -17,6 +17,7 @@ import RadioInput from 'pages/Demos/RadioInput';
 import Restitution from 'pages/Demos/Restitution';
 import SelectInput from 'pages/Demos/SelectInput';
 import Badge from 'pages/Demos/Badge';
+import Title from 'pages/Demos/Title';
 import ROUTE_URL from 'App/Routes/constants';
 import { UserContext } from 'App/UserProvider';
 import Loader, { MODES } from 'shared/components/Loader';
@@ -64,6 +65,7 @@ type TRoutesCmpt = {
   RestitutionCmpt?: typeof Restitution;
   SelectInputCmpt?: typeof SelectInput;
   BadgeCmpt?: typeof Badge;
+  TitleCmpt?: typeof Title;
 };
 
 const RoutesCmpt = ({
@@ -83,6 +85,7 @@ const RoutesCmpt = ({
   RestitutionCmpt = Restitution,
   SelectInputCmpt = SelectInput,
   BadgeCmpt = Badge,
+  TitleCmpt = Title,
   withAuthFn = withAuth,
 }: TRoutesCmpt) => (
   <Routes>
@@ -101,6 +104,7 @@ const RoutesCmpt = ({
       <Route path={ROUTE_URL.RESTITUTION} element={withAuthFn(RestitutionCmpt)} />
       <Route path={ROUTE_URL.SELECT_INPUT} element={withAuthFn(SelectInputCmpt)} />
       <Route path={ROUTE_URL.BADGE} element={withAuthFn(BadgeCmpt)} />
+      <Route path={ROUTE_URL.TITLE} element={withAuthFn(TitleCmpt)} />
     </Route>
     <Route path={ROUTE_URL.LAYOUT} element={withAuthFn(LayoutCmpt)} />
     <Route path={ROUTE_URL.UNAUTHORIZE} element={<PageUnauthorizeCmpt />} />
