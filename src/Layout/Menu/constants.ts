@@ -59,6 +59,10 @@ const MENU_ITEMS = [
         label: 'Title',
         url: ROUTE_URL.TITLE,
       },
+      {
+        label: 'Help',
+        url: ROUTE_URL.HELP,
+      },
     ],
   },
   {

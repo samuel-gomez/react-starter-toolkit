@@ -6,7 +6,6 @@ import { TITLE_BAR, TITLE, DESIGN_SYSTEM_PATH, STORYBOOK_PATH, GITHUB_PACKAGE, N
 import knobs from './knobs.json';
 
 const INITIAL_STATE = {
-  id: 'uniqueid',
   className: 'af-title--content',
   title: 'My title',
 };
@@ -15,7 +14,7 @@ type Props = Partial<typeof INITIAL_STATE> & {
   onChange: (name: keyof typeof INITIAL_STATE) => (arg: TEvent) => void;
 };
 
-export const code = ({ className, title, id }: Props) => `<h1 id="${id}" className="${className}">${title}</h1>`;
+export const code = ({ className, title }: Props) => `<h1 className="${className}">${title}</h1>`;
 
 const TitleWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
   ({ openEditor, ...props }) => (

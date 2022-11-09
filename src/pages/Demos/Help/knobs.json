@@ -1,0 +1,40 @@
+{
+  "label": {
+    "type": "jsx",
+    "labelBtnOpenCodeEditor": "Edit label"
+  },
+  "mode": {
+    "value": "click",
+    "options": [
+      {
+        "label": "click",
+        "value": "click"
+      },
+      {
+        "label": "hover",
+        "value": "hover"
+      }
+    ]
+  },
+  "placement": {
+    "value": "right",
+    "options": [
+      {
+        "label": "right",
+        "value": "right"
+      },
+      {
+        "label": "top",
+        "value": "top"
+      },
+      {
+        "label": "bottom",
+        "value": "bottom"
+      },
+      {
+        "label": "left",
+        "value": "left"
+      }
+    ]
+  }
+}

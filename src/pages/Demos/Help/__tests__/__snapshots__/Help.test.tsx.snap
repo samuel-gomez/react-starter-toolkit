@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<AlertPage/> Should render AlertPage 1`] = `
+exports[`<HelpPage/> Should render HelpPage 1`] = `
 <DocumentFragment>
   <div
     class="af-header"
@@ -515,7 +515,7 @@ exports[`<AlertPage/> Should render AlertPage 1`] = `
       <h1
         class="af-title-bar__title"
       >
-        Demo alert
+        Demo Help
       </h1>
     </div>
   </div>
@@ -528,7 +528,7 @@ exports[`<AlertPage/> Should render AlertPage 1`] = `
       <h1
         class="af-title--content"
       >
-        Alert playground
+        Help playground
       </h1>
       <section
         class="af-editor"
@@ -538,28 +538,7 @@ exports[`<AlertPage/> Should render AlertPage 1`] = `
         >
           <a
             class="af-link"
-            href="https://axaguildev.github.io/design-system/molecules/alert/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <svg
-              aria-labelledby="title"
-              class="af-icon-svg"
-              role="img"
-              viewBox="0 0 342.988 280"
-            >
-              <title>
-                slash
-              </title>
-              <path
-                d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
-              />
-            </svg>
-            Guidelines
-          </a>
-          <a
-            class="af-link"
-            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/alert-alert--default"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/help--text-story"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -580,7 +559,7 @@ exports[`<AlertPage/> Should render AlertPage 1`] = `
           </a>
           <a
             class="af-link"
-            href="https://github.com/AxaGuilDEv/react-toolkit/tree/v1.4.1/packages/alert"
+            href="https://github.com/AxaGuilDEv/react-toolkit/tree/v1.4.1/packages/help"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -600,13 +579,13 @@ exports[`<AlertPage/> Should render AlertPage 1`] = `
             Github
           </a>
           <a
-            href="https://badge.fury.io/js/%40axa-fr%2Freact-toolkit-alert"
+            href="https://badge.fury.io/js/%40axa-fr%2Freact-toolkit-help"
             rel="noopener noreferrer"
             target="_blank"
           >
             <img
               alt="npm version"
-              src="https://badge.fury.io/js/%40axa-fr%2Freact-toolkit-alert.svg"
+              src="https://badge.fury.io/js/%40axa-fr%2Freact-toolkit-help.svg"
             />
           </a>
           <span
@@ -629,45 +608,27 @@ exports[`<AlertPage/> Should render AlertPage 1`] = `
             style="background: white; padding: 2rem; width: 100%;"
           >
             <div
-              class="af-alert af-alert--danger"
-              role="alert"
+              class="af-popover__wrapper"
+              role="button"
+              tabindex="0"
             >
               <div
-                class="af-alert__title"
+                class="af-popover__container"
               >
                 <div
-                  class="af-alert__title-icon"
+                  class="af-popover__container-over"
+                  role="presentation"
                 >
-                  <i
-                    class="glyphicon glyphicon-alert"
-                  />
-                </div>
-                <div
-                  class="af-alert__title-text"
-                >
-                  Attention : des informations sont manquantes
-                </div>
-                <button
-                  class="af-alert__title-icon-close"
-                  type="button"
-                >
-                  <i
-                    class="glyphicon glyphicon-close"
-                  />
-                </button>
-              </div>
-              <div
-                class="af-alert__content"
-              >
-                <div
-                  class="af-alert__content__left"
-                />
-                <div
-                  class="af-alert__content__right"
-                >
-                  <p>
-                    hello child
-                  </p>
+                  <button
+                    class="btn af-btn--circle"
+                    type="button"
+                  >
+                    <span
+                      class="af-more-help"
+                    >
+                      i
+                    </span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -702,32 +663,6 @@ exports[`<AlertPage/> Should render AlertPage 1`] = `
                 class="token-line__content"
               >
                 <span
-                  class="token plain"
-                  style="display: inline-block;"
-                >
-                  
-
-                </span>
-              </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(156, 220, 254);"
-            >
-              <span
-                class="token-line__number"
-              >
-                2
-              </span>
-              <span
-                class="token-line__content"
-              >
-                <span
-                  class="token plain"
-                >
-                    
-                </span>
-                <span
                   class="token tag punctuation"
                   style="color: rgb(212, 212, 212);"
                 >
@@ -737,7 +672,7 @@ exports[`<AlertPage/> Should render AlertPage 1`] = `
                   class="token tag class-name"
                   style="color: rgb(78, 201, 176);"
                 >
-                  Alert
+                  Help
                 </span>
                 <span
                   class="token tag"
@@ -749,7 +684,7 @@ exports[`<AlertPage/> Should render AlertPage 1`] = `
                   class="token tag attr-name"
                   style="color: rgb(156, 220, 254);"
                 >
-                  title
+                  mode
                 </span>
                 <span
                   class="token tag attr-value punctuation attr-equals"
@@ -767,7 +702,7 @@ exports[`<AlertPage/> Should render AlertPage 1`] = `
                   class="token tag attr-value"
                   style="color: rgb(206, 145, 120);"
                 >
-                  Attention : des informations sont manquantes
+                  click
                 </span>
                 <span
                   class="token tag attr-value punctuation"
@@ -785,37 +720,7 @@ exports[`<AlertPage/> Should render AlertPage 1`] = `
                   class="token tag attr-name"
                   style="color: rgb(156, 220, 254);"
                 >
-                  icon
-                </span>
-                <span
-                  class="token tag attr-value punctuation attr-equals"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  =
-                </span>
-                <span
-                  class="token tag attr-value punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  "
-                </span>
-                <span
-                  class="token tag attr-value punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  "
-                </span>
-                <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
-                >
-                   
-                </span>
-                <span
-                  class="token tag attr-name"
-                  style="color: rgb(156, 220, 254);"
-                >
-                  className
+                  placement
                 </span>
                 <span
                   class="token tag attr-value punctuation attr-equals"
@@ -833,167 +738,13 @@ exports[`<AlertPage/> Should render AlertPage 1`] = `
                   class="token tag attr-value"
                   style="color: rgb(206, 145, 120);"
                 >
-                  af-alert
+                  right
                 </span>
                 <span
                   class="token tag attr-value punctuation"
                   style="color: rgb(212, 212, 212);"
                 >
                   "
-                </span>
-                <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
-                >
-                   
-                </span>
-                <span
-                  class="token tag attr-name"
-                  style="color: rgb(156, 220, 254);"
-                >
-                  classModifier
-                </span>
-                <span
-                  class="token tag attr-value punctuation attr-equals"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  =
-                </span>
-                <span
-                  class="token tag attr-value punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  "
-                </span>
-                <span
-                  class="token tag attr-value"
-                  style="color: rgb(206, 145, 120);"
-                >
-                  danger
-                </span>
-                <span
-                  class="token tag attr-value punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  "
-                </span>
-                <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
-                >
-                   
-                </span>
-                <span
-                  class="token tag attr-name"
-                  style="color: rgb(156, 220, 254);"
-                >
-                  type
-                </span>
-                <span
-                  class="token tag attr-value punctuation attr-equals"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  =
-                </span>
-                <span
-                  class="token tag attr-value punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  "
-                </span>
-                <span
-                  class="token tag attr-value"
-                  style="color: rgb(206, 145, 120);"
-                >
-                  submit
-                </span>
-                <span
-                  class="token tag attr-value punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  "
-                </span>
-                <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
-                >
-                   
-                </span>
-                <span
-                  class="token tag attr-name"
-                  style="color: rgb(156, 220, 254);"
-                >
-                  onClose
-                </span>
-                <span
-                  class="token tag script language-javascript script-punctuation punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  =
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  {
-                </span>
-                <span
-                  class="token tag script language-javascript"
-                  style="color: rgb(78, 201, 176);"
-                >
-                  onClose
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  }
-                </span>
-                <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
-                >
-                   
-                </span>
-                <span
-                  class="token tag punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  &gt;
-                </span>
-                <span
-                  class="token plain-text"
-                />
-              </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(156, 220, 254);"
-            >
-              <span
-                class="token-line__number"
-              >
-                3
-              </span>
-              <span
-                class="token-line__content"
-              >
-                <span
-                  class="token plain-text"
-                >
-                      
-                </span>
-                <span
-                  class="token tag punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  &lt;
-                </span>
-                <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
-                >
-                  p
                 </span>
                 <span
                   class="token tag punctuation"
@@ -1004,47 +755,7 @@ exports[`<AlertPage/> Should render AlertPage 1`] = `
                 <span
                   class="token plain-text"
                 >
-                  hello child
-                </span>
-                <span
-                  class="token tag punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  &lt;/
-                </span>
-                <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
-                >
-                  p
-                </span>
-                <span
-                  class="token tag punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  &gt;
-                </span>
-                <span
-                  class="token plain-text"
-                />
-              </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(156, 220, 254);"
-            >
-              <span
-                class="token-line__number"
-              >
-                4
-              </span>
-              <span
-                class="token-line__content"
-              >
-                <span
-                  class="token plain-text"
-                >
-                    
+                  My label
                 </span>
                 <span
                   class="token tag punctuation"
@@ -1056,37 +767,13 @@ exports[`<AlertPage/> Should render AlertPage 1`] = `
                   class="token tag class-name"
                   style="color: rgb(78, 201, 176);"
                 >
-                  Alert
+                  Help
                 </span>
                 <span
                   class="token tag punctuation"
                   style="color: rgb(212, 212, 212);"
                 >
                   &gt;
-                </span>
-                <span
-                  class="token plain"
-                />
-              </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(156, 220, 254);"
-            >
-              <span
-                class="token-line__number"
-              >
-                5
-              </span>
-              <span
-                class="token-line__content"
-              >
-                <span
-                  class="token plain"
-                  style="display: inline-block;"
-                >
-                  
-
                 </span>
               </span>
             </div>

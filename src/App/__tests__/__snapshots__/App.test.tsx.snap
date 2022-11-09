@@ -329,6 +329,22 @@ exports[`<App/> Should render App with all props and authentication NOT enabled 
                     Title
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Help"
+                    class="af-nav__link"
+                    href="/demos/help"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Help
+                  </a>
+                </li>
               </ul>
             </li>
             <li
@@ -874,6 +890,22 @@ exports[`<App/> Should render App with all props and authentication enabled 1`] 
                     tabindex="-1"
                   >
                     Title
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Help"
+                    class="af-nav__link"
+                    href="/demos/help"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Help
                   </a>
                 </li>
               </ul>
