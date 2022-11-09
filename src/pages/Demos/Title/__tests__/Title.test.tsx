@@ -13,7 +13,6 @@ describe('code', () => {
 
   const defaultProps = {
     name: 'name-field',
-    id: 'uniqueid',
     className: 'af-title--content',
     title: 'My title',
     onChange,
@@ -21,6 +20,6 @@ describe('code', () => {
 
   it('Should render Title with default props', () => {
     const result = code(defaultProps);
-    expect(clearString(result)).toEqual(clearString(`<h1 id="${defaultProps.id}" className="${defaultProps.className}">${defaultProps.title}</h1>`));
+    expect(clearString(result)).toEqual(clearString(`<h1 className="${defaultProps.className}">${defaultProps.title}</h1>`));
   });
 });

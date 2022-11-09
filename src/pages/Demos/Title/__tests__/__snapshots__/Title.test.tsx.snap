@@ -326,6 +326,22 @@ exports[`<TitlePage/> Should render TitlePage 1`] = `
                     Title
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Help"
+                    class="af-nav__link"
+                    href="/demos/help"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Help
+                  </a>
+                </li>
               </ul>
             </li>
             <li
@@ -543,7 +559,7 @@ exports[`<TitlePage/> Should render TitlePage 1`] = `
           </a>
           <a
             class="af-link"
-            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/Title--default"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/title--default"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -614,7 +630,6 @@ exports[`<TitlePage/> Should render TitlePage 1`] = `
           >
             <h1
               class="af-title--content"
-              id="uniqueid"
             >
               My title
             </h1>
@@ -659,42 +674,6 @@ exports[`<TitlePage/> Should render TitlePage 1`] = `
                   style="color: rgb(78, 201, 176);"
                 >
                   h1
-                </span>
-                <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
-                >
-                   
-                </span>
-                <span
-                  class="token tag attr-name"
-                  style="color: rgb(156, 220, 254);"
-                >
-                  id
-                </span>
-                <span
-                  class="token tag attr-value punctuation attr-equals"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  =
-                </span>
-                <span
-                  class="token tag attr-value punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  "
-                </span>
-                <span
-                  class="token tag attr-value"
-                  style="color: rgb(206, 145, 120);"
-                >
-                  uniqueid
-                </span>
-                <span
-                  class="token tag attr-value punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  "
                 </span>
                 <span
                   class="token tag"
