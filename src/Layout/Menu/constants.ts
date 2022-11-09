@@ -66,6 +66,17 @@ const MENU_ITEMS = [
     ],
   },
   {
+    label: 'Toolkit structure',
+    url: ROUTE_URL.DEMOS,
+    basePathChildren: ROUTE_URL.DEMOS,
+    children: [
+      {
+        label: 'Header',
+        url: ROUTE_URL.HEADER,
+      },
+    ],
+  },
+  {
     label: 'Toolkit form components',
     url: ROUTE_URL.DEMOS,
     basePathChildren: ROUTE_URL.DEMOS,
