@@ -55,6 +55,10 @@ const MENU_ITEMS = [
         label: 'Badge',
         url: ROUTE_URL.BADGE,
       },
+      {
+        label: 'Title',
+        url: ROUTE_URL.TITLE,
+      },
     ],
   },
   {
