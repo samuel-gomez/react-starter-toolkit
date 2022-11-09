@@ -351,6 +351,47 @@ exports[`<Members/> Should render <Members /> with one member 1`] = `
               <a
                 aria-expanded="false"
                 aria-haspopup="true"
+                aria-label="Toolkit structure"
+                class="af-nav__link"
+                href="/demos"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Toolkit structure
+              </a>
+              <i
+                class="glyphicon glyphicon-arrow-xs-down"
+              />
+              <ul
+                aria-label=""
+                class="af-nav__list af-nav__list--children"
+                role="menu"
+              >
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Header"
+                    class="af-nav__link"
+                    href="/demos/header"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Header
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li
+              class="af-nav__item af-nav__item--haschild "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
                 aria-label="Toolkit form components"
                 class="af-nav__link"
                 href="/demos"
@@ -1129,6 +1170,47 @@ exports[`<Members/> Should render Members 1`] = `
                     tabindex="-1"
                   >
                     Help
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li
+              class="af-nav__item af-nav__item--haschild "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Toolkit structure"
+                class="af-nav__link"
+                href="/demos"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Toolkit structure
+              </a>
+              <i
+                class="glyphicon glyphicon-arrow-xs-down"
+              />
+              <ul
+                aria-label=""
+                class="af-nav__list af-nav__list--children"
+                role="menu"
+              >
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Header"
+                    class="af-nav__link"
+                    href="/demos/header"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Header
                   </a>
                 </li>
               </ul>
