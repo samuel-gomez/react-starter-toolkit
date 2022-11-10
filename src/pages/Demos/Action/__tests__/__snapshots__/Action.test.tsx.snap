@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<HelpPage/> Should render HelpPage 1`] = `
+exports[`<Action /> Should render Action 1`] = `
 <DocumentFragment>
   <div
     class="af-header"
@@ -604,7 +604,7 @@ exports[`<HelpPage/> Should render HelpPage 1`] = `
       <h1
         class="af-title-bar__title"
       >
-        Demo Help
+        Demo Action
       </h1>
     </div>
   </div>
@@ -617,7 +617,7 @@ exports[`<HelpPage/> Should render HelpPage 1`] = `
       <h1
         class="af-title--content"
       >
-        Help playground
+        Action playground
       </h1>
       <section
         class="af-editor"
@@ -627,7 +627,7 @@ exports[`<HelpPage/> Should render HelpPage 1`] = `
         >
           <a
             class="af-link"
-            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/help--text-story"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/action-action--link"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -648,7 +648,7 @@ exports[`<HelpPage/> Should render HelpPage 1`] = `
           </a>
           <a
             class="af-link"
-            href="https://github.com/AxaGuilDEv/react-toolkit/tree/v1.4.1/packages/help"
+            href="https://github.com/AxaGuilDEv/react-toolkit/tree/v1.4.1/packages/action"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -668,13 +668,13 @@ exports[`<HelpPage/> Should render HelpPage 1`] = `
             Github
           </a>
           <a
-            href="https://badge.fury.io/js/%40axa-fr%2Freact-toolkit-help"
+            href="https://badge.fury.io/js/%40axa-fr%2Freact-toolkit-action"
             rel="noopener noreferrer"
             target="_blank"
           >
             <img
               alt="npm version"
-              src="https://badge.fury.io/js/%40axa-fr%2Freact-toolkit-help.svg"
+              src="https://badge.fury.io/js/%40axa-fr%2Freact-toolkit-action.svg"
             />
           </a>
           <span
@@ -696,31 +696,17 @@ exports[`<HelpPage/> Should render HelpPage 1`] = `
           <div
             style="background: white; padding: 2rem; width: 100%;"
           >
-            <div
-              class="af-popover__wrapper"
+            <a
+              class="btn af-btn--circle"
+              href="#"
               role="button"
               tabindex="0"
+              title="Demo title"
             >
-              <div
-                class="af-popover__container"
-              >
-                <div
-                  class="af-popover__container-over"
-                  role="presentation"
-                >
-                  <button
-                    class="btn af-btn--circle"
-                    type="button"
-                  >
-                    <span
-                      class="af-more-help"
-                    >
-                      i
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </div>
+              <i
+                class="glyphicon glyphicon-link"
+              />
+            </a>
           </div>
           <pre
             class="prism-code language-jsx"
@@ -752,6 +738,30 @@ exports[`<HelpPage/> Should render HelpPage 1`] = `
                 class="token-line__content"
               >
                 <span
+                  class="token plain"
+                  style="display: inline-block;"
+                >
+                  
+
+                </span>
+              </span>
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(156, 220, 254);"
+            >
+              <span
+                class="token-line__number"
+              >
+                2
+              </span>
+              <span
+                class="token-line__content"
+              >
+                <span
+                  class="token plain"
+                />
+                <span
                   class="token tag punctuation"
                   style="color: rgb(212, 212, 212);"
                 >
@@ -761,19 +771,85 @@ exports[`<HelpPage/> Should render HelpPage 1`] = `
                   class="token tag class-name"
                   style="color: rgb(78, 201, 176);"
                 >
-                  Help
+                  Action
                 </span>
                 <span
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
+                />
+              </span>
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(156, 220, 254);"
+            >
+              <span
+                class="token-line__number"
+              >
+                3
+              </span>
+              <span
+                class="token-line__content"
+              >
+                <span
+                  class="token tag"
+                  style="color: rgb(78, 201, 176);"
                 >
-                   
+                      
                 </span>
                 <span
                   class="token tag attr-name"
                   style="color: rgb(156, 220, 254);"
                 >
-                  mode
+                  classModifier
+                </span>
+                <span
+                  class="token tag attr-value punctuation attr-equals"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  =
+                </span>
+                <span
+                  class="token tag attr-value punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  "
+                </span>
+                <span
+                  class="token tag attr-value punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  "
+                </span>
+                <span
+                  class="token tag"
+                  style="color: rgb(78, 201, 176);"
+                />
+              </span>
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(156, 220, 254);"
+            >
+              <span
+                class="token-line__number"
+              >
+                4
+              </span>
+              <span
+                class="token-line__content"
+              >
+                <span
+                  class="token tag"
+                  style="color: rgb(78, 201, 176);"
+                >
+                      
+                </span>
+                <span
+                  class="token tag attr-name"
+                  style="color: rgb(156, 220, 254);"
+                >
+                  icon
                 </span>
                 <span
                   class="token tag attr-value punctuation attr-equals"
@@ -791,7 +867,7 @@ exports[`<HelpPage/> Should render HelpPage 1`] = `
                   class="token tag attr-value"
                   style="color: rgb(206, 145, 120);"
                 >
-                  click
+                  link
                 </span>
                 <span
                   class="token tag attr-value punctuation"
@@ -802,14 +878,32 @@ exports[`<HelpPage/> Should render HelpPage 1`] = `
                 <span
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
+                />
+              </span>
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(156, 220, 254);"
+            >
+              <span
+                class="token-line__number"
+              >
+                5
+              </span>
+              <span
+                class="token-line__content"
+              >
+                <span
+                  class="token tag"
+                  style="color: rgb(78, 201, 176);"
                 >
-                   
+                      
                 </span>
                 <span
                   class="token tag attr-name"
                   style="color: rgb(156, 220, 254);"
                 >
-                  placement
+                  title
                 </span>
                 <span
                   class="token tag attr-value punctuation attr-equals"
@@ -827,7 +921,7 @@ exports[`<HelpPage/> Should render HelpPage 1`] = `
                   class="token tag attr-value"
                   style="color: rgb(206, 145, 120);"
                 >
-                  right
+                  Demo title
                 </span>
                 <span
                   class="token tag attr-value punctuation"
@@ -836,33 +930,32 @@ exports[`<HelpPage/> Should render HelpPage 1`] = `
                   "
                 </span>
                 <span
-                  class="token tag punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  &gt;
-                </span>
-                <span
-                  class="token plain-text"
-                >
-                  My label
-                </span>
-                <span
-                  class="token tag punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  &lt;/
-                </span>
-                <span
-                  class="token tag class-name"
+                  class="token tag"
                   style="color: rgb(78, 201, 176);"
-                >
-                  Help
-                </span>
+                />
+              </span>
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(156, 220, 254);"
+            >
+              <span
+                class="token-line__number"
+              >
+                6
+              </span>
+              <span
+                class="token-line__content"
+              >
+                <span
+                  class="token tag"
+                  style="color: rgb(78, 201, 176);"
+                />
                 <span
                   class="token tag punctuation"
                   style="color: rgb(212, 212, 212);"
                 >
-                  &gt;
+                  /&gt;
                 </span>
               </span>
             </div>

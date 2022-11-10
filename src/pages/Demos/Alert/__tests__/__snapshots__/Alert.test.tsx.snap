@@ -253,6 +253,22 @@ exports[`<AlertPage/> Should render AlertPage 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
+                    aria-label="Action"
+                    class="af-nav__link"
+                    href="/demos/action"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Action
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
                     aria-label="Alert"
                     class="af-nav__link"
                     href="/demos/alert"
