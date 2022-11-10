@@ -57,7 +57,8 @@ describe('FieldEditor', () => {
     ${true}
     ${'value'}
     ${{ value: 'value', options: [] }}
-    ${{ value: 'value', type: 'jsx', labelBtnOpenCodeEditor: 'Edit label' }}
+    ${{ value: 'value', type: 'jsx', labelBtnOpenCodeEditor: 'Edit JSX' }}
+    ${{ value: 'value', type: 'json', labelBtnOpenCodeEditor: 'Edit Json' }}
     ${emptyFunction}
   `('Should render when value: $value', ({ value }) => {
     const { asFragment } = render(<FieldEditor value={value} name="name" onChange={onChange} />);

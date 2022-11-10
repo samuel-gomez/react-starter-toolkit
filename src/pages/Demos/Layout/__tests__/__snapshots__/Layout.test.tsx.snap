@@ -367,6 +367,22 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
                           Help
                         </a>
                       </li>
+                      <li
+                        class="af-nav__item "
+                        role="none"
+                      >
+                        <a
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          aria-label="Table"
+                          class="af-nav__link"
+                          href="/demos/table"
+                          role="menuitem"
+                          tabindex="-1"
+                        >
+                          Table
+                        </a>
+                      </li>
                     </ul>
                   </li>
                   <li
@@ -622,7 +638,7 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
             <div
               class="af-footer-content"
             >
-              © 2022 AXA Tous droits réservés - v0.2.12
+              © 2022 AXA Tous droits réservés - v0.2.13
             </div>
           </div>
         </footer>

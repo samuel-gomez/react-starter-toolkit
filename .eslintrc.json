@@ -21,6 +21,7 @@
         "endOfLine": "auto"
       }
     ],
+    "@typescript-eslint/ban-ts-comment": "off",
     "react/function-component-definition": "off",
     "import/no-anonymous-default-export": "warn",
     "no-restricted-exports": "off",
