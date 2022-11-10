@@ -446,6 +446,22 @@ exports[`Layout Should render when disabled: {"footer": true} 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
+                    aria-label="NavBar"
+                    class="af-nav__link"
+                    href="/demos/navbar"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    NavBar
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
                     aria-label="Infos"
                     class="af-nav__link"
                     href="/demos/infos"
@@ -1016,6 +1032,22 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
                     tabindex="-1"
                   >
                     TitleBar
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="NavBar"
+                    class="af-nav__link"
+                    href="/demos/navbar"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    NavBar
                   </a>
                 </li>
                 <li
@@ -1780,6 +1812,22 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
                     tabindex="-1"
                   >
                     TitleBar
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="NavBar"
+                    class="af-nav__link"
+                    href="/demos/navbar"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    NavBar
                   </a>
                 </li>
                 <li
