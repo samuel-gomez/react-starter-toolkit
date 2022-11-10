@@ -439,6 +439,22 @@ exports[`Layout Should render when disabled: {"footer": true} 1`] = `
                     TitleBar
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Infos"
+                    class="af-nav__link"
+                    href="/demos/infos"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Infos
+                  </a>
+                </li>
               </ul>
             </li>
             <li
@@ -1000,6 +1016,22 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
                     tabindex="-1"
                   >
                     TitleBar
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Infos"
+                    class="af-nav__link"
+                    href="/demos/infos"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Infos
                   </a>
                 </li>
               </ul>
@@ -1748,6 +1780,22 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
                     tabindex="-1"
                   >
                     TitleBar
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Infos"
+                    class="af-nav__link"
+                    href="/demos/infos"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Infos
                   </a>
                 </li>
               </ul>

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Action /> Should render Action 1`] = `
+exports[`<InfosPage /> Should render InfosPage 1`] = `
 <DocumentFragment>
   <div
     class="af-header"
@@ -620,7 +620,7 @@ exports[`<Action /> Should render Action 1`] = `
       <h1
         class="af-title-bar__title"
       >
-        Demo Action
+        Demo Infos
       </h1>
     </div>
   </div>
@@ -633,7 +633,7 @@ exports[`<Action /> Should render Action 1`] = `
       <h1
         class="af-title--content"
       >
-        Action playground
+        Infos playground
       </h1>
       <section
         class="af-editor"
@@ -643,7 +643,28 @@ exports[`<Action /> Should render Action 1`] = `
         >
           <a
             class="af-link"
-            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/action-action--link"
+            href="https://axaguildev.github.io/design-system/organisms/header/"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <svg
+              aria-labelledby="title"
+              class="af-icon-svg"
+              role="img"
+              viewBox="0 0 342.988 280"
+            >
+              <title>
+                slash
+              </title>
+              <path
+                d="M233.869 0h109.119L109.119 280H0L233.869 0zM299.988 144.545V239h-78.797l-34.203 41h156V93l-43 51.545zM43 41h78.797L156 0H0v187l43-51.545V41z"
+              />
+            </svg>
+            Guidelines
+          </a>
+          <a
+            class="af-link"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/layout-header-infos--default"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -664,7 +685,7 @@ exports[`<Action /> Should render Action 1`] = `
           </a>
           <a
             class="af-link"
-            href="https://github.com/AxaGuilDEv/react-toolkit/tree/v1.4.1/packages/action"
+            href="https://github.com/AxaGuilDEv/react-toolkit/tree/v1.4.1/packages/infos"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -684,13 +705,13 @@ exports[`<Action /> Should render Action 1`] = `
             Github
           </a>
           <a
-            href="https://badge.fury.io/js/%40axa-fr%2Freact-toolkit-action"
+            href="https://badge.fury.io/js/%40axa-fr%2Freact-toolkit-layout-header"
             rel="noopener noreferrer"
             target="_blank"
           >
             <img
               alt="npm version"
-              src="https://badge.fury.io/js/%40axa-fr%2Freact-toolkit-action.svg"
+              src="https://badge.fury.io/js/%40axa-fr%2Freact-toolkit-layout-header.svg"
             />
           </a>
           <span
@@ -710,19 +731,29 @@ exports[`<Action /> Should render Action 1`] = `
           class="af-livecode af-livecode--with-editor"
         >
           <div
-            style="background: white; padding: 2rem; width: 100%;"
+            style="background: white; padding: 2rem; width: 100%; text-align: left;"
           >
-            <a
-              class="btn af-btn--circle"
-              href="#"
-              role="button"
-              tabindex="0"
-              title="Demo title"
+            <div
+              class="af-contrat"
             >
               <i
-                class="glyphicon glyphicon-link"
+                class="glyphicon glyphicon-info-sign"
               />
-            </a>
+              <dl
+                class="af-contrat__list"
+              >
+                <dt
+                  class="af-contrat__word"
+                >
+                  Portefeuille :
+                </dt>
+                <dd
+                  class="af-contrat__def"
+                >
+                  000123456789
+                </dd>
+              </dl>
+            </div>
           </div>
           <pre
             class="prism-code language-jsx"
@@ -754,30 +785,6 @@ exports[`<Action /> Should render Action 1`] = `
                 class="token-line__content"
               >
                 <span
-                  class="token plain"
-                  style="display: inline-block;"
-                >
-                  
-
-                </span>
-              </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(156, 220, 254);"
-            >
-              <span
-                class="token-line__number"
-              >
-                2
-              </span>
-              <span
-                class="token-line__content"
-              >
-                <span
-                  class="token plain"
-                />
-                <span
                   class="token tag punctuation"
                   style="color: rgb(212, 212, 212);"
                 >
@@ -787,186 +794,110 @@ exports[`<Action /> Should render Action 1`] = `
                   class="token tag class-name"
                   style="color: rgb(78, 201, 176);"
                 >
-                  Action
+                  Infos
                 </span>
                 <span
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
-                />
-              </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(156, 220, 254);"
-            >
-              <span
-                class="token-line__number"
-              >
-                3
-              </span>
-              <span
-                class="token-line__content"
-              >
-                <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
                 >
-                      
+                   
                 </span>
                 <span
                   class="token tag attr-name"
                   style="color: rgb(156, 220, 254);"
                 >
-                  classModifier
+                  infos
                 </span>
                 <span
-                  class="token tag attr-value punctuation attr-equals"
+                  class="token tag script language-javascript script-punctuation punctuation"
                   style="color: rgb(212, 212, 212);"
                 >
                   =
                 </span>
                 <span
-                  class="token tag attr-value punctuation"
+                  class="token tag script language-javascript punctuation"
                   style="color: rgb(212, 212, 212);"
                 >
-                  "
+                  {
                 </span>
                 <span
-                  class="token tag attr-value punctuation"
+                  class="token tag script language-javascript punctuation"
                   style="color: rgb(212, 212, 212);"
                 >
-                  "
+                  [
                 </span>
                 <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
-                />
-              </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(156, 220, 254);"
-            >
-              <span
-                class="token-line__number"
-              >
-                4
-              </span>
-              <span
-                class="token-line__content"
-              >
+                  class="token tag script language-javascript punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  {
+                </span>
                 <span
-                  class="token tag"
+                  class="token tag script language-javascript string-property property"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
+                  "word"
                 </span>
                 <span
-                  class="token tag attr-name"
-                  style="color: rgb(156, 220, 254);"
-                >
-                  icon
-                </span>
-                <span
-                  class="token tag attr-value punctuation attr-equals"
+                  class="token tag script language-javascript operator"
                   style="color: rgb(212, 212, 212);"
                 >
-                  =
+                  :
                 </span>
                 <span
-                  class="token tag attr-value punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  "
-                </span>
-                <span
-                  class="token tag attr-value"
+                  class="token tag script language-javascript string"
                   style="color: rgb(206, 145, 120);"
                 >
-                  link
+                  "Portefeuille :"
                 </span>
                 <span
-                  class="token tag attr-value punctuation"
+                  class="token tag script language-javascript punctuation"
                   style="color: rgb(212, 212, 212);"
                 >
-                  "
+                  ,
                 </span>
                 <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
-                />
-              </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(156, 220, 254);"
-            >
-              <span
-                class="token-line__number"
-              >
-                5
-              </span>
-              <span
-                class="token-line__content"
-              >
-                <span
-                  class="token tag"
+                  class="token tag script language-javascript string-property property"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
+                  "definition"
                 </span>
                 <span
-                  class="token tag attr-name"
-                  style="color: rgb(156, 220, 254);"
-                >
-                  title
-                </span>
-                <span
-                  class="token tag attr-value punctuation attr-equals"
+                  class="token tag script language-javascript operator"
                   style="color: rgb(212, 212, 212);"
                 >
-                  =
+                  :
                 </span>
                 <span
-                  class="token tag attr-value punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  "
-                </span>
-                <span
-                  class="token tag attr-value"
+                  class="token tag script language-javascript string"
                   style="color: rgb(206, 145, 120);"
                 >
-                  Demo title
+                  "000123456789"
                 </span>
                 <span
-                  class="token tag attr-value punctuation"
+                  class="token tag script language-javascript punctuation"
                   style="color: rgb(212, 212, 212);"
                 >
-                  "
+                  }
+                </span>
+                <span
+                  class="token tag script language-javascript punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  ]
+                </span>
+                <span
+                  class="token tag script language-javascript punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  }
                 </span>
                 <span
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
-                />
-              </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(156, 220, 254);"
-            >
-              <span
-                class="token-line__number"
-              >
-                6
-              </span>
-              <span
-                class="token-line__content"
-              >
-                <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
-                />
+                >
+                   
+                </span>
                 <span
                   class="token tag punctuation"
                   style="color: rgb(212, 212, 212);"
