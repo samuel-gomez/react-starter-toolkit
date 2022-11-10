@@ -40,6 +40,10 @@ const MENU_ITEMS = [
         url: ROUTE_URL.BUTTON,
       },
       {
+        label: 'Action',
+        url: ROUTE_URL.ACTION,
+      },
+      {
         label: 'Alert',
         url: ROUTE_URL.ALERT,
       },
