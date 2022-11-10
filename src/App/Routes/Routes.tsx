@@ -20,6 +20,7 @@ import Badge from 'pages/Demos/Badge';
 import Title from 'pages/Demos/Title';
 import Help from 'pages/Demos/Help';
 import Header from 'pages/Demos/Header';
+import Table from 'pages/Demos/Table';
 import ROUTE_URL from 'App/Routes/constants';
 import { UserContext } from 'App/UserProvider';
 import Loader, { MODES } from 'shared/components/Loader';
@@ -70,6 +71,7 @@ type TRoutesCmpt = {
   TitleCmpt?: typeof Title;
   HelpCmpt?: typeof Help;
   HeaderCmpt?: typeof Header;
+  TableCmpt?: typeof Table;
 };
 
 const RoutesCmpt = ({
@@ -92,6 +94,7 @@ const RoutesCmpt = ({
   TitleCmpt = Title,
   HelpCmpt = Help,
   HeaderCmpt = Header,
+  TableCmpt = Table,
   withAuthFn = withAuth,
 }: TRoutesCmpt) => (
   <Routes>
@@ -113,6 +116,7 @@ const RoutesCmpt = ({
       <Route path={ROUTE_URL.TITLE} element={withAuthFn(TitleCmpt)} />
       <Route path={ROUTE_URL.HELP} element={withAuthFn(HelpCmpt)} />
       <Route path={ROUTE_URL.HEADER} element={withAuthFn(HeaderCmpt)} />
+      <Route path={ROUTE_URL.TABLE} element={withAuthFn(TableCmpt)} />
     </Route>
     <Route path={ROUTE_URL.LAYOUT} element={withAuthFn(LayoutCmpt)} />
     <Route path={ROUTE_URL.UNAUTHORIZE} element={<PageUnauthorizeCmpt />} />

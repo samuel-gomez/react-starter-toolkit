@@ -63,6 +63,10 @@ const MENU_ITEMS = [
         label: 'Help',
         url: ROUTE_URL.HELP,
       },
+      {
+        label: 'Table',
+        url: ROUTE_URL.TABLE,
+      },
     ],
   },
   {

@@ -1,0 +1,10 @@
+{
+  "headers": {
+    "type": "json",
+    "labelBtnOpenCodeEditor": "Edit headers"
+  },
+  "items": {
+    "type": "json",
+    "labelBtnOpenCodeEditor": "Edit items"
+  }
+}

@@ -1,7 +1,7 @@
 {
   "name": "react-starter-toolkit",
   "description": "This repository is a starter project that use React Toolkit Axa and CRA.",
-  "version": "0.2.12",
+  "version": "0.2.13",
   "private": true,
   "type": "module",
   "scripts": {
@@ -49,6 +49,8 @@
     "react-dom": "18.2.0",
     "react-draggable": "4.4.5",
     "react-hook-form": "7.38.0",
+    "react-json-view": "1.21.3",
+    "react-jsx-parser": "1.29.0",
     "react-live": "2.4.1",
     "react-router-dom": "6.4.2",
     "react-scripts": "5.0.1"

@@ -85,7 +85,7 @@ const CodeEditor = ({
   const { onCancel, openModal, isOpen } = useToggleModalFn();
   return (
     <>
-      <Button type="submit" onClick={openModal}>
+      <Button classModifier="editor" type="submit" onClick={openModal}>
         <span className="af-btn__text">{labelBtnOpenCodeEditor}</span>
       </Button>
       <Modal isOpen={isOpen} onOutsideTap={onCancel} className="af-modal af-modal--editor">

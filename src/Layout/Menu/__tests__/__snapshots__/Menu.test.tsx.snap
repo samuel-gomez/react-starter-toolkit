@@ -289,6 +289,22 @@ exports[`<Menu/> Render <Menu/> 1`] = `
                     Help
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Table"
+                    class="af-nav__link"
+                    href="/table"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Table
+                  </a>
+                </li>
               </ul>
             </li>
             <li

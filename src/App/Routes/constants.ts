@@ -18,6 +18,7 @@ import { ROUTE_URL_BADGE as BADGE } from 'pages/Demos/Badge/constants';
 import { ROUTE_URL_TITLE as TITLE } from 'pages/Demos/Title/constants';
 import { ROUTE_URL_HELP as HELP } from 'pages/Demos/Help/constants';
 import { ROUTE_URL_HEADER as HEADER } from 'pages/Demos/Header/constants';
+import { ROUTE_URL_TABLE as TABLE } from 'pages/Demos/Table/constants';
 
 const DEMOS = '/demos';
 const LAYOUTS = '/layouts';
@@ -45,6 +46,7 @@ const ROUTE_URL = {
   TITLE,
   HELP,
   HEADER,
+  TABLE,
 };
 
 export default ROUTE_URL;

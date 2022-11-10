@@ -13,16 +13,31 @@ exports[`FieldEditor Should render when value: [Function emptyFuncion] 1`] = `
 </DocumentFragment>
 `;
 
-exports[`FieldEditor Should render when value: {"labelBtnOpenCodeEditor": "Edit label", "type": "jsx", "value": "value"} 1`] = `
+exports[`FieldEditor Should render when value: {"labelBtnOpenCodeEditor": "Edit JSX", "type": "jsx", "value": "value"} 1`] = `
 <DocumentFragment>
   <button
-    class="btn af-btn"
+    class="btn af-btn af-btn--editor"
     type="submit"
   >
     <span
       class="af-btn__text"
     >
-      Edit label
+      Edit JSX
+    </span>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`FieldEditor Should render when value: {"labelBtnOpenCodeEditor": "Edit Json", "type": "json", "value": "value"} 1`] = `
+<DocumentFragment>
+  <button
+    class="btn af-btn af-btn--editor"
+    type="submit"
+  >
+    <span
+      class="af-btn__text"
+    >
+      Edit Json
     </span>
   </button>
 </DocumentFragment>

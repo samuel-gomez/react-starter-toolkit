@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 import { ComponentType, useCallback, useState } from 'react';
 import { Text, CheckboxItem, CheckboxModes, Select } from '@axa-fr/react-toolkit-all';
 import Draggable from 'react-draggable';
@@ -6,6 +7,7 @@ import { ClickEvent } from '@axa-fr/react-toolkit-core';
 import { DEFAULT_OPTION_LABEL, DESIGN_SYSTEM, GITHUB, STORYBOOK } from 'shared/constants';
 import './Editor.scss';
 import CodeEditor from './CodeEditor';
+import JsonEditor from './JsonEditor';
 import { Tlistelements } from './CodeEditor/Templates';
 
 export type TEvent = {
@@ -64,6 +66,12 @@ export const FieldEditor = ({ value, ...props }: TFieldEditor) => (
               <CodeEditor {...commonProps(props)} labelBtnOpenCodeEditor={value.labelBtnOpenCodeEditor} list={value?.list} value={value.value} />
             )
           );
+        case typeof value === 'object' && !!value.type && value.type === 'json':
+          return (
+            typeof value === 'object' && (
+              <JsonEditor {...commonProps(props)} labelBtnOpenCodeEditor={value.labelBtnOpenCodeEditor} value={value.value} />
+            )
+          );
         case typeof value === 'object':
           return (
             typeof value === 'object' && (
@@ -81,7 +89,7 @@ export const FieldEditor = ({ value, ...props }: TFieldEditor) => (
           );
 
         default:
-          return <Text {...commonProps(props)} type="text" autoFocus={true} value={value} />;
+          return <Text {...commonProps(props)} type="text" value={value} />;
       }
     })()}
   </>
