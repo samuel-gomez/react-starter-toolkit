@@ -1,3 +1,4 @@
+/* eslint-disable max-lines-per-function */
 import { useContext, ComponentProps } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import PageNotFound from 'pages/NotFound';
@@ -21,6 +22,7 @@ import Title from 'pages/Demos/Title';
 import Help from 'pages/Demos/Help';
 import Header from 'pages/Demos/Header';
 import Table from 'pages/Demos/Table';
+import TitleBar from 'pages/Demos/TitleBar';
 import ROUTE_URL from 'App/Routes/constants';
 import { UserContext } from 'App/UserProvider';
 import Loader, { MODES } from 'shared/components/Loader';
@@ -72,6 +74,7 @@ type TRoutesCmpt = {
   HelpCmpt?: typeof Help;
   HeaderCmpt?: typeof Header;
   TableCmpt?: typeof Table;
+  TitleBarCmpt?: typeof TitleBar;
 };
 
 const RoutesCmpt = ({
@@ -95,6 +98,7 @@ const RoutesCmpt = ({
   HelpCmpt = Help,
   HeaderCmpt = Header,
   TableCmpt = Table,
+  TitleBarCmpt = TitleBar,
   withAuthFn = withAuth,
 }: TRoutesCmpt) => (
   <Routes>
@@ -117,6 +121,7 @@ const RoutesCmpt = ({
       <Route path={ROUTE_URL.HELP} element={withAuthFn(HelpCmpt)} />
       <Route path={ROUTE_URL.HEADER} element={withAuthFn(HeaderCmpt)} />
       <Route path={ROUTE_URL.TABLE} element={withAuthFn(TableCmpt)} />
+      <Route path={ROUTE_URL.TITLEBAR} element={withAuthFn(TitleBarCmpt)} />
     </Route>
     <Route path={ROUTE_URL.LAYOUT} element={withAuthFn(LayoutCmpt)} />
     <Route path={ROUTE_URL.UNAUTHORIZE} element={<PageUnauthorizeCmpt />} />

@@ -402,6 +402,22 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer and called funct
                       Header
                     </a>
                   </li>
+                  <li
+                    class="af-nav__item "
+                    role="none"
+                  >
+                    <a
+                      aria-expanded="false"
+                      aria-haspopup="true"
+                      aria-label="TitleBar"
+                      class="af-nav__link"
+                      href="/demos/titlebar"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      TitleBar
+                    </a>
+                  </li>
                 </ul>
               </li>
               <li

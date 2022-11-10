@@ -78,6 +78,10 @@ const MENU_ITEMS = [
         label: 'Header',
         url: ROUTE_URL.HEADER,
       },
+      {
+        label: 'TitleBar',
+        url: ROUTE_URL.TITLEBAR,
+      },
     ],
   },
   {
