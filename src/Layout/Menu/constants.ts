@@ -87,6 +87,10 @@ const MENU_ITEMS = [
         url: ROUTE_URL.TITLEBAR,
       },
       {
+        label: 'NavBar',
+        url: ROUTE_URL.NAVBAR,
+      },
+      {
         label: 'Infos',
         url: ROUTE_URL.INFOS,
       },

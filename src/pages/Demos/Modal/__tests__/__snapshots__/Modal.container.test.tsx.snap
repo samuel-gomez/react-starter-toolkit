@@ -441,6 +441,22 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer and called funct
                     <a
                       aria-expanded="false"
                       aria-haspopup="true"
+                      aria-label="NavBar"
+                      class="af-nav__link"
+                      href="/demos/navbar"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      NavBar
+                    </a>
+                  </li>
+                  <li
+                    class="af-nav__item "
+                    role="none"
+                  >
+                    <a
+                      aria-expanded="false"
+                      aria-haspopup="true"
                       aria-label="Infos"
                       class="af-nav__link"
                       href="/demos/infos"

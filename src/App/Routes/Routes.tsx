@@ -25,6 +25,7 @@ import Table from 'pages/Demos/Table';
 import TitleBar from 'pages/Demos/TitleBar';
 import Action from 'pages/Demos/Action';
 import Infos from 'pages/Demos/Infos';
+import NavBar from 'pages/Demos/NavBar';
 import ROUTE_URL from 'App/Routes/constants';
 import { UserContext } from 'App/UserProvider';
 import Loader, { MODES } from 'shared/components/Loader';
@@ -79,6 +80,7 @@ type TRoutesCmpt = {
   TitleBarCmpt?: typeof TitleBar;
   ActionCmpt?: typeof Action;
   InfosCmpt?: typeof Infos;
+  NavBarCmpt?: typeof NavBar;
 };
 
 const RoutesCmpt = ({
@@ -105,6 +107,7 @@ const RoutesCmpt = ({
   TitleBarCmpt = TitleBar,
   ActionCmpt = Action,
   InfosCmpt = Infos,
+  NavBarCmpt = NavBar,
   withAuthFn = withAuth,
 }: TRoutesCmpt) => (
   <Routes>
@@ -130,6 +133,7 @@ const RoutesCmpt = ({
       <Route path={ROUTE_URL.TITLEBAR} element={withAuthFn(TitleBarCmpt)} />
       <Route path={ROUTE_URL.ACTION} element={withAuthFn(ActionCmpt)} />
       <Route path={ROUTE_URL.INFOS} element={withAuthFn(InfosCmpt)} />
+      <Route path={ROUTE_URL.NAVBAR} element={withAuthFn(NavBarCmpt)} />
     </Route>
     <Route path={ROUTE_URL.LAYOUT} element={withAuthFn(LayoutCmpt)} />
     <Route path={ROUTE_URL.UNAUTHORIZE} element={<PageUnauthorizeCmpt />} />
