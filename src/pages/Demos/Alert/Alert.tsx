@@ -2,7 +2,6 @@ import { ReactNode } from 'react';
 import { ClickEvent } from '@axa-fr/react-toolkit-core';
 import Layout, { TLayout } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
-import { useToggleModal } from 'shared/components/ModalCommon';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
 import { TITLE_BAR, TITLE, DESIGN_SYSTEM_PATH, STORYBOOK_PATH, GITHUB_PACKAGE, NPM_NAME } from './constants';
 import knobs from './knobs.json';
