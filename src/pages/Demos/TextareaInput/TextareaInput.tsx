@@ -1,62 +1,62 @@
-import { isEqual } from 'lodash';
 import React, { FocusEvent, ReactNode } from 'react';
+import { isEqual } from 'lodash';
 import { MessageTypes } from '@axa-fr/react-toolkit-all';
-import Layout, { TLayout } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
-import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
+import Layout, { TLayout } from 'Layout';
 import { TITLE_BAR, TITLE, DESIGN_SYSTEM_PATH, STORYBOOK_PATH, GITHUB_PACKAGE, NPM_NAME } from './constants';
+import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
 import knobs from './knobs.json';
 
 const INITIAL_STATE = {
-  name: 'name-field-textarea',
   id: 'uniquetextareaid',
-  classModifier: 'required',
+  name: 'name-field-textarea',
   className: 'row af-form__group',
-  label: 'My Label for textarea',
+  classModifier: 'required',
   value: 'my value in textarea',
-  helpMessage: 'Enter your text',
+  label: 'My Label for textarea',
   placeholder: 'Ex: Samuel Gomez',
+  helpMessage: 'Enter your text',
   rows: 6,
   cols: 60,
   message: '',
-  messageType: MessageTypes.error,
   forceDisplayMessage: false,
-  autoFocus: true,
+  messageType: MessageTypes.error,
   disabled: false,
-  required: false,
+  autoFocus: true,
   readOnly: false,
-  isVisible: true,
-  classNameContainerLabel: 'col-md-2',
+  required: false,
   classNameContainerInput: 'col-md-10',
+  classNameContainerLabel: 'col-md-2',
   helpButton: false,
+  isVisible: true,
 };
 
 type Props = Partial<typeof INITIAL_STATE> & {
-  onChange: (name: keyof typeof INITIAL_STATE) => (arg: TEvent) => void;
   onBlur?: (arg: TEvent) => void;
+  onChange: (name: keyof typeof INITIAL_STATE) => (arg: TEvent) => void;
   onFocus?: (arg: FocusEvent<HTMLInputElement>) => void;
 };
 
 export const code = ({
   label,
-  className,
   classModifier,
-  disabled,
+  className,
   helpButton,
-  value,
+  disabled,
   id,
-  name,
+  value,
   helpMessage,
+  name,
   placeholder,
-  message,
   messageType,
+  message,
   readOnly,
-  forceDisplayMessage,
   isVisible,
-  required,
-  autoFocus,
+  forceDisplayMessage,
   rows,
   cols,
+  autoFocus,
+  required,
 }: Props) => `<TextareaInput required={${required}} 
   forceDisplayMessage={${forceDisplayMessage}} 
   disabled={${disabled}} 
