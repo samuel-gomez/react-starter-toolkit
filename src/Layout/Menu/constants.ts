@@ -71,6 +71,10 @@ const MENU_ITEMS = [
         label: 'Table',
         url: ROUTE_URL.TABLE,
       },
+      {
+        label: 'Popover',
+        url: ROUTE_URL.POPOVER,
+      },
     ],
   },
   {

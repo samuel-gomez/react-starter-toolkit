@@ -24,6 +24,7 @@ import { ROUTE_URL_TITLEBAR as TITLEBAR } from 'pages/Demos/TitleBar/constants';
 import { ROUTE_URL_ACTION as ACTION } from 'pages/Demos/Action/constants';
 import { ROUTE_URL_INFOS as INFOS } from 'pages/Demos/Infos/constants';
 import { ROUTE_URL_NAVBAR as NAVBAR } from 'pages/Demos/NavBar/constants';
+import { ROUTE_URL_POPOVER as POPOVER } from 'pages/Demos/Popover/constants';
 
 const DEMOS = '/demos';
 const LAYOUTS = '/layouts';
@@ -57,6 +58,7 @@ const ROUTE_URL = {
   ACTION,
   INFOS,
   NAVBAR,
+  POPOVER,
 };
 
 export default ROUTE_URL;

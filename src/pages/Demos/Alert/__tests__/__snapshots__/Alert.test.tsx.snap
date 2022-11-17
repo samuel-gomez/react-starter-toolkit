@@ -374,6 +374,22 @@ exports[`<AlertPage/> Should render AlertPage 1`] = `
                     Table
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Popover"
+                    class="af-nav__link"
+                    href="/demos/popover"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Popover
+                  </a>
+                </li>
               </ul>
             </li>
             <li
