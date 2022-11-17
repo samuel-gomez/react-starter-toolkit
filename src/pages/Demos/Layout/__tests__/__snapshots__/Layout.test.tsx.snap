@@ -399,6 +399,22 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
                           Table
                         </a>
                       </li>
+                      <li
+                        class="af-nav__item "
+                        role="none"
+                      >
+                        <a
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          aria-label="Popover"
+                          class="af-nav__link"
+                          href="/demos/popover"
+                          role="menuitem"
+                          tabindex="-1"
+                        >
+                          Popover
+                        </a>
+                      </li>
                     </ul>
                   </li>
                   <li
