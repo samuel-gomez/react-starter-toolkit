@@ -773,9 +773,9 @@ exports[`<TextareaInputPage/> Should render TextareaInputPage 1`] = `
               >
                 <label
                   class="af-form__group-label"
-                  for="uniqueid"
+                  for="uniquetextareaid"
                 >
-                  My Label
+                  My Label for textarea
                 </label>
               </div>
               <div
@@ -788,18 +788,18 @@ exports[`<TextareaInputPage/> Should render TextareaInputPage 1`] = `
                     autocomplete="none"
                     class="af-form__input-textarea af-form__input-textarea--required"
                     cols="60"
-                    id="uniqueid"
-                    name="name-field"
-                    placeholder="Ex: Samuel"
+                    id="uniquetextareaid"
+                    name="name-field-textarea"
+                    placeholder="Ex: Samuel Gomez"
                     rows="6"
                   >
-                    my value
+                    my value in textarea
                   </textarea>
                 </div>
                 <small
                   class="af-form__help"
                 >
-                  Enter your name
+                  Enter your text
                 </small>
               </div>
             </div>
@@ -1041,7 +1041,7 @@ exports[`<TextareaInputPage/> Should render TextareaInputPage 1`] = `
                   class="token tag attr-value"
                   style="color: rgb(206, 145, 120);"
                 >
-                  uniqueid
+                  uniquetextareaid
                 </span>
                 <span
                   class="token tag attr-value punctuation"
@@ -1147,7 +1147,7 @@ exports[`<TextareaInputPage/> Should render TextareaInputPage 1`] = `
                   class="token tag attr-value"
                   style="color: rgb(206, 145, 120);"
                 >
-                  Ex: Samuel
+                  Ex: Samuel Gomez
                 </span>
                 <span
                   class="token tag attr-value punctuation"
@@ -1203,7 +1203,7 @@ exports[`<TextareaInputPage/> Should render TextareaInputPage 1`] = `
                   class="token tag attr-value"
                   style="color: rgb(206, 145, 120);"
                 >
-                  Enter your name
+                  Enter your text
                 </span>
                 <span
                   class="token tag attr-value punctuation"
@@ -1259,7 +1259,7 @@ exports[`<TextareaInputPage/> Should render TextareaInputPage 1`] = `
                   class="token tag attr-value"
                   style="color: rgb(206, 145, 120);"
                 >
-                  name-field
+                  name-field-textarea
                 </span>
                 <span
                   class="token tag attr-value punctuation"
@@ -1315,7 +1315,7 @@ exports[`<TextareaInputPage/> Should render TextareaInputPage 1`] = `
                   class="token tag attr-value"
                   style="color: rgb(206, 145, 120);"
                 >
-                  my value
+                  my value in textarea
                 </span>
                 <span
                   class="token tag attr-value punctuation"
@@ -1383,7 +1383,7 @@ exports[`<TextareaInputPage/> Should render TextareaInputPage 1`] = `
                   class="token tag script language-javascript plain-text"
                   style="color: rgb(78, 201, 176);"
                 >
-                  My Label
+                  My Label for textarea
                 </span>
                 <span
                   class="token tag script language-javascript tag punctuation"
