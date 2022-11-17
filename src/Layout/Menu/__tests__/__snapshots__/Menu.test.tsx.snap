@@ -524,6 +524,22 @@ exports[`<Menu/> Render <Menu/> 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
+                    aria-label="Checkbox Input"
+                    class="af-nav__link"
+                    href="/checkbox-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Checkbox Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
                     aria-label="Select Input"
                     class="af-nav__link"
                     href="/select-input"

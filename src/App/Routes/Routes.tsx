@@ -16,6 +16,7 @@ import TextInput from 'pages/Demos/TextInput';
 import TextareaInput from 'pages/Demos/TextareaInput';
 import Tabs from 'pages/Demos/Tabs';
 import RadioInput from 'pages/Demos/RadioInput';
+import CheckboxInput from 'pages/Demos/CheckboxInput';
 import Restitution from 'pages/Demos/Restitution';
 import SelectInput from 'pages/Demos/SelectInput';
 import Badge from 'pages/Demos/Badge';
@@ -74,6 +75,7 @@ type TRoutesCmpt = {
   TextareaInputCmpt?: typeof TextareaInput;
   TabsCmpt?: typeof Tabs;
   RadioInputCmpt?: typeof RadioInput;
+  CheckboxInputCmpt?: typeof CheckboxInput;
   RestitutionCmpt?: typeof Restitution;
   SelectInputCmpt?: typeof SelectInput;
   BadgeCmpt?: typeof Badge;
@@ -104,6 +106,7 @@ const RoutesCmpt = ({
   TextareaInputCmpt = TextareaInput,
   TabsCmpt = Tabs,
   RadioInputCmpt = RadioInput,
+  CheckboxInputCmpt = CheckboxInput,
   RestitutionCmpt = Restitution,
   SelectInputCmpt = SelectInput,
   BadgeCmpt = Badge,
@@ -133,6 +136,7 @@ const RoutesCmpt = ({
       <Route path={ROUTE_URL.TEXTAREA_INPUT} element={withAuthFn(TextareaInputCmpt)} />
       <Route path={ROUTE_URL.TABS} element={withAuthFn(TabsCmpt)} />
       <Route path={ROUTE_URL.RADIO_INPUT} element={withAuthFn(RadioInputCmpt)} />
+      <Route path={ROUTE_URL.CHECKBOX_INPUT} element={withAuthFn(CheckboxInputCmpt)} />
       <Route path={ROUTE_URL.RESTITUTION} element={withAuthFn(RestitutionCmpt)} />
       <Route path={ROUTE_URL.SELECT_INPUT} element={withAuthFn(SelectInputCmpt)} />
       <Route path={ROUTE_URL.BADGE} element={withAuthFn(BadgeCmpt)} />

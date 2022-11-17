@@ -11,12 +11,13 @@ import JsonEditor from './JsonEditor';
 import { Tlistelements } from './CodeEditor/Templates';
 
 export type TEvent = {
-  value: string;
+  value?: string;
   id?: string;
   name?: string;
+  values?: string[];
 };
 
-const omittedProps = ['onChange', 'knobs', 'onClick'];
+const omittedProps = ['onChange', 'knobs', 'onClick', 'values'];
 
 type TListSelect = {
   value: string;
@@ -212,7 +213,11 @@ export const useEditable = <T extends object>({ initialState, logEventFn = conso
 
   const onChange = useCallback(
     (key: string) => (e: TEvent) => {
-      setState(prevState => ({ ...prevState, [key]: setValueFn(e.value) }));
+      if (!e.value && e.values) {
+        setState(prevState => ({ ...prevState, [key]: e.values }));
+      } else {
+        setState(prevState => ({ ...prevState, [key]: setValueFn(e?.value ?? '') }));
+      }
     },
     [setValueFn],
   );

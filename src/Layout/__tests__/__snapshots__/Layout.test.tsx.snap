@@ -583,6 +583,22 @@ exports[`Layout Should render when disabled: {"footer": true} 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
+                    aria-label="Checkbox Input"
+                    class="af-nav__link"
+                    href="/demos/checkbox-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Checkbox Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
                     aria-label="Select Input"
                     class="af-nav__link"
                     href="/demos/select-input"
@@ -1217,6 +1233,22 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
                     tabindex="-1"
                   >
                     Radio Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Checkbox Input"
+                    class="af-nav__link"
+                    href="/demos/checkbox-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Checkbox Input
                   </a>
                 </li>
                 <li
@@ -2045,6 +2077,22 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
                     tabindex="-1"
                   >
                     Radio Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Checkbox Input"
+                    class="af-nav__link"
+                    href="/demos/checkbox-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Checkbox Input
                   </a>
                 </li>
                 <li
