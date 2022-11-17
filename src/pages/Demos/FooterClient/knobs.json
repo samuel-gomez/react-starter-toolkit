@@ -1,0 +1,10 @@
+{
+  "languages": {
+    "type": "json",
+    "labelBtnOpenCodeEditor": "Edit infos"
+  },
+  "socialNetworkList": {
+    "type": "json",
+    "labelBtnOpenCodeEditor": "Edit infos"
+  }
+}
