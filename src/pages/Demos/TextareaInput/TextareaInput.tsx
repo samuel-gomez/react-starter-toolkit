@@ -1,59 +1,63 @@
-import { isEqual } from 'lodash';
 import React, { FocusEvent, ReactNode } from 'react';
+import { isEqual } from 'lodash';
 import { MessageTypes } from '@axa-fr/react-toolkit-all';
-import Layout, { TLayout } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
+import Layout, { TLayout } from 'Layout';
 import { TITLE_BAR, TITLE, DESIGN_SYSTEM_PATH, STORYBOOK_PATH, GITHUB_PACKAGE, NPM_NAME } from './constants';
 import knobs from './knobs.json';
 
 const INITIAL_STATE = {
-  name: 'name-field',
-  id: 'uniqueid',
-  classModifier: 'required',
+  id: 'uniquetextareaid',
+  name: 'name-field-textarea',
   className: 'row af-form__group',
-  label: 'My Label',
-  value: 'my value',
-  helpMessage: 'Enter your name',
-  placeholder: 'Ex: Samuel',
+  classModifier: 'required',
+  value: 'my value in textarea',
+  label: 'My Label for textarea',
+  placeholder: 'Ex: Samuel Gomez',
+  helpMessage: 'Enter your text',
+  rows: 6,
+  cols: 60,
   message: '',
-  messageType: MessageTypes.error,
   forceDisplayMessage: false,
-  autoFocus: true,
+  messageType: MessageTypes.error,
   disabled: false,
-  required: false,
+  autoFocus: true,
   readOnly: false,
-  isVisible: true,
-  classNameContainerLabel: 'col-md-2',
+  required: false,
   classNameContainerInput: 'col-md-10',
+  classNameContainerLabel: 'col-md-2',
   helpButton: false,
+  isVisible: true,
 };
 
 type Props = Partial<typeof INITIAL_STATE> & {
-  onChange: (name: keyof typeof INITIAL_STATE) => (arg: TEvent) => void;
   onBlur?: (arg: TEvent) => void;
+  onChange: (name: keyof typeof INITIAL_STATE) => (arg: TEvent) => void;
   onFocus?: (arg: FocusEvent<HTMLInputElement>) => void;
 };
 
 export const code = ({
   label,
-  className,
   classModifier,
-  disabled,
+  className,
   helpButton,
-  value,
+  disabled,
   id,
-  name,
+  value,
   helpMessage,
+  name,
   placeholder,
-  message,
   messageType,
+  message,
   readOnly,
-  forceDisplayMessage,
   isVisible,
-  required,
+  forceDisplayMessage,
+  rows,
+  cols,
   autoFocus,
-}: Props) => `<TextInput required={${required}} 
+  required,
+}: Props) => `<TextareaInput required={${required}} 
   forceDisplayMessage={${forceDisplayMessage}} 
   disabled={${disabled}} 
   id="${id}" 
@@ -64,7 +68,7 @@ export const code = ({
   value="${value}" 
   label={<>${label}</>}
   className="${className}" 
-  classModifier="${classModifier}" 
+  classModifier="${classModifier}"  
   messageType="${messageType}" 
   onChange={onChange('value')} 
   autoComplete="none"
@@ -72,12 +76,14 @@ export const code = ({
   onFocus={onFocus} 
   autoFocus={${autoFocus}} 
   readOnly={${readOnly}} 
-  isVisible={${isVisible}} >
+  isVisible={${isVisible}}
+  rows={${rows}}
+  cols={${cols}} >
   ${helpButton ? `<HelpButton>tooltip avec du text</HelpButton>` : ''}
-</TextInput>  
+</TextareaInput>  
 `;
 
-const TextInputWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
+const TextareaInputWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
   ({ openEditor, ...props }) => (
     <>
       <EditorHeader
@@ -93,24 +99,24 @@ const TextInputWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
   knobs as unknown as Tknobs,
 );
 
-const MemoizedTextInputWithEditor = React.memo(TextInputWithEditor, (prev: Props, next: Props) => isEqual(prev, next));
+const MemoizedTextareaInputWithEditor = React.memo(TextareaInputWithEditor, (prev: Props, next: Props) => isEqual(prev, next));
 
-const TextInputEditable = () => {
+const TextareaInputEditable = () => {
   const { state, onChange, onBlur, onFocus } = useEditable<typeof INITIAL_STATE>({ initialState: INITIAL_STATE });
 
-  return <MemoizedTextInputWithEditor {...state} onBlur={onBlur} onFocus={onFocus} onChange={onChange} />;
+  return <MemoizedTextareaInputWithEditor {...state} onBlur={onBlur} onFocus={onFocus} onChange={onChange} />;
 };
 
-type TTextInputPage = TLayout & {
+type TTextareaInputPage = TLayout & {
   titleBar?: ReactNode;
   title?: ReactNode;
 };
 
-const TextInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TTextInputPage) => (
+const TextareaInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TTextareaInputPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
-    <TextInputEditable />
+    <TextareaInputEditable />
   </Layout>
 );
 
-export default TextInputPage;
+export default TextareaInputPage;

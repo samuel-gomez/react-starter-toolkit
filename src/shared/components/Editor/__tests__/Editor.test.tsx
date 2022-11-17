@@ -1,3 +1,4 @@
+import { FocusEvent } from 'react';
 import { render } from '@testing-library/react';
 import { renderHook, act } from '@testing-library/react-hooks';
 import { Text } from '@axa-fr/react-toolkit-all';
@@ -99,7 +100,12 @@ describe('useEditable', () => {
 
   it('Should set autofocus state to true when onBlur have been called', () => {
     const { result } = renderHook(() => useEditable({ initialState: { autoFocus: false } }));
-    act(() => result.current.onFocus());
+    const event = {
+      preventDefault: jest.fn(),
+      target: { value: '<p>the-new-value</p>', setSelectionRange: jest.fn() },
+    } as unknown as FocusEvent<HTMLInputElement>;
+
+    act(() => result.current.onFocus(event));
     expect(result.current.state.autoFocus).toBeTruthy();
   });
 });

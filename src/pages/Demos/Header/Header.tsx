@@ -1,6 +1,5 @@
 import { ReactNode } from 'react';
 import Layout, { TLayout } from 'Layout';
-import { Header, Name, User, Infos } from '@axa-fr/react-toolkit-all';
 import logo from 'shared/images/slash-logo.svg';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
@@ -13,7 +12,7 @@ const INITIAL_STATE = {
   title: 'Toolkit React Starter',
   alt: 'Toolkit React Starter',
   subtitle: 'by Slash Design System',
-  infos: JSON.stringify([{ word: 'Portefeuille :', definition: '000123456789' }]),
+  infos: [{ word: 'Portefeuille :', definition: '000123456789' }],
   name: 'Bob Smith',
   link: 'link',
   profile: 'Public',
@@ -23,28 +22,17 @@ type Props = Partial<typeof INITIAL_STATE> & {
   onChange: (name: keyof typeof INITIAL_STATE) => (arg: TEvent) => void;
 };
 
-export const code = ({ classModifier, title, alt, subtitle, infos, name, link, profile }: Props) => `
-<Header classModifier="${classModifier}">
-    <Name title="${title}" img="${logo}" alt="${alt}" subtitle="${subtitle}" />
-    <Infos infos={${infos}} />
-    <User name="${name}" href="${link}" profile="${profile}" />
-  </Header>`;
+export const code = ({ classModifier, title, alt, subtitle, infos, name, link, profile }: Props) => `<Header classModifier="${classModifier}">
+  <Name title="${title}" img="${logo}" alt="${alt}" subtitle="${subtitle}" />
+  <Infos infos={${JSON.stringify(infos)}} />
+  <User name="${name}" href="${link}" profile="${profile}" />
+</Header>`;
 
 const HeaderWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
   ({ openEditor, ...props }) => (
     <>
       <EditorHeader storybookPath={STORYBOOK_PATH} githubPackage={GITHUB_PACKAGE} npmName={NPM_NAME} openEditor={openEditor} />
-      <LiveCode
-        classModifier="with-editor"
-        code={code(props)}
-        scope={{
-          Header,
-          Name,
-          User,
-          Infos,
-          ...props,
-        }}
-      />
+      <LiveCode classModifier="with-editor" code={code(props)} scope={props} />
     </>
   ),
   knobs as unknown as Tknobs,

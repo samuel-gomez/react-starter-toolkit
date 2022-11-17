@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import { Infos } from '@axa-fr/react-toolkit-all';
 import Layout, { TLayout } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
@@ -7,14 +6,14 @@ import { TITLE_BAR, TITLE, DESIGN_SYSTEM_PATH, STORYBOOK_PATH, GITHUB_PACKAGE, N
 import knobs from './knobs.json';
 
 const INITIAL_STATE = {
-  infos: JSON.stringify([{ word: 'Portefeuille :', definition: '000123456789' }]),
+  infos: [{ word: 'Portefeuille :', definition: '000123456789' }],
 };
 
 type Props = Partial<typeof INITIAL_STATE> & {
   onChange: (name: keyof typeof INITIAL_STATE) => (arg: TEvent) => void;
 };
 
-export const code = ({ infos }: Props) => `<Infos infos={${infos}} />`;
+export const code = ({ infos }: Props) => `<Infos infos={${JSON.stringify(infos)}} />`;
 
 const InfosWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
   ({ openEditor, ...props }) => (
@@ -26,15 +25,7 @@ const InfosWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
         npmName={NPM_NAME}
         openEditor={openEditor}
       />
-      <LiveCode
-        classModifier="with-editor"
-        styleLivePreview={{ textAlign: 'left' }}
-        code={code(props)}
-        scope={{
-          Infos,
-          ...props,
-        }}
-      />
+      <LiveCode classModifier="with-editor" styleLivePreview={{ textAlign: 'left' }} code={code(props)} scope={{ props }} />
     </>
   ),
   knobs as unknown as Tknobs,

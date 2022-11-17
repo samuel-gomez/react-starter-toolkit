@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { RadioInput, HelpButton, MessageTypes, RadioModes } from '@axa-fr/react-toolkit-all';
+import { MessageTypes, RadioModes } from '@axa-fr/react-toolkit-all';
 import Layout, { TLayout } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
@@ -9,12 +9,12 @@ import knobs from './knobs.json';
 const INITIAL_STATE = {
   name: 'name-field',
   id: 'uniqueid',
-  options: JSON.stringify([
+  options: [
     { label: 'For fun', value: 'fun', id: 'fun' },
     { label: 'For work', value: 'work', id: 'work' },
     { label: 'For drink', value: 'drink', id: 'drink' },
     { label: 'For the life', value: 'life', id: 'life', disabled: true },
-  ]),
+  ],
   mode: RadioModes.default,
   classModifier: '',
   className: '',
@@ -61,7 +61,7 @@ export const code = ({
     label={<>${label}</>}
     name="${name}"
     id="${id}"
-    options={${options}}
+    options={${JSON.stringify(options)}}
     onChange={onChangeRadio}
     mode="${mode}"
     value="${value}"
@@ -90,16 +90,7 @@ const RadioInputWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>
         npmName={NPM_NAME}
         openEditor={openEditor}
       />
-      <LiveCode
-        classModifier="with-editor"
-        styleLivePreview={{ textAlign: 'left' }}
-        code={code(props)}
-        scope={{
-          RadioInput,
-          HelpButton,
-          ...props,
-        }}
-      />
+      <LiveCode classModifier="with-editor" styleLivePreview={{ textAlign: 'left' }} code={code(props)} scope={props} />
     </>
   ),
   knobs as unknown as Tknobs,

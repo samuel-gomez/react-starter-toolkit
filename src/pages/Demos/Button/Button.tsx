@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import { Button } from '@axa-fr/react-toolkit-all';
 import { ClickEvent } from '@axa-fr/react-toolkit-core';
 import Layout, { TLayout } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
@@ -11,6 +10,7 @@ const INITIAL_STATE = {
   classModifier: '',
   className: 'af-btn',
   label: 'valider',
+  id: 'uniqueid',
   disabled: false,
   icon: '',
 };
@@ -21,11 +21,16 @@ type Props = Omit<typeof INITIAL_STATE, 'icon'> & {
   onChange: (name: keyof typeof INITIAL_STATE) => (arg: TEvent) => void;
 };
 
-export const code = ({ label, className, classModifier, disabled, icon = '' }: Props) => `
-  <Button disabled={${disabled}} className="${className}" classModifier="${classModifier}" type="submit" onClick={onClick} >
+export const code = ({
+  label,
+  className,
+  classModifier,
+  disabled,
+  id,
+  icon = '',
+}: Props) => `<Button id="${id}" disabled={${disabled}} className="${className}" classModifier="${classModifier}" type="submit" onClick={onClick} >
     ${icon !== '' ? `<i className="glyphicon glyphicon-${icon}"></i>` : ''}<span className="af-btn__text">${label}</span>
-  </Button>
-`;
+</Button>`;
 
 const ButtonWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
   ({ openEditor, ...props }) => (
@@ -37,15 +42,7 @@ const ButtonWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
         npmName={NPM_NAME}
         openEditor={openEditor}
       />
-      <LiveCode
-        styleLivePreview={{ display: 'flex', placeContent: 'center' }}
-        classModifier="with-editor"
-        code={code(props)}
-        scope={{
-          Button,
-          ...props,
-        }}
-      />
+      <LiveCode styleLivePreview={{ display: 'flex', placeContent: 'center' }} classModifier="with-editor" code={code(props)} scope={props} />
     </>
   ),
   buttonKnobs as unknown as Tknobs,

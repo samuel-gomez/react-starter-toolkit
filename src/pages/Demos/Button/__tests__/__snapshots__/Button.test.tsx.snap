@@ -511,6 +511,22 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
+                    aria-label="Textarea Input"
+                    class="af-nav__link"
+                    href="/demos/textarea-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Textarea Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
                     aria-label="Radio Input"
                     class="af-nav__link"
                     href="/demos/radio-input"
@@ -751,6 +767,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
           >
             <button
               class="af-btn"
+              id="uniqueid"
               type="submit"
             >
               <span
@@ -790,32 +807,6 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
                 class="token-line__content"
               >
                 <span
-                  class="token plain"
-                  style="display: inline-block;"
-                >
-                  
-
-                </span>
-              </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(156, 220, 254);"
-            >
-              <span
-                class="token-line__number"
-              >
-                2
-              </span>
-              <span
-                class="token-line__content"
-              >
-                <span
-                  class="token plain"
-                >
-                    
-                </span>
-                <span
                   class="token tag punctuation"
                   style="color: rgb(212, 212, 212);"
                 >
@@ -826,6 +817,42 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
                   style="color: rgb(78, 201, 176);"
                 >
                   Button
+                </span>
+                <span
+                  class="token tag"
+                  style="color: rgb(78, 201, 176);"
+                >
+                   
+                </span>
+                <span
+                  class="token tag attr-name"
+                  style="color: rgb(156, 220, 254);"
+                >
+                  id
+                </span>
+                <span
+                  class="token tag attr-value punctuation attr-equals"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  =
+                </span>
+                <span
+                  class="token tag attr-value punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  "
+                </span>
+                <span
+                  class="token tag attr-value"
+                  style="color: rgb(206, 145, 120);"
+                >
+                  uniqueid
+                </span>
+                <span
+                  class="token tag attr-value punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  "
                 </span>
                 <span
                   class="token tag"
@@ -1025,7 +1052,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               <span
                 class="token-line__number"
               >
-                3
+                2
               </span>
               <span
                 class="token-line__content"
@@ -1124,16 +1151,14 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               <span
                 class="token-line__number"
               >
-                4
+                3
               </span>
               <span
                 class="token-line__content"
               >
                 <span
                   class="token plain-text"
-                >
-                    
-                </span>
+                />
                 <span
                   class="token tag punctuation"
                   style="color: rgb(212, 212, 212);"
@@ -1151,30 +1176,6 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
                   style="color: rgb(212, 212, 212);"
                 >
                   &gt;
-                </span>
-                <span
-                  class="token plain"
-                />
-              </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(156, 220, 254);"
-            >
-              <span
-                class="token-line__number"
-              >
-                5
-              </span>
-              <span
-                class="token-line__content"
-              >
-                <span
-                  class="token plain"
-                  style="display: inline-block;"
-                >
-                  
-
                 </span>
               </span>
             </div>

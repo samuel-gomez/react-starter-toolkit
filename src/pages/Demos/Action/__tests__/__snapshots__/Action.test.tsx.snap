@@ -511,6 +511,22 @@ exports[`<Action /> Should render Action 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
+                    aria-label="Textarea Input"
+                    class="af-nav__link"
+                    href="/demos/textarea-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Textarea Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
                     aria-label="Radio Input"
                     class="af-nav__link"
                     href="/demos/radio-input"
@@ -770,30 +786,6 @@ exports[`<Action /> Should render Action 1`] = `
                 class="token-line__content"
               >
                 <span
-                  class="token plain"
-                  style="display: inline-block;"
-                >
-                  
-
-                </span>
-              </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(156, 220, 254);"
-            >
-              <span
-                class="token-line__number"
-              >
-                2
-              </span>
-              <span
-                class="token-line__content"
-              >
-                <span
-                  class="token plain"
-                />
-                <span
                   class="token tag punctuation"
                   style="color: rgb(212, 212, 212);"
                 >
@@ -818,7 +810,7 @@ exports[`<Action /> Should render Action 1`] = `
               <span
                 class="token-line__number"
               >
-                3
+                2
               </span>
               <span
                 class="token-line__content"
@@ -866,7 +858,7 @@ exports[`<Action /> Should render Action 1`] = `
               <span
                 class="token-line__number"
               >
-                4
+                3
               </span>
               <span
                 class="token-line__content"
@@ -920,7 +912,7 @@ exports[`<Action /> Should render Action 1`] = `
               <span
                 class="token-line__number"
               >
-                5
+                4
               </span>
               <span
                 class="token-line__content"
@@ -974,7 +966,7 @@ exports[`<Action /> Should render Action 1`] = `
               <span
                 class="token-line__number"
               >
-                6
+                5
               </span>
               <span
                 class="token-line__content"

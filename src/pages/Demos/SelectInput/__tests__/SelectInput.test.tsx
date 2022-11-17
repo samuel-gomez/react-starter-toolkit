@@ -16,11 +16,11 @@ describe('code', () => {
   const defaultProps = {
     name: 'name-field',
     id: 'uniqueid',
-    options: JSON.stringify([
+    options: [
       { label: 'For fun', value: 'fun', id: 'fun' },
       { label: 'For work', value: 'work', id: 'work' },
       { label: 'For drink', value: 'drink', id: 'drink' },
-    ]),
+    ],
     mode: SelectModes.default,
     placeholder: '- Select -',
     forceDisplayPlaceholder: false,
@@ -49,7 +49,7 @@ describe('code', () => {
         label={<>${defaultProps.label}</>}
         name="${defaultProps.name}"
         id="${defaultProps.id}"
-        options={${defaultProps.options}}
+        options={${JSON.stringify(defaultProps.options)}}
         onChange={onChangeSelect}
         mode="${defaultProps.mode}"
         value="${defaultProps.value}"
@@ -77,7 +77,7 @@ describe('code', () => {
         label={<>${defaultProps.label}</>}
         name="${defaultProps.name}"
         id="${defaultProps.id}"
-        options={${defaultProps.options}}
+        options={${JSON.stringify(defaultProps.options)}}
         onChange={onChangeSelect}
         mode="${defaultProps.mode}"
         value="${defaultProps.value}"

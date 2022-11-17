@@ -16,12 +16,12 @@ describe('code', () => {
   const defaultProps = {
     name: 'name-field',
     id: 'uniqueid',
-    options: JSON.stringify([
+    options: [
       { label: 'For fun', value: '1', id: 'fun' },
       { label: 'For work', value: '2', id: 'work' },
       { label: 'For drink', value: '3', id: 'drink' },
       { label: 'For the life', value: '4', id: 'life', disabled: true },
-    ]),
+    ],
     mode: RadioModes.default,
     classModifier: '',
     className: '',
@@ -48,7 +48,7 @@ describe('code', () => {
       label={<>${defaultProps.label}</>}
       name="${defaultProps.name}"
       id="${defaultProps.id}"
-      options={${defaultProps.options}}
+      options={${JSON.stringify(defaultProps.options)}}
       onChange={onChangeRadio}
       mode="${defaultProps.mode}"
       value="${defaultProps.value}"
@@ -74,7 +74,7 @@ describe('code', () => {
         label={<>${defaultProps.label}</>}
         name="${defaultProps.name}"
         id="${defaultProps.id}"
-        options={${defaultProps.options}}
+        options={${JSON.stringify(defaultProps.options)}}
         onChange={onChangeRadio}
         mode="${defaultProps.mode}"
         value="${defaultProps.value}"
