@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
+exports[`<FooterClient /> Should render FooterClientPage 1`] = `
 <DocumentFragment>
   <div
     class="af-header"
@@ -684,7 +684,7 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
       <h1
         class="af-title-bar__title"
       >
-        Demo RadioInput
+        Demo FooterClient
       </h1>
     </div>
   </div>
@@ -697,7 +697,7 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
       <h1
         class="af-title--content"
       >
-        RadioInput playground
+        FooterClient playground
       </h1>
       <section
         class="af-editor"
@@ -707,7 +707,7 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
         >
           <a
             class="af-link"
-            href="https://axaguildev.github.io/design-system/molecules/form-radio/"
+            href="https://axaguildev.github.io/design-system/organisms/footer-client/"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -728,7 +728,7 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
           </a>
           <a
             class="af-link"
-            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/form-input-radio--radio"
+            href="https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/layout-footerclient--complex"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -749,7 +749,7 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
           </a>
           <a
             class="af-link"
-            href="https://github.com/AxaGuilDEv/react-toolkit/tree/v1.4.1/packages/Form/Input/radio"
+            href="https://github.com/AxaGuilDEv/react-toolkit/tree/v1.4.1/packages/Layout/footer-client"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -769,13 +769,13 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
             Github
           </a>
           <a
-            href="https://badge.fury.io/js/%40axa-fr%2Freact-toolkit-form-input-radio"
+            href="https://badge.fury.io/js/%40axa-fr%2Freact-toolkit-layout-footer-client"
             rel="noopener noreferrer"
             target="_blank"
           >
             <img
               alt="npm version"
-              src="https://badge.fury.io/js/%40axa-fr%2Freact-toolkit-form-input-radio.svg"
+              src="https://badge.fury.io/js/%40axa-fr%2Freact-toolkit-layout-footer-client.svg"
             />
           </a>
           <span
@@ -797,110 +797,269 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
           <div
             style="background: white; padding: 2rem; width: 100%; text-align: left;"
           >
-            <div
-              class="row af-form__group"
+            <footer
+              class="af-footer-client"
             >
               <div
-                class="col-md-2"
+                class="af-footer-client__top"
               >
-                <label
-                  class="af-form__group-label"
-                  for="fun"
+                <div
+                  class="container"
                 >
-                  My Label
-                </label>
+                  <div
+                    class="af-footer-client__top-container"
+                  >
+                    <div
+                      class="af-footer-client__column"
+                    >
+                      <h3
+                        class="af-footer-client__column-title"
+                      >
+                        Languages
+                      </h3>
+                      <ul
+                        class="af-footer-client__column-items"
+                      >
+                        <li
+                          class="af-footer-client__column-item"
+                        >
+                          <a
+                            class="af-footer-client__column-link"
+                            href="/"
+                          >
+                            Languages
+                          </a>
+                        </li>
+                        <li
+                          class="af-footer-client__column-item"
+                        >
+                          <a
+                            class="af-footer-client__column-link"
+                            href="/"
+                          >
+                            Young driver insurance
+                          </a>
+                        </li>
+                        <li
+                          class="af-footer-client__column-item"
+                        >
+                          <a
+                            class="af-footer-client__column-link"
+                            href="/"
+                          >
+                            Home insurance
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div
+                      class="af-footer-client__column"
+                    >
+                      <h3
+                        class="af-footer-client__column-title"
+                      >
+                        Axa & You
+                      </h3>
+                      <ul
+                        class="af-footer-client__column-items"
+                      >
+                        <li
+                          class="af-footer-client__column-item"
+                        >
+                          <a
+                            class="af-footer-client__column-link"
+                            href="/"
+                          >
+                            Call us
+                          </a>
+                        </li>
+                        <li
+                          class="af-footer-client__column-item"
+                        >
+                          <a
+                            class="af-footer-client__column-link"
+                            href="/"
+                          >
+                            Policy documents
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div
+                      class="af-footer-client__column"
+                    >
+                      <h3
+                        class="af-footer-client__column-title"
+                      >
+                        Useful links
+                      </h3>
+                      <ul
+                        class="af-footer-client__column-items"
+                      >
+                        <li
+                          class="af-footer-client__column-item"
+                        >
+                          <a
+                            class="af-footer-client__column-link"
+                            href="/"
+                          >
+                            About us
+                          </a>
+                        </li>
+                        <li
+                          class="af-footer-client__column-item"
+                        >
+                          <a
+                            class="af-footer-client__column-link"
+                            href="/"
+                          >
+                            Careers
+                          </a>
+                        </li>
+                        <li
+                          class="af-footer-client__column-item"
+                        >
+                          <a
+                            class="af-footer-client__column-link"
+                            href="/"
+                          >
+                            Blog
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div
+                      class="af-footer-client__column"
+                    >
+                      <h3
+                        class="af-footer-client__column-title"
+                      >
+                        Follow AXA
+                      </h3>
+                      <ul
+                        class="af-footer-client__column-items"
+                      >
+                        <ul
+                          class="social-network__list"
+                        >
+                          <li
+                            class="social-network__item"
+                          >
+                            <a
+                              class="social-network__link"
+                              href="#"
+                              target="_blank"
+                            >
+                              <i
+                                class="social-network__icon glyphicon glyphicon-facebook"
+                              />
+                            </a>
+                          </li>
+                          <li
+                            class="social-network__item"
+                          >
+                            <a
+                              class="social-network__link"
+                              href="#"
+                              target="_blank"
+                            >
+                              <i
+                                class="social-network__icon glyphicon glyphicon-linkedin-logo"
+                              />
+                            </a>
+                          </li>
+                          <li
+                            class="social-network__item"
+                          >
+                            <a
+                              class="social-network__link"
+                              href="#"
+                              target="_blank"
+                            >
+                              <i
+                                class="social-network__icon glyphicon glyphicon-youtube-symbol"
+                              />
+                            </a>
+                          </li>
+                          <li
+                            class="social-network__item"
+                          >
+                            <a
+                              class="social-network__link"
+                              href="#"
+                              target="_blank"
+                            >
+                              <i
+                                class="social-network__icon glyphicon glyphicon-instagram"
+                              />
+                            </a>
+                          </li>
+                          <li
+                            class="social-network__item"
+                          >
+                            <a
+                              class="social-network__link"
+                              href="#"
+                              target="_blank"
+                            >
+                              <i
+                                class="social-network__icon glyphicon glyphicon-twitter-logo-silhouette"
+                              />
+                            </a>
+                          </li>
+                        </ul>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div
-                class="col-md-10"
+                class="af-footer-client__bottom"
               >
                 <div
-                  class="af-form__radio-custom"
+                  class="container"
                 >
-                  <input
-                    class="af-form__input-radio"
-                    id="fun"
-                    name="name-field"
-                    type="radio"
-                    value="fun"
-                  />
-                  <label
-                    class="af-form__label"
-                    for="fun"
+                  <div
+                    class="af-languageSelection"
                   >
-                    <span
-                      class="af-form__description"
+                    <h3
+                      class="af-languageSelection__title"
                     >
-                      For fun
-                    </span>
-                  </label>
-                </div>
-                <div
-                  class="af-form__radio-custom"
-                >
-                  <input
-                    checked=""
-                    class="af-form__input-radio"
-                    id="work"
-                    name="name-field"
-                    type="radio"
-                    value="work"
-                  />
-                  <label
-                    class="af-form__label"
-                    for="work"
+                       Languages: 
+                    </h3>
+                    <ul
+                      class="af-languageSelection__list"
+                    >
+                      <li
+                        class="af-languageSelection__item af-languageSelection__item--active"
+                      >
+                        <button
+                          class="af-languageSelection__item-button"
+                          type="button"
+                        >
+                          English
+                        </button>
+                      </li>
+                      <li
+                        class="af-languageSelection__item"
+                      >
+                        <button
+                          class="af-languageSelection__item-button"
+                          type="button"
+                        >
+                          Chinese
+                        </button>
+                      </li>
+                    </ul>
+                  </div>
+                  <div
+                    class="af-footer-client__policy"
                   >
-                    <span
-                      class="af-form__description"
-                    >
-                      For work
-                    </span>
-                  </label>
-                </div>
-                <div
-                  class="af-form__radio-custom"
-                >
-                  <input
-                    class="af-form__input-radio"
-                    id="drink"
-                    name="name-field"
-                    type="radio"
-                    value="drink"
-                  />
-                  <label
-                    class="af-form__label"
-                    for="drink"
-                  >
-                    <span
-                      class="af-form__description"
-                    >
-                      For drink
-                    </span>
-                  </label>
-                </div>
-                <div
-                  class="af-form__radio-custom af-form__radio-custom--disabled"
-                >
-                  <input
-                    class="af-form__input-radio"
-                    disabled=""
-                    id="life"
-                    name="name-field"
-                    type="radio"
-                    value="life"
-                  />
-                  <label
-                    class="af-form__label"
-                    for="life"
-                  >
-                    <span
-                      class="af-form__description"
-                    >
-                      For the life
-                    </span>
-                  </label>
+                    Policy Privacy © 2022 AXA All Rights Reserved
+                  </div>
                 </div>
               </div>
-            </div>
+            </footer>
           </div>
           <pre
             class="prism-code language-jsx"
@@ -967,7 +1126,7 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                   class="token tag class-name"
                   style="color: rgb(78, 201, 176);"
                 >
-                  RadioInput
+                  FooterClient
                 </span>
                 <span
                   class="token tag"
@@ -997,7 +1156,7 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                   class="token tag attr-name"
                   style="color: rgb(156, 220, 254);"
                 >
-                  label
+                  bottomComponent
                 </span>
                 <span
                   class="token tag script language-javascript script-punctuation punctuation"
@@ -1018,28 +1177,214 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                   &lt;
                 </span>
                 <span
-                  class="token tag script language-javascript tag punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  &gt;
-                </span>
-                <span
-                  class="token tag script language-javascript plain-text"
+                  class="token tag script language-javascript tag class-name"
                   style="color: rgb(78, 201, 176);"
                 >
-                  My Label
+                  LanguageSelection
+                </span>
+                <span
+                  class="token tag script language-javascript tag"
+                  style="color: rgb(78, 201, 176);"
+                >
+                   
+                </span>
+                <span
+                  class="token tag script language-javascript tag attr-name"
+                  style="color: rgb(156, 220, 254);"
+                >
+                  languages
+                </span>
+                <span
+                  class="token tag script language-javascript tag script language-javascript script-punctuation punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  =
+                </span>
+                <span
+                  class="token tag script language-javascript tag script language-javascript punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  {
+                </span>
+                <span
+                  class="token tag script language-javascript tag script language-javascript punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  [
+                </span>
+                <span
+                  class="token tag script language-javascript tag script language-javascript punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  {
+                </span>
+                <span
+                  class="token tag script language-javascript tag script language-javascript string-property property"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  "name"
+                </span>
+                <span
+                  class="token tag script language-javascript tag script language-javascript operator"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  :
+                </span>
+                <span
+                  class="token tag script language-javascript tag script language-javascript string"
+                  style="color: rgb(206, 145, 120);"
+                >
+                  "English"
+                </span>
+                <span
+                  class="token tag script language-javascript tag script language-javascript punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  ,
+                </span>
+                <span
+                  class="token tag script language-javascript tag script language-javascript string-property property"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  "value"
+                </span>
+                <span
+                  class="token tag script language-javascript tag script language-javascript operator"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  :
+                </span>
+                <span
+                  class="token tag script language-javascript tag script language-javascript string"
+                  style="color: rgb(206, 145, 120);"
+                >
+                  "en"
+                </span>
+                <span
+                  class="token tag script language-javascript tag script language-javascript punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  }
+                </span>
+                <span
+                  class="token tag script language-javascript tag script language-javascript punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  ,
+                </span>
+                <span
+                  class="token tag script language-javascript tag script language-javascript punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  {
+                </span>
+                <span
+                  class="token tag script language-javascript tag script language-javascript string-property property"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  "name"
+                </span>
+                <span
+                  class="token tag script language-javascript tag script language-javascript operator"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  :
+                </span>
+                <span
+                  class="token tag script language-javascript tag script language-javascript string"
+                  style="color: rgb(206, 145, 120);"
+                >
+                  "Chinese"
+                </span>
+                <span
+                  class="token tag script language-javascript tag script language-javascript punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  ,
+                </span>
+                <span
+                  class="token tag script language-javascript tag script language-javascript string-property property"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  "value"
+                </span>
+                <span
+                  class="token tag script language-javascript tag script language-javascript operator"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  :
+                </span>
+                <span
+                  class="token tag script language-javascript tag script language-javascript string"
+                  style="color: rgb(206, 145, 120);"
+                >
+                  "cn"
+                </span>
+                <span
+                  class="token tag script language-javascript tag script language-javascript punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  }
+                </span>
+                <span
+                  class="token tag script language-javascript tag script language-javascript punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  ]
+                </span>
+                <span
+                  class="token tag script language-javascript tag script language-javascript punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  }
+                </span>
+                <span
+                  class="token tag script language-javascript tag"
+                  style="color: rgb(78, 201, 176);"
+                >
+                   
+                </span>
+                <span
+                  class="token tag script language-javascript tag attr-name"
+                  style="color: rgb(156, 220, 254);"
+                >
+                  currentLanguage
+                </span>
+                <span
+                  class="token tag script language-javascript tag attr-value punctuation attr-equals"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  =
+                </span>
+                <span
+                  class="token tag script language-javascript tag attr-value punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  "
+                </span>
+                <span
+                  class="token tag script language-javascript tag attr-value"
+                  style="color: rgb(206, 145, 120);"
+                >
+                  en
+                </span>
+                <span
+                  class="token tag script language-javascript tag attr-value punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  "
+                </span>
+                <span
+                  class="token tag script language-javascript tag"
+                  style="color: rgb(78, 201, 176);"
+                >
+                   
                 </span>
                 <span
                   class="token tag script language-javascript tag punctuation"
                   style="color: rgb(212, 212, 212);"
                 >
-                  &lt;/
-                </span>
-                <span
-                  class="token tag script language-javascript tag punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  &gt;
+                  /&gt;
                 </span>
                 <span
                   class="token tag script language-javascript punctuation"
@@ -1075,7 +1420,7 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                   class="token tag attr-name"
                   style="color: rgb(156, 220, 254);"
                 >
-                  name
+                  copyright
                 </span>
                 <span
                   class="token tag attr-value punctuation attr-equals"
@@ -1093,7 +1438,7 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                   class="token tag attr-value"
                   style="color: rgb(206, 145, 120);"
                 >
-                  name-field
+                  Policy Privacy © 2022 AXA All Rights Reserved
                 </span>
                 <span
                   class="token tag attr-value punctuation"
@@ -1102,8 +1447,13 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                   "
                 </span>
                 <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &gt;
+                </span>
+                <span
+                  class="token plain-text"
                 />
               </span>
             </div>
@@ -1120,16 +1470,33 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                 class="token-line__content"
               >
                 <span
+                  class="token plain-text"
+                >
+                      
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &lt;
+                </span>
+                <span
+                  class="token tag class-name"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  FooterClientList
+                </span>
+                <span
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
+                   
                 </span>
                 <span
                   class="token tag attr-name"
                   style="color: rgb(156, 220, 254);"
                 >
-                  id
+                  title
                 </span>
                 <span
                   class="token tag attr-value punctuation attr-equals"
@@ -1147,7 +1514,7 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                   class="token tag attr-value"
                   style="color: rgb(206, 145, 120);"
                 >
-                  uniqueid
+                  Languages
                 </span>
                 <span
                   class="token tag attr-value punctuation"
@@ -1158,6 +1525,17 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                 <span
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
+                >
+                   
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &gt;
+                </span>
+                <span
+                  class="token plain-text"
                 />
               </span>
             </div>
@@ -1174,404 +1552,66 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                 class="token-line__content"
               >
                 <span
+                  class="token plain-text"
+                >
+                        
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &lt;
+                </span>
+                <span
+                  class="token tag class-name"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  FooterClientItem
+                </span>
+                <span
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
+                   
                 </span>
                 <span
                   class="token tag attr-name"
                   style="color: rgb(156, 220, 254);"
                 >
-                  options
+                  path
                 </span>
                 <span
-                  class="token tag script language-javascript script-punctuation punctuation"
+                  class="token tag attr-value punctuation attr-equals"
                   style="color: rgb(212, 212, 212);"
                 >
                   =
                 </span>
                 <span
-                  class="token tag script language-javascript punctuation"
+                  class="token tag attr-value punctuation"
                   style="color: rgb(212, 212, 212);"
                 >
-                  {
+                  "
                 </span>
                 <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  [
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  {
-                </span>
-                <span
-                  class="token tag script language-javascript string-property property"
-                  style="color: rgb(78, 201, 176);"
-                >
-                  "label"
-                </span>
-                <span
-                  class="token tag script language-javascript operator"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  :
-                </span>
-                <span
-                  class="token tag script language-javascript string"
+                  class="token tag attr-value"
                   style="color: rgb(206, 145, 120);"
                 >
-                  "For fun"
+                  /
                 </span>
                 <span
-                  class="token tag script language-javascript punctuation"
+                  class="token tag attr-value punctuation"
                   style="color: rgb(212, 212, 212);"
                 >
-                  ,
+                  "
                 </span>
                 <span
-                  class="token tag script language-javascript string-property property"
-                  style="color: rgb(78, 201, 176);"
-                >
-                  "value"
-                </span>
-                <span
-                  class="token tag script language-javascript operator"
+                  class="token tag punctuation"
                   style="color: rgb(212, 212, 212);"
                 >
-                  :
+                  &gt;
                 </span>
                 <span
-                  class="token tag script language-javascript string"
-                  style="color: rgb(206, 145, 120);"
-                >
-                  "fun"
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  ,
-                </span>
-                <span
-                  class="token tag script language-javascript string-property property"
-                  style="color: rgb(78, 201, 176);"
-                >
-                  "id"
-                </span>
-                <span
-                  class="token tag script language-javascript operator"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  :
-                </span>
-                <span
-                  class="token tag script language-javascript string"
-                  style="color: rgb(206, 145, 120);"
-                >
-                  "fun"
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  }
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  ,
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  {
-                </span>
-                <span
-                  class="token tag script language-javascript string-property property"
-                  style="color: rgb(78, 201, 176);"
-                >
-                  "label"
-                </span>
-                <span
-                  class="token tag script language-javascript operator"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  :
-                </span>
-                <span
-                  class="token tag script language-javascript string"
-                  style="color: rgb(206, 145, 120);"
-                >
-                  "For work"
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  ,
-                </span>
-                <span
-                  class="token tag script language-javascript string-property property"
-                  style="color: rgb(78, 201, 176);"
-                >
-                  "value"
-                </span>
-                <span
-                  class="token tag script language-javascript operator"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  :
-                </span>
-                <span
-                  class="token tag script language-javascript string"
-                  style="color: rgb(206, 145, 120);"
-                >
-                  "work"
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  ,
-                </span>
-                <span
-                  class="token tag script language-javascript string-property property"
-                  style="color: rgb(78, 201, 176);"
-                >
-                  "id"
-                </span>
-                <span
-                  class="token tag script language-javascript operator"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  :
-                </span>
-                <span
-                  class="token tag script language-javascript string"
-                  style="color: rgb(206, 145, 120);"
-                >
-                  "work"
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  }
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  ,
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  {
-                </span>
-                <span
-                  class="token tag script language-javascript string-property property"
-                  style="color: rgb(78, 201, 176);"
-                >
-                  "label"
-                </span>
-                <span
-                  class="token tag script language-javascript operator"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  :
-                </span>
-                <span
-                  class="token tag script language-javascript string"
-                  style="color: rgb(206, 145, 120);"
-                >
-                  "For drink"
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  ,
-                </span>
-                <span
-                  class="token tag script language-javascript string-property property"
-                  style="color: rgb(78, 201, 176);"
-                >
-                  "value"
-                </span>
-                <span
-                  class="token tag script language-javascript operator"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  :
-                </span>
-                <span
-                  class="token tag script language-javascript string"
-                  style="color: rgb(206, 145, 120);"
-                >
-                  "drink"
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  ,
-                </span>
-                <span
-                  class="token tag script language-javascript string-property property"
-                  style="color: rgb(78, 201, 176);"
-                >
-                  "id"
-                </span>
-                <span
-                  class="token tag script language-javascript operator"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  :
-                </span>
-                <span
-                  class="token tag script language-javascript string"
-                  style="color: rgb(206, 145, 120);"
-                >
-                  "drink"
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  }
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  ,
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  {
-                </span>
-                <span
-                  class="token tag script language-javascript string-property property"
-                  style="color: rgb(78, 201, 176);"
-                >
-                  "label"
-                </span>
-                <span
-                  class="token tag script language-javascript operator"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  :
-                </span>
-                <span
-                  class="token tag script language-javascript string"
-                  style="color: rgb(206, 145, 120);"
-                >
-                  "For the life"
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  ,
-                </span>
-                <span
-                  class="token tag script language-javascript string-property property"
-                  style="color: rgb(78, 201, 176);"
-                >
-                  "value"
-                </span>
-                <span
-                  class="token tag script language-javascript operator"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  :
-                </span>
-                <span
-                  class="token tag script language-javascript string"
-                  style="color: rgb(206, 145, 120);"
-                >
-                  "life"
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  ,
-                </span>
-                <span
-                  class="token tag script language-javascript string-property property"
-                  style="color: rgb(78, 201, 176);"
-                >
-                  "id"
-                </span>
-                <span
-                  class="token tag script language-javascript operator"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  :
-                </span>
-                <span
-                  class="token tag script language-javascript string"
-                  style="color: rgb(206, 145, 120);"
-                >
-                  "life"
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  ,
-                </span>
-                <span
-                  class="token tag script language-javascript string-property property"
-                  style="color: rgb(78, 201, 176);"
-                >
-                  "disabled"
-                </span>
-                <span
-                  class="token tag script language-javascript operator"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  :
-                </span>
-                <span
-                  class="token tag script language-javascript boolean"
-                  style="color: rgb(78, 201, 176);"
-                >
-                  true
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  }
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  ]
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  }
-                </span>
-                <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
+                  class="token plain-text"
                 />
               </span>
             </div>
@@ -1588,45 +1628,10 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                 class="token-line__content"
               >
                 <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
+                  class="token plain-text"
                 >
-                      
+                          Languages
                 </span>
-                <span
-                  class="token tag attr-name"
-                  style="color: rgb(156, 220, 254);"
-                >
-                  onChange
-                </span>
-                <span
-                  class="token tag script language-javascript script-punctuation punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  =
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  {
-                </span>
-                <span
-                  class="token tag script language-javascript"
-                  style="color: rgb(78, 201, 176);"
-                >
-                  onChangeRadio
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  }
-                </span>
-                <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
-                />
               </span>
             </div>
             <div
@@ -1642,44 +1647,30 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                 class="token-line__content"
               >
                 <span
-                  class="token tag"
+                  class="token plain-text"
+                >
+                        
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &lt;/
+                </span>
+                <span
+                  class="token tag class-name"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
+                  FooterClientItem
                 </span>
                 <span
-                  class="token tag attr-name"
-                  style="color: rgb(156, 220, 254);"
-                >
-                  mode
-                </span>
-                <span
-                  class="token tag attr-value punctuation attr-equals"
+                  class="token tag punctuation"
                   style="color: rgb(212, 212, 212);"
                 >
-                  =
+                  &gt;
                 </span>
                 <span
-                  class="token tag attr-value punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  "
-                </span>
-                <span
-                  class="token tag attr-value"
-                  style="color: rgb(206, 145, 120);"
-                >
-                  default
-                </span>
-                <span
-                  class="token tag attr-value punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  "
-                </span>
-                <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
+                  class="token plain-text"
                 />
               </span>
             </div>
@@ -1696,16 +1687,33 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                 class="token-line__content"
               >
                 <span
+                  class="token plain-text"
+                >
+                        
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &lt;
+                </span>
+                <span
+                  class="token tag class-name"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  FooterClientItem
+                </span>
+                <span
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
+                   
                 </span>
                 <span
                   class="token tag attr-name"
                   style="color: rgb(156, 220, 254);"
                 >
-                  value
+                  path
                 </span>
                 <span
                   class="token tag attr-value punctuation attr-equals"
@@ -1723,7 +1731,7 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                   class="token tag attr-value"
                   style="color: rgb(206, 145, 120);"
                 >
-                  work
+                  /
                 </span>
                 <span
                   class="token tag attr-value punctuation"
@@ -1732,8 +1740,13 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                   "
                 </span>
                 <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &gt;
+                </span>
+                <span
+                  class="token plain-text"
                 />
               </span>
             </div>
@@ -1750,45 +1763,10 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                 class="token-line__content"
               >
                 <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
+                  class="token plain-text"
                 >
-                      
+                          Young driver insurance
                 </span>
-                <span
-                  class="token tag attr-name"
-                  style="color: rgb(156, 220, 254);"
-                >
-                  helpMessage
-                </span>
-                <span
-                  class="token tag attr-value punctuation attr-equals"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  =
-                </span>
-                <span
-                  class="token tag attr-value punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  "
-                </span>
-                <span
-                  class="token tag attr-value"
-                  style="color: rgb(206, 145, 120);"
-                >
-                  Enter your name
-                </span>
-                <span
-                  class="token tag attr-value punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  "
-                </span>
-                <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
-                />
               </span>
             </div>
             <div
@@ -1804,41 +1782,31 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                 class="token-line__content"
               >
                 <span
-                  class="token tag"
+                  class="token plain-text"
+                >
+                        
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &lt;/
+                </span>
+                <span
+                  class="token tag class-name"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
+                  FooterClientItem
                 </span>
                 <span
-                  class="token tag attr-name"
-                  style="color: rgb(156, 220, 254);"
-                >
-                  message
-                </span>
-                <span
-                  class="token tag attr-value punctuation attr-equals"
+                  class="token tag punctuation"
                   style="color: rgb(212, 212, 212);"
                 >
-                  =
+                  &gt;
                 </span>
                 <span
-                  class="token tag attr-value punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  "
-                </span>
-                <span
-                  class="token tag attr-value punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  "
-                </span>
-                <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
-                >
-                   
-                </span>
+                  class="token plain-text"
+                />
               </span>
             </div>
             <div
@@ -1854,16 +1822,33 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                 class="token-line__content"
               >
                 <span
+                  class="token plain-text"
+                >
+                        
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &lt;
+                </span>
+                <span
+                  class="token tag class-name"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  FooterClientItem
+                </span>
+                <span
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
+                   
                 </span>
                 <span
                   class="token tag attr-name"
                   style="color: rgb(156, 220, 254);"
                 >
-                  messageType
+                  path
                 </span>
                 <span
                   class="token tag attr-value punctuation attr-equals"
@@ -1881,7 +1866,7 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                   class="token tag attr-value"
                   style="color: rgb(206, 145, 120);"
                 >
-                  error
+                  /
                 </span>
                 <span
                   class="token tag attr-value punctuation"
@@ -1890,8 +1875,13 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                   "
                 </span>
                 <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &gt;
+                </span>
+                <span
+                  class="token plain-text"
                 />
               </span>
             </div>
@@ -1908,45 +1898,10 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                 class="token-line__content"
               >
                 <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
+                  class="token plain-text"
                 >
-                      
+                          Home insurance
                 </span>
-                <span
-                  class="token tag attr-name"
-                  style="color: rgb(156, 220, 254);"
-                >
-                  forceDisplayMessage
-                </span>
-                <span
-                  class="token tag script language-javascript script-punctuation punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  =
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  {
-                </span>
-                <span
-                  class="token tag script language-javascript boolean"
-                  style="color: rgb(78, 201, 176);"
-                >
-                  false
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  }
-                </span>
-                <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
-                />
               </span>
             </div>
             <div
@@ -1962,44 +1917,30 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                 class="token-line__content"
               >
                 <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
+                  class="token plain-text"
                 >
-                      
+                        
                 </span>
                 <span
-                  class="token tag attr-name"
-                  style="color: rgb(156, 220, 254);"
-                >
-                  readOnly
-                </span>
-                <span
-                  class="token tag script language-javascript script-punctuation punctuation"
+                  class="token tag punctuation"
                   style="color: rgb(212, 212, 212);"
                 >
-                  =
+                  &lt;/
                 </span>
                 <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  {
-                </span>
-                <span
-                  class="token tag script language-javascript boolean"
+                  class="token tag class-name"
                   style="color: rgb(78, 201, 176);"
                 >
-                  false
+                  FooterClientItem
                 </span>
                 <span
-                  class="token tag script language-javascript punctuation"
+                  class="token tag punctuation"
                   style="color: rgb(212, 212, 212);"
                 >
-                  }
+                  &gt;
                 </span>
                 <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
+                  class="token plain-text"
                 />
               </span>
             </div>
@@ -2016,47 +1957,31 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                 class="token-line__content"
               >
                 <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
+                  class="token plain-text"
                 >
                       
                 </span>
                 <span
-                  class="token tag attr-name"
-                  style="color: rgb(156, 220, 254);"
-                >
-                  disabled
-                </span>
-                <span
-                  class="token tag script language-javascript script-punctuation punctuation"
+                  class="token tag punctuation"
                   style="color: rgb(212, 212, 212);"
                 >
-                  =
+                  &lt;/
                 </span>
                 <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  {
-                </span>
-                <span
-                  class="token tag script language-javascript boolean"
+                  class="token tag class-name"
                   style="color: rgb(78, 201, 176);"
                 >
-                  false
+                  FooterClientList
                 </span>
                 <span
-                  class="token tag script language-javascript punctuation"
+                  class="token tag punctuation"
                   style="color: rgb(212, 212, 212);"
                 >
-                  }
+                  &gt;
                 </span>
                 <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
-                >
-                   
-                </span>
+                  class="token plain-text"
+                />
               </span>
             </div>
             <div
@@ -2072,44 +1997,72 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                 class="token-line__content"
               >
                 <span
+                  class="token plain-text"
+                >
+                      
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &lt;
+                </span>
+                <span
+                  class="token tag class-name"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  FooterClientList
+                </span>
+                <span
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
+                   
                 </span>
                 <span
                   class="token tag attr-name"
                   style="color: rgb(156, 220, 254);"
                 >
-                  isVisible
+                  title
                 </span>
                 <span
-                  class="token tag script language-javascript script-punctuation punctuation"
+                  class="token tag attr-value punctuation attr-equals"
                   style="color: rgb(212, 212, 212);"
                 >
                   =
                 </span>
                 <span
-                  class="token tag script language-javascript punctuation"
+                  class="token tag attr-value punctuation"
                   style="color: rgb(212, 212, 212);"
                 >
-                  {
+                  "
                 </span>
                 <span
-                  class="token tag script language-javascript boolean"
-                  style="color: rgb(78, 201, 176);"
+                  class="token tag attr-value"
+                  style="color: rgb(206, 145, 120);"
                 >
-                  true
+                  Axa & You
                 </span>
                 <span
-                  class="token tag script language-javascript punctuation"
+                  class="token tag attr-value punctuation"
                   style="color: rgb(212, 212, 212);"
                 >
-                  }
+                  "
                 </span>
                 <span
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
+                >
+                   
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &gt;
+                </span>
+                <span
+                  class="token plain-text"
                 />
               </span>
             </div>
@@ -2126,16 +2079,33 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                 class="token-line__content"
               >
                 <span
+                  class="token plain-text"
+                >
+                        
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &lt;
+                </span>
+                <span
+                  class="token tag class-name"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  FooterClientItem
+                </span>
+                <span
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
+                   
                 </span>
                 <span
                   class="token tag attr-name"
                   style="color: rgb(156, 220, 254);"
                 >
-                  classModifier
+                  path
                 </span>
                 <span
                   class="token tag attr-value punctuation attr-equals"
@@ -2150,14 +2120,25 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                   "
                 </span>
                 <span
+                  class="token tag attr-value"
+                  style="color: rgb(206, 145, 120);"
+                >
+                  /
+                </span>
+                <span
                   class="token tag attr-value punctuation"
                   style="color: rgb(212, 212, 212);"
                 >
                   "
                 </span>
                 <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &gt;
+                </span>
+                <span
+                  class="token plain-text"
                 />
               </span>
             </div>
@@ -2174,39 +2155,10 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                 class="token-line__content"
               >
                 <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
+                  class="token plain-text"
                 >
-                      
+                          Call us
                 </span>
-                <span
-                  class="token tag attr-name"
-                  style="color: rgb(156, 220, 254);"
-                >
-                  className
-                </span>
-                <span
-                  class="token tag attr-value punctuation attr-equals"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  =
-                </span>
-                <span
-                  class="token tag attr-value punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  "
-                </span>
-                <span
-                  class="token tag attr-value punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  "
-                </span>
-                <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
-                />
               </span>
             </div>
             <div
@@ -2222,44 +2174,30 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                 class="token-line__content"
               >
                 <span
-                  class="token tag"
+                  class="token plain-text"
+                >
+                        
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &lt;/
+                </span>
+                <span
+                  class="token tag class-name"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
+                  FooterClientItem
                 </span>
                 <span
-                  class="token tag attr-name"
-                  style="color: rgb(156, 220, 254);"
-                >
-                  classNameContainerLabel
-                </span>
-                <span
-                  class="token tag attr-value punctuation attr-equals"
+                  class="token tag punctuation"
                   style="color: rgb(212, 212, 212);"
                 >
-                  =
+                  &gt;
                 </span>
                 <span
-                  class="token tag attr-value punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  "
-                </span>
-                <span
-                  class="token tag attr-value"
-                  style="color: rgb(206, 145, 120);"
-                >
-                  col-md-2
-                </span>
-                <span
-                  class="token tag attr-value punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  "
-                </span>
-                <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
+                  class="token plain-text"
                 />
               </span>
             </div>
@@ -2276,16 +2214,33 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                 class="token-line__content"
               >
                 <span
+                  class="token plain-text"
+                >
+                        
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &lt;
+                </span>
+                <span
+                  class="token tag class-name"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  FooterClientItem
+                </span>
+                <span
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
+                   
                 </span>
                 <span
                   class="token tag attr-name"
                   style="color: rgb(156, 220, 254);"
                 >
-                  classNameContainerInput
+                  path
                 </span>
                 <span
                   class="token tag attr-value punctuation attr-equals"
@@ -2303,7 +2258,7 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                   class="token tag attr-value"
                   style="color: rgb(206, 145, 120);"
                 >
-                  col-md-10
+                  /
                 </span>
                 <span
                   class="token tag attr-value punctuation"
@@ -2337,7 +2292,7 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                 <span
                   class="token plain-text"
                 >
-                      
+                          Policy documents
                 </span>
               </span>
             </div>
@@ -2349,6 +2304,931 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                 class="token-line__number"
               >
                 22
+              </span>
+              <span
+                class="token-line__content"
+              >
+                <span
+                  class="token plain-text"
+                >
+                        
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &lt;/
+                </span>
+                <span
+                  class="token tag class-name"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  FooterClientItem
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &gt;
+                </span>
+                <span
+                  class="token plain-text"
+                />
+              </span>
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(156, 220, 254);"
+            >
+              <span
+                class="token-line__number"
+              >
+                23
+              </span>
+              <span
+                class="token-line__content"
+              >
+                <span
+                  class="token plain-text"
+                >
+                      
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &lt;/
+                </span>
+                <span
+                  class="token tag class-name"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  FooterClientList
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &gt;
+                </span>
+                <span
+                  class="token plain-text"
+                />
+              </span>
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(156, 220, 254);"
+            >
+              <span
+                class="token-line__number"
+              >
+                24
+              </span>
+              <span
+                class="token-line__content"
+              >
+                <span
+                  class="token plain-text"
+                >
+                      
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &lt;
+                </span>
+                <span
+                  class="token tag class-name"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  FooterClientList
+                </span>
+                <span
+                  class="token tag"
+                  style="color: rgb(78, 201, 176);"
+                >
+                   
+                </span>
+                <span
+                  class="token tag attr-name"
+                  style="color: rgb(156, 220, 254);"
+                >
+                  title
+                </span>
+                <span
+                  class="token tag attr-value punctuation attr-equals"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  =
+                </span>
+                <span
+                  class="token tag attr-value punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  "
+                </span>
+                <span
+                  class="token tag attr-value"
+                  style="color: rgb(206, 145, 120);"
+                >
+                  Useful links
+                </span>
+                <span
+                  class="token tag attr-value punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  "
+                </span>
+                <span
+                  class="token tag"
+                  style="color: rgb(78, 201, 176);"
+                >
+                   
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &gt;
+                </span>
+                <span
+                  class="token plain-text"
+                />
+              </span>
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(156, 220, 254);"
+            >
+              <span
+                class="token-line__number"
+              >
+                25
+              </span>
+              <span
+                class="token-line__content"
+              >
+                <span
+                  class="token plain-text"
+                >
+                        
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &lt;
+                </span>
+                <span
+                  class="token tag class-name"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  FooterClientItem
+                </span>
+                <span
+                  class="token tag"
+                  style="color: rgb(78, 201, 176);"
+                >
+                   
+                </span>
+                <span
+                  class="token tag attr-name"
+                  style="color: rgb(156, 220, 254);"
+                >
+                  path
+                </span>
+                <span
+                  class="token tag attr-value punctuation attr-equals"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  =
+                </span>
+                <span
+                  class="token tag attr-value punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  "
+                </span>
+                <span
+                  class="token tag attr-value"
+                  style="color: rgb(206, 145, 120);"
+                >
+                  /
+                </span>
+                <span
+                  class="token tag attr-value punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  "
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &gt;
+                </span>
+                <span
+                  class="token plain-text"
+                />
+              </span>
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(156, 220, 254);"
+            >
+              <span
+                class="token-line__number"
+              >
+                26
+              </span>
+              <span
+                class="token-line__content"
+              >
+                <span
+                  class="token plain-text"
+                >
+                          About us
+                </span>
+              </span>
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(156, 220, 254);"
+            >
+              <span
+                class="token-line__number"
+              >
+                27
+              </span>
+              <span
+                class="token-line__content"
+              >
+                <span
+                  class="token plain-text"
+                >
+                        
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &lt;/
+                </span>
+                <span
+                  class="token tag class-name"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  FooterClientItem
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &gt;
+                </span>
+                <span
+                  class="token plain-text"
+                />
+              </span>
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(156, 220, 254);"
+            >
+              <span
+                class="token-line__number"
+              >
+                28
+              </span>
+              <span
+                class="token-line__content"
+              >
+                <span
+                  class="token plain-text"
+                >
+                        
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &lt;
+                </span>
+                <span
+                  class="token tag class-name"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  FooterClientItem
+                </span>
+                <span
+                  class="token tag"
+                  style="color: rgb(78, 201, 176);"
+                >
+                   
+                </span>
+                <span
+                  class="token tag attr-name"
+                  style="color: rgb(156, 220, 254);"
+                >
+                  path
+                </span>
+                <span
+                  class="token tag attr-value punctuation attr-equals"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  =
+                </span>
+                <span
+                  class="token tag attr-value punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  "
+                </span>
+                <span
+                  class="token tag attr-value"
+                  style="color: rgb(206, 145, 120);"
+                >
+                  /
+                </span>
+                <span
+                  class="token tag attr-value punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  "
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &gt;
+                </span>
+                <span
+                  class="token plain-text"
+                />
+              </span>
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(156, 220, 254);"
+            >
+              <span
+                class="token-line__number"
+              >
+                29
+              </span>
+              <span
+                class="token-line__content"
+              >
+                <span
+                  class="token plain-text"
+                >
+                          Careers
+                </span>
+              </span>
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(156, 220, 254);"
+            >
+              <span
+                class="token-line__number"
+              >
+                30
+              </span>
+              <span
+                class="token-line__content"
+              >
+                <span
+                  class="token plain-text"
+                >
+                        
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &lt;/
+                </span>
+                <span
+                  class="token tag class-name"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  FooterClientItem
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &gt;
+                </span>
+                <span
+                  class="token plain-text"
+                />
+              </span>
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(156, 220, 254);"
+            >
+              <span
+                class="token-line__number"
+              >
+                31
+              </span>
+              <span
+                class="token-line__content"
+              >
+                <span
+                  class="token plain-text"
+                >
+                        
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &lt;
+                </span>
+                <span
+                  class="token tag class-name"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  FooterClientItem
+                </span>
+                <span
+                  class="token tag"
+                  style="color: rgb(78, 201, 176);"
+                >
+                   
+                </span>
+                <span
+                  class="token tag attr-name"
+                  style="color: rgb(156, 220, 254);"
+                >
+                  path
+                </span>
+                <span
+                  class="token tag attr-value punctuation attr-equals"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  =
+                </span>
+                <span
+                  class="token tag attr-value punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  "
+                </span>
+                <span
+                  class="token tag attr-value"
+                  style="color: rgb(206, 145, 120);"
+                >
+                  /
+                </span>
+                <span
+                  class="token tag attr-value punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  "
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &gt;
+                </span>
+                <span
+                  class="token plain-text"
+                />
+              </span>
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(156, 220, 254);"
+            >
+              <span
+                class="token-line__number"
+              >
+                32
+              </span>
+              <span
+                class="token-line__content"
+              >
+                <span
+                  class="token plain-text"
+                >
+                          Blog
+                </span>
+              </span>
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(156, 220, 254);"
+            >
+              <span
+                class="token-line__number"
+              >
+                33
+              </span>
+              <span
+                class="token-line__content"
+              >
+                <span
+                  class="token plain-text"
+                >
+                        
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &lt;/
+                </span>
+                <span
+                  class="token tag class-name"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  FooterClientItem
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &gt;
+                </span>
+                <span
+                  class="token plain-text"
+                />
+              </span>
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(156, 220, 254);"
+            >
+              <span
+                class="token-line__number"
+              >
+                34
+              </span>
+              <span
+                class="token-line__content"
+              >
+                <span
+                  class="token plain-text"
+                >
+                      
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &lt;/
+                </span>
+                <span
+                  class="token tag class-name"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  FooterClientList
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &gt;
+                </span>
+                <span
+                  class="token plain-text"
+                />
+              </span>
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(156, 220, 254);"
+            >
+              <span
+                class="token-line__number"
+              >
+                35
+              </span>
+              <span
+                class="token-line__content"
+              >
+                <span
+                  class="token plain-text"
+                >
+                      
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &lt;
+                </span>
+                <span
+                  class="token tag class-name"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  FooterClientList
+                </span>
+                <span
+                  class="token tag"
+                  style="color: rgb(78, 201, 176);"
+                >
+                   
+                </span>
+                <span
+                  class="token tag attr-name"
+                  style="color: rgb(156, 220, 254);"
+                >
+                  title
+                </span>
+                <span
+                  class="token tag attr-value punctuation attr-equals"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  =
+                </span>
+                <span
+                  class="token tag attr-value punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  "
+                </span>
+                <span
+                  class="token tag attr-value"
+                  style="color: rgb(206, 145, 120);"
+                >
+                  Follow AXA
+                </span>
+                <span
+                  class="token tag attr-value punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  "
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &gt;
+                </span>
+                <span
+                  class="token plain-text"
+                />
+              </span>
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(156, 220, 254);"
+            >
+              <span
+                class="token-line__number"
+              >
+                36
+              </span>
+              <span
+                class="token-line__content"
+              >
+                <span
+                  class="token plain-text"
+                >
+                        
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &lt;
+                </span>
+                <span
+                  class="token tag class-name"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  SocialNetwork
+                </span>
+                <span
+                  class="token tag"
+                  style="color: rgb(78, 201, 176);"
+                >
+                   
+                </span>
+                <span
+                  class="token tag attr-name"
+                  style="color: rgb(156, 220, 254);"
+                >
+                  list
+                </span>
+                <span
+                  class="token tag script language-javascript script-punctuation punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  =
+                </span>
+                <span
+                  class="token tag script language-javascript punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  {
+                </span>
+                <span
+                  class="token tag script language-javascript punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  {
+                </span>
+                <span
+                  class="token tag script language-javascript string-property property"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  "facebook"
+                </span>
+                <span
+                  class="token tag script language-javascript operator"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  :
+                </span>
+                <span
+                  class="token tag script language-javascript string"
+                  style="color: rgb(206, 145, 120);"
+                >
+                  "#"
+                </span>
+                <span
+                  class="token tag script language-javascript punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  ,
+                </span>
+                <span
+                  class="token tag script language-javascript string-property property"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  "linkedin"
+                </span>
+                <span
+                  class="token tag script language-javascript operator"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  :
+                </span>
+                <span
+                  class="token tag script language-javascript string"
+                  style="color: rgb(206, 145, 120);"
+                >
+                  "#"
+                </span>
+                <span
+                  class="token tag script language-javascript punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  ,
+                </span>
+                <span
+                  class="token tag script language-javascript string-property property"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  "youtube"
+                </span>
+                <span
+                  class="token tag script language-javascript operator"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  :
+                </span>
+                <span
+                  class="token tag script language-javascript string"
+                  style="color: rgb(206, 145, 120);"
+                >
+                  "#"
+                </span>
+                <span
+                  class="token tag script language-javascript punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  ,
+                </span>
+                <span
+                  class="token tag script language-javascript string-property property"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  "instagram"
+                </span>
+                <span
+                  class="token tag script language-javascript operator"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  :
+                </span>
+                <span
+                  class="token tag script language-javascript string"
+                  style="color: rgb(206, 145, 120);"
+                >
+                  "#"
+                </span>
+                <span
+                  class="token tag script language-javascript punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  ,
+                </span>
+                <span
+                  class="token tag script language-javascript string-property property"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  "twitter"
+                </span>
+                <span
+                  class="token tag script language-javascript operator"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  :
+                </span>
+                <span
+                  class="token tag script language-javascript string"
+                  style="color: rgb(206, 145, 120);"
+                >
+                  "#"
+                </span>
+                <span
+                  class="token tag script language-javascript punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  }
+                </span>
+                <span
+                  class="token tag script language-javascript punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  }
+                </span>
+                <span
+                  class="token tag"
+                  style="color: rgb(78, 201, 176);"
+                >
+                   
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  /&gt;
+                </span>
+                <span
+                  class="token plain-text"
+                />
+              </span>
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(156, 220, 254);"
+            >
+              <span
+                class="token-line__number"
+              >
+                37
+              </span>
+              <span
+                class="token-line__content"
+              >
+                <span
+                  class="token plain-text"
+                >
+                      
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &lt;/
+                </span>
+                <span
+                  class="token tag class-name"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  FooterClientList
+                </span>
+                <span
+                  class="token tag punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  &gt;
+                </span>
+                <span
+                  class="token plain-text"
+                />
+              </span>
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(156, 220, 254);"
+            >
+              <span
+                class="token-line__number"
+              >
+                38
               </span>
               <span
                 class="token-line__content"
@@ -2368,7 +3248,7 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                   class="token tag class-name"
                   style="color: rgb(78, 201, 176);"
                 >
-                  RadioInput
+                  FooterClient
                 </span>
                 <span
                   class="token tag punctuation"
@@ -2388,7 +3268,7 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                23
+                39
               </span>
               <span
                 class="token-line__content"

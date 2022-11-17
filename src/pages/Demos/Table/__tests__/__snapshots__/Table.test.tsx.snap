@@ -479,6 +479,22 @@ exports[`<Table /> Should render Table 1`] = `
                     Infos
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Footer Client"
+                    class="af-nav__link"
+                    href="/demos/footerClient"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Footer Client
+                  </a>
+                </li>
               </ul>
             </li>
             <li
