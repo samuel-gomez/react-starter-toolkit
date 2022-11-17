@@ -8,14 +8,14 @@ import { TITLE_BAR, TITLE, DESIGN_SYSTEM_PATH, STORYBOOK_PATH, GITHUB_PACKAGE, N
 import knobs from './knobs.json';
 
 const INITIAL_STATE = {
-  name: 'name-field',
-  id: 'uniqueid',
+  name: 'name-field-textarea',
+  id: 'uniquetextareaid',
   classModifier: 'required',
   className: 'row af-form__group',
-  label: 'My Label',
-  value: 'my value',
-  helpMessage: 'Enter your name',
-  placeholder: 'Ex: Samuel',
+  label: 'My Label for textarea',
+  value: 'my value in textarea',
+  helpMessage: 'Enter your text',
+  placeholder: 'Ex: Samuel Gomez',
   rows: 6,
   cols: 60,
   message: '',
