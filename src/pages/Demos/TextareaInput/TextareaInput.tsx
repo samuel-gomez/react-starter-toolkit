@@ -2,9 +2,9 @@ import React, { FocusEvent, ReactNode } from 'react';
 import { isEqual } from 'lodash';
 import { MessageTypes } from '@axa-fr/react-toolkit-all';
 import LiveCode from 'shared/components/LiveCode';
+import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
 import Layout, { TLayout } from 'Layout';
 import { TITLE_BAR, TITLE, DESIGN_SYSTEM_PATH, STORYBOOK_PATH, GITHUB_PACKAGE, NPM_NAME } from './constants';
-import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
 import knobs from './knobs.json';
 
 const INITIAL_STATE = {
