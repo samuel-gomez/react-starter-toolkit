@@ -7,6 +7,7 @@ exports[`FieldEditor Should render when value: [Function emptyFuncion] 1`] = `
     disabled=""
     id="name"
     name="name"
+    readonly=""
     type="text"
     value="() => null"
   />

@@ -17,7 +17,7 @@ describe('code', () => {
     title: 'Toolkit React Starter',
     alt: 'Toolkit React Starter',
     subtitle: 'by Slash Design System',
-    infos: JSON.stringify([{ word: 'Portefeuille :', definition: '000123456789' }]),
+    infos: [{ word: 'Portefeuille :', definition: '000123456789' }],
     name: 'Bob Smith',
     link: 'link',
     profile: 'Public',
@@ -29,7 +29,7 @@ describe('code', () => {
     expect(clearString(result)).toEqual(
       clearString(`<Header classModifier="${defaultProps.classModifier}">
       <Name title="${defaultProps.title}" img="${logo}" alt="${defaultProps.alt}" subtitle="${defaultProps.subtitle}" />
-      <Infos infos={${defaultProps.infos}} />
+      <Infos infos={${JSON.stringify(defaultProps.infos)}} />
       <User name="${defaultProps.name}" href="${defaultProps.link}" profile="${defaultProps.profile}" />
     </Header>`),
     );

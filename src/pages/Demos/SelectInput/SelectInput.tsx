@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { SelectInput, HelpButton, MessageTypes, SelectModes } from '@axa-fr/react-toolkit-all';
+import { MessageTypes, SelectModes } from '@axa-fr/react-toolkit-all';
 import Layout, { TLayout } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
@@ -9,11 +9,11 @@ import knobs from './knobs.json';
 const INITIAL_STATE = {
   name: 'name-field',
   id: 'uniqueid',
-  options: JSON.stringify([
+  options: [
     { label: 'For fun', value: 'fun', id: 'fun' },
     { label: 'For work', value: 'work', id: 'work' },
     { label: 'For drink', value: 'drink', id: 'drink' },
-  ]),
+  ],
   mode: SelectModes.default,
   placeholder: '- Select -',
   forceDisplayPlaceholder: false,
@@ -59,31 +59,30 @@ export const code = ({
   forceDisplayPlaceholder,
   classNameContainerLabel,
   classNameContainerInput,
-}: Props) => `
-  <SelectInput
-    label={<>${label}</>}
-    name="${name}"
-    id="${id}"
-    options={${options}}
-    onChange={onChangeSelect}
-    mode="${mode}"
-    value="${value}"
-    helpMessage="${helpMessage}"
-    message="${message}" 
-    messageType="${messageType}"
-    forceDisplayMessage={${forceDisplayMessage}}
-    readOnly={${readOnly}}
-    disabled={${disabled}} 
-    isVisible={${isVisible}}
-    classModifier="${classModifier}"
-    className="${className}"
-    placeholder="${placeholder}"
-    forceDisplayPlaceholder={${forceDisplayPlaceholder}}
-    classNameContainerLabel="${classNameContainerLabel}"
-    classNameContainerInput="${classNameContainerInput}"
-  >
-    ${helpButton ? `<HelpButton>Hello Select</HelpButton>` : ''}
-  </SelectInput>
+}: Props) => `<SelectInput
+  label={<>${label}</>}
+  name="${name}"
+  id="${id}"
+  options={${JSON.stringify(options)}}
+  onChange={onChangeSelect}
+  mode="${mode}"
+  value="${value}"
+  helpMessage="${helpMessage}"
+  message="${message}" 
+  messageType="${messageType}"
+  forceDisplayMessage={${forceDisplayMessage}}
+  readOnly={${readOnly}}
+  disabled={${disabled}} 
+  isVisible={${isVisible}}
+  classModifier="${classModifier}"
+  className="${className}"
+  placeholder="${placeholder}"
+  forceDisplayPlaceholder={${forceDisplayPlaceholder}}
+  classNameContainerLabel="${classNameContainerLabel}"
+  classNameContainerInput="${classNameContainerInput}"
+>
+  ${helpButton ? `<HelpButton>Hello Select</HelpButton>` : ''}
+</SelectInput>
 `;
 
 const SelectInputWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
@@ -96,16 +95,7 @@ const SelectInputWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>
         npmName={NPM_NAME}
         openEditor={openEditor}
       />
-      <LiveCode
-        classModifier="with-editor"
-        styleLivePreview={{ textAlign: 'left' }}
-        code={code(props)}
-        scope={{
-          SelectInput,
-          HelpButton,
-          ...props,
-        }}
-      />
+      <LiveCode classModifier="with-editor" styleLivePreview={{ textAlign: 'left' }} code={code(props)} scope={props} />
     </>
   ),
   knobs as unknown as Tknobs,

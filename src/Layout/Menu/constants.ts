@@ -106,6 +106,10 @@ const MENU_ITEMS = [
         url: ROUTE_URL.TEXT_INPUT,
       },
       {
+        label: 'Textarea Input',
+        url: ROUTE_URL.TEXTAREA_INPUT,
+      },
+      {
         label: 'Radio Input',
         url: ROUTE_URL.RADIO_INPUT,
       },

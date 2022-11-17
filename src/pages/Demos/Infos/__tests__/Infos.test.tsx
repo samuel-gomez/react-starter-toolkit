@@ -12,12 +12,12 @@ describe('code', () => {
   const onChange = jest.fn();
 
   const defaultProps = {
-    infos: JSON.stringify([{ word: 'Portefeuille :', definition: '000123456789' }]),
+    infos: [{ word: 'Portefeuille :', definition: '000123456789' }],
     onChange,
   };
 
   it('Should render Infos with default props', () => {
     const result = code(defaultProps);
-    expect(clearString(result)).toEqual(clearString(`<Infos infos={${defaultProps.infos}} />`));
+    expect(clearString(result)).toEqual(clearString(`<Infos infos={${JSON.stringify(defaultProps.infos)}} />`));
   });
 });

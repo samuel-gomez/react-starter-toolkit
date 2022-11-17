@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import { NavBar, NavBarItem } from '@axa-fr/react-toolkit-all';
 import { ClickEvent } from '@axa-fr/react-toolkit-core';
 import Layout, { TLayout } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
@@ -19,12 +18,14 @@ type Props = Partial<typeof INITIAL_STATE> & {
   onChange: (name: keyof typeof INITIAL_STATE) => (arg: TEvent) => void;
 };
 
-export const code = ({ positionInit, isVisible, classModifier }: Props) => `
-<NavBar classModifier="${classModifier}" positionInit={${positionInit}} isVisible={${isVisible}} onClick={onClick}>
+export const code = ({
+  positionInit,
+  isVisible,
+  classModifier,
+}: Props) => `<NavBar classModifier="${classModifier}" positionInit={${positionInit}} isVisible={${isVisible}} onClick={onClick}>
     <NavBarItem actionElt={<a className="af-nav__link">Home</a>} />
     <NavBarItem actionElt={<a className="af-nav__link">Forms</a>} />
-</NavBar>
-`;
+</NavBar>`;
 
 const NavBarWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
   ({ openEditor, ...props }) => (
@@ -36,16 +37,7 @@ const NavBarWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
         npmName={NPM_NAME}
         openEditor={openEditor}
       />
-      <LiveCode
-        classModifier="with-editor"
-        styleLivePreview={{ textAlign: 'left' }}
-        code={code(props)}
-        scope={{
-          NavBar,
-          NavBarItem,
-          ...props,
-        }}
-      />
+      <LiveCode classModifier="with-editor navbar" styleLivePreview={{ textAlign: 'left' }} code={code(props)} scope={props} />
     </>
   ),
   knobs as unknown as Tknobs,

@@ -511,6 +511,22 @@ exports[`<NavBarPage /> Should render NavBarPage 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
+                    aria-label="Textarea Input"
+                    class="af-nav__link"
+                    href="/demos/textarea-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Textarea Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
                     aria-label="Radio Input"
                     class="af-nav__link"
                     href="/demos/radio-input"
@@ -744,7 +760,7 @@ exports[`<NavBarPage /> Should render NavBarPage 1`] = `
           </span>
         </header>
         <article
-          class="af-livecode af-livecode--with-editor"
+          class="af-livecode af-livecode--with-editor af-livecode--navbar"
         >
           <div
             style="background: white; padding: 2rem; width: 100%; text-align: left;"
@@ -851,30 +867,6 @@ exports[`<NavBarPage /> Should render NavBarPage 1`] = `
               <span
                 class="token-line__content"
               >
-                <span
-                  class="token plain"
-                  style="display: inline-block;"
-                >
-                  
-
-                </span>
-              </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(156, 220, 254);"
-            >
-              <span
-                class="token-line__number"
-              >
-                2
-              </span>
-              <span
-                class="token-line__content"
-              >
-                <span
-                  class="token plain"
-                />
                 <span
                   class="token tag punctuation"
                   style="color: rgb(212, 212, 212);"
@@ -1043,7 +1035,7 @@ exports[`<NavBarPage /> Should render NavBarPage 1`] = `
               <span
                 class="token-line__number"
               >
-                3
+                2
               </span>
               <span
                 class="token-line__content"
@@ -1197,7 +1189,7 @@ exports[`<NavBarPage /> Should render NavBarPage 1`] = `
               <span
                 class="token-line__number"
               >
-                4
+                3
               </span>
               <span
                 class="token-line__content"
@@ -1351,7 +1343,7 @@ exports[`<NavBarPage /> Should render NavBarPage 1`] = `
               <span
                 class="token-line__number"
               >
-                5
+                4
               </span>
               <span
                 class="token-line__content"
@@ -1376,30 +1368,6 @@ exports[`<NavBarPage /> Should render NavBarPage 1`] = `
                   style="color: rgb(212, 212, 212);"
                 >
                   &gt;
-                </span>
-                <span
-                  class="token plain"
-                />
-              </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(156, 220, 254);"
-            >
-              <span
-                class="token-line__number"
-              >
-                6
-              </span>
-              <span
-                class="token-line__content"
-              >
-                <span
-                  class="token plain"
-                  style="display: inline-block;"
-                >
-                  
-
                 </span>
               </span>
             </div>

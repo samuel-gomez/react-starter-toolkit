@@ -24,17 +24,15 @@ type Props = Omit<typeof INITIAL_STATE, 'icon' | 'children' | 'toggleOnCloseProp
   onChange: (name: keyof typeof INITIAL_STATE) => (arg: TEvent) => void;
 };
 
-export const code = ({ title, className, classModifier, icon = '', children = '', toggleOnCloseProps }: Props) => `
-  <Alert title="${title}" icon="${icon}" className="${className}" classModifier="${classModifier}" type="submit" onClose={${
-  toggleOnCloseProps ? 'onClose' : null
-}} >
-    ${children}
-  </Alert>
-`;
+export const code = ({ title, className, classModifier, icon = '', children = '', toggleOnCloseProps }: Props) =>
+  `<Alert title="${title}" icon="${icon}" className="${className}" classModifier="${classModifier}" type="submit" onClose={${
+    toggleOnCloseProps ? 'onClose' : null
+  }} >
+  ${children}
+</Alert>`;
 
-const AlertWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(({ openEditor, ...props }) => {
-  const modalProps = useToggleModal();
-  return (
+const AlertWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
+  ({ openEditor, ...props }) => (
     <>
       <EditorHeader
         storybookPath={STORYBOOK_PATH}
@@ -43,10 +41,11 @@ const AlertWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(({ o
         openEditor={openEditor}
         npmName={NPM_NAME}
       />
-      <LiveCode classModifier="with-editor" code={code(props)} scope={props} modalProps={modalProps} />
+      <LiveCode classModifier="with-editor" code={code(props)} scope={props} />
     </>
-  );
-}, knobs as unknown as Tknobs);
+  ),
+  knobs as unknown as Tknobs,
+);
 
 const AlertEditable = () => {
   const { state, onClick, onChange } = useEditable<typeof INITIAL_STATE>({ initialState: INITIAL_STATE });

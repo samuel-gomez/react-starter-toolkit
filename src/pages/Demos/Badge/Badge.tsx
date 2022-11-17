@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import { Badge } from '@axa-fr/react-toolkit-all';
 import Layout, { TLayout } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
@@ -16,11 +15,9 @@ type Props = Partial<typeof INITIAL_STATE> & {
   onChange: (name: keyof typeof INITIAL_STATE) => (arg: TEvent) => void;
 };
 
-export const code = ({ children, classModifier, disabled }: Props) => `
-  <Badge classModifier="${classModifier}" disabled={${disabled}}>
+export const code = ({ children, classModifier, disabled }: Props) => `<Badge classModifier="${classModifier}" disabled={${disabled}}>
     ${children}
-  </Badge>
-  `;
+</Badge>`;
 
 const BadgeWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
   ({ openEditor, ...props }) => (
@@ -32,15 +29,7 @@ const BadgeWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
         npmName={NPM_NAME}
         openEditor={openEditor}
       />
-      <LiveCode
-        classModifier="with-editor"
-        styleLivePreview={{ textAlign: 'left' }}
-        code={code(props)}
-        scope={{
-          Badge,
-          ...props,
-        }}
-      />
+      <LiveCode classModifier="with-editor" styleLivePreview={{ textAlign: 'left' }} code={code(props)} scope={props} />
     </>
   ),
   knobs as unknown as Tknobs,

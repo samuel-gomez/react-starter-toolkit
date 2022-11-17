@@ -16,6 +16,8 @@ const INITIAL_STATE = {
   value: 'my value',
   helpMessage: 'Enter your name',
   placeholder: 'Ex: Samuel',
+  rows: 6,
+  cols: 60,
   message: '',
   messageType: MessageTypes.error,
   forceDisplayMessage: false,
@@ -53,7 +55,9 @@ export const code = ({
   isVisible,
   required,
   autoFocus,
-}: Props) => `<TextInput required={${required}} 
+  rows,
+  cols,
+}: Props) => `<TextareaInput required={${required}} 
   forceDisplayMessage={${forceDisplayMessage}} 
   disabled={${disabled}} 
   id="${id}" 
@@ -64,7 +68,7 @@ export const code = ({
   value="${value}" 
   label={<>${label}</>}
   className="${className}" 
-  classModifier="${classModifier}" 
+  classModifier="${classModifier}"  
   messageType="${messageType}" 
   onChange={onChange('value')} 
   autoComplete="none"
@@ -72,12 +76,14 @@ export const code = ({
   onFocus={onFocus} 
   autoFocus={${autoFocus}} 
   readOnly={${readOnly}} 
-  isVisible={${isVisible}} >
+  isVisible={${isVisible}}
+  rows={${rows}}
+  cols={${cols}} >
   ${helpButton ? `<HelpButton>tooltip avec du text</HelpButton>` : ''}
-</TextInput>  
+</TextareaInput>  
 `;
 
-const TextInputWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
+const TextareaInputWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
   ({ openEditor, ...props }) => (
     <>
       <EditorHeader
@@ -93,24 +99,24 @@ const TextInputWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
   knobs as unknown as Tknobs,
 );
 
-const MemoizedTextInputWithEditor = React.memo(TextInputWithEditor, (prev: Props, next: Props) => isEqual(prev, next));
+const MemoizedTextareaInputWithEditor = React.memo(TextareaInputWithEditor, (prev: Props, next: Props) => isEqual(prev, next));
 
-const TextInputEditable = () => {
+const TextareaInputEditable = () => {
   const { state, onChange, onBlur, onFocus } = useEditable<typeof INITIAL_STATE>({ initialState: INITIAL_STATE });
 
-  return <MemoizedTextInputWithEditor {...state} onBlur={onBlur} onFocus={onFocus} onChange={onChange} />;
+  return <MemoizedTextareaInputWithEditor {...state} onBlur={onBlur} onFocus={onFocus} onChange={onChange} />;
 };
 
-type TTextInputPage = TLayout & {
+type TTextareaInputPage = TLayout & {
   titleBar?: ReactNode;
   title?: ReactNode;
 };
 
-const TextInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TTextInputPage) => (
+const TextareaInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TTextareaInputPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
-    <TextInputEditable />
+    <TextareaInputEditable />
   </Layout>
 );
 
-export default TextInputPage;
+export default TextareaInputPage;

@@ -9,28 +9,32 @@ describe('<ButtonPage/>', () => {
 });
 
 describe('code', () => {
-  const onChange = jest.fn();
-  const label = 'valider';
-  const className = 'af-btn';
-  const classModifier = 'af-btn';
   const icon = 'ok';
-  const disabled = true;
+
+  const defaultProps = {
+    onChange: jest.fn(),
+    label: 'valider',
+    className: 'af-btn',
+    classModifier: '',
+    id: 'uniqueid',
+    disabled: true,
+  };
 
   it('Should render ButtonPage with icon', () => {
-    const result = code({ label, className, classModifier, icon, disabled, onChange });
+    const result = code({ ...defaultProps, icon });
     expect(clearString(result)).toEqual(
-      clearString(`<Button disabled={${disabled}} className="${className}" classModifier="${classModifier}" type="submit" onClick={onClick} >
-          <i className="glyphicon glyphicon-${icon}"></i><span className="af-btn__text">${label}</span>
+      clearString(`<Button id="${defaultProps.id}" disabled={${defaultProps.disabled}} className="${defaultProps.className}" classModifier="${defaultProps.classModifier}" type="submit" onClick={onClick} >
+          <i className="glyphicon glyphicon-${icon}"></i><span className="af-btn__text">${defaultProps.label}</span>
         </Button>
     `),
     );
   });
 
   it('Should render ButtonPage without icon', () => {
-    const result = code({ label, className, classModifier, disabled, onChange });
+    const result = code(defaultProps);
     expect(clearString(result)).toEqual(
-      clearString(`<Button disabled={${disabled}} className="${className}" classModifier="${classModifier}" type="submit" onClick={onClick} >
-          <span className="af-btn__text">${label}</span>
+      clearString(`<Button id="${defaultProps.id}" disabled={${defaultProps.disabled}} className="${defaultProps.className}" classModifier="${defaultProps.classModifier}" type="submit" onClick={onClick} >
+          <span className="af-btn__text">${defaultProps.label}</span>
         </Button>
     `),
     );

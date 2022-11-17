@@ -22,7 +22,7 @@ describe('code', () => {
   it('Should render Help with default props', () => {
     const result = code(defaultProps);
     expect(clearString(result)).toEqual(
-      clearString(`<Help mode="${defaultProps.mode}" placement="${defaultProps.placement}">${defaultProps.label}</Help>`),
+      clearString(`<HelpButton mode="${defaultProps.mode}" placement="${defaultProps.placement}">${defaultProps.label}</HelpButton>`),
     );
   });
 });

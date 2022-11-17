@@ -511,6 +511,22 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
+                    aria-label="Textarea Input"
+                    class="af-nav__link"
+                    href="/demos/textarea-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Textarea Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
                     aria-label="Radio Input"
                     class="af-nav__link"
                     href="/demos/radio-input"
@@ -841,32 +857,6 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                 class="token-line__content"
               >
                 <span
-                  class="token plain"
-                  style="display: inline-block;"
-                >
-                  
-
-                </span>
-              </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(156, 220, 254);"
-            >
-              <span
-                class="token-line__number"
-              >
-                2
-              </span>
-              <span
-                class="token-line__content"
-              >
-                <span
-                  class="token plain"
-                >
-                    
-                </span>
-                <span
                   class="token tag punctuation"
                   style="color: rgb(212, 212, 212);"
                 >
@@ -891,7 +881,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                3
+                2
               </span>
               <span
                 class="token-line__content"
@@ -900,7 +890,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
+                    
                 </span>
                 <span
                   class="token tag attr-name"
@@ -969,7 +959,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                4
+                3
               </span>
               <span
                 class="token-line__content"
@@ -978,7 +968,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
+                    
                 </span>
                 <span
                   class="token tag attr-name"
@@ -1023,7 +1013,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                5
+                4
               </span>
               <span
                 class="token-line__content"
@@ -1032,7 +1022,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
+                    
                 </span>
                 <span
                   class="token tag attr-name"
@@ -1077,7 +1067,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                6
+                5
               </span>
               <span
                 class="token-line__content"
@@ -1086,7 +1076,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
+                    
                 </span>
                 <span
                   class="token tag attr-name"
@@ -1383,7 +1373,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                7
+                6
               </span>
               <span
                 class="token-line__content"
@@ -1392,7 +1382,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
+                    
                 </span>
                 <span
                   class="token tag attr-name"
@@ -1437,7 +1427,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                8
+                7
               </span>
               <span
                 class="token-line__content"
@@ -1446,7 +1436,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
+                    
                 </span>
                 <span
                   class="token tag attr-name"
@@ -1491,7 +1481,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                9
+                8
               </span>
               <span
                 class="token-line__content"
@@ -1500,7 +1490,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
+                    
                 </span>
                 <span
                   class="token tag attr-name"
@@ -1539,7 +1529,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                10
+                9
               </span>
               <span
                 class="token-line__content"
@@ -1548,7 +1538,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
+                    
                 </span>
                 <span
                   class="token tag attr-name"
@@ -1593,7 +1583,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                11
+                10
               </span>
               <span
                 class="token-line__content"
@@ -1602,7 +1592,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
+                    
                 </span>
                 <span
                   class="token tag attr-name"
@@ -1643,7 +1633,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                12
+                11
               </span>
               <span
                 class="token-line__content"
@@ -1652,7 +1642,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
+                    
                 </span>
                 <span
                   class="token tag attr-name"
@@ -1697,6 +1687,60 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
+                12
+              </span>
+              <span
+                class="token-line__content"
+              >
+                <span
+                  class="token tag"
+                  style="color: rgb(78, 201, 176);"
+                >
+                    
+                </span>
+                <span
+                  class="token tag attr-name"
+                  style="color: rgb(156, 220, 254);"
+                >
+                  forceDisplayMessage
+                </span>
+                <span
+                  class="token tag script language-javascript script-punctuation punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  =
+                </span>
+                <span
+                  class="token tag script language-javascript punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  {
+                </span>
+                <span
+                  class="token tag script language-javascript boolean"
+                  style="color: rgb(78, 201, 176);"
+                >
+                  false
+                </span>
+                <span
+                  class="token tag script language-javascript punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  }
+                </span>
+                <span
+                  class="token tag"
+                  style="color: rgb(78, 201, 176);"
+                />
+              </span>
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(156, 220, 254);"
+            >
+              <span
+                class="token-line__number"
+              >
                 13
               </span>
               <span
@@ -1706,13 +1750,13 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
+                    
                 </span>
                 <span
                   class="token tag attr-name"
                   style="color: rgb(156, 220, 254);"
                 >
-                  forceDisplayMessage
+                  readOnly
                 </span>
                 <span
                   class="token tag script language-javascript script-punctuation punctuation"
@@ -1760,61 +1804,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
-                </span>
-                <span
-                  class="token tag attr-name"
-                  style="color: rgb(156, 220, 254);"
-                >
-                  readOnly
-                </span>
-                <span
-                  class="token tag script language-javascript script-punctuation punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  =
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  {
-                </span>
-                <span
-                  class="token tag script language-javascript boolean"
-                  style="color: rgb(78, 201, 176);"
-                >
-                  false
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  }
-                </span>
-                <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
-                />
-              </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(156, 220, 254);"
-            >
-              <span
-                class="token-line__number"
-              >
-                15
-              </span>
-              <span
-                class="token-line__content"
-              >
-                <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
-                >
-                      
+                    
                 </span>
                 <span
                   class="token tag attr-name"
@@ -1861,7 +1851,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                16
+                15
               </span>
               <span
                 class="token-line__content"
@@ -1870,7 +1860,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
+                    
                 </span>
                 <span
                   class="token tag attr-name"
@@ -1915,6 +1905,54 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
+                16
+              </span>
+              <span
+                class="token-line__content"
+              >
+                <span
+                  class="token tag"
+                  style="color: rgb(78, 201, 176);"
+                >
+                    
+                </span>
+                <span
+                  class="token tag attr-name"
+                  style="color: rgb(156, 220, 254);"
+                >
+                  classModifier
+                </span>
+                <span
+                  class="token tag attr-value punctuation attr-equals"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  =
+                </span>
+                <span
+                  class="token tag attr-value punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  "
+                </span>
+                <span
+                  class="token tag attr-value punctuation"
+                  style="color: rgb(212, 212, 212);"
+                >
+                  "
+                </span>
+                <span
+                  class="token tag"
+                  style="color: rgb(78, 201, 176);"
+                />
+              </span>
+            </div>
+            <div
+              class="token-line"
+              style="color: rgb(156, 220, 254);"
+            >
+              <span
+                class="token-line__number"
+              >
                 17
               </span>
               <span
@@ -1924,13 +1962,13 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
+                    
                 </span>
                 <span
                   class="token tag attr-name"
                   style="color: rgb(156, 220, 254);"
                 >
-                  classModifier
+                  className
                 </span>
                 <span
                   class="token tag attr-value punctuation attr-equals"
@@ -1972,55 +2010,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
-                </span>
-                <span
-                  class="token tag attr-name"
-                  style="color: rgb(156, 220, 254);"
-                >
-                  className
-                </span>
-                <span
-                  class="token tag attr-value punctuation attr-equals"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  =
-                </span>
-                <span
-                  class="token tag attr-value punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  "
-                </span>
-                <span
-                  class="token tag attr-value punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  "
-                </span>
-                <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
-                />
-              </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(156, 220, 254);"
-            >
-              <span
-                class="token-line__number"
-              >
-                19
-              </span>
-              <span
-                class="token-line__content"
-              >
-                <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
-                >
-                      
+                    
                 </span>
                 <span
                   class="token tag attr-name"
@@ -2065,7 +2055,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                20
+                19
               </span>
               <span
                 class="token-line__content"
@@ -2074,7 +2064,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
+                    
                 </span>
                 <span
                   class="token tag attr-name"
@@ -2119,7 +2109,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                21
+                20
               </span>
               <span
                 class="token-line__content"
@@ -2128,7 +2118,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
+                    
                 </span>
                 <span
                   class="token tag attr-name"
@@ -2173,7 +2163,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                22
+                21
               </span>
               <span
                 class="token-line__content"
@@ -2182,7 +2172,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
                 >
-                      
+                    
                 </span>
                 <span
                   class="token tag attr-name"
@@ -2227,7 +2217,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                23
+                22
               </span>
               <span
                 class="token-line__content"
@@ -2235,9 +2225,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                 <span
                   class="token tag"
                   style="color: rgb(78, 201, 176);"
-                >
-                    
-                </span>
+                />
                 <span
                   class="token tag punctuation"
                   style="color: rgb(212, 212, 212);"
@@ -2256,7 +2244,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                24
+                23
               </span>
               <span
                 class="token-line__content"
@@ -2264,7 +2252,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                 <span
                   class="token plain-text"
                 >
-                      
+                    
                 </span>
               </span>
             </div>
@@ -2275,16 +2263,14 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                25
+                24
               </span>
               <span
                 class="token-line__content"
               >
                 <span
                   class="token plain-text"
-                >
-                    
-                </span>
+                />
                 <span
                   class="token tag punctuation"
                   style="color: rgb(212, 212, 212);"
@@ -2315,7 +2301,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                26
+                25
               </span>
               <span
                 class="token-line__content"

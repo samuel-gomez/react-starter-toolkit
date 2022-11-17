@@ -1,5 +1,5 @@
 /* eslint-disable max-lines-per-function */
-import { ComponentType, useCallback, useState } from 'react';
+import { ComponentType, FocusEvent, useCallback, useState } from 'react';
 import { Text, CheckboxItem, CheckboxModes, Select } from '@axa-fr/react-toolkit-all';
 import Draggable from 'react-draggable';
 import Icons from 'shared/components/Icons';
@@ -48,7 +48,7 @@ export const FieldEditor = ({ value, ...props }: TFieldEditor) => (
     {(() => {
       switch (true) {
         case typeof value === 'function':
-          return <Text {...commonProps(props)} type="text" value={`${value}`} readonly disabled />;
+          return <Text {...commonProps(props)} type="text" value={`${value}`} readOnly disabled />;
         case typeof value === 'boolean':
           return (
             <CheckboxItem
@@ -89,7 +89,7 @@ export const FieldEditor = ({ value, ...props }: TFieldEditor) => (
           );
 
         default:
-          return <Text {...commonProps(props)} type="text" value={value} />;
+          return <Text {...commonProps(props)} type="text" value={`${value}`} />;
       }
     })()}
   </>
@@ -199,6 +199,7 @@ type TuseEditable<T> = {
   logEventFn?: typeof console.log;
   setValueFn?: typeof setValue;
 };
+
 export const useEditable = <T extends object>({ initialState, logEventFn = console.log, setValueFn = setValue }: TuseEditable<T>) => {
   const [state, setState] = useState(initialState);
 
@@ -220,7 +221,8 @@ export const useEditable = <T extends object>({ initialState, logEventFn = conso
     setState(prevState => ({ ...prevState, autoFocus: false }));
   }, []);
 
-  const onFocus = useCallback(() => {
+  const onFocus = useCallback((e: FocusEvent<HTMLInputElement>) => {
+    e.target.setSelectionRange(e.target.value.length, e.target.value.length);
     setState(prevState => ({ ...prevState, autoFocus: true }));
   }, []);
 

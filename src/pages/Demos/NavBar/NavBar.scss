@@ -1,5 +1,10 @@
-.af-livecode {
+.af-livecode--navbar {
   .af-nav {
-    max-width: 100px;
+    &.af-drawer.left {
+      z-index: 2;
+    }
+    > .container {
+      width: 100%;
+    }
   }
 }

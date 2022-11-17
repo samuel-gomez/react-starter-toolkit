@@ -30,19 +30,6 @@
       }
     ]
   },
-  "mode": {
-    "value": "default",
-    "options": [
-      {
-        "label": "default",
-        "value": "default"
-      },
-      {
-        "label": "base",
-        "value": "base"
-      }
-    ]
-  },
   "messageType": {
     "value": "error",
     "options": [
@@ -59,9 +46,5 @@
         "value": "error"
       }
     ]
-  },
-  "options": {
-    "type": "json",
-    "labelBtnOpenCodeEditor": "Edit options"
   }
 }
