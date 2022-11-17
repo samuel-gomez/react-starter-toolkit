@@ -75,6 +75,7 @@ describe('useEditable', () => {
     disabled: false,
     icon: '',
     autoFocus: false,
+    values: [],
   };
 
   it('Should logEventFn have been called when onClick have been called', () => {
@@ -84,12 +85,27 @@ describe('useEditable', () => {
     expect(logEventFn).toHaveBeenCalledWith('click event', 'name', { id: 'id' });
   });
 
-  it('Should setValueFn have been called and return updated state when onChange have been called with event', () => {
+  it('Should setValueFn have been called and return updated state value when onChange have been called with event with value', () => {
     const setValueFn = jest.fn().mockReturnValue('setted value');
     const { result } = renderHook(() => useEditable({ initialState, setValueFn }));
     act(() => result.current.onChange('classModifier')({ value: 'newvalue' }));
     expect(setValueFn).toHaveBeenCalledWith('newvalue');
     expect(result.current.state.classModifier).toEqual('setted value');
+  });
+
+  it('Should setValueFn have been called with empty string and return updated state value when onChange have been called with event with undefined value', () => {
+    const setValueFn = jest.fn().mockReturnValue('setted value');
+    const { result } = renderHook(() => useEditable({ initialState, setValueFn }));
+    act(() => result.current.onChange('classModifier')({ value: undefined }));
+    expect(setValueFn).toHaveBeenCalledWith('');
+    expect(result.current.state.classModifier).toEqual('setted value');
+  });
+
+  it('Should return updated state values when onChange have been called with event with values', () => {
+    const { result } = renderHook(() => useEditable({ initialState }));
+    act(() => result.current.onChange('values')({ values: ['newvalue'] }));
+
+    expect(result.current.state.values).toEqual(['newvalue']);
   });
 
   it('Should set autofocus state to false when onBlur have been called', () => {

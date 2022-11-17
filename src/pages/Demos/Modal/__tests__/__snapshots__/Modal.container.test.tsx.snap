@@ -578,6 +578,22 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer and called funct
                     <a
                       aria-expanded="false"
                       aria-haspopup="true"
+                      aria-label="Checkbox Input"
+                      class="af-nav__link"
+                      href="/demos/checkbox-input"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      Checkbox Input
+                    </a>
+                  </li>
+                  <li
+                    class="af-nav__item "
+                    role="none"
+                  >
+                    <a
+                      aria-expanded="false"
+                      aria-haspopup="true"
                       aria-label="Select Input"
                       class="af-nav__link"
                       href="/demos/select-input"

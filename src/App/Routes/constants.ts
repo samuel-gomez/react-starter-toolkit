@@ -13,6 +13,7 @@ import { ROUTE_URL_TEXT_INPUT as TEXT_INPUT } from 'pages/Demos/TextInput/consta
 import { ROUTE_URL_TEXTAREA_INPUT as TEXTAREA_INPUT } from 'pages/Demos/TextareaInput/constants';
 import { ROUTE_URL_TABS as TABS } from 'pages/Demos/Tabs/constants';
 import { ROUTE_URL_RADIO_INPUT as RADIO_INPUT } from 'pages/Demos/RadioInput/constants';
+import { ROUTE_URL_CHECKBOX_INPUT as CHECKBOX_INPUT } from 'pages/Demos/CheckboxInput/constants';
 import { ROUTE_URL_SELECT_INPUT as SELECT_INPUT } from 'pages/Demos/SelectInput/constants';
 import { ROUTE_URL_RESTITUTION as RESTITUTION } from 'pages/Demos/Restitution/constants';
 import { ROUTE_URL_BADGE as BADGE } from 'pages/Demos/Badge/constants';
@@ -48,6 +49,7 @@ const ROUTE_URL = {
   TEXTAREA_INPUT,
   TABS,
   RADIO_INPUT,
+  CHECKBOX_INPUT,
   SELECT_INPUT,
   RESTITUTION,
   BADGE,

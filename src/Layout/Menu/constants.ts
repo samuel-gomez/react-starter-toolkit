@@ -122,6 +122,10 @@ const MENU_ITEMS = [
         url: ROUTE_URL.RADIO_INPUT,
       },
       {
+        label: 'Checkbox Input',
+        url: ROUTE_URL.CHECKBOX_INPUT,
+      },
+      {
         label: 'Select Input',
         url: ROUTE_URL.SELECT_INPUT,
       },
