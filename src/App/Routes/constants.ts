@@ -30,6 +30,7 @@ import { ROUTE_URL_FOOTER_CLIENT as FOOTER_CLIENT } from 'pages/Demos/FooterClie
 import { ROUTE_URL_FOOTER as FOOTER } from 'pages/Demos/Footer/constants';
 import { ROUTE_URL_ACCORDION as ACCORDION } from 'pages/Demos/Accordion/constants';
 import { ROUTE_URL_LOADER as LOADER } from 'pages/Demos/Loader/constants';
+import { ROUTE_URL_SLIDER as SLIDER } from 'pages/Demos/Slider/constants';
 
 const DEMOS = '/demos';
 const LAYOUTS = '/layouts';
@@ -69,6 +70,7 @@ const ROUTE_URL = {
   FOOTER,
   ACCORDION,
   LOADER,
+  SLIDER,
 };
 
 export default ROUTE_URL;

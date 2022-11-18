@@ -648,6 +648,22 @@ exports[`<InfosPage /> Should render InfosPage 1`] = `
                     Select Input
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Slider"
+                    class="af-nav__link"
+                    href="/demos/slider"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Slider
+                  </a>
+                </li>
               </ul>
             </li>
             <li
