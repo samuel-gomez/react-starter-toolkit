@@ -520,6 +520,22 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
                           Footer Client
                         </a>
                       </li>
+                      <li
+                        class="af-nav__item "
+                        role="none"
+                      >
+                        <a
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          aria-label="Footer"
+                          class="af-nav__link"
+                          href="/demos/footer"
+                          role="menuitem"
+                          tabindex="-1"
+                        >
+                          Footer
+                        </a>
+                      </li>
                     </ul>
                   </li>
                   <li

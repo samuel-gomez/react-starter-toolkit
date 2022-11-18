@@ -102,16 +102,16 @@ const FooterClientWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor
 );
 
 const FooterClientEditable = () => {
-  const { state, onChange, onClick } = useEditable<typeof INITIAL_STATE>({ initialState: INITIAL_STATE });
-  return <FooterClientWithEditor {...state} onClick={onClick('onClick Navbar')} onChange={onChange} />;
+  const { state, onChange } = useEditable<typeof INITIAL_STATE>({ initialState: INITIAL_STATE });
+  return <FooterClientWithEditor {...state} onChange={onChange} />;
 };
 
-type TNavBarPage = TLayout & {
+type TFooterPage = TLayout & {
   titleBar?: ReactNode;
   title?: ReactNode;
 };
 
-const FooterClientDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TNavBarPage) => (
+const FooterClientDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TFooterPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <FooterClientEditable />
