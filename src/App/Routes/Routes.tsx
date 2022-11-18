@@ -31,6 +31,7 @@ import NavBar from 'pages/Demos/NavBar';
 import Popover from 'pages/Demos/Popover';
 import FooterClient from 'pages/Demos/FooterClient';
 import Footer from 'pages/Demos/Footer';
+import Accordion from 'pages/Demos/Accordion';
 import ROUTE_URL from 'App/Routes/constants';
 import { UserContext } from 'App/UserProvider';
 import Loader, { MODES } from 'shared/components/Loader';
@@ -91,6 +92,7 @@ type TRoutesCmpt = {
   PopoverCmpt?: typeof Popover;
   FooterClientCmpt?: typeof FooterClient;
   FooterCmpt?: typeof Footer;
+  AccordionCmpt?: typeof Accordion;
 };
 
 const RoutesCmpt = ({
@@ -123,6 +125,7 @@ const RoutesCmpt = ({
   PopoverCmpt = Popover,
   FooterClientCmpt = FooterClient,
   FooterCmpt = Footer,
+  AccordionCmpt = Accordion,
   withAuthFn = withAuth,
 }: TRoutesCmpt) => (
   <Routes>
@@ -154,6 +157,7 @@ const RoutesCmpt = ({
       <Route path={ROUTE_URL.POPOVER} element={withAuthFn(PopoverCmpt)} />
       <Route path={ROUTE_URL.FOOTER_CLIENT} element={withAuthFn(FooterClientCmpt)} />
       <Route path={ROUTE_URL.FOOTER} element={withAuthFn(FooterCmpt)} />
+      <Route path={ROUTE_URL.ACCORDION} element={withAuthFn(AccordionCmpt)} />
     </Route>
     <Route path={ROUTE_URL.LAYOUT} element={withAuthFn(LayoutCmpt)} />
     <Route path={ROUTE_URL.UNAUTHORIZE} element={<PageUnauthorizeCmpt />} />

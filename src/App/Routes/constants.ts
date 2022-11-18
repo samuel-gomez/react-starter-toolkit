@@ -28,6 +28,7 @@ import { ROUTE_URL_NAVBAR as NAVBAR } from 'pages/Demos/NavBar/constants';
 import { ROUTE_URL_POPOVER as POPOVER } from 'pages/Demos/Popover/constants';
 import { ROUTE_URL_FOOTER_CLIENT as FOOTER_CLIENT } from 'pages/Demos/FooterClient/constants';
 import { ROUTE_URL_FOOTER as FOOTER } from 'pages/Demos/Footer/constants';
+import { ROUTE_URL_ACCORDION as ACCORDION } from 'pages/Demos/Accordion/constants';
 
 const DEMOS = '/demos';
 const LAYOUTS = '/layouts';
@@ -65,6 +66,7 @@ const ROUTE_URL = {
   POPOVER,
   FOOTER_CLIENT,
   FOOTER,
+  ACCORDION,
 };
 
 export default ROUTE_URL;
