@@ -406,6 +406,22 @@ exports[`<ModalPage/> Should render ModalPage 1`] = `
                     Accordion
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Loader"
+                    class="af-nav__link"
+                    href="/demos/loader"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Loader
+                  </a>
+                </li>
               </ul>
             </li>
             <li
@@ -2414,6 +2430,22 @@ exports[`<ModalPage/> Should render ModalPage with modal opened 1`] = `
                     tabindex="-1"
                   >
                     Accordion
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Loader"
+                    class="af-nav__link"
+                    href="/demos/loader"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Loader
                   </a>
                 </li>
               </ul>
