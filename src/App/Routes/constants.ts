@@ -29,6 +29,7 @@ import { ROUTE_URL_POPOVER as POPOVER } from 'pages/Demos/Popover/constants';
 import { ROUTE_URL_FOOTER_CLIENT as FOOTER_CLIENT } from 'pages/Demos/FooterClient/constants';
 import { ROUTE_URL_FOOTER as FOOTER } from 'pages/Demos/Footer/constants';
 import { ROUTE_URL_ACCORDION as ACCORDION } from 'pages/Demos/Accordion/constants';
+import { ROUTE_URL_LOADER as LOADER } from 'pages/Demos/Loader/constants';
 
 const DEMOS = '/demos';
 const LAYOUTS = '/layouts';
@@ -67,6 +68,7 @@ const ROUTE_URL = {
   FOOTER_CLIENT,
   FOOTER,
   ACCORDION,
+  LOADER,
 };
 
 export default ROUTE_URL;

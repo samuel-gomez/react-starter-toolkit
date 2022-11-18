@@ -409,6 +409,22 @@ exports[`<App/> Should render App with all props and authentication NOT enabled 
                     Accordion
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Loader"
+                    class="af-nav__link"
+                    href="/demos/loader"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Loader
+                  </a>
+                </li>
               </ul>
             </li>
             <li
@@ -1187,6 +1203,22 @@ exports[`<App/> Should render App with all props and authentication enabled 1`] 
                     tabindex="-1"
                   >
                     Accordion
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Loader"
+                    class="af-nav__link"
+                    href="/demos/loader"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Loader
                   </a>
                 </li>
               </ul>

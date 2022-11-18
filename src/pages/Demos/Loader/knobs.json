@@ -1,0 +1,35 @@
+{
+  "content": {
+    "type": "jsx",
+    "labelBtnOpenCodeEditor": "Edit content"
+  },
+  "mode": {
+    "value": "get",
+    "options": [
+      {
+        "label": "delete",
+        "value": "delete"
+      },
+      {
+        "label": "error",
+        "value": "error"
+      },
+      {
+        "label": "get",
+        "value": "get"
+      },
+      {
+        "label": "none",
+        "value": "none"
+      },
+      {
+        "label": "post",
+        "value": "post"
+      },
+      {
+        "label": "update",
+        "value": "update"
+      }
+    ]
+  }
+}

@@ -353,6 +353,22 @@ exports[`<Menu/> Render <Menu/> 1`] = `
                     Accordion
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Loader"
+                    class="af-nav__link"
+                    href="/loader"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Loader
+                  </a>
+                </li>
               </ul>
             </li>
             <li

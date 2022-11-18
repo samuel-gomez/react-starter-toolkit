@@ -32,6 +32,7 @@ import Popover from 'pages/Demos/Popover';
 import FooterClient from 'pages/Demos/FooterClient';
 import Footer from 'pages/Demos/Footer';
 import Accordion from 'pages/Demos/Accordion';
+import LoaderAxa from 'pages/Demos/Loader';
 import ROUTE_URL from 'App/Routes/constants';
 import { UserContext } from 'App/UserProvider';
 import Loader, { MODES } from 'shared/components/Loader';
@@ -93,6 +94,7 @@ type TRoutesCmpt = {
   FooterClientCmpt?: typeof FooterClient;
   FooterCmpt?: typeof Footer;
   AccordionCmpt?: typeof Accordion;
+  LoaderAxaCmpt?: typeof LoaderAxa;
 };
 
 const RoutesCmpt = ({
@@ -126,6 +128,7 @@ const RoutesCmpt = ({
   FooterClientCmpt = FooterClient,
   FooterCmpt = Footer,
   AccordionCmpt = Accordion,
+  LoaderAxaCmpt = LoaderAxa,
   withAuthFn = withAuth,
 }: TRoutesCmpt) => (
   <Routes>
@@ -158,6 +161,7 @@ const RoutesCmpt = ({
       <Route path={ROUTE_URL.FOOTER_CLIENT} element={withAuthFn(FooterClientCmpt)} />
       <Route path={ROUTE_URL.FOOTER} element={withAuthFn(FooterCmpt)} />
       <Route path={ROUTE_URL.ACCORDION} element={withAuthFn(AccordionCmpt)} />
+      <Route path={ROUTE_URL.LOADER} element={withAuthFn(LoaderAxaCmpt)} />
     </Route>
     <Route path={ROUTE_URL.LAYOUT} element={withAuthFn(LayoutCmpt)} />
     <Route path={ROUTE_URL.UNAUTHORIZE} element={<PageUnauthorizeCmpt />} />

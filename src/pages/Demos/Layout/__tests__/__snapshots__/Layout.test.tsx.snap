@@ -431,6 +431,22 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
                           Accordion
                         </a>
                       </li>
+                      <li
+                        class="af-nav__item "
+                        role="none"
+                      >
+                        <a
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          aria-label="Loader"
+                          class="af-nav__link"
+                          href="/demos/loader"
+                          role="menuitem"
+                          tabindex="-1"
+                        >
+                          Loader
+                        </a>
+                      </li>
                     </ul>
                   </li>
                   <li

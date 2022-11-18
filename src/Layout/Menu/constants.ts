@@ -79,6 +79,10 @@ const MENU_ITEMS = [
         label: 'Accordion',
         url: ROUTE_URL.ACCORDION,
       },
+      {
+        label: 'Loader',
+        url: ROUTE_URL.LOADER,
+      },
     ],
   },
   {
