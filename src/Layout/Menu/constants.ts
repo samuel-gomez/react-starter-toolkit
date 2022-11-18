@@ -145,6 +145,10 @@ const MENU_ITEMS = [
         label: 'Slider',
         url: ROUTE_URL.SLIDER,
       },
+      {
+        label: 'Switch',
+        url: ROUTE_URL.SWITCH,
+      },
     ],
   },
   {

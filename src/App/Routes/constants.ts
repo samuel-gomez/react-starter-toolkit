@@ -31,6 +31,7 @@ import { ROUTE_URL_FOOTER as FOOTER } from 'pages/Demos/Footer/constants';
 import { ROUTE_URL_ACCORDION as ACCORDION } from 'pages/Demos/Accordion/constants';
 import { ROUTE_URL_LOADER as LOADER } from 'pages/Demos/Loader/constants';
 import { ROUTE_URL_SLIDER as SLIDER } from 'pages/Demos/Slider/constants';
+import { ROUTE_URL_SWITCH as SWITCH } from 'pages/Demos/Switch/constants';
 
 const DEMOS = '/demos';
 const LAYOUTS = '/layouts';
@@ -71,6 +72,7 @@ const ROUTE_URL = {
   ACCORDION,
   LOADER,
   SLIDER,
+  SWITCH,
 };
 
 export default ROUTE_URL;

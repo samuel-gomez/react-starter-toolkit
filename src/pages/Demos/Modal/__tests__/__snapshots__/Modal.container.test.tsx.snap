@@ -667,6 +667,22 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer and called funct
                       Slider
                     </a>
                   </li>
+                  <li
+                    class="af-nav__item "
+                    role="none"
+                  >
+                    <a
+                      aria-expanded="false"
+                      aria-haspopup="true"
+                      aria-label="Switch"
+                      class="af-nav__link"
+                      href="/demos/switch"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      Switch
+                    </a>
+                  </li>
                 </ul>
               </li>
               <li

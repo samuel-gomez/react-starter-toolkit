@@ -672,6 +672,22 @@ exports[`Layout Should render when disabled: {"footer": true} 1`] = `
                     Slider
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Switch"
+                    class="af-nav__link"
+                    href="/demos/switch"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Switch
+                  </a>
+                </li>
               </ul>
             </li>
             <li
@@ -1393,6 +1409,22 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
                     tabindex="-1"
                   >
                     Slider
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Switch"
+                    class="af-nav__link"
+                    href="/demos/switch"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Switch
                   </a>
                 </li>
               </ul>
@@ -2301,6 +2333,22 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
                     tabindex="-1"
                   >
                     Slider
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Switch"
+                    class="af-nav__link"
+                    href="/demos/switch"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Switch
                   </a>
                 </li>
               </ul>
