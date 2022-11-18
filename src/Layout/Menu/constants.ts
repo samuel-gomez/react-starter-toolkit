@@ -141,6 +141,10 @@ const MENU_ITEMS = [
         label: 'Select Input',
         url: ROUTE_URL.SELECT_INPUT,
       },
+      {
+        label: 'Slider',
+        url: ROUTE_URL.SLIDER,
+      },
     ],
   },
   {

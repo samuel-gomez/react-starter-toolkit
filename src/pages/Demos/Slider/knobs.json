@@ -1,0 +1,23 @@
+{
+  "options": {
+    "type": "json",
+    "labelBtnOpenCodeEditor": "Edit options"
+  },
+  "messageType": {
+    "value": "error",
+    "options": [
+      {
+        "label": "success",
+        "value": "success"
+      },
+      {
+        "label": "warning",
+        "value": "warning"
+      },
+      {
+        "label": "error",
+        "value": "error"
+      }
+    ]
+  }
+}

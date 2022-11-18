@@ -33,6 +33,7 @@ import FooterClient from 'pages/Demos/FooterClient';
 import Footer from 'pages/Demos/Footer';
 import Accordion from 'pages/Demos/Accordion';
 import LoaderAxa from 'pages/Demos/Loader';
+import Slider from 'pages/Demos/Slider';
 import ROUTE_URL from 'App/Routes/constants';
 import { UserContext } from 'App/UserProvider';
 import Loader, { MODES } from 'shared/components/Loader';
@@ -95,6 +96,7 @@ type TRoutesCmpt = {
   FooterCmpt?: typeof Footer;
   AccordionCmpt?: typeof Accordion;
   LoaderAxaCmpt?: typeof LoaderAxa;
+  SliderCmpt?: typeof Slider;
 };
 
 const RoutesCmpt = ({
@@ -129,6 +131,7 @@ const RoutesCmpt = ({
   FooterCmpt = Footer,
   AccordionCmpt = Accordion,
   LoaderAxaCmpt = LoaderAxa,
+  SliderCmpt = Slider,
   withAuthFn = withAuth,
 }: TRoutesCmpt) => (
   <Routes>
@@ -162,6 +165,7 @@ const RoutesCmpt = ({
       <Route path={ROUTE_URL.FOOTER} element={withAuthFn(FooterCmpt)} />
       <Route path={ROUTE_URL.ACCORDION} element={withAuthFn(AccordionCmpt)} />
       <Route path={ROUTE_URL.LOADER} element={withAuthFn(LoaderAxaCmpt)} />
+      <Route path={ROUTE_URL.SLIDER} element={withAuthFn(SliderCmpt)} />
     </Route>
     <Route path={ROUTE_URL.LAYOUT} element={withAuthFn(LayoutCmpt)} />
     <Route path={ROUTE_URL.UNAUTHORIZE} element={<PageUnauthorizeCmpt />} />

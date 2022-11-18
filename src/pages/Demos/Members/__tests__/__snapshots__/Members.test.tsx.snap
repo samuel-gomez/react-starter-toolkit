@@ -648,6 +648,22 @@ exports[`<Members/> Should render <Members /> with one member 1`] = `
                     Select Input
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Slider"
+                    class="af-nav__link"
+                    href="/demos/slider"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Slider
+                  </a>
+                </li>
               </ul>
             </li>
             <li
@@ -1668,6 +1684,22 @@ exports[`<Members/> Should render Members 1`] = `
                     tabindex="-1"
                   >
                     Select Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Slider"
+                    class="af-nav__link"
+                    href="/demos/slider"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Slider
                   </a>
                 </li>
               </ul>
