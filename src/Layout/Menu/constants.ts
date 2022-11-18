@@ -75,6 +75,10 @@ const MENU_ITEMS = [
         label: 'Popover',
         url: ROUTE_URL.POPOVER,
       },
+      {
+        label: 'Accordion',
+        url: ROUTE_URL.ACCORDION,
+      },
     ],
   },
   {

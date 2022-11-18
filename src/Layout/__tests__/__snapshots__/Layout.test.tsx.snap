@@ -398,6 +398,22 @@ exports[`Layout Should render when disabled: {"footer": true} 1`] = `
                     Popover
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Accordion"
+                    class="af-nav__link"
+                    href="/demos/accordion"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Accordion
+                  </a>
+                </li>
               </ul>
             </li>
             <li
@@ -1071,6 +1087,22 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
                     tabindex="-1"
                   >
                     Popover
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Accordion"
+                    class="af-nav__link"
+                    href="/demos/accordion"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Accordion
                   </a>
                 </li>
               </ul>
@@ -1931,6 +1963,22 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
                     tabindex="-1"
                   >
                     Popover
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Accordion"
+                    class="af-nav__link"
+                    href="/demos/accordion"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Accordion
                   </a>
                 </li>
               </ul>

@@ -390,6 +390,22 @@ exports[`<InfosPage /> Should render InfosPage 1`] = `
                     Popover
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Accordion"
+                    class="af-nav__link"
+                    href="/demos/accordion"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Accordion
+                  </a>
+                </li>
               </ul>
             </li>
             <li

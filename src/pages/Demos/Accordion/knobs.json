@@ -1,0 +1,14 @@
+{
+  "content1": {
+    "type": "jsx",
+    "labelBtnOpenCodeEditor": "Edit content 1"
+  },
+  "content2": {
+    "type": "jsx",
+    "labelBtnOpenCodeEditor": "Edit content 2"
+  },
+  "content3": {
+    "type": "jsx",
+    "labelBtnOpenCodeEditor": "Edit content 3"
+  }
+}

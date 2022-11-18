@@ -1,6 +1,5 @@
 import { ReactNode } from 'react';
 import { FooterClient, FooterClientList, FooterClientItem, SocialNetwork } from '@axa-fr/react-toolkit-all';
-import { ClickEvent } from '@axa-fr/react-toolkit-core';
 import Layout, { TLayout } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
@@ -30,7 +29,6 @@ const INITIAL_STATE = {
 };
 
 type Props = Partial<typeof INITIAL_STATE> & {
-  onClick?: (arg: ClickEvent) => void;
   onChange: (name: keyof typeof INITIAL_STATE) => (arg: TEvent) => void;
 };
 
