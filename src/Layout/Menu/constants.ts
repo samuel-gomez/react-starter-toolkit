@@ -102,6 +102,10 @@ const MENU_ITEMS = [
         label: 'Footer Client',
         url: ROUTE_URL.FOOTER_CLIENT,
       },
+      {
+        label: 'Footer',
+        url: ROUTE_URL.FOOTER,
+      },
     ],
   },
   {
