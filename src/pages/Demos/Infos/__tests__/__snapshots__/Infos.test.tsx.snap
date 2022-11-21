@@ -655,6 +655,22 @@ exports[`<InfosPage /> Should render InfosPage 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
+                    aria-label="Stepper"
+                    class="af-nav__link"
+                    href="/demos/stepper"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Stepper
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
                     aria-label="Slider"
                     class="af-nav__link"
                     href="/demos/slider"

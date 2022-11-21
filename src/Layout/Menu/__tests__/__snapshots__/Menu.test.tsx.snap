@@ -604,6 +604,22 @@ exports[`<Menu/> Render <Menu/> 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
+                    aria-label="Stepper"
+                    class="af-nav__link"
+                    href="/stepper"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Stepper
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
                     aria-label="Slider"
                     class="af-nav__link"
                     href="/slider"

@@ -1,14 +1,10 @@
-/* eslint-disable max-lines-per-function */
 import { ComponentType, FocusEvent, useCallback, useState } from 'react';
-import { Text, CheckboxItem, CheckboxModes, Select } from '@axa-fr/react-toolkit-all';
 import Draggable from 'react-draggable';
 import Icons from 'shared/components/Icons';
 import { ClickEvent } from '@axa-fr/react-toolkit-core';
-import { DEFAULT_OPTION_LABEL, DESIGN_SYSTEM, GITHUB, STORYBOOK } from 'shared/constants';
+import { DESIGN_SYSTEM, GITHUB, STORYBOOK } from 'shared/constants';
+import InputEditor, { TInputEditor } from './InputEditor';
 import './Editor.scss';
-import CodeEditor from './CodeEditor';
-import JsonEditor from './JsonEditor';
-import { Tlistelements } from './CodeEditor/Templates';
 
 export type TEvent = {
   value?: string;
@@ -19,82 +15,9 @@ export type TEvent = {
 
 const omittedProps = ['onChange', 'knobs', 'onClick', 'values'];
 
-type TListSelect = {
-  value: string;
-  options?: Record<string, string>;
-  type?: string;
-  list?: Tlistelements;
-  labelBtnOpenCodeEditor?: string;
-};
-
 export type TonChange = (e: TEvent) => void;
 
-type TFieldEditor = {
-  value: string | boolean | TListSelect;
-  name: string;
-  onChange: TonChange;
-  options?: { label: string; value: string }[];
-};
-
-export type Tknobs = Record<string, Record<string, unknown>>;
-
-const commonProps = ({ onChange, name }: Omit<TFieldEditor, 'value'>) => ({
-  onChange,
-  name,
-  id: name,
-});
-
-export const FieldEditor = ({ value, ...props }: TFieldEditor) => (
-  <>
-    {(() => {
-      switch (true) {
-        case typeof value === 'function':
-          return <Text {...commonProps(props)} type="text" value={`${value}`} readOnly disabled />;
-        case typeof value === 'boolean':
-          return (
-            <CheckboxItem
-              {...commonProps(props)}
-              disabled={false}
-              isChecked={value}
-              value={`${value}`}
-              mode={CheckboxModes.toggle}
-              className="af-form__checkbox-toggle"
-            />
-          );
-        case typeof value === 'object' && !!value.type && value.type === 'jsx':
-          return (
-            typeof value === 'object' && (
-              <CodeEditor {...commonProps(props)} labelBtnOpenCodeEditor={value.labelBtnOpenCodeEditor} list={value?.list} value={value.value} />
-            )
-          );
-        case typeof value === 'object' && !!value.type && value.type === 'json':
-          return (
-            typeof value === 'object' && (
-              <JsonEditor {...commonProps(props)} labelBtnOpenCodeEditor={value.labelBtnOpenCodeEditor} value={value.value} />
-            )
-          );
-        case typeof value === 'object':
-          return (
-            typeof value === 'object' && (
-              <div className="af-form__select">
-                <Select
-                  {...commonProps(props)}
-                  forceDisplayPlaceholder={true}
-                  placeholder={DEFAULT_OPTION_LABEL}
-                  options={value.options}
-                  value={value.value}
-                  aria-label={`select-${props.name}`}
-                />
-              </div>
-            )
-          );
-
-        default:
-          return <Text {...commonProps(props)} type="text" value={`${value}`} />;
-      }
-    })()}
-  </>
-);
+export type Tknobs = Record<string, Record<string, TInputEditor['value']>>;
 
 type TmergePropsAndKnobs<P> = {
   props: P & Record<string, unknown>;
@@ -109,6 +32,32 @@ export const mergePropsAndKnobs = <P extends object>({ props, knobs }: TmergePro
     }),
     {},
   );
+
+type TLabelEditor = {
+  value: TInputEditor['value'];
+  name: string;
+};
+export const LabelEditor = ({ name, value }: TLabelEditor) =>
+  !(typeof value === 'object' && !!value.type && value.type === 'separator') ? (
+    <label className="af-form__group-label" htmlFor={name}>
+      {name}
+    </label>
+  ) : (
+    <></>
+  );
+
+type TFieldEditor = {
+  onChange: TonChange;
+  name: string;
+  value: TInputEditor['value'];
+};
+
+const FieldEditor = ({ name, value, onChange }: TFieldEditor) => (
+  <div className={`af-form-editor__field`} key={name}>
+    <LabelEditor value={value} name={name} />
+    <InputEditor key={name} name={name} value={value} onChange={onChange} />
+  </div>
+);
 
 /**
  * @param onChange : function for update state fields value
@@ -125,12 +74,7 @@ export const FormEditor = <P extends object>({
       {Object.entries(mergePropsAndKnobs({ props, knobs }))
         .filter(([key, val]) => !omittedProps.includes(key) && typeof val !== 'function')
         .map(([name, value]) => (
-          <div className="af-form-editor__field" key={name}>
-            <label className="af-form__group-label" htmlFor={name}>
-              {name}
-            </label>
-            <FieldEditor key={name} name={name} value={value as TFieldEditor['value']} onChange={onChange(name)} />
-          </div>
+          <FieldEditor key={name} name={name} value={value as TInputEditor['value']} onChange={onChange(name)} />
         ))}
     </>
   </form>

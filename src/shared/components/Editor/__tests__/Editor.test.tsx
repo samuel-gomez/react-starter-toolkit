@@ -2,8 +2,7 @@ import { FocusEvent } from 'react';
 import { render } from '@testing-library/react';
 import { renderHook, act } from '@testing-library/react-hooks';
 import { Text } from '@axa-fr/react-toolkit-all';
-import { emptyFunction } from 'shared/testsUtils';
-import { FieldEditor, mergePropsAndKnobs, withEditor, setValue, useEditable, useToggleEditor, TEvent } from '../Editor';
+import { mergePropsAndKnobs, withEditor, setValue, useEditable, useToggleEditor, TEvent } from '../Editor';
 
 describe('setValue', () => {
   it.each`
@@ -48,22 +47,6 @@ describe('mergePropsAndKnobs', () => {
   `('Should return expected: $expected when props: $props, knobs: $knobs', ({ props, knobs, expected }) => {
     const result = mergePropsAndKnobs({ props, knobs });
     expect(result).toEqual(expected);
-  });
-});
-
-describe('FieldEditor', () => {
-  const onChange = jest.fn();
-  it.each`
-    value
-    ${true}
-    ${'value'}
-    ${{ value: 'value', options: [] }}
-    ${{ value: 'value', type: 'jsx', labelBtnOpenCodeEditor: 'Edit JSX' }}
-    ${{ value: 'value', type: 'json', labelBtnOpenCodeEditor: 'Edit Json' }}
-    ${emptyFunction}
-  `('Should render when value: $value', ({ value }) => {
-    const { asFragment } = render(<FieldEditor value={value} name="name" onChange={onChange} />);
-    expect(asFragment()).toMatchSnapshot();
   });
 });
 
