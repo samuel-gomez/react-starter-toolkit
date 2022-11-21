@@ -15,6 +15,7 @@ import { ROUTE_URL_TABS as TABS } from 'pages/Demos/Tabs/constants';
 import { ROUTE_URL_RADIO_INPUT as RADIO_INPUT } from 'pages/Demos/RadioInput/constants';
 import { ROUTE_URL_CHECKBOX_INPUT as CHECKBOX_INPUT } from 'pages/Demos/CheckboxInput/constants';
 import { ROUTE_URL_SELECT_INPUT as SELECT_INPUT } from 'pages/Demos/SelectInput/constants';
+import { ROUTE_URL_STEPPER as STEPPER } from 'pages/Demos/Stepper/constants';
 import { ROUTE_URL_RESTITUTION as RESTITUTION } from 'pages/Demos/Restitution/constants';
 import { ROUTE_URL_BADGE as BADGE } from 'pages/Demos/Badge/constants';
 import { ROUTE_URL_TITLE as TITLE } from 'pages/Demos/Title/constants';
@@ -73,6 +74,7 @@ const ROUTE_URL = {
   LOADER,
   SLIDER,
   SWITCH,
+  STEPPER,
 };
 
 export default ROUTE_URL;

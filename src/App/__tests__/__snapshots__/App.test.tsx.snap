@@ -658,6 +658,22 @@ exports[`<App/> Should render App with all props and authentication NOT enabled 
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
+                    aria-label="Stepper"
+                    class="af-nav__link"
+                    href="/demos/stepper"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Stepper
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
                     aria-label="Slider"
                     class="af-nav__link"
                     href="/demos/slider"
@@ -1477,6 +1493,22 @@ exports[`<App/> Should render App with all props and authentication enabled 1`] 
                     tabindex="-1"
                   >
                     Select Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Stepper"
+                    class="af-nav__link"
+                    href="/demos/stepper"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Stepper
                   </a>
                 </li>
                 <li

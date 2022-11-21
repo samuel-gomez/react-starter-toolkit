@@ -142,6 +142,10 @@ const MENU_ITEMS = [
         url: ROUTE_URL.SELECT_INPUT,
       },
       {
+        label: 'Stepper',
+        url: ROUTE_URL.STEPPER,
+      },
+      {
         label: 'Slider',
         url: ROUTE_URL.SLIDER,
       },

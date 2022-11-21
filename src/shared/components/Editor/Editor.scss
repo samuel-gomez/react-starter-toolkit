@@ -75,6 +75,12 @@
   padding-bottom: 1.5rem;
   &__field {
     padding: 0.4rem 1rem;
+    &:has(.af-form-editor__separator) {
+      padding: 0.2rem;
+      background: $color-gray-2;
+      color: $color-scorpion;
+      margin: 1rem 0 0 0;
+    }
     &:not(:last-child) {
       border-bottom: 1px solid $color-gray-2;
     }
@@ -99,6 +105,9 @@
     }
     .af-form__input-textarea {
       width: 100%;
+    }
+    .af-form-editor__separator {
+      margin: 0;
     }
   }
 }
