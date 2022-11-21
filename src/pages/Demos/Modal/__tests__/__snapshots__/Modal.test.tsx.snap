@@ -655,6 +655,22 @@ exports[`<ModalPage/> Should render ModalPage 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
+                    aria-label="Stepper"
+                    class="af-nav__link"
+                    href="/demos/stepper"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Stepper
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
                     aria-label="Slider"
                     class="af-nav__link"
                     href="/demos/slider"
@@ -2704,6 +2720,22 @@ exports[`<ModalPage/> Should render ModalPage with modal opened 1`] = `
                     tabindex="-1"
                   >
                     Select Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Stepper"
+                    class="af-nav__link"
+                    href="/demos/stepper"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Stepper
                   </a>
                 </li>
                 <li

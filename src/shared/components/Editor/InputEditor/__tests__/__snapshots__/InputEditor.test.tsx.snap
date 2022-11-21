@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputEditor Should render when value: {"labelBtnOpenCodeEditor": "Edit JSX", "type": "jsx", "value": "value"} 1`] = `
+<DocumentFragment>
+  <button
+    class="btn af-btn af-btn--editor"
+    type="submit"
+  >
+    <span
+      class="af-btn__text"
+    >
+      Edit JSX
+    </span>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`InputEditor Should render when value: {"labelBtnOpenCodeEditor": "Edit Json", "type": "json", "value": "value"} 1`] = `
+<DocumentFragment>
+  <button
+    class="btn af-btn af-btn--editor"
+    type="submit"
+  >
+    <span
+      class="af-btn__text"
+    >
+      Edit Json
+    </span>
+  </button>
+</DocumentFragment>
+`;
+
+exports[`InputEditor Should render when value: {"options": [Array], "value": "value"} 1`] = `
+<DocumentFragment>
+  <div
+    class="af-form__select"
+  >
+    <div
+      class="af-form__select-container"
+    >
+      <select
+        aria-label="select-name"
+        class="af-form__input-select"
+        id="name"
+        name="name"
+      />
+      <span
+        aria-controls="name"
+        class="glyphicon glyphicon-menu-down"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InputEditor Should render when value: {"type": "separator", "value": "value"} 1`] = `
+<DocumentFragment>
+  <h3
+    class="af-form-editor__separator"
+  >
+    value
+  </h3>
+</DocumentFragment>
+`;
+
+exports[`InputEditor Should render when value: true 1`] = `
+<DocumentFragment>
+  <div
+    class="af-form__checkbox-toggle"
+  >
+    <input
+      checked=""
+      class="af-form__input-checkbox"
+      id="name"
+      mode="toggle"
+      name="name"
+      type="checkbox"
+    />
+    <label
+      class="af-form__label"
+      for="name"
+    >
+      <span
+        class="af-form__indicator"
+      >
+        <i
+          class="glyphicon glyphicon-ok"
+        />
+      </span>
+      <span
+        class="af-form__description"
+      />
+    </label>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InputEditor Should render when value: value 1`] = `
+<DocumentFragment>
+  <input
+    class="af-form__input-text"
+    id="name"
+    name="name"
+    type="text"
+    value="value"
+  />
+</DocumentFragment>
+`;

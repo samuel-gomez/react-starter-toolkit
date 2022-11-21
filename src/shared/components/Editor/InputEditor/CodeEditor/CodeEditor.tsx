@@ -5,11 +5,11 @@ import { ClickEvent } from '@axa-fr/react-toolkit-core';
 import '@uiw/react-textarea-code-editor/dist.css';
 import { ChangeEvent, useCallback, useEffect, useState } from 'react';
 import { ModalCommonHeader, ModalCommonBody, ModalCommonFooter, useToggleModal } from 'shared/components/ModalCommon';
-import { TEvent, TonChange } from '../Editor';
+import { TEvent, TonChange } from '../../Editor';
 import './CodeEditor.scss';
 import Templates, { Tlistelements } from './Templates';
 
-export const getTemplate = (temlateName: string) => import(`../../../../../public/templates/${temlateName}.js`);
+export const getTemplate = (temlateName: string) => import(`../../../../../../public/templates/${temlateName}.js`);
 
 const INITIAL_STATE = { name: '', hasSubmit: false };
 
