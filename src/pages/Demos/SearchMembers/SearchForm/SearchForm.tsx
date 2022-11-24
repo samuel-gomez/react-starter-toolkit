@@ -30,7 +30,7 @@ export const InputCustom = ({ field, formState }: TInputCustom) => (
         <label className="af-form__group-label" htmlFor={NAME}>
           {LABEL_NAME}
         </label>
-        <Text {...field} id={NAME} placeholder={PLACEHOLDER_NAME} autoComplete="search-name" onChange={onChangeValue(field)} />
+        <Text {...field} id={NAME} ref={null} placeholder={PLACEHOLDER_NAME} autoComplete="search-name" onChange={onChangeValue(field)} />
         <HelpMessage message={`Minimum ${MIN_SEARCH_BY_NAME} caractères pour un nom`} />
       </FieldInput>
       <FieldError />
