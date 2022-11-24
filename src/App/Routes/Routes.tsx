@@ -37,6 +37,7 @@ import LoaderAxa from 'pages/Demos/Loader';
 import Slider from 'pages/Demos/Slider';
 import Switch from 'pages/Demos/Switch';
 import Modal from 'pages/Demos/Modal';
+import FileInput from 'pages/Demos/FileInput';
 import ROUTE_URL from 'App/Routes/constants';
 import { UserContext } from 'App/UserProvider';
 import Loader, { MODES } from 'shared/components/Loader';
@@ -103,6 +104,7 @@ type TRoutesCmpt = {
   SliderCmpt?: typeof Slider;
   SwitchCmpt?: typeof Switch;
   ModalCmpt?: typeof Modal;
+  FileInputCmpt?: typeof FileInput;
 };
 
 const RoutesCmpt = ({
@@ -141,6 +143,7 @@ const RoutesCmpt = ({
   SliderCmpt = Slider,
   SwitchCmpt = Switch,
   ModalCmpt = Modal,
+  FileInputCmpt = FileInput,
   withAuthFn = withAuth,
 }: TRoutesCmpt) => (
   <Routes>
@@ -178,6 +181,7 @@ const RoutesCmpt = ({
       <Route path={ROUTE_URL.SLIDER} element={withAuthFn(SliderCmpt)} />
       <Route path={ROUTE_URL.SWITCH} element={withAuthFn(SwitchCmpt)} />
       <Route path={ROUTE_URL.MODAL} element={withAuthFn(ModalCmpt)} />
+      <Route path={ROUTE_URL.FILE_INPUT} element={withAuthFn(FileInputCmpt)} />
     </Route>
     <Route path={ROUTE_URL.LAYOUT} element={withAuthFn(LayoutCmpt)} />
     <Route path={ROUTE_URL.UNAUTHORIZE} element={<PageUnauthorizeCmpt />} />

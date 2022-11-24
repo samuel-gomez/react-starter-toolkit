@@ -715,6 +715,22 @@ exports[`<App/> Should render App with all props and authentication NOT enabled 
                     Switch
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="File"
+                    class="af-nav__link"
+                    href="/demos/file-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    File
+                  </a>
+                </li>
               </ul>
             </li>
             <li
@@ -1573,6 +1589,22 @@ exports[`<App/> Should render App with all props and authentication enabled 1`] 
                     tabindex="-1"
                   >
                     Switch
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="File"
+                    class="af-nav__link"
+                    href="/demos/file-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    File
                   </a>
                 </li>
               </ul>

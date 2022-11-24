@@ -157,6 +157,10 @@ const MENU_ITEMS = [
         label: 'Switch',
         url: ROUTE_URL.SWITCH,
       },
+      {
+        label: 'File',
+        url: ROUTE_URL.FILE_INPUT,
+      },
     ],
   },
   {
