@@ -207,7 +207,7 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
                           aria-haspopup="true"
                           aria-label="Modal"
                           class="af-nav__link"
-                          href="/demos/modal"
+                          href="/demos/modal-custom"
                           role="menuitem"
                           tabindex="-1"
                         >
@@ -445,6 +445,22 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
                           tabindex="-1"
                         >
                           Loader
+                        </a>
+                      </li>
+                      <li
+                        class="af-nav__item "
+                        role="none"
+                      >
+                        <a
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          aria-label="Modal"
+                          class="af-nav__link"
+                          href="/demos/modal"
+                          role="menuitem"
+                          tabindex="-1"
+                        >
+                          Modal
                         </a>
                       </li>
                     </ul>

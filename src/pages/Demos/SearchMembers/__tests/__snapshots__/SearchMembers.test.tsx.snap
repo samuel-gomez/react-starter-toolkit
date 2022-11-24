@@ -248,7 +248,7 @@ exports[`<SearchMembers/> Should render <SearchMembers /> with one member 1`] = 
                     aria-haspopup="true"
                     aria-label="Modal"
                     class="af-nav__link"
-                    href="/demos/modal"
+                    href="/demos/modal-custom"
                     role="menuitem"
                     tabindex="-1"
                   >
@@ -486,6 +486,22 @@ exports[`<SearchMembers/> Should render <SearchMembers /> with one member 1`] = 
                     tabindex="-1"
                   >
                     Loader
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Modal"
+                    class="af-nav__link"
+                    href="/demos/modal"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Modal
                   </a>
                 </li>
               </ul>
@@ -1251,7 +1267,7 @@ exports[`<SearchMembers/> Should render SearchMembers 1`] = `
                     aria-haspopup="true"
                     aria-label="Modal"
                     class="af-nav__link"
-                    href="/demos/modal"
+                    href="/demos/modal-custom"
                     role="menuitem"
                     tabindex="-1"
                   >
@@ -1489,6 +1505,22 @@ exports[`<SearchMembers/> Should render SearchMembers 1`] = `
                     tabindex="-1"
                   >
                     Loader
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Modal"
+                    class="af-nav__link"
+                    href="/demos/modal"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Modal
                   </a>
                 </li>
               </ul>

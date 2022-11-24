@@ -128,7 +128,7 @@ exports[`<Menu/> Render <Menu/> 1`] = `
                     aria-haspopup="true"
                     aria-label="Modal"
                     class="af-nav__link"
-                    href="/modal"
+                    href="/modal-custom"
                     role="menuitem"
                     tabindex="-1"
                   >
@@ -367,6 +367,22 @@ exports[`<Menu/> Render <Menu/> 1`] = `
                     tabindex="-1"
                   >
                     Loader
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Modal"
+                    class="af-nav__link"
+                    href="/modal"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Modal
                   </a>
                 </li>
               </ul>

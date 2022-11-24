@@ -4,7 +4,7 @@ import { ROUTE_URL_NOTFOUND as NOTFOUND } from 'pages/NotFound/constants';
 import { ROUTE_URL_UNAUTHORIZE as UNAUTHORIZE } from 'pages/Unauthorize/constants';
 import { ROUTE_URL_MEMBERS as MEMBERS } from 'pages/Demos/Members/constants';
 import { ROUTE_URL_SEARCHMEMBERS as SEARCHMEMBERS } from 'pages/Demos/SearchMembers/constants';
-import { ROUTE_URL_MODAL as MODAL } from 'pages/Demos/Modal/constants';
+import { ROUTE_URL_MODAL_CUSTOM as MODAL_CUSTOM } from 'pages/Demos/ModalCustom/constants';
 import { ROUTE_URL_BUTTON as BUTTON } from 'pages/Demos/Button/constants';
 import { ROUTE_URL_NOTIFICATION as NOTIFICATION } from 'pages/Demos/Notification/constants';
 import { ROUTE_URL_LAYOUT as LAYOUT } from 'pages/Demos/Layout/constants';
@@ -33,6 +33,7 @@ import { ROUTE_URL_ACCORDION as ACCORDION } from 'pages/Demos/Accordion/constant
 import { ROUTE_URL_LOADER as LOADER } from 'pages/Demos/Loader/constants';
 import { ROUTE_URL_SLIDER as SLIDER } from 'pages/Demos/Slider/constants';
 import { ROUTE_URL_SWITCH as SWITCH } from 'pages/Demos/Switch/constants';
+import { ROUTE_URL_MODAL as MODAL } from 'pages/Demos/Modal/constants';
 
 const DEMOS = '/demos';
 const LAYOUTS = '/layouts';
@@ -45,7 +46,7 @@ const ROUTE_URL = {
   DEMOS,
   MEMBERS,
   SEARCHMEMBERS,
-  MODAL,
+  MODAL_CUSTOM,
   BUTTON,
   NOTIFICATION,
   LAYOUTS,
@@ -75,6 +76,7 @@ const ROUTE_URL = {
   SLIDER,
   SWITCH,
   STEPPER,
+  MODAL,
 };
 
 export default ROUTE_URL;
