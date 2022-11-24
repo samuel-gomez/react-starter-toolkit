@@ -1,5 +1,6 @@
 import { ComponentType, FocusEvent, useCallback, useState } from 'react';
 import Draggable from 'react-draggable';
+import { useToggleModal } from 'shared/components/ModalCommon';
 import Icons from 'shared/components/Icons';
 import { ClickEvent } from '@axa-fr/react-toolkit-core';
 import { DESIGN_SYSTEM, GITHUB, STORYBOOK } from 'shared/constants';
@@ -147,6 +148,7 @@ type TuseEditable<T> = {
 
 export const useEditable = <T extends object>({ initialState, logEventFn = console.log, setValueFn = setValue }: TuseEditable<T>) => {
   const [state, setState] = useState(initialState);
+  const { onCancel, openModal, isOpen } = useToggleModal();
 
   const onClick = useCallback(
     (name: string) => (e: ClickEvent) => {
@@ -175,7 +177,7 @@ export const useEditable = <T extends object>({ initialState, logEventFn = conso
     setState(prevState => ({ ...prevState, autoFocus: true }));
   }, []);
 
-  return { onClick, onChange, state, onFocus, onBlur };
+  return { onClick, onChange, state, onFocus, onBlur, onCancel, openModal, isOpen };
 };
 
 type TEditorHeader = {

@@ -182,7 +182,7 @@ exports[`<Members/> Should render <Members /> with one member 1`] = `
                     aria-haspopup="true"
                     aria-label="Modal"
                     class="af-nav__link"
-                    href="/demos/modal"
+                    href="/demos/modal-custom"
                     role="menuitem"
                     tabindex="-1"
                   >
@@ -420,6 +420,22 @@ exports[`<Members/> Should render <Members /> with one member 1`] = `
                     tabindex="-1"
                   >
                     Loader
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Modal"
+                    class="af-nav__link"
+                    href="/demos/modal"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Modal
                   </a>
                 </li>
               </ul>
@@ -1252,7 +1268,7 @@ exports[`<Members/> Should render Members 1`] = `
                     aria-haspopup="true"
                     aria-label="Modal"
                     class="af-nav__link"
-                    href="/demos/modal"
+                    href="/demos/modal-custom"
                     role="menuitem"
                     tabindex="-1"
                   >
@@ -1490,6 +1506,22 @@ exports[`<Members/> Should render Members 1`] = `
                     tabindex="-1"
                   >
                     Loader
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Modal"
+                    class="af-nav__link"
+                    href="/demos/modal"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Modal
                   </a>
                 </li>
               </ul>

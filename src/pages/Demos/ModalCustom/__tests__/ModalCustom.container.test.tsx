@@ -1,5 +1,5 @@
 import { renderWithWrapperStaticRouter } from 'shared/testsUtils';
-import ModalPageContainer from '../Modal.container';
+import ModalPageContainer from '../ModalCustom.container';
 
 describe('<ModalPageContainer/>', () => {
   const ModalPageCmpt = jest.fn().mockReturnValue('ModalPageCmpt');

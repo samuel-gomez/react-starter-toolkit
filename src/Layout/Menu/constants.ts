@@ -22,7 +22,7 @@ const MENU_ITEMS = [
       },
       {
         label: 'Modal',
-        url: ROUTE_URL.MODAL,
+        url: ROUTE_URL.MODAL_CUSTOM,
       },
       {
         label: 'Notification',
@@ -82,6 +82,10 @@ const MENU_ITEMS = [
       {
         label: 'Loader',
         url: ROUTE_URL.LOADER,
+      },
+      {
+        label: 'Modal',
+        url: ROUTE_URL.MODAL,
       },
     ],
   },

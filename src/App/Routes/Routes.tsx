@@ -6,7 +6,7 @@ import PageUnauthorize from 'pages/Unauthorize';
 import Members from 'pages/Demos/Members';
 import SearchMembers from 'pages/Demos/SearchMembers';
 import SlashDesignSystem from 'pages/Demos/SlashDesignSystem';
-import Modal from 'pages/Demos/Modal';
+import ModalCustom from 'pages/Demos/ModalCustom';
 import Button from 'pages/Demos/Button';
 import Notification from 'pages/Demos/Notification';
 import Home from 'pages/Home';
@@ -36,6 +36,7 @@ import Accordion from 'pages/Demos/Accordion';
 import LoaderAxa from 'pages/Demos/Loader';
 import Slider from 'pages/Demos/Slider';
 import Switch from 'pages/Demos/Switch';
+import Modal from 'pages/Demos/Modal';
 import ROUTE_URL from 'App/Routes/constants';
 import { UserContext } from 'App/UserProvider';
 import Loader, { MODES } from 'shared/components/Loader';
@@ -70,7 +71,7 @@ type TRoutesCmpt = {
   HomeCmpt?: typeof Home;
   MembersCmpt?: typeof Members;
   SearchMembersCmpt?: typeof SearchMembers;
-  ModalCmpt?: typeof Modal;
+  ModalCustomCmpt?: typeof ModalCustom;
   ButtonCmpt?: typeof Button;
   NotificationCmpt?: typeof Notification;
   PageUnauthorizeCmpt?: typeof PageUnauthorize;
@@ -101,6 +102,7 @@ type TRoutesCmpt = {
   LoaderAxaCmpt?: typeof LoaderAxa;
   SliderCmpt?: typeof Slider;
   SwitchCmpt?: typeof Switch;
+  ModalCmpt?: typeof Modal;
 };
 
 const RoutesCmpt = ({
@@ -108,7 +110,7 @@ const RoutesCmpt = ({
   HomeCmpt = Home,
   MembersCmpt = Members,
   SearchMembersCmpt = SearchMembers,
-  ModalCmpt = Modal,
+  ModalCustomCmpt = ModalCustom,
   ButtonCmpt = Button,
   NotificationCmpt = Notification,
   PageUnauthorizeCmpt = PageUnauthorize,
@@ -138,6 +140,7 @@ const RoutesCmpt = ({
   LoaderAxaCmpt = LoaderAxa,
   SliderCmpt = Slider,
   SwitchCmpt = Switch,
+  ModalCmpt = Modal,
   withAuthFn = withAuth,
 }: TRoutesCmpt) => (
   <Routes>
@@ -146,7 +149,7 @@ const RoutesCmpt = ({
       <Route index element={withAuthFn(SlashDesignSystemCmpt)} />
       <Route path={ROUTE_URL.MEMBERS} element={withAuthFn(MembersCmpt)} />
       <Route path={ROUTE_URL.SEARCHMEMBERS} element={withAuthFn(SearchMembersCmpt)} />
-      <Route path={ROUTE_URL.MODAL} element={withAuthFn(ModalCmpt)} />
+      <Route path={ROUTE_URL.MODAL_CUSTOM} element={withAuthFn(ModalCustomCmpt)} />
       <Route path={ROUTE_URL.BUTTON} element={withAuthFn(ButtonCmpt)} />
       <Route path={ROUTE_URL.NOTIFICATION} element={withAuthFn(NotificationCmpt)} />
       <Route path={ROUTE_URL.ALERT} element={withAuthFn(AlertCmpt)} />
@@ -174,6 +177,7 @@ const RoutesCmpt = ({
       <Route path={ROUTE_URL.LOADER} element={withAuthFn(LoaderAxaCmpt)} />
       <Route path={ROUTE_URL.SLIDER} element={withAuthFn(SliderCmpt)} />
       <Route path={ROUTE_URL.SWITCH} element={withAuthFn(SwitchCmpt)} />
+      <Route path={ROUTE_URL.MODAL} element={withAuthFn(ModalCmpt)} />
     </Route>
     <Route path={ROUTE_URL.LAYOUT} element={withAuthFn(LayoutCmpt)} />
     <Route path={ROUTE_URL.UNAUTHORIZE} element={<PageUnauthorizeCmpt />} />
