@@ -794,6 +794,22 @@ exports[`<SearchMembers/> Should render <SearchMembers /> with one member 1`] = 
                     File
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Select Multi"
+                    class="af-nav__link"
+                    href="/demos/select-multi"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Select Multi
+                  </a>
+                </li>
               </ul>
             </li>
             <li
@@ -1827,6 +1843,22 @@ exports[`<SearchMembers/> Should render SearchMembers 1`] = `
                     tabindex="-1"
                   >
                     File
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Select Multi"
+                    class="af-nav__link"
+                    href="/demos/select-multi"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Select Multi
                   </a>
                 </li>
               </ul>

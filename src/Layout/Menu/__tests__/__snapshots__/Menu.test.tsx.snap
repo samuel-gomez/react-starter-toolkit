@@ -677,6 +677,22 @@ exports[`<Menu/> Render <Menu/> 1`] = `
                     File
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Select Multi"
+                    class="af-nav__link"
+                    href="/select-multi"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Select Multi
+                  </a>
+                </li>
               </ul>
             </li>
             <li

@@ -35,6 +35,7 @@ import { ROUTE_URL_SLIDER as SLIDER } from 'pages/Demos/Slider/constants';
 import { ROUTE_URL_SWITCH as SWITCH } from 'pages/Demos/Switch/constants';
 import { ROUTE_URL_MODAL as MODAL } from 'pages/Demos/Modal/constants';
 import { ROUTE_URL_FILE_INPUT as FILE_INPUT } from 'pages/Demos/FileInput/constants';
+import { ROUTE_URL_SELECT_MULTI as SELECT_MULTI } from 'pages/Demos/SelectMulti/constants';
 
 const DEMOS = '/demos';
 const LAYOUTS = '/layouts';
@@ -79,6 +80,7 @@ const ROUTE_URL = {
   STEPPER,
   MODAL,
   FILE_INPUT,
+  SELECT_MULTI,
 };
 
 export default ROUTE_URL;
