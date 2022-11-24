@@ -38,6 +38,7 @@ import Slider from 'pages/Demos/Slider';
 import Switch from 'pages/Demos/Switch';
 import Modal from 'pages/Demos/Modal';
 import FileInput from 'pages/Demos/FileInput';
+import SelectMulti from 'pages/Demos/SelectMulti';
 import ROUTE_URL from 'App/Routes/constants';
 import { UserContext } from 'App/UserProvider';
 import Loader, { MODES } from 'shared/components/Loader';
@@ -105,6 +106,7 @@ type TRoutesCmpt = {
   SwitchCmpt?: typeof Switch;
   ModalCmpt?: typeof Modal;
   FileInputCmpt?: typeof FileInput;
+  SelectMultiCmpt?: typeof SelectMulti;
 };
 
 const RoutesCmpt = ({
@@ -144,6 +146,7 @@ const RoutesCmpt = ({
   SwitchCmpt = Switch,
   ModalCmpt = Modal,
   FileInputCmpt = FileInput,
+  SelectMultiCmpt = SelectMulti,
   withAuthFn = withAuth,
 }: TRoutesCmpt) => (
   <Routes>
@@ -182,6 +185,7 @@ const RoutesCmpt = ({
       <Route path={ROUTE_URL.SWITCH} element={withAuthFn(SwitchCmpt)} />
       <Route path={ROUTE_URL.MODAL} element={withAuthFn(ModalCmpt)} />
       <Route path={ROUTE_URL.FILE_INPUT} element={withAuthFn(FileInputCmpt)} />
+      <Route path={ROUTE_URL.SELECT_MULTI} element={withAuthFn(SelectMultiCmpt)} />
     </Route>
     <Route path={ROUTE_URL.LAYOUT} element={withAuthFn(LayoutCmpt)} />
     <Route path={ROUTE_URL.UNAUTHORIZE} element={<PageUnauthorizeCmpt />} />

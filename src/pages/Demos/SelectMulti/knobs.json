@@ -22,6 +22,11 @@
         "id": "add-title__h4",
         "label": "H4",
         "tooltipLabel": "Titre h4"
+      },
+      {
+        "id": "add-text",
+        "label": "P",
+        "tooltipLabel": "Paragraph"
       }
     ]
   },
@@ -41,5 +46,9 @@
         "value": "error"
       }
     ]
+  },
+  "options": {
+    "type": "json",
+    "labelBtnOpenCodeEditor": "Edit options"
   }
 }

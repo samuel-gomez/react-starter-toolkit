@@ -161,6 +161,10 @@ const MENU_ITEMS = [
         label: 'File',
         url: ROUTE_URL.FILE_INPUT,
       },
+      {
+        label: 'Select Multi',
+        url: ROUTE_URL.SELECT_MULTI,
+      },
     ],
   },
   {
