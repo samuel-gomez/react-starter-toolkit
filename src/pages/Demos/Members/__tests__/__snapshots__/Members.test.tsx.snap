@@ -712,6 +712,22 @@ exports[`<Members/> Should render <Members /> with one member 1`] = `
                     Switch
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="File"
+                    class="af-nav__link"
+                    href="/demos/file-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    File
+                  </a>
+                </li>
               </ul>
             </li>
             <li
@@ -1796,6 +1812,22 @@ exports[`<Members/> Should render Members 1`] = `
                     tabindex="-1"
                   >
                     Switch
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="File"
+                    class="af-nav__link"
+                    href="/demos/file-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    File
                   </a>
                 </li>
               </ul>
