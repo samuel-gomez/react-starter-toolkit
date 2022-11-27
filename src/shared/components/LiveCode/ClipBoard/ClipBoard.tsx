@@ -25,7 +25,7 @@ const ClipBoard = ({ content, useClipBoardFn = useClipBoard }: TClipBoard) => {
   const classClicked = clicked ? ' af-clipboard--clicked' : '';
 
   return (
-    <Button title="Copy to clipboard" className={`af-btn--circle af-clipboard${classClicked}`}>
+    <Button aria-label="Copy to clipboard" className={`af-btn--circle af-clipboard${classClicked}`}>
       <i className="glyphicon glyphicon-copy" onClick={onClick}></i>
       <span className="af-clipboard__message">Copied !</span>
     </Button>

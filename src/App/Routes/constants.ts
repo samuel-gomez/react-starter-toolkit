@@ -10,6 +10,7 @@ import { ROUTE_URL_NOTIFICATION as NOTIFICATION } from 'pages/Demos/Notification
 import { ROUTE_URL_LAYOUT as LAYOUT } from 'pages/Demos/Layout/constants';
 import { ROUTE_URL_ALERT as ALERT } from 'pages/Demos/Alert/constants';
 import { ROUTE_URL_TEXT_INPUT as TEXT_INPUT } from 'pages/Demos/TextInput/constants';
+import { ROUTE_URL_NUMBER_INPUT as NUMBER_INPUT } from 'pages/Demos/NumberInput/constants';
 import { ROUTE_URL_TEXTAREA_INPUT as TEXTAREA_INPUT } from 'pages/Demos/TextareaInput/constants';
 import { ROUTE_URL_TABS as TABS } from 'pages/Demos/Tabs/constants';
 import { ROUTE_URL_RADIO_INPUT as RADIO_INPUT } from 'pages/Demos/RadioInput/constants';
@@ -55,6 +56,7 @@ const ROUTE_URL = {
   LAYOUT,
   ALERT,
   TEXT_INPUT,
+  NUMBER_INPUT,
   TEXTAREA_INPUT,
   TABS,
   RADIO_INPUT,

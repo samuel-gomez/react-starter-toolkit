@@ -673,6 +673,22 @@ exports[`<SearchMembers/> Should render <SearchMembers /> with one member 1`] = 
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
+                    aria-label="Number Input"
+                    class="af-nav__link"
+                    href="/demos/number-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Number Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
                     aria-label="Textarea Input"
                     class="af-nav__link"
                     href="/demos/textarea-input"
@@ -1715,6 +1731,22 @@ exports[`<SearchMembers/> Should render SearchMembers 1`] = `
                     tabindex="-1"
                   >
                     Text Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Number Input"
+                    class="af-nav__link"
+                    href="/demos/number-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Number Input
                   </a>
                 </li>
                 <li

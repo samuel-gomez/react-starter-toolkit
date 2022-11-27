@@ -9,9 +9,11 @@ type TexpectLink = {
 };
 
 const expectLink = ({ isQueryByRole = false, name, href = '', role = 'link', beInDoc = true }: TexpectLink) => {
-  const link = (isQueryByRole ? screen.queryByRole(role, { name }) : screen.getByRole(role, { name })) as HTMLAnchorElement;
+  const link = (
+    isQueryByRole ? screen.queryByRole(role, { name: RegExp(name) }) : screen.getByRole(role, { name: RegExp(name) })
+  ) as HTMLAnchorElement;
   beInDoc ? expect(link).toBeInTheDocument() : expect(link).not.toBeInTheDocument();
-  beInDoc && href && expect(link.href).toMatch(href);
+  beInDoc && href && expect(link).toHaveAttribute('href', href);
 };
 
 export default expectLink;

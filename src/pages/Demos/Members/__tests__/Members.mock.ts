@@ -26,26 +26,6 @@ export const defaultProps = {
   sorting: INITIAL_STATE_SORTING,
 };
 
-export const membersFormattedMock = [
-  {
-    key: '99999',
-    cols: {
-      firstname: {
-        label: 'Samuel',
-      },
-      lastname: {
-        label: 'Gomez',
-      },
-      birthdate: {
-        label: '20/10/1985',
-      },
-      sexe: {
-        label: 'M',
-      },
-    },
-  },
-];
-
 export const membersMock = [
   {
     _id: 99999,

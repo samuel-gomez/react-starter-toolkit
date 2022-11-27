@@ -610,6 +610,22 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer and called funct
                     <a
                       aria-expanded="false"
                       aria-haspopup="true"
+                      aria-label="Number Input"
+                      class="af-nav__link"
+                      href="/demos/number-input"
+                      role="menuitem"
+                      tabindex="-1"
+                    >
+                      Number Input
+                    </a>
+                  </li>
+                  <li
+                    class="af-nav__item "
+                    role="none"
+                  >
+                    <a
+                      aria-expanded="false"
+                      aria-haspopup="true"
                       aria-label="Textarea Input"
                       class="af-nav__link"
                       href="/demos/textarea-input"
@@ -881,6 +897,7 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer and called funct
           class="af-livecode"
         >
           <div
+            aria-label="demo-preview"
             style="background: white; padding: 2rem; width: 100%;"
           >
             <button
@@ -895,12 +912,13 @@ exports[`<ModalPageContainer/> Should render ModalPageContainer and called funct
             </button>
           </div>
           <pre
+            aria-label="demo-source-code"
             class="prism-code language-jsx"
             style="color: rgb(156, 220, 254); background-color: rgb(30, 30, 30); padding: 1rem; font-size: 0.8rem; position: relative;"
           >
             <button
+              aria-label="Copy to clipboard"
               class="af-btn--circle af-clipboard"
-              title="Copy to clipboard"
             >
               <i
                 class="glyphicon glyphicon-copy"

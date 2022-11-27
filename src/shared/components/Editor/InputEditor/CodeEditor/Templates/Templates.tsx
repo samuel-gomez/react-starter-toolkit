@@ -72,14 +72,14 @@ type TTemplates = {
 const Templates = ({ list = DEFAULT_LIST, submitTemplate, onClearCodeEditor }: TTemplates) => (
   <div className="af-templates">
     <HelpInfo key="delete" content="Supprimer" classModifier="editor">
-      <Button className="af-btn--circle af-btn--delete" onClick={onClearCodeEditor}>
-        <i className="glyphicon glyphicon-trash"></i>
+      <Button aria-label="Suppression du code" className="af-btn--circle af-btn--delete" onClick={onClearCodeEditor}>
+        <i role="img" aria-label="Icone suppression du code" className="glyphicon glyphicon-trash"></i>
       </Button>
     </HelpInfo>
     {list.map(({ id, label, icon, tooltipLabel }) => (
       <HelpInfo key={id} content={tooltipLabel} classModifier="editor">
-        <Button className="af-btn--circle" id={id} onClick={submitTemplate}>
-          {!!icon && <i className={`glyphicon glyphicon-${icon}`}></i>}
+        <Button aria-label={`Ajout du code ${label}`} className="af-btn--circle" id={id} onClick={submitTemplate}>
+          {!!icon && <i role="img" aria-label={`Icone ajout du code ${label}`} className={`glyphicon glyphicon-${icon}`}></i>}
           {label}
         </Button>
       </HelpInfo>

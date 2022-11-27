@@ -130,6 +130,10 @@ const MENU_ITEMS = [
         url: ROUTE_URL.TEXT_INPUT,
       },
       {
+        label: 'Number Input',
+        url: ROUTE_URL.NUMBER_INPUT,
+      },
+      {
         label: 'Textarea Input',
         url: ROUTE_URL.TEXTAREA_INPUT,
       },

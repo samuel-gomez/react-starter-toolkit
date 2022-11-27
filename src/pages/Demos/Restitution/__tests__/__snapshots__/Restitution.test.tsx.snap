@@ -607,6 +607,22 @@ exports[`<RestitutionPage/> Should render RestitutionPage 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
+                    aria-label="Number Input"
+                    class="af-nav__link"
+                    href="/demos/number-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Number Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
                     aria-label="Textarea Input"
                     class="af-nav__link"
                     href="/demos/textarea-input"
@@ -938,23 +954,24 @@ exports[`<RestitutionPage/> Should render RestitutionPage 1`] = `
               src="https://badge.fury.io/js/%40axa-fr%2Freact-toolkit-restitution.svg"
             />
           </a>
-          <span
+          <button
             class="af-link"
           >
             <i
+              aria-label="cog"
               class="glyphicon glyphicon-cog"
+              role="img"
             />
-            <span
-              class="af-link"
-            >
+            <span>
               Edit props
             </span>
-          </span>
+          </button>
         </header>
         <article
           class="af-livecode af-livecode--with-editor"
         >
           <div
+            aria-label="demo-preview"
             style="background: white; padding: 2rem; width: 100%;"
           >
             <article
@@ -1082,12 +1099,13 @@ exports[`<RestitutionPage/> Should render RestitutionPage 1`] = `
              
           </div>
           <pre
+            aria-label="demo-source-code"
             class="prism-code language-jsx"
             style="color: rgb(156, 220, 254); background-color: rgb(30, 30, 30); padding: 1rem; font-size: 0.8rem; position: relative;"
           >
             <button
+              aria-label="Copy to clipboard"
               class="af-btn--circle af-clipboard"
-              title="Copy to clipboard"
             >
               <i
                 class="glyphicon glyphicon-copy"

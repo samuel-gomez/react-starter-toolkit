@@ -3,8 +3,8 @@
 exports[`<ClipBoard/> Should render ClipBoard 1`] = `
 <DocumentFragment>
   <button
+    aria-label="Copy to clipboard"
     class="af-btn--circle af-clipboard"
-    title="Copy to clipboard"
   >
     <i
       class="glyphicon glyphicon-copy"
@@ -21,8 +21,8 @@ exports[`<ClipBoard/> Should render ClipBoard 1`] = `
 exports[`<ClipBoard/> Should render ClipBoard with clicked classModifier 1`] = `
 <DocumentFragment>
   <button
+    aria-label="Copy to clipboard"
     class="af-btn--circle af-clipboard af-clipboard--clicked"
-    title="Copy to clipboard"
   >
     <i
       class="glyphicon glyphicon-copy"

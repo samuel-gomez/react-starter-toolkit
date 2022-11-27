@@ -13,6 +13,7 @@ import Home from 'pages/Home';
 import Layout from 'pages/Demos/Layout';
 import Alert from 'pages/Demos/Alert';
 import TextInput from 'pages/Demos/TextInput';
+import NumberInput from 'pages/Demos/NumberInput';
 import TextareaInput from 'pages/Demos/TextareaInput';
 import Tabs from 'pages/Demos/Tabs';
 import RadioInput from 'pages/Demos/RadioInput';
@@ -81,6 +82,7 @@ type TRoutesCmpt = {
   LayoutCmpt?: typeof Layout;
   AlertCmpt?: typeof Alert;
   TextInputCmpt?: typeof TextInput;
+  NumberInputCmpt?: typeof NumberInput;
   TextareaInputCmpt?: typeof TextareaInput;
   TabsCmpt?: typeof Tabs;
   RadioInputCmpt?: typeof RadioInput;
@@ -121,6 +123,7 @@ const RoutesCmpt = ({
   LayoutCmpt = Layout,
   AlertCmpt = Alert,
   TextInputCmpt = TextInput,
+  NumberInputCmpt = NumberInput,
   TextareaInputCmpt = TextareaInput,
   TabsCmpt = Tabs,
   RadioInputCmpt = RadioInput,
@@ -160,6 +163,7 @@ const RoutesCmpt = ({
       <Route path={ROUTE_URL.NOTIFICATION} element={withAuthFn(NotificationCmpt)} />
       <Route path={ROUTE_URL.ALERT} element={withAuthFn(AlertCmpt)} />
       <Route path={ROUTE_URL.TEXT_INPUT} element={withAuthFn(TextInputCmpt)} />
+      <Route path={ROUTE_URL.NUMBER_INPUT} element={withAuthFn(NumberInputCmpt)} />
       <Route path={ROUTE_URL.TEXTAREA_INPUT} element={withAuthFn(TextareaInputCmpt)} />
       <Route path={ROUTE_URL.TABS} element={withAuthFn(TabsCmpt)} />
       <Route path={ROUTE_URL.RADIO_INPUT} element={withAuthFn(RadioInputCmpt)} />

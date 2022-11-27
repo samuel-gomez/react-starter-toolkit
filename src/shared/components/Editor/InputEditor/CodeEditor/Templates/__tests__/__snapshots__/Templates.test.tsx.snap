@@ -16,10 +16,13 @@ exports[`<Templates/> Should render Templates 1`] = `
           role="presentation"
         >
           <button
+            aria-label="Suppression du code"
             class="af-btn--circle af-btn--delete"
           >
             <i
+              aria-label="Icone suppression du code"
               class="glyphicon glyphicon-trash"
+              role="img"
             />
           </button>
         </div>
@@ -36,11 +39,14 @@ exports[`<Templates/> Should render Templates 1`] = `
           role="presentation"
         >
           <button
+            aria-label="Ajout du code undefined"
             class="af-btn--circle"
             id="add-list"
           >
             <i
+              aria-label="Icone ajout du code undefined"
               class="glyphicon glyphicon-list"
+              role="img"
             />
           </button>
         </div>
@@ -57,6 +63,7 @@ exports[`<Templates/> Should render Templates 1`] = `
           role="presentation"
         >
           <button
+            aria-label="Ajout du code H1"
             class="af-btn--circle"
             id="add-title__h1"
           >
@@ -76,6 +83,7 @@ exports[`<Templates/> Should render Templates 1`] = `
           role="presentation"
         >
           <button
+            aria-label="Ajout du code H2"
             class="af-btn--circle"
             id="add-title__h2"
           >
@@ -95,6 +103,7 @@ exports[`<Templates/> Should render Templates 1`] = `
           role="presentation"
         >
           <button
+            aria-label="Ajout du code H3"
             class="af-btn--circle"
             id="add-title__h3"
           >
@@ -114,6 +123,7 @@ exports[`<Templates/> Should render Templates 1`] = `
           role="presentation"
         >
           <button
+            aria-label="Ajout du code H4"
             class="af-btn--circle"
             id="add-title__h4"
           >
@@ -133,6 +143,7 @@ exports[`<Templates/> Should render Templates 1`] = `
           role="presentation"
         >
           <button
+            aria-label="Ajout du code P"
             class="af-btn--circle"
             id="add-text"
           >
@@ -152,11 +163,14 @@ exports[`<Templates/> Should render Templates 1`] = `
           role="presentation"
         >
           <button
+            aria-label="Ajout du code undefined"
             class="af-btn--circle"
             id="add-restitution__twoColumns"
           >
             <i
+              aria-label="Icone ajout du code undefined"
               class="glyphicon glyphicon-list-alt"
+              role="img"
             />
           </button>
         </div>
@@ -173,11 +187,14 @@ exports[`<Templates/> Should render Templates 1`] = `
           role="presentation"
         >
           <button
+            aria-label="Ajout du code undefined"
             class="af-btn--circle"
             id="add-restitution__oneColumn"
           >
             <i
+              aria-label="Icone ajout du code undefined"
               class="glyphicon glyphicon-list-alt"
+              role="img"
             />
           </button>
         </div>
@@ -194,11 +211,14 @@ exports[`<Templates/> Should render Templates 1`] = `
           role="presentation"
         >
           <button
+            aria-label="Ajout du code undefined"
             class="af-btn--circle"
             id="add-modal"
           >
             <i
+              aria-label="Icone ajout du code undefined"
               class="glyphicon glyphicon-modal-window"
+              role="img"
             />
           </button>
         </div>
@@ -215,11 +235,14 @@ exports[`<Templates/> Should render Templates 1`] = `
           role="presentation"
         >
           <button
+            aria-label="Ajout du code undefined"
             class="af-btn--circle"
             id="add-panel__basic"
           >
             <i
+              aria-label="Icone ajout du code undefined"
               class="glyphicon glyphicon-credit-card"
+              role="img"
             />
           </button>
         </div>
