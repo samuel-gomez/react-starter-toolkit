@@ -8,43 +8,43 @@ import { TITLE_BAR, TITLE, DESIGN_SYSTEM_PATH, STORYBOOK_PATH, GITHUB_PACKAGE, N
 import knobs from './knobs.json';
 
 const INITIAL_STATE = {
-  name: 'number-field',
   id: 'uniqueid',
-  classModifier: 'required',
+  name: 'number-field',
   className: 'row af-form__group',
+  classModifier: 'required',
   label: 'My number',
-  value: 5,
   viewValue: '',
+  value: 5,
   helpMessage: 'Enter your number',
   placeholder: 'Ex: Samuel',
-  message: '',
   messageType: MessageTypes.error,
+  message: '',
   forceDisplayMessage: false,
-  autoFocus: true,
   disabled: false,
+  autoFocus: true,
   required: false,
-  readOnly: false,
   isVisible: true,
+  readOnly: false,
+  helpButton: false,
   classNameContainerLabel: 'col-md-2',
   classNameContainerInput: 'col-md-10',
-  helpButton: false,
 };
 
 type Props = Partial<typeof INITIAL_STATE> & {
   onChange: (name: keyof typeof INITIAL_STATE) => (arg: TEvent) => void;
-  onBlur?: (arg: TEvent) => void;
   onFocus?: (arg: FocusEvent<HTMLInputElement>) => void;
+  onBlur?: (arg: TEvent) => void;
 };
 
 export const code = ({
   label,
-  className,
   classModifier,
+  className,
   disabled,
   helpButton,
+  id,
   value,
   viewValue,
-  id,
   name,
   helpMessage,
   placeholder,
@@ -53,8 +53,8 @@ export const code = ({
   readOnly,
   forceDisplayMessage,
   isVisible,
-  required,
   autoFocus,
+  required,
 }: Props) => `<NumberInput required={${required}} 
   forceDisplayMessage={${forceDisplayMessage}} 
   disabled={${disabled}} 
