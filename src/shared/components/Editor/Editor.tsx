@@ -112,7 +112,7 @@ export const withEditor =
         <Component {...props} openEditor={openEditor} isOpenEditor={isOpenEditor} />
         {isOpenEditor && (
           <Draggable cancel=".glyphicon-close" handle=".af-draggable__title">
-            <div className="af-draggable-container">
+            <div aria-label="Edit props" className="af-draggable-container">
               <div className="af-draggable">
                 <h3 className="af-draggable__title">
                   Props Editor
@@ -216,9 +216,9 @@ export const EditorHeader = ({ storybookPath = '', designSystemPath = '', github
       </a>
     )}
 
-    <span className="af-link" onClick={openEditor}>
-      <i className="glyphicon glyphicon-cog"></i>
-      <span className="af-link">Edit props</span>
-    </span>
+    <button className="af-link" onClick={openEditor}>
+      <i role="img" aria-label="cog" className="glyphicon glyphicon-cog"></i>
+      <span>Edit props</span>
+    </button>
   </header>
 );

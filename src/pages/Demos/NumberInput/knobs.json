@@ -1,0 +1,50 @@
+{
+  "label": {
+    "type": "jsx",
+    "labelBtnOpenCodeEditor": "Edit label",
+    "list": [
+      {
+        "id": "add-title__h1",
+        "label": "H1",
+        "tooltipLabel": "Titre h1"
+      },
+      {
+        "id": "add-title__h2",
+        "label": "H2",
+        "tooltipLabel": "Titre h2"
+      },
+      {
+        "id": "add-title__h3",
+        "label": "H3",
+        "tooltipLabel": "Titre h3"
+      },
+      {
+        "id": "add-title__h4",
+        "label": "H4",
+        "tooltipLabel": "Titre h4"
+      },
+      {
+        "id": "add-text",
+        "label": "P",
+        "tooltipLabel": "Paragraph"
+      }
+    ]
+  },
+  "messageType": {
+    "value": "error",
+    "options": [
+      {
+        "label": "success",
+        "value": "success"
+      },
+      {
+        "label": "warning",
+        "value": "warning"
+      },
+      {
+        "label": "error",
+        "value": "error"
+      }
+    ]
+  }
+}

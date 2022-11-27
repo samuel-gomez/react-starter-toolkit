@@ -25,12 +25,12 @@ const LiveCode = withClassNameModifier(
   ({ code, scope, className, styleLivePreview = {}, theme = vsDark, modalProps }: TLiveCode) => (
     <article className={className}>
       <LiveProvider theme={theme} code={`<>${code}</>`} scope={{ ...reactTookitAll, ...scope, modalProps }}>
-        <LivePreview style={{ ...styleLivePreviewDefault, ...styleLivePreview }} />
+        <LivePreview aria-label="demo-preview" style={{ ...styleLivePreviewDefault, ...styleLivePreview }} />
         <LiveError />
       </LiveProvider>
       <Highlight {...defaultProps} theme={theme} code={code} language="jsx">
         {({ className, style, tokens, getLineProps, getTokenProps }) => (
-          <pre className={className} style={{ ...style, padding: '1rem', fontSize: '0.8rem', position: 'relative' }}>
+          <pre aria-label="demo-source-code" className={className} style={{ ...style, padding: '1rem', fontSize: '0.8rem', position: 'relative' }}>
             <ClipBoard content={code} />
             {tokens.map((line, i) => (
               <div {...getLineProps({ line, key: i })}>

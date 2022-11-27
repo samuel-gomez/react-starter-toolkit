@@ -2,7 +2,7 @@ import { isNull } from 'lodash';
 import { defineFeature, DefineStepFunction, loadFeature } from 'jest-cucumber';
 import { screen, within } from '@testing-library/react';
 import { render } from 'shared/testsUtils/customRender';
-import { JeSuisUnUtilisateurConnuEtConnecteAvecleProfil } from 'shared/testsUtils/sharedScenarii';
+import { JeSuisUnUtilisateurConnuEtConnecteAvecleProfil } from 'shared/testsUtils/sharedScenarios';
 import Members from '..';
 import { totals, defaultProps } from './Members.mock';
 

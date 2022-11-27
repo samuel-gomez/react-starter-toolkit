@@ -1,3 +1,4 @@
+import { ChangeEvent } from 'react';
 // jest-dom adds custom jest matchers for asserting on DOM nodes.
 // allows you to do things like:
 // expect(element).toHaveTextContent(/react/i)
@@ -29,5 +30,7 @@ afterAll(() => server.close());
 // Just for demo, to delete
 jest.mock('@uiw/react-textarea-code-editor', () => ({
   __esModule: true,
-  default: () => <div>code editor</div>,
+  default: ({ value, onChange }: { value: string; onChange: (e: ChangeEvent) => void }) => (
+    <textarea onChange={onChange} aria-label="jsx-code-editor" value={value}></textarea>
+  ),
 }));

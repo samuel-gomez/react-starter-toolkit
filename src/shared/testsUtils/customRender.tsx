@@ -13,7 +13,7 @@ const MockProviders =
   ({ role = '', ...testMock }: TMockProvider) =>
   ({ children }: { children: ReactNode }) => {
     const useOidcAccessTokenFn = jest.fn().mockReturnValue({ accessToken: 'accessToken' });
-    const useOidcUserFn = jest.fn().mockReturnValueOnce({ oidcUser: { member_of: [`CN=${role}`] } });
+    const useOidcUserFn = jest.fn().mockReturnValueOnce({ oidcUser: { member_of: [`CN=${role}`], name: 'Samuel Gomez' } });
     return (
       <UserProvider useOidcUserFn={useOidcUserFn}>
         <FetchProvider

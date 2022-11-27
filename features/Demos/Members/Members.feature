@@ -20,6 +20,6 @@ Feature: Consultation des membres
       | Sophie    | Danneels | 20/10/1992 | F    |
 
     Examples:
-      | profil        |
-      | ELMU_Admin    |
-      | ELMU_Huissier |
+      | profil |
+      | Admin  |
+      | User   |

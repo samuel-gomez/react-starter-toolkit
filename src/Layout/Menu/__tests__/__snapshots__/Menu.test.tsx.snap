@@ -556,6 +556,22 @@ exports[`<Menu/> Render <Menu/> 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
+                    aria-label="Number Input"
+                    class="af-nav__link"
+                    href="/number-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Number Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
                     aria-label="Textarea Input"
                     class="af-nav__link"
                     href="/textarea-input"

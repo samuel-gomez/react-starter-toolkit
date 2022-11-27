@@ -1,6 +1,4 @@
 import { ReactNode } from 'react';
-import { Button } from '@axa-fr/react-toolkit-all';
-import Modal from '@axa-fr/react-toolkit-modal-default';
 import Layout, { TLayout } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
@@ -68,16 +66,7 @@ const ModalWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
         npmName={NPM_NAME}
         openEditor={openEditor}
       />
-      <LiveCode
-        classModifier="with-editor"
-        styleLivePreview={{ textAlign: 'left' }}
-        code={code(props)}
-        scope={{
-          Modal,
-          Button,
-          ...props,
-        }}
-      />
+      <LiveCode classModifier="with-editor" styleLivePreview={{ textAlign: 'left' }} code={code(props)} scope={props} />
     </>
   ),
   knobs as unknown as Tknobs,
