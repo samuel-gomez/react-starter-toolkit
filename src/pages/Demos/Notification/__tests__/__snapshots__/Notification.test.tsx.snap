@@ -66,13 +66,14 @@ exports[`<NotificationPage/> Should render NotificationPage 1`] = `
       <button
         aria-controls="mainmenu"
         aria-haspopup="true"
+        aria-label="Open Menu"
         class="mask fade "
         id="togglemenu"
         type="button"
       />
       <nav
         aria-label="Menu principal"
-        class="af-nav af-drawer left "
+        class="af-nav af-drawer left false"
         role="navigation"
       >
         <div
@@ -89,6 +90,7 @@ exports[`<NotificationPage/> Should render NotificationPage 1`] = `
             <button
               aria-controls="mainmenu"
               aria-haspopup="true"
+              aria-label="Close Menu"
               class="af-nav__aside-close"
               id="togglemenu"
               type="button"
@@ -112,6 +114,7 @@ exports[`<NotificationPage/> Should render NotificationPage 1`] = `
                 aria-label="Accueil"
                 class="af-nav__link"
                 href="/"
+                index="0"
                 role="menuitem"
                 tabindex="0"
               >
@@ -128,6 +131,7 @@ exports[`<NotificationPage/> Should render NotificationPage 1`] = `
                 aria-label="Démos"
                 class="af-nav__link"
                 href="/demos"
+                index="1"
                 role="menuitem"
                 tabindex="-1"
               >
@@ -217,6 +221,7 @@ exports[`<NotificationPage/> Should render NotificationPage 1`] = `
                 aria-label="Toolkit components"
                 class="af-nav__link"
                 href="/demos"
+                index="2"
                 role="menuitem"
                 tabindex="-1"
               >
@@ -450,6 +455,7 @@ exports[`<NotificationPage/> Should render NotificationPage 1`] = `
                 aria-label="Toolkit structure"
                 class="af-nav__link"
                 href="/demos"
+                index="3"
                 role="menuitem"
                 tabindex="-1"
               >
@@ -571,6 +577,7 @@ exports[`<NotificationPage/> Should render NotificationPage 1`] = `
                 aria-label="Toolkit form components"
                 class="af-nav__link"
                 href="/demos"
+                index="4"
                 role="menuitem"
                 tabindex="-1"
               >
@@ -769,6 +776,7 @@ exports[`<NotificationPage/> Should render NotificationPage 1`] = `
               <span
                 aria-expanded="false"
                 class="af-nav__link"
+                index="5"
                 role="menuitem"
                 tabindex="-1"
               >
@@ -826,6 +834,7 @@ exports[`<NotificationPage/> Should render NotificationPage 1`] = `
                 aria-label="Layout"
                 class="af-nav__link"
                 href="/layout"
+                index="6"
                 role="menuitem"
                 tabindex="-1"
               >
@@ -841,7 +850,7 @@ exports[`<NotificationPage/> Should render NotificationPage 1`] = `
     aria-controls="mainmenu"
     aria-haspopup="true"
     class="btn af-title-bar__mobile-menu af-btn--circle"
-    href="#"
+    href="/#"
     id="opentogglemenu"
     role="button"
     tabindex="0"
@@ -888,23 +897,22 @@ exports[`<NotificationPage/> Should render NotificationPage 1`] = `
             id="collapse-hook"
             role="tab"
           >
-            <h3
-              class="af-accordion__item-title"
-              role="intera"
+            <a
+              aria-controls="collapse-hookbody"
+              aria-expanded="false"
+              class="af-accordion__item-toggle"
+              data-toggle="isOpen"
+              href="#collapse-hookbody"
             >
-              <span
-                class="glyphicon glyphicon-menu-down"
-              />
-              <a
-                aria-controls="collapse-hookbody"
-                aria-expanded="false"
-                class="af-accordion__item-toggle"
-                data-toggle="collapse"
-                href="#collapse-hookbody"
+              <h3
+                class="af-accordion__item-title"
               >
+                <span
+                  class="glyphicon glyphicon-menu-down"
+                />
                 Hook example
-              </a>
-            </h3>
+              </h3>
+            </a>
           </div>
           <div
             aria-labelledby="collapse-hook"
@@ -2495,23 +2503,22 @@ const useNotify = ({  useContextFn = useContext, NotificationContextObj = Notifi
             id="collapse-error"
             role="tab"
           >
-            <h3
-              class="af-accordion__item-title"
-              role="intera"
+            <a
+              aria-controls="collapse-errorbody"
+              aria-expanded="true"
+              class="af-accordion__item-toggle"
+              data-toggle="isOpen"
+              href="#collapse-errorbody"
             >
-              <span
-                class="glyphicon glyphicon-menu-up"
-              />
-              <a
-                aria-controls="collapse-errorbody"
-                aria-expanded="true"
-                class="af-accordion__item-toggle"
-                data-toggle="collapse"
-                href="#collapse-errorbody"
+              <h3
+                class="af-accordion__item-title"
               >
+                <span
+                  class="glyphicon glyphicon-menu-up"
+                />
                 Error notification
-              </a>
-            </h3>
+              </h3>
+            </a>
           </div>
           <div
             aria-labelledby="collapse-error"
@@ -2550,6 +2557,7 @@ const useNotify = ({  useContextFn = useContext, NotificationContextObj = Notifi
                   <button
                     aria-label="Copy to clipboard"
                     class="af-btn--circle af-clipboard"
+                    type="button"
                   >
                     <i
                       class="glyphicon glyphicon-copy"
@@ -2938,23 +2946,22 @@ const useNotify = ({  useContextFn = useContext, NotificationContextObj = Notifi
             id="collapse-success"
             role="tab"
           >
-            <h3
-              class="af-accordion__item-title"
-              role="intera"
+            <a
+              aria-controls="collapse-successbody"
+              aria-expanded="true"
+              class="af-accordion__item-toggle"
+              data-toggle="isOpen"
+              href="#collapse-successbody"
             >
-              <span
-                class="glyphicon glyphicon-menu-up"
-              />
-              <a
-                aria-controls="collapse-successbody"
-                aria-expanded="true"
-                class="af-accordion__item-toggle"
-                data-toggle="collapse"
-                href="#collapse-successbody"
+              <h3
+                class="af-accordion__item-title"
               >
+                <span
+                  class="glyphicon glyphicon-menu-up"
+                />
                 Success notification
-              </a>
-            </h3>
+              </h3>
+            </a>
           </div>
           <div
             aria-labelledby="collapse-success"
@@ -2993,6 +3000,7 @@ const useNotify = ({  useContextFn = useContext, NotificationContextObj = Notifi
                   <button
                     aria-label="Copy to clipboard"
                     class="af-btn--circle af-clipboard"
+                    type="button"
                   >
                     <i
                       class="glyphicon glyphicon-copy"
@@ -3381,23 +3389,22 @@ const useNotify = ({  useContextFn = useContext, NotificationContextObj = Notifi
             id="collapse-warning"
             role="tab"
           >
-            <h3
-              class="af-accordion__item-title"
-              role="intera"
+            <a
+              aria-controls="collapse-warningbody"
+              aria-expanded="true"
+              class="af-accordion__item-toggle"
+              data-toggle="isOpen"
+              href="#collapse-warningbody"
             >
-              <span
-                class="glyphicon glyphicon-menu-up"
-              />
-              <a
-                aria-controls="collapse-warningbody"
-                aria-expanded="true"
-                class="af-accordion__item-toggle"
-                data-toggle="collapse"
-                href="#collapse-warningbody"
+              <h3
+                class="af-accordion__item-title"
               >
+                <span
+                  class="glyphicon glyphicon-menu-up"
+                />
                 Warning notification
-              </a>
-            </h3>
+              </h3>
+            </a>
           </div>
           <div
             aria-labelledby="collapse-warning"
@@ -3436,6 +3443,7 @@ const useNotify = ({  useContextFn = useContext, NotificationContextObj = Notifi
                   <button
                     aria-label="Copy to clipboard"
                     class="af-btn--circle af-clipboard"
+                    type="button"
                   >
                     <i
                       class="glyphicon glyphicon-copy"

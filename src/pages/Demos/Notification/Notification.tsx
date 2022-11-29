@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import dracula from 'prism-react-renderer/themes/dracula';
 import { LiveProvider, LiveEditor } from 'react-live';
-import { Button, Accordion, CollapseCardBase, CollapseCard } from '@axa-fr/react-toolkit-all';
+import { Button, Accordion, CollapseCard } from '@axa-fr/react-toolkit-all';
 import Layout, { TLayout } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { TITLE_BAR, TITLE } from './constants';
@@ -72,20 +72,20 @@ const NotificationPage = ({ notifyError, notifySuccess, notifyWarning, titleBar 
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <Accordion>
-      <CollapseCardBase id="collapse-hook" key="hook" collapse={false}>
+      <CollapseCard id="collapse-hook" key="hook" isOpen={false}>
         <CollapseCard.Header key="hook-header">Hook example</CollapseCard.Header>
         <CollapseCard.Body key="hook-body">
           <LiveProvider theme={dracula} code={code} scope={scope}>
             <LiveEditor style={{ fontSize: '12px' }} />
           </LiveProvider>
         </CollapseCard.Body>
-      </CollapseCardBase>
+      </CollapseCard>
       {Object.entries({
-        error: { notifyError, code: codeError, collapse: true, title: 'Error notification' },
-        success: { notifySuccess, code: codeSuccess, collapse: true, title: 'Success notification' },
-        warning: { notifyWarning, code: codeWarning, collapse: true, title: 'Warning notification' },
-      }).map(([key, { collapse, title, code, ...rest }]) => (
-        <CollapseCardBase id={`collapse-${key}`} key={key} collapse={collapse}>
+        error: { notifyError, code: codeError, isOpen: true, title: 'Error notification' },
+        success: { notifySuccess, code: codeSuccess, isOpen: true, title: 'Success notification' },
+        warning: { notifyWarning, code: codeWarning, isOpen: true, title: 'Warning notification' },
+      }).map(([key, { isOpen, title, code, ...rest }]) => (
+        <CollapseCard id={`collapse-${key}`} key={key} isOpen={isOpen}>
           <CollapseCard.Header key={`${key}-header`}>{title}</CollapseCard.Header>
           <CollapseCard.Body key={`${key}-body`}>
             <LiveCode
@@ -96,7 +96,7 @@ const NotificationPage = ({ notifyError, notifySuccess, notifyWarning, titleBar 
               }}
             />
           </CollapseCard.Body>
-        </CollapseCardBase>
+        </CollapseCard>
       ))}
     </Accordion>
   </Layout>

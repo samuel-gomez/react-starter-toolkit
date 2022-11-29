@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { MessageTypes, RadioModes } from '@axa-fr/react-toolkit-all';
+import { MessageTypes } from '@axa-fr/react-toolkit-all';
 import Layout, { TLayout } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
@@ -15,7 +15,7 @@ const INITIAL_STATE = {
     { label: 'For drink', value: 'drink', id: 'drink' },
     { label: 'For the life', value: 'life', id: 'life', disabled: true },
   ],
-  mode: RadioModes.default,
+  mode: 'default',
   classModifier: '',
   className: '',
   label: 'My Label',

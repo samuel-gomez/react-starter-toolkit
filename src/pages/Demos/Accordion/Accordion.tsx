@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import { Accordion, CollapseCardBase, CollapseCard } from '@axa-fr/react-toolkit-all';
 import { ClickEvent } from '@axa-fr/react-toolkit-core';
 import Layout, { TLayout } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
@@ -36,32 +35,32 @@ export const code = ({ classModifier, className, onlyOne, header1, header2, head
       className="${className}"
       onlyOne={${onlyOne}} id="test">
 
-      <CollapseCardBase onToggle={onClick} id="id1">
+      <CollapseCard onToggle={onClick} id="id1">
         <CollapseCard.Header>
           ${header1}
         </CollapseCard.Header>
         <CollapseCard.Body>
           ${content1}
         </CollapseCard.Body>
-      </CollapseCardBase>
+      </CollapseCard>
 
-      <CollapseCardBase onToggle={onClick} id="id2">
+      <CollapseCard onToggle={onClick} id="id2">
         <CollapseCard.Header>
           ${header2}
         </CollapseCard.Header>
         <CollapseCard.Body>
           ${content2}
         </CollapseCard.Body>
-      </CollapseCardBase>
+      </CollapseCard>
 
-      <CollapseCardBase onToggle={onClick} id="id3">
+      <CollapseCard onToggle={onClick} id="id3">
         <CollapseCard.Header>
           ${header3}
         </CollapseCard.Header>
         <CollapseCard.Body>
           ${content3}
         </CollapseCard.Body>
-      </CollapseCardBase>
+      </CollapseCard>
 
     </Accordion>
 `;
@@ -76,17 +75,7 @@ const AccordionWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
         npmName={NPM_NAME}
         openEditor={openEditor}
       />
-      <LiveCode
-        classModifier="with-editor"
-        styleLivePreview={{ textAlign: 'left' }}
-        code={code(props)}
-        scope={{
-          Accordion,
-          CollapseCardBase,
-          CollapseCard,
-          ...props,
-        }}
-      />
+      <LiveCode classModifier="with-editor" styleLivePreview={{ textAlign: 'left' }} code={code(props)} scope={props} />
     </>
   ),
   knobs as unknown as Tknobs,

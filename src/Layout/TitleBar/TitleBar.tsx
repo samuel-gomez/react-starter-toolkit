@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { Link } from 'react-router-dom';
-import { Title } from '@axa-fr/react-toolkit-all';
+import { HeaderTitle } from '@axa-fr/react-toolkit-all';
 import { withClassDefault, withClassModifier, WithClassModifierOptions, compose, identity } from '@axa-fr/react-toolkit-core';
 import './TitleBar.scss';
 
@@ -16,14 +16,14 @@ type TTitleBar = WithClassModifierOptions & {
 export const DEFAULT_CLASSNAME = 'af-title-bar';
 
 const TitleBar = ({ title = 'title', handleClick, children = <></>, backHome = false, id = '', className }: TTitleBar) => (
-  <Title id={id} className={className} toggleMenu={handleClick} title={title}>
+  <HeaderTitle id={id} className={className} toggleMenu={handleClick} title={title}>
     {backHome && (
       <Link aria-label="Retour à l'accueil" className="btn af-btn--circle" to="/">
         <i className="glyphicon glyphicon-home" />
       </Link>
     )}
     {children}
-  </Title>
+  </HeaderTitle>
 );
 
 const enhance = compose(identity<TTitleBar>(), withClassDefault(DEFAULT_CLASSNAME), withClassModifier());

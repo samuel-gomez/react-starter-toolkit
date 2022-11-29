@@ -75,6 +75,7 @@ exports[`InputEditor Should render when value: true 1`] = `
       mode="toggle"
       name="name"
       type="checkbox"
+      value="true"
     />
     <label
       class="af-form__label"

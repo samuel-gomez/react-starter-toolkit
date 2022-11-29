@@ -31,7 +31,7 @@ export type FormValues = {
 
 export type TUseForm = UseFormReturn<FormValues>;
 
-export const SearchFormEnhanced = ({
+const SearchFormEnhanced = ({
   submitFormSearchMembers,
   className = 'af-filter-inline',
   setConfirmClassModifierFn = setConfirmClassModifier,

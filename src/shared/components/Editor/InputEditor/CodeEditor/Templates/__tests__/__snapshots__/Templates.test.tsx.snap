@@ -18,6 +18,7 @@ exports[`<Templates/> Should render Templates 1`] = `
           <button
             aria-label="Suppression du code"
             class="af-btn--circle af-btn--delete"
+            type="button"
           >
             <i
               aria-label="Icone suppression du code"
@@ -42,6 +43,7 @@ exports[`<Templates/> Should render Templates 1`] = `
             aria-label="Ajout du code undefined"
             class="af-btn--circle"
             id="add-list"
+            type="button"
           >
             <i
               aria-label="Icone ajout du code undefined"
@@ -66,6 +68,7 @@ exports[`<Templates/> Should render Templates 1`] = `
             aria-label="Ajout du code H1"
             class="af-btn--circle"
             id="add-title__h1"
+            type="button"
           >
             H1
           </button>
@@ -86,6 +89,7 @@ exports[`<Templates/> Should render Templates 1`] = `
             aria-label="Ajout du code H2"
             class="af-btn--circle"
             id="add-title__h2"
+            type="button"
           >
             H2
           </button>
@@ -106,6 +110,7 @@ exports[`<Templates/> Should render Templates 1`] = `
             aria-label="Ajout du code H3"
             class="af-btn--circle"
             id="add-title__h3"
+            type="button"
           >
             H3
           </button>
@@ -126,6 +131,7 @@ exports[`<Templates/> Should render Templates 1`] = `
             aria-label="Ajout du code H4"
             class="af-btn--circle"
             id="add-title__h4"
+            type="button"
           >
             H4
           </button>
@@ -146,6 +152,7 @@ exports[`<Templates/> Should render Templates 1`] = `
             aria-label="Ajout du code P"
             class="af-btn--circle"
             id="add-text"
+            type="button"
           >
             P
           </button>
@@ -166,6 +173,7 @@ exports[`<Templates/> Should render Templates 1`] = `
             aria-label="Ajout du code undefined"
             class="af-btn--circle"
             id="add-restitution__twoColumns"
+            type="button"
           >
             <i
               aria-label="Icone ajout du code undefined"
@@ -190,6 +198,7 @@ exports[`<Templates/> Should render Templates 1`] = `
             aria-label="Ajout du code undefined"
             class="af-btn--circle"
             id="add-restitution__oneColumn"
+            type="button"
           >
             <i
               aria-label="Icone ajout du code undefined"
@@ -214,6 +223,7 @@ exports[`<Templates/> Should render Templates 1`] = `
             aria-label="Ajout du code undefined"
             class="af-btn--circle"
             id="add-modal"
+            type="button"
           >
             <i
               aria-label="Icone ajout du code undefined"
@@ -238,6 +248,7 @@ exports[`<Templates/> Should render Templates 1`] = `
             aria-label="Ajout du code undefined"
             class="af-btn--circle"
             id="add-panel__basic"
+            type="button"
           >
             <i
               aria-label="Icone ajout du code undefined"

@@ -8,6 +8,7 @@ $classBase: af-loader;
 .#{$classBase} {
   position: relative;
   width: 100%;
+  min-height: inherit;
   &--active {
     min-height: calc(100vh - (calc(var(--fullheaderHeight) + var(--footerHeight))));
   }

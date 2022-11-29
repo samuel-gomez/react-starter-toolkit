@@ -9,7 +9,7 @@ Feature: Playground NumberInput
     And un titre "NumberInput playground" est visible
     And un lien "Guidelines" est visible avec un href "https://axaguildev.github.io/design-system/molecules/form-text/"
     And un lien "Storybook" est visible avec un href "https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/form-input-number--number"
-    And un lien "Github" est visible avec un href "https://github.com/AxaGuilDEv/react-toolkit/tree/v1.4.1/packages/Form/Input/number"
+    And un lien "Github" est visible avec un href "https://github.com/AxaGuilDEv/react-toolkit/tree/v2.0.0/packages/Form/Input/number"
     And un bouton "Edit props" est visible
     And un label "My number" est visible
     And un champ texte "number-field" est visible avec la valeur "5", un placeholder "Ex: Samuel"
@@ -30,31 +30,26 @@ Feature: Playground NumberInput
     Then un éditeur de propriété est visible
     And un champ texte "value" est visible avec la valeur "5"
     When je saisie "<value>" dans le champ "value"
-    And je saisie "<viewValue>" dans le champ "viewValue"
     And je saisie "name-field" dans le champ "name"
     And je saisie "monid" dans le champ "id"
     And je saisie "<className>" dans le champ "className"
     And je saisie "<modifier>" dans le champ "classModifier"
     And je saisie "<placeholder>" dans le champ "placeholder"
     And je clique sur la checkbox "autoFocus"
-    And je clique sur la checkbox "autoFocus"
-    Then un champ texte "name-field" est visible avec les propriétés : "<expectedValue>", "<expectedId>", "<expectedClass>", "<expectedPlaceholder>"
-    And un champ texte "name-field" a le focus
+    Then un champ texte "name-field" a le focus
+    And un champ texte "name-field" est visible avec les propriétés : "<expectedValue>", "<expectedId>", "<expectedClass>", "<expectedPlaceholder>"
 
     Examples:
-      | profil | value | viewValue | placeholder | className | modifier | expectedValue | expectedPlaceholder | expectedId | expectedClassWrapper                            | expectedClass                                     |
-      | Admin  | 459   | 555       |             |           |          | 459           |                     | monid      | row af-form__group                              | af-form__input-text                               |
-      | User   | 322   | 555       | Ex: 5       |           |          | 322           | Ex: 5               | monid      | row af-form__group                              | af-form__input-text                               |
-      | User   |       | 555       |             |           |          | 555           |                     | monid      | row af-form__group                              | af-form__input-text                               |
-      | User   |       |           |             |           |          |               |                     | monid      | row af-form__group                              | af-form__input-text                               |
-      | Admin  | 459   | 555       | Ex: 5       | myClass   |          | 459           | Ex: 5               | monid      | myClass                                         | af-form__input-text                               |
-      | User   | 322   | 555       |             | myClass   |          | 322           |                     | monid      | myClass                                         | af-form__input-text                               |
-      | User   |       | 555       |             | myClass   |          | 555           |                     | monid      | myClass                                         | af-form__input-text                               |
-      | User   |       |           |             | myClass   |          |               |                     | monid      | myClass                                         | af-form__input-text                               |
-      | Admin  | 459   | 555       | Ex: 5       |           | required | 459           | Ex: 5               | monid      | row af-form__group row af-form__group--required | af-form__input-text af-form__input-text--required |
-      | User   | 322   | 555       |             |           | required | 322           |                     | monid      | row af-form__group row af-form__group--required | af-form__input-text af-form__input-text--required |
-      | User   |       | 555       |             |           | required | 555           |                     | monid      | row af-form__group row af-form__group--required | af-form__input-text af-form__input-text--required |
-      | User   |       |           |             |           | required |               |                     | monid      | row af-form__group row af-form__group--required | af-form__input-text af-form__input-text--required |
+      | profil | value | placeholder | className | modifier | expectedValue | expectedPlaceholder | expectedId | expectedClassWrapper                            | expectedClass                                     |
+      | Admin  | 459   |             |           |          | 459           | Ex: Samuel          | monid      | row af-form__group                              | af-form__input-text af-form__input-text--required |
+      | User   | 322   | Ex: 5       |           |          | 322           | Ex: 5               | monid      | row af-form__group                              | af-form__input-text af-form__input-text--required |
+      | User   | aaa   |             |           |          | aaa           | Ex: Samuel          | monid      | row af-form__group                              | af-form__input-text af-form__input-text--required |
+      | Admin  | 459   | Ex: 5       | myClass   |          | 459           | Ex: 5               | monid      | myClass                                         | af-form__input-text af-form__input-text--required |
+      | User   | 322   |             | myClass   |          | 322           | Ex: Samuel          | monid      | myClass                                         | af-form__input-text af-form__input-text--required |
+      | User   | aaa   |             | myClass   |          | aaa           | Ex: Samuel          | monid      | myClass                                         | af-form__input-text af-form__input-text--required |
+      | Admin  | 459   | Ex: 5       |           | other    | 459           | Ex: 5               | monid      | row af-form__group row af-form__group--required | af-form__input-text af-form__input-text--other    |
+      | User   | 322   |             |           | other    | 322           | Ex: Samuel          | monid      | row af-form__group row af-form__group--required | af-form__input-text af-form__input-text--other    |
+      | User   | aaa   |             |           | other    | aaa           | Ex: Samuel          | monid      | row af-form__group row af-form__group--required | af-form__input-text af-form__input-text--other    |
 
   @RG3
   Scenario Outline: Affichage/masquage du helpButton
@@ -153,7 +148,6 @@ Feature: Playground NumberInput
       | profil |
       | Admin  |
       | User   |
-
   @RG8
   Scenario Outline: Gestion des erreurs du champ input
     Given Je suis un utilisateur connu et connecté avec le profil "<profil>"
@@ -193,5 +187,3 @@ Feature: Playground NumberInput
       | profil | message | type    | expectedWrapperInputClass | expectedDisplayMessage | expectedDisplayMessageClass |
       | Admin  |         | warning | af-form__text             | Enter your number      | af-form__help               |
       | User   |         | success | af-form__text             | Enter your number      | af-form__help               |
-
-

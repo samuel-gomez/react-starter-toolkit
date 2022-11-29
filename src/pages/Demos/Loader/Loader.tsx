@@ -55,7 +55,7 @@ const LoaderWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
       />
       <LiveCode
         classModifier="with-editor"
-        styleLivePreview={{ textAlign: 'left' }}
+        styleLivePreview={{ textAlign: 'center', position: 'relative' }}
         code={code(props)}
         scope={{
           Loader,

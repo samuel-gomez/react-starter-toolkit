@@ -41,6 +41,7 @@ const feature = loadFeature('features/Demos/NumberInput/NumberInput.feature');
 const SCOPE_EDITOR = 'Edit props';
 const SCOPE_PREVIEW = 'demo-preview';
 const SCOPE_CODE = 'demo-source-code';
+const ROLE_NUMBER = 'spinbutton';
 
 defineFeature(feature, test => {
   let role: string;
@@ -64,7 +65,7 @@ defineFeature(feature, test => {
     UnLienEstVisible(and);
     UnBoutonEstVisible(and);
     UnLabelEstVisible(and);
-    UnChampTextEstVisibleAvecLaValeurEtUnPlaceholder(and);
+    UnChampTextEstVisibleAvecLaValeurEtUnPlaceholder(and, SCOPE_PREVIEW, ROLE_NUMBER);
     UnMessageEstVisibleAvecLaClass(and, SCOPE_PREVIEW);
     UnBoutonEstVisible(and);
     UnCodeDecomposantEstVisible(and, SCOPE_CODE);
@@ -82,20 +83,18 @@ defineFeature(feature, test => {
     JeSaisieDansLeChamp(and, SCOPE_EDITOR);
     JeSaisieDansLeChamp(and, SCOPE_EDITOR);
     JeSaisieDansLeChamp(and, SCOPE_EDITOR);
-    JeSaisieDansLeChamp(and, SCOPE_EDITOR);
     JeCliqueSurLaCheckbox(and, SCOPE_EDITOR);
-    JeCliqueSurLaCheckbox(and, SCOPE_EDITOR);
-    then(
+    UnChampTextALeFocus(then, SCOPE_PREVIEW, ROLE_NUMBER);
+    and(
       /^un champ texte "(.*)" est visible avec les propriétés : "(.*)", "(.*)", "(.*)", "(.*)"$/,
       async (fieldName, value, id, className, placeholder) => {
-        const input = screen.getByRole('textbox', { name: RegExp(fieldName) });
+        const input = screen.getByRole(ROLE_NUMBER, { name: RegExp(fieldName) });
         expect(input).toHaveAttribute('value', value);
         expect(input).toHaveAttribute('id', id);
         expect(input).toHaveAttribute('class', className);
         expect(input).toHaveAttribute('placeholder', placeholder);
       },
     );
-    UnChampTextALeFocus(and);
   });
 
   test('Affichage/masquage du helpButton', ({ given, when, then, and }) => {
@@ -121,10 +120,10 @@ defineFeature(feature, test => {
     UnChampCheckboxToggleAvecUnLabelEtUneValeurNonSelectionne(and);
     JeCliqueSurLaCheckbox(when, SCOPE_EDITOR);
     UnChampCheckboxToggleAvecUnLabelEtUneValeurSelectionne(then);
-    UnChampTextEstDesactive(and, SCOPE_PREVIEW);
+    UnChampTextEstDesactive(and, SCOPE_PREVIEW, ROLE_NUMBER);
     JeCliqueSurLaCheckbox(when, SCOPE_EDITOR);
     UnChampCheckboxToggleAvecUnLabelEtUneValeurNonSelectionne(then);
-    UnChampTextEstActive(and, SCOPE_PREVIEW);
+    UnChampTextEstActive(and, SCOPE_PREVIEW, ROLE_NUMBER);
   });
 
   test('Requis/optionnel du champ input', ({ given, when, then, and }) => {
@@ -135,10 +134,10 @@ defineFeature(feature, test => {
     UnChampCheckboxToggleAvecUnLabelEtUneValeurNonSelectionne(and);
     JeCliqueSurLaCheckbox(when, SCOPE_EDITOR);
     UnChampCheckboxToggleAvecUnLabelEtUneValeurSelectionne(then);
-    UnChampTextEstRequis(and, SCOPE_PREVIEW);
+    UnChampTextEstRequis(and, SCOPE_PREVIEW, ROLE_NUMBER);
     JeCliqueSurLaCheckbox(when, SCOPE_EDITOR);
     UnChampCheckboxToggleAvecUnLabelEtUneValeurNonSelectionne(then);
-    UnChampTextEstOptionnel(and, SCOPE_PREVIEW);
+    UnChampTextEstOptionnel(and, SCOPE_PREVIEW, ROLE_NUMBER);
   });
 
   test('ReadOnly/editable du champ input', ({ given, when, then, and }) => {
@@ -149,25 +148,25 @@ defineFeature(feature, test => {
     UnChampCheckboxToggleAvecUnLabelEtUneValeurNonSelectionne(and);
     JeCliqueSurLaCheckbox(when, SCOPE_EDITOR);
     UnChampCheckboxToggleAvecUnLabelEtUneValeurSelectionne(then);
-    UnChampTextEstEnLectureSeule(and, SCOPE_PREVIEW);
+    UnChampTextEstEnLectureSeule(and, SCOPE_PREVIEW, ROLE_NUMBER);
     JeCliqueSurLaCheckbox(when, SCOPE_EDITOR);
     UnChampCheckboxToggleAvecUnLabelEtUneValeurNonSelectionne(then);
-    UnChampTextEstEditable(and, SCOPE_PREVIEW);
+    UnChampTextEstEditable(and, SCOPE_PREVIEW, ROLE_NUMBER);
   });
 
   test('Affichage/masquage du champ input', ({ given, when, then, and }) => {
     JeSuisUnUtilisateurConnuEtConnecteAvecleProfil(given, setRoleMock);
     when("J'accède à la page playground NumberInput", renderPage);
-    UnChampTextEstVisibleAvecLaValeurEtUnPlaceholder(and);
+    UnChampTextEstVisibleAvecLaValeurEtUnPlaceholder(and, SCOPE_PREVIEW, ROLE_NUMBER);
     JeCliqueSurLeBouton(when);
     UnEditeurEstVisible(then);
     UnChampCheckboxToggleAvecUnLabelEtUneValeurSelectionne(and);
     JeCliqueSurLaCheckbox(when, SCOPE_EDITOR);
     UnChampCheckboxToggleAvecUnLabelEtUneValeurNonSelectionne(then);
-    UnChampTextEstMasque(and);
+    UnChampTextEstMasque(and, SCOPE_PREVIEW, ROLE_NUMBER);
     JeCliqueSurLaCheckbox(when, SCOPE_EDITOR);
     UnChampCheckboxToggleAvecUnLabelEtUneValeurSelectionne(then);
-    UnChampTextEstVisibleAvecLaValeurEtUnPlaceholder(and);
+    UnChampTextEstVisibleAvecLaValeurEtUnPlaceholder(and, SCOPE_PREVIEW, ROLE_NUMBER);
   });
 
   test('Gestion des erreurs du champ input', ({ given, when, and, then }) => {
@@ -179,7 +178,7 @@ defineFeature(feature, test => {
     JeSaisieDansLeChamp(when, SCOPE_EDITOR);
     JeCliqueSurLaCheckbox(and, SCOPE_EDITOR);
     JeSelectionneUneValeurSurleChamp(and, SCOPE_EDITOR);
-    UnChampTextEstVisibleAvecSonWrapper(then);
+    UnChampTextEstVisibleAvecSonWrapper(then, SCOPE_PREVIEW, ROLE_NUMBER);
     UnMessageEstVisibleAvecLaClass(and, SCOPE_PREVIEW);
   });
 

@@ -66,13 +66,14 @@ exports[`<TitleBarPage/> Should render TitleBarPage 1`] = `
       <button
         aria-controls="mainmenu"
         aria-haspopup="true"
+        aria-label="Open Menu"
         class="mask fade "
         id="togglemenu"
         type="button"
       />
       <nav
         aria-label="Menu principal"
-        class="af-nav af-drawer left "
+        class="af-nav af-drawer left false"
         role="navigation"
       >
         <div
@@ -89,6 +90,7 @@ exports[`<TitleBarPage/> Should render TitleBarPage 1`] = `
             <button
               aria-controls="mainmenu"
               aria-haspopup="true"
+              aria-label="Close Menu"
               class="af-nav__aside-close"
               id="togglemenu"
               type="button"
@@ -112,6 +114,7 @@ exports[`<TitleBarPage/> Should render TitleBarPage 1`] = `
                 aria-label="Accueil"
                 class="af-nav__link"
                 href="/"
+                index="0"
                 role="menuitem"
                 tabindex="0"
               >
@@ -128,6 +131,7 @@ exports[`<TitleBarPage/> Should render TitleBarPage 1`] = `
                 aria-label="Démos"
                 class="af-nav__link"
                 href="/demos"
+                index="1"
                 role="menuitem"
                 tabindex="-1"
               >
@@ -217,6 +221,7 @@ exports[`<TitleBarPage/> Should render TitleBarPage 1`] = `
                 aria-label="Toolkit components"
                 class="af-nav__link"
                 href="/demos"
+                index="2"
                 role="menuitem"
                 tabindex="-1"
               >
@@ -450,6 +455,7 @@ exports[`<TitleBarPage/> Should render TitleBarPage 1`] = `
                 aria-label="Toolkit structure"
                 class="af-nav__link"
                 href="/demos"
+                index="3"
                 role="menuitem"
                 tabindex="-1"
               >
@@ -571,6 +577,7 @@ exports[`<TitleBarPage/> Should render TitleBarPage 1`] = `
                 aria-label="Toolkit form components"
                 class="af-nav__link"
                 href="/demos"
+                index="4"
                 role="menuitem"
                 tabindex="-1"
               >
@@ -769,6 +776,7 @@ exports[`<TitleBarPage/> Should render TitleBarPage 1`] = `
               <span
                 aria-expanded="false"
                 class="af-nav__link"
+                index="5"
                 role="menuitem"
                 tabindex="-1"
               >
@@ -826,6 +834,7 @@ exports[`<TitleBarPage/> Should render TitleBarPage 1`] = `
                 aria-label="Layout"
                 class="af-nav__link"
                 href="/layout"
+                index="6"
                 role="menuitem"
                 tabindex="-1"
               >
@@ -841,7 +850,7 @@ exports[`<TitleBarPage/> Should render TitleBarPage 1`] = `
     aria-controls="mainmenu"
     aria-haspopup="true"
     class="btn af-title-bar__mobile-menu af-btn--circle"
-    href="#"
+    href="/#"
     id="opentogglemenu"
     role="button"
     tabindex="0"
@@ -904,7 +913,7 @@ exports[`<TitleBarPage/> Should render TitleBarPage 1`] = `
           </a>
           <a
             class="af-link"
-            href="https://github.com/AxaGuilDEv/react-toolkit/tree/v1.4.1/packages/Layout/header/src/Title"
+            href="https://github.com/AxaGuilDEv/react-toolkit/tree/v2.0.0/packages/Layout/header/src/Title"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -981,6 +990,7 @@ exports[`<TitleBarPage/> Should render TitleBarPage 1`] = `
             <button
               aria-label="Copy to clipboard"
               class="af-btn--circle af-clipboard"
+              type="button"
             >
               <i
                 class="glyphicon glyphicon-copy"
@@ -1013,7 +1023,7 @@ exports[`<TitleBarPage/> Should render TitleBarPage 1`] = `
                   class="token tag class-name"
                   style="color: rgb(78, 201, 176);"
                 >
-                  Title
+                  HeaderTitle
                 </span>
                 <span
                   class="token tag"
@@ -1178,7 +1188,7 @@ exports[`<TitleBarPage/> Should render TitleBarPage 1`] = `
                   class="token tag class-name"
                   style="color: rgb(78, 201, 176);"
                 >
-                  Title
+                  HeaderTitle
                 </span>
                 <span
                   class="token tag punctuation"

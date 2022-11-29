@@ -1,5 +1,6 @@
 import { Controller, UseFormStateReturn, ControllerRenderProps } from 'react-hook-form';
-import { Text, Button, FieldForm, HelpMessage, FieldInput, FieldError } from '@axa-fr/react-toolkit-all';
+import { Text, Button, FieldError, HelpMessage, FieldInput, MessageTypes } from '@axa-fr/react-toolkit-all';
+import { FieldForm } from '@axa-fr/react-toolkit-form-core';
 import { setConfirmClassModifier } from 'shared/helpers';
 import { NAME, LABEL_NAME, PLACEHOLDER_NAME, FORM_SEARCH_MEMBERS, LABEL_SUBMIT, MIN_SEARCH_BY_NAME, rules } from './constants';
 import { FormValues, setOnSubmitSearchForm, TUseForm } from './SearchForm.container';
@@ -25,7 +26,7 @@ export const onChangeValue =
 
 export const InputCustom = ({ field, formState }: TInputCustom) => (
   <div className="af-filter-inline__field">
-    <FieldForm message={formState.errors[NAME]?.message} forceDisplayMessage className="col-md-12" messageType="error">
+    <FieldForm message={formState.errors[NAME]?.message} forceDisplayMessage className="col-md-12" messageType={MessageTypes.error}>
       <FieldInput className="af-form__text">
         <label className="af-form__group-label" htmlFor={NAME}>
           {LABEL_NAME}

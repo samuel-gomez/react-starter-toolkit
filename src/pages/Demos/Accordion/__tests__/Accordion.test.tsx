@@ -39,32 +39,32 @@ describe('code', () => {
             className="${defaultProps.className}"
             onlyOne={${defaultProps.onlyOne}} id="test">
 
-            <CollapseCardBase onToggle={onClick} id="id1">
+            <CollapseCard onToggle={onClick} id="id1">
               <CollapseCard.Header>
                 ${defaultProps.header1}
               </CollapseCard.Header>
               <CollapseCard.Body>
                 ${defaultProps.content1}
               </CollapseCard.Body>
-            </CollapseCardBase>
+            </CollapseCard>
 
-            <CollapseCardBase onToggle={onClick} id="id2">
+            <CollapseCard onToggle={onClick} id="id2">
               <CollapseCard.Header>
                 ${defaultProps.header2}
               </CollapseCard.Header>
               <CollapseCard.Body>
                 ${defaultProps.content2}
               </CollapseCard.Body>
-            </CollapseCardBase>
+            </CollapseCard>
 
-            <CollapseCardBase onToggle={onClick} id="id3">
+            <CollapseCard onToggle={onClick} id="id3">
               <CollapseCard.Header>
                 ${defaultProps.header3}
               </CollapseCard.Header>
               <CollapseCard.Body>
                 ${defaultProps.content3}
               </CollapseCard.Body>
-            </CollapseCardBase>
+            </CollapseCard>
 
         </Accordion>
       `),

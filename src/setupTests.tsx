@@ -5,26 +5,10 @@ import { ChangeEvent } from 'react';
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom/extend-expect';
 import 'whatwg-fetch';
-import IntlPolyfill from 'intl';
-import 'intl/locale-data/jsonp/fr-FR';
-
 import { server } from './shared/testsUtils/msw';
 
-if (global.Intl) {
-  Intl.NumberFormat = IntlPolyfill.NumberFormat;
-  Intl.DateTimeFormat = IntlPolyfill.DateTimeFormat;
-} else {
-  global.Intl = IntlPolyfill;
-}
-
-// Establish API mocking before all tests.
 beforeAll(() => server.listen());
-
-// Reset any request handlers that we may add during the tests,
-// so they don't affect other tests.
 afterEach(() => server.resetHandlers());
-
-// Clean up after the tests are finished.
 afterAll(() => server.close());
 
 // Just for demo, to delete

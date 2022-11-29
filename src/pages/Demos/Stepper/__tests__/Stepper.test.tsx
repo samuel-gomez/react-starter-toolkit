@@ -1,4 +1,3 @@
-import { StepModes } from '@axa-fr/react-toolkit-all';
 import { clearString, renderWithWrapperStaticRouter } from 'shared/testsUtils';
 import Stepper, { code } from '../Stepper';
 
@@ -17,17 +16,17 @@ describe('code', () => {
     className: 'af-steps-new',
     step1Separator: 'STEP 1',
     step1Title: 'Step 1',
-    step1Mode: StepModes.link,
+    step1Mode: 'link',
     step1Href: '/etape1',
     step1Id: 'id1',
     step2Separator: 'STEP 2',
     step2Title: 'Step 2',
-    step2Mode: StepModes.link,
+    step2Mode: 'link',
     step2Href: '/etape2',
     step2Id: 'id2',
     step3Separator: 'STEP 3',
     step3Title: 'Current Step',
-    step3Mode: StepModes.active,
+    step3Mode: 'active',
     step3Number: '13',
     step3Id: 'id3',
     step4Separator: 'STEP 4',
@@ -37,7 +36,7 @@ describe('code', () => {
     step4Icon: 'home',
     step5Separator: 'STEP 5',
     step5Title: 'Final step',
-    step5Mode: StepModes.disabled,
+    step5Mode: 'disabled',
     step5Id: 'id5',
     onChange,
   };

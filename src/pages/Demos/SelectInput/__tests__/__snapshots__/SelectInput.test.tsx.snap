@@ -66,13 +66,14 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
       <button
         aria-controls="mainmenu"
         aria-haspopup="true"
+        aria-label="Open Menu"
         class="mask fade "
         id="togglemenu"
         type="button"
       />
       <nav
         aria-label="Menu principal"
-        class="af-nav af-drawer left "
+        class="af-nav af-drawer left false"
         role="navigation"
       >
         <div
@@ -89,6 +90,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
             <button
               aria-controls="mainmenu"
               aria-haspopup="true"
+              aria-label="Close Menu"
               class="af-nav__aside-close"
               id="togglemenu"
               type="button"
@@ -112,6 +114,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                 aria-label="Accueil"
                 class="af-nav__link"
                 href="/"
+                index="0"
                 role="menuitem"
                 tabindex="0"
               >
@@ -128,6 +131,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                 aria-label="Démos"
                 class="af-nav__link"
                 href="/demos"
+                index="1"
                 role="menuitem"
                 tabindex="-1"
               >
@@ -217,6 +221,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                 aria-label="Toolkit components"
                 class="af-nav__link"
                 href="/demos"
+                index="2"
                 role="menuitem"
                 tabindex="-1"
               >
@@ -450,6 +455,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                 aria-label="Toolkit structure"
                 class="af-nav__link"
                 href="/demos"
+                index="3"
                 role="menuitem"
                 tabindex="-1"
               >
@@ -571,6 +577,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                 aria-label="Toolkit form components"
                 class="af-nav__link"
                 href="/demos"
+                index="4"
                 role="menuitem"
                 tabindex="-1"
               >
@@ -769,6 +776,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 aria-expanded="false"
                 class="af-nav__link"
+                index="5"
                 role="menuitem"
                 tabindex="-1"
               >
@@ -826,6 +834,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                 aria-label="Layout"
                 class="af-nav__link"
                 href="/layout"
+                index="6"
                 role="menuitem"
                 tabindex="-1"
               >
@@ -841,7 +850,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
     aria-controls="mainmenu"
     aria-haspopup="true"
     class="btn af-title-bar__mobile-menu af-btn--circle"
-    href="#"
+    href="/#"
     id="opentogglemenu"
     role="button"
     tabindex="0"
@@ -925,7 +934,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
           </a>
           <a
             class="af-link"
-            href="https://github.com/AxaGuilDEv/react-toolkit/tree/v1.4.1/packages/Form/Input/select"
+            href="https://github.com/AxaGuilDEv/react-toolkit/tree/v2.0.0/packages/Form/Input/select"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -1007,16 +1016,19 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                         - Select -
                       </option>
                       <option
+                        id="fun"
                         value="fun"
                       >
                         For fun
                       </option>
                       <option
+                        id="work"
                         value="work"
                       >
                         For work
                       </option>
                       <option
+                        id="drink"
                         value="drink"
                       >
                         For drink
@@ -1044,6 +1056,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
             <button
               aria-label="Copy to clipboard"
               class="af-btn--circle af-clipboard"
+              type="button"
             >
               <i
                 class="glyphicon glyphicon-copy"
@@ -1966,60 +1979,6 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
                   class="token tag attr-name"
                   style="color: rgb(156, 220, 254);"
                 >
-                  readOnly
-                </span>
-                <span
-                  class="token tag script language-javascript script-punctuation punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  =
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  {
-                </span>
-                <span
-                  class="token tag script language-javascript boolean"
-                  style="color: rgb(78, 201, 176);"
-                >
-                  false
-                </span>
-                <span
-                  class="token tag script language-javascript punctuation"
-                  style="color: rgb(212, 212, 212);"
-                >
-                  }
-                </span>
-                <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
-                />
-              </span>
-            </div>
-            <div
-              class="token-line"
-              style="color: rgb(156, 220, 254);"
-            >
-              <span
-                class="token-line__number"
-              >
-                14
-              </span>
-              <span
-                class="token-line__content"
-              >
-                <span
-                  class="token tag"
-                  style="color: rgb(78, 201, 176);"
-                >
-                    
-                </span>
-                <span
-                  class="token tag attr-name"
-                  style="color: rgb(156, 220, 254);"
-                >
                   disabled
                 </span>
                 <span
@@ -2061,7 +2020,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                15
+                14
               </span>
               <span
                 class="token-line__content"
@@ -2115,7 +2074,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                16
+                15
               </span>
               <span
                 class="token-line__content"
@@ -2163,7 +2122,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                17
+                16
               </span>
               <span
                 class="token-line__content"
@@ -2211,7 +2170,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                18
+                17
               </span>
               <span
                 class="token-line__content"
@@ -2265,7 +2224,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                19
+                18
               </span>
               <span
                 class="token-line__content"
@@ -2319,7 +2278,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                20
+                19
               </span>
               <span
                 class="token-line__content"
@@ -2373,7 +2332,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                21
+                20
               </span>
               <span
                 class="token-line__content"
@@ -2427,7 +2386,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                22
+                21
               </span>
               <span
                 class="token-line__content"
@@ -2454,7 +2413,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                23
+                22
               </span>
               <span
                 class="token-line__content"
@@ -2473,7 +2432,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                24
+                23
               </span>
               <span
                 class="token-line__content"
@@ -2511,7 +2470,7 @@ exports[`<SelectInputPage /> Should render SelectInputPage 1`] = `
               <span
                 class="token-line__number"
               >
-                25
+                24
               </span>
               <span
                 class="token-line__content"

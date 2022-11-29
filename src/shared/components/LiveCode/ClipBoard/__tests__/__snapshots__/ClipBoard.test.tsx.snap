@@ -5,6 +5,7 @@ exports[`<ClipBoard/> Should render ClipBoard 1`] = `
   <button
     aria-label="Copy to clipboard"
     class="af-btn--circle af-clipboard"
+    type="button"
   >
     <i
       class="glyphicon glyphicon-copy"
@@ -23,6 +24,7 @@ exports[`<ClipBoard/> Should render ClipBoard with clicked classModifier 1`] = `
   <button
     aria-label="Copy to clipboard"
     class="af-btn--circle af-clipboard af-clipboard--clicked"
+    type="button"
   >
     <i
       class="glyphicon glyphicon-copy"

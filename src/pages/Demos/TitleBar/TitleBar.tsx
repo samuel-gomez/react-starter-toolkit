@@ -22,9 +22,9 @@ export const code = ({
   subtitle,
   content,
   classModifier,
-}: Props) => `<Title classModifier="${classModifier}" title="${title}" subtitle="${subtitle}">
+}: Props) => `<HeaderTitle classModifier="${classModifier}" title="${title}" subtitle="${subtitle}">
     ${content}
-</Title>`;
+</HeaderTitle>`;
 
 const TitleBarWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
   ({ openEditor, ...props }) => (

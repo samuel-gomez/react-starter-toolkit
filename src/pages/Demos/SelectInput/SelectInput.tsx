@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { MessageTypes, SelectModes } from '@axa-fr/react-toolkit-all';
+import { MessageTypes } from '@axa-fr/react-toolkit-all';
 import Layout, { TLayout } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
@@ -14,7 +14,7 @@ const INITIAL_STATE = {
     { label: 'For work', value: 'work', id: 'work' },
     { label: 'For drink', value: 'drink', id: 'drink' },
   ],
-  mode: SelectModes.default,
+  mode: 'default',
   placeholder: '- Select -',
   forceDisplayPlaceholder: false,
   classModifier: '',
@@ -26,7 +26,6 @@ const INITIAL_STATE = {
   messageType: MessageTypes.error,
   forceDisplayMessage: false,
   disabled: false,
-  readOnly: false,
   isVisible: true,
   classNameContainerLabel: 'col-md-2',
   classNameContainerInput: 'col-md-10',
@@ -52,7 +51,6 @@ export const code = ({
   helpMessage,
   message,
   messageType,
-  readOnly,
   forceDisplayMessage,
   isVisible,
   placeholder,
@@ -71,7 +69,6 @@ export const code = ({
   message="${message}" 
   messageType="${messageType}"
   forceDisplayMessage={${forceDisplayMessage}}
-  readOnly={${readOnly}}
   disabled={${disabled}} 
   isVisible={${isVisible}}
   classModifier="${classModifier}"

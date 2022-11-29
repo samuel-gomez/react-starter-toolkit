@@ -13,7 +13,6 @@ const INITIAL_STATE = {
   className: 'row af-form__group',
   classModifier: 'required',
   label: 'My number',
-  viewValue: '',
   value: 5,
   helpMessage: 'Enter your number',
   placeholder: 'Ex: Samuel',
@@ -44,17 +43,16 @@ export const code = ({
   helpButton,
   id,
   value,
-  viewValue,
   name,
   helpMessage,
   placeholder,
   message,
   messageType,
-  readOnly,
   forceDisplayMessage,
   isVisible,
   autoFocus,
   required,
+  readOnly,
 }: Props) => `<NumberInput required={${required}} 
   forceDisplayMessage={${forceDisplayMessage}} 
   disabled={${disabled}} 
@@ -63,19 +61,18 @@ export const code = ({
   placeholder="${placeholder}" 
   helpMessage="${helpMessage}" 
   name="${name}" 
-  value={${!!value ? value : null}} 
-  viewValue="${viewValue}" 
+  value="${value}" 
   label={<>${label}</>}
   className="${className}" 
   classModifier="${classModifier}" 
   messageType="${messageType}" 
   onChange={onChange('value')} 
   autoComplete="none"
+  autoFocus={${autoFocus}} 
   onBlur={onBlur} 
   onFocus={onFocus} 
-  autoFocus={${autoFocus}} 
-  readOnly={${readOnly}} 
   isVisible={${isVisible}} 
+  readOnly={${readOnly}} 
   aria-label="${name}" >
   ${helpButton ? `<HelpButton>tooltip avec du text</HelpButton>` : ''}
 </NumberInput>  

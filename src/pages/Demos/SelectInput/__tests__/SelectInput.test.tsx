@@ -1,4 +1,4 @@
-import { MessageTypes, SelectModes } from '@axa-fr/react-toolkit-all';
+import { MessageTypes } from '@axa-fr/react-toolkit-all';
 import { clearString, renderWithWrapperStaticRouter } from 'shared/testsUtils';
 import SelectInputPage, { code } from '../SelectInput';
 
@@ -21,7 +21,7 @@ describe('code', () => {
       { label: 'For work', value: 'work', id: 'work' },
       { label: 'For drink', value: 'drink', id: 'drink' },
     ],
-    mode: SelectModes.default,
+    mode: 'default',
     placeholder: '- Select -',
     forceDisplayPlaceholder: false,
     classModifier: '',
@@ -33,7 +33,6 @@ describe('code', () => {
     messageType: MessageTypes.error,
     forceDisplayMessage: false,
     disabled: false,
-    readOnly: false,
     isVisible: true,
     classNameContainerLabel: 'col-md-2',
     classNameContainerInput: 'col-md-10',
@@ -57,7 +56,6 @@ describe('code', () => {
         message="${defaultProps.message}" 
         messageType="${defaultProps.messageType}"
         forceDisplayMessage={${defaultProps.forceDisplayMessage}}
-        readOnly={${defaultProps.readOnly}}
         disabled={${defaultProps.disabled}} 
         isVisible={${defaultProps.isVisible}}
         classModifier="${defaultProps.classModifier}"
@@ -85,7 +83,6 @@ describe('code', () => {
         message="${defaultProps.message}" 
         messageType="${defaultProps.messageType}"
         forceDisplayMessage={${defaultProps.forceDisplayMessage}}
-        readOnly={${defaultProps.readOnly}}
         disabled={${defaultProps.disabled}} 
         isVisible={${defaultProps.isVisible}}
         classModifier="${defaultProps.classModifier}"

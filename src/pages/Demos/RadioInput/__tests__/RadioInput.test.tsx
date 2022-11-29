@@ -1,4 +1,4 @@
-import { MessageTypes, RadioModes } from '@axa-fr/react-toolkit-all';
+import { MessageTypes } from '@axa-fr/react-toolkit-all';
 import { clearString, renderWithWrapperStaticRouter } from 'shared/testsUtils';
 import RadioInputPage, { code } from '../RadioInput';
 
@@ -22,7 +22,7 @@ describe('code', () => {
       { label: 'For drink', value: '3', id: 'drink' },
       { label: 'For the life', value: '4', id: 'life', disabled: true },
     ],
-    mode: RadioModes.default,
+    mode: 'default',
     classModifier: '',
     className: '',
     label: 'My Label',

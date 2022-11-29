@@ -173,7 +173,9 @@ export const useEditable = <T extends object>({ initialState, logEventFn = conso
   }, []);
 
   const onFocus = useCallback((e: FocusEvent<HTMLInputElement>) => {
-    e.target.setSelectionRange(e.target.value.length, e.target.value.length);
+    if (e.target.type === 'textarea') {
+      e.target.setSelectionRange(e.target.value.length, e.target.value.length);
+    }
     setState(prevState => ({ ...prevState, autoFocus: true }));
   }, []);
 

@@ -22,9 +22,9 @@ describe('code', () => {
   it('Should render TitleBar with default props', () => {
     const result = code(defaultProps);
     expect(clearString(result)).toEqual(
-      clearString(`<Title classModifier="${defaultProps.classModifier}" title="${defaultProps.title}" subtitle="${defaultProps.subtitle}">
+      clearString(`<HeaderTitle classModifier="${defaultProps.classModifier}" title="${defaultProps.title}" subtitle="${defaultProps.subtitle}">
         ${defaultProps.content}
-    </Title>`),
+    </HeaderTitle>`),
     );
   });
 });

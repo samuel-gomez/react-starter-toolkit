@@ -97,6 +97,7 @@ exports[`<ModalConfirm/> Should render ModalConfirm opened 1`] = `
             >
               <button
                 class="btn af-btn af-btn--reverse"
+                type="button"
               >
                 <span
                   class="af-btn__text"

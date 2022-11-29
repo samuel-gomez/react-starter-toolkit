@@ -11,13 +11,14 @@ exports[`<MenuEnhanced/> Render <Menu/> 1`] = `
       <button
         aria-controls="mainmenu"
         aria-haspopup="true"
+        aria-label="Open Menu"
         class="mask fade "
         id="togglemenu"
         type="button"
       />
       <nav
         aria-label="Menu principal"
-        class="af-nav af-drawer left "
+        class="af-nav af-drawer left false"
         role="navigation"
       >
         <div
@@ -34,6 +35,7 @@ exports[`<MenuEnhanced/> Render <Menu/> 1`] = `
             <button
               aria-controls="mainmenu"
               aria-haspopup="true"
+              aria-label="Close Menu"
               class="af-nav__aside-close"
               id="togglemenu"
               type="button"
@@ -57,6 +59,7 @@ exports[`<MenuEnhanced/> Render <Menu/> 1`] = `
                 aria-label="Accueil"
                 class="af-nav__link"
                 href="/"
+                index="0"
                 role="menuitem"
                 tabindex="0"
               >
@@ -73,6 +76,7 @@ exports[`<MenuEnhanced/> Render <Menu/> 1`] = `
                 aria-label="Démos"
                 class="af-nav__link"
                 href="/demos"
+                index="1"
                 role="menuitem"
                 tabindex="-1"
               >
@@ -201,6 +205,7 @@ exports[`<MenuEnhanced/> Render <Menu/> 1`] = `
               <span
                 aria-expanded="false"
                 class="af-nav__link"
+                index="2"
                 role="menuitem"
                 tabindex="-1"
               >
@@ -257,7 +262,7 @@ exports[`<MenuEnhanced/> Render <Menu/> 1`] = `
     aria-controls="mainmenu"
     aria-haspopup="true"
     class="btn af-title-bar__mobile-menu af-btn--circle"
-    href="#"
+    href="/#"
     id="opentogglemenu"
     role="button"
     tabindex="0"
@@ -281,13 +286,14 @@ exports[`<MenuEnhanced/> Render <Menu/> fullscreen 1`] = `
       <button
         aria-controls="mainmenu"
         aria-haspopup="true"
+        aria-label="Open Menu"
         class="mask fade "
         id="togglemenu"
         type="button"
       />
       <nav
         aria-label="Menu principal"
-        class="af-nav af-drawer left "
+        class="af-nav af-drawer left false"
         role="navigation"
       >
         <div
@@ -304,6 +310,7 @@ exports[`<MenuEnhanced/> Render <Menu/> fullscreen 1`] = `
             <button
               aria-controls="mainmenu"
               aria-haspopup="true"
+              aria-label="Close Menu"
               class="af-nav__aside-close"
               id="togglemenu"
               type="button"
@@ -327,6 +334,7 @@ exports[`<MenuEnhanced/> Render <Menu/> fullscreen 1`] = `
                 aria-label="Accueil"
                 class="af-nav__link"
                 href="/"
+                index="0"
                 role="menuitem"
                 tabindex="0"
               >
@@ -343,6 +351,7 @@ exports[`<MenuEnhanced/> Render <Menu/> fullscreen 1`] = `
                 aria-label="Démos"
                 class="af-nav__link"
                 href="/demos"
+                index="1"
                 role="menuitem"
                 tabindex="-1"
               >
@@ -471,6 +480,7 @@ exports[`<MenuEnhanced/> Render <Menu/> fullscreen 1`] = `
               <span
                 aria-expanded="false"
                 class="af-nav__link"
+                index="2"
                 role="menuitem"
                 tabindex="-1"
               >
@@ -527,7 +537,7 @@ exports[`<MenuEnhanced/> Render <Menu/> fullscreen 1`] = `
     aria-controls="mainmenu"
     aria-haspopup="true"
     class="btn af-title-bar__mobile-menu af-btn--circle"
-    href="#"
+    href="/#"
     id="opentogglemenu"
     role="button"
     tabindex="0"
