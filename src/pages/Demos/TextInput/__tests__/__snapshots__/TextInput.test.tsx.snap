@@ -2318,7 +2318,7 @@ exports[`<TextInputPage/> Should render TextInputPage 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.2.13
+        © 2022 AXA Tous droits réservés - v0.3.0
       </div>
     </div>
   </footer>

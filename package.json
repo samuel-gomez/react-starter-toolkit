@@ -1,7 +1,7 @@
 {
   "name": "react-starter-toolkit",
   "description": "This repository is a starter project that use React Toolkit Axa and CRA.",
-  "version": "0.2.13",
+  "version": "0.3.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -27,7 +27,7 @@
     "@axa-fr/react-toolkit-all": "2.0.0",
     "@axa-fr/react-toolkit-core": "2.0.0",
     "@babel/parser": "7.20.3",
-    "@popperjs/core": "^2.11.6",
+    "@popperjs/core": "2.11.6",
     "@tanstack/react-query": "4.16.1",
     "@tanstack/react-query-devtools": "4.16.1",
     "@types/downloadjs": "1.4.3",
