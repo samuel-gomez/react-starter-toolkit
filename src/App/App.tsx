@@ -94,7 +94,7 @@ const App = ({
     useOidcAccessTokenFn={useOidcAccessTokenFn}
   >
     <NotificationProvider>
-      <Router basename={baseUrl}>
+      <Router>
         <Routes />
       </Router>
     </NotificationProvider>
