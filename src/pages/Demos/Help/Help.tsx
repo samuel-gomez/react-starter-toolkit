@@ -22,7 +22,7 @@ const HelpWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
   ({ openEditor, ...props }) => (
     <>
       <EditorHeader storybookPath={STORYBOOK_PATH} githubPackage={GITHUB_PACKAGE} npmName={NPM_NAME} openEditor={openEditor} />
-      <LiveCode classModifier="with-editor" code={code(props)} scope={props} />
+      <LiveCode classModifier="with-editor" code={code(props)} scope={props} githubPackage={GITHUB_PACKAGE} />
     </>
   ),
   knobs as unknown as Tknobs,

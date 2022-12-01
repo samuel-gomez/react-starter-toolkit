@@ -37,7 +37,13 @@ const NavBarWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
         npmName={NPM_NAME}
         openEditor={openEditor}
       />
-      <LiveCode classModifier="with-editor navbar" styleLivePreview={{ textAlign: 'left' }} code={code(props)} scope={props} />
+      <LiveCode
+        classModifier="with-editor navbar"
+        styleLivePreview={{ textAlign: 'left' }}
+        code={code(props)}
+        scope={props}
+        githubPackage={GITHUB_PACKAGE}
+      />
     </>
   ),
   knobs as unknown as Tknobs,

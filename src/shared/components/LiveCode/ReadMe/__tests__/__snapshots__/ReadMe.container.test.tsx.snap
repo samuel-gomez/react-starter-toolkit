@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ReadMeContainer /> Render <ReadMeContainer /> with githubPackage, useGithubReadmeFn 1`] = `
+<DocumentFragment>
+  <div
+    class="af-loader"
+  >
+    <div
+      class="markdown-body"
+    >
+      test
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<ReadMeContainer /> Render <ReadMeContainer /> with only githubPackage 1`] = `
+<DocumentFragment>
+  <div
+    class="af-loader af-loader--active"
+  >
+    <p
+      class="af-loader__spinner"
+    >
+      Chargement en cours
+    </p>
+  </div>
+</DocumentFragment>
+`;

@@ -90,6 +90,7 @@ const SliderWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
         classModifier="with-editor"
         styleLivePreview={{ textAlign: 'left' }}
         code={code(props)}
+        githubPackage={GITHUB_PACKAGE}
         scope={{
           Slider,
           ...props,

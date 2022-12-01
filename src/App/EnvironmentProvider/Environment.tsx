@@ -1,7 +1,7 @@
 import { useState, useEffect, createContext, Dispatch, SetStateAction } from 'react';
 
 export type TEnvironment = {
-  apiUrl: string;
+  apiUrl: Record<string, string>;
   baseUrl: string;
   fetchConfig: object;
   oidc: Record<string, boolean | string>;

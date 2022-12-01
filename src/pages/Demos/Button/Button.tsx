@@ -42,7 +42,13 @@ const ButtonWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
         npmName={NPM_NAME}
         openEditor={openEditor}
       />
-      <LiveCode styleLivePreview={{ display: 'flex', placeContent: 'center' }} classModifier="with-editor" code={code(props)} scope={props} />
+      <LiveCode
+        styleLivePreview={{ display: 'flex', placeContent: 'center' }}
+        classModifier="with-editor"
+        code={code(props)}
+        scope={props}
+        githubPackage={GITHUB_PACKAGE}
+      />
     </>
   ),
   buttonKnobs as unknown as Tknobs,

@@ -1,7 +1,7 @@
 {
   "name": "react-starter-toolkit",
   "description": "This repository is a starter project that use React Toolkit Axa and CRA.",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -40,8 +40,10 @@
     "@types/react-router": "5.1.19",
     "@types/react-router-dom": "5.3.3",
     "@uiw/react-textarea-code-editor": "2.0.6",
+    "axe-core": "4.5.2",
     "classnames": "2.3.2",
     "downloadjs": "1.4.7",
+    "github-markdown-css": "5.1.0",
     "jest-cucumber": "3.0.1",
     "lodash": "4.17.21",
     "moment": "2.29.4",
@@ -53,8 +55,11 @@
     "react-json-view": "1.21.3",
     "react-jsx-parser": "1.29.0",
     "react-live": "2.4.1",
+    "react-markdown": "8.0.3",
     "react-router-dom": "6.4.3",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "rehype-slug": "5.1.0",
+    "remark-gfm": "3.0.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "7.19.1",

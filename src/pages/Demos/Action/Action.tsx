@@ -15,17 +15,13 @@ type Props = Partial<typeof INITIAL_STATE> & {
   onChange: (name: keyof typeof INITIAL_STATE) => (arg: TEvent) => void;
 };
 
-export const code = ({ title, icon, classModifier }: Props) => `<Action
-    classModifier="${classModifier}"
-    icon="${icon}"
-    title="${title}"
-/>`;
+export const code = ({ title, icon, classModifier }: Props) => `<Action classModifier="${classModifier}" icon="${icon}" title="${title}" />`;
 
 const ActionWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
   ({ openEditor, ...props }) => (
     <>
       <EditorHeader storybookPath={STORYBOOK_PATH} githubPackage={GITHUB_PACKAGE} npmName={NPM_NAME} openEditor={openEditor} />
-      <LiveCode classModifier="with-editor" code={code(props)} scope={props} />
+      <LiveCode classModifier="with-editor" code={code(props)} scope={props} githubPackage={GITHUB_PACKAGE} />
     </>
   ),
   knobs as unknown as Tknobs,

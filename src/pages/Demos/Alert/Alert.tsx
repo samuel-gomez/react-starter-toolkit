@@ -37,10 +37,10 @@ const AlertWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
         storybookPath={STORYBOOK_PATH}
         designSystemPath={DESIGN_SYSTEM_PATH}
         githubPackage={GITHUB_PACKAGE}
-        openEditor={openEditor}
         npmName={NPM_NAME}
+        openEditor={openEditor}
       />
-      <LiveCode classModifier="with-editor" code={code(props)} scope={props} />
+      <LiveCode classModifier="with-editor" code={code(props)} scope={props} githubPackage={GITHUB_PACKAGE} />
     </>
   ),
   knobs as unknown as Tknobs,

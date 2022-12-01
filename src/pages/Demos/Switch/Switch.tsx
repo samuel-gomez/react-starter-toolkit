@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { SwitchInput, MessageTypes } from '@axa-fr/react-toolkit-all';
+import { MessageTypes } from '@axa-fr/react-toolkit-all';
 import Layout, { TLayout } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
@@ -78,10 +78,8 @@ const SwitchWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
         classModifier="with-editor"
         styleLivePreview={{ textAlign: 'left' }}
         code={code(props)}
-        scope={{
-          SwitchInput,
-          ...props,
-        }}
+        githubPackage={GITHUB_PACKAGE}
+        scope={props}
       />
     </>
   ),

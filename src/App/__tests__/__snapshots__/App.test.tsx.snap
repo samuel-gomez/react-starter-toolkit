@@ -910,7 +910,7 @@ exports[`<App/> Should render App with all props and authentication NOT enabled 
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.3.0
+        © 2022 AXA Tous droits réservés - v0.4.0
       </div>
     </div>
   </footer>
@@ -1827,7 +1827,7 @@ exports[`<App/> Should render App with all props and authentication enabled 1`] 
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.3.0
+        © 2022 AXA Tous droits réservés - v0.4.0
       </div>
     </div>
   </footer>

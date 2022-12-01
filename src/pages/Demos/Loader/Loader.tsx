@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import { Loader } from '@axa-fr/react-toolkit-all';
 import { LoaderModes } from '@axa-fr/react-toolkit-loader';
 import Layout, { TLayout } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
@@ -57,10 +56,8 @@ const LoaderWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
         classModifier="with-editor"
         styleLivePreview={{ textAlign: 'center', position: 'relative' }}
         code={code(props)}
-        scope={{
-          Loader,
-          ...props,
-        }}
+        githubPackage={GITHUB_PACKAGE}
+        scope={props}
       />
     </>
   ),

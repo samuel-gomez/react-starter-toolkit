@@ -1,0 +1,10 @@
+.af-tabs {
+  &--tabs-live-code {
+    .af-tabs__pane {
+      padding: 0;
+    }
+    .af-tabs__link {
+      font-weight: 500;
+    }
+  }
+}

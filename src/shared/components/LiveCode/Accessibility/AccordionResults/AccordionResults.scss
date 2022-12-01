@@ -1,0 +1,19 @@
+@import '@axa-fr/react-toolkit-core/src/common/scss/core.scss';
+
+.af-accordion {
+  &--accessibility {
+    min-height: 300px;
+    &-wrapper-body {
+      margin-left: 2rem;
+      a {
+        text-decoration: underline;
+      }
+      .af-badge {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+.af-accordion--light .af-accordion__item {
+  border-bottom: solid 1px $color-gray-1;
+}
