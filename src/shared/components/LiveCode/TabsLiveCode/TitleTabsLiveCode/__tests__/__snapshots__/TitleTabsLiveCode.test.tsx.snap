@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TabsLiveCode /> Render <TabsLiveCode /> with props 1`] = `
+<DocumentFragment>
+  <i
+    class="glyphicon glyphicon-undefined"
+  />
+   
+</DocumentFragment>
+`;

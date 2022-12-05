@@ -1,0 +1,11 @@
+@import '@axa-fr/react-toolkit-core/src/common/scss/core.scss';
+
+.empty-accessiblity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  color: $color-texte;
+  font-style: italic;
+  font-weight: 500;
+}

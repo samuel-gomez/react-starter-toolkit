@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import { Popover } from '@axa-fr/react-toolkit-all';
 import { PopoverPlacements, PopoverModes } from '@axa-fr/react-toolkit-popover';
 import { ClickEvent } from '@axa-fr/react-toolkit-core';
 import Layout, { TLayout } from 'Layout';
@@ -46,10 +45,8 @@ const PopoverWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
         classModifier="with-editor"
         styleLivePreview={{ textAlign: 'left' }}
         code={code(props)}
-        scope={{
-          Popover,
-          ...props,
-        }}
+        githubPackage={GITHUB_PACKAGE}
+        scope={props}
       />
     </>
   ),

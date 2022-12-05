@@ -34,6 +34,14 @@ export const STATUS_API = {
   ERROR: 50,
 };
 
+/*************************************************************************
+ * API URL
+ *************************************************************************/
+export const API_URL = {
+  VERCEL: 'vercel',
+  GITHUB: 'github',
+};
+
 export const STATUS_HTTP_MESSAGES = {
   [STATUS_HTTP.SUCCESS]: 'Succès: La requête a réussi',
   [STATUS_HTTP.CREATED]: 'Succès: Création réussie',
@@ -66,9 +74,16 @@ export const MODIFIER_CLASS = {
 };
 
 /*************************************************************************
+ * VERSION CONSTANT
+ *************************************************************************/
+
+const VERSION_TOOLKIT = 'master';
+
+/*************************************************************************
  * DEMO CONSTANTS
  *************************************************************************/
 
 export const STORYBOOK = 'https://axaguildev.github.io/react-toolkit/latest/storybook/?path=/story/';
 export const DESIGN_SYSTEM = 'https://axaguildev.github.io/design-system/';
 export const GITHUB = `https://github.com/AxaGuilDEv/react-toolkit/tree/v${packageJson['dependencies']['@axa-fr/react-toolkit-all']}/packages/`;
+export const GITHUB_API = `AxaGuilDEv/react-toolkit/${VERSION_TOOLKIT}/packages/`;

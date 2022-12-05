@@ -18,3 +18,12 @@ jest.mock('@uiw/react-textarea-code-editor', () => ({
     <textarea onChange={onChange} aria-label="jsx-code-editor" value={value}></textarea>
   ),
 }));
+
+// Just for demo, to delete - Mock react markdown
+jest.mock('react-markdown', () => ({ children }: { children: JSX.Element }) => {
+  return <>{children}</>;
+});
+
+// Just for demo, to delete - Mock plugin for react markdown
+jest.mock('remark-gfm', () => () => ({}));
+jest.mock('rehype-slug', () => () => ({}));

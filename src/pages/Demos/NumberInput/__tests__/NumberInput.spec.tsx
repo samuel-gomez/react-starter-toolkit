@@ -39,8 +39,8 @@ configure({ defaultHidden: true });
 const feature = loadFeature('features/Demos/NumberInput/NumberInput.feature');
 
 const SCOPE_EDITOR = 'Edit props';
-const SCOPE_PREVIEW = 'demo-preview';
-const SCOPE_CODE = 'demo-source-code';
+const SCOPE_PREVIEW = 'af-accessibility';
+const SCOPE_CODE = 'af-accessibility-code';
 const ROLE_NUMBER = 'spinbutton';
 
 defineFeature(feature, test => {

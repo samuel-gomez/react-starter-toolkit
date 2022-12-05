@@ -83,10 +83,8 @@ const FileInputWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
         classModifier="with-editor"
         styleLivePreview={{ textAlign: 'left' }}
         code={code(props)}
-        scope={{
-          // FileInput,
-          ...props,
-        }}
+        githubPackage={GITHUB_PACKAGE}
+        scope={props}
       />
     </>
   ),

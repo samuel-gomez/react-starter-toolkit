@@ -1,8 +1,8 @@
 import { createContext, ReactNode } from 'react';
 import { QueryClient, QueryClientProvider, QueryKey } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import { mergeObj } from 'shared/helpers';
-import { STATUS_API, STATUS_HTTP_MESSAGES } from 'shared/constants';
+import { mergeObj, manageConfig } from 'shared/helpers';
+import { API_URL, STATUS_API, STATUS_HTTP_MESSAGES } from 'shared/constants';
 import { useOidcAccessToken } from '@axa-fr/react-oidc';
 import setResponseError from './setResponseError';
 
@@ -15,20 +15,23 @@ export const FetchContext = createContext<FetchContextType | object>({});
 FetchContext.displayName = 'FetchContext';
 
 export type TFetchCustom = {
-  apiUrl: string;
+  apiUrl: Record<string, string>;
   fetchAuthConfig: object;
   fetchFn?: typeof fetch;
   mergeObjFn?: typeof mergeObj;
+  manageConfigFn?: typeof manageConfig;
 };
 
 export type TResponse = {
   status: number;
   blob: () => Promise<unknown>;
+  text: () => Promise<unknown>;
   json: () => Promise<object>;
 };
 
 type TConfig = {
   blob: boolean;
+  text: boolean;
 };
 
 export const computeDataError = async (response: TResponse, setResponseErrorFn = setResponseError) => {
@@ -51,6 +54,9 @@ export const buildResponse = async (response: TResponse, config: TConfig, comput
       if (config.blob) {
         return response.blob();
       }
+      if (config.text) {
+        return response.text();
+      }
       return {
         ...(await response.json()),
         statusHttp: status,
@@ -63,11 +69,12 @@ export const buildResponse = async (response: TResponse, config: TConfig, comput
 };
 
 export const setFetchCustom =
-  ({ apiUrl, fetchAuthConfig, fetchFn = fetch, mergeObjFn = mergeObj }: TFetchCustom) =>
+  ({ apiUrl, fetchAuthConfig, fetchFn = fetch, mergeObjFn = mergeObj, manageConfigFn = manageConfig }: TFetchCustom) =>
   async (queryKey: QueryKey) => {
-    const [path, customConfig] = queryKey;
-    const url = `${apiUrl}${path}`;
-    const config = mergeObjFn(fetchAuthConfig, customConfig);
+    const [path, customConfig, apiName = API_URL.VERCEL]: QueryKey = queryKey;
+    const url = `${apiUrl[apiName as string]}${path}`;
+    const fetchAuthConfigCustom = manageConfigFn(apiName as string, fetchAuthConfig as object);
+    const config = mergeObjFn(fetchAuthConfigCustom, customConfig);
     const response = await fetchFn(url, config);
     return buildResponse(response, config);
   };

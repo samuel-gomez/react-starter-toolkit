@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TabsLiveCode /> Render <TabsLiveCode /> with children 1`] = `
+<DocumentFragment>
+  <div
+    class="af-tabs af-tabs--tabs-live-code"
+  >
+    <ul
+      class="af-tabs__control"
+    >
+      <li
+        class="af-tabs__item af-tabs__item--has-icon-left af-tabs__item--active"
+      >
+        <button
+          class="af-tabs__link"
+          id="0"
+        >
+          <i
+            class="glyphicon glyphicon-undefined"
+          />
+           
+        </button>
+      </li>
+      <li
+        class="af-tabs__item af-tabs__item--has-icon-left"
+      >
+        <button
+          class="af-tabs__link"
+          id="1"
+        >
+          <i
+            class="glyphicon glyphicon-undefined"
+          />
+           
+        </button>
+      </li>
+    </ul>
+    <div
+      class="af-tabs__content"
+    >
+      <div
+        class="af-tabs__pane"
+      >
+        <div>
+          test
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

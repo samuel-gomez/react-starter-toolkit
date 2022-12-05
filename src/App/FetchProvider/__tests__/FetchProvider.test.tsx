@@ -18,7 +18,10 @@ const fetchConfigMock = {
   },
 };
 
-const apiMock = 'http://localhost:5001/api/';
+const apiMock = {
+  vercel: 'http://localhost:5001/api/',
+  github: 'https://raw.githubusercontent.com/',
+};
 
 type TBase = {
   fetchCustom?: (path: string, customConfig: object) => Promise<Response> | null;
@@ -115,19 +118,28 @@ describe('setFetchCustom', () => {
 
 describe('buildResponse', () => {
   const computeDataErrorFn = jest.fn();
-  const responseMock = { status: 200, json: async () => ({ msg: 'test' }), blob: async () => ({ msg: 'testblob' }) };
+  const responseMock = {
+    status: 200,
+    text: async () => ({ msg: 'testText' }),
+    json: async () => ({ msg: 'test' }),
+    blob: async () => ({ msg: 'testblob' }),
+  };
   it('Should return response 200 and msg = test when status = 200 and blob is falsy', async () => {
-    const result = await buildResponse(responseMock, { blob: false });
+    const result = await buildResponse(responseMock, { blob: false, text: false });
     expect(result).toEqual({ statusHttp: responseMock.status, msg: 'test' });
   });
   it('Should return msg = testblob when status = 200 and blob is truthy', async () => {
-    const result = await buildResponse(responseMock, { blob: true });
+    const result = await buildResponse(responseMock, { blob: true, text: false });
     expect(result).toEqual({ msg: 'testblob' });
+  });
+  it('Should return msg = testText when status = 200 and text is truthy', async () => {
+    const result = await buildResponse(responseMock, { blob: false, text: true });
+    expect(result).toEqual({ msg: 'testText' });
   });
   it('Should called computeDataErrorFn when status = 504', async () => {
     responseMock.status = 504;
     try {
-      await buildResponse(responseMock, { blob: false }, computeDataErrorFn);
+      await buildResponse(responseMock, { blob: false, text: false }, computeDataErrorFn);
     } catch (error) {
       expect(computeDataErrorFn).toBeCalled();
     }
@@ -135,7 +147,7 @@ describe('buildResponse', () => {
   it('Should called computeDataErrorFn when status = 500', async () => {
     responseMock.status = 500;
     try {
-      await buildResponse(responseMock, { blob: false }, computeDataErrorFn);
+      await buildResponse(responseMock, { blob: false, text: false }, computeDataErrorFn);
     } catch (error) {
       expect(computeDataErrorFn).toBeCalled();
     }
@@ -143,14 +155,14 @@ describe('buildResponse', () => {
   it('Should called computeDataErrorFn when status = 400', async () => {
     responseMock.status = 400;
     try {
-      await buildResponse(responseMock, { blob: false }, computeDataErrorFn);
+      await buildResponse(responseMock, { blob: false, text: false }, computeDataErrorFn);
     } catch (error) {
       expect(computeDataErrorFn).toBeCalled();
     }
   });
   it('Should return response 204 when status = 204', async () => {
     responseMock.status = 204;
-    const result = await buildResponse(responseMock, { blob: false });
+    const result = await buildResponse(responseMock, { blob: false, text: false });
     expect(result).toEqual({ statusHttp: responseMock.status });
   });
 });
@@ -158,6 +170,7 @@ describe('buildResponse', () => {
 describe('computeDataError', () => {
   const responseMock = {
     status: 500,
+    text: async () => ({ msg: 'test' }),
     json: async () => ({}),
     blob: async () => ({ msg: 'testblob' }),
   };

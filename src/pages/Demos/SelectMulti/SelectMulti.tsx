@@ -94,9 +94,8 @@ const SelectMultiWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>
         classModifier="with-editor"
         styleLivePreview={{ textAlign: 'left' }}
         code={code(props)}
-        scope={{
-          ...props,
-        }}
+        githubPackage={GITHUB_PACKAGE}
+        scope={props}
       />
     </>
   ),

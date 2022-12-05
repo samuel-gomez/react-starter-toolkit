@@ -1,0 +1,83 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AccordionResults /> Render <AccordionResults /> with results 1`] = `
+<DocumentFragment>
+  <div
+    aria-multiselectable="true"
+    class="af-accordion af-accordion--light af-accordion--accessibility"
+    role="tablist"
+  >
+    <div
+      class="af-accordion__item"
+    >
+      <div
+        class="af-accordion__item-header"
+        id="id0"
+        role="tab"
+      >
+        <a
+          aria-controls="id0body"
+          aria-expanded="false"
+          class="af-accordion__item-toggle"
+          data-toggle="isOpen"
+          href="#id0body"
+        >
+          <h3
+            class="af-accordion__item-title"
+          >
+            <span
+              class="glyphicon glyphicon-menu-down"
+            />
+            test 
+            <span
+              class="af-badge af-badge--error"
+            >
+              critical
+            </span>
+          </h3>
+        </a>
+      </div>
+      <div
+        aria-labelledby="id0"
+        class="af-accordion__collapse af-accordion__collapse--close"
+        id="id0body"
+        role="tabpanel"
+        style="max-height: 0;"
+      >
+        <div
+          class="af-accordion__block"
+        >
+          <div
+            class="af-accordion--accessibility-wrapper-body"
+          >
+            <p>
+              test
+            </p>
+            <p>
+              <a
+                href="url"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Plus d'infos...
+              </a>
+            </p>
+          </div>
+          <div
+            class="af-accordion--accessibility-wrapper-body"
+          >
+            <span>
+              Tags : 
+            </span>
+            <span
+              class="af-badge af-badge--info"
+            >
+              tag1
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

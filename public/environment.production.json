@@ -1,5 +1,8 @@
 {
-  "apiUrl": "https://react-starter-api.vercel.app/api/",
+  "apiUrl": {
+    "vercel": "https://react-starter-api.vercel.app/api/",
+    "github": "https://raw.githubusercontent.com/"
+  },
   "baseUrl": "/",
   "fetchConfig": {
     "crossDomain": true,

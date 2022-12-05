@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TitleTab /> Render <AccordionResults /> with results, label, icon 1`] = `
+<DocumentFragment>
+  <i
+    class="glyphicon glyphicon-ok"
+  />
+   (1) test
+</DocumentFragment>
+`;

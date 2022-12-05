@@ -1,0 +1,203 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AccessibilityContainer /> Render <AccessibilityContainer /> with ariaLabel 1`] = `
+<DocumentFragment>
+  <div
+    class="af-tabs af-tabs--accessibility-content"
+  >
+    <ul
+      class="af-tabs__control"
+    >
+      <li
+        class="af-tabs__item af-tabs__item--has-icon-left af-tabs__item--custom-radius af-tabs__item--active"
+      >
+        <button
+          class="af-tabs__link"
+          id="0"
+        >
+          <i
+            class="glyphicon glyphicon-alert"
+          />
+           (0) Violations
+        </button>
+      </li>
+      <li
+        class="af-tabs__item af-tabs__item--has-icon-left af-tabs__item--custom-radius"
+      >
+        <button
+          class="af-tabs__link"
+          id="1"
+        >
+          <i
+            class="glyphicon glyphicon-ok"
+          />
+           (0) Passes
+        </button>
+      </li>
+      <li
+        class="af-tabs__item af-tabs__item--has-icon-left af-tabs__item--custom-radius"
+      >
+        <button
+          class="af-tabs__link"
+          id="2"
+        >
+          <i
+            class="glyphicon glyphicon-retweet"
+          />
+           (0) Incomplete
+        </button>
+      </li>
+    </ul>
+    <div
+      class="af-tabs__content"
+    >
+      <div
+        class="af-tabs__pane"
+      >
+        <div
+          class="empty-accessiblity"
+        >
+          Pas de violations
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<AccessibilityContainer /> Render <AccessibilityContainer /> with ariaLabel and useAxeFn 1`] = `
+<DocumentFragment>
+  <div
+    class="af-tabs af-tabs--accessibility-content"
+  >
+    <ul
+      class="af-tabs__control"
+    >
+      <li
+        class="af-tabs__item af-tabs__item--has-icon-left af-tabs__item--custom-radius af-tabs__item--active"
+      >
+        <button
+          class="af-tabs__link"
+          id="0"
+        >
+          <i
+            class="glyphicon glyphicon-alert"
+          />
+           (1) Violations
+        </button>
+      </li>
+      <li
+        class="af-tabs__item af-tabs__item--has-icon-left af-tabs__item--custom-radius"
+      >
+        <button
+          class="af-tabs__link"
+          id="1"
+        >
+          <i
+            class="glyphicon glyphicon-ok"
+          />
+           (0) Passes
+        </button>
+      </li>
+      <li
+        class="af-tabs__item af-tabs__item--has-icon-left af-tabs__item--custom-radius"
+      >
+        <button
+          class="af-tabs__link"
+          id="2"
+        >
+          <i
+            class="glyphicon glyphicon-retweet"
+          />
+           (0) Incomplete
+        </button>
+      </li>
+    </ul>
+    <div
+      class="af-tabs__content"
+    >
+      <div
+        class="af-tabs__pane"
+      >
+        <div
+          aria-multiselectable="true"
+          class="af-accordion af-accordion--light af-accordion--accessibility"
+          role="tablist"
+        >
+          <div
+            class="af-accordion__item"
+          >
+            <div
+              class="af-accordion__item-header"
+              id="id0"
+              role="tab"
+            >
+              <a
+                aria-controls="id0body"
+                aria-expanded="false"
+                class="af-accordion__item-toggle"
+                data-toggle="isOpen"
+                href="#id0body"
+              >
+                <h3
+                  class="af-accordion__item-title"
+                >
+                  <span
+                    class="glyphicon glyphicon-menu-down"
+                  />
+                  test 
+                  <span
+                    class="af-badge af-badge--error"
+                  >
+                    critical
+                  </span>
+                </h3>
+              </a>
+            </div>
+            <div
+              aria-labelledby="id0"
+              class="af-accordion__collapse af-accordion__collapse--close"
+              id="id0body"
+              role="tabpanel"
+              style="max-height: 0;"
+            >
+              <div
+                class="af-accordion__block"
+              >
+                <div
+                  class="af-accordion--accessibility-wrapper-body"
+                >
+                  <p>
+                    test
+                  </p>
+                  <p>
+                    <a
+                      href="url"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Plus d'infos...
+                    </a>
+                  </p>
+                </div>
+                <div
+                  class="af-accordion--accessibility-wrapper-body"
+                >
+                  <span>
+                    Tags : 
+                  </span>
+                  <span
+                    class="af-badge af-badge--info"
+                  >
+                    tag1
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

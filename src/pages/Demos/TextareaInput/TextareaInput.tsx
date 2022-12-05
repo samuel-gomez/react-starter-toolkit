@@ -93,7 +93,7 @@ const TextareaInputWithEditor = withEditor<Props & Partial<TReturnUseToggleEdito
         npmName={NPM_NAME}
         openEditor={openEditor}
       />
-      <LiveCode classModifier="with-editor" code={code(props)} scope={props} />
+      <LiveCode classModifier="with-editor" code={code(props)} scope={props} githubPackage={GITHUB_PACKAGE} />
     </>
   ),
   knobs as unknown as Tknobs,
