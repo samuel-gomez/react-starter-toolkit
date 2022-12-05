@@ -24,10 +24,20 @@ type THeaderApp = {
   authRole?: string;
   link?: string;
   anomaly?: Tanomaly | null;
+  fullScreen?: boolean;
 };
 
-export const HeaderApp = ({ infos, title, subtitle, link = '#', authName = 'Non Connecté', authRole = 'Profil', anomaly }: THeaderApp) => (
-  <Header>
+export const HeaderApp = ({
+  fullScreen,
+  infos,
+  title,
+  subtitle,
+  link = '#',
+  authName = 'Non Connecté',
+  authRole = 'Profil',
+  anomaly,
+}: THeaderApp) => (
+  <Header classModifier={fullScreen ? 'fullscreen' : ''}>
     <Name title={title} img={logo} alt={title} subtitle={subtitle} />
     {infos && (
       <Resilience anomaly={anomaly} resilienceModifier="simple infos">
@@ -36,7 +46,7 @@ export const HeaderApp = ({ infos, title, subtitle, link = '#', authName = 'Non 
         </HeaderInfo>
       </Resilience>
     )}
-    <User name={authName} href={link} profile={authRole} />
+    <User name={authName} href={link} profile={!!authRole ? authRole : 'inconnu'} />
   </Header>
 );
 

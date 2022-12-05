@@ -25,7 +25,9 @@ function deleteFolderRecursive(path) {
 
 const pathsAll = [
   './public/templates',
+  './public/images',
   './public/_redirect',
+  './src/pages/Home/Galleries',
   './src/shared/images',
   './src/shared/components/LiveCode',
   './src/shared/components/Cards',
@@ -38,8 +40,8 @@ const pathsAll = [
   'netlify.toml',
   'LICENSE',
   './docs/CLEAN.md',
-  '.git',
   '.github',
+  'package-lock.json',
 ];
 
 console.log('Cleaning working tree...');
@@ -56,8 +58,11 @@ const pathsReplace = [
   'app.code-workspace',
   'README.md',
   '.env',
+  'features/Home/Home.feature',
   'src/setupTests.tsx',
   'src/shared/constants.ts',
+  'src/pages/Home/Home.tsx',
+  'src/pages/Home/__tests__/Home.spec.tsx',
   'src/Layout/Menu/constants.ts',
   'src/Layout/Header/Header.tsx',
   'src/Layout/Header/Header.scss',
@@ -76,5 +81,3 @@ const pathsReplace = [
 console.log('Cleaning files...');
 pathsReplace.forEach(file => replaceContentsSync(`${basePath}${file}`, `./files/${file}`));
 console.log('Successfully cleaned files!');
-
-deleteFolderRecursive(`${basePath}scripts`);
