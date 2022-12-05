@@ -36,6 +36,11 @@ export const UnTitreEstVisible = (instruction: DefineStepFunction, level = 1) =>
     expectTitle({ name: title, level });
   });
 
+export const UnTexteEstVisible = (instruction: DefineStepFunction) =>
+  instruction(/^un texte "(.*)" est visible$/, text => {
+    expect(screen.getByText(RegExp(text))).toBeInTheDocument();
+  });
+
 export const UnLabelEstVisible = (instruction: DefineStepFunction, parentLabel = '') =>
   instruction(/^un label "(.*)" est visible$/, async name => {
     const base = !!parentLabel ? within(screen.getByLabelText(parentLabel)) : screen;

@@ -20,7 +20,7 @@
     "prettier": "prettier --check src",
     "prettier:fix": "prettier --write src",
     "check": "npm run prettier && npm run lint",
-    "clean": "cd ./scripts && npm i && npm start"
+    "clean": "cd ./scripts && npm i && npm start && npx rimraf ../scripts"
   },
   "dependencies": {
     "@axa-fr/react-oidc": "6.10.18",
