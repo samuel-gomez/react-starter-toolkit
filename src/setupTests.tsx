@@ -5,7 +5,7 @@ import { ChangeEvent } from 'react';
 // learn more: https://github.com/testing-library/jest-dom
 import '@testing-library/jest-dom/extend-expect';
 import 'whatwg-fetch';
-import { server } from './shared/testsUtils/msw';
+import { server } from 'shared/testsUtils/msw';
 
 beforeAll(() => server.listen());
 afterEach(() => server.resetHandlers());

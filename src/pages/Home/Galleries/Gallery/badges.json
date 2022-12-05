@@ -1,0 +1,47 @@
+[
+  {
+    "href": "https://twitter.com/gamuez",
+    "src": "https://badgen.net/twitter/follow/gamuez",
+    "alt": "Follow @Gamuez"
+  },
+  {
+    "href": "https://www.npmjs.com/package/@axa-fr/react-toolkit-all",
+    "src": "https://img.shields.io/badge/toolkit-v2.0.0-blue",
+    "alt": "Toolkit Slash"
+  },
+  {
+    "href": "https://github.com/samuel-gomez/react-starter-toolkit/actions/workflows/build.yml",
+    "src": "https://github.com/samuel-gomez/react-starter-toolkit/actions/workflows/build.yml/badge.svg",
+    "alt": "Build"
+  },
+  {
+    "href": "http://commitizen.github.io/cz-cli/",
+    "src": "https://img.shields.io/badge/commitizen-friendly-brightgreen.svg",
+    "alt": "Commitizen friendly"
+  },
+  {
+    "href": "https://codecov.io/gh/samuel-gomez/react-starter-toolkit",
+    "src": "https://codecov.io/gh/samuel-gomez/react-starter-toolkit/branch/master/graph/badge.svg?token=N75VO37VG7",
+    "alt": "codecov"
+  },
+  {
+    "href": "https://app.netlify.com/sites/react-starter-toolkit/deploys",
+    "src": "https://api.netlify.com/api/v1/badges/c496aa9a-8801-4a32-9571-547bd4ea5ea3/deploy-status",
+    "alt": "Netlify Status"
+  },
+  {
+    "href": "https://sonarcloud.io/dashboard?id=samuel-gomez_react-starter-toolkit",
+    "src": "https://sonarcloud.io/api/project_badges/measure?project=samuel-gomez_react-starter-toolkit&metric=alert_status",
+    "alt": "Quality Gate Status"
+  },
+  {
+    "href": "https://sonarcloud.io/component_measures?id=samuel-gomez_react-starter-toolkit&metric=reliability_rating",
+    "src": "https://sonarcloud.io/api/project_badges/measure?project=samuel-gomez_react-starter-toolkit&metric=reliability_rating",
+    "alt": "Reliability"
+  },
+  {
+    "href": "https://sonarcloud.io/component_measures?id=samuel-gomez_react-starter-toolkit&metric=security_rating",
+    "src": "https://sonarcloud.io/api/project_badges/measure?project=samuel-gomez_react-starter-toolkit&metric=security_rating",
+    "alt": "Security"
+  }
+]

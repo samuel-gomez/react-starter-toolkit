@@ -1,0 +1,133 @@
+[
+  {
+    "title": "Technical Stack",
+    "description": "Ce starter est principalement basé sur ces outils.",
+    "image": "stack.webp",
+    "alt": "Technical Stack",
+    "first": true,
+    "items": [
+      {
+        "titleItem": "React",
+        "linkItem": "https://fr.reactjs.org/",
+        "imageItem": "react"
+      },
+      {
+        "titleItem": "Slash DS",
+        "linkItem": "https://axaguildev.github.io/design-system/",
+        "imageItem": "slash"
+      }
+    ]
+  },
+  {
+    "title": "Testing tools",
+    "description": "Voici la liste des outils implémentés pour effectuer les tests unitaires et les tests d'intégration.",
+    "image": "quality.png",
+    "alt": "Software Quality Assurance",
+    "items": [
+      {
+        "titleItem": "Testing Library",
+        "linkItem": "https://testing-library.com/",
+        "imageItem": "testing-library"
+      },
+      {
+        "titleItem": "Jest Cucumber",
+        "linkItem": "https://github.com/bencompton/jest-cucumber",
+        "imageItem": "jest-cucumber"
+      },
+      {
+        "titleItem": "Jest",
+        "linkItem": "https://jestjs.io/fr/",
+        "imageItem": "jest"
+      },
+      {
+        "titleItem": "MSW",
+        "linkItem": "https://mswjs.io/",
+        "imageItem": "msw"
+      }
+    ]
+  },
+  {
+    "title": "Checking tools",
+    "description": "Voici la liste des outils facilitant les développements.",
+    "image": "test.png",
+    "alt": "Checking tools",
+    "items": [
+      {
+        "titleItem": "Typescript",
+        "linkItem": "https://www.typescriptlang.org/",
+        "imageItem": "typescript"
+      },
+      {
+        "titleItem": "Eslint",
+        "linkItem": "https://eslint.org/",
+        "imageItem": "eslint"
+      },
+      {
+        "titleItem": "Prettier",
+        "linkItem": "https://prettier.io/",
+        "imageItem": "prettier"
+      },
+      {
+        "titleItem": "Husky",
+        "linkItem": "https://typicode.github.io/husky/#/",
+        "imageItem": "husky"
+      },
+      {
+        "titleItem": "Commitlint",
+        "linkItem": "https://commitlint.js.org/#/",
+        "imageItem": "commitlint"
+      }
+    ]
+  },
+  {
+    "title": "Accessibility tools",
+    "description": "Voici la liste des outils facilitant la mise en place de l'accessibilité.",
+    "image": "accessibility.svg",
+    "alt": "Accessibility tools",
+    "items": [
+      {
+        "titleItem": "React Axe",
+        "linkItem": "https://www.deque.com/axe/",
+        "imageItem": "react-axe"
+      },
+      {
+        "titleItem": "Eslint A11y",
+        "linkItem": "https://www.npmjs.com/package/eslint-plugin-jsx-a11y",
+        "imageItem": "eslint"
+      }
+    ]
+  },
+  {
+    "title": "Other tools",
+    "description": "Voici la liste des outils complémentaires",
+    "image": "tools.svg",
+    "alt": "Utils",
+    "items": [
+      {
+        "titleItem": "React router",
+        "linkItem": "https://reactrouter.com/en/main",
+        "imageItem": "react-router"
+      },
+      {
+        "titleItem": "React Hook Form",
+        "linkItem": "https://react-hook-form.com/",
+        "imageItem": "react-hook-form"
+      },
+      {
+        "titleItem": "React Query",
+        "linkItem": "https://react-query-v3.tanstack.com/",
+        "imageItem": "react-query"
+      },
+      {
+        "titleItem": "SonarQube",
+        "linkItem": "https://www.sonarqube.org/",
+        "imageItem": "sonarqube"
+      },
+      {
+        "titleItem": "React OIDC",
+        "linkItem": "https://github.com/AxaGuilDEv/react-oidc",
+        "imageItem": "openid"
+      }
+    ]
+  }
+]

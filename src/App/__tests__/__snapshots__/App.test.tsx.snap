@@ -887,6 +887,820 @@ exports[`<App/> Should render App with all props and authentication NOT enabled 
       >
         Bienvenue sur la démo du starter Slash Design System
       </h1>
+      <section
+        class="af-gallery"
+      >
+        <header
+          class="af-gallery__header"
+        >
+          <img
+            alt="Technical Stack"
+            class="af-gallery__header-image"
+            src="./images/stack.webp"
+          />
+          <h2
+            class="af-gallery__header-title"
+          >
+            Technical Stack
+          </h2>
+          <p
+            class="af-gallery__header-description"
+          >
+            Ce starter est principalement basé sur ces outils.
+          </p>
+          <menu
+            class="af-status-badge"
+          >
+            <a
+              class="af-status-badge__link"
+              href="https://twitter.com/gamuez"
+            >
+              <img
+                alt="Follow @Gamuez"
+                src="https://badgen.net/twitter/follow/gamuez"
+              />
+            </a>
+            <a
+              class="af-status-badge__link"
+              href="https://www.npmjs.com/package/@axa-fr/react-toolkit-all"
+            >
+              <img
+                alt="Toolkit Slash"
+                src="https://img.shields.io/badge/toolkit-v2.0.0-blue"
+              />
+            </a>
+            <a
+              class="af-status-badge__link"
+              href="https://github.com/samuel-gomez/react-starter-toolkit/actions/workflows/build.yml"
+            >
+              <img
+                alt="Build"
+                src="https://github.com/samuel-gomez/react-starter-toolkit/actions/workflows/build.yml/badge.svg"
+              />
+            </a>
+            <a
+              class="af-status-badge__link"
+              href="http://commitizen.github.io/cz-cli/"
+            >
+              <img
+                alt="Commitizen friendly"
+                src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg"
+              />
+            </a>
+            <a
+              class="af-status-badge__link"
+              href="https://codecov.io/gh/samuel-gomez/react-starter-toolkit"
+            >
+              <img
+                alt="codecov"
+                src="https://codecov.io/gh/samuel-gomez/react-starter-toolkit/branch/master/graph/badge.svg?token=N75VO37VG7"
+              />
+            </a>
+            <a
+              class="af-status-badge__link"
+              href="https://app.netlify.com/sites/react-starter-toolkit/deploys"
+            >
+              <img
+                alt="Netlify Status"
+                src="https://api.netlify.com/api/v1/badges/c496aa9a-8801-4a32-9571-547bd4ea5ea3/deploy-status"
+              />
+            </a>
+            <a
+              class="af-status-badge__link"
+              href="https://sonarcloud.io/dashboard?id=samuel-gomez_react-starter-toolkit"
+            >
+              <img
+                alt="Quality Gate Status"
+                src="https://sonarcloud.io/api/project_badges/measure?project=samuel-gomez_react-starter-toolkit&metric=alert_status"
+              />
+            </a>
+            <a
+              class="af-status-badge__link"
+              href="https://sonarcloud.io/component_measures?id=samuel-gomez_react-starter-toolkit&metric=reliability_rating"
+            >
+              <img
+                alt="Reliability"
+                src="https://sonarcloud.io/api/project_badges/measure?project=samuel-gomez_react-starter-toolkit&metric=reliability_rating"
+              />
+            </a>
+            <a
+              class="af-status-badge__link"
+              href="https://sonarcloud.io/component_measures?id=samuel-gomez_react-starter-toolkit&metric=security_rating"
+            >
+              <img
+                alt="Security"
+                src="https://sonarcloud.io/api/project_badges/measure?project=samuel-gomez_react-starter-toolkit&metric=security_rating"
+              />
+            </a>
+          </menu>
+        </header>
+        <main
+          class="af-gallery__main"
+        >
+          <article
+            class="af-gallery__item af-gallery__react"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__react"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    React
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://fr.reactjs.org/"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir React"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="af-gallery__item af-gallery__slash"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__slash"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    Slash DS
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://axaguildev.github.io/design-system/"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir Slash DS"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </main>
+      </section>
+      <section
+        class="af-gallery"
+      >
+        <header
+          class="af-gallery__header"
+        >
+          <img
+            alt="Software Quality Assurance"
+            class="af-gallery__header-image"
+            src="./images/quality.png"
+          />
+          <h2
+            class="af-gallery__header-title"
+          >
+            Testing tools
+          </h2>
+          <p
+            class="af-gallery__header-description"
+          >
+            Voici la liste des outils implémentés pour effectuer les tests unitaires et les tests d'intégration.
+          </p>
+        </header>
+        <main
+          class="af-gallery__main"
+        >
+          <article
+            class="af-gallery__item af-gallery__testing-library"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__testing-library"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    Testing Library
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://testing-library.com/"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir Testing Library"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="af-gallery__item af-gallery__jest-cucumber"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__jest-cucumber"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    Jest Cucumber
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://github.com/bencompton/jest-cucumber"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir Jest Cucumber"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="af-gallery__item af-gallery__jest"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__jest"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    Jest
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://jestjs.io/fr/"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir Jest"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="af-gallery__item af-gallery__msw"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__msw"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    MSW
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://mswjs.io/"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir MSW"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </main>
+      </section>
+      <section
+        class="af-gallery"
+      >
+        <header
+          class="af-gallery__header"
+        >
+          <img
+            alt="Checking tools"
+            class="af-gallery__header-image"
+            src="./images/test.png"
+          />
+          <h2
+            class="af-gallery__header-title"
+          >
+            Checking tools
+          </h2>
+          <p
+            class="af-gallery__header-description"
+          >
+            Voici la liste des outils facilitant les développements.
+          </p>
+        </header>
+        <main
+          class="af-gallery__main"
+        >
+          <article
+            class="af-gallery__item af-gallery__typescript"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__typescript"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    Typescript
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://www.typescriptlang.org/"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir Typescript"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="af-gallery__item af-gallery__eslint"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__eslint"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    Eslint
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://eslint.org/"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir Eslint"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="af-gallery__item af-gallery__prettier"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__prettier"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    Prettier
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://prettier.io/"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir Prettier"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="af-gallery__item af-gallery__husky"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__husky"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    Husky
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://typicode.github.io/husky/#/"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir Husky"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="af-gallery__item af-gallery__commitlint"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__commitlint"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    Commitlint
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://commitlint.js.org/#/"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir Commitlint"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </main>
+      </section>
+      <section
+        class="af-gallery"
+      >
+        <header
+          class="af-gallery__header"
+        >
+          <img
+            alt="Accessibility tools"
+            class="af-gallery__header-image"
+            src="./images/accessibility.svg"
+          />
+          <h2
+            class="af-gallery__header-title"
+          >
+            Accessibility tools
+          </h2>
+          <p
+            class="af-gallery__header-description"
+          >
+            Voici la liste des outils facilitant la mise en place de l'accessibilité.
+          </p>
+        </header>
+        <main
+          class="af-gallery__main"
+        >
+          <article
+            class="af-gallery__item af-gallery__react-axe"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__react-axe"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    React Axe
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://www.deque.com/axe/"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir React Axe"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="af-gallery__item af-gallery__eslint"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__eslint"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    Eslint A11y
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://www.npmjs.com/package/eslint-plugin-jsx-a11y"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir Eslint A11y"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </main>
+      </section>
+      <section
+        class="af-gallery"
+      >
+        <header
+          class="af-gallery__header"
+        >
+          <img
+            alt="Utils"
+            class="af-gallery__header-image"
+            src="./images/tools.svg"
+          />
+          <h2
+            class="af-gallery__header-title"
+          >
+            Other tools
+          </h2>
+          <p
+            class="af-gallery__header-description"
+          >
+            Voici la liste des outils complémentaires
+          </p>
+        </header>
+        <main
+          class="af-gallery__main"
+        >
+          <article
+            class="af-gallery__item af-gallery__react-router"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__react-router"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    React router
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://reactrouter.com/en/main"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir React router"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="af-gallery__item af-gallery__react-hook-form"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__react-hook-form"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    React Hook Form
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://react-hook-form.com/"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir React Hook Form"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="af-gallery__item af-gallery__react-query"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__react-query"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    React Query
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://react-query-v3.tanstack.com/"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir React Query"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="af-gallery__item af-gallery__sonarqube"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__sonarqube"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    SonarQube
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://www.sonarqube.org/"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir SonarQube"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="af-gallery__item af-gallery__openid"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__openid"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    React OIDC
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://github.com/AxaGuilDEv/react-oidc"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir React OIDC"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </main>
+      </section>
     </section>
   </main>
   <footer
@@ -1804,6 +2618,820 @@ exports[`<App/> Should render App with all props and authentication enabled 1`] 
       >
         Bienvenue sur la démo du starter Slash Design System
       </h1>
+      <section
+        class="af-gallery"
+      >
+        <header
+          class="af-gallery__header"
+        >
+          <img
+            alt="Technical Stack"
+            class="af-gallery__header-image"
+            src="./images/stack.webp"
+          />
+          <h2
+            class="af-gallery__header-title"
+          >
+            Technical Stack
+          </h2>
+          <p
+            class="af-gallery__header-description"
+          >
+            Ce starter est principalement basé sur ces outils.
+          </p>
+          <menu
+            class="af-status-badge"
+          >
+            <a
+              class="af-status-badge__link"
+              href="https://twitter.com/gamuez"
+            >
+              <img
+                alt="Follow @Gamuez"
+                src="https://badgen.net/twitter/follow/gamuez"
+              />
+            </a>
+            <a
+              class="af-status-badge__link"
+              href="https://www.npmjs.com/package/@axa-fr/react-toolkit-all"
+            >
+              <img
+                alt="Toolkit Slash"
+                src="https://img.shields.io/badge/toolkit-v2.0.0-blue"
+              />
+            </a>
+            <a
+              class="af-status-badge__link"
+              href="https://github.com/samuel-gomez/react-starter-toolkit/actions/workflows/build.yml"
+            >
+              <img
+                alt="Build"
+                src="https://github.com/samuel-gomez/react-starter-toolkit/actions/workflows/build.yml/badge.svg"
+              />
+            </a>
+            <a
+              class="af-status-badge__link"
+              href="http://commitizen.github.io/cz-cli/"
+            >
+              <img
+                alt="Commitizen friendly"
+                src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg"
+              />
+            </a>
+            <a
+              class="af-status-badge__link"
+              href="https://codecov.io/gh/samuel-gomez/react-starter-toolkit"
+            >
+              <img
+                alt="codecov"
+                src="https://codecov.io/gh/samuel-gomez/react-starter-toolkit/branch/master/graph/badge.svg?token=N75VO37VG7"
+              />
+            </a>
+            <a
+              class="af-status-badge__link"
+              href="https://app.netlify.com/sites/react-starter-toolkit/deploys"
+            >
+              <img
+                alt="Netlify Status"
+                src="https://api.netlify.com/api/v1/badges/c496aa9a-8801-4a32-9571-547bd4ea5ea3/deploy-status"
+              />
+            </a>
+            <a
+              class="af-status-badge__link"
+              href="https://sonarcloud.io/dashboard?id=samuel-gomez_react-starter-toolkit"
+            >
+              <img
+                alt="Quality Gate Status"
+                src="https://sonarcloud.io/api/project_badges/measure?project=samuel-gomez_react-starter-toolkit&metric=alert_status"
+              />
+            </a>
+            <a
+              class="af-status-badge__link"
+              href="https://sonarcloud.io/component_measures?id=samuel-gomez_react-starter-toolkit&metric=reliability_rating"
+            >
+              <img
+                alt="Reliability"
+                src="https://sonarcloud.io/api/project_badges/measure?project=samuel-gomez_react-starter-toolkit&metric=reliability_rating"
+              />
+            </a>
+            <a
+              class="af-status-badge__link"
+              href="https://sonarcloud.io/component_measures?id=samuel-gomez_react-starter-toolkit&metric=security_rating"
+            >
+              <img
+                alt="Security"
+                src="https://sonarcloud.io/api/project_badges/measure?project=samuel-gomez_react-starter-toolkit&metric=security_rating"
+              />
+            </a>
+          </menu>
+        </header>
+        <main
+          class="af-gallery__main"
+        >
+          <article
+            class="af-gallery__item af-gallery__react"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__react"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    React
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://fr.reactjs.org/"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir React"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="af-gallery__item af-gallery__slash"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__slash"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    Slash DS
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://axaguildev.github.io/design-system/"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir Slash DS"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </main>
+      </section>
+      <section
+        class="af-gallery"
+      >
+        <header
+          class="af-gallery__header"
+        >
+          <img
+            alt="Software Quality Assurance"
+            class="af-gallery__header-image"
+            src="./images/quality.png"
+          />
+          <h2
+            class="af-gallery__header-title"
+          >
+            Testing tools
+          </h2>
+          <p
+            class="af-gallery__header-description"
+          >
+            Voici la liste des outils implémentés pour effectuer les tests unitaires et les tests d'intégration.
+          </p>
+        </header>
+        <main
+          class="af-gallery__main"
+        >
+          <article
+            class="af-gallery__item af-gallery__testing-library"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__testing-library"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    Testing Library
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://testing-library.com/"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir Testing Library"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="af-gallery__item af-gallery__jest-cucumber"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__jest-cucumber"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    Jest Cucumber
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://github.com/bencompton/jest-cucumber"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir Jest Cucumber"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="af-gallery__item af-gallery__jest"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__jest"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    Jest
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://jestjs.io/fr/"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir Jest"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="af-gallery__item af-gallery__msw"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__msw"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    MSW
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://mswjs.io/"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir MSW"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </main>
+      </section>
+      <section
+        class="af-gallery"
+      >
+        <header
+          class="af-gallery__header"
+        >
+          <img
+            alt="Checking tools"
+            class="af-gallery__header-image"
+            src="./images/test.png"
+          />
+          <h2
+            class="af-gallery__header-title"
+          >
+            Checking tools
+          </h2>
+          <p
+            class="af-gallery__header-description"
+          >
+            Voici la liste des outils facilitant les développements.
+          </p>
+        </header>
+        <main
+          class="af-gallery__main"
+        >
+          <article
+            class="af-gallery__item af-gallery__typescript"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__typescript"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    Typescript
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://www.typescriptlang.org/"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir Typescript"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="af-gallery__item af-gallery__eslint"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__eslint"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    Eslint
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://eslint.org/"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir Eslint"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="af-gallery__item af-gallery__prettier"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__prettier"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    Prettier
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://prettier.io/"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir Prettier"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="af-gallery__item af-gallery__husky"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__husky"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    Husky
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://typicode.github.io/husky/#/"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir Husky"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="af-gallery__item af-gallery__commitlint"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__commitlint"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    Commitlint
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://commitlint.js.org/#/"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir Commitlint"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </main>
+      </section>
+      <section
+        class="af-gallery"
+      >
+        <header
+          class="af-gallery__header"
+        >
+          <img
+            alt="Accessibility tools"
+            class="af-gallery__header-image"
+            src="./images/accessibility.svg"
+          />
+          <h2
+            class="af-gallery__header-title"
+          >
+            Accessibility tools
+          </h2>
+          <p
+            class="af-gallery__header-description"
+          >
+            Voici la liste des outils facilitant la mise en place de l'accessibilité.
+          </p>
+        </header>
+        <main
+          class="af-gallery__main"
+        >
+          <article
+            class="af-gallery__item af-gallery__react-axe"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__react-axe"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    React Axe
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://www.deque.com/axe/"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir React Axe"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="af-gallery__item af-gallery__eslint"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__eslint"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    Eslint A11y
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://www.npmjs.com/package/eslint-plugin-jsx-a11y"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir Eslint A11y"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </main>
+      </section>
+      <section
+        class="af-gallery"
+      >
+        <header
+          class="af-gallery__header"
+        >
+          <img
+            alt="Utils"
+            class="af-gallery__header-image"
+            src="./images/tools.svg"
+          />
+          <h2
+            class="af-gallery__header-title"
+          >
+            Other tools
+          </h2>
+          <p
+            class="af-gallery__header-description"
+          >
+            Voici la liste des outils complémentaires
+          </p>
+        </header>
+        <main
+          class="af-gallery__main"
+        >
+          <article
+            class="af-gallery__item af-gallery__react-router"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__react-router"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    React router
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://reactrouter.com/en/main"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir React router"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="af-gallery__item af-gallery__react-hook-form"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__react-hook-form"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    React Hook Form
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://react-hook-form.com/"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir React Hook Form"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="af-gallery__item af-gallery__react-query"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__react-query"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    React Query
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://react-query-v3.tanstack.com/"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir React Query"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="af-gallery__item af-gallery__sonarqube"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__sonarqube"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    SonarQube
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://www.sonarqube.org/"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir SonarQube"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article
+            class="af-gallery__item af-gallery__openid"
+          >
+            <div
+              class="af-gallery__item-info-wrap"
+            >
+              <div
+                class="af-gallery__item-info"
+              >
+                <div
+                  class="af-gallery__item-info-front af-gallery__openid"
+                />
+                <div
+                  class="af-gallery__item-info-back"
+                >
+                  <h3
+                    class="af-gallery__item-title"
+                  >
+                    React OIDC
+                  </h3>
+                  <a
+                    class="af-gallery__item-link"
+                    href="https://github.com/AxaGuilDEv/react-oidc"
+                    rel="noreferrer"
+                    target="_blank"
+                    title="Voir React OIDC"
+                  >
+                    View on WebSite
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </main>
+      </section>
     </section>
   </main>
   <footer
