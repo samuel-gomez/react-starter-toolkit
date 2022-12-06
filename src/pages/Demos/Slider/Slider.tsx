@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { Slider, MessageTypes } from '@axa-fr/react-toolkit-all';
+import { MessageTypes } from '@axa-fr/react-toolkit-all';
 import Layout, { TLayout } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
@@ -86,16 +86,7 @@ const SliderWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
         npmName={NPM_NAME}
         openEditor={openEditor}
       />
-      <LiveCode
-        classModifier="with-editor"
-        styleLivePreview={{ textAlign: 'left' }}
-        code={code(props)}
-        githubPackage={GITHUB_PACKAGE}
-        scope={{
-          Slider,
-          ...props,
-        }}
-      />
+      <LiveCode styleLivePreview={{ textAlign: 'left' }} code={code(props)} githubPackage={GITHUB_PACKAGE} scope={props} />
     </>
   ),
   knobs as unknown as Tknobs,

@@ -14,19 +14,21 @@ const ariaLabel = 'af-accessibility-code' as const;
 const Code = ({ theme, code }: TCode) => (
   <Highlight {...defaultProps} theme={theme} code={code} language="jsx">
     {({ className, style, tokens, getLineProps, getTokenProps }) => (
-      <pre aria-label={ariaLabel} className={className} style={{ ...style, padding: '1rem', fontSize: '0.8rem', position: 'relative' }}>
+      <>
         <ClipBoard content={code} />
-        {tokens.map((line, i) => (
-          <div {...getLineProps({ line, key: i })}>
-            <span className="token-line__number">{i + 1}</span>
-            <span className="token-line__content">
-              {line.map((token, key) => (
-                <span {...getTokenProps({ token, key })} />
-              ))}
-            </span>
-          </div>
-        ))}
-      </pre>
+        <pre aria-label={ariaLabel} className={className} style={{ ...style, padding: '1rem', fontSize: '0.8rem', position: 'relative' }}>
+          {tokens.map((line, i) => (
+            <div {...getLineProps({ line, key: i })}>
+              <span className="token-line__number">{i + 1}</span>
+              <span className="token-line__content">
+                {line.map((token, key) => (
+                  <span {...getTokenProps({ token, key })} />
+                ))}
+              </span>
+            </div>
+          ))}
+        </pre>
+      </>
     )}
   </Highlight>
 );

@@ -52,7 +52,7 @@ const LayoutWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(({ 
       <EditorHeader openEditor={openEditor} />
       <LiveCode
         styleLivePreview={{ padding: '0' }}
-        classModifier="with-editor layout"
+        classModifier="layout"
         code={code(props)}
         scope={{
           Layout,

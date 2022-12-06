@@ -2,25 +2,25 @@
 
 exports[`<Code /> Render <Code /> with theme, code 1`] = `
 <DocumentFragment>
+  <button
+    aria-label="Copy to clipboard"
+    class="af-btn--circle af-clipboard"
+    type="button"
+  >
+    <i
+      class="glyphicon glyphicon-copy"
+    />
+    <span
+      class="af-clipboard__message"
+    >
+      Copied !
+    </span>
+  </button>
   <pre
     aria-label="af-accessibility-code"
     class="prism-code language-jsx"
     style="color: rgb(156, 220, 254); background-color: rgb(30, 30, 30); padding: 1rem; font-size: 0.8rem; position: relative;"
   >
-    <button
-      aria-label="Copy to clipboard"
-      class="af-btn--circle af-clipboard"
-      type="button"
-    >
-      <i
-        class="glyphicon glyphicon-copy"
-      />
-      <span
-        class="af-clipboard__message"
-      >
-        Copied !
-      </span>
-    </button>
     <div
       class="token-line"
       style="color: rgb(156, 220, 254);"

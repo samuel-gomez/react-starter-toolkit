@@ -61,17 +61,10 @@
   }
 }
 
-.af-livecode {
-  &--with-editor {
-    grid-gap: 0;
-    grid-template-columns: 1fr;
-  }
-}
-
 .af-form-editor {
   display: grid;
   grid-template-columns: 1fr;
-  background-color: white;
+  background-color: $color-white;
   padding-bottom: 1.5rem;
   &__field {
     padding: 0.4rem 1rem;

@@ -47,7 +47,7 @@ const RestitutionWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>
         openEditor={openEditor}
         npmName={NPM_NAME}
       />
-      <LiveCode classModifier="with-editor" code={code(props)} scope={props} githubPackage={GITHUB_PACKAGE} />
+      <LiveCode code={code(props)} scope={props} githubPackage={GITHUB_PACKAGE} />
     </>
   ),
   knobs as unknown as Tknobs,
