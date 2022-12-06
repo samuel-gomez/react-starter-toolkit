@@ -77,7 +77,7 @@ const TableWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(({ o
         npmName={NPM_NAME}
         openEditor={openEditor}
       />
-      <LiveCode classModifier="with-editor" code={code(props)} scope={{ ...props, headers: parsedHeaders }} githubPackage={GITHUB_PACKAGE} />
+      <LiveCode code={code(props)} scope={{ ...props, headers: parsedHeaders }} githubPackage={GITHUB_PACKAGE} />
     </>
   );
 }, knobs as unknown as Tknobs);

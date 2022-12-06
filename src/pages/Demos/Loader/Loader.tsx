@@ -52,13 +52,7 @@ const LoaderWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
         npmName={NPM_NAME}
         openEditor={openEditor}
       />
-      <LiveCode
-        classModifier="with-editor"
-        styleLivePreview={{ textAlign: 'center', position: 'relative' }}
-        code={code(props)}
-        githubPackage={GITHUB_PACKAGE}
-        scope={props}
-      />
+      <LiveCode styleLivePreview={{ textAlign: 'center', position: 'relative' }} code={code(props)} githubPackage={GITHUB_PACKAGE} scope={props} />
     </>
   ),
   knobs as unknown as Tknobs,

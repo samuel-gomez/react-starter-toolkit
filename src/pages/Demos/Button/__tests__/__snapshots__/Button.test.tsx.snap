@@ -977,7 +977,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
           </button>
         </header>
         <article
-          class="af-livecode af-livecode--with-editor"
+          class="af-livecode"
         >
           <div
             aria-label="af-accessibility"
@@ -1047,25 +1047,25 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
               <div
                 class="af-tabs__pane"
               >
+                <button
+                  aria-label="Copy to clipboard"
+                  class="af-btn--circle af-clipboard"
+                  type="button"
+                >
+                  <i
+                    class="glyphicon glyphicon-copy"
+                  />
+                  <span
+                    class="af-clipboard__message"
+                  >
+                    Copied !
+                  </span>
+                </button>
                 <pre
                   aria-label="af-accessibility-code"
                   class="prism-code language-jsx"
                   style="color: rgb(156, 220, 254); background-color: rgb(30, 30, 30); padding: 1rem; font-size: 0.8rem; position: relative;"
                 >
-                  <button
-                    aria-label="Copy to clipboard"
-                    class="af-btn--circle af-clipboard"
-                    type="button"
-                  >
-                    <i
-                      class="glyphicon glyphicon-copy"
-                    />
-                    <span
-                      class="af-clipboard__message"
-                    >
-                      Copied !
-                    </span>
-                  </button>
                   <div
                     class="token-line"
                     style="color: rgb(156, 220, 254);"
@@ -1480,7 +1480,7 @@ exports[`<ButtonPage/> Should render ButtonPage 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.4.0
+        © 2022 AXA Tous droits réservés - v0.4.1
       </div>
     </div>
   </footer>

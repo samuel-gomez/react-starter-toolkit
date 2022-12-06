@@ -26,7 +26,7 @@ const TitleWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
         npmName={NPM_NAME}
         openEditor={openEditor}
       />
-      <LiveCode classModifier="with-editor" code={code(props)} scope={props} githubPackage={GITHUB_PACKAGE} />
+      <LiveCode code={code(props)} scope={props} githubPackage={GITHUB_PACKAGE} />
     </>
   ),
   knobs as unknown as Tknobs,

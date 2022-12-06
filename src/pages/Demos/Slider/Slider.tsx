@@ -86,16 +86,7 @@ const SliderWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
         npmName={NPM_NAME}
         openEditor={openEditor}
       />
-      <LiveCode
-        classModifier="with-editor"
-        styleLivePreview={{ textAlign: 'left' }}
-        code={code(props)}
-        githubPackage={GITHUB_PACKAGE}
-        scope={{
-          Slider,
-          ...props,
-        }}
-      />
+      <LiveCode styleLivePreview={{ textAlign: 'left' }} code={code(props)} githubPackage={GITHUB_PACKAGE} scope={props} />
     </>
   ),
   knobs as unknown as Tknobs,

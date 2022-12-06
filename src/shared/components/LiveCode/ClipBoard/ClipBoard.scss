@@ -9,8 +9,9 @@ $bgColorEditor: #1e1e1e;
   display: flex;
   flex-direction: column;
   text-align: center;
+  z-index: 2;
   .glyphicon {
-    color: white;
+    color: $color-white;
     font-size: 1rem;
     cursor: pointer;
     transition: text-shadow ease-in 0.25s;
@@ -24,10 +25,11 @@ $bgColorEditor: #1e1e1e;
     color: $bgColorEditor;
     transition: color linear 0.5s;
     position: absolute;
-    bottom: -25px;
-    right: -17px;
+    bottom: -21px;
+    right: -16px;
+    width: 57px;
   }
   &--clicked &__message {
-    color: white;
+    color: $color-white;
   }
 }
