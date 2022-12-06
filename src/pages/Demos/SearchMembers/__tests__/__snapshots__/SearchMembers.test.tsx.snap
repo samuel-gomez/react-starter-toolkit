@@ -833,6 +833,22 @@ exports[`<SearchMembers/> Should render <SearchMembers /> with one member 1`] = 
                     Select Multi
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Date Input"
+                    class="af-nav__link"
+                    href="/demos/date-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Date Input
+                  </a>
+                </li>
               </ul>
             </li>
             <li
@@ -1907,6 +1923,22 @@ exports[`<SearchMembers/> Should render SearchMembers 1`] = `
                     tabindex="-1"
                   >
                     Select Multi
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Date Input"
+                    class="af-nav__link"
+                    href="/demos/date-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Date Input
                   </a>
                 </li>
               </ul>

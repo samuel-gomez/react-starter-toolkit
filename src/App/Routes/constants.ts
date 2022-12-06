@@ -37,6 +37,7 @@ import { ROUTE_URL_SWITCH as SWITCH } from 'pages/Demos/Switch/constants';
 import { ROUTE_URL_MODAL as MODAL } from 'pages/Demos/Modal/constants';
 import { ROUTE_URL_FILE_INPUT as FILE_INPUT } from 'pages/Demos/FileInput/constants';
 import { ROUTE_URL_SELECT_MULTI as SELECT_MULTI } from 'pages/Demos/SelectMulti/constants';
+import { ROUTE_URL_DATE_INPUT as DATE_INPUT } from 'pages/Demos/DateInput/constants';
 
 const DEMOS = '/demos';
 const LAYOUTS = '/layouts';
@@ -83,6 +84,7 @@ const ROUTE_URL = {
   MODAL,
   FILE_INPUT,
   SELECT_MULTI,
+  DATE_INPUT,
 };
 
 export default ROUTE_URL;

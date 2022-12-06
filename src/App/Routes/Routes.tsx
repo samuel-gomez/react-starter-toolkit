@@ -40,6 +40,7 @@ import Switch from 'pages/Demos/Switch';
 import Modal from 'pages/Demos/Modal';
 import FileInput from 'pages/Demos/FileInput';
 import SelectMulti from 'pages/Demos/SelectMulti';
+import DateInput from 'pages/Demos/DateInput';
 import ROUTE_URL from 'App/Routes/constants';
 import { UserContext } from 'App/UserProvider';
 import Loader, { MODES } from 'shared/components/Loader';
@@ -109,6 +110,7 @@ type TRoutesCmpt = {
   ModalCmpt?: typeof Modal;
   FileInputCmpt?: typeof FileInput;
   SelectMultiCmpt?: typeof SelectMulti;
+  DateInputCmpt?: typeof DateInput;
 };
 
 const RoutesCmpt = ({
@@ -150,6 +152,7 @@ const RoutesCmpt = ({
   ModalCmpt = Modal,
   FileInputCmpt = FileInput,
   SelectMultiCmpt = SelectMulti,
+  DateInputCmpt = DateInput,
   withAuthFn = withAuth,
 }: TRoutesCmpt) => (
   <Routes>
@@ -190,6 +193,7 @@ const RoutesCmpt = ({
       <Route path={ROUTE_URL.MODAL} element={withAuthFn(ModalCmpt)} />
       <Route path={ROUTE_URL.FILE_INPUT} element={withAuthFn(FileInputCmpt)} />
       <Route path={ROUTE_URL.SELECT_MULTI} element={withAuthFn(SelectMultiCmpt)} />
+      <Route path={ROUTE_URL.DATE_INPUT} element={withAuthFn(DateInputCmpt)} />
     </Route>
     <Route path={ROUTE_URL.LAYOUT} element={withAuthFn(LayoutCmpt)} />
     <Route path={ROUTE_URL.UNAUTHORIZE} element={<PageUnauthorizeCmpt />} />

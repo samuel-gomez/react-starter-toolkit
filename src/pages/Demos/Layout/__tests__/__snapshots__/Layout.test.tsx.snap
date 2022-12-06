@@ -793,6 +793,22 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
                           Select Multi
                         </a>
                       </li>
+                      <li
+                        class="af-nav__item "
+                        role="none"
+                      >
+                        <a
+                          aria-expanded="false"
+                          aria-haspopup="true"
+                          aria-label="Date Input"
+                          class="af-nav__link"
+                          href="/demos/date-input"
+                          role="menuitem"
+                          tabindex="-1"
+                        >
+                          Date Input
+                        </a>
+                      </li>
                     </ul>
                   </li>
                   <li
