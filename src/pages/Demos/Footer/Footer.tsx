@@ -1,5 +1,4 @@
 import { ReactNode } from 'react';
-import { Footer } from '@axa-fr/react-toolkit-all';
 import Layout, { TLayout } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';

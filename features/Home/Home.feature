@@ -33,7 +33,7 @@ Feature: Page d'accueil
       | Eslint A11y     | https://www.npmjs.com/package/eslint-plugin-jsx-a11y |
       | React router    | https://reactrouter.com/en/main                      |
       | React Hook Form | https://react-hook-form.com/                         |
-      | React Query     | https://react-query-v3.tanstack.com/                 |
+      | React Query     | https://tanstack.com/query/v4                        |
       | SonarQube       | https://www.sonarqube.org/                           |
       | React OIDC      | https://github.com/AxaGuilDEv/react-oidc             |
 

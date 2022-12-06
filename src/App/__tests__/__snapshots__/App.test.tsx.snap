@@ -1622,7 +1622,7 @@ exports[`<App/> Should render App with all props and authentication NOT enabled 
                   </h3>
                   <a
                     class="af-gallery__item-link"
-                    href="https://react-query-v3.tanstack.com/"
+                    href="https://tanstack.com/query/v4"
                     rel="noreferrer"
                     target="_blank"
                     title="Voir React Query"
@@ -3353,7 +3353,7 @@ exports[`<App/> Should render App with all props and authentication enabled 1`] 
                   </h3>
                   <a
                     class="af-gallery__item-link"
-                    href="https://react-query-v3.tanstack.com/"
+                    href="https://tanstack.com/query/v4"
                     rel="noreferrer"
                     target="_blank"
                     title="Voir React Query"
