@@ -8,6 +8,7 @@ describe('InputEditor', () => {
     ${true}
     ${'value'}
     ${{ value: 'value', options: [] }}
+    ${{ value: new Date('2022-12-05'), type: 'date' }}
     ${{ value: 'value', type: 'jsx', labelBtnOpenCodeEditor: 'Edit JSX' }}
     ${{ value: 'value', type: 'json', labelBtnOpenCodeEditor: 'Edit Json' }}
     ${{ value: 'value', type: 'separator' }}

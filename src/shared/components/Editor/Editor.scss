@@ -103,6 +103,11 @@
       margin: 0;
     }
   }
+  .af-form__group {
+    &--date-custom {
+      margin-bottom: 0;
+    }
+  }
 }
 .af-btn--editor {
   padding: 0.5rem 1rem;

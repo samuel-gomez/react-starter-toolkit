@@ -2,6 +2,7 @@ import { useGithubReadme } from './ReadMe.hook';
 import ReadMe from './ReadMe';
 
 type TReadMeContainer = {
+  hideComponent?: boolean;
   title?: string;
   icon?: string;
   githubPackage?: string;

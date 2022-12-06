@@ -1,4 +1,4 @@
-import { Text, CheckboxItem, CheckboxModes, Select } from '@axa-fr/react-toolkit-all';
+import { Text, CheckboxItem, CheckboxModes, Select, DateInput } from '@axa-fr/react-toolkit-all';
 import { DEFAULT_OPTION_LABEL } from 'shared/constants';
 import CodeEditor from './CodeEditor';
 import JsonEditor from './JsonEditor';
@@ -33,6 +33,16 @@ const InputEditorObject = ({ value, ...props }: TInputEditorObject) => (
   <>
     {(() => {
       switch (true) {
+        case !!value.type && value.type === 'date':
+          return (
+            <DateInput
+              {...commonProps(props)}
+              classModifier="date-custom"
+              value={new Date()}
+              classNameContainerLabel="col-md-0"
+              classNameContainerInput="col-md-12"
+            />
+          );
         case !!value.type && value.type === 'separator':
           return <h3 className="af-form-editor__separator">{value.value}</h3>;
         case !!value.type && value.type === 'jsx':

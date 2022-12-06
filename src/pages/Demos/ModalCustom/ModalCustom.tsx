@@ -50,6 +50,7 @@ const ModalCustomPage = ({ titleBar = TITLE_BAR, title = TITLE, openModal, isOpe
         isOpen,
         classModifier: '',
       }}
+      hideReadme
     />
   </Layout>
 );

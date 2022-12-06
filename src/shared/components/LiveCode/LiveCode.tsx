@@ -20,22 +20,36 @@ type TLiveCode = {
   styleLiveEditor?: React.CSSProperties;
   styleLivePreview?: React.CSSProperties;
   modalProps?: TReturnUseToggleModal;
+  hideCode?: boolean;
+  hideAccessibility?: boolean;
+  hideReadme?: boolean;
 };
 
 const styleLivePreviewDefault = { background: 'white', padding: '2rem', width: '100%' } as const;
 const ariaLabel = 'af-accessibility' as const;
 
 const LiveCode = withClassNameModifier(
-  ({ code, scope, githubPackage, className, styleLivePreview = {}, theme = vsDark, modalProps }: TLiveCode) => (
+  ({
+    code,
+    scope,
+    githubPackage,
+    className,
+    styleLivePreview = {},
+    theme = vsDark,
+    modalProps,
+    hideCode = false,
+    hideAccessibility = false,
+    hideReadme = false,
+  }: TLiveCode) => (
     <article className={className}>
       <LiveProvider theme={theme} code={`<>${code}</>`} scope={{ ...reactTookitAll, ...scope, modalProps }}>
         <LivePreview aria-label={ariaLabel} style={{ ...styleLivePreviewDefault, ...styleLivePreview }} />
         <LiveError />
       </LiveProvider>
       <TabsLiveCode>
-        <Code title="Code" icon="copyright-mark" theme={theme} code={code} />
-        <Accessibility title="Accessibilité" icon="font" ariaLabel={ariaLabel} />
-        <ReadMe title="Readme" icon="book" githubPackage={githubPackage} />
+        <Code hideComponent={hideCode} title="Code" icon="copyright-mark" theme={theme} code={code} />
+        <Accessibility hideComponent={hideAccessibility} code={code} title="Accessibilité" icon="font" ariaLabel={ariaLabel} />
+        <ReadMe hideComponent={hideReadme} title="Readme" icon="book" githubPackage={githubPackage} />
       </TabsLiveCode>
     </article>
   ),

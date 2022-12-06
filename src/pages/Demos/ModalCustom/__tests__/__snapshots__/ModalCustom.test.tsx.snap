@@ -767,6 +767,22 @@ exports[`<ModalPage/> Should render ModalPage 1`] = `
                     Select Multi
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Date Input"
+                    class="af-nav__link"
+                    href="/demos/date-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Date Input
+                  </a>
+                </li>
               </ul>
             </li>
             <li
@@ -947,19 +963,6 @@ exports[`<ModalPage/> Should render ModalPage 1`] = `
                   class="glyphicon glyphicon-font"
                 />
                  Accessibilité
-              </button>
-            </li>
-            <li
-              class="af-tabs__item af-tabs__item--has-icon-left"
-            >
-              <button
-                class="af-tabs__link"
-                id="2"
-              >
-                <i
-                  class="glyphicon glyphicon-book"
-                />
-                 Readme
               </button>
             </li>
           </ul>
@@ -2198,7 +2201,7 @@ exports[`<ModalPage/> Should render ModalPage 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.4.1
+        © 2022 AXA Tous droits réservés - v0.5.0
       </div>
     </div>
   </footer>
@@ -2972,6 +2975,22 @@ exports[`<ModalPage/> Should render ModalPage with modal opened 1`] = `
                     Select Multi
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Date Input"
+                    class="af-nav__link"
+                    href="/demos/date-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Date Input
+                  </a>
+                </li>
               </ul>
             </li>
             <li
@@ -3152,19 +3171,6 @@ exports[`<ModalPage/> Should render ModalPage with modal opened 1`] = `
                   class="glyphicon glyphicon-font"
                 />
                  Accessibilité
-              </button>
-            </li>
-            <li
-              class="af-tabs__item af-tabs__item--has-icon-left"
-            >
-              <button
-                class="af-tabs__link"
-                id="2"
-              >
-                <i
-                  class="glyphicon glyphicon-book"
-                />
-                 Readme
               </button>
             </li>
           </ul>
@@ -4403,7 +4409,7 @@ exports[`<ModalPage/> Should render ModalPage with modal opened 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.4.1
+        © 2022 AXA Tous droits réservés - v0.5.0
       </div>
     </div>
   </footer>

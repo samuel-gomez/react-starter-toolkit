@@ -767,6 +767,22 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
                     Select Multi
                   </a>
                 </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Date Input"
+                    class="af-nav__link"
+                    href="/demos/date-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Date Input
+                  </a>
+                </li>
               </ul>
             </li>
             <li
@@ -2675,7 +2691,7 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.4.1
+        © 2022 AXA Tous droits réservés - v0.5.0
       </div>
     </div>
   </footer>

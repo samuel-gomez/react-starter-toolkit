@@ -169,6 +169,10 @@ const MENU_ITEMS = [
         label: 'Select Multi',
         url: ROUTE_URL.SELECT_MULTI,
       },
+      {
+        label: 'Date Input',
+        url: ROUTE_URL.DATE_INPUT,
+      },
     ],
   },
   {
