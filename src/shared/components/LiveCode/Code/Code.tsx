@@ -3,6 +3,7 @@ import { LiveProviderProps } from 'react-live';
 import ClipBoard from '../ClipBoard';
 
 type TCode = {
+  hideComponent?: boolean;
   title?: string;
   icon?: string;
   theme: LiveProviderProps['theme'];

@@ -8,11 +8,13 @@ type TTabsLiveCode = {
 
 const TabsLiveCode = ({ children }: TTabsLiveCode) => (
   <Tabs classModifier="tabs-live-code" activeIndex="0">
-    {children.map((component, index) => (
-      <Tabs.Tab key={index} title={<TitleTabsLiveCode title={component.props.title} icon={component.props.icon} />} classModifier="has-icon-left">
-        {component}
-      </Tabs.Tab>
-    ))}
+    {children
+      .filter(({ props: { hideComponent } }) => !hideComponent)
+      .map((component: JSX.Element, index: number) => (
+        <Tabs.Tab key={index} title={<TitleTabsLiveCode title={component.props.title} icon={component.props.icon} />} classModifier="has-icon-left">
+          {component}
+        </Tabs.Tab>
+      ))}
   </Tabs>
 );
 
