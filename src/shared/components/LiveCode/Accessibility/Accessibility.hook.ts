@@ -11,15 +11,16 @@ export const axeRunAccessibility = (html: string, setResults: ({ errors, results
 
 type TuseAxe = {
   html: string;
+  code: string | undefined;
   axeRunAccessibilityFn?: typeof axeRunAccessibility;
 };
 
-export const useAxe = ({ html, axeRunAccessibilityFn = axeRunAccessibility }: TuseAxe) => {
+export const useAxe = ({ html, code, axeRunAccessibilityFn = axeRunAccessibility }: TuseAxe) => {
   const [results, setResults] = useState<TResults>();
 
   useEffect(() => {
     axeRunAccessibilityFn(html, setResults);
-  }, [axeRunAccessibilityFn, html]);
+  }, [axeRunAccessibilityFn, html, code]);
 
   return { errors: results?.errors, results: results?.results };
 };

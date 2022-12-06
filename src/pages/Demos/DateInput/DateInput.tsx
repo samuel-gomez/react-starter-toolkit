@@ -1,5 +1,4 @@
-import { isEqual } from 'lodash';
-import React, { FocusEvent, ReactNode } from 'react';
+import { ReactNode } from 'react';
 import { MessageTypes } from '@axa-fr/react-toolkit-all';
 import Layout, { TLayout } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
