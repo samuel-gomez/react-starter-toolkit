@@ -77,7 +77,7 @@ exports[`InputEditor Should render when value: {"type": "date", "value": 2022-12
           id="name"
           name="name"
           type="date"
-          value="2022-12-06"
+          value="2022-12-07"
         />
       </div>
       <small

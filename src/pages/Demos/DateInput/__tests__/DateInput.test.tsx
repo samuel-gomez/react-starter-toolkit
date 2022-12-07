@@ -18,7 +18,7 @@ describe('code', () => {
     classModifier: 'required',
     className: 'row af-form__group',
     label: 'My Label',
-    value: new Date(),
+    value: new Date(2022, 11, 7),
     helpMessage: 'Enter the date',
     placeholder: 'Ex: Samuel',
     message: '',

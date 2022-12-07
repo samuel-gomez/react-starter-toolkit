@@ -1025,7 +1025,7 @@ exports[`<DateInputPage /> Should render DateInputPage 1`] = `
                     name="name-field"
                     placeholder="Ex: Samuel"
                     type="date"
-                    value="2022-12-06"
+                    value="2022-12-07"
                   />
                 </div>
                 <small
