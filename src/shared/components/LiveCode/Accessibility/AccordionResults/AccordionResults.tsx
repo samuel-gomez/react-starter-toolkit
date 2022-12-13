@@ -5,12 +5,12 @@ import './AccordionResults.scss';
 
 const AccordionResults = ({ results }: { results: Result[] }) => (
   <Accordion classModifier="light accessibility" onlyOne={false}>
-    {results.map((result: Result, index: number) => (
-      <CollapseCard key={index} isOpen={false} id={`id${index}`}>
-        <CollapseCard.Header>
+    {results.map((result: Result) => (
+      <CollapseCard key={result.id} isOpen={false} id={result.id}>
+        <CollapseCard.Header key={result.id}>
           {result.description} {result.impact && <Badge classModifier={colorTags[result.impact]}>{result.impact}</Badge>}
         </CollapseCard.Header>
-        <CollapseCard.Body>
+        <CollapseCard.Body key={result.id}>
           <div className="af-accordion--accessibility-wrapper-body">
             <p>{result.help}</p>
             <p>
@@ -21,8 +21,8 @@ const AccordionResults = ({ results }: { results: Result[] }) => (
           </div>
           <div className="af-accordion--accessibility-wrapper-body">
             <span>Tags : </span>
-            {result.tags.map((tag: string, index) => (
-              <Badge key={index} classModifier="info">
+            {result.tags.map((tag: string) => (
+              <Badge key={tag} classModifier="info">
                 {tag}
               </Badge>
             ))}

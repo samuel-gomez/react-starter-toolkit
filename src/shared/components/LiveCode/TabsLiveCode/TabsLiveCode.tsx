@@ -10,8 +10,12 @@ const TabsLiveCode = ({ children }: TTabsLiveCode) => (
   <Tabs classModifier="tabs-live-code" activeIndex="0">
     {children
       .filter(({ props: { hideComponent } }) => !hideComponent)
-      .map((component: JSX.Element, index: number) => (
-        <Tabs.Tab key={index} title={<TitleTabsLiveCode title={component.props.title} icon={component.props.icon} />} classModifier="has-icon-left">
+      .map((component: JSX.Element) => (
+        <Tabs.Tab
+          key={component.key}
+          title={<TitleTabsLiveCode title={component.props.title} icon={component.props.icon} />}
+          classModifier="has-icon-left"
+        >
           {component}
         </Tabs.Tab>
       ))}

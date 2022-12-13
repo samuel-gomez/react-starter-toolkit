@@ -73,7 +73,7 @@ export const setFetchCustom =
   async (queryKey: QueryKey) => {
     const [path, customConfig, apiName = API_URL.BASE]: QueryKey = queryKey;
     const url = `${apiUrl[apiName as string]}${path}`;
-    const fetchAuthConfigCustom = manageConfigFn(apiName as string, fetchAuthConfig as object);
+    const fetchAuthConfigCustom = manageConfigFn(apiName as string, fetchAuthConfig);
     const config = mergeObjFn(fetchAuthConfigCustom, customConfig);
     const response = await fetchFn(url, config);
     return buildResponse(response, config);

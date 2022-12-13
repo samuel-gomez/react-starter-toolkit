@@ -12,15 +12,15 @@ exports[`<AccordionResults /> Render <AccordionResults /> with results 1`] = `
     >
       <div
         class="af-accordion__item-header"
-        id="id0"
+        id="id-test"
         role="tab"
       >
         <a
-          aria-controls="id0body"
+          aria-controls="id-testbody"
           aria-expanded="false"
           class="af-accordion__item-toggle"
           data-toggle="isOpen"
-          href="#id0body"
+          href="#id-testbody"
         >
           <h3
             class="af-accordion__item-title"
@@ -38,9 +38,9 @@ exports[`<AccordionResults /> Render <AccordionResults /> with results 1`] = `
         </a>
       </div>
       <div
-        aria-labelledby="id0"
+        aria-labelledby="id-test"
         class="af-accordion__collapse af-accordion__collapse--close"
-        id="id0body"
+        id="id-testbody"
         role="tabpanel"
         style="max-height: 0;"
       >

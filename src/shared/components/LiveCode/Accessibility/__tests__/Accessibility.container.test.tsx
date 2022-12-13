@@ -12,6 +12,7 @@ const useAxeFnMock = () => ({
         helpUrl: 'url',
         impact: 'critical',
         tags: ['tag1'],
+        id: 'id-test',
       },
     ],
     passes: [],
