@@ -29,6 +29,7 @@ const commonProps = ({ onChange, name }: Omit<TInputEditor, 'value'>) => ({
 type TInputEditorObject = Omit<TInputEditor, 'value'> & {
   value: TListSelect;
 };
+
 const InputEditorObject = ({ value, ...props }: TInputEditorObject) => (
   <>
     {(() => {
@@ -38,7 +39,7 @@ const InputEditorObject = ({ value, ...props }: TInputEditorObject) => (
             <DateInput
               {...commonProps(props)}
               classModifier="date-custom"
-              value={new Date()}
+              value={value.value}
               classNameContainerLabel="col-md-0"
               classNameContainerInput="col-md-12"
             />

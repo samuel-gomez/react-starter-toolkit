@@ -2,6 +2,31 @@
 
 exports[`<TextareaInputPage/> Should render TextareaInputPage 1`] = `
 <DocumentFragment>
+  <ul
+    aria-label="Menu d'accès rapide"
+    class="af-a11ymenu"
+  >
+    <li
+      class="af-a11ymenu__item"
+    >
+      <a
+        class="af-a11ymenu__link"
+        href="#main-content"
+      >
+        Passer directement au contenu principal
+      </a>
+    </li>
+    <li
+      class="af-a11ymenu__item"
+    >
+      <a
+        class="af-a11ymenu__link"
+        href="#mainmenu"
+      >
+        Accès rapide au menu principal
+      </a>
+    </li>
+  </ul>
   <div
     class="af-header"
   >
@@ -891,6 +916,7 @@ exports[`<TextareaInputPage/> Should render TextareaInputPage 1`] = `
   </div>
   <main
     class="af-main"
+    id="main-content"
   >
     <section
       class="container"

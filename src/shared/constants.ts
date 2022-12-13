@@ -38,7 +38,7 @@ export const STATUS_API = {
  * API URL
  *************************************************************************/
 export const API_URL = {
-  VERCEL: 'vercel',
+  BASE: 'base',
   GITHUB: 'github',
 };
 

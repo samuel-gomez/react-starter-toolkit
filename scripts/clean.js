@@ -41,6 +41,7 @@ const pathsAll = [
   'LICENSE',
   './docs/CLEAN.md',
   '.github',
+  '.git',
   'package-lock.json',
 ];
 
@@ -57,7 +58,6 @@ const pathsReplace = [
   'package.json',
   'app.code-workspace',
   'README.md',
-  '.env',
   'features/Home/Home.feature',
   'src/setupTests.tsx',
   'src/shared/constants.ts',

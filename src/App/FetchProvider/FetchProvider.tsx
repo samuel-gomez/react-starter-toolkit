@@ -71,7 +71,7 @@ export const buildResponse = async (response: TResponse, config: TConfig, comput
 export const setFetchCustom =
   ({ apiUrl, fetchAuthConfig, fetchFn = fetch, mergeObjFn = mergeObj, manageConfigFn = manageConfig }: TFetchCustom) =>
   async (queryKey: QueryKey) => {
-    const [path, customConfig, apiName = API_URL.VERCEL]: QueryKey = queryKey;
+    const [path, customConfig, apiName = API_URL.BASE]: QueryKey = queryKey;
     const url = `${apiUrl[apiName as string]}${path}`;
     const fetchAuthConfigCustom = manageConfigFn(apiName as string, fetchAuthConfig as object);
     const config = mergeObjFn(fetchAuthConfigCustom, customConfig);

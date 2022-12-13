@@ -8,7 +8,7 @@ import NotificationProvider from 'App/NotificationProvider';
 import type { TEnvironment } from './EnvironmentProvider';
 import { useOidcAccessTokenFnMock, useOidcUserFnMock } from './constants';
 
-type TUserAndFetchProviders = Omit<TEnvironment, 'oidc' | 'baseUrl'> & {
+type TUserAndFetchProviders = Omit<TEnvironment, 'oidc'> & {
   isEnabled: boolean;
   UserProviderCmpt: typeof UserProvider;
   FetchProviderCmpt: typeof FetchProvider;
@@ -35,7 +35,7 @@ const UserAndFetchProviders = ({
 );
 
 type TOidc = Omit<TUserAndFetchProviders, 'isEnabled'> &
-  Omit<TEnvironment, 'baseUrl'> & {
+  TEnvironment & {
     children: ReactNode;
     OidcProviderCmpt: typeof OidcProvider;
     OidcSecureCmpt: typeof OidcSecure;
@@ -59,7 +59,7 @@ const Oidc = ({ oidc, OidcProviderCmpt, OidcSecureCmpt, ...restProps }: TOidc) =
     />
   );
 
-type TApp = TEnvironment & {
+export type TApp = TEnvironment & {
   OidcCmpt?: typeof Oidc;
   useOidcUserFn?: typeof useOidcUser;
   useOidcAccessTokenFn?: typeof useOidcAccessToken;
@@ -73,7 +73,6 @@ const App = ({
   oidc,
   fetchConfig,
   apiUrl,
-  baseUrl,
   OidcCmpt = Oidc,
   useOidcUserFn = useOidcUser,
   useOidcAccessTokenFn = useOidcAccessToken,

@@ -1,7 +1,7 @@
 import manageConfig from 'shared/helpers/manageConfig';
 
 describe('manageConfig', () => {
-  let apiNameMock = 'vercel';
+  let apiNameMock = 'base';
   const fetchAuthConfigMock = {
     headers: { test: 'test' },
   };

@@ -28,6 +28,31 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
         aria-label="af-accessibility"
         style="background: white; padding: 0px; width: 100%;"
       >
+        <ul
+          aria-label="Menu d'accès rapide"
+          class="af-a11ymenu"
+        >
+          <li
+            class="af-a11ymenu__item"
+          >
+            <a
+              class="af-a11ymenu__link"
+              href="#main-content"
+            >
+              Passer directement au contenu principal
+            </a>
+          </li>
+          <li
+            class="af-a11ymenu__item"
+          >
+            <a
+              class="af-a11ymenu__link"
+              href="#mainmenu"
+            >
+              Accès rapide au menu principal
+            </a>
+          </li>
+        </ul>
         <div
           class="af-header"
         >
@@ -917,6 +942,7 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
         </div>
         <main
           class="af-main"
+          id="main-content"
         >
           <section
             class="container"
