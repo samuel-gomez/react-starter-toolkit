@@ -1,6 +1,6 @@
 {
   "apiUrl": {
-    "vercel": "https://react-starter-api.vercel.app/api/",
+    "base": "https://react-starter-api.vercel.app/api/",
     "github": "https://raw.githubusercontent.com/"
   },
   "baseUrl": "/",
