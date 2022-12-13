@@ -9,6 +9,7 @@ const resultsFnMock = {
       helpUrl: 'url',
       impact: 'critical',
       tags: ['tag1'],
+      id: 'id-test',
     },
   ],
   passes: [
@@ -18,6 +19,7 @@ const resultsFnMock = {
       helpUrl: 'url',
       impact: 'critical',
       tags: ['tag1'],
+      id: 'id-test',
     },
   ],
   incomplete: [
@@ -27,6 +29,7 @@ const resultsFnMock = {
       helpUrl: 'url',
       impact: 'critical',
       tags: ['tag1'],
+      id: 'id-test',
     },
   ],
 };

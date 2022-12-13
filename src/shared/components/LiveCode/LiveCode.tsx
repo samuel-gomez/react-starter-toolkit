@@ -47,9 +47,9 @@ const LiveCode = withClassNameModifier(
         <LiveError />
       </LiveProvider>
       <TabsLiveCode>
-        <Code hideComponent={hideCode} title="Code" icon="copyright-mark" theme={theme} code={code} />
-        <Accessibility hideComponent={hideAccessibility} code={code} title="Accessibilité" icon="font" ariaLabel={ariaLabel} />
-        <ReadMe hideComponent={hideReadme} title="Readme" icon="book" githubPackage={githubPackage} />
+        <Code key="code" hideComponent={hideCode} title="Code" icon="copyright-mark" theme={theme} code={code} />
+        <Accessibility key="accessibility" hideComponent={hideAccessibility} code={code} title="Accessibilité" icon="font" ariaLabel={ariaLabel} />
+        <ReadMe key="readme" hideComponent={hideReadme} title="Readme" icon="book" githubPackage={githubPackage} />
       </TabsLiveCode>
     </article>
   ),
