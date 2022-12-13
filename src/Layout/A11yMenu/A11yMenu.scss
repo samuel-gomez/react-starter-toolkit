@@ -1,0 +1,20 @@
+.af-a11ymenu {
+  position: absolute;
+  top: -10em;
+  z-index: 100;
+  width: 100%;
+  &__link {
+    background: #fff;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 0.5rem 0;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      top: 10em;
+    }
+  }
+}

@@ -9,7 +9,6 @@ const useOidcUserMock = jest.fn().mockReturnValue({
 });
 
 const envMock = {
-  baseUrl: '/',
   oidc: {
     isEnabled: true,
     client_id: 'interactive.public',

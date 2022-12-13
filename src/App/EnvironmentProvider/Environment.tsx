@@ -2,7 +2,6 @@ import { useState, useEffect, createContext, Dispatch, SetStateAction } from 're
 
 export type TEnvironment = {
   apiUrl: Record<string, string>;
-  baseUrl: string;
   fetchConfig: object;
   oidc: Record<string, boolean | string>;
 };

@@ -17,6 +17,6 @@ const FooterAxa = ({
   version = packageJson.version,
   icon = logo,
   copyright = `© ${year} AXA Tous droits réservés - v${version}`,
-}: TFooterAxa) => <Footer className={`af-footer${fullScreen ? ' af-footer--fullscreen' : ''}`} icon={icon} copyright={copyright} />;
+}: TFooterAxa) => <Footer id="footer" className={`af-footer${fullScreen ? ' af-footer--fullscreen' : ''}`} icon={icon} copyright={copyright} />;
 
 export default FooterAxa;

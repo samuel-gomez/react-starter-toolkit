@@ -20,9 +20,9 @@ const commonResponse: HandlerResolver = (req, res, ctx) => {
 
 export const handlers = [
   rest.get(`${MOCK_API_URL.github}${GITHUB_API}test/README.md`, commonResponse),
-  rest.get(`${MOCK_API_URL.vercel}members`, commonResponse),
-  rest.get(`${MOCK_API_URL.vercel}members/search`, commonResponse),
-  rest.get(`${MOCK_API_URL.vercel}members/:id/download-detail`, commonResponse),
+  rest.get(`${MOCK_API_URL.base}members`, commonResponse),
+  rest.get(`${MOCK_API_URL.base}members/search`, commonResponse),
+  rest.get(`${MOCK_API_URL.base}members/:id/download-detail`, commonResponse),
 ];
 
 // This configures a request mocking server with the given request handlers.

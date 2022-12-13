@@ -2,14 +2,65 @@
 
 exports[`Layout Should render when disabled: {"footer": true, "header": true, "menu": true, "title": true} 1`] = `
 <DocumentFragment>
+  <ul
+    aria-label="Menu d'accès rapide"
+    class="af-a11ymenu"
+  >
+    <li
+      class="af-a11ymenu__item"
+    >
+      <a
+        class="af-a11ymenu__link"
+        href="#main-content"
+      >
+        Passer directement au contenu principal
+      </a>
+    </li>
+    <li
+      class="af-a11ymenu__item"
+    >
+      <a
+        class="af-a11ymenu__link"
+        href="#mainmenu"
+      >
+        Accès rapide au menu principal
+      </a>
+    </li>
+  </ul>
   <main
     class="af-main"
+    id="main-content"
   />
 </DocumentFragment>
 `;
 
 exports[`Layout Should render when disabled: {"footer": true} 1`] = `
 <DocumentFragment>
+  <ul
+    aria-label="Menu d'accès rapide"
+    class="af-a11ymenu"
+  >
+    <li
+      class="af-a11ymenu__item"
+    >
+      <a
+        class="af-a11ymenu__link"
+        href="#main-content"
+      >
+        Passer directement au contenu principal
+      </a>
+    </li>
+    <li
+      class="af-a11ymenu__item"
+    >
+      <a
+        class="af-a11ymenu__link"
+        href="#mainmenu"
+      >
+        Accès rapide au menu principal
+      </a>
+    </li>
+  </ul>
   <div
     class="af-header"
   >
@@ -899,6 +950,7 @@ exports[`Layout Should render when disabled: {"footer": true} 1`] = `
   </div>
   <main
     class="af-main"
+    id="main-content"
   >
     <section
       class="container"
@@ -909,6 +961,31 @@ exports[`Layout Should render when disabled: {"footer": true} 1`] = `
 
 exports[`Layout Should render when disabled: {"header": true} 1`] = `
 <DocumentFragment>
+  <ul
+    aria-label="Menu d'accès rapide"
+    class="af-a11ymenu"
+  >
+    <li
+      class="af-a11ymenu__item"
+    >
+      <a
+        class="af-a11ymenu__link"
+        href="#main-content"
+      >
+        Passer directement au contenu principal
+      </a>
+    </li>
+    <li
+      class="af-a11ymenu__item"
+    >
+      <a
+        class="af-a11ymenu__link"
+        href="#mainmenu"
+      >
+        Accès rapide au menu principal
+      </a>
+    </li>
+  </ul>
   <section
     class="af-menu"
   >
@@ -1743,6 +1820,7 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
   </div>
   <main
     class="af-main"
+    id="main-content"
   >
     <section
       class="container"
@@ -1778,6 +1856,31 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
 
 exports[`Layout Should render when disabled: {"menu": true} 1`] = `
 <DocumentFragment>
+  <ul
+    aria-label="Menu d'accès rapide"
+    class="af-a11ymenu"
+  >
+    <li
+      class="af-a11ymenu__item"
+    >
+      <a
+        class="af-a11ymenu__link"
+        href="#main-content"
+      >
+        Passer directement au contenu principal
+      </a>
+    </li>
+    <li
+      class="af-a11ymenu__item"
+    >
+      <a
+        class="af-a11ymenu__link"
+        href="#mainmenu"
+      >
+        Accès rapide au menu principal
+      </a>
+    </li>
+  </ul>
   <div
     class="af-header"
   >
@@ -1848,6 +1951,7 @@ exports[`Layout Should render when disabled: {"menu": true} 1`] = `
   </div>
   <main
     class="af-main"
+    id="main-content"
   >
     <section
       class="container"
@@ -1883,6 +1987,31 @@ exports[`Layout Should render when disabled: {"menu": true} 1`] = `
 
 exports[`Layout Should render when disabled: {"title": true} 1`] = `
 <DocumentFragment>
+  <ul
+    aria-label="Menu d'accès rapide"
+    class="af-a11ymenu"
+  >
+    <li
+      class="af-a11ymenu__item"
+    >
+      <a
+        class="af-a11ymenu__link"
+        href="#main-content"
+      >
+        Passer directement au contenu principal
+      </a>
+    </li>
+    <li
+      class="af-a11ymenu__item"
+    >
+      <a
+        class="af-a11ymenu__link"
+        href="#mainmenu"
+      >
+        Accès rapide au menu principal
+      </a>
+    </li>
+  </ul>
   <div
     class="af-header"
   >
@@ -2759,6 +2888,7 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
   </a>
   <main
     class="af-main"
+    id="main-content"
   >
     <section
       class="container"

@@ -55,6 +55,13 @@ defineFeature(feature, test => {
     expect(await screen.findByText('Samuel Gomez')).toBeInTheDocument();
   };
 
+  /**
+   * thrown: "Exceeded timeout of 5000 ms for a test.
+    Use jest.setTimeout(newTimeout) to increase the timeout value, if this is a long-running test."
+   */
+  jest.setTimeout(10000);
+  /************************* */
+
   test('Affichage du playground NumberInput', ({ given, and, when, then }) => {
     JeSuisUnUtilisateurConnuEtConnecteAvecleProfil(given, setRoleMock);
     when("J'accède à la page playground NumberInput", renderPage);

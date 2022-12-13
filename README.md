@@ -47,6 +47,8 @@
 
 ## Installation 🚀
 
+### Cloning
+
 ```
 git clone https://github.com/samuel-gomez/react-starter-toolkit.git
 ```
@@ -67,6 +69,16 @@ After that, you can run :
 
 ```
 npm i
+```
+
+### Remote
+
+```
+git init
+git add .
+git commit -m "Initial Commit"
+git remote add origin $repo__url
+git push -u origin master
 ```
 
 ## Configuration ⚙️
@@ -165,3 +177,7 @@ https://github.com/samuel-gomez/react-starter-toolkit/issues
 ### SonarCloud
 
 https://sonarcloud.io/project/overview?id=samuel-gomez_react-starter-toolkit
+
+## Structure
+
+See the [STRUCTURE.md](./docs/STRUCTURE.md) file

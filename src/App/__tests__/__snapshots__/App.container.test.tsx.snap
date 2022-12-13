@@ -1,13 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<AppContainer /> Renders AppContainer component without crashing 1`] = `
-<DocumentFragment>
-  <p>
-    local
-  </p>
-</DocumentFragment>
-`;
-
 exports[`<AppWithEnvironment /> Renders AppWithEnvironment component without crashing 1`] = `
 <DocumentFragment>
   <div

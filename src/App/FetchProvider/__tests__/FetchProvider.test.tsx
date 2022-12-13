@@ -19,7 +19,7 @@ const fetchConfigMock = {
 };
 
 const apiMock = {
-  vercel: 'http://localhost:5001/api/',
+  base: 'http://localhost:5001/api/',
   github: 'https://raw.githubusercontent.com/',
 };
 
