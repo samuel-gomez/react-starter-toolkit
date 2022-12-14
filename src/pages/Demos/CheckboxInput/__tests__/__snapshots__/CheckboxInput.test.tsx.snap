@@ -2774,7 +2774,7 @@ exports[`<CheckboxInputPage /> Should render CheckboxInputPage 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.5.1
+        © 2022 AXA Tous droits réservés - v0.5.2
       </div>
     </div>
   </footer>
