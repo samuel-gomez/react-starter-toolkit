@@ -23,7 +23,7 @@ function deleteFolderRecursive(path) {
   }
 }
 
-const pathsAll = [
+const pathsDelete = [
   './public/templates',
   './public/images',
   './public/_redirect',
@@ -34,6 +34,7 @@ const pathsAll = [
   './src/shared/components/LasyImage',
   './src/shared/components/DownloadLink',
   './src/shared/components/Editor',
+  './src/shared/components/testsUtils/clearString.ts',
   './src/pages/Demos',
   './features/Demos',
   'renovate.json',
@@ -46,7 +47,7 @@ const pathsAll = [
 ];
 
 console.log('Cleaning working tree...');
-pathsAll.forEach(path => deleteFolderRecursive(`${basePath}${path}`));
+pathsDelete.forEach(path => deleteFolderRecursive(`${basePath}${path}`));
 console.log('Successfully cleaned working tree!');
 
 function replaceContentsSync(file, replacement) {
@@ -61,6 +62,8 @@ const pathsReplace = [
   'features/Home/Home.feature',
   'src/setupTests.tsx',
   'src/shared/constants.ts',
+  'src/shared/testsUtils/constants.ts',
+  'src/shared/testsUtils/msw.ts',
   'src/pages/Home/Home.tsx',
   'src/pages/Home/__tests__/Home.spec.tsx',
   'src/Layout/Menu/constants.ts',

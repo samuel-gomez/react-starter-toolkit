@@ -978,7 +978,7 @@ exports[`<WithoutHeader page/> Renders WithoutHeader page component without cras
             <div
               class="af-footer-content"
             >
-              © 2022 AXA Tous droits réservés - v0.5.1
+              © 2022 AXA Tous droits réservés - v0.5.2
             </div>
           </div>
         </footer>

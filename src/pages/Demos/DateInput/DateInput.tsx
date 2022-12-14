@@ -6,13 +6,13 @@ import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggle
 import { TITLE_BAR, TITLE, DESIGN_SYSTEM_PATH, STORYBOOK_PATH, GITHUB_PACKAGE, NPM_NAME } from './constants';
 import knobs from './knobs.json';
 
-const INITIAL_STATE = {
+export const INITIAL_STATE = {
   name: 'name-field',
   id: 'uniqueid',
   classModifier: 'required',
   className: 'row af-form__group',
   label: 'My Label',
-  value: new Date(),
+  value: new Date(2022, 11, 7),
   helpMessage: 'Enter the date',
   placeholder: 'Ex: Samuel',
   message: '',

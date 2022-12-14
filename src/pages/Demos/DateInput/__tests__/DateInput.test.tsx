@@ -1,6 +1,5 @@
 import { clearString, renderWithWrapperStaticRouter } from 'shared/testsUtils';
-import { MessageTypes } from '@axa-fr/react-toolkit-all';
-import DateInputPage, { code } from '../DateInput';
+import DateInputPage, { code, INITIAL_STATE } from '../DateInput';
 
 describe('<DateInputPage />', () => {
   it('Should render DateInputPage', () => {
@@ -13,25 +12,7 @@ describe('code', () => {
   const onChange = jest.fn();
 
   const defaultProps = {
-    name: 'name-field',
-    id: 'uniqueid',
-    classModifier: 'required',
-    className: 'row af-form__group',
-    label: 'My Label',
-    value: new Date(2022, 11, 7),
-    helpMessage: 'Enter the date',
-    placeholder: 'Ex: Samuel',
-    message: '',
-    messageType: MessageTypes.error,
-    forceDisplayMessage: false,
-    autoFocus: true,
-    disabled: false,
-    required: false,
-    readOnly: false,
-    isVisible: true,
-    classNameContainerLabel: 'col-md-2',
-    classNameContainerInput: 'col-md-10',
-    helpButton: false,
+    ...INITIAL_STATE,
     onChange,
   };
 
