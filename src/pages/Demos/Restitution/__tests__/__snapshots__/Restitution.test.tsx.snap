@@ -1103,7 +1103,7 @@ exports[`<RestitutionPage/> Should render RestitutionPage 1`] = `
                         <dd
                           class="af-restitution__listdef-value"
                         >
-                          -
+                          99,99 %
                         </dd>
                       </dl>
                       <dl
@@ -1121,7 +1121,7 @@ exports[`<RestitutionPage/> Should render RestitutionPage 1`] = `
                         <dd
                           class="af-restitution__listdef-value"
                         >
-                          -
+                          EURO
                         </dd>
                       </dl>
                       <dl
@@ -1139,7 +1139,7 @@ exports[`<RestitutionPage/> Should render RestitutionPage 1`] = `
                         <dd
                           class="af-restitution__listdef-value"
                         >
-                          -
+                          100,00 %
                         </dd>
                       </dl>
                     </div>
@@ -1147,7 +1147,6 @@ exports[`<RestitutionPage/> Should render RestitutionPage 1`] = `
                 </div>
               </section>
             </article>
-             
           </div>
           <div
             class="af-tabs af-tabs--tabs-live-code"
@@ -2083,52 +2082,33 @@ exports[`<RestitutionPage/> Should render RestitutionPage 1`] = `
                         "
                       </span>
                       <span
-                        class="token tag"
-                        style="color: rgb(78, 201, 176);"
-                      >
-                         
-                      </span>
-                      <span
-                        class="token tag attr-name"
-                        style="color: rgb(156, 220, 254);"
-                      >
-                        value
-                      </span>
-                      <span
-                        class="token tag attr-value punctuation attr-equals"
+                        class="token tag punctuation"
                         style="color: rgb(212, 212, 212);"
                       >
-                        =
+                        &gt;
                       </span>
                       <span
-                        class="token tag attr-value punctuation"
-                        style="color: rgb(212, 212, 212);"
-                      >
-                        "
-                      </span>
-                      <span
-                        class="token tag attr-value"
-                        style="color: rgb(206, 145, 120);"
+                        class="token plain-text"
                       >
                         99,99 %
-                      </span>
-                      <span
-                        class="token tag attr-value punctuation"
-                        style="color: rgb(212, 212, 212);"
-                      >
-                        "
-                      </span>
-                      <span
-                        class="token tag"
-                        style="color: rgb(78, 201, 176);"
-                      >
-                         
                       </span>
                       <span
                         class="token tag punctuation"
                         style="color: rgb(212, 212, 212);"
                       >
-                        /&gt;
+                        &lt;/
+                      </span>
+                      <span
+                        class="token tag class-name"
+                        style="color: rgb(78, 201, 176);"
+                      >
+                        Restitution
+                      </span>
+                      <span
+                        class="token tag punctuation"
+                        style="color: rgb(212, 212, 212);"
+                      >
+                        &gt;
                       </span>
                       <span
                         class="token plain-text"
@@ -2201,52 +2181,33 @@ exports[`<RestitutionPage/> Should render RestitutionPage 1`] = `
                         "
                       </span>
                       <span
-                        class="token tag"
-                        style="color: rgb(78, 201, 176);"
-                      >
-                         
-                      </span>
-                      <span
-                        class="token tag attr-name"
-                        style="color: rgb(156, 220, 254);"
-                      >
-                        value
-                      </span>
-                      <span
-                        class="token tag attr-value punctuation attr-equals"
+                        class="token tag punctuation"
                         style="color: rgb(212, 212, 212);"
                       >
-                        =
+                        &gt;
                       </span>
                       <span
-                        class="token tag attr-value punctuation"
-                        style="color: rgb(212, 212, 212);"
-                      >
-                        "
-                      </span>
-                      <span
-                        class="token tag attr-value"
-                        style="color: rgb(206, 145, 120);"
+                        class="token plain-text"
                       >
                         EURO
-                      </span>
-                      <span
-                        class="token tag attr-value punctuation"
-                        style="color: rgb(212, 212, 212);"
-                      >
-                        "
-                      </span>
-                      <span
-                        class="token tag"
-                        style="color: rgb(78, 201, 176);"
-                      >
-                         
                       </span>
                       <span
                         class="token tag punctuation"
                         style="color: rgb(212, 212, 212);"
                       >
-                        /&gt;
+                        &lt;/
+                      </span>
+                      <span
+                        class="token tag class-name"
+                        style="color: rgb(78, 201, 176);"
+                      >
+                        Restitution
+                      </span>
+                      <span
+                        class="token tag punctuation"
+                        style="color: rgb(212, 212, 212);"
+                      >
+                        &gt;
                       </span>
                       <span
                         class="token plain-text"
@@ -2319,52 +2280,33 @@ exports[`<RestitutionPage/> Should render RestitutionPage 1`] = `
                         "
                       </span>
                       <span
-                        class="token tag"
-                        style="color: rgb(78, 201, 176);"
-                      >
-                         
-                      </span>
-                      <span
-                        class="token tag attr-name"
-                        style="color: rgb(156, 220, 254);"
-                      >
-                        value
-                      </span>
-                      <span
-                        class="token tag attr-value punctuation attr-equals"
+                        class="token tag punctuation"
                         style="color: rgb(212, 212, 212);"
                       >
-                        =
+                        &gt;
                       </span>
                       <span
-                        class="token tag attr-value punctuation"
-                        style="color: rgb(212, 212, 212);"
-                      >
-                        "
-                      </span>
-                      <span
-                        class="token tag attr-value"
-                        style="color: rgb(206, 145, 120);"
+                        class="token plain-text"
                       >
                         100,00 %
-                      </span>
-                      <span
-                        class="token tag attr-value punctuation"
-                        style="color: rgb(212, 212, 212);"
-                      >
-                        "
-                      </span>
-                      <span
-                        class="token tag"
-                        style="color: rgb(78, 201, 176);"
-                      >
-                         
                       </span>
                       <span
                         class="token tag punctuation"
                         style="color: rgb(212, 212, 212);"
                       >
-                        /&gt;
+                        &lt;/
+                      </span>
+                      <span
+                        class="token tag class-name"
+                        style="color: rgb(78, 201, 176);"
+                      >
+                        Restitution
+                      </span>
+                      <span
+                        class="token tag punctuation"
+                        style="color: rgb(212, 212, 212);"
+                      >
+                        &gt;
                       </span>
                       <span
                         class="token plain-text"
@@ -2524,11 +2466,6 @@ exports[`<RestitutionPage/> Should render RestitutionPage 1`] = `
                       >
                         &gt;
                       </span>
-                      <span
-                        class="token plain"
-                      >
-                         
-                      </span>
                     </span>
                   </div>
                 </pre>
@@ -2560,7 +2497,7 @@ exports[`<RestitutionPage/> Should render RestitutionPage 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.5.0
+        © 2022 AXA Tous droits réservés - v0.5.1
       </div>
     </div>
   </footer>

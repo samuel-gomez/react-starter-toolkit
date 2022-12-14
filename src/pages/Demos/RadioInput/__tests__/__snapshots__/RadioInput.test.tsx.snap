@@ -2717,7 +2717,7 @@ exports[`<RadioInputPage /> Should render RadioInputPage 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.5.0
+        © 2022 AXA Tous droits réservés - v0.5.1
       </div>
     </div>
   </footer>

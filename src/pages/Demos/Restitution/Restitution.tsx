@@ -21,13 +21,13 @@ const INITIAL_STATE = {
   /><SectionRestitution>
   <SectionRestitutionRow title="Base de calcul des prestations">
     <SectionRestitutionColumn>
-      <Restitution label="TA" value="99,99 %" />
-      <Restitution label="EURO" value="EURO" />
-      <Restitution label="TT" value="100,00 %" />
+      <Restitution label="TA">99,99 %</Restitution>
+      <Restitution label="EURO">EURO</Restitution>
+      <Restitution label="TT">100,00 %</Restitution>
     </SectionRestitutionColumn>
   </SectionRestitutionRow>
  </SectionRestitution>
-</ArticleRestitution> `,
+</ArticleRestitution>`,
 };
 
 type Props = typeof INITIAL_STATE & {
