@@ -25,9 +25,9 @@ describe('code', () => {
   /><SectionRestitution>
   <SectionRestitutionRow title="Base de calcul des prestations">
     <SectionRestitutionColumn>
-      <Restitution label="TA" value="99,99 %" />
-      <Restitution label="EURO" value="EURO" />
-      <Restitution label="TT" value="100,00 %" />
+      <Restitution label="TA">99,99 %</Restitution>
+      <Restitution label="EURO">EURO</Restitution>
+      <Restitution label="TT">100,00 %</Restitution>
     </SectionRestitutionColumn>
   </SectionRestitutionRow>
  </SectionRestitution>
@@ -50,9 +50,9 @@ describe('code', () => {
     /><SectionRestitution>
     <SectionRestitutionRow title="Base de calcul des prestations">
       <SectionRestitutionColumn>
-        <Restitution label="TA" value="99,99 %" />
-        <Restitution label="EURO" value="EURO" />
-        <Restitution label="TT" value="100,00 %" />
+        <Restitution label="TA">99,99 %</Restitution>
+        <Restitution label="EURO">EURO</Restitution>
+        <Restitution label="TT">100,00 %</Restitution>
       </SectionRestitutionColumn>
     </SectionRestitutionRow>
    </SectionRestitution>

@@ -1051,7 +1051,7 @@ exports[`<DateInputPage /> Should render DateInputPage 1`] = `
                     name="name-field"
                     placeholder="Ex: Samuel"
                     type="date"
-                    value="2022-12-13"
+                    value="2022-12-14"
                   />
                 </div>
                 <small
@@ -2429,7 +2429,7 @@ exports[`<DateInputPage /> Should render DateInputPage 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.5.0
+        © 2022 AXA Tous droits réservés - v0.5.1
       </div>
     </div>
   </footer>
