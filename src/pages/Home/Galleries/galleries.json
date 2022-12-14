@@ -81,12 +81,12 @@
   },
   {
     "title": "Accessibility tools",
-    "description": "Voici la liste des outils facilitant la mise en place de l'accessibilité.",
+    "description": "Voici la liste des outils facilitant la mise en oeuvre de l'accessibilité.",
     "image": "accessibility.svg",
     "alt": "Accessibility tools",
     "items": [
       {
-        "titleItem": "React Axe",
+        "titleItem": "Axe Core",
         "linkItem": "https://www.deque.com/axe/",
         "imageItem": "react-axe"
       },
