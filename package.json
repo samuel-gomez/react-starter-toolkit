@@ -46,7 +46,6 @@
     "github-markdown-css": "5.1.0",
     "jest-cucumber": "3.0.1",
     "lodash": "4.17.21",
-    "moment": "2.29.4",
     "prism-react-renderer": "1.3.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
