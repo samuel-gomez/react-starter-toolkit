@@ -41,7 +41,6 @@
     "@types/react-router-dom": "5.3.3",
     "@uiw/react-textarea-code-editor": "2.0.6",
     "axe-core": "4.5.2",
-    "classnames": "2.3.2",
     "downloadjs": "1.4.7",
     "github-markdown-css": "5.1.0",
     "jest-cucumber": "3.0.1",
