@@ -13,7 +13,7 @@ Feature: Page d'accueil
     And un titre "Checking tools" est visible
     And un texte "Voici la liste des outils facilitant les développements." est visible
     And un titre "Accessibility tools" est visible
-    And un texte "Voici la liste des outils facilitant la mise en place de l'accessibilité." est visible
+    And un texte "Voici la liste des outils facilitant la mise en oeuvre de l'accessibilité." est visible
     And un titre "Other tools" est visible
     And un texte "Voici la liste des outils complémentaires" est visible
     And la liste des packages est visible
@@ -29,7 +29,7 @@ Feature: Page d'accueil
       | Prettier        | https://prettier.io/                                 |
       | Husky           | https://typicode.github.io/husky/#/                  |
       | Commitlint      | https://commitlint.js.org/#/                         |
-      | React Axe       | https://www.deque.com/axe/                           |
+      | Axe Core        | https://www.deque.com/axe/                           |
       | Eslint A11y     | https://www.npmjs.com/package/eslint-plugin-jsx-a11y |
       | React router    | https://reactrouter.com/en/main                      |
       | React Hook Form | https://react-hook-form.com/                         |
