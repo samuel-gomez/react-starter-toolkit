@@ -22,7 +22,7 @@
     "check": "npm run prettier && npm run lint"
   },
   "dependencies": {
-    "@axa-fr/react-oidc": "6.10.18",
+    "@axa-fr/react-oidc": "6.11.1",
     "@axa-fr/react-toolkit-all": "2.0.0",
     "@axa-fr/react-toolkit-core": "2.0.0",
     "@babel/parser": "7.20.3",
