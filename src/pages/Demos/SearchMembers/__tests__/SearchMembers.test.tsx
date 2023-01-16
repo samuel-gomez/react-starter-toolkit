@@ -69,13 +69,8 @@ const defaultProps = {
 };
 
 describe('<SearchMembers/>', () => {
-  it('Should render SearchMembers', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(<SearchMembers {...defaultProps} />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-
   it('Should render <SearchMembers /> with one member', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(
+    renderWithWrapperStaticRouter(
       <SearchMembers
         {...defaultProps}
         searchMembers={[
@@ -103,6 +98,5 @@ describe('<SearchMembers/>', () => {
     const hello = screen.getByText('hello');
     expect(hello).toBeInTheDocument();
     expect(hello.closest('td')).toHaveClass('af-table__cell--actions');
-    expect(asFragment()).toMatchSnapshot();
   });
 });

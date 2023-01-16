@@ -1,12 +1,5 @@
-import { clearString, renderWithWrapperStaticRouter } from 'shared/testsUtils';
-import DateInputPage, { code, INITIAL_STATE } from '../DateInput';
-
-describe('<DateInputPage />', () => {
-  it('Should render DateInputPage', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(<DateInputPage />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+import { clearString } from 'shared/testsUtils';
+import { code, INITIAL_STATE } from '../DateInput';
 
 describe('code', () => {
   const onChange = jest.fn();

@@ -25,7 +25,7 @@ export const computeInfos = ({ members }: { members?: Record<string, string>[] }
     },
   })) ?? [];
 
-export const INITIAL_STATE_FORM_SEARCH_MEMBERS = {
+const INITIAL_STATE_FORM_SEARCH_MEMBERS = {
   name: '',
   hasSubmit: false,
 };

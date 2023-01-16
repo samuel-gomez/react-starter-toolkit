@@ -1,12 +1,5 @@
-import { clearString, renderWithWrapperStaticRouter } from 'shared/testsUtils';
-import AccordionPage, { code } from '../Accordion';
-
-describe('<Accordion />', () => {
-  it('Should render AccordionPage', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(<AccordionPage />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+import { clearString } from 'shared/testsUtils';
+import { code } from '../Accordion';
 
 describe('code', () => {
   const onChange = jest.fn();

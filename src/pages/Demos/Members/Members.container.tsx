@@ -1,6 +1,7 @@
-import { createContext } from 'react';
+import { createContext, useMemo } from 'react';
 import { setLoaderMode } from 'shared/components/Loader';
-import { emptyFunction } from 'shared/testsUtils';
+import { emptyFunction } from 'shared/helpers';
+
 import Members, { TMembers } from './Members';
 import { INITIAL_STATE_SORTING, TReturnUseMembers, useMembers } from './Members.hook';
 
@@ -9,7 +10,7 @@ export type TMembersContext = {
   sorting: TReturnUseMembers['sorting'];
 };
 
-export const MembersContext = createContext<TMembersContext>({
+const MembersContext = createContext<TMembersContext>({
   onChangeSorting: emptyFunction,
   sorting: INITIAL_STATE_SORTING,
 });
@@ -22,9 +23,9 @@ type TMembersEnhanced = TMembers & {
 
 const MembersEnhanced = ({ useMembersFn = useMembers, setLoaderModeFn = setLoaderMode, MembersCmpt = Members, ...rest }: TMembersEnhanced) => {
   const { anomaly, isLoading, members, pagination, onChangeSorting, sorting, onChangePaging, refetch } = useMembersFn({});
-
+  const value = useMemo(() => ({ onChangeSorting, sorting }), [onChangeSorting, sorting]);
   return (
-    <MembersContext.Provider value={{ onChangeSorting, sorting }}>
+    <MembersContext.Provider value={value}>
       <MembersCmpt
         {...rest}
         members={members}

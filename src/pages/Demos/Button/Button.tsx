@@ -1,6 +1,5 @@
-import { ReactNode } from 'react';
-import { ClickEvent } from '@axa-fr/react-toolkit-core';
-import Layout, { TLayout } from 'Layout';
+import type { ClickEvent } from '@axa-fr/react-toolkit-core/dist/esm/withClickId.hoc';
+import Layout, { TLayoutPage } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
 import { TITLE_BAR, TITLE, DESIGN_SYSTEM_PATH, STORYBOOK_PATH, GITHUB_PACKAGE, NPM_NAME } from './constants';
@@ -28,8 +27,10 @@ export const code = ({
   disabled,
   id,
   icon = '',
-}: Props) => `<Button id="${id}" disabled={${disabled}} className="${className}" classModifier="${classModifier}" type="submit" onClick={onClick} >
-    ${icon !== '' ? `<i className="glyphicon glyphicon-${icon}"></i>` : ''}<span className="af-btn__text">${label}</span>
+}: Props) => `<Button id="${id}" disabled={${disabled}} className="${className}" classModifier="${classModifier}" onClick={onClick} >
+    ${
+      icon !== '' ? `<i role="img" aria-label="${icon}" className="glyphicon glyphicon-${icon}"></i>` : ''
+    }<span className="af-btn__text">${label}</span>
 </Button>`;
 
 const ButtonWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
@@ -53,10 +54,7 @@ const ButtonEditable = () => {
   return <ButtonWithEditor {...state} onClick={onClick('onClick button')} onChange={onChange} />;
 };
 
-type TButtonPage = TLayout & {
-  titleBar?: ReactNode;
-  title?: ReactNode;
-};
+type TButtonPage = TLayoutPage;
 
 const ButtonPage = ({ titleBar = TITLE_BAR, title = TITLE }: TButtonPage) => (
   <Layout propsTitle={{ title: titleBar }}>

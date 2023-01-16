@@ -1,6 +1,5 @@
-import { ReactNode } from 'react';
-import { ClickEvent } from '@axa-fr/react-toolkit-core';
-import Layout, { TLayout } from 'Layout';
+import type { ClickEvent } from '@axa-fr/react-toolkit-core/dist/esm/index';
+import Layout, { TLayoutPage } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
 import { TITLE_BAR, TITLE, DESIGN_SYSTEM_PATH, STORYBOOK_PATH, GITHUB_PACKAGE, NPM_NAME } from './constants';
@@ -58,10 +57,7 @@ const RestitutionEditable = () => {
   return <RestitutionWithEditor {...state} onClick={onClick('onClick démo Restitution')} onChange={onChange} />;
 };
 
-type TRestitutionPage = TLayout & {
-  titleBar?: ReactNode;
-  title?: ReactNode;
-};
+type TRestitutionPage = TLayoutPage;
 
 const RestitutionPage = ({ titleBar = TITLE_BAR, title = TITLE }: TRestitutionPage) => (
   <Layout propsTitle={{ title: titleBar }}>

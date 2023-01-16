@@ -1,4 +1,4 @@
-import { ClickEvent } from '@axa-fr/react-toolkit-core';
+import type { ClickEvent } from '@axa-fr/react-toolkit-core/dist/esm/withClickId.hoc';
 import { withEditor, useEditable, TEvent, EditorHeader, TReturnUseToggleEditor, Tknobs } from 'shared/components/Editor';
 import LiveCode from 'shared/components/LiveCode';
 import { useToggleModal } from 'shared/components/ModalCommon';
@@ -56,9 +56,10 @@ const LayoutWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(({ 
         code={code(props)}
         scope={{
           Layout,
+          modalProps,
           ...props,
         }}
-        modalProps={modalProps}
+        hideReadme
       />
     </>
   );

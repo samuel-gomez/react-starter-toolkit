@@ -189,13 +189,13 @@ exports[`<Menu/> Render <Menu/> 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Button"
+                    aria-label="Accordion"
                     class="af-nav__link"
-                    href="/button"
+                    href="/accordion"
                     role="menuitem"
                     tabindex="-1"
                   >
-                    Button
+                    Accordion
                   </a>
                 </li>
                 <li
@@ -237,38 +237,6 @@ exports[`<Menu/> Render <Menu/> 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Restitution"
-                    class="af-nav__link"
-                    href="/restitution"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Restitution
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Tabs"
-                    class="af-nav__link"
-                    href="/tabs"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Tabs
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
                     aria-label="Badge"
                     class="af-nav__link"
                     href="/badge"
@@ -285,13 +253,13 @@ exports[`<Menu/> Render <Menu/> 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Title"
+                    aria-label="Button"
                     class="af-nav__link"
-                    href="/Title"
+                    href="/button"
                     role="menuitem"
                     tabindex="-1"
                   >
-                    Title
+                    Button
                   </a>
                 </li>
                 <li
@@ -308,54 +276,6 @@ exports[`<Menu/> Render <Menu/> 1`] = `
                     tabindex="-1"
                   >
                     Help
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Table"
-                    class="af-nav__link"
-                    href="/table"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Table
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Popover"
-                    class="af-nav__link"
-                    href="/popover"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Popover
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Accordion"
-                    class="af-nav__link"
-                    href="/accordion"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Accordion
                   </a>
                 </li>
                 <li
@@ -388,6 +308,86 @@ exports[`<Menu/> Render <Menu/> 1`] = `
                     tabindex="-1"
                   >
                     Modal
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Popover"
+                    class="af-nav__link"
+                    href="/popover"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Popover
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Restitution"
+                    class="af-nav__link"
+                    href="/restitution"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Restitution
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Table"
+                    class="af-nav__link"
+                    href="/table"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Table
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Tabs"
+                    class="af-nav__link"
+                    href="/tabs"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Tabs
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Title"
+                    class="af-nav__link"
+                    href="/title"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Title
                   </a>
                 </li>
               </ul>
@@ -424,61 +424,13 @@ exports[`<Menu/> Render <Menu/> 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Header"
+                    aria-label="Footer"
                     class="af-nav__link"
-                    href="/header"
+                    href="/footer"
                     role="menuitem"
                     tabindex="-1"
                   >
-                    Header
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="TitleBar"
-                    class="af-nav__link"
-                    href="/titlebar"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    TitleBar
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="NavBar"
-                    class="af-nav__link"
-                    href="/navbar"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    NavBar
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Infos"
-                    class="af-nav__link"
-                    href="/infos"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Infos
+                    Footer
                   </a>
                 </li>
                 <li
@@ -504,13 +456,61 @@ exports[`<Menu/> Render <Menu/> 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Footer"
+                    aria-label="Header"
                     class="af-nav__link"
-                    href="/footer"
+                    href="/header"
                     role="menuitem"
                     tabindex="-1"
                   >
-                    Footer
+                    Header
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Infos"
+                    class="af-nav__link"
+                    href="/infos"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Infos
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="NavBar"
+                    class="af-nav__link"
+                    href="/navbar"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    NavBar
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="TitleBar"
+                    class="af-nav__link"
+                    href="/titlebar"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    TitleBar
                   </a>
                 </li>
               </ul>
@@ -547,70 +547,6 @@ exports[`<Menu/> Render <Menu/> 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Text Input"
-                    class="af-nav__link"
-                    href="/text-input"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Text Input
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Number Input"
-                    class="af-nav__link"
-                    href="/number-input"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Number Input
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Textarea Input"
-                    class="af-nav__link"
-                    href="/textarea-input"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Textarea Input
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Radio Input"
-                    class="af-nav__link"
-                    href="/radio-input"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Radio Input
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
                     aria-label="Checkbox Input"
                     class="af-nav__link"
                     href="/checkbox-input"
@@ -627,61 +563,13 @@ exports[`<Menu/> Render <Menu/> 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Select Input"
+                    aria-label="Date Input"
                     class="af-nav__link"
-                    href="/select-input"
+                    href="/date-input"
                     role="menuitem"
                     tabindex="-1"
                   >
-                    Select Input
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Stepper"
-                    class="af-nav__link"
-                    href="/stepper"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Stepper
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Slider"
-                    class="af-nav__link"
-                    href="/slider"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Slider
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Switch"
-                    class="af-nav__link"
-                    href="/switch"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Switch
+                    Date Input
                   </a>
                 </li>
                 <li
@@ -707,6 +595,54 @@ exports[`<Menu/> Render <Menu/> 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
+                    aria-label="Number Input"
+                    class="af-nav__link"
+                    href="/number-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Number Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Radio Input"
+                    class="af-nav__link"
+                    href="/radio-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Radio Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Select Input"
+                    class="af-nav__link"
+                    href="/select-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Select Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
                     aria-label="Select Multi"
                     class="af-nav__link"
                     href="/select-multi"
@@ -723,13 +659,77 @@ exports[`<Menu/> Render <Menu/> 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Date Input"
+                    aria-label="Slider"
                     class="af-nav__link"
-                    href="/date-input"
+                    href="/slider"
                     role="menuitem"
                     tabindex="-1"
                   >
-                    Date Input
+                    Slider
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Stepper"
+                    class="af-nav__link"
+                    href="/stepper"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Stepper
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Switch"
+                    class="af-nav__link"
+                    href="/switch"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Switch
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Textarea Input"
+                    class="af-nav__link"
+                    href="/textarea-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Textarea Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Text Input"
+                    class="af-nav__link"
+                    href="/text-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Text Input
                   </a>
                 </li>
               </ul>

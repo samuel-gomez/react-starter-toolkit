@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
-import { MessageTypes, CheckboxModes } from '@axa-fr/react-toolkit-all';
-import Layout, { TLayout } from 'Layout';
+import { MessageTypes } from '@axa-fr/react-toolkit-form-core';
+import { CheckboxModes } from '@axa-fr/react-toolkit-form-input-checkbox';
+import Layout, { TLayoutPage } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
 import { TITLE_BAR, TITLE, DESIGN_SYSTEM_PATH, STORYBOOK_PATH, GITHUB_PACKAGE, NPM_NAME } from './constants';
@@ -75,9 +75,9 @@ export const code = ({
     classModifier="${classModifier}"
     className="${className}"
     classNameContainerLabel="${classNameContainerLabel}"
-    classNameContainerInput="${classNameContainerInput}">
-    ${helpButton ? `<HelpButton>Hello Checkbox</HelpButton>` : ''}
+    classNameContainerInput="${classNameContainerInput}">    
   </CheckboxInput>
+  ${helpButton ? `<HelpButton>Hello Checkbox</HelpButton>` : ''}
 `;
 
 const CheckboxInputWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
@@ -102,10 +102,7 @@ const CheckboxInputEditable = () => {
   return <CheckboxInputWithEditor {...state} onChange={onChange} onChangeCheckbox={onChange('values')} />;
 };
 
-type TTabsPage = TLayout & {
-  titleBar?: ReactNode;
-  title?: ReactNode;
-};
+type TTabsPage = TLayoutPage;
 
 const CheckboxInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TTabsPage) => (
   <Layout propsTitle={{ title: titleBar }}>

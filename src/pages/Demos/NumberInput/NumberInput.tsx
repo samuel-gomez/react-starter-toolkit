@@ -1,7 +1,7 @@
-import { isEqual } from 'lodash';
-import React, { FocusEvent, ReactNode } from 'react';
-import { MessageTypes } from '@axa-fr/react-toolkit-all';
-import Layout, { TLayout } from 'Layout';
+import isEqual from 'lodash/isEqual';
+import React, { FocusEvent } from 'react';
+import { MessageTypes } from '@axa-fr/react-toolkit-form-core';
+import Layout, { TLayoutPage } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
 import { TITLE_BAR, TITLE, DESIGN_SYSTEM_PATH, STORYBOOK_PATH, GITHUB_PACKAGE, NPM_NAME } from './constants';
@@ -96,16 +96,13 @@ const NumberInputWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>
 
 const MemoizedNumberInputWithEditor = React.memo(NumberInputWithEditor, (prev: Props, next: Props) => isEqual(prev, next));
 
-export const NumberInputEditable = () => {
+const NumberInputEditable = () => {
   const { state, onChange, onBlur, onFocus } = useEditable<typeof INITIAL_STATE>({ initialState: INITIAL_STATE });
 
   return <MemoizedNumberInputWithEditor {...state} onBlur={onBlur} onFocus={onFocus} onChange={onChange} />;
 };
 
-type TNumberInputPage = TLayout & {
-  titleBar?: ReactNode;
-  title?: ReactNode;
-};
+type TNumberInputPage = TLayoutPage;
 
 const NumberInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TNumberInputPage) => (
   <Layout propsTitle={{ title: titleBar }}>

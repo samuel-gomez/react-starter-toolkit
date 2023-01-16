@@ -1,6 +1,5 @@
-import { ReactNode } from 'react';
-import { MessageTypes } from '@axa-fr/react-toolkit-all';
-import Layout, { TLayout } from 'Layout';
+import { MessageTypes } from '@axa-fr/react-toolkit-form-core';
+import Layout, { TLayoutPage } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
 import { TITLE_BAR, TITLE, DESIGN_SYSTEM_PATH, STORYBOOK_PATH, GITHUB_PACKAGE, NPM_NAME } from './constants';
@@ -19,7 +18,7 @@ const INITIAL_STATE = {
   forceDisplayPlaceholder: false,
   classModifier: '',
   className: '',
-  label: 'My Label',
+  label: 'My Label Select',
   value: '',
   helpMessage: 'Enter your name',
   message: '',
@@ -104,10 +103,7 @@ const SelectInputEditable = () => {
   return <SelectInputWithEditor {...state} onChange={onChange} onChangeSelect={onChange('value')} />;
 };
 
-type TTabsPage = TLayout & {
-  titleBar?: ReactNode;
-  title?: ReactNode;
-};
+type TTabsPage = TLayoutPage;
 
 const SelectInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TTabsPage) => (
   <Layout propsTitle={{ title: titleBar }}>

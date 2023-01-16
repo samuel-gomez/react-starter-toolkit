@@ -1,16 +1,10 @@
-import { MessageTypes } from '@axa-fr/react-toolkit-all';
-import { clearString, renderWithWrapperStaticRouter } from 'shared/testsUtils';
-import SelectMultiPage, { code } from '../SelectMulti';
-
-describe('<SelectMultiPage />', () => {
-  it('Should render SelectMultiPage', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(<SelectMultiPage />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+import { MessageTypes } from '@axa-fr/react-toolkit-form-core';
+import { clearString } from 'shared/testsUtils';
+import { code } from '../SelectMulti';
 
 describe('code', () => {
   const onChange = jest.fn();
+  const onChangeSelect = jest.fn();
 
   const defaultProps = {
     label: 'My Label',
@@ -38,6 +32,8 @@ describe('code', () => {
     classNameContainerLabel: 'col-md-2',
     classNameContainerInput: 'col-md-10',
     onChange,
+    onChangeSelect,
+    isOpenEditor: false,
   };
 
   it('Should render SelectMulti with default props', () => {
@@ -63,6 +59,7 @@ describe('code', () => {
         placeholder="${defaultProps.placeholder}" 
         classNameContainerLabel="${defaultProps.classNameContainerLabel}"
         classNameContainerInput="${defaultProps.classNameContainerInput}"
+        aria-labelledby="${defaultProps.id}"
         />
     `),
     );

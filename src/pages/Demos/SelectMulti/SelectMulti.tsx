@@ -1,13 +1,12 @@
-import { ReactNode } from 'react';
-import { MessageTypes } from '@axa-fr/react-toolkit-all';
-import Layout, { TLayout } from 'Layout';
+import { MessageTypes } from '@axa-fr/react-toolkit-form-core';
+import Layout, { TLayoutPage } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
 import { TITLE_BAR, TITLE, DESIGN_SYSTEM_PATH, STORYBOOK_PATH, GITHUB_PACKAGE, NPM_NAME } from './constants';
 import knobs from './knobs.json';
 
 const INITIAL_STATE = {
-  label: 'My Label',
+  label: 'My Label Select-multi',
   name: 'name-field',
   id: 'uniqueid',
   options: [
@@ -77,6 +76,7 @@ export const code = ({
       placeholder="${placeholder}" 
       classNameContainerLabel="${classNameContainerLabel}"
       classNameContainerInput="${classNameContainerInput}"
+      aria-labelledby="${id}"
     />
   `;
 
@@ -101,10 +101,7 @@ const SelectMultiEditable = () => {
   return <SelectMultiWithEditor {...state} onChange={onChange} onChangeSelect={onChange('values')} />;
 };
 
-type TSelectMultiPage = TLayout & {
-  titleBar?: ReactNode;
-  title?: ReactNode;
-};
+type TSelectMultiPage = TLayoutPage;
 
 const SelectMultiPage = ({ titleBar = TITLE_BAR, title = TITLE }: TSelectMultiPage) => (
   <Layout propsTitle={{ title: titleBar }}>

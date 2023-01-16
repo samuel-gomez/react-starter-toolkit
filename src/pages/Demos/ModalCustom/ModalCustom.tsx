@@ -1,13 +1,12 @@
 import { Button, Alert } from '@axa-fr/react-toolkit-all';
 import Modal from '@axa-fr/react-toolkit-modal-default';
-import Layout, { TLayout } from 'Layout';
-import { ReactNode } from 'react';
+import Layout, { TLayoutPage } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { ModalCommonHeader, ModalCommonBody, ModalCommonFooter, TReturnUseToggleModal } from 'shared/components/ModalCommon';
 import { TITLE_BAR, TITLE } from './constants';
 
 const scope = { Button, Modal, ModalCommonHeader, ModalCommonBody, ModalCommonFooter, Alert };
-const code = `
+export const code = `
 <>
   <Button type="submit" onClick={openModal}>
     <span className="af-btn__text">Click me to launch modal</span>
@@ -23,11 +22,7 @@ const code = `
 </>
 `;
 
-type TModalPage = TLayout &
-  TReturnUseToggleModal & {
-    titleBar?: ReactNode;
-    title?: ReactNode;
-  };
+type TModalPage = TLayoutPage & TReturnUseToggleModal;
 
 const ModalCustomPage = ({ titleBar = TITLE_BAR, title = TITLE, openModal, isOpen, onCancel }: TModalPage) => (
   <Layout propsTitle={{ title: titleBar }}>

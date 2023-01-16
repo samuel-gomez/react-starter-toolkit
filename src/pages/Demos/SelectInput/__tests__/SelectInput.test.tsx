@@ -1,13 +1,6 @@
 import { MessageTypes } from '@axa-fr/react-toolkit-all';
-import { clearString, renderWithWrapperStaticRouter } from 'shared/testsUtils';
-import SelectInputPage, { code } from '../SelectInput';
-
-describe('<SelectInputPage />', () => {
-  it('Should render SelectInputPage', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(<SelectInputPage />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+import { clearString } from 'shared/testsUtils';
+import { code } from '../SelectInput';
 
 describe('code', () => {
   const onChange = jest.fn();

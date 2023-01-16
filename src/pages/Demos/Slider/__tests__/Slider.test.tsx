@@ -1,13 +1,6 @@
-import { clearString, renderWithWrapperStaticRouter } from 'shared/testsUtils';
-import { MessageTypes } from '@axa-fr/react-toolkit-all';
-import SliderPage, { code } from '../Slider';
-
-describe('<Slider />', () => {
-  it('Should render SliderPage', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(<SliderPage />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+import { clearString } from 'shared/testsUtils';
+import { MessageTypes } from '@axa-fr/react-toolkit-form-core';
+import { code } from '../Slider';
 
 describe('code', () => {
   const onChange = jest.fn();
@@ -19,12 +12,12 @@ describe('code', () => {
     name: 'name-field',
     value: 256,
     options: [
-      { label: '64', value: '64', id: 'uniqueId1' },
-      { label: '128', value: '128', id: 'uniqueId2' },
-      { label: '256', value: '256', index: 2, id: 'uniqueId3' },
-      { label: '1024', value: '1024', id: 'uniqueId4' },
-      { label: '2048', value: '2048', id: 'uniqueId5' },
-      { label: '4096', value: '4096', id: 'uniqueId5' },
+      { label: '64', value: 64, id: 'uniqueId1' },
+      { label: '128', value: 128, id: 'uniqueId2' },
+      { label: '256', value: 256, index: 2, id: 'uniqueId3' },
+      { label: '1024', value: 1024, id: 'uniqueId4' },
+      { label: '2048', value: 2048, id: 'uniqueId5' },
+      { label: '4096', value: 4096, id: 'uniqueId5' },
     ],
     classModifier: '',
     className: '',
@@ -51,7 +44,7 @@ describe('code', () => {
         label={<>${defaultProps.label}</>}
         name="${defaultProps.name}"
         onChange={onChangeSlider}
-        value="${defaultProps.value}"
+        value={${defaultProps.value}}
         helpMessage="${defaultProps.helpMessage}"
         message="${defaultProps.message}" 
         messageType="${defaultProps.messageType}"

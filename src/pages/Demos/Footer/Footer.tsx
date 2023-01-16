@@ -1,5 +1,4 @@
-import { ReactNode } from 'react';
-import Layout, { TLayout } from 'Layout';
+import Layout, { TLayoutPage } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
 import { TITLE_BAR, TITLE, DESIGN_SYSTEM_PATH, STORYBOOK_PATH, GITHUB_PACKAGE, NPM_NAME } from './constants';
@@ -37,10 +36,7 @@ const FooterEditable = () => {
   return <FooterWithEditor {...state} onChange={onChange} />;
 };
 
-type TFooterPage = TLayout & {
-  titleBar?: ReactNode;
-  title?: ReactNode;
-};
+type TFooterPage = TLayoutPage;
 
 const FooterDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TFooterPage) => (
   <Layout propsTitle={{ title: titleBar }}>

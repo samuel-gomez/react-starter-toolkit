@@ -2,9 +2,9 @@ import { useForm, UseFormReturn } from 'react-hook-form';
 import setConfirmClassModifier from 'shared/helpers/setConfirmClassModifier';
 import SearchForm from './SearchForm';
 import { NAME, defaultValues, modeValidationStrategy } from './constants';
-import { TReturnUseFormSearchMembers } from '../SearchMembers.hook';
+import type { TReturnUseFormSearchMembers } from '../SearchMembers.hook';
 
-type TsetOnSubmitSearchForm = {
+export type TsetOnSubmitSearchForm = {
   fields: FormValues;
   submitFormSearchMembers: TSearchFormEnhanced['submitFormSearchMembers'];
 };
@@ -15,6 +15,8 @@ export const setOnSubmitSearchForm =
     submitFormSearchMembers({
       [NAME]: fields[NAME],
     });
+
+export type TReturnTypeSetOnSubmitSearchForm = ReturnType<typeof setOnSubmitSearchForm>;
 
 type TSearchFormEnhanced = {
   submitFormSearchMembers: TReturnUseFormSearchMembers['submitFormSearchMembers'];

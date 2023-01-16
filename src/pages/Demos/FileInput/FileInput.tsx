@@ -1,13 +1,12 @@
-import { ReactNode } from 'react';
-import { MessageTypes } from '@axa-fr/react-toolkit-all';
-import Layout, { TLayout } from 'Layout';
+import { MessageTypes } from '@axa-fr/react-toolkit-form-core';
+import Layout, { TLayoutPage } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
 import { TITLE_BAR, TITLE, DESIGN_SYSTEM_PATH, STORYBOOK_PATH, GITHUB_PACKAGE, NPM_NAME } from './constants';
 import knobs from './knobs.json';
 
 const INITIAL_STATE = {
-  label: 'My Label',
+  label: 'My Label File',
   name: 'name-field',
   id: 'uniqueid',
   helpMessage: 'Take a photo',
@@ -90,10 +89,7 @@ const FileInputEditable = () => {
   return <FileInputWithEditor {...state} onChange={onChange} />;
 };
 
-type TTabsPage = TLayout & {
-  titleBar?: ReactNode;
-  title?: ReactNode;
-};
+type TTabsPage = TLayoutPage;
 
 const FileInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TTabsPage) => (
   <Layout propsTitle={{ title: titleBar }}>

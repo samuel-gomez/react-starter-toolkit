@@ -1,5 +1,4 @@
-import { ReactNode } from 'react';
-import Layout, { TLayout } from 'Layout';
+import Layout, { TLayoutPage } from 'Layout';
 import logo from 'shared/images/slash-logo.svg';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
@@ -44,10 +43,7 @@ const HeaderEditable = () => {
   return <HeaderWithEditor {...state} onChange={onChange} />;
 };
 
-type THeaderPage = TLayout & {
-  titleBar?: ReactNode;
-  title?: ReactNode;
-};
+type THeaderPage = TLayoutPage;
 
 const HeaderPage = ({ titleBar = TITLE_BAR, title = TITLE }: THeaderPage) => (
   <Layout propsTitle={{ title: titleBar }}>

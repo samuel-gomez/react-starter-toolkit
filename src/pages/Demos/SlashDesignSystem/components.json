@@ -221,7 +221,7 @@
   },
   "checkbox": {
     "id": "checkbox",
-    "title": "Checkbox",
+    "title": "Checkbox classic",
     "storybook": {
       "text": "Storybook : Checkbox",
       "path": "form-input-checkbox--checkbox"

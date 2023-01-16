@@ -1,7 +1,7 @@
-import { isEqual } from 'lodash';
-import React, { FocusEvent, ReactNode } from 'react';
-import { MessageTypes } from '@axa-fr/react-toolkit-all';
-import Layout, { TLayout } from 'Layout';
+import { FocusEvent, memo } from 'react';
+import isEqual from 'lodash/isEqual';
+import { MessageTypes } from '@axa-fr/react-toolkit-form-core';
+import Layout, { TLayoutPage } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
 import { TITLE_BAR, TITLE, DESIGN_SYSTEM_PATH, STORYBOOK_PATH, GITHUB_PACKAGE, NPM_NAME } from './constants';
@@ -12,10 +12,10 @@ const INITIAL_STATE = {
   id: 'uniqueid',
   classModifier: 'required',
   className: 'row af-form__group',
-  label: 'My Label',
+  label: 'My Label Text',
   value: 'my value',
   helpMessage: 'Enter your name',
-  placeholder: 'Ex: Samuel',
+  placeholder: 'Ex: votre nom',
   message: '',
   messageType: MessageTypes.error,
   forceDisplayMessage: false,
@@ -93,7 +93,7 @@ const TextInputWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
   knobs as unknown as Tknobs,
 );
 
-const MemoizedTextInputWithEditor = React.memo(TextInputWithEditor, (prev: Props, next: Props) => isEqual(prev, next));
+const MemoizedTextInputWithEditor = memo(TextInputWithEditor, (prev: Props, next: Props) => isEqual(prev, next));
 
 const TextInputEditable = () => {
   const { state, onChange, onBlur, onFocus } = useEditable<typeof INITIAL_STATE>({ initialState: INITIAL_STATE });
@@ -101,10 +101,7 @@ const TextInputEditable = () => {
   return <MemoizedTextInputWithEditor {...state} onBlur={onBlur} onFocus={onFocus} onChange={onChange} />;
 };
 
-type TTextInputPage = TLayout & {
-  titleBar?: ReactNode;
-  title?: ReactNode;
-};
+type TTextInputPage = TLayoutPage;
 
 const TextInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TTextInputPage) => (
   <Layout propsTitle={{ title: titleBar }}>

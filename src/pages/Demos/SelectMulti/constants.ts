@@ -1,5 +1,5 @@
 export const TITLE_BAR = 'Demo Select Multi';
-export const TITLE = 'Select Multi playground';
+export const TITLE = 'SelectMulti playground';
 export const ROUTE_URL_SELECT_MULTI = 'select-multi';
 export const STORYBOOK_PATH = 'form-input-selectmulti--multiselect';
 export const DESIGN_SYSTEM_PATH = 'form-select/';

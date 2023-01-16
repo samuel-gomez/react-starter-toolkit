@@ -1,12 +1,11 @@
-import { ReactNode } from 'react';
-import { MessageTypes } from '@axa-fr/react-toolkit-all';
-import Layout, { TLayout } from 'Layout';
+import { MessageTypes } from '@axa-fr/react-toolkit-form-core';
+import Layout, { TLayoutPage } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
 import { TITLE_BAR, TITLE, DESIGN_SYSTEM_PATH, STORYBOOK_PATH, GITHUB_PACKAGE, NPM_NAME } from './constants';
 import knobs from './knobs.json';
 
-export const INITIAL_STATE = {
+const INITIAL_STATE = {
   name: 'name-field',
   id: 'uniqueid',
   classModifier: 'required',
@@ -14,7 +13,7 @@ export const INITIAL_STATE = {
   label: 'My Label',
   value: new Date(2022, 11, 7),
   helpMessage: 'Enter the date',
-  placeholder: 'Ex: Samuel',
+  placeholder: 'Ex: 14/12/2022',
   message: '',
   messageType: MessageTypes.error,
   forceDisplayMessage: false,
@@ -98,10 +97,7 @@ const DateInputEditable = () => {
   return <DateInputWithEditor {...state} onChange={onChange} />;
 };
 
-type TDateInputPage = TLayout & {
-  titleBar?: ReactNode;
-  title?: ReactNode;
-};
+type TDateInputPage = TLayoutPage;
 
 const DateInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TDateInputPage) => (
   <Layout propsTitle={{ title: titleBar }}>

@@ -4,6 +4,12 @@ exports[`Render App with Base have user props Should Base have user props when r
 <DocumentFragment>
   <ul>
     <li>
+      have isEnabled
+    </li>
+    <li>
+      notHave isLoading
+    </li>
+    <li>
       have authName
     </li>
     <li>

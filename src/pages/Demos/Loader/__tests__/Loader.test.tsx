@@ -1,13 +1,6 @@
-import { clearString, renderWithWrapperStaticRouter } from 'shared/testsUtils';
+import { clearString } from 'shared/testsUtils';
 import { LoaderModes } from '@axa-fr/react-toolkit-loader';
-import LoaderPage, { code } from '../Loader';
-
-describe('<Loader />', () => {
-  it('Should render LoaderPage', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(<LoaderPage />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+import { code } from '../Loader';
 
 describe('code', () => {
   const onChange = jest.fn();

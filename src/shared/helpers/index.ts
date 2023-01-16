@@ -4,3 +4,4 @@ export { default as mergeObj } from './mergeObj';
 export { default as manageConfig } from './manageConfig';
 export { default as setAnomalyEmptyItems } from './setAnomalyEmptyItems';
 export { default as setConfirmClassModifier } from './setConfirmClassModifier';
+export { default as emptyFunction } from './emptyFunction';

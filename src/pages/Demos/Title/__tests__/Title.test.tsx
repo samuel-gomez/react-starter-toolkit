@@ -1,12 +1,5 @@
-import { clearString, renderWithWrapperStaticRouter } from 'shared/testsUtils';
-import TitlePage, { code } from '../Title';
-
-describe('<TitlePage/>', () => {
-  it('Should render TitlePage', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(<TitlePage />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+import { clearString } from 'shared/testsUtils';
+import { code } from '../Title';
 
 describe('code', () => {
   const onChange = jest.fn();

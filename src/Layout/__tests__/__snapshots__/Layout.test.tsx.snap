@@ -28,6 +28,7 @@ exports[`Layout Should render when disabled: {"footer": true, "header": true, "m
     </li>
   </ul>
   <main
+    aria-label="Main Content"
     class="af-main"
     id="main-content"
   />
@@ -301,13 +302,13 @@ exports[`Layout Should render when disabled: {"footer": true} 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Button"
+                    aria-label="Accordion"
                     class="af-nav__link"
-                    href="/demos/button"
+                    href="/demos/accordion"
                     role="menuitem"
                     tabindex="-1"
                   >
-                    Button
+                    Accordion
                   </a>
                 </li>
                 <li
@@ -349,38 +350,6 @@ exports[`Layout Should render when disabled: {"footer": true} 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Restitution"
-                    class="af-nav__link"
-                    href="/demos/restitution"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Restitution
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Tabs"
-                    class="af-nav__link"
-                    href="/demos/tabs"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Tabs
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
                     aria-label="Badge"
                     class="af-nav__link"
                     href="/demos/badge"
@@ -397,13 +366,13 @@ exports[`Layout Should render when disabled: {"footer": true} 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Title"
+                    aria-label="Button"
                     class="af-nav__link"
-                    href="/demos/Title"
+                    href="/demos/button"
                     role="menuitem"
                     tabindex="-1"
                   >
-                    Title
+                    Button
                   </a>
                 </li>
                 <li
@@ -420,54 +389,6 @@ exports[`Layout Should render when disabled: {"footer": true} 1`] = `
                     tabindex="-1"
                   >
                     Help
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Table"
-                    class="af-nav__link"
-                    href="/demos/table"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Table
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Popover"
-                    class="af-nav__link"
-                    href="/demos/popover"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Popover
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Accordion"
-                    class="af-nav__link"
-                    href="/demos/accordion"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Accordion
                   </a>
                 </li>
                 <li
@@ -500,6 +421,86 @@ exports[`Layout Should render when disabled: {"footer": true} 1`] = `
                     tabindex="-1"
                   >
                     Modal
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Popover"
+                    class="af-nav__link"
+                    href="/demos/popover"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Popover
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Restitution"
+                    class="af-nav__link"
+                    href="/demos/restitution"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Restitution
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Table"
+                    class="af-nav__link"
+                    href="/demos/table"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Table
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Tabs"
+                    class="af-nav__link"
+                    href="/demos/tabs"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Tabs
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Title"
+                    class="af-nav__link"
+                    href="/demos/title"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Title
                   </a>
                 </li>
               </ul>
@@ -535,61 +536,13 @@ exports[`Layout Should render when disabled: {"footer": true} 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Header"
+                    aria-label="Footer"
                     class="af-nav__link"
-                    href="/demos/header"
+                    href="/demos/footer"
                     role="menuitem"
                     tabindex="-1"
                   >
-                    Header
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="TitleBar"
-                    class="af-nav__link"
-                    href="/demos/titlebar"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    TitleBar
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="NavBar"
-                    class="af-nav__link"
-                    href="/demos/navbar"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    NavBar
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Infos"
-                    class="af-nav__link"
-                    href="/demos/infos"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Infos
+                    Footer
                   </a>
                 </li>
                 <li
@@ -615,13 +568,61 @@ exports[`Layout Should render when disabled: {"footer": true} 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Footer"
+                    aria-label="Header"
                     class="af-nav__link"
-                    href="/demos/footer"
+                    href="/demos/header"
                     role="menuitem"
                     tabindex="-1"
                   >
-                    Footer
+                    Header
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Infos"
+                    class="af-nav__link"
+                    href="/demos/infos"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Infos
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="NavBar"
+                    class="af-nav__link"
+                    href="/demos/navbar"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    NavBar
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="TitleBar"
+                    class="af-nav__link"
+                    href="/demos/titlebar"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    TitleBar
                   </a>
                 </li>
               </ul>
@@ -657,70 +658,6 @@ exports[`Layout Should render when disabled: {"footer": true} 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Text Input"
-                    class="af-nav__link"
-                    href="/demos/text-input"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Text Input
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Number Input"
-                    class="af-nav__link"
-                    href="/demos/number-input"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Number Input
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Textarea Input"
-                    class="af-nav__link"
-                    href="/demos/textarea-input"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Textarea Input
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Radio Input"
-                    class="af-nav__link"
-                    href="/demos/radio-input"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Radio Input
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
                     aria-label="Checkbox Input"
                     class="af-nav__link"
                     href="/demos/checkbox-input"
@@ -737,61 +674,13 @@ exports[`Layout Should render when disabled: {"footer": true} 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Select Input"
+                    aria-label="Date Input"
                     class="af-nav__link"
-                    href="/demos/select-input"
+                    href="/demos/date-input"
                     role="menuitem"
                     tabindex="-1"
                   >
-                    Select Input
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Stepper"
-                    class="af-nav__link"
-                    href="/demos/stepper"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Stepper
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Slider"
-                    class="af-nav__link"
-                    href="/demos/slider"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Slider
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Switch"
-                    class="af-nav__link"
-                    href="/demos/switch"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Switch
+                    Date Input
                   </a>
                 </li>
                 <li
@@ -817,6 +706,54 @@ exports[`Layout Should render when disabled: {"footer": true} 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
+                    aria-label="Number Input"
+                    class="af-nav__link"
+                    href="/demos/number-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Number Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Radio Input"
+                    class="af-nav__link"
+                    href="/demos/radio-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Radio Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Select Input"
+                    class="af-nav__link"
+                    href="/demos/select-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Select Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
                     aria-label="Select Multi"
                     class="af-nav__link"
                     href="/demos/select-multi"
@@ -833,13 +770,77 @@ exports[`Layout Should render when disabled: {"footer": true} 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Date Input"
+                    aria-label="Slider"
                     class="af-nav__link"
-                    href="/demos/date-input"
+                    href="/demos/slider"
                     role="menuitem"
                     tabindex="-1"
                   >
-                    Date Input
+                    Slider
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Stepper"
+                    class="af-nav__link"
+                    href="/demos/stepper"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Stepper
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Switch"
+                    class="af-nav__link"
+                    href="/demos/switch"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Switch
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Textarea Input"
+                    class="af-nav__link"
+                    href="/demos/textarea-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Textarea Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Text Input"
+                    class="af-nav__link"
+                    href="/demos/text-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Text Input
                   </a>
                 </li>
               </ul>
@@ -949,6 +950,7 @@ exports[`Layout Should render when disabled: {"footer": true} 1`] = `
     </div>
   </div>
   <main
+    aria-label="Main Content"
     class="af-main"
     id="main-content"
   >
@@ -1171,13 +1173,13 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Button"
+                    aria-label="Accordion"
                     class="af-nav__link"
-                    href="/demos/button"
+                    href="/demos/accordion"
                     role="menuitem"
                     tabindex="-1"
                   >
-                    Button
+                    Accordion
                   </a>
                 </li>
                 <li
@@ -1219,38 +1221,6 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Restitution"
-                    class="af-nav__link"
-                    href="/demos/restitution"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Restitution
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Tabs"
-                    class="af-nav__link"
-                    href="/demos/tabs"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Tabs
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
                     aria-label="Badge"
                     class="af-nav__link"
                     href="/demos/badge"
@@ -1267,13 +1237,13 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Title"
+                    aria-label="Button"
                     class="af-nav__link"
-                    href="/demos/Title"
+                    href="/demos/button"
                     role="menuitem"
                     tabindex="-1"
                   >
-                    Title
+                    Button
                   </a>
                 </li>
                 <li
@@ -1290,54 +1260,6 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
                     tabindex="-1"
                   >
                     Help
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Table"
-                    class="af-nav__link"
-                    href="/demos/table"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Table
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Popover"
-                    class="af-nav__link"
-                    href="/demos/popover"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Popover
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Accordion"
-                    class="af-nav__link"
-                    href="/demos/accordion"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Accordion
                   </a>
                 </li>
                 <li
@@ -1370,6 +1292,86 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
                     tabindex="-1"
                   >
                     Modal
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Popover"
+                    class="af-nav__link"
+                    href="/demos/popover"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Popover
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Restitution"
+                    class="af-nav__link"
+                    href="/demos/restitution"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Restitution
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Table"
+                    class="af-nav__link"
+                    href="/demos/table"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Table
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Tabs"
+                    class="af-nav__link"
+                    href="/demos/tabs"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Tabs
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Title"
+                    class="af-nav__link"
+                    href="/demos/title"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Title
                   </a>
                 </li>
               </ul>
@@ -1405,61 +1407,13 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Header"
+                    aria-label="Footer"
                     class="af-nav__link"
-                    href="/demos/header"
+                    href="/demos/footer"
                     role="menuitem"
                     tabindex="-1"
                   >
-                    Header
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="TitleBar"
-                    class="af-nav__link"
-                    href="/demos/titlebar"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    TitleBar
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="NavBar"
-                    class="af-nav__link"
-                    href="/demos/navbar"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    NavBar
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Infos"
-                    class="af-nav__link"
-                    href="/demos/infos"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Infos
+                    Footer
                   </a>
                 </li>
                 <li
@@ -1485,13 +1439,61 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Footer"
+                    aria-label="Header"
                     class="af-nav__link"
-                    href="/demos/footer"
+                    href="/demos/header"
                     role="menuitem"
                     tabindex="-1"
                   >
-                    Footer
+                    Header
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Infos"
+                    class="af-nav__link"
+                    href="/demos/infos"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Infos
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="NavBar"
+                    class="af-nav__link"
+                    href="/demos/navbar"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    NavBar
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="TitleBar"
+                    class="af-nav__link"
+                    href="/demos/titlebar"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    TitleBar
                   </a>
                 </li>
               </ul>
@@ -1527,70 +1529,6 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Text Input"
-                    class="af-nav__link"
-                    href="/demos/text-input"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Text Input
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Number Input"
-                    class="af-nav__link"
-                    href="/demos/number-input"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Number Input
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Textarea Input"
-                    class="af-nav__link"
-                    href="/demos/textarea-input"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Textarea Input
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Radio Input"
-                    class="af-nav__link"
-                    href="/demos/radio-input"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Radio Input
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
                     aria-label="Checkbox Input"
                     class="af-nav__link"
                     href="/demos/checkbox-input"
@@ -1607,61 +1545,13 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Select Input"
+                    aria-label="Date Input"
                     class="af-nav__link"
-                    href="/demos/select-input"
+                    href="/demos/date-input"
                     role="menuitem"
                     tabindex="-1"
                   >
-                    Select Input
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Stepper"
-                    class="af-nav__link"
-                    href="/demos/stepper"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Stepper
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Slider"
-                    class="af-nav__link"
-                    href="/demos/slider"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Slider
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Switch"
-                    class="af-nav__link"
-                    href="/demos/switch"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Switch
+                    Date Input
                   </a>
                 </li>
                 <li
@@ -1687,6 +1577,54 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
+                    aria-label="Number Input"
+                    class="af-nav__link"
+                    href="/demos/number-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Number Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Radio Input"
+                    class="af-nav__link"
+                    href="/demos/radio-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Radio Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Select Input"
+                    class="af-nav__link"
+                    href="/demos/select-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Select Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
                     aria-label="Select Multi"
                     class="af-nav__link"
                     href="/demos/select-multi"
@@ -1703,13 +1641,77 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Date Input"
+                    aria-label="Slider"
                     class="af-nav__link"
-                    href="/demos/date-input"
+                    href="/demos/slider"
                     role="menuitem"
                     tabindex="-1"
                   >
-                    Date Input
+                    Slider
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Stepper"
+                    class="af-nav__link"
+                    href="/demos/stepper"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Stepper
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Switch"
+                    class="af-nav__link"
+                    href="/demos/switch"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Switch
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Textarea Input"
+                    class="af-nav__link"
+                    href="/demos/textarea-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Textarea Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Text Input"
+                    class="af-nav__link"
+                    href="/demos/text-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Text Input
                   </a>
                 </li>
               </ul>
@@ -1819,6 +1821,7 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
     </div>
   </div>
   <main
+    aria-label="Main Content"
     class="af-main"
     id="main-content"
   >
@@ -1847,7 +1850,7 @@ exports[`Layout Should render when disabled: {"header": true} 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.5.3
+        © 2023 AXA Tous droits réservés - v0.5.3
       </div>
     </div>
   </footer>
@@ -1950,6 +1953,7 @@ exports[`Layout Should render when disabled: {"menu": true} 1`] = `
     </div>
   </div>
   <main
+    aria-label="Main Content"
     class="af-main"
     id="main-content"
   >
@@ -1978,7 +1982,7 @@ exports[`Layout Should render when disabled: {"menu": true} 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.5.3
+        © 2023 AXA Tous droits réservés - v0.5.3
       </div>
     </div>
   </footer>
@@ -2252,13 +2256,13 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Button"
+                    aria-label="Accordion"
                     class="af-nav__link"
-                    href="/demos/button"
+                    href="/demos/accordion"
                     role="menuitem"
                     tabindex="-1"
                   >
-                    Button
+                    Accordion
                   </a>
                 </li>
                 <li
@@ -2300,38 +2304,6 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Restitution"
-                    class="af-nav__link"
-                    href="/demos/restitution"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Restitution
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Tabs"
-                    class="af-nav__link"
-                    href="/demos/tabs"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Tabs
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
                     aria-label="Badge"
                     class="af-nav__link"
                     href="/demos/badge"
@@ -2348,13 +2320,13 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Title"
+                    aria-label="Button"
                     class="af-nav__link"
-                    href="/demos/Title"
+                    href="/demos/button"
                     role="menuitem"
                     tabindex="-1"
                   >
-                    Title
+                    Button
                   </a>
                 </li>
                 <li
@@ -2371,54 +2343,6 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
                     tabindex="-1"
                   >
                     Help
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Table"
-                    class="af-nav__link"
-                    href="/demos/table"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Table
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Popover"
-                    class="af-nav__link"
-                    href="/demos/popover"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Popover
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Accordion"
-                    class="af-nav__link"
-                    href="/demos/accordion"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Accordion
                   </a>
                 </li>
                 <li
@@ -2451,6 +2375,86 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
                     tabindex="-1"
                   >
                     Modal
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Popover"
+                    class="af-nav__link"
+                    href="/demos/popover"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Popover
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Restitution"
+                    class="af-nav__link"
+                    href="/demos/restitution"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Restitution
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Table"
+                    class="af-nav__link"
+                    href="/demos/table"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Table
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Tabs"
+                    class="af-nav__link"
+                    href="/demos/tabs"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Tabs
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Title"
+                    class="af-nav__link"
+                    href="/demos/title"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Title
                   </a>
                 </li>
               </ul>
@@ -2486,61 +2490,13 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Header"
+                    aria-label="Footer"
                     class="af-nav__link"
-                    href="/demos/header"
+                    href="/demos/footer"
                     role="menuitem"
                     tabindex="-1"
                   >
-                    Header
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="TitleBar"
-                    class="af-nav__link"
-                    href="/demos/titlebar"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    TitleBar
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="NavBar"
-                    class="af-nav__link"
-                    href="/demos/navbar"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    NavBar
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Infos"
-                    class="af-nav__link"
-                    href="/demos/infos"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Infos
+                    Footer
                   </a>
                 </li>
                 <li
@@ -2566,13 +2522,61 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Footer"
+                    aria-label="Header"
                     class="af-nav__link"
-                    href="/demos/footer"
+                    href="/demos/header"
                     role="menuitem"
                     tabindex="-1"
                   >
-                    Footer
+                    Header
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Infos"
+                    class="af-nav__link"
+                    href="/demos/infos"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Infos
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="NavBar"
+                    class="af-nav__link"
+                    href="/demos/navbar"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    NavBar
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="TitleBar"
+                    class="af-nav__link"
+                    href="/demos/titlebar"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    TitleBar
                   </a>
                 </li>
               </ul>
@@ -2608,70 +2612,6 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Text Input"
-                    class="af-nav__link"
-                    href="/demos/text-input"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Text Input
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Number Input"
-                    class="af-nav__link"
-                    href="/demos/number-input"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Number Input
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Textarea Input"
-                    class="af-nav__link"
-                    href="/demos/textarea-input"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Textarea Input
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Radio Input"
-                    class="af-nav__link"
-                    href="/demos/radio-input"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Radio Input
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
                     aria-label="Checkbox Input"
                     class="af-nav__link"
                     href="/demos/checkbox-input"
@@ -2688,61 +2628,13 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Select Input"
+                    aria-label="Date Input"
                     class="af-nav__link"
-                    href="/demos/select-input"
+                    href="/demos/date-input"
                     role="menuitem"
                     tabindex="-1"
                   >
-                    Select Input
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Stepper"
-                    class="af-nav__link"
-                    href="/demos/stepper"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Stepper
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Slider"
-                    class="af-nav__link"
-                    href="/demos/slider"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Slider
-                  </a>
-                </li>
-                <li
-                  class="af-nav__item "
-                  role="none"
-                >
-                  <a
-                    aria-expanded="false"
-                    aria-haspopup="true"
-                    aria-label="Switch"
-                    class="af-nav__link"
-                    href="/demos/switch"
-                    role="menuitem"
-                    tabindex="-1"
-                  >
-                    Switch
+                    Date Input
                   </a>
                 </li>
                 <li
@@ -2768,6 +2660,54 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
+                    aria-label="Number Input"
+                    class="af-nav__link"
+                    href="/demos/number-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Number Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Radio Input"
+                    class="af-nav__link"
+                    href="/demos/radio-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Radio Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Select Input"
+                    class="af-nav__link"
+                    href="/demos/select-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Select Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
                     aria-label="Select Multi"
                     class="af-nav__link"
                     href="/demos/select-multi"
@@ -2784,13 +2724,77 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
                   <a
                     aria-expanded="false"
                     aria-haspopup="true"
-                    aria-label="Date Input"
+                    aria-label="Slider"
                     class="af-nav__link"
-                    href="/demos/date-input"
+                    href="/demos/slider"
                     role="menuitem"
                     tabindex="-1"
                   >
-                    Date Input
+                    Slider
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Stepper"
+                    class="af-nav__link"
+                    href="/demos/stepper"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Stepper
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Switch"
+                    class="af-nav__link"
+                    href="/demos/switch"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Switch
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Textarea Input"
+                    class="af-nav__link"
+                    href="/demos/textarea-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Textarea Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Text Input"
+                    class="af-nav__link"
+                    href="/demos/text-input"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Text Input
                   </a>
                 </li>
               </ul>
@@ -2887,6 +2891,7 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
     />
   </a>
   <main
+    aria-label="Main Content"
     class="af-main"
     id="main-content"
   >
@@ -2915,7 +2920,7 @@ exports[`Layout Should render when disabled: {"title": true} 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.5.3
+        © 2023 AXA Tous droits réservés - v0.5.3
       </div>
     </div>
   </footer>

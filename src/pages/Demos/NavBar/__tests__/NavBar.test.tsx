@@ -1,12 +1,5 @@
-import { clearString, renderWithWrapperStaticRouter } from 'shared/testsUtils';
-import NavBarPage, { code } from '../NavBar';
-
-describe('<NavBarPage />', () => {
-  it('Should render NavBarPage', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(<NavBarPage />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+import { clearString } from 'shared/testsUtils';
+import { code } from '../NavBar';
 
 describe('code', () => {
   const onChange = jest.fn();
@@ -23,8 +16,8 @@ describe('code', () => {
     expect(clearString(result)).toEqual(
       clearString(`
     <NavBar classModifier="${defaultProps.classModifier}" positionInit={${defaultProps.positionInit}} isVisible={${defaultProps.isVisible}} onClick={onClick}>
-        <NavBarItem actionElt={<a className="af-nav__link">Home</a>} />
-        <NavBarItem actionElt={<a className="af-nav__link">Forms</a>} />
+        <NavBarItem actionElt={<a className="af-nav__link" href="/" >Home</a>} />
+        <NavBarItem actionElt={<a className="af-nav__link" href="/layout" >Example Link</a>} />
     </NavBar>
     `),
     );

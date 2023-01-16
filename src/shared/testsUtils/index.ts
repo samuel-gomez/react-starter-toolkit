@@ -1,4 +1,4 @@
-export { default as emptyFunction } from './emptyFunction';
+export { default as emptyFunction } from '../helpers/emptyFunction';
 export { default as clearString } from './clearString';
 export { default as WrapperStaticRouter } from './WrapperStaticRouter';
 export { default as WrapperQuery } from './WrapperQuery';

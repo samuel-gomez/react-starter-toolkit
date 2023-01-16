@@ -1,8 +1,8 @@
-import { ReactNode } from 'react';
 import dracula from 'prism-react-renderer/themes/dracula';
 import { LiveProvider, LiveEditor } from 'react-live';
-import { Button, Accordion, CollapseCard } from '@axa-fr/react-toolkit-all';
-import Layout, { TLayout } from 'Layout';
+import Button from '@axa-fr/react-toolkit-button';
+import { Accordion, CollapseCard } from '@axa-fr/react-toolkit-collapse';
+import Layout, { TLayoutPage } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { TITLE_BAR, TITLE } from './constants';
 import { TReturnUseNotify } from './Notification.hook';
@@ -62,11 +62,7 @@ const codeWarning = `
   </Button>
 `;
 
-type TNotificationPage = TLayout &
-  TReturnUseNotify & {
-    titleBar?: ReactNode;
-    title?: ReactNode;
-  };
+type TNotificationPage = TLayoutPage & TReturnUseNotify;
 
 const NotificationPage = ({ notifyError, notifySuccess, notifyWarning, titleBar = TITLE_BAR, title = TITLE }: TNotificationPage) => (
   <Layout propsTitle={{ title: titleBar }}>
@@ -80,24 +76,26 @@ const NotificationPage = ({ notifyError, notifySuccess, notifyWarning, titleBar 
           </LiveProvider>
         </CollapseCard.Body>
       </CollapseCard>
-      {Object.entries({
-        error: { notifyError, code: codeError, isOpen: true, title: 'Error notification' },
-        success: { notifySuccess, code: codeSuccess, isOpen: true, title: 'Success notification' },
-        warning: { notifyWarning, code: codeWarning, isOpen: true, title: 'Warning notification' },
-      }).map(([key, { isOpen, title, code, ...rest }]) => (
-        <CollapseCard id={`collapse-${key}`} key={key} isOpen={isOpen}>
-          <CollapseCard.Header key={`${key}-header`}>{title}</CollapseCard.Header>
-          <CollapseCard.Body key={`${key}-body`}>
-            <LiveCode
-              code={code}
-              scope={{
-                ...scope,
-                ...rest,
-              }}
-            />
-          </CollapseCard.Body>
-        </CollapseCard>
-      ))}
+      <>
+        {Object.entries({
+          error: { notifyError, code: codeError, isOpen: true, title: 'Error notification' },
+          success: { notifySuccess, code: codeSuccess, isOpen: true, title: 'Success notification' },
+          warning: { notifyWarning, code: codeWarning, isOpen: true, title: 'Warning notification' },
+        }).map(([key, { isOpen, title: titleCollapse, code: codeCollapse, ...rest }]) => (
+          <CollapseCard id={`collapse-${key}`} key={key} isOpen={isOpen}>
+            <CollapseCard.Header key={`${key}-header`}>{titleCollapse}</CollapseCard.Header>
+            <CollapseCard.Body key={`${key}-body`}>
+              <LiveCode
+                code={codeCollapse}
+                scope={{
+                  ...scope,
+                  ...rest,
+                }}
+              />
+            </CollapseCard.Body>
+          </CollapseCard>
+        ))}
+      </>
     </Accordion>
   </Layout>
 );
