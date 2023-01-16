@@ -1,7 +1,6 @@
 import { Button } from '@axa-fr/react-toolkit-all';
 import Modal from '@axa-fr/react-toolkit-modal-default';
 import ReactCodeEditor from '@uiw/react-textarea-code-editor';
-import '@uiw/react-textarea-code-editor/dist.css';
 import { ChangeEvent, useCallback, useState } from 'react';
 import { ModalCommonHeader, ModalCommonBody, ModalCommonFooter, useToggleModal } from 'shared/components/ModalCommon';
 import { TEvent, TonChange } from '../../Editor';

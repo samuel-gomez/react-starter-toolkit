@@ -4,7 +4,6 @@ import remarkGfm from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import vsDark from 'prism-react-renderer/themes/vsDark';
-import 'github-markdown-css/github-markdown-light.css';
 import Resilience from 'shared/components/Resilience';
 import Loader, { setLoaderMode } from 'shared/components/Loader';
 import { Tanomaly } from 'shared/types';
