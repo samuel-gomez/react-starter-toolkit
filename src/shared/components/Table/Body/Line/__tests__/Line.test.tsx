@@ -3,7 +3,7 @@ import Line from '../Line';
 
 const container = document.createElement('tbody');
 
-const columns = [
+const columnsMock = [
   {
     hover: undefined,
     keyCol: 'sexe',
@@ -13,12 +13,12 @@ const columns = [
 
 describe('Line', () => {
   it.each`
-    columns      | className    | modifier      | children
-    ${undefined} | ${undefined} | ${undefined}  | ${undefined}
-    ${[]}        | ${undefined} | ${undefined}  | ${undefined}
-    ${columns}   | ${undefined} | ${undefined}  | ${undefined}
-    ${columns}   | ${undefined} | ${'modifier'} | ${undefined}
-    ${columns}   | ${'myclass'} | ${'modifier'} | ${(<td>child</td>)}
+    columns        | className    | modifier      | children
+    ${undefined}   | ${undefined} | ${undefined}  | ${undefined}
+    ${[]}          | ${undefined} | ${undefined}  | ${undefined}
+    ${columnsMock} | ${undefined} | ${undefined}  | ${undefined}
+    ${columnsMock} | ${undefined} | ${'modifier'} | ${undefined}
+    ${columnsMock} | ${'myclass'} | ${'modifier'} | ${(<td>child</td>)}
   `(
     'Should render <Line/> when columns: $columns, className: $className, modifier: $modifier, children: $children',
     ({ columns, className, modifier, children }) => {

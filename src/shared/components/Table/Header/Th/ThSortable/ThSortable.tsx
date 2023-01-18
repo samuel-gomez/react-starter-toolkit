@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
 import { withClassDefault, withClassModifier, WithClassModifierOptions, compose, identity } from '@axa-fr/react-toolkit-core';
 import { NONE, ASCENDING, DESCENDING } from 'shared/components/Table/constants';
-import { Torder } from '.';
+import type { Torder } from './ThSortable.container';
 
 export const orderIcons = (order: Torder = NONE) =>
   ({

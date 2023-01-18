@@ -42,7 +42,6 @@ const pathsDelete = [
   'LICENSE',
   './docs/CLEAN.md',
   '.github',
-  '.git',
   'package-lock.json',
 ];
 

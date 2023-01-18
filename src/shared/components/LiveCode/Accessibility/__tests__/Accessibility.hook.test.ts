@@ -1,11 +1,11 @@
 import { renderHook, act } from '@testing-library/react-hooks';
-import { AxeResults } from 'axe-core';
-import { useAxe, axeRunAccessibility } from '../Accessibility.hook';
+import { useAxe, axeRunAccessibility, TResults } from '../Accessibility.hook';
 
-const expected = { errors: undefined, results: [] };
-const axeRunAccessibilityFnMock = (html: string, setter: ({ errors, results }: { errors: Error; results: AxeResults }) => void) => {
+const expected = { errors: undefined, results: [] as unknown as TResults['results'] };
+const axeRunAccessibilityFnMock = (html: string, setter: ({ errors, results }: TResults) => void) => {
   setter({ ...expected });
 };
+
 describe('useAxe', () => {
   it('Should return undefined', () => {
     const { result } = renderHook(() => useAxe({ html: 'label', axeRunAccessibilityFn: axeRunAccessibilityFnMock }));

@@ -1,7 +1,7 @@
-import { FocusEvent } from 'react';
+import { ComponentPropsWithoutRef, FocusEvent } from 'react';
 import { render } from '@testing-library/react';
 import { renderHook, act } from '@testing-library/react-hooks';
-import { Text } from '@axa-fr/react-toolkit-all';
+import { Text } from '@axa-fr/react-toolkit-form-input-text';
 import { mergePropsAndKnobs, withEditor, setValue, useEditable, useToggleEditor, TEvent, LabelEditor } from '../Editor';
 
 describe('setValue', () => {
@@ -23,11 +23,11 @@ describe('mergePropsAndKnobs', () => {
     disabled: false,
     icon: '',
   };
-  const props = {
+  const propsMock = {
     ...otherProps,
     classModifier: 'error',
   };
-  const knobs = {
+  const knobsMock = {
     classModifier: {
       value: '',
       options: [
@@ -38,12 +38,12 @@ describe('mergePropsAndKnobs', () => {
       ],
     },
   };
-  const expectedMerge = { ...otherProps, classModifier: { ...knobs.classModifier, value: 'error' } };
+  const expectedMerge = { ...otherProps, classModifier: { ...knobsMock.classModifier, value: 'error' } };
 
   it.each`
-    props    | knobs    | expected
-    ${{}}    | ${{}}    | ${{}}
-    ${props} | ${knobs} | ${expectedMerge}
+    props        | knobs        | expected
+    ${{}}        | ${{}}        | ${{}}
+    ${propsMock} | ${knobsMock} | ${expectedMerge}
   `('Should return expected: $expected when props: $props, knobs: $knobs', ({ props, knobs, expected }) => {
     const result = mergePropsAndKnobs({ props, knobs });
     expect(result).toEqual(expected);
@@ -64,8 +64,8 @@ describe('useEditable', () => {
   it('Should logEventFn have been called when onClick have been called', () => {
     const logEventFn = jest.fn();
     const { result } = renderHook(() => useEditable({ initialState, logEventFn }));
-    act(() => result.current.onClick('name')({ id: 'id' }));
-    expect(logEventFn).toHaveBeenCalledWith('click event', 'name', { id: 'id' });
+    const res = result.current.onClick('name')({ id: 'id' });
+    expect(res).toEqual({ name: 'name', e: { id: 'id' } });
   });
 
   it('Should setValueFn have been called and return updated state value when onChange have been called with event with value', () => {
@@ -97,25 +97,34 @@ describe('useEditable', () => {
     expect(result.current.state.autoFocus).toBeFalsy();
   });
 
-  it('Should set autofocus state to true when onBlur have been called', () => {
+  it('Should set autofocus state to true when onFocus have been called', () => {
     const { result } = renderHook(() => useEditable({ initialState: { autoFocus: false } }));
+    const setSelectionRange = jest.fn();
     const event = {
       preventDefault: jest.fn(),
-      target: { value: '<p>the-new-value</p>', setSelectionRange: jest.fn() },
+      target: { value: '<p>the-new-value</p>', type: 'textarea', setSelectionRange },
     } as unknown as FocusEvent<HTMLInputElement>;
 
     act(() => result.current.onFocus(event));
     expect(result.current.state.autoFocus).toBeTruthy();
+    expect(setSelectionRange).toHaveBeenCalledWith(20, 20);
   });
 });
 
 describe('withEditor', () => {
   type Props = { className?: string; onChange: ReturnType<typeof useEditable>['onChange'] };
   const onChange = jest.fn().mockImplementation(name => (e: TEvent) => {
-    console.log('onChange');
+    return { onChange: { e, name } };
   });
-  const Component = ({ className, onChange }: Props) => (
-    <Text id="idtext" name="nametext" type="text" value="hello" onChange={onChange} className={className} />
+  const Component = ({ className, onChange: onChangeComponent }: Props) => (
+    <Text
+      id="idtext"
+      name="nametext"
+      type="text"
+      value="hello"
+      onChange={onChangeComponent as unknown as ComponentPropsWithoutRef<typeof Text>['onChange']}
+      className={className}
+    />
   );
 
   it('Should render Component with FormEditor when apply withEditor HOC and isOpenEditor true', () => {

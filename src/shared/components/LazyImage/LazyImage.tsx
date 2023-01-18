@@ -1,9 +1,9 @@
 import { useState, useEffect, ImgHTMLAttributes } from 'react';
 import loaderSVG from 'shared/images/puff.svg';
-import './LasyImage.scss';
+import './LazyImage.scss';
 
 type TloadImage = string;
-export const loadImage = (name: TloadImage) => import(`shared/images/${name}`);
+export const loadImage = (name: TloadImage) => import(`../../../../public/images/${name}`);
 
 const Loading = () => <img className="af-lasyimage" src={loaderSVG} alt="loading..." />;
 
@@ -13,7 +13,7 @@ type TuseLoadImage = {
   initState?: string | null;
 };
 
-export const useLoadImage = ({ name, loadImageFn = loadImage, initState = null }: TuseLoadImage) => {
+const useLoadImage = ({ name, loadImageFn = loadImage, initState = null }: TuseLoadImage) => {
   const [stateimage, setStateImage] = useState(initState);
 
   useEffect(() => {

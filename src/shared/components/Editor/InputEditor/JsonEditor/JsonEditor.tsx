@@ -1,4 +1,4 @@
-import { Button } from '@axa-fr/react-toolkit-all';
+import Button from '@axa-fr/react-toolkit-button';
 import Modal from '@axa-fr/react-toolkit-modal-default';
 import ReactCodeEditor from '@uiw/react-textarea-code-editor';
 import '@uiw/react-textarea-code-editor/dist.css';

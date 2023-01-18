@@ -3,8 +3,8 @@
 exports[`<TabsLiveCode /> Render <TabsLiveCode /> with props 1`] = `
 <DocumentFragment>
   <i
-    class="glyphicon glyphicon-undefined"
+    class="glyphicon glyphicon-ok"
   />
-   
+   title
 </DocumentFragment>
 `;

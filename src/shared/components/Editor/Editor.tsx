@@ -1,8 +1,9 @@
 import { ComponentType, FocusEvent, useCallback, useState } from 'react';
 import Draggable from 'react-draggable';
 import { useToggleModal } from 'shared/components/ModalCommon';
+import Button from '@axa-fr/react-toolkit-button';
 import Icons from 'shared/components/Icons';
-import { ClickEvent } from '@axa-fr/react-toolkit-core';
+import type { ClickEvent } from '@axa-fr/react-toolkit-core/dist/esm/withClickId.hoc';
 import { DESIGN_SYSTEM, GITHUB, STORYBOOK } from 'shared/constants';
 import InputEditor, { TInputEditor } from './InputEditor';
 import './Editor.scss';
@@ -43,9 +44,7 @@ export const LabelEditor = ({ name, value }: TLabelEditor) =>
     <label className="af-form__group-label" htmlFor={name}>
       {name}
     </label>
-  ) : (
-    <></>
-  );
+  ) : null;
 
 type TFieldEditor = {
   onChange: TonChange;
@@ -54,7 +53,7 @@ type TFieldEditor = {
 };
 
 const FieldEditor = ({ name, value, onChange }: TFieldEditor) => (
-  <div className={`af-form-editor__field`} key={name}>
+  <div className="af-form-editor__field" key={name}>
     <LabelEditor value={value} name={name} />
     <InputEditor key={name} name={name} value={value} onChange={onChange} />
   </div>
@@ -65,19 +64,17 @@ const FieldEditor = ({ name, value, onChange }: TFieldEditor) => (
  * @param knobs : overrided props (for object type)
  * @returns Form fields editor
  */
-export const FormEditor = <P extends object>({
+const FormEditor = <P extends object>({
   onChange,
   knobs,
   ...props
 }: Omit<P, 'onClick'> & { onChange: ReturnType<typeof useEditable>['onChange']; knobs: Tknobs }) => (
   <form className="af-form-editor">
-    <>
-      {Object.entries(mergePropsAndKnobs({ props, knobs }))
-        .filter(([key, val]) => !omittedProps.includes(key) && typeof val !== 'function')
-        .map(([name, value]) => (
-          <FieldEditor key={name} name={name} value={value as TInputEditor['value']} onChange={onChange(name)} />
-        ))}
-    </>
+    {Object.entries(mergePropsAndKnobs({ props, knobs }))
+      .filter(([key, val]) => !omittedProps.includes(key) && typeof val !== 'function')
+      .map(([name, value]) => (
+        <FieldEditor key={name} name={name} value={value as TInputEditor['value']} onChange={onChange(name)} />
+      ))}
   </form>
 );
 
@@ -108,7 +105,7 @@ export const withEditor =
   (props: P) => {
     const { closeEditor, openEditor, isOpenEditor } = useToggleEditorFn();
     return (
-      <section className={'af-editor'}>
+      <section className="af-editor">
         <Component {...props} openEditor={openEditor} isOpenEditor={isOpenEditor} />
         {isOpenEditor && (
           <Draggable cancel=".glyphicon-close" handle=".af-draggable__title">
@@ -117,8 +114,10 @@ export const withEditor =
                 <h3 className="af-draggable__title">
                   Props Editor
                   <div className="af-draggable__tools">
-                    <i className="glyphicon glyphicon-move"></i>
-                    <i className="glyphicon glyphicon-close" onClick={closeEditor}></i>
+                    <i className="glyphicon glyphicon-move" />
+                    <Button aria-label="close Editor" className="af-btn--circle" classModifier="close-editor" onClick={closeEditor}>
+                      <i className="glyphicon glyphicon-close" />
+                    </Button>
                   </div>
                 </h3>
 
@@ -133,7 +132,7 @@ export const withEditor =
     );
   };
 
-export const setValue = (value: string) => {
+export const setValue = (value: string | number) => {
   if (value === 'false') return true;
   if (value === 'true') return false;
 
@@ -146,15 +145,15 @@ type TuseEditable<T> = {
   setValueFn?: typeof setValue;
 };
 
-export const useEditable = <T extends object>({ initialState, logEventFn = console.log, setValueFn = setValue }: TuseEditable<T>) => {
+export const useEditable = <T extends object>({ initialState, setValueFn = setValue }: TuseEditable<T>) => {
   const [state, setState] = useState(initialState);
   const { onCancel, openModal, isOpen } = useToggleModal();
 
   const onClick = useCallback(
     (name: string) => (e: ClickEvent) => {
-      logEventFn('click event', name, e);
+      return { name, e };
     },
-    [logEventFn],
+    [],
   );
 
   const onChange = useCallback(
@@ -218,8 +217,8 @@ export const EditorHeader = ({ storybookPath = '', designSystemPath = '', github
       </a>
     )}
 
-    <button className="af-link" onClick={openEditor}>
-      <i role="img" aria-label="cog" className="glyphicon glyphicon-cog"></i>
+    <button type="button" className="af-link" onClick={openEditor}>
+      <i role="img" aria-label="cog" className="glyphicon glyphicon-cog" />
       <span>Edit props</span>
     </button>
   </header>

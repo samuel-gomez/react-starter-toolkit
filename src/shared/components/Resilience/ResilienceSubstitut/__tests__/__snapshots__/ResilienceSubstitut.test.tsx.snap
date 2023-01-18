@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Empty/> Render <Empty/> 1`] = `<DocumentFragment />`;
-
 exports[`<ResilienceSubstitut/> Render <ResilienceSubstitut/> with classModifier="simple" and return Alert resilience with simple classModifier 1`] = `
 <DocumentFragment>
   <div

@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { Table } from '@axa-fr/react-toolkit-all';
+import Table from '@axa-fr/react-toolkit-table';
 import HelpHover from 'shared/components/HelpInfo';
 import Th, { TThContainer } from './Th';
 

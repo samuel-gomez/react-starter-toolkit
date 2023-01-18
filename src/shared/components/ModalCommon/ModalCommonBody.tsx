@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { Tanomaly } from 'shared/types';
-import { Alert } from '@axa-fr/react-toolkit-all';
+import Alert from '@axa-fr/react-toolkit-alert';
 import Modal from '@axa-fr/react-toolkit-modal-default';
 import './ModalCommon.scss';
 

@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import UserProvider, { UserContext } from 'App/UserProvider';
+import UserProvider, { UserContext, TUserContext } from 'App/UserProvider';
 import { createContext } from 'react';
 import Authorize from '../Authorize';
 
@@ -51,7 +51,7 @@ describe('<Authorize/>', () => {
         member_of: ['CN=Admin'],
       },
     });
-    const UserContextMock = createContext({
+    const UserContextMock = createContext<TUserContext>({
       authName: '',
       authRole: 'admin',
       authUid: '',

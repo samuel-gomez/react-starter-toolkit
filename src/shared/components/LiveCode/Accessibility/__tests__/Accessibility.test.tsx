@@ -1,5 +1,6 @@
 import { render } from '@testing-library/react';
 import Accessibility from '../Accessibility';
+import { TResults } from '../Accessibility.hook';
 
 const resultsFnMock = {
   violations: [
@@ -32,7 +33,8 @@ const resultsFnMock = {
       id: 'id-test',
     },
   ],
-};
+} as TResults['results'];
+
 describe('<Accessibility />', () => {
   it('Render <Accessibility /> with results', () => {
     const { asFragment } = render(<Accessibility results={resultsFnMock} />);
@@ -40,12 +42,12 @@ describe('<Accessibility />', () => {
     expect(asFragment()).toMatchSnapshot();
   });
   it('Render <Accessibility /> without results', () => {
-    const resultsFnMock = {
+    const resultsFnMockWithoutResult = {
       violations: [],
       passes: [],
       incomplete: [],
-    };
-    const { asFragment } = render(<Accessibility results={resultsFnMock} />);
+    } as unknown as TResults['results'];
+    const { asFragment } = render(<Accessibility results={resultsFnMockWithoutResult} />);
 
     expect(asFragment()).toMatchSnapshot();
   });

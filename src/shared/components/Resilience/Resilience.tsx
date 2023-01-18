@@ -7,7 +7,7 @@ type TResilience<Trefetch> = Omit<ComponentProps<typeof ResilienceSubstitut>, 'a
   children?: ReactNode;
 };
 
-const Resilience = <Trefetch,>({
+const Resilience = <Trefetch extends React.MouseEventHandler<HTMLButtonElement>>({
   resilienceMode,
   resilienceModifier,
   FallbackComponent,

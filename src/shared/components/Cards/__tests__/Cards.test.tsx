@@ -1,4 +1,4 @@
-import { render, act } from '@testing-library/react';
+import { render, act, waitFor } from '@testing-library/react';
 import Cards from '../index';
 
 const defaultProps = {
@@ -13,7 +13,7 @@ describe('<Cards/>', () => {
     const { asFragment, getAllByAltText } = render(<Cards {...defaultProps} />);
 
     await act(() => expect(getAllByAltText('loading...').length).toEqual(2));
-    act(() => expect(getAllByAltText('alt_accordion').length).toEqual(2));
+    await waitFor(() => expect(getAllByAltText('alt_accordion').length).toEqual(2));
     expect(asFragment()).toMatchSnapshot();
   });
 });

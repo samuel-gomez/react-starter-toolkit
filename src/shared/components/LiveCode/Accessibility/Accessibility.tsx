@@ -1,4 +1,4 @@
-import { Tabs } from '@axa-fr/react-toolkit-all';
+import Tabs from '@axa-fr/react-toolkit-tabs';
 import { TResults } from './Accessibility.hook';
 import AccordionResults from './AccordionResults';
 import EmptyResultsAccessiblity from './EmptyResultsAccessiblity';

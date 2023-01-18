@@ -35,7 +35,7 @@ const Members = ({
   <Layout propsTitle={{ title: titleBar, backHome: true }}>
     <h1 className="af-title--content">{title}</h1>
     <Loader mode={loaderMode}>
-      <Resilience<typeof refetch> anomaly={anomaly} refetch={refetch}>
+      <Resilience anomaly={anomaly} refetch={refetch as React.MouseEventHandler<HTMLButtonElement>}>
         <Table items={members} headers={headers} onSort={onChangeSorting} sorting={sorting} aria-label={`Tableau ${title}`} />
         <Paging {...pagination} onChange={onChangePaging} id="paging" />
       </Resilience>

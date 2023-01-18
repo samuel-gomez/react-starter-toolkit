@@ -1,2 +1,2 @@
-export { default, useCodeEditor } from './CodeEditor';
+export { default, useCodeEditor, getTemplate } from './CodeEditor';
 export type { TReturnUseCodeEditor } from './CodeEditor';

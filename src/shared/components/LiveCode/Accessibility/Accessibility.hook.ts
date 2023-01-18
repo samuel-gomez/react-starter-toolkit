@@ -2,16 +2,16 @@ import axe, { AxeResults } from 'axe-core';
 import { useEffect, useState } from 'react';
 
 export type TResults = {
-  errors: Error | undefined;
-  results: AxeResults | undefined;
+  errors?: Error;
+  results?: AxeResults;
 };
+export type TsetResult = ({ errors, results }: TResults) => void;
 
-export const axeRunAccessibility = (html: string, setResults: ({ errors, results }: TResults) => void) =>
-  axe.run(html, {}, (errors, results) => setResults({ errors, results }));
+export const axeRunAccessibility = (html: string, setResults: TsetResult) => axe.run(html, {}, (errors, results) => setResults({ errors, results }));
 
-type TuseAxe = {
+export type TuseAxe = {
   html: string;
-  code: string | undefined;
+  code?: string;
   axeRunAccessibilityFn?: typeof axeRunAccessibility;
 };
 

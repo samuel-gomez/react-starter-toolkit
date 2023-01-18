@@ -1,8 +1,10 @@
 import { render } from '@testing-library/react';
 import AccessibilityContainer from '../Accessibility.container';
+import { useAxe } from '../Accessibility.hook';
 
 const ariaLabelMock = '';
-const useAxeFnMock = () => ({
+
+const returnUseAxe = {
   errors: undefined,
   results: {
     violations: [
@@ -18,7 +20,10 @@ const useAxeFnMock = () => ({
     passes: [],
     incomplete: [],
   },
-});
+} as unknown as ReturnType<typeof useAxe>;
+
+const useAxeFnMock = () => returnUseAxe;
+
 describe('<AccessibilityContainer />', () => {
   it('Render <AccessibilityContainer /> with ariaLabel and useAxeFn', () => {
     const { asFragment } = render(<AccessibilityContainer ariaLabel={ariaLabelMock} useAxeFn={useAxeFnMock} />);

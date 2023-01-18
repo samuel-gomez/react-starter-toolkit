@@ -3,9 +3,9 @@ import { useAxe } from './Accessibility.hook';
 
 type TAccessibilityContainer = {
   hideComponent?: boolean;
-  code?: string;
   title?: string;
   icon?: string;
+  code?: string;
   ariaLabel?: string;
   useAxeFn?: typeof useAxe;
 };

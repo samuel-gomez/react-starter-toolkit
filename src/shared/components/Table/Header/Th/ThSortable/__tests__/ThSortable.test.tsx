@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import { renderWithContainer } from 'shared/testsUtils';
-import ThSortable, { SortingIcon } from '../ThSortable';
+import ThSortable, { SortingIcon, orderIcons } from '../ThSortable';
 
 const defaultProps = {
   sort: jest.fn(),
@@ -29,6 +29,20 @@ describe('ThSortable', () => {
       expect(baseElement).toMatchSnapshot();
     },
   );
+});
+
+describe('orderIcons', () => {
+  it.each`
+    order        | expected
+    ${undefined} | ${'sorting'}
+    ${'NONE'}    | ${'sorting'}
+    ${1}         | ${'arrow-xs-up'}
+    ${-1}        | ${'arrow-xs-down'}
+  `('Should return $expected when orderIcons have been called with order: $order', ({ order, expected }) => {
+    const result = orderIcons(order);
+
+    expect(result).toEqual(expected);
+  });
 });
 
 describe('SortingIcon', () => {

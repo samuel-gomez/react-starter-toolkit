@@ -1,12 +1,9 @@
 import { render } from '@testing-library/react';
 import { emptyFunction } from 'shared/testsUtils';
-import Notifications from '../Notifications';
 import NotificationsContainer from '../Notifications.container';
 
-jest.mock('../Notifications');
-
 describe('NotificationsContainer', () => {
-  const NotificationsCmpt = Notifications as jest.MockedFunction<typeof Notifications>;
+  const NotificationsCmpt = jest.fn();
   NotificationsCmpt.mockImplementation(() => <>NotificationsCmpt</>);
   const defaultProps = {
     deleteNotification: emptyFunction,
@@ -30,7 +27,7 @@ describe('NotificationsContainer', () => {
     const customProps = {
       ...defaultProps,
       className: 'myclass',
-      notifications: [{ id: 'id', title: 'label', onClose: emptyFunction }],
+      notifications: [{ id: 'id', label: 'label', onClose: emptyFunction }],
     };
     const { getByText } = render(<NotificationsContainer {...customProps} />);
     expect(getByText('NotificationsCmpt')).toBeInTheDocument();
@@ -42,7 +39,7 @@ describe('NotificationsContainer', () => {
           {
             id: 'id',
             onClose: emptyFunction,
-            title: 'label',
+            label: 'label',
           },
         ],
       },

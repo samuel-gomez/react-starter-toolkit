@@ -1,4 +1,4 @@
-import { Tcol } from '../Body';
+import type { Tcol } from '../Body';
 import Line from './Line';
 
 export type TLineContainer = {

@@ -1,9 +1,10 @@
-import { createContext, ReactNode } from 'react';
+import { createContext, ReactNode, useMemo } from 'react';
 import { QueryClient, QueryClientProvider, QueryKey } from '@tanstack/react-query';
 import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
 import { mergeObj, manageConfig } from 'shared/helpers';
 import { API_URL, STATUS_API, STATUS_HTTP_MESSAGES } from 'shared/constants';
-import { useOidcAccessToken } from '@axa-fr/react-oidc';
+import { useOidcAccessToken } from '@axa-fr/react-oidc/dist/ReactOidc';
+import fetch from 'cross-fetch';
 import setResponseError from './setResponseError';
 
 export type FetchContextType = {
@@ -39,7 +40,7 @@ export const computeDataError = async (response: TResponse, setResponseErrorFn =
     const data = await response.json();
     return setResponseErrorFn({ response: { ...data, status: response.status } });
   } catch (error) {
-    throw setResponseErrorFn({ response: { anomaly: { label: STATUS_HTTP_MESSAGES[response.status] }, status: response.status } });
+    return setResponseErrorFn({ response: { anomaly: { label: STATUS_HTTP_MESSAGES[response.status] }, status: response.status } });
   }
 };
 
@@ -76,7 +77,7 @@ export const setFetchCustom =
     const fetchAuthConfigCustom = manageConfigFn(apiName as string, fetchAuthConfig);
     const config = mergeObjFn(fetchAuthConfigCustom, customConfig);
     const response = await fetchFn(url, config);
-    return buildResponse(response, config);
+    return buildResponse(response, config as TConfig);
   };
 
 export type TFetchProvider = Omit<TFetchCustom, 'fetchFn' | 'fetchAuthConfig'> & {
@@ -132,9 +133,10 @@ const FetchProvider = ({
   const fetchAuthConfig = mergeObjFn(fetchConfig, authConfig);
   const fetchCustom = setFetchCustomFn({ apiUrl, fetchAuthConfig });
   const queryClient = setQueryClientFn({ fetchCustom });
+  const value = useMemo(() => ({ fetchCustom, queryClient }), [fetchCustom, queryClient]);
 
   return (
-    <FetchContext.Provider value={{ fetchCustom, queryClient }}>
+    <FetchContext.Provider value={value}>
       <QueryClientProvider client={queryClient}>
         {children}
         {showReactQueryDevtoolsComponent(process.env.NODE_ENV)}

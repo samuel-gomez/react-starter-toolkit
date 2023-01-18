@@ -1,8 +1,8 @@
-import { Button } from '@axa-fr/react-toolkit-all';
+import Button from '@axa-fr/react-toolkit-button';
 import HelpInfo from 'shared/components/HelpInfo';
-import { TReturnUseCodeEditor } from '../CodeEditor';
+import type { TReturnUseCodeEditor } from '../CodeEditor';
 
-export const DEFAULT_LIST = [
+const DEFAULT_LIST = [
   {
     id: 'add-list',
     icon: 'list',
@@ -69,17 +69,19 @@ type TTemplates = {
   onClearCodeEditor: TReturnUseCodeEditor['onClearCodeEditor'];
 };
 
+type TonClick = (event: React.MouseEvent<HTMLElement>) => void;
+
 const Templates = ({ list = DEFAULT_LIST, submitTemplate, onClearCodeEditor }: TTemplates) => (
   <div className="af-templates">
     <HelpInfo key="delete" content="Supprimer" classModifier="editor">
       <Button aria-label="Suppression du code" className="af-btn--circle af-btn--delete" onClick={onClearCodeEditor}>
-        <i role="img" aria-label="Icone suppression du code" className="glyphicon glyphicon-trash"></i>
+        <i role="img" aria-label="Icone suppression du code" className="glyphicon glyphicon-trash" />
       </Button>
     </HelpInfo>
     {list.map(({ id, label, icon, tooltipLabel }) => (
       <HelpInfo key={id} content={tooltipLabel} classModifier="editor">
-        <Button aria-label={`Ajout du code ${label}`} className="af-btn--circle" id={id} onClick={submitTemplate}>
-          {!!icon && <i role="img" aria-label={`Icone ajout du code ${label}`} className={`glyphicon glyphicon-${icon}`}></i>}
+        <Button aria-label={`Ajout du code ${label}`} className="af-btn--circle" id={id} onClick={submitTemplate as TonClick}>
+          {!!icon && <i role="img" aria-label={`Icone ajout du code ${label}`} className={`glyphicon glyphicon-${icon}`} />}
           {label}
         </Button>
       </HelpInfo>

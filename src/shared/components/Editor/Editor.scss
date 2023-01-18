@@ -41,6 +41,20 @@
   }
 }
 
+.af-btn--circle--close-editor {
+  background: $color-axa;
+  color: white;
+  width: 26px;
+  height: 26px;
+  font-size: 1rem;
+  border-color: $color-axa;
+  transition: background-color 0.3s linear, color 0.3s linear;
+  &:hover {
+    background: white;
+    color: $color-axa;
+  }
+}
+
 @supports not selector(:has) {
   .af-editor {
     &__header {

@@ -1,12 +1,15 @@
-import { useContext, ComponentProps } from 'react';
+/* eslint-disable max-lines-per-function */
+import { useContext, ComponentProps, lazy, Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import PageNotFound from 'pages/NotFound';
-import PageUnauthorize from 'pages/Unauthorize';
-import Home from 'pages/Home';
+
 import ROUTE_URL from 'App/Routes/constants';
 import { UserContext } from 'App/UserProvider';
 import Loader, { MODES } from 'shared/components/Loader';
 import { PROFILS } from 'shared/constants';
+
+const Home = lazy(() => import('pages/Home'));
+const PageUnauthorize = lazy(() => import('pages/Unauthorize'));
+const PageNotFound = lazy(() => import('pages/NotFound'));
 
 export const withAuth = <T extends object>(
   Component: React.ComponentType<T>,
@@ -39,11 +42,13 @@ type TRoutesCmpt = {
 };
 
 const RoutesCmpt = ({ HomeCmpt = Home, PageUnauthorizeCmpt = PageUnauthorize, withAuthFn = withAuth }: TRoutesCmpt) => (
-  <Routes>
-    <Route path={ROUTE_URL.HOME} element={withAuthFn(HomeCmpt)} />
-    <Route path={ROUTE_URL.UNAUTHORIZE} element={<PageUnauthorizeCmpt />} />
-    <Route path="*" element={<PageNotFound />} />
-  </Routes>
+  <Suspense fallback={<Loader text="Chargement de la page..." mode={MODES.get} classModifier="fullscreen" />}>
+    <Routes>
+      <Route index path={ROUTE_URL.HOME} element={withAuthFn(HomeCmpt)} />
+      <Route path={ROUTE_URL.UNAUTHORIZE} element={<PageUnauthorizeCmpt />} />
+      <Route path="*" element={<PageNotFound />} />
+    </Routes>
+  </Suspense>
 );
 
 export default RoutesCmpt;
