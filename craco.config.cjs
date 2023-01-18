@@ -1,4 +1,5 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   webpack: {
@@ -15,6 +16,7 @@ module.exports = {
           new MiniCssExtractPlugin({
             ignoreOrder: true,
           }),
+          new BundleAnalyzerPlugin(),
         ],
       };
       return webpackConfig;
