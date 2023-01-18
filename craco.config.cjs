@@ -16,7 +16,7 @@ module.exports = {
           new MiniCssExtractPlugin({
             ignoreOrder: true,
           }),
-          new BundleAnalyzerPlugin(),
+          // new BundleAnalyzerPlugin(),
         ],
       };
       return webpackConfig;
