@@ -72,7 +72,7 @@ const TableWithEditor = withEditor<Props & Partial<TReturnUseToggleEditor>>(
         npmName={NPM_NAME}
         openEditor={openEditor}
       />
-      <LiveCode code={code(props)} scope={{ ...props }} githubPackage={GITHUB_PACKAGE} />
+      <LiveCode code={code(props)} scope={props} githubPackage={GITHUB_PACKAGE} />
     </>
   ),
   knobs as unknown as Tknobs,
@@ -83,9 +83,7 @@ const TableEditable = () => {
   return <TableWithEditor {...state} onChange={onChange} />;
 };
 
-type TTablePage = TLayoutPage;
-
-const TableDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TTablePage) => (
+const TableDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <TableEditable />

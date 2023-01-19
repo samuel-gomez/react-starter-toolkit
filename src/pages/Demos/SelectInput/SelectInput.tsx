@@ -103,9 +103,7 @@ const SelectInputEditable = () => {
   return <SelectInputWithEditor {...state} onChange={onChange} onChangeSelect={onChange('value')} />;
 };
 
-type TTabsPage = TLayoutPage;
-
-const SelectInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TTabsPage) => (
+const SelectInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <SelectInputEditable />

@@ -101,9 +101,7 @@ const SelectMultiEditable = () => {
   return <SelectMultiWithEditor {...state} onChange={onChange} onChangeSelect={onChange('values')} />;
 };
 
-type TSelectMultiPage = TLayoutPage;
-
-const SelectMultiPage = ({ titleBar = TITLE_BAR, title = TITLE }: TSelectMultiPage) => (
+const SelectMultiPage = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <SelectMultiEditable />

@@ -39,9 +39,7 @@ const BadgeEditable = () => {
   return <BadgeWithEditor {...state} onChange={onChange} />;
 };
 
-type TBadgePage = TLayoutPage;
-
-const BadgeDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TBadgePage) => (
+const BadgeDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <BadgeEditable />

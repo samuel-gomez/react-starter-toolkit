@@ -91,9 +91,7 @@ const FooterClientEditable = () => {
   return <FooterClientWithEditor {...state} onChange={onChange} />;
 };
 
-type TFooterPage = TLayoutPage;
-
-const FooterClientDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TFooterPage) => (
+const FooterClientDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <FooterClientEditable />

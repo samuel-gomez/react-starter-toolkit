@@ -102,9 +102,7 @@ const CheckboxInputEditable = () => {
   return <CheckboxInputWithEditor {...state} onChange={onChange} onChangeCheckbox={onChange('values')} />;
 };
 
-type TTabsPage = TLayoutPage;
-
-const CheckboxInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TTabsPage) => (
+const CheckboxInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <CheckboxInputEditable />

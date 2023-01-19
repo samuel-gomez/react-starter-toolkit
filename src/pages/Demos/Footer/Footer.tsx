@@ -36,9 +36,7 @@ const FooterEditable = () => {
   return <FooterWithEditor {...state} onChange={onChange} />;
 };
 
-type TFooterPage = TLayoutPage;
-
-const FooterDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TFooterPage) => (
+const FooterDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <FooterEditable />

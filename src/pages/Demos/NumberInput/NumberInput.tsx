@@ -102,9 +102,7 @@ const NumberInputEditable = () => {
   return <MemoizedNumberInputWithEditor {...state} onBlur={onBlur} onFocus={onFocus} onChange={onChange} />;
 };
 
-type TNumberInputPage = TLayoutPage;
-
-const NumberInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TNumberInputPage) => (
+const NumberInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <NumberInputEditable />

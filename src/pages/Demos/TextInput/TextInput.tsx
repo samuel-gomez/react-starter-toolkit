@@ -101,9 +101,7 @@ const TextInputEditable = () => {
   return <MemoizedTextInputWithEditor {...state} onBlur={onBlur} onFocus={onFocus} onChange={onChange} />;
 };
 
-type TTextInputPage = TLayoutPage;
-
-const TextInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TTextInputPage) => (
+const TextInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <TextInputEditable />

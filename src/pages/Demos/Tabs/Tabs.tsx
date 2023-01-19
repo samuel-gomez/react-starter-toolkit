@@ -70,9 +70,7 @@ const TabsEditable = () => {
   return <TabsWithEditor {...state} onChange={onChange} onChangeTab={onChangeTabFn('activeIndex', onChange)} />;
 };
 
-type TTabsPage = TLayoutPage;
-
-const TabsDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TTabsPage) => (
+const TabsDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <TabsEditable />

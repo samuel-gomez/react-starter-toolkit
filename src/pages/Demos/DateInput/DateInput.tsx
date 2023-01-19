@@ -97,9 +97,7 @@ const DateInputEditable = () => {
   return <DateInputWithEditor {...state} onChange={onChange} />;
 };
 
-type TDateInputPage = TLayoutPage;
-
-const DateInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TDateInputPage) => (
+const DateInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <DateInputEditable />

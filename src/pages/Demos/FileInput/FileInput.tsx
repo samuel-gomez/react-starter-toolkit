@@ -89,9 +89,7 @@ const FileInputEditable = () => {
   return <FileInputWithEditor {...state} onChange={onChange} />;
 };
 
-type TTabsPage = TLayoutPage;
-
-const FileInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TTabsPage) => (
+const FileInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <FileInputEditable />

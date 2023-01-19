@@ -96,9 +96,7 @@ const SliderEditable = () => {
   return <SliderWithEditor {...state} onChange={onChange} onChangeSlider={onChange('value')} />;
 };
 
-type TSliderPage = TLayoutPage;
-
-const SliderDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TSliderPage) => (
+const SliderDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <SliderEditable />

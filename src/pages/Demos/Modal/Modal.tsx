@@ -77,9 +77,7 @@ const ModalEditable = () => {
   return <ModalWithEditor {...state} openModal={openModal} onCancel={onCancel} isOpen={isOpen} onChange={onChange} />;
 };
 
-type TModalPage = TLayoutPage;
-
-const ModalPage = ({ titleBar = TITLE_BAR, title = TITLE }: TModalPage) => (
+const ModalPage = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <ModalEditable />

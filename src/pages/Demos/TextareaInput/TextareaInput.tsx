@@ -107,9 +107,7 @@ const TextareaInputEditable = () => {
   return <MemoizedTextareaInputWithEditor {...state} onBlur={onBlur} onFocus={onFocus} onChange={onChange} />;
 };
 
-type TTextareaInputPage = TLayoutPage;
-
-const TextareaInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TTextareaInputPage) => (
+const TextareaInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <TextareaInputEditable />

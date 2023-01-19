@@ -101,9 +101,7 @@ const RadioInputEditable = () => {
   return <RadioInputWithEditor {...state} onChange={onChange} onChangeRadio={onChange('value')} />;
 };
 
-type TTabsPage = TLayoutPage;
-
-const RadioInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TTabsPage) => (
+const RadioInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <RadioInputEditable />

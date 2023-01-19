@@ -47,9 +47,7 @@ const NavBarEditable = () => {
   return <NavBarWithEditor {...state} onClick={onClick('onClick Navbar')} onChange={onChange} />;
 };
 
-type TNavBarPage = TLayoutPage;
-
-const NavBarDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TNavBarPage) => (
+const NavBarDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <NavBarEditable />

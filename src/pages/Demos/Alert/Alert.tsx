@@ -51,9 +51,7 @@ const AlertEditable = () => {
   return <AlertWithEditor {...state} onClose={onClick('onClose Alert')} onChange={onChange} />;
 };
 
-type TAlertPage = TLayoutPage;
-
-const AlertPage = ({ titleBar = TITLE_BAR, title = TITLE }: TAlertPage) => (
+const AlertPage = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <AlertEditable />

@@ -84,9 +84,7 @@ const SwitchEditable = () => {
   return <SwitchWithEditor {...state} onChange={onChange} />;
 };
 
-type TSwitchPage = TLayoutPage;
-
-const SwitchDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TSwitchPage) => (
+const SwitchDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <SwitchEditable />

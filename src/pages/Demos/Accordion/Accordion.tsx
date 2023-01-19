@@ -85,9 +85,7 @@ const AccordionEditable = () => {
   return <AccordionWithEditor {...state} onClick={onClick('onClick Accordion')} onChange={onChange} />;
 };
 
-type TAccordionPage = TLayoutPage;
-
-const AccordionDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TAccordionPage) => (
+const AccordionDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <AccordionEditable />

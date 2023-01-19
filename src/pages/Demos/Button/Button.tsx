@@ -54,9 +54,7 @@ const ButtonEditable = () => {
   return <ButtonWithEditor {...state} onClick={onClick('onClick button')} onChange={onChange} />;
 };
 
-type TButtonPage = TLayoutPage;
-
-const ButtonPage = ({ titleBar = TITLE_BAR, title = TITLE }: TButtonPage) => (
+const ButtonPage = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <ButtonEditable />

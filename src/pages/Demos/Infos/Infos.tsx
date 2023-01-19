@@ -35,9 +35,7 @@ const InfosEditable = () => {
   return <InfosWithEditor {...state} onChange={onChange} />;
 };
 
-type TInfosPage = TLayoutPage;
-
-const InfosDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TInfosPage) => (
+const InfosDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <InfosEditable />

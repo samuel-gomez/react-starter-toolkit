@@ -119,9 +119,7 @@ const StepperEditable = () => {
   return <StepperWithEditor {...state} onClick={onClick('onClick button')} onChange={onChange} />;
 };
 
-type TStepperPage = TLayoutPage;
-
-const StepperDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TStepperPage) => (
+const StepperDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <StepperEditable />

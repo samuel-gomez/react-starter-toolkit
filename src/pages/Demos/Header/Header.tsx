@@ -43,9 +43,7 @@ const HeaderEditable = () => {
   return <HeaderWithEditor {...state} onChange={onChange} />;
 };
 
-type THeaderPage = TLayoutPage;
-
-const HeaderPage = ({ titleBar = TITLE_BAR, title = TITLE }: THeaderPage) => (
+const HeaderPage = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <HeaderEditable />

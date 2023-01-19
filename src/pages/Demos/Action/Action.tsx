@@ -32,9 +32,7 @@ const ActionEditable = () => {
   return <ActionWithEditor {...state} onChange={onChange} />;
 };
 
-type TActionPage = TLayoutPage;
-
-const ActionPage = ({ titleBar = TITLE_BAR, title = TITLE }: TActionPage) => (
+const ActionPage = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <ActionEditable />

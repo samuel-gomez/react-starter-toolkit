@@ -33,9 +33,7 @@ const HelpEditable = () => {
   return <HelpWithEditor {...state} onChange={onChange} />;
 };
 
-type THelpPage = TLayoutPage;
-
-const HelpPage = ({ titleBar = TITLE_BAR, title = TITLE }: THelpPage) => (
+const HelpPage = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <HelpEditable />

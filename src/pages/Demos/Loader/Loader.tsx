@@ -62,9 +62,7 @@ const LoaderEditable = () => {
   return <LoaderWithEditor {...state} onChange={onChange} />;
 };
 
-type TLoaderPage = TLayoutPage;
-
-const LoaderDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TLoaderPage) => (
+const LoaderDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <LoaderEditable />
