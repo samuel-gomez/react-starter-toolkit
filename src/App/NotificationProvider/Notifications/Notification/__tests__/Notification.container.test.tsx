@@ -1,12 +1,10 @@
 import { render } from '@testing-library/react';
 import { emptyFunction } from 'shared/testsUtils';
-import Notification, { EType } from '../Notification';
+import { EType } from '../Notification';
 import NotificationContainer from '../Notification.container';
 
-jest.mock('../Notification');
-
 describe('NotificationContainer', () => {
-  const NotificationCmpt = Notification as jest.MockedFunction<typeof Notification>;
+  const NotificationCmpt = jest.fn();
   NotificationCmpt.mockImplementation(() => <>NotificationCmpt</>);
 
   const defaultProps = {

@@ -1,13 +1,6 @@
 import { MessageTypes, CheckboxModes } from '@axa-fr/react-toolkit-all';
-import { clearString, renderWithWrapperStaticRouter } from 'shared/testsUtils';
-import CheckboxInputPage, { code } from '../CheckboxInput';
-
-describe('<CheckboxInputPage />', () => {
-  it('Should render CheckboxInputPage', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(<CheckboxInputPage />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+import { clearString } from 'shared/testsUtils';
+import { code } from '../CheckboxInput';
 
 describe('code', () => {
   const onChange = jest.fn();
@@ -88,9 +81,9 @@ describe('code', () => {
         classModifier="${defaultProps.classModifier}"
         className="${defaultProps.className}"
         classNameContainerLabel="${defaultProps.classNameContainerLabel}"
-        classNameContainerInput="${defaultProps.classNameContainerInput}">
-            <HelpButton>Hello Checkbox</HelpButton>
+        classNameContainerInput="${defaultProps.classNameContainerInput}">           
         </CheckboxInput>
+        <HelpButton>Hello Checkbox</HelpButton>
         `),
     );
   });

@@ -1,10 +1,9 @@
-import { ReactNode } from 'react';
 import { withClassDefault, withClassModifier, WithClassModifierOptions, compose, identity } from '@axa-fr/react-toolkit-core';
 import TitleBar from 'Layout/TitleBar';
 import './ResiliencePage.scss';
 
 export type TResiliencePage = WithClassModifierOptions & {
-  title: ReactNode;
+  title: string;
   message?: string;
   subtitlePartOne?: string;
   subtitlePartTwo?: string;

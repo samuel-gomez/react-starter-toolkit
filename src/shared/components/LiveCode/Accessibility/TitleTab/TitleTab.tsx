@@ -1,6 +1,8 @@
 import { Result } from 'axe-core';
 
-const TitleTab = ({ results, label, icon }: { results: Result[] | undefined; label: string; icon: string }) => (
+export type TTitleTab = { results: Result[] | undefined; label: string; icon: string };
+
+const TitleTab = ({ results, label, icon }: TTitleTab) => (
   <>
     <i className={`glyphicon glyphicon-${icon}`} /> ({results?.length || 0}) {label}
   </>

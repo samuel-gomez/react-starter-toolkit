@@ -1,9 +1,14 @@
-import { createContext, ReactNode } from 'react';
-import { useOidcUser } from '@axa-fr/react-oidc';
-import { isEmpty } from 'lodash';
+import { createContext, ReactNode, useMemo } from 'react';
+import { useOidcUser } from '@axa-fr/react-oidc/dist/User';
+import isEmpty from 'lodash/isEmpty';
 import { PROFILS } from 'shared/constants';
 
-export const UserContext = createContext({
+export type TUserContext = ReturnType<typeof extractDataFromOAuthToken> & {
+  isEnabled?: boolean;
+  isLoading?: boolean;
+};
+
+export const UserContext = createContext<TUserContext>({
   authName: '',
   authRole: '',
   authUid: '',
@@ -16,7 +21,7 @@ const NON_CONNECTE = 'Non Connecté';
 
 type ToidcUser = {
   member_of?: string[];
-  name: string;
+  name?: string;
   axa_uid_racf?: string;
 };
 
@@ -110,7 +115,11 @@ const UserProvider = ({
   ...rest
 }: TUserProvider) => {
   const { oidcUser } = useOidcUserFn();
-  return <UserContext.Provider value={{ ...extractDataFromOAuthTokenFn({ oidcUser }), isEnabled, ...rest }}>{children}</UserContext.Provider>;
+  const value = useMemo(
+    () => ({ ...extractDataFromOAuthTokenFn({ oidcUser }), isEnabled, ...rest }),
+    [extractDataFromOAuthTokenFn, isEnabled, oidcUser, rest],
+  );
+  return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 };
 
 export default UserProvider;

@@ -1,9 +1,9 @@
-import React, { FocusEvent, ReactNode } from 'react';
-import { isEqual } from 'lodash';
-import { MessageTypes } from '@axa-fr/react-toolkit-all';
+import { FocusEvent, memo } from 'react';
+import isEqual from 'lodash/isEqual';
+import { MessageTypes } from '@axa-fr/react-toolkit-form-core';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
-import Layout, { TLayout } from 'Layout';
+import Layout, { TLayoutPage } from 'Layout';
 import { TITLE_BAR, TITLE, DESIGN_SYSTEM_PATH, STORYBOOK_PATH, GITHUB_PACKAGE, NPM_NAME } from './constants';
 import knobs from './knobs.json';
 
@@ -14,7 +14,7 @@ const INITIAL_STATE = {
   classModifier: 'required',
   value: 'my value in textarea',
   label: 'My Label for textarea',
-  placeholder: 'Ex: Samuel Gomez',
+  placeholder: 'Ex: your description',
   helpMessage: 'Enter your text',
   rows: 6,
   cols: 60,
@@ -99,7 +99,7 @@ const TextareaInputWithEditor = withEditor<Props & Partial<TReturnUseToggleEdito
   knobs as unknown as Tknobs,
 );
 
-const MemoizedTextareaInputWithEditor = React.memo(TextareaInputWithEditor, (prev: Props, next: Props) => isEqual(prev, next));
+const MemoizedTextareaInputWithEditor = memo(TextareaInputWithEditor, (prev: Props, next: Props) => isEqual(prev, next));
 
 const TextareaInputEditable = () => {
   const { state, onChange, onBlur, onFocus } = useEditable<typeof INITIAL_STATE>({ initialState: INITIAL_STATE });
@@ -107,12 +107,7 @@ const TextareaInputEditable = () => {
   return <MemoizedTextareaInputWithEditor {...state} onBlur={onBlur} onFocus={onFocus} onChange={onChange} />;
 };
 
-type TTextareaInputPage = TLayout & {
-  titleBar?: ReactNode;
-  title?: ReactNode;
-};
-
-const TextareaInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TTextareaInputPage) => (
+const TextareaInputPage = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <TextareaInputEditable />

@@ -1,13 +1,5 @@
-import { renderWithWrapperStaticRouter } from 'shared/testsUtils';
 import { clearString } from 'shared/testsUtils';
-import RestitutionPage, { code } from '../Restitution';
-
-describe('<RestitutionPage/>', () => {
-  it('Should render RestitutionPage', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(<RestitutionPage />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+import { code } from '../Restitution';
 
 describe('code', () => {
   const onChange = jest.fn();

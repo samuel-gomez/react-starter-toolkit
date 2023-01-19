@@ -1,6 +1,5 @@
-import { ReactNode } from 'react';
-import { MessageTypes } from '@axa-fr/react-toolkit-all';
-import Layout, { TLayout } from 'Layout';
+import { MessageTypes } from '@axa-fr/react-toolkit-form-core';
+import Layout, { TLayoutPage } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
 import { TITLE_BAR, TITLE, DESIGN_SYSTEM_PATH, STORYBOOK_PATH, GITHUB_PACKAGE, NPM_NAME } from './constants';
@@ -85,12 +84,7 @@ const SwitchEditable = () => {
   return <SwitchWithEditor {...state} onChange={onChange} />;
 };
 
-type TSwitchPage = TLayout & {
-  titleBar?: ReactNode;
-  title?: ReactNode;
-};
-
-const SwitchDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TSwitchPage) => (
+const SwitchDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <SwitchEditable />

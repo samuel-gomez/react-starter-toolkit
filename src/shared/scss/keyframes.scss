@@ -33,3 +33,40 @@
     transform: translate(-200%, 0);
   }
 }
+
+@keyframes slideToLeft {
+  from {
+    right: -100%;
+  }
+
+  to {
+    right: 0;
+  }
+}
+
+@keyframes slideToRight {
+  from {
+    left: -100%;
+  }
+
+  to {
+    left: 0;
+  }
+}
+
+@keyframes appearmessage {
+  0% {
+    opacity: 0;
+    right: 54%;
+  }
+
+  50% {
+    opacity: 0;
+    right: 30%;
+  }
+
+  100% {
+    opacity: 1;
+    right: 24%;
+  }
+}

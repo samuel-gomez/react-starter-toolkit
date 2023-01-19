@@ -1,16 +1,20 @@
 import { useContext } from 'react';
 import { render } from '@testing-library/react';
-import { omit } from 'lodash';
+import omit from 'lodash/omit';
 import UserProvider, { UserContext, getAuthName, getAuthRole, setAuthRole, getAuthUid } from '../UserProvider';
 
 type TBase = {
-  authName: string;
+  authName: string | undefined;
   authRole: string;
   authUid: string;
+  isEnabled?: boolean;
+  isLoading?: boolean;
 };
 
-const Base = ({ authName, authRole, authUid }: TBase) => (
+const Base = ({ authName, authRole, authUid, isEnabled, isLoading }: TBase) => (
   <ul>
+    <li>{isEnabled ? 'have isEnabled' : 'notHave isEnabled'}</li>
+    <li>{isLoading ? 'have isLoading' : 'notHave isLoading'}</li>
     <li>{authName ? 'have authName' : 'notHave authName'}</li>
     <li>{authRole ? 'have authRole' : 'notHave authRole'}</li>
     <li>{authUid ? 'have authUid' : 'notHave authUid'}</li>
@@ -53,6 +57,8 @@ describe('Render App with Base have user props', () => {
     expect(getByText('have authName')).toBeDefined();
     expect(getByText('have authRole')).toBeDefined();
     expect(getByText('have authUid')).toBeDefined();
+    expect(getByText('have isEnabled')).toBeDefined();
+    expect(getByText('notHave isLoading')).toBeDefined();
   });
 });
 
@@ -63,7 +69,7 @@ describe('getAuthName', () => {
   });
 
   it('Should return "" when getAuthName called with no name profile', () => {
-    const result = getAuthName({ ...omit(oidcUser, 'name') });
+    const result = getAuthName({ oidcUser: { ...omit(oidcUser, 'name') } });
     expect(result).toEqual('Non Connecté');
   });
 });
@@ -98,7 +104,7 @@ describe('getAuthUid', () => {
   });
 
   it('Should return "" when getAuthUID called with no profile axa_uid_racf', () => {
-    const result = getAuthUid({ ...omit(oidcUser, 'axa_uid_racf') });
+    const result = getAuthUid({ oidcUser: { ...omit(oidcUser, 'axa_uid_racf') } });
     expect(result).toEqual('');
   });
 });

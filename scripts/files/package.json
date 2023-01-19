@@ -5,11 +5,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "cross-env GENERATE_SOURCEMAP=false react-scripts start",
-    "build": "cross-env GENERATE_SOURCEMAP=false react-scripts build",
-    "preview": "cross-env REACT_APP_NODE_ENV=production.local react-scripts build && serve -s build -p 5002",
-    "test": "react-scripts test --watchAll=false",
-    "test:sonar": "react-scripts test --testResultsProcessor ./node_modules/jest-sonar-reporter",
+    "start": "cross-env GENERATE_SOURCEMAP=false craco start",
+    "build": "cross-env GENERATE_SOURCEMAP=false craco build",
+    "preview": "cross-env REACT_APP_NODE_ENV=production.local craco build && serve -s build -p 5002",
+    "test": "craco test --watchAll=false",
+    "test:sonar": "craco test --testResultsProcessor ./node_modules/jest-sonar-reporter",
     "cover:local": "npm t -- --coverage",
     "cover": "npm t -- --coverage --silent",
     "lint": "eslint ./src/ --ignore-pattern \"**/*.test.js\" --ignore-pattern \"**/*.steps.js\"",
@@ -37,9 +37,9 @@
     "@types/react-dom": "18.0.9",
     "@types/react-router": "5.1.19",
     "@types/react-router-dom": "5.3.3",
+    "cross-fetch": "3.1.5",
     "jest-cucumber": "3.0.1",
     "lodash": "4.17.21",
-    "moment": "2.29.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "7.41.0",
@@ -50,6 +50,7 @@
     "@babel/eslint-parser": "7.19.1",
     "@commitlint/cli": "17.3.0",
     "@commitlint/config-conventional": "17.3.0",
+    "@craco/craco": "7.0.0",
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "13.4.0",
     "@testing-library/react-hooks": "8.0.1",
@@ -77,6 +78,7 @@
     "prettier": "2.8.1",
     "sass": "1.57.0",
     "typescript": "4.9.4",
+    "webpack-bundle-analyzer": "4.7.0",
     "whatwg-fetch": "3.6.2"
   },
   "commitlint": {
@@ -136,6 +138,6 @@
     "resetMocks": false
   },
   "resolutions": {
-    "@babel/parser": "7.20.3"
+    "@babel/parser": "7.20.5"
   }
 }

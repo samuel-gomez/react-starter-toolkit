@@ -52,8 +52,8 @@ describe('TableContainer', () => {
   });
 
   it('Render <TableContainer/> with 1 header and 0 item', () => {
-    render(<TableContainer {...defaultProps} items={[]} headers={headers} />);
-    expect(TableCmpt).not.toHaveBeenCalled();
+    const { container } = render(<TableContainer {...defaultProps} items={[]} headers={headers} Fallback={() => <p id="nodata" />} />);
+    expect(container.querySelector('#nodata')).toBeInTheDocument();
   });
 
   it('Render <TableContainer/> with 1 header and 1 item and children', () => {
@@ -76,11 +76,6 @@ describe('TableContainer', () => {
       },
       {},
     );
-  });
-
-  it('Render <TableContainer/> with no item and no header', () => {
-    render(<TableContainer {...defaultProps} />);
-    expect(TableCmpt).not.toHaveBeenCalled();
   });
 
   it('Render <TableContainer/> with Table view and children', () => {

@@ -1,13 +1,6 @@
-import { clearString, renderWithWrapperStaticRouter } from 'shared/testsUtils';
+import { clearString } from 'shared/testsUtils';
 import logo from 'shared/images/slash-logo.svg';
-import HeaderPage, { code } from '../Header';
-
-describe('<HeaderPage/>', () => {
-  it('Should render HeaderPage', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(<HeaderPage />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+import { code } from '../Header';
 
 describe('code', () => {
   const onChange = jest.fn();

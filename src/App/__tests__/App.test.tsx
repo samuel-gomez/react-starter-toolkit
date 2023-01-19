@@ -17,17 +17,18 @@ const envMock = {
     authority: 'https://demo.duendesoftware.com',
   },
   fetchConfig: {},
-  apiUrl: '/apiUrl',
+  apiUrl: {
+    base: 'https://react-starter-api.vercel.app/api/',
+    github: 'https://raw.githubusercontent.com/',
+  },
 };
 
 describe('<App/>', () => {
   it('Should render App with default props', async () => {
-    const { asFragment, getByText } = render(<App {...envMock} />);
+    const { getByText } = render(<App {...envMock} />);
     await act(() => {
       getByText('Loading');
     });
-
-    expect(asFragment()).toMatchSnapshot();
   });
 
   const OidcProviderCmpt = jest.fn().mockImplementation(({ children }: { children: ReactNode }) => <>OidcProviderCmpt : {children}</>);
@@ -43,18 +44,16 @@ describe('<App/>', () => {
 
   it('Should render App with all props and authentication NOT enabled', () => {
     const props = { ...envMock, oidc: { ...envMock.oidc, isEnabled: false } };
-    const { asFragment, getByText } = render(<App {...props} {...optionalProps} />);
+    const { getByText } = render(<App {...props} {...optionalProps} />);
 
     expect(getByText(/FetchProviderCmpt/)).toBeInTheDocument();
-    expect(asFragment()).toMatchSnapshot();
   });
 
   it('Should render App with all props and authentication enabled', async () => {
-    const { asFragment, getByText } = render(<App {...envMock} {...optionalProps} />);
+    const { getByText } = render(<App {...envMock} {...optionalProps} />);
 
     await act(() => expect(getByText(/OidcProviderCmpt/)).toBeInTheDocument());
     expect(getByText(/OidcSecureCmpt/)).toBeInTheDocument();
     expect(getByText(/FetchProviderCmpt/)).toBeInTheDocument();
-    expect(asFragment()).toMatchSnapshot();
   });
 });

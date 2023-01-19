@@ -11,6 +11,7 @@ import {
   setCurrentPage,
   computeSuccess,
   computeDataQuery,
+  setPagination,
 } from '../Members.hook';
 import { membersMock } from './Members.mock';
 
@@ -37,7 +38,7 @@ const expectedData = [
         label: 'M',
       },
     },
-    key: 99999,
+    key: '99999',
   },
 ];
 const defaultAnomaly = { label: 'Info : Aucune donnée trouvée', type: 'info', iconName: 'exclamation-sign' } || null;
@@ -107,17 +108,41 @@ describe('setCurrentPage', () => {
 });
 
 describe('setNumberPages', () => {
-  it('Should return 0 when max = 1 and total = 1', () => {
-    const result = setNumberPages({});
-    expect(result).toEqual(1);
+  it.each`
+    max          | total        | expected
+    ${undefined} | ${undefined} | ${1}
+    ${null}      | ${null}      | ${1}
+    ${0}         | ${1}         | ${Infinity}
+    ${1}         | ${1}         | ${1}
+    ${10}        | ${1}         | ${1}
+    ${1}         | ${10}        | ${9}
+    ${10}        | ${50}        | ${4}
+    ${10}        | ${5}         | ${1}
+  `('Should return exoected: $expected when max: $max, total: $total', ({ max, total, expected }) => {
+    const result = setNumberPages({ max, total });
+    expect(result).toEqual(expected);
   });
-  it('Should return 5 when max = 10 and total = 50', () => {
-    const result = setNumberPages({ max: 10, total: 50 });
-    expect(result).toEqual(4);
-  });
-  it('Should return 1 when max = 10 and total = 5', () => {
-    const result = setNumberPages({ max: 10, total: 5 });
-    expect(result).toEqual(1);
+});
+
+describe('setNumberPages', () => {
+  const defaultExpected = {
+    total: 1,
+    numberItems: 1,
+    numberPages: 1,
+    currentPage: 1,
+  };
+  it.each`
+    max          | skip         | total        | expected
+    ${undefined} | ${undefined} | ${undefined} | ${defaultExpected}
+    ${null}      | ${null}      | ${null}      | ${{ ...defaultExpected, numberItems: 0, total: 0 }}
+    ${10}        | ${10}        | ${10}        | ${{ ...defaultExpected, numberItems: 10, total: 10 }}
+    ${10}        | ${0}         | ${10}        | ${{ ...defaultExpected, numberItems: 10, total: 10 }}
+    ${0}         | ${10}        | ${11}        | ${{ ...defaultExpected, numberItems: 0, numberPages: Infinity, total: 11 }}
+    ${10}        | ${10}        | ${0}         | ${{ ...defaultExpected, numberItems: 10, total: 0 }}
+    ${30}        | ${5}         | ${200}       | ${{ ...defaultExpected, numberItems: 30, numberPages: 6, total: 200 }}
+  `('Should return exoected: $expected when max: $max, skip: $skip, total: $total', ({ max, total, skip, expected }) => {
+    const result = setPagination({ total, skip, max });
+    expect(result).toEqual(expected);
   });
 });
 

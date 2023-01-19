@@ -5,9 +5,10 @@ const propsMock = {
   icon: 'ok',
   title: 'title',
 };
+
 describe('<TabsLiveCode />', () => {
   it('Render <TabsLiveCode /> with props', () => {
-    const { asFragment } = render(<TitleTabsLiveCode props={propsMock} />);
+    const { asFragment } = render(<TitleTabsLiveCode {...propsMock} />);
 
     expect(asFragment()).toMatchSnapshot();
   });

@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import TitleTab from '../TitleTab';
+import TitleTab, { TTitleTab } from '../TitleTab';
 
 const resultsFnMock = [
   {
@@ -9,7 +9,8 @@ const resultsFnMock = [
     impact: 'critical',
     tags: ['tag1'],
   },
-];
+] as TTitleTab['results'];
+
 describe('<TitleTab />', () => {
   it('Render <AccordionResults /> with results, label, icon', () => {
     const { asFragment } = render(<TitleTab results={resultsFnMock} label="test" icon="ok" />);

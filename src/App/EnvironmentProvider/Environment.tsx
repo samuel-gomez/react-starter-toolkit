@@ -30,8 +30,13 @@ type TfetchEnv = {
 
 export const fetchEnv = async ({ setEnvState, signal, fetchFn = fetch, getFileEnvFn = getFileEnv }: TfetchEnv) => {
   const fileName = getFileEnvFn();
-  const response = await fetchFn(`/${fileName}`, { signal }).catch(error => setEnvState({ error }));
-  setEnvState({ environment: await response?.json() });
+  try {
+    const response = await fetchFn(`/${fileName}`, { signal });
+    const environment = await response?.json();
+    setEnvState({ environment });
+  } catch (error) {
+    setEnvState({ error, environment: null });
+  }
 };
 
 /**

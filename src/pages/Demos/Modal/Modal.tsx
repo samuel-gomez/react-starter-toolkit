@@ -1,5 +1,4 @@
-import { ReactNode } from 'react';
-import Layout, { TLayout } from 'Layout';
+import Layout, { TLayoutPage } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
 import { TITLE_BAR, TITLE, DESIGN_SYSTEM_PATH, STORYBOOK_PATH, GITHUB_PACKAGE, NPM_NAME } from './constants';
@@ -22,7 +21,7 @@ const INITIAL_STATE = {
 };
 
 type Props = Partial<typeof INITIAL_STATE> & {
-  onChange: (name: keyof typeof INITIAL_STATE) => (arg: TEvent) => void;
+  onChange?: (name: keyof typeof INITIAL_STATE) => (arg: TEvent) => void;
   openModal: () => void;
   onCancel: () => void;
   isOpen: boolean;
@@ -78,12 +77,7 @@ const ModalEditable = () => {
   return <ModalWithEditor {...state} openModal={openModal} onCancel={onCancel} isOpen={isOpen} onChange={onChange} />;
 };
 
-type TModalPage = TLayout & {
-  titleBar?: ReactNode;
-  title?: ReactNode;
-};
-
-const ModalPage = ({ titleBar = TITLE_BAR, title = TITLE }: TModalPage) => (
+const ModalPage = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <ModalEditable />

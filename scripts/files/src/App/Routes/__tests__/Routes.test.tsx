@@ -1,15 +1,10 @@
 import { ComponentType, createContext } from 'react';
 import { MemoryRouter } from 'react-router-dom';
-import { render } from '@testing-library/react';
+import { render, waitFor, act } from '@testing-library/react';
 import UserProvider from 'App/UserProvider';
 import { renderWithWrapperStaticRouter } from 'shared/testsUtils';
-import Loader from 'shared/components/Loader';
+import { TUserContext } from 'App/UserProvider/UserProvider';
 import Routes, { withAuth } from '..';
-
-const defaultPropsMock = {
-  HomeCmpt: () => <div>HomeCmpt</div>,
-  PageUnauthorizeCmpt: () => <div>PageUnauthorizeCmpt</div>,
-};
 
 type TrenderRoute = {
   role?: string;
@@ -18,7 +13,7 @@ type TrenderRoute = {
   defaultProps?: object;
 };
 
-const renderRoute = ({ role = '', name = '', route = '/', defaultProps = defaultPropsMock }: TrenderRoute) => {
+const renderRoute = ({ role = '', name = '', route = '/', defaultProps = {} }: TrenderRoute) => {
   const useOidcUser = jest.fn().mockReturnValue({
     oidcUser: { name, member_of: [`CN=${role}`] },
   });
@@ -33,39 +28,49 @@ const renderRoute = ({ role = '', name = '', route = '/', defaultProps = default
 };
 
 describe('<Routes />', () => {
+  jest.useFakeTimers();
+
   it.each`
-    role  | name        | route
-    ${''} | ${'Samuel'} | ${'/'}
-    ${''} | ${'Samuel'} | ${'/forbidden'}
-  `('Should render page when user profil is authorized, role: $role, name: $name, route: $route', ({ role, name, route }) => {
-    const { asFragment } = renderRoute({ role, name, route });
-    expect(asFragment()).toMatchSnapshot();
+    role  | name        | route           | expected
+    ${''} | ${'Samuel'} | ${'/'}          | ${'Bienvenue sur la démo du starter Slash Design System'}
+    ${''} | ${'Samuel'} | ${'/forbidden'} | ${'403'}
+  `('Should render page when user profil is authorized, role: $role, name: $name, route: $route', async ({ role, name, route, expected }) => {
+    const { getByText } = renderRoute({ role, name, route });
+    await act(() => {
+      getByText('Chargement de la page...');
+    });
+    jest.advanceTimersByTime(1000);
+
+    await waitFor(() => expect(getByText(expected)).toBeInTheDocument());
   });
 
   it.each`
     role                   | name     | route
     ${'user unauthorized'} | ${'sam'} | ${'/'}
-  `('Should render forbidden page when user profil is unauthorized, role: $role, name: $name, route: $route', ({ role, name, route }) => {
-    const UserContextObjMock = createContext({ authName: '', authRole: role, authUid: '', isEnabled: true, isLoading: false });
+  `('Should render forbidden page when user profil is unauthorized, role: $role, name: $name, route: $route', async ({ role, name, route }) => {
+    const UserContextObjMock = createContext<TUserContext>({ authName: '', authRole: role, authUid: '', isEnabled: true, isLoading: false });
     const { getByText } = renderRoute({
       role,
       name,
       route,
-      defaultProps: { ...defaultPropsMock, withAuthFn: (...args: ComponentType<object>[]) => withAuth(args[0], UserContextObjMock, ['admin']) },
+      defaultProps: { withAuthFn: (...args: ComponentType<object>[]) => withAuth(args[0], UserContextObjMock, ['admin']) },
     });
-    expect(getByText('PageUnauthorizeCmpt')).toBeInTheDocument();
+    await waitFor(() => expect(getByText('The page you are looking for is forbidden !')).toBeInTheDocument());
   });
 
   it.each`
     route
     ${'/no-exist-route'}
-  `('Should render 404 when election route: $route is not correct', ({ route }) => {
+  `('Should render 404 when route: $route is not correct', async ({ route }) => {
     const { getByText } = renderRoute({ route, role: '', name: 'samuel' });
-    expect(getByText('404')).toBeInTheDocument();
+    await act(() => {
+      getByText('Chargement de la page...');
+    });
+    jest.advanceTimersByTime(1000);
+
+    await waitFor(() => expect(getByText('404')).toBeInTheDocument());
   });
 });
-
-jest.mock('shared/components/Loader');
 
 describe('Render withAuth', () => {
   const Component = () => <p>component</p>;
@@ -73,21 +78,27 @@ describe('Render withAuth', () => {
     authRole | authName
     ${''}    | ${'Samuel'}
   `('Should render RouteCmpt when user profile is authorized (authRole, authName)', ({ authRole, authName }) => {
-    const UserContextObjMock = createContext({ authRole, authName, authUid: '', isEnabled: true, isLoading: false });
+    const UserContextObjMock = createContext<TUserContext>({ authRole, authName, authUid: '', isEnabled: true, isLoading: false });
     const { getByText } = renderWithWrapperStaticRouter(withAuth(Component, UserContextObjMock));
     expect(getByText('component')).toBeInTheDocument();
   });
 
   it('Should render NavigateCmpt when user profile is unauthorized', () => {
-    const UserContextObjMock = createContext({ authName: '', authRole: 'unauthorized', authUid: '', isEnabled: true, isLoading: false });
+    const UserContextObjMock = createContext<TUserContext>({
+      authName: '',
+      authRole: 'unauthorized',
+      authUid: '',
+      isEnabled: true,
+      isLoading: false,
+    });
     const NavigateCmpt = jest.fn().mockReturnValue(null);
     renderWithWrapperStaticRouter(withAuth(Component, UserContextObjMock, [''], NavigateCmpt));
     expect(NavigateCmpt).toHaveBeenCalled();
   });
 
   it('Should render LoaderCmpt when user profile is loading', () => {
-    const LoaderCmpt = Loader as jest.MockedFunction<typeof Loader>;
-    const UserContextObjMock = createContext({ authName: '', authRole: '', authUid: '', isEnabled: true, isLoading: true });
+    const LoaderCmpt = jest.fn();
+    const UserContextObjMock = createContext<TUserContext>({ authName: '', authRole: '', authUid: '', isEnabled: true, isLoading: true });
     const NavigateCmpt = jest.fn().mockReturnValue(null);
     renderWithWrapperStaticRouter(withAuth(Component, UserContextObjMock, [''], NavigateCmpt, LoaderCmpt));
     expect(LoaderCmpt).toHaveBeenCalled();

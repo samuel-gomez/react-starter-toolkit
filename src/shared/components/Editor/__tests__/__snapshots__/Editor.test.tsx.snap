@@ -59,9 +59,15 @@ exports[`withEditor Should render Component with FormEditor when apply withEdito
             <i
               class="glyphicon glyphicon-move"
             />
-            <i
-              class="glyphicon glyphicon-close"
-            />
+            <button
+              aria-label="close Editor"
+              class="af-btn--circle af-btn--circle--close-editor"
+              type="button"
+            >
+              <i
+                class="glyphicon glyphicon-close"
+              />
+            </button>
           </div>
         </h3>
         <div

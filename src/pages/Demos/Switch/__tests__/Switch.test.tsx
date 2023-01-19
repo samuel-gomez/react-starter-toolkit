@@ -1,13 +1,6 @@
-import { clearString, renderWithWrapperStaticRouter } from 'shared/testsUtils';
-import { MessageTypes } from '@axa-fr/react-toolkit-all';
-import SwitchPage, { code } from '../Switch';
-
-describe('<Switch />', () => {
-  it('Should render SwitchPage', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(<SwitchPage />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+import { clearString } from 'shared/testsUtils';
+import { MessageTypes } from '@axa-fr/react-toolkit-form-core';
+import { code } from '../Switch';
 
 describe('code', () => {
   const onChange = jest.fn();

@@ -1,12 +1,5 @@
-import { clearString, renderWithWrapperStaticRouter } from 'shared/testsUtils';
-import Table, { code, generateItems } from '../Table';
-
-describe('<Table />', () => {
-  it('Should render Table', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(<Table />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+import { clearString } from 'shared/testsUtils';
+import { code, generateItems } from '../Table';
 
 describe('code', () => {
   const onChange = jest.fn();
@@ -35,9 +28,16 @@ describe('code', () => {
       <Table className="${defaultProps.className}" classModifier="${defaultProps.classModifier}">
         <Table.Header>
           <Table.Tr>
-            {headers.map(item => <Table.Th key={item.id}>
-              <span className="af-table-th-content">{item.label}</span>
-            </Table.Th>)}
+            <Table.Th key="firstname">
+              <span className="af-table-th-content">Prénom</span>  
+            </Table.Th>  
+            <Table.Th key="lastname">  
+              <span className="af-table-th-content"><span><strong>Nom</strong>  
+              <i className="glyphicon glyphicon-ok"></i></span></span>  
+            </Table.Th>  
+            <Table.Th key="birthdate">  
+              <span className="af-table-th-content">Date de naissance</span>  
+            </Table.Th>
           </Table.Tr>
         </Table.Header>
         <Table.Body>

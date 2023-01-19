@@ -19,7 +19,7 @@ export const INITIAL_STATE_SORTING = {
   order: ASCENDING as Torder,
 };
 
-export const INITIAL_STATE_PAGING = {
+const INITIAL_STATE_PAGING = {
   numberItems: 50,
   page: 1,
 };

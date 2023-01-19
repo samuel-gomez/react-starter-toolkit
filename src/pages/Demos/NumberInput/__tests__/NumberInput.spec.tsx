@@ -32,16 +32,12 @@ import {
   UnMessageEstVisibleAvecLaClass,
   UnTitreEstVisible,
 } from 'shared/testsUtils/sharedScenarios';
+import { ROLE_NUMBER, SCOPE_CODE, SCOPE_EDITOR, SCOPE_PREVIEW } from 'shared/testsUtils/constants';
 import NumberInput from '../NumberInput';
 
 configure({ defaultHidden: true });
 
 const feature = loadFeature('features/Demos/NumberInput/NumberInput.feature');
-
-const SCOPE_EDITOR = 'Edit props';
-const SCOPE_PREVIEW = 'af-accessibility';
-const SCOPE_CODE = 'af-accessibility-code';
-const ROLE_NUMBER = 'spinbutton';
 
 defineFeature(feature, test => {
   let role: string;
@@ -61,7 +57,6 @@ defineFeature(feature, test => {
    */
   jest.setTimeout(10000);
   /************************* */
-
   test('Affichage du playground NumberInput', ({ given, and, when, then }) => {
     JeSuisUnUtilisateurConnuEtConnecteAvecleProfil(given, setRoleMock);
     when("J'accède à la page playground NumberInput", renderPage);

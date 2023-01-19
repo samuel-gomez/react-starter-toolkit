@@ -1,6 +1,7 @@
 import { Result } from 'axe-core';
-import { Accordion, CollapseCard, Badge } from '@axa-fr/react-toolkit-all';
-import { colorTags } from './constants';
+import { Accordion, CollapseCard } from '@axa-fr/react-toolkit-collapse';
+import Badge from '@axa-fr/react-toolkit-badge';
+import colorTags from './constants';
 import './AccordionResults.scss';
 
 const AccordionResults = ({ results }: { results: Result[] }) => (
@@ -15,7 +16,7 @@ const AccordionResults = ({ results }: { results: Result[] }) => (
             <p>{result.help}</p>
             <p>
               <a href={result.helpUrl} rel="noreferrer" target="_blank">
-                Plus d'infos...
+                Plus d&apos;infos...
               </a>
             </p>
           </div>

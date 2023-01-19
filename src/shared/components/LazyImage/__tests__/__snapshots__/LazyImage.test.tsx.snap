@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LasyImage/> Should render LasyImage 1`] = `
+<DocumentFragment>
+  <img
+    alt="alt_accordion"
+    src="accordion.svg"
+  />
+</DocumentFragment>
+`;
+
+exports[`<LasyImage/> Should render LasyImage unknown image 1`] = `
+<DocumentFragment>
+  <img
+    alt="alt_unknown"
+    src="Error: Cannot find module '../../../../public/images/unknown.svg' from 'src/shared/components/LazyImage/LazyImage.tsx'"
+  />
+</DocumentFragment>
+`;
+
+exports[`<LasyImage/> Should render LasyImage when loading 1`] = `
+<DocumentFragment>
+  <img
+    alt="loading..."
+    class="af-lasyimage"
+    src="puff.svg"
+  />
+</DocumentFragment>
+`;

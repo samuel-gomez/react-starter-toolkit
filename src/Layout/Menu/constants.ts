@@ -36,8 +36,8 @@ const MENU_ITEMS = [
     basePathChildren: ROUTE_URL.DEMOS,
     children: [
       {
-        label: 'Button',
-        url: ROUTE_URL.BUTTON,
+        label: 'Accordion',
+        url: ROUTE_URL.ACCORDION,
       },
       {
         label: 'Action',
@@ -48,36 +48,16 @@ const MENU_ITEMS = [
         url: ROUTE_URL.ALERT,
       },
       {
-        label: 'Restitution',
-        url: ROUTE_URL.RESTITUTION,
-      },
-      {
-        label: 'Tabs',
-        url: ROUTE_URL.TABS,
-      },
-      {
         label: 'Badge',
         url: ROUTE_URL.BADGE,
       },
       {
-        label: 'Title',
-        url: ROUTE_URL.TITLE,
+        label: 'Button',
+        url: ROUTE_URL.BUTTON,
       },
       {
         label: 'Help',
         url: ROUTE_URL.HELP,
-      },
-      {
-        label: 'Table',
-        url: ROUTE_URL.TABLE,
-      },
-      {
-        label: 'Popover',
-        url: ROUTE_URL.POPOVER,
-      },
-      {
-        label: 'Accordion',
-        url: ROUTE_URL.ACCORDION,
       },
       {
         label: 'Loader',
@@ -87,6 +67,27 @@ const MENU_ITEMS = [
         label: 'Modal',
         url: ROUTE_URL.MODAL,
       },
+      {
+        label: 'Popover',
+        url: ROUTE_URL.POPOVER,
+      },
+      {
+        label: 'Restitution',
+        url: ROUTE_URL.RESTITUTION,
+      },
+      {
+        label: 'Table',
+        url: ROUTE_URL.TABLE,
+      },
+      {
+        label: 'Tabs',
+        url: ROUTE_URL.TABS,
+      },
+
+      {
+        label: 'Title',
+        url: ROUTE_URL.TITLE,
+      },
     ],
   },
   {
@@ -95,28 +96,28 @@ const MENU_ITEMS = [
     basePathChildren: ROUTE_URL.DEMOS,
     children: [
       {
-        label: 'Header',
-        url: ROUTE_URL.HEADER,
-      },
-      {
-        label: 'TitleBar',
-        url: ROUTE_URL.TITLEBAR,
-      },
-      {
-        label: 'NavBar',
-        url: ROUTE_URL.NAVBAR,
-      },
-      {
-        label: 'Infos',
-        url: ROUTE_URL.INFOS,
+        label: 'Footer',
+        url: ROUTE_URL.FOOTER,
       },
       {
         label: 'Footer Client',
         url: ROUTE_URL.FOOTER_CLIENT,
       },
       {
-        label: 'Footer',
-        url: ROUTE_URL.FOOTER,
+        label: 'Header',
+        url: ROUTE_URL.HEADER,
+      },
+      {
+        label: 'Infos',
+        url: ROUTE_URL.INFOS,
+      },
+      {
+        label: 'NavBar',
+        url: ROUTE_URL.NAVBAR,
+      },
+      {
+        label: 'TitleBar',
+        url: ROUTE_URL.TITLE_BAR,
       },
     ],
   },
@@ -126,52 +127,52 @@ const MENU_ITEMS = [
     basePathChildren: ROUTE_URL.DEMOS,
     children: [
       {
-        label: 'Text Input',
-        url: ROUTE_URL.TEXT_INPUT,
-      },
-      {
-        label: 'Number Input',
-        url: ROUTE_URL.NUMBER_INPUT,
-      },
-      {
-        label: 'Textarea Input',
-        url: ROUTE_URL.TEXTAREA_INPUT,
-      },
-      {
-        label: 'Radio Input',
-        url: ROUTE_URL.RADIO_INPUT,
-      },
-      {
         label: 'Checkbox Input',
         url: ROUTE_URL.CHECKBOX_INPUT,
       },
       {
-        label: 'Select Input',
-        url: ROUTE_URL.SELECT_INPUT,
-      },
-      {
-        label: 'Stepper',
-        url: ROUTE_URL.STEPPER,
-      },
-      {
-        label: 'Slider',
-        url: ROUTE_URL.SLIDER,
-      },
-      {
-        label: 'Switch',
-        url: ROUTE_URL.SWITCH,
+        label: 'Date Input',
+        url: ROUTE_URL.DATE_INPUT,
       },
       {
         label: 'File',
         url: ROUTE_URL.FILE_INPUT,
       },
       {
+        label: 'Number Input',
+        url: ROUTE_URL.NUMBER_INPUT,
+      },
+      {
+        label: 'Radio Input',
+        url: ROUTE_URL.RADIO_INPUT,
+      },
+      {
+        label: 'Select Input',
+        url: ROUTE_URL.SELECT_INPUT,
+      },
+      {
         label: 'Select Multi',
         url: ROUTE_URL.SELECT_MULTI,
       },
       {
-        label: 'Date Input',
-        url: ROUTE_URL.DATE_INPUT,
+        label: 'Slider',
+        url: ROUTE_URL.SLIDER,
+      },
+      {
+        label: 'Stepper',
+        url: ROUTE_URL.STEPPER,
+      },
+      {
+        label: 'Switch',
+        url: ROUTE_URL.SWITCH,
+      },
+      {
+        label: 'Textarea Input',
+        url: ROUTE_URL.TEXTAREA_INPUT,
+      },
+      {
+        label: 'Text Input',
+        url: ROUTE_URL.TEXT_INPUT,
       },
     ],
   },

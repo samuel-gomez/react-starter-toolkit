@@ -1,12 +1,11 @@
-import { ReactNode } from 'react';
-import Layout, { TLayout } from 'Layout';
+import Layout, { TLayoutPage } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
 import { TITLE_BAR, TITLE, DESIGN_SYSTEM_PATH, STORYBOOK_PATH, GITHUB_PACKAGE, NPM_NAME } from './constants';
 import knobs from './knobs.json';
 
 const INITIAL_STATE = {
-  children: 'Coucou',
+  children: 'my badge',
   classModifier: 'success',
   disabled: false,
 };
@@ -40,12 +39,7 @@ const BadgeEditable = () => {
   return <BadgeWithEditor {...state} onChange={onChange} />;
 };
 
-type TBadgePage = TLayout & {
-  titleBar?: ReactNode;
-  title?: ReactNode;
-};
-
-const BadgeDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TBadgePage) => (
+const BadgeDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <BadgeEditable />

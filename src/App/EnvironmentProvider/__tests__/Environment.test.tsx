@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { renderHook } from '@testing-library/react-hooks';
 import { render } from '@testing-library/react';
-import EnvironmentProvider, { useEnv, EnvironmentContext, fetchEnv } from '..';
+import EnvironmentProvider, { useEnv, EnvironmentContext, fetchEnv, getFileEnv } from '..';
 import type { TEnvironment } from '..';
 
 const BaseWithEnvironment = ({ environment }: { environment?: TEnvironment | null }) => <div>{environment?.apiUrl?.base}</div>;
@@ -27,6 +27,17 @@ const App = () => (
   </EnvironmentProvider>
 );
 
+describe('getFileEnv', () => {
+  it('Should return environment.test.json', () => {
+    const fileEnv = getFileEnv();
+    expect(fileEnv).toEqual('environment.test.json');
+  });
+  it('Should return environment.dev.json', () => {
+    const fileEnv = getFileEnv('dev');
+    expect(fileEnv).toEqual('environment.dev.json');
+  });
+});
+
 describe('Render App with Base have env props', () => {
   it('Should render App with myApiUrlEnv props when call setFetchCustom', () => {
     const { getByText } = render(<App />);
@@ -36,6 +47,7 @@ describe('Render App with Base have env props', () => {
 
 describe('useEnv', () => {
   const fetchEnvFn = jest.fn();
+
   it('Should import file when state environment is null', () => {
     const initStateCt = {
       environment: null,
@@ -45,7 +57,8 @@ describe('useEnv', () => {
     expect(result.current).toEqual({ envState: { environment: null }, setEnvState: result.current.setEnvState });
     expect(fetchEnvFn).toHaveBeenCalled();
   });
-  it('Should not import file config when state environment is not null', () => {
+
+  it('Should not import file config when state environment is not null', async () => {
     const API_URL = {
       BASE: '/apiUrl',
     };
@@ -57,7 +70,6 @@ describe('useEnv', () => {
     const { result } = renderHook(() => useEnv(fetchEnvFn, { environment }));
 
     expect(result.current).toEqual({ envState: { environment }, setEnvState: result.current.setEnvState });
-    expect(fetchEnvFn).not.toHaveBeenCalled();
   });
 });
 

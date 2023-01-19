@@ -1,12 +1,5 @@
-import { clearString, renderWithWrapperStaticRouter } from 'shared/testsUtils';
-import ModalPage, { code } from '../Modal';
-
-describe('<ModalPage />', () => {
-  it('Should render ModalPage', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(<ModalPage />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+import { clearString, emptyFunction } from 'shared/testsUtils';
+import { code } from '../Modal';
 
 describe('code', () => {
   const onChange = jest.fn();
@@ -26,6 +19,9 @@ describe('code', () => {
     labelButtonCancel: 'Annuler',
     labelButtonValid: 'Valider',
     onChange,
+    openModal: emptyFunction,
+    onCancel: emptyFunction,
+    isOpen: false,
   };
 
   it('Should render Modal with default props', () => {

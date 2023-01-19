@@ -1,13 +1,6 @@
-import { clearString, renderWithWrapperStaticRouter } from 'shared/testsUtils';
+import { clearString } from 'shared/testsUtils';
 import { PopoverPlacements, PopoverModes } from '@axa-fr/react-toolkit-popover';
-import HelpPage, { code } from '../Help';
-
-describe('<HelpPage/>', () => {
-  it('Should render HelpPage', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(<HelpPage />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+import { code } from '../Help';
 
 describe('code', () => {
   const onChange = jest.fn();

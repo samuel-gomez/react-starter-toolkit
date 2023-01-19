@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { Button } from '@axa-fr/react-toolkit-all';
+import Button from '@axa-fr/react-toolkit-button';
 import './ClipBoard.scss';
 
 export const useClipBoard = ({ content }: { content: string }) => {
@@ -25,8 +25,8 @@ const ClipBoard = ({ content, useClipBoardFn = useClipBoard }: TClipBoard) => {
   const classClicked = clicked ? ' af-clipboard--clicked' : '';
 
   return (
-    <Button aria-label="Copy to clipboard" className={`af-btn--circle af-clipboard${classClicked}`}>
-      <i className="glyphicon glyphicon-copy" onClick={onClick}></i>
+    <Button aria-label="Copy to clipboard" className={`af-btn--circle af-clipboard${classClicked}`} onClick={onClick}>
+      <i className="glyphicon glyphicon-copy" />
       <span className="af-clipboard__message">Copied !</span>
     </Button>
   );

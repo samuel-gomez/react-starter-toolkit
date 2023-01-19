@@ -1,12 +1,5 @@
-import { clearString, renderWithWrapperStaticRouter } from 'shared/testsUtils';
-import ButtonPage, { code } from '../Button';
-
-describe('<ButtonPage/>', () => {
-  it('Should render ButtonPage', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(<ButtonPage />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+import { clearString } from 'shared/testsUtils';
+import { code } from '../Button';
 
 describe('code', () => {
   const icon = 'ok';
@@ -23,8 +16,8 @@ describe('code', () => {
   it('Should render ButtonPage with icon', () => {
     const result = code({ ...defaultProps, icon });
     expect(clearString(result)).toEqual(
-      clearString(`<Button id="${defaultProps.id}" disabled={${defaultProps.disabled}} className="${defaultProps.className}" classModifier="${defaultProps.classModifier}" type="submit" onClick={onClick} >
-          <i className="glyphicon glyphicon-${icon}"></i><span className="af-btn__text">${defaultProps.label}</span>
+      clearString(`<Button id="${defaultProps.id}" disabled={${defaultProps.disabled}} className="${defaultProps.className}" classModifier="${defaultProps.classModifier}" onClick={onClick} >
+          <i role="img" aria-label="ok" className="glyphicon glyphicon-${icon}"></i><span className="af-btn__text">${defaultProps.label}</span>
         </Button>
     `),
     );
@@ -33,7 +26,7 @@ describe('code', () => {
   it('Should render ButtonPage without icon', () => {
     const result = code(defaultProps);
     expect(clearString(result)).toEqual(
-      clearString(`<Button id="${defaultProps.id}" disabled={${defaultProps.disabled}} className="${defaultProps.className}" classModifier="${defaultProps.classModifier}" type="submit" onClick={onClick} >
+      clearString(`<Button id="${defaultProps.id}" disabled={${defaultProps.disabled}} className="${defaultProps.className}" classModifier="${defaultProps.classModifier}" onClick={onClick} >
           <span className="af-btn__text">${defaultProps.label}</span>
         </Button>
     `),

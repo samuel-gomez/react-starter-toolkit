@@ -1,5 +1,4 @@
-import { ReactNode } from 'react';
-import Layout, { TLayout } from 'Layout';
+import Layout, { TLayoutPage } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
 import { TITLE_BAR, TITLE, STORYBOOK_PATH, GITHUB_PACKAGE, NPM_NAME } from './constants';
@@ -33,12 +32,7 @@ const ActionEditable = () => {
   return <ActionWithEditor {...state} onChange={onChange} />;
 };
 
-type TActionPage = TLayout & {
-  titleBar?: ReactNode;
-  title?: ReactNode;
-};
-
-const ActionPage = ({ titleBar = TITLE_BAR, title = TITLE }: TActionPage) => (
+const ActionPage = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <ActionEditable />

@@ -1,13 +1,6 @@
 import { MessageTypes } from '@axa-fr/react-toolkit-all';
-import { clearString, renderWithWrapperStaticRouter } from 'shared/testsUtils';
-import RadioInputPage, { code } from '../RadioInput';
-
-describe('<RadioInputPage />', () => {
-  it('Should render RadioInputPage', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(<RadioInputPage />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+import { clearString } from 'shared/testsUtils';
+import { code } from '../RadioInput';
 
 describe('code', () => {
   const onChange = jest.fn();

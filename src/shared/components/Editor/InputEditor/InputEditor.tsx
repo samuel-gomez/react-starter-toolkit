@@ -1,9 +1,13 @@
-import { Text, CheckboxItem, CheckboxModes, Select, DateInput } from '@axa-fr/react-toolkit-all';
+import { ComponentPropsWithoutRef, OptionHTMLAttributes } from 'react';
+import { Text } from '@axa-fr/react-toolkit-form-input-text';
+import { Select } from '@axa-fr/react-toolkit-form-input-select';
+import { CheckboxItem } from '@axa-fr/react-toolkit-form-input-checkbox';
+import { DateInput } from '@axa-fr/react-toolkit-form-input-date';
 import { DEFAULT_OPTION_LABEL } from 'shared/constants';
 import CodeEditor from './CodeEditor';
 import JsonEditor from './JsonEditor';
-import { Tlistelements } from './CodeEditor/Templates';
-import { TonChange } from '../Editor';
+import type { Tlistelements } from './CodeEditor/Templates';
+import type { TonChange } from '../Editor';
 
 type TListSelect = {
   value: string;
@@ -38,8 +42,10 @@ const InputEditorObject = ({ value, ...props }: TInputEditorObject) => (
           return (
             <DateInput
               {...commonProps(props)}
+              label={props.name}
+              onChange={props.onChange as unknown as ComponentPropsWithoutRef<typeof DateInput>['onChange']}
               classModifier="date-custom"
-              value={value.value}
+              value={new Date(value.value)}
               classNameContainerLabel="col-md-0"
               classNameContainerInput="col-md-12"
             />
@@ -55,9 +61,9 @@ const InputEditorObject = ({ value, ...props }: TInputEditorObject) => (
             <div className="af-form__select">
               <Select
                 {...commonProps(props)}
-                forceDisplayPlaceholder={true}
+                forceDisplayPlaceholder
                 placeholder={DEFAULT_OPTION_LABEL}
-                options={value.options}
+                options={value.options as unknown as OptionHTMLAttributes<HTMLOptionElement>[]}
                 value={value.value}
                 aria-label={`select-${props.name}`}
               />
@@ -74,14 +80,7 @@ const InputEditor = ({ value, ...props }: TInputEditor) => (
       switch (true) {
         case typeof value === 'boolean':
           return (
-            <CheckboxItem
-              {...commonProps(props)}
-              disabled={false}
-              isChecked={value}
-              value={`${value}`}
-              mode={CheckboxModes.toggle}
-              className="af-form__checkbox-toggle"
-            />
+            <CheckboxItem {...commonProps(props)} disabled={false} isChecked={!!value} value={`${value}`} className="af-form__checkbox-toggle" />
           );
 
         case typeof value === 'object':

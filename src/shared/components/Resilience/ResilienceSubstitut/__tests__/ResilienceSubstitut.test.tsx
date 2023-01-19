@@ -1,12 +1,5 @@
 import { render } from '@testing-library/react';
-import ResilienceSubstitut, { Empty, setClassModifier, setClassName } from '../ResilienceSubstitut';
-
-describe('<Empty/>', () => {
-  it('Render <Empty/>', () => {
-    const { asFragment } = render(<Empty />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+import ResilienceSubstitut, { setClassModifier, setClassName } from '../ResilienceSubstitut';
 
 describe('<ResilienceSubstitut/>', () => {
   const defaultProps = {
@@ -15,6 +8,7 @@ describe('<ResilienceSubstitut/>', () => {
       detail: 'detail',
     },
   };
+
   it('Render <ResilienceSubstitut/> with default props and return Alert resilience', () => {
     const { asFragment, getByText, container } = render(<ResilienceSubstitut {...defaultProps} />);
     expect(getByText('label')).toBeDefined();
@@ -59,6 +53,7 @@ describe('setClassModifier', () => {
     const expected = 'error';
     expect(result).toEqual(expected);
   });
+
   it('Should return "error mymodifier" when setClassModifier called type="error" and resilienceModifier="mymodifier"', () => {
     const result = setClassModifier({ type: 'error', resilienceModifier: 'mymodifier' });
     const expected = 'error mymodifier';
@@ -71,6 +66,7 @@ describe('setClassName', () => {
     const result = setClassName({ resilienceModifier: '' });
     expect(result).toEqual('af-alert');
   });
+
   it('Should return "container af-alert" when setClassName called with resilienceModifier="container"', () => {
     const result = setClassName({ resilienceModifier: 'container' });
     const expected = 'container af-alert';

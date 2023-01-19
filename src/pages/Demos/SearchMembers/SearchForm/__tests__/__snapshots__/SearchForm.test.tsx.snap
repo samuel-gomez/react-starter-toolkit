@@ -18,6 +18,7 @@ exports[`InputCustom Render <InputCustom /> 1`] = `
           Nom du membre
         </label>
         <input
+          aria-label="name"
           autocomplete="search-name"
           class="af-form__input-text"
           id="name"
@@ -32,6 +33,51 @@ exports[`InputCustom Render <InputCustom /> 1`] = `
           Minimum 3 caractères pour un nom
         </small>
       </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`InputCustom Render <InputCustom /> with error 1`] = `
+<DocumentFragment>
+  <div
+    class="af-filter-inline__field"
+  >
+    <div
+      class="col-md-12"
+    >
+      <div
+        class="af-form__text af-form__text--error"
+      >
+        <label
+          class="af-form__group-label"
+          for="name"
+        >
+          Nom du membre
+        </label>
+        <input
+          aria-label="name"
+          autocomplete="search-name"
+          class="af-form__input-text"
+          id="name"
+          name="name"
+          placeholder="John Doe"
+          type="text"
+          value=""
+        />
+      </div>
+      <small
+        class="af-form__message af-form__message--error"
+      >
+        <span
+          class="glyphicon glyphicon-exclamation-sign"
+        />
+        <span
+          class="af-form__error-text"
+        >
+          champ requis
+        </span>
+      </small>
     </div>
   </div>
 </DocumentFragment>
@@ -64,6 +110,7 @@ exports[`SearchForm Render <SearchForm /> 1`] = `
               Nom du membre
             </label>
             <input
+              aria-label="name"
               autocomplete="search-name"
               class="af-form__input-text"
               id="name"

@@ -23,7 +23,7 @@ exports[`Render <Footer/> 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.5.3
+        © 2023 AXA Tous droits réservés - v0.5.3
       </div>
     </div>
   </footer>
@@ -53,7 +53,7 @@ exports[`Render <Footer/> fullscreen 1`] = `
       <div
         class="af-footer-content"
       >
-        © 2022 AXA Tous droits réservés - v0.5.3
+        © 2023 AXA Tous droits réservés - v0.5.3
       </div>
     </div>
   </footer>

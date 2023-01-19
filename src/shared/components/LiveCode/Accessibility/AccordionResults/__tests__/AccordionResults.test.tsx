@@ -1,4 +1,5 @@
 import { render } from '@testing-library/react';
+import { Result } from 'axe-core';
 import AccordionResults from '../AccordionResults';
 
 const resultsFnMock = [
@@ -14,7 +15,7 @@ const resultsFnMock = [
 
 describe('<AccordionResults />', () => {
   it('Render <AccordionResults /> with results', () => {
-    const { asFragment } = render(<AccordionResults results={resultsFnMock} />);
+    const { asFragment } = render(<AccordionResults results={resultsFnMock as Result[]} />);
     expect(asFragment()).toMatchSnapshot();
   });
 });

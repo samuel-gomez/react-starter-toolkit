@@ -1,13 +1,6 @@
-import { clearString, renderWithWrapperStaticRouter } from 'shared/testsUtils';
+import { clearString } from 'shared/testsUtils';
 import { MessageTypes } from '@axa-fr/react-toolkit-all';
-import FileInputPage, { code } from '../FileInput';
-
-describe('<FileInputPage />', () => {
-  it('Should render FileInputPage', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(<FileInputPage />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+import { code } from '../FileInput';
 
 describe('code', () => {
   const onChange = jest.fn();

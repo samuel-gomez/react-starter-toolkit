@@ -1,7 +1,7 @@
 import './Notifications.scss';
 import { DEFAULT_CLASS_NOTIFICATION } from './constants';
 import Notification, { TNotification, EType } from './Notification';
-import type { TonDeleteNotification } from '../';
+import type { TonDeleteNotification } from '..';
 
 export type TNotifications = {
   className?: string;

@@ -1,12 +1,5 @@
-import { clearString, renderWithWrapperStaticRouter } from 'shared/testsUtils';
-import Tabs, { code, onChangeTabFn } from '../Tabs';
-
-describe('<Tabs />', () => {
-  it('Should render Tabs', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(<Tabs />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+import { clearString } from 'shared/testsUtils';
+import { code, onChangeTabFn } from '../Tabs';
 
 describe('onChangeTabFn', () => {
   it('Should called onChangeFn', () => {

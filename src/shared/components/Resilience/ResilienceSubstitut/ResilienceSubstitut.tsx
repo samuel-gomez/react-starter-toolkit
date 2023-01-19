@@ -1,9 +1,9 @@
 import { ElementType, ReactNode } from 'react';
-import { Alert, Button } from '@axa-fr/react-toolkit-all';
+import Alert from '@axa-fr/react-toolkit-alert';
+import Button from '@axa-fr/react-toolkit-button';
 import type { Tanomaly } from 'shared/types';
+import { emptyFunction } from 'shared/helpers';
 import { ERESILIENCE_MODE, DEFAULT_CLASS_ALERT, DEFAULT_CLASS_CONTAINER } from './constants';
-
-export const Empty = () => <></>;
 
 type TsetClassModifier = {
   type: string;
@@ -33,12 +33,12 @@ type TResilienceSubstitut<Trefetch> = {
   setClassNameFn?: typeof setClassName;
 };
 
-const ResilienceSubstitut = <Trefetch,>({
+const ResilienceSubstitut = <Trefetch extends React.MouseEventHandler<HTMLButtonElement>>({
   anomaly,
   refetch,
   children,
   resilienceMode = ERESILIENCE_MODE.alert,
-  FallbackComponent = Empty,
+  FallbackComponent = emptyFunction,
   resilienceModifier = '',
   setClassModifierFn = setClassModifier,
   setClassNameFn = setClassName,

@@ -1,6 +1,5 @@
-import { ReactNode } from 'react';
-import Layout, { TLayout } from 'Layout';
-import { PopoverPlacements, PopoverModes } from '@axa-fr/react-toolkit-popover';
+import Layout, { TLayoutPage } from 'Layout';
+import { PopoverModes, PopoverPlacements } from '@axa-fr/react-toolkit-popover';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
 import { TITLE_BAR, TITLE, STORYBOOK_PATH, GITHUB_PACKAGE, NPM_NAME } from './constants';
@@ -34,12 +33,7 @@ const HelpEditable = () => {
   return <HelpWithEditor {...state} onChange={onChange} />;
 };
 
-type THelpPage = TLayout & {
-  titleBar?: ReactNode;
-  title?: ReactNode;
-};
-
-const HelpPage = ({ titleBar = TITLE_BAR, title = TITLE }: THelpPage) => (
+const HelpPage = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <HelpEditable />

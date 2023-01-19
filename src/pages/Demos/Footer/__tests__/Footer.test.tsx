@@ -1,12 +1,5 @@
-import { clearString, renderWithWrapperStaticRouter } from 'shared/testsUtils';
-import FooterPage, { code } from '../Footer';
-
-describe('<Footer />', () => {
-  it('Should render FooterPage', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(<FooterPage />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+import { clearString } from 'shared/testsUtils';
+import { code } from '../Footer';
 
 describe('code', () => {
   const onChange = jest.fn();

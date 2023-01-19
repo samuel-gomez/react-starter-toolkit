@@ -1,13 +1,6 @@
-import { clearString, renderWithWrapperStaticRouter } from 'shared/testsUtils';
-import { MessageTypes } from '@axa-fr/react-toolkit-all';
-import TextInputPage, { code } from '../TextInput';
-
-describe('<TextInputPage/>', () => {
-  it('Should render TextInputPage', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(<TextInputPage />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+import { clearString } from 'shared/testsUtils';
+import { MessageTypes } from '@axa-fr/react-toolkit-form-core';
+import { code } from '../TextInput';
 
 describe('code', () => {
   const onChange = jest.fn();

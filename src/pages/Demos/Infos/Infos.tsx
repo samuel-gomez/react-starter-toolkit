@@ -1,5 +1,4 @@
-import { ReactNode } from 'react';
-import Layout, { TLayout } from 'Layout';
+import Layout, { TLayoutPage } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
 import { TITLE_BAR, TITLE, DESIGN_SYSTEM_PATH, STORYBOOK_PATH, GITHUB_PACKAGE, NPM_NAME } from './constants';
@@ -36,12 +35,7 @@ const InfosEditable = () => {
   return <InfosWithEditor {...state} onChange={onChange} />;
 };
 
-type TInfosPage = TLayout & {
-  titleBar?: ReactNode;
-  title?: ReactNode;
-};
-
-const InfosDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TInfosPage) => (
+const InfosDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <InfosEditable />

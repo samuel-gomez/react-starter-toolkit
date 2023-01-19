@@ -24,6 +24,11 @@ export type TLayout = {
   propsA11yMenu?: ComponentPropsWithoutRef<typeof A11yMenu>;
 };
 
+export type TLayoutPage = TLayout & {
+  titleBar?: string;
+  title?: ReactNode;
+};
+
 const disabledDefault = {
   header: false,
   menu: false,
@@ -41,7 +46,7 @@ const Layout = withClassNameModifier(
       {!disabled.header && <Header {...propsHeader} fullScreen={fullScreen} />}
       {!disabled.menu && <Menu {...propsMenu} fullScreen={fullScreen} />}
       {!disabled.title && <TitleBar {...propsTitle} fullScreen={fullScreen} />}
-      <main id="main-content" className={className}>
+      <main aria-label="Main Content" id="main-content" className={className}>
         {fullScreen ? children : <section className="container">{children}</section>}
       </main>
       {!disabled.footer && <Footer {...propsFooter} fullScreen={fullScreen} />}

@@ -1,1 +1,1 @@
-export { default, MembersContext } from './Members.container';
+export { default } from './Members.container';

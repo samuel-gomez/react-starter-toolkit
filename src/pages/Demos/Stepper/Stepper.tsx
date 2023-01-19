@@ -1,6 +1,5 @@
 /* eslint-disable max-lines-per-function */
-import { ReactNode } from 'react';
-import Layout, { TLayout } from 'Layout';
+import Layout, { TLayoutPage } from 'Layout';
 import { ClickEvent } from '@axa-fr/react-toolkit-core';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
@@ -91,7 +90,7 @@ export const code = ({
       href="${step4Href}"
       onClick={onClick}>
       <span className="af-steps-list-stepNumber">
-        ${step4Icon !== '' ? `<i className="glyphicon glyphicon-${step4Icon}"></i>` : ''}       
+        <i role="img" aria-label="${step4Icon}" className="glyphicon glyphicon-${step4Icon}"></i>      
       </span>
       <span className="af-steps-list-stepTitle">${step4Title}</span>
     </a>
@@ -120,12 +119,7 @@ const StepperEditable = () => {
   return <StepperWithEditor {...state} onClick={onClick('onClick button')} onChange={onChange} />;
 };
 
-type TStepperPage = TLayout & {
-  titleBar?: ReactNode;
-  title?: ReactNode;
-};
-
-const StepperDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TStepperPage) => (
+const StepperDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <StepperEditable />

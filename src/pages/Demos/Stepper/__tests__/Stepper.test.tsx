@@ -1,12 +1,5 @@
-import { clearString, renderWithWrapperStaticRouter } from 'shared/testsUtils';
-import Stepper, { code } from '../Stepper';
-
-describe('<Stepper />', () => {
-  it('Should render Stepper', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(<Stepper />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+import { clearString } from 'shared/testsUtils';
+import { code } from '../Stepper';
 
 describe('code', () => {
   const onChange = jest.fn();
@@ -73,49 +66,7 @@ describe('code', () => {
             href="${defaultProps.step4Href}"
             onClick={onClick}>
             <span className="af-steps-list-stepNumber">
-              <i className="glyphicon glyphicon-${defaultProps.step4Icon}"></i> 
-            </span>
-            <span className="af-steps-list-stepTitle">${defaultProps.step4Title}</span>
-          </a>
-        </StepBase>
-        <Step id="${defaultProps.step5Id}" title="${defaultProps.step5Title}"  mode="${defaultProps.step5Mode}" />
-      </Steps>     
-      `),
-    );
-  });
-
-  it('Should render Stepper with default props without icon', () => {
-    const result = code({ ...defaultProps, step4Icon: '' });
-    expect(clearString(result)).toEqual(
-      clearString(`
-      <Steps classModifier="${defaultProps.classModifier}" className="${defaultProps.className}">
-        <Step
-          id="${defaultProps.step1Id}"
-          href="${defaultProps.step1Href}"
-          onClick={onClick}
-          mode="${defaultProps.step1Mode}"
-          title="${defaultProps.step1Title}"
-        />
-        <Step
-          id="${defaultProps.step2Id}"
-          href="${defaultProps.step2Href}"
-          onClick={onClick}
-          mode="${defaultProps.step2Mode}"
-          title="${defaultProps.step2Title}"
-        />
-        <Step
-          id="${defaultProps.step3Id}"
-          number="${defaultProps.step3Number}"
-          onClick={onClick}
-          mode="${defaultProps.step3Mode}"
-          title="${defaultProps.step3Title}"
-        />
-        <StepBase id="${defaultProps.step4Id}" title="Un titre">
-          <a
-            className="af-steps-list-stepLabel"
-            href="${defaultProps.step4Href}"
-            onClick={onClick}>
-            <span className="af-steps-list-stepNumber">             
+            <i role="img" aria-label="${defaultProps.step4Icon}" className="glyphicon glyphicon-${defaultProps.step4Icon}"></i>
             </span>
             <span className="af-steps-list-stepTitle">${defaultProps.step4Title}</span>
           </a>

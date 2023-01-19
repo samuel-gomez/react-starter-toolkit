@@ -1,12 +1,5 @@
-import { clearString, renderWithWrapperStaticRouter } from 'shared/testsUtils';
-import Action, { code } from '../Action';
-
-describe('<Action />', () => {
-  it('Should render Action', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(<Action />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+import { clearString } from 'shared/testsUtils';
+import { code } from '../Action';
 
 describe('code', () => {
   const onChange = jest.fn();

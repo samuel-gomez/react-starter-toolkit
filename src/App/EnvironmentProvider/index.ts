@@ -1,2 +1,2 @@
-export { default, EnvironmentContext, useEnv, fetchEnv } from './Environment';
+export { default, EnvironmentContext, useEnv, fetchEnv, getFileEnv } from './Environment';
 export type { TEnvironment, TEnvironmentState } from './Environment';

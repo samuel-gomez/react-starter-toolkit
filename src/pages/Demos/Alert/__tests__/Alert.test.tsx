@@ -1,13 +1,5 @@
-import { renderWithWrapperStaticRouter } from 'shared/testsUtils';
 import { clearString } from 'shared/testsUtils';
-import AlertPage, { code } from '../Alert';
-
-describe('<AlertPage/>', () => {
-  it('Should render AlertPage', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(<AlertPage />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+import { code } from '../Alert';
 
 describe('code', () => {
   const onChange = jest.fn();

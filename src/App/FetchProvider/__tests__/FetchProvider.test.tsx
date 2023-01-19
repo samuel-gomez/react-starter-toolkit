@@ -10,7 +10,16 @@ import FetchProvider, {
   showReactQueryDevtools,
   setQueryClient,
   setQuery,
+  defaultQueryWithAuth,
 } from '../FetchProvider';
+
+describe('defaultQueryWithAuth', () => {
+  it('Should call fetchCustom with querykey when defaultQueryWithAuthFn have been called with fetchcustom and querykey', async () => {
+    const fetchCustom = jest.fn();
+    defaultQueryWithAuth('queryKey' as unknown as QueryKey, fetchCustom);
+    expect(fetchCustom).toHaveBeenCalledWith('queryKey');
+  });
+});
 
 const fetchConfigMock = {
   headers: {
@@ -128,14 +137,17 @@ describe('buildResponse', () => {
     const result = await buildResponse(responseMock, { blob: false, text: false });
     expect(result).toEqual({ statusHttp: responseMock.status, msg: 'test' });
   });
+
   it('Should return msg = testblob when status = 200 and blob is truthy', async () => {
     const result = await buildResponse(responseMock, { blob: true, text: false });
     expect(result).toEqual({ msg: 'testblob' });
   });
+
   it('Should return msg = testText when status = 200 and text is truthy', async () => {
     const result = await buildResponse(responseMock, { blob: false, text: true });
     expect(result).toEqual({ msg: 'testText' });
   });
+
   it('Should called computeDataErrorFn when status = 504', async () => {
     responseMock.status = 504;
     try {
@@ -144,6 +156,7 @@ describe('buildResponse', () => {
       expect(computeDataErrorFn).toBeCalled();
     }
   });
+
   it('Should called computeDataErrorFn when status = 500', async () => {
     responseMock.status = 500;
     try {
@@ -152,6 +165,7 @@ describe('buildResponse', () => {
       expect(computeDataErrorFn).toBeCalled();
     }
   });
+
   it('Should called computeDataErrorFn when status = 400', async () => {
     responseMock.status = 400;
     try {
@@ -160,6 +174,7 @@ describe('buildResponse', () => {
       expect(computeDataErrorFn).toBeCalled();
     }
   });
+
   it('Should return response 204 when status = 204', async () => {
     responseMock.status = 204;
     const result = await buildResponse(responseMock, { blob: false, text: false });
@@ -175,6 +190,7 @@ describe('computeDataError', () => {
     blob: async () => ({ msg: 'testblob' }),
   };
   const setResponseFn = jest.fn();
+
   it('Should called setResponseFn without setResponseFn', async () => {
     responseMock.json = async () => ({
       anomaly: { label: 'test' },
@@ -183,8 +199,11 @@ describe('computeDataError', () => {
     try {
       await computeDataError(responseMock);
       expect(setResponseFn).toBeCalledWith({ label: 'test' });
-    } catch (error) {}
+    } catch (error) {
+      /* empty */
+    }
   });
+
   it('Should called setResponseFn', async () => {
     responseMock.json = async () => ({
       anomaly: { label: 'test' },
@@ -193,8 +212,11 @@ describe('computeDataError', () => {
     try {
       await computeDataError(responseMock, setResponseFn);
       expect(setResponseFn).toBeCalledWith({ label: 'test' });
-    } catch (error) {}
+    } catch (error) {
+      /* empty */
+    }
   });
+
   it('Should called setResponseFn in throw', async () => {
     responseMock.json = async () => {
       throw new Error('');
@@ -208,12 +230,14 @@ describe('computeDataError', () => {
     }
   });
 });
+
 describe('showReactQueryDevtools', () => {
   it('Should not return ReactQueryDevTools', () => {
     const process = 'test';
     const result = showReactQueryDevtools(process);
     expect(result).toEqual(false);
   });
+
   it('Should return ReactQueryDevTools', () => {
     const process = 'development';
     const result = showReactQueryDevtools(process);

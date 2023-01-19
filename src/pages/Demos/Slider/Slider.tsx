@@ -1,23 +1,22 @@
-import { ReactNode } from 'react';
-import { MessageTypes } from '@axa-fr/react-toolkit-all';
-import Layout, { TLayout } from 'Layout';
+import { MessageTypes } from '@axa-fr/react-toolkit-form-core';
+import Layout, { TLayoutPage } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
 import { TITLE_BAR, TITLE, DESIGN_SYSTEM_PATH, STORYBOOK_PATH, GITHUB_PACKAGE, NPM_NAME } from './constants';
 import knobs from './knobs.json';
 
 const INITIAL_STATE = {
-  label: 'My Label',
+  label: 'My Label Slider',
   id: 'uniqueid',
   name: 'name-field',
-  value: 256,
+  value: 3,
   options: [
-    { label: '64', value: '64', id: 'uniqueId1' },
-    { label: '128', value: '128', id: 'uniqueId2' },
-    { label: '256', value: '256', index: 2, id: 'uniqueId3' },
-    { label: '1024', value: '1024', id: 'uniqueId4' },
-    { label: '2048', value: '2048', id: 'uniqueId5' },
-    { label: '4096', value: '4096', id: 'uniqueId5' },
+    { label: '0', value: 0 },
+    { label: '1', value: 1 },
+    { label: '2', value: 2 },
+    { label: '3', value: 3 },
+    { label: '4', value: 4 },
+    { label: '5', value: 5 },
   ],
   classModifier: '',
   className: '',
@@ -61,7 +60,7 @@ export const code = ({
       label={<>${label}</>}
       name="${name}"
       onChange={onChangeSlider}
-      value="${value}"
+      value={${value}}
       helpMessage="${helpMessage}"
       message="${message}" 
       messageType="${messageType}"
@@ -97,12 +96,7 @@ const SliderEditable = () => {
   return <SliderWithEditor {...state} onChange={onChange} onChangeSlider={onChange('value')} />;
 };
 
-type TSliderPage = TLayout & {
-  titleBar?: ReactNode;
-  title?: ReactNode;
-};
-
-const SliderDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TSliderPage) => (
+const SliderDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <SliderEditable />

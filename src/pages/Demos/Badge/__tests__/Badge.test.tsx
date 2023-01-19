@@ -1,12 +1,5 @@
-import { clearString, renderWithWrapperStaticRouter } from 'shared/testsUtils';
-import Badge, { code } from '../Badge';
-
-describe('<Badge />', () => {
-  it('Should render Badge', () => {
-    const { asFragment } = renderWithWrapperStaticRouter(<Badge />);
-    expect(asFragment()).toMatchSnapshot();
-  });
-});
+import { clearString } from 'shared/testsUtils';
+import { code } from '../Badge';
 
 describe('code', () => {
   const onChange = jest.fn();

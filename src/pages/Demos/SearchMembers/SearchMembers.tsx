@@ -1,5 +1,4 @@
-import { ReactNode } from 'react';
-import Layout, { TLayout } from 'Layout';
+import Layout, { TLayoutPage } from 'Layout';
 import Loader, { TLoaderContainer } from 'shared/components/Loader';
 import Resilience from 'shared/components/Resilience';
 import Table from 'shared/components/Table';
@@ -7,7 +6,7 @@ import DownloadLink from 'shared/components/DownloadLink';
 import { formatDate } from 'shared/helpers/formatDate';
 import { TITLE_BAR, TITLE, SUBTITLE, TABLE_HEADERS_SEARCHMEMBERS } from './constants';
 import SearchForm from './SearchForm';
-import { TReturnUseFormSearchMembers, TReturnUseSearchMembers } from './SearchMembers.hook';
+import type { TReturnUseFormSearchMembers, TReturnUseSearchMembers } from './SearchMembers.hook';
 
 export const getDownloadPath = (memberId: string) => `members/${memberId}/download-detail`;
 
@@ -32,10 +31,8 @@ export const DownloadLinkEnhanced = ({
   <DownloadLink path={getDownloadPathFn(idKey)} fileName={setFileNameFn({ memberId: idKey, name: `${firstname}-${lastname}` })} />
 );
 
-type TSearchMembers = TLayout &
+type TSearchMembers = TLayoutPage &
   Omit<TReturnUseSearchMembers, 'isLoading'> & {
-    titleBar?: ReactNode;
-    title?: ReactNode;
     loaderMode: TLoaderContainer['mode'];
     submitFormSearchMembers: TReturnUseFormSearchMembers['submitFormSearchMembers'];
   };

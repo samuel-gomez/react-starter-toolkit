@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
-import { ClickEvent } from '@axa-fr/react-toolkit-core';
-import Layout, { TLayout } from 'Layout';
+import type { ClickEvent } from '@axa-fr/react-toolkit-core/dist/esm/withClickId.hoc';
+import Layout, { TLayoutPage } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
 import { TITLE_BAR, TITLE, DESIGN_SYSTEM_PATH, STORYBOOK_PATH, GITHUB_PACKAGE, NPM_NAME } from './constants';
@@ -51,12 +51,7 @@ const AlertEditable = () => {
   return <AlertWithEditor {...state} onClose={onClick('onClose Alert')} onChange={onChange} />;
 };
 
-type TAlertPage = TLayout & {
-  titleBar?: ReactNode;
-  title?: ReactNode;
-};
-
-const AlertPage = ({ titleBar = TITLE_BAR, title = TITLE }: TAlertPage) => (
+const AlertPage = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <AlertEditable />

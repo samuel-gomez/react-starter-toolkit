@@ -4,11 +4,14 @@ import NotificationProvider, { NotificationContext } from '../NotificationProvid
 import type { TNotificationContext } from '../NotificationProvider';
 import useNotifications from '../Notifications.hook';
 
-const Base = ({ addNotification }: TNotificationContext) => (
-  <ul>
-    <li>{addNotification ? 'have addNotification' : 'notHave addNotification'}</li>
-  </ul>
-);
+const Base = ({ addNotification }: TNotificationContext) => {
+  addNotification({ id: '02', label: 'title2' });
+  return (
+    <ul>
+      <li>have addNotification</li>
+    </ul>
+  );
+};
 
 const BaseWithNotification = () => {
   const notificationProps = useContext(NotificationContext);

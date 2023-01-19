@@ -1,3 +1,4 @@
+import { createId } from '@axa-fr/react-toolkit-core';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import { LiveProviderProps } from 'react-live';
 import ClipBoard from '../ClipBoard';
@@ -18,16 +19,20 @@ const Code = ({ theme, code }: TCode) => (
       <>
         <ClipBoard content={code} />
         <pre aria-label={ariaLabel} className={className} style={{ ...style, padding: '1rem', fontSize: '0.8rem', position: 'relative' }}>
-          {tokens.map((line, i) => (
-            <div {...getLineProps({ line, key: i })}>
-              <span className="token-line__number">{i + 1}</span>
-              <span className="token-line__content">
-                {line.map((token, key) => (
-                  <span {...getTokenProps({ token, key })} />
-                ))}
-              </span>
-            </div>
-          ))}
+          {tokens.map((line, i) => {
+            const keyLine = createId();
+            return (
+              <div key={keyLine} {...getLineProps({ line, key: keyLine })}>
+                <span className="token-line__number">{i + 1}</span>
+                <span className="token-line__content">
+                  {line.map(token => {
+                    const key = createId();
+                    return <span key={key} {...getTokenProps({ token, key })} />;
+                  })}
+                </span>
+              </div>
+            );
+          })}
         </pre>
       </>
     )}

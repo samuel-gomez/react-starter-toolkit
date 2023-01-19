@@ -1,14 +1,13 @@
-import { ReactNode } from 'react';
 import { PopoverPlacements, PopoverModes } from '@axa-fr/react-toolkit-popover';
-import { ClickEvent } from '@axa-fr/react-toolkit-core';
-import Layout, { TLayout } from 'Layout';
+import type { ClickEvent } from '@axa-fr/react-toolkit-core/dist/esm/index';
+import Layout, { TLayoutPage } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
 import { TITLE_BAR, TITLE, DESIGN_SYSTEM_PATH, STORYBOOK_PATH, GITHUB_PACKAGE, NPM_NAME } from './constants';
 import knobs from './knobs.json';
 
 const INITIAL_STATE = {
-  title: 'Exemple',
+  title: 'Exemple Popover',
   content: 'Contenu qui va reçevoir la popover',
   classModifier: '',
   placement: PopoverPlacements.right,
@@ -52,12 +51,7 @@ const PopoverEditable = () => {
   return <PopoverWithEditor {...state} onClick={onClick('onClick Navbar')} onChange={onChange} />;
 };
 
-type TNavBarPage = TLayout & {
-  titleBar?: ReactNode;
-  title?: ReactNode;
-};
-
-const PopoverDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TNavBarPage) => (
+const PopoverDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <PopoverEditable />

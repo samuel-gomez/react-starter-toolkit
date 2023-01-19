@@ -1,7 +1,7 @@
 import { act, render, renderHook } from '@testing-library/react';
 import { ChangeEvent } from 'react';
 import { clearString } from 'shared/testsUtils';
-import CodeEditor, { useCodeEditor } from '..';
+import CodeEditor, { useCodeEditor, getTemplate } from '..';
 
 const defaultProps = {
   value: 'value',
@@ -63,5 +63,16 @@ describe('useCodeEditor', () => {
       expect(result.current.code).toEqual('<p>initialcode</p>');
     });
     expect(clearString(result.current.code)).toEqual(`<p>initialcode</p><p>mytemplate</p>`);
+  });
+});
+
+describe('getTemplate', () => {
+  it('Should load import file when getTemplate have been called', async () => {
+    const result = await getTemplate('add-text');
+    expect(clearString(result.default)).toEqual(
+      clearString(
+        `<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis voluptatem tempore beatae magnam similique fugit consectetur? Itaque culpa dolor delectus quas doloribus labore? Eius aspernatur ex eligendi molestias veritatis quisquam.</p>`,
+      ),
+    );
   });
 });

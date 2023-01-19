@@ -1,5 +1,4 @@
-import { ReactNode } from 'react';
-import Layout, { TLayout } from 'Layout';
+import Layout, { TLayoutPage } from 'Layout';
 import LiveCode from 'shared/components/LiveCode';
 import { withEditor, useEditable, TEvent, Tknobs, EditorHeader, TReturnUseToggleEditor } from 'shared/components/Editor';
 import { TITLE_BAR, TITLE, DESIGN_SYSTEM_PATH, STORYBOOK_PATH, GITHUB_PACKAGE, NPM_NAME } from './constants';
@@ -71,12 +70,7 @@ const TabsEditable = () => {
   return <TabsWithEditor {...state} onChange={onChange} onChangeTab={onChangeTabFn('activeIndex', onChange)} />;
 };
 
-type TTabsPage = TLayout & {
-  titleBar?: ReactNode;
-  title?: ReactNode;
-};
-
-const TabsDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TTabsPage) => (
+const TabsDemo = ({ titleBar = TITLE_BAR, title = TITLE }: TLayoutPage) => (
   <Layout propsTitle={{ title: titleBar }}>
     <h1 className="af-title--content">{title}</h1>
     <TabsEditable />

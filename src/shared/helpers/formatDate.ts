@@ -1,11 +1,13 @@
-export const formatDate = (date: string | Date, locale = 'fr-FR', options?: Intl.DateTimeFormatOptions) =>
-  new Intl.DateTimeFormat(locale, options).format(new Date(date));
+export type TisValidDate = string | Date;
 
-export const isValidDate = (date: string | Date) =>
-  (date !== null && date !== undefined && isNaN(Number(date))) || (typeof date === 'string' && date !== '');
+export const isValidDate = (date: TisValidDate) =>
+  (date !== null && date !== undefined && Number.isNaN(Number(date))) || (typeof date === 'string' && date !== '');
+
+export const formatDate = (date: TisValidDate = '01/01/1970', locale = 'fr-FR', options?: Intl.DateTimeFormatOptions) =>
+  date === '' ? '' : new Intl.DateTimeFormat(locale, options).format(new Date(date));
 
 export type TsetDate = {
-  date: string;
+  date: TisValidDate;
   formatDateFn?: typeof formatDate;
   isValidDateFn?: typeof isValidDate;
 };

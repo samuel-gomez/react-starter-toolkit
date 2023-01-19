@@ -1,4 +1,4 @@
-import { Alert } from '@axa-fr/react-toolkit-all';
+import Alert from '@axa-fr/react-toolkit-alert';
 import { ALERT_ICON } from '../constants';
 
 export enum EType {
