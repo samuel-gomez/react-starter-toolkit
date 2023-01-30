@@ -1,38 +1,21 @@
-import { ReactNode } from 'react';
-import withClassNameModifier from 'shared/hoc/WithClassNameModifier';
+import { ComponentPropsWithoutRef } from 'react';
+import { default as TableTk } from '@axa-fr/react-toolkit-table';
 import Td, { TTdContainer } from './Td';
 
-type TTr = {
-  className?: string;
-  children: ReactNode;
-};
-const DEFAULT_CLASSNAME = 'af-table__tr';
-
-const Tr = withClassNameModifier(
-  ({ className, children, ...rest }: TTr) => (
-    <tr className={className} aria-label="table-body-line" {...rest}>
-      {children}
-    </tr>
-  ),
-  DEFAULT_CLASSNAME,
-);
-
-export type TLine = {
-  className?: string;
+export type TLine = ComponentPropsWithoutRef<typeof TableTk.Tr> & {
   columns: (TTdContainer & { keyCol: string })[];
-  modifier?: string;
-  children?: ReactNode;
+  ariaLabel?: string;
 };
 
-const Line = ({ className, columns = [], modifier = '', children }: TLine) => (
-  <Tr classModifier={modifier} className={className}>
+const Line = ({ className, columns = [], classModifier = '', children, ariaLabel = 'table-body-line' }: TLine) => (
+  <TableTk.Tr classModifier={classModifier} className={className} aria-label={ariaLabel}>
     <>
       {columns.map(({ keyCol, ...restTd }) => (
         <Td key={keyCol} {...restTd} />
       ))}
       {children}
     </>
-  </Tr>
+  </TableTk.Tr>
 );
 
 export default Line;

@@ -1,0 +1,30 @@
+@import '@axa-fr/react-toolkit-core/dist/assets/scss/core.scss';
+
+.af-table {
+  &__th {
+    &--sortable {
+      padding: 0 1rem 0 0;
+      cursor: pointer;
+    }
+    &:hover {
+      background-color: $color-table-sorting;
+    }
+    &-label {
+      padding: 1rem;
+    }
+    &--active {
+      background-color: $color-table-sorting;
+    }
+  }
+  &__cell--actions {
+    padding: 0.2rem 0.5rem;
+    text-align: center;
+  }
+  .af-btn.af-btn--table-sorting {
+    box-shadow: none;
+    padding: 1em;
+    &:hover {
+      padding: 1em;
+    }
+  }
+}

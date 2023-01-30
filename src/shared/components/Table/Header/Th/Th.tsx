@@ -1,22 +1,17 @@
 import { ReactNode } from 'react';
-import withClassNameModifier from 'shared/hoc/WithClassNameModifier';
+import { default as TableTk } from '@axa-fr/react-toolkit-table';
+import ThSortable, { TsetSort } from './ThSortable';
 
-export type TTh = {
-  className?: string;
+export type TTh = Omit<TsetSort, 'onSort' | 'field'> & {
+  ThSortableCmpt?: typeof ThSortable;
+  ThCmpt?: typeof TableTk.Th;
   children?: ReactNode;
-  ariaLabel?: string;
-  role?: string;
+  classModifier?: string;
+  onSort?: TsetSort['onSort'];
+  field?: TsetSort['field'];
 };
 
-const DEFAULT_CLASSNAME = 'af-table__th';
-
-const Th = withClassNameModifier(
-  ({ className, children, role = 'columnheader', ...rest }: TTh) => (
-    <th className={className} role={role} {...rest}>
-      {children}
-    </th>
-  ),
-  DEFAULT_CLASSNAME,
-);
+const Th = ({ field, sorting, onSort, ThSortableCmpt = ThSortable, ThCmpt = TableTk.Th, ...rest }: TTh) =>
+  field && onSort ? <ThSortableCmpt {...rest} sorting={sorting} onSort={onSort} field={field} /> : <ThCmpt {...rest} />;
 
 export default Th;

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SortingIcon Should render SortingIcon with order equal -1 1`] = `
+<DocumentFragment>
+  <span
+    class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-arrow-xs-down"
+  />
+</DocumentFragment>
+`;
+
+exports[`SortingIcon Should render SortingIcon with order equal 1 1`] = `
+<DocumentFragment>
+  <span
+    class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-arrow-xs-up"
+  />
+</DocumentFragment>
+`;
+
+exports[`SortingIcon Should render SortingIcon with order equal NONE 1`] = `
+<DocumentFragment>
+  <span
+    class="af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-sorting"
+  />
+</DocumentFragment>
+`;

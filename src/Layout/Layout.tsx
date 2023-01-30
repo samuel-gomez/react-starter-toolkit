@@ -1,5 +1,5 @@
 import { ComponentPropsWithoutRef, ReactNode } from 'react';
-import withClassNameModifier from 'shared/hoc/WithClassNameModifier';
+import withClassNameModifier, { TwithClassNameModifier } from 'shared/hoc/WithClassNameModifier';
 import Header from 'Layout/Header';
 import Footer from 'Layout/Footer';
 import TitleBar from 'Layout/TitleBar';
@@ -22,7 +22,7 @@ export type TLayout = {
   propsTitle?: ComponentPropsWithoutRef<typeof TitleBar>;
   propsFooter?: ComponentPropsWithoutRef<typeof Footer>;
   propsA11yMenu?: ComponentPropsWithoutRef<typeof A11yMenu>;
-};
+} & TwithClassNameModifier;
 
 export type TLayoutPage = TLayout & {
   titleBar?: string;
@@ -37,8 +37,6 @@ const disabledDefault = {
   a11yMenu: false,
 };
 
-const DEFAULT_CLASSNAME = 'af-main';
-
 const Layout = withClassNameModifier(
   ({ className, children, propsHeader, propsMenu, propsTitle, propsFooter, propsA11yMenu, fullScreen, disabled = disabledDefault }: TLayout) => (
     <>
@@ -52,7 +50,7 @@ const Layout = withClassNameModifier(
       {!disabled.footer && <Footer {...propsFooter} fullScreen={fullScreen} />}
     </>
   ),
-  DEFAULT_CLASSNAME,
+  { defaultClassName: 'af-main' },
 );
 
 export default Layout;

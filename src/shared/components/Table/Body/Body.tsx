@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { default as TableTk } from '@axa-fr/react-toolkit-table';
 import Line from './Line';
 
 export type Tcol = {
@@ -7,13 +8,14 @@ export type Tcol = {
   children?: ReactNode;
   classModifier?: string;
 };
+
 export type TCols = {
   [k: string]: Tcol;
 };
 
 type TItems = {
   key: string;
-  modifier?: string;
+  classModifier?: string;
   cols: TCols;
 };
 
@@ -24,12 +26,12 @@ export type TBody = {
 };
 
 const Body = ({ items = [], children, ariaLabel = 'table-body' }: TBody) => (
-  <tbody className="af-table__body" aria-label={ariaLabel}>
-    {items.map(({ key, modifier, cols }) => (
-      <Line key={key} modifier={modifier} cols={Object.entries({ ...cols })} />
+  <TableTk.Body aria-label={ariaLabel}>
+    {items.map(({ key, classModifier, cols }) => (
+      <Line key={key} classModifier={classModifier} cols={Object.entries({ ...cols })} />
     ))}
     {children}
-  </tbody>
+  </TableTk.Body>
 );
 
 export default Body;

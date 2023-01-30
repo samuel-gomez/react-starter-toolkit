@@ -1,21 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Td Render <Td/> 1`] = `
-<tr>
-  <td
-    class="af-table__cell"
+exports[`Td Render <Td/> with hover 1`] = `
+<DocumentFragment>
+  <div
+    class="af-popover__wrapper"
   >
-    child td
-  </td>
-</tr>
+    <div
+      class="af-popover__container af-popover__container--content"
+    >
+      <div
+        class="af-popover__container-over"
+        role="presentation"
+      >
+        labelchild td
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
-exports[`Td Render <Td/> with modifier 1`] = `
-<tr>
-  <td
-    class="af-table__cell af-table__cell--custom"
-  >
-    child td
-  </td>
-</tr>
+exports[`Td Render <Td/> without hover 1`] = `
+<DocumentFragment>
+  labelchild th
+</DocumentFragment>
 `;

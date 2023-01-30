@@ -1,0 +1,11 @@
+.af-main {
+  padding: 1rem;
+  min-height: calc(100vh - (calc(var(--fullheaderHeight) + var(--footerHeight))));
+  background: $color-gray-2;
+}
+
+@include media-breakpoint-down(sm) {
+  .af-main {
+    padding: 0;
+  }
+}

@@ -1,6 +1,7 @@
 import { ElementType, ReactNode } from 'react';
 import { emptyFunction } from 'shared/helpers';
 import Table, { TTable } from './Table';
+import './Table.scss';
 
 type TTableContainer = TTable & {
   children?: ReactNode;

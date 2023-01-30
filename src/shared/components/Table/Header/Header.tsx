@@ -1,7 +1,7 @@
 import { ReactNode } from 'react';
-import Table from '@axa-fr/react-toolkit-table';
+import { default as TableTk } from '@axa-fr/react-toolkit-table';
 import HelpHover from 'shared/components/HelpInfo';
-import Th, { TThContainer } from './Th';
+import Th, { TTh } from './Th';
 
 type Theaders = {
   label: string;
@@ -10,7 +10,7 @@ type Theaders = {
   infobulle?: ReactNode;
 };
 
-export type THeader = TThContainer & {
+export type THeader = TTh & {
   headers?: Theaders[];
   children?: ReactNode;
   ariaLabel?: string;
@@ -18,8 +18,8 @@ export type THeader = TThContainer & {
 };
 
 const Header = ({ headers = [], onSort, sorting, children, ariaLabel = 'table-header', ariaLabelLine = 'table-header-line' }: THeader) => (
-  <thead className="af-table__thead" aria-label={ariaLabel}>
-    <Table.Tr className="af-table__tr" aria-label={ariaLabelLine}>
+  <TableTk.Header className="af-table__thead" aria-label={ariaLabel}>
+    <TableTk.Tr aria-label={ariaLabelLine}>
       <>
         {!!headers.length &&
           headers.map(({ field, label, key, infobulle }) => (
@@ -31,8 +31,8 @@ const Header = ({ headers = [], onSort, sorting, children, ariaLabel = 'table-he
           ))}
         {children}
       </>
-    </Table.Tr>
-  </thead>
+    </TableTk.Tr>
+  </TableTk.Header>
 );
 
 export default Header;
