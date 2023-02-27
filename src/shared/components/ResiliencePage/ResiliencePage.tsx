@@ -1,5 +1,5 @@
 import { withClassDefault, withClassModifier, WithClassModifierOptions, compose, identity } from '@axa-fr/react-toolkit-core';
-import TitleBar from 'Layout/TitleBar';
+import TitleBar from '../Layout/TitleBar';
 import './ResiliencePage.scss';
 
 export type TResiliencePage = WithClassModifierOptions & {

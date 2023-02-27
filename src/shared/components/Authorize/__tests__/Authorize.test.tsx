@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import UserProvider, { UserContext, TUserContext } from 'App/UserProvider';
+import UserProvider, { UserContext, TUserContext } from 'providers/UserProvider';
 import { createContext } from 'react';
 import Authorize from '../Authorize';
 

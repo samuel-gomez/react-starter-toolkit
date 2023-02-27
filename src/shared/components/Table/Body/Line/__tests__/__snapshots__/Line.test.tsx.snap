@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Line Should render <Line/> when columns: [[Object]], className: myclass, modifier: modifier, children: {"$typeof": Symbol(react.element), "_owner": null, "_store": [Object], "key": null, "props": [Object], "ref": null, "type": "td"} 1`] = `
+exports[`Line Should render <Line/> when columns: [[Object]], className: myclass, modifier: modifier, children: {"$$typeof": Symbol(react.element), "_owner": null, "_store": [Object], "key": null, "props": [Object], "ref": null, "type": "td"} 1`] = `
 <tbody>
   <tr
     aria-label="table-body-line"

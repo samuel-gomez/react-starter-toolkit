@@ -1,35 +1,24 @@
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
 
 echo '🏗️👷 Styling, testing and building your project before committing'
+
+# Check and Fix Prettier standards / ESLint Standards
+npx lint-staged
 
 # Check units tests (Jest & React Testing)
 npm test ||
 (
-    echo '❌ Units Tests Check Failed. Run npm run test, add changes and try commit again.';
+    echo '🔬 ❌ Units Tests Check Failed. Run npm run test, add changes and try commit again.';
     false;
-)
-
-# Check Prettier standards
-npm run prettier ||
-(
-    echo '🤢❌ Prettier Check Failed. Run npm run format, add changes and try commit again.';
-    false;
-)
-
-# Check ESLint Standards
-npm run lint ||
-(
-    echo '😤❌ ESLint Check Failed. Make the required changes listed above, add changes and try to commit again.'
-    false; 
 )
 
 # If everything passes... Now we can commit
-echo '🤔... Allright.... Code looks good to me... Trying to build now.'
+echo '🤔 ... Allright.... Code looks good to me... Trying to build now.'
 
 npm run build ||
 (
-    echo '🔨❌ Next build failed: View the errors above to see why.'
+    echo '📦 ❌ Next build failed: View the errors above to see why.'
     false;
 )
 

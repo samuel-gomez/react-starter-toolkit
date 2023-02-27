@@ -1,0 +1,40 @@
+@import '@axa-fr/react-toolkit-layout-header/dist/Title/title-bar.scss';
+@import 'shared/scss/variables.scss';
+
+.af-title-bar {
+  margin-bottom: 0;
+  &--backhome {
+    .af-title-bar {
+      &__wrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .af-title-bar__title {
+          order: 2;
+          margin-left: 1em;
+        }
+      }
+    }
+  }
+  &--fullscreen {
+    .container {
+      width: 100%;
+    }
+  }
+}
+
+@include media-breakpoint-down(sm) {
+  .af-title-bar {
+    position: sticky;
+    width: 100%;
+    top: calc(var(--fullheaderHeight) - var(--titlebarHeight));
+    z-index: 8;
+    &__title {
+      font-size: 1.2rem;
+    }
+    .af-btn--circle {
+      width: 2rem;
+      height: 2rem;
+    }
+  }
+}

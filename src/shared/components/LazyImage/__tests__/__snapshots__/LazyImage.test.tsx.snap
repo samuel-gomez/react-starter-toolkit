@@ -1,29 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<LasyImage/> Should render LasyImage 1`] = `
+exports[`<LasyImage /> Should render LasyImage 1`] = `
 <DocumentFragment>
   <img
     alt="alt_accordion"
-    src="accordion.svg"
+    data-nimg="fill"
+    decoding="async"
+    loading="lazy"
+    sizes="(max-width: 768px) 100vw"
+    src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
+    srcset="/_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
+    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
   />
 </DocumentFragment>
 `;
 
-exports[`<LasyImage/> Should render LasyImage unknown image 1`] = `
+exports[`<LasyImage /> Should render LasyImage unknown image 1`] = `
 <DocumentFragment>
   <img
     alt="alt_unknown"
-    src="Error: Cannot find module '../../../../public/images/unknown.svg' from 'src/shared/components/LazyImage/LazyImage.tsx'"
+    data-nimg="fill"
+    decoding="async"
+    loading="lazy"
+    sizes="(max-width: 768px) 100vw"
+    src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
+    srcset="/_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
+    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
   />
 </DocumentFragment>
 `;
 
-exports[`<LasyImage/> Should render LasyImage when loading 1`] = `
+exports[`<LasyImage /> Should render LasyImage when loading 1`] = `
 <DocumentFragment>
   <img
     alt="loading..."
     class="af-lasyimage"
-    src="puff.svg"
+    data-nimg="fill"
+    decoding="async"
+    loading="lazy"
+    sizes="100vw"
+    src="/_next/image?url=%2Fimg.jpg&w=3840&q=75"
+    srcset="/_next/image?url=%2Fimg.jpg&w=640&q=75 640w, /_next/image?url=%2Fimg.jpg&w=750&q=75 750w, /_next/image?url=%2Fimg.jpg&w=828&q=75 828w, /_next/image?url=%2Fimg.jpg&w=1080&q=75 1080w, /_next/image?url=%2Fimg.jpg&w=1200&q=75 1200w, /_next/image?url=%2Fimg.jpg&w=1920&q=75 1920w, /_next/image?url=%2Fimg.jpg&w=2048&q=75 2048w, /_next/image?url=%2Fimg.jpg&w=3840&q=75 3840w"
+    style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
   />
 </DocumentFragment>
 `;

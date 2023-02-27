@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useContext, useState, useId } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import downloadjs from 'downloadjs';
-import { NotificationContext, TaddNotification } from 'App/NotificationProvider';
+import { NotificationContext, TaddNotification } from 'providers/NotificationProvider';
 import { SERVICE_NAME, SUCCESS_DOWNLOAD_MESSAGE } from './constants';
 
 export const onSuccess =

@@ -1,3 +1,5 @@
+/* eslint-disable react/display-name */
+import Image from 'next/image';
 import { ComponentType, FocusEvent, useCallback, useState } from 'react';
 import Draggable from 'react-draggable';
 import { useToggleModal } from 'shared/components/ModalCommon';
@@ -212,8 +214,8 @@ export const EditorHeader = ({ storybookPath = '', designSystemPath = '', github
     )}
 
     {!!npmName && (
-      <a target="_blank" rel="noopener noreferrer" href={`https://badge.fury.io/js/${npmName}`}>
-        <img src={`https://badge.fury.io/js/${npmName}.svg`} alt="npm version" />
+      <a className="af-link__npm-name" target="_blank" rel="noopener noreferrer" href={`https://badge.fury.io/js/${npmName}`}>
+        <Image alt="npm version" src={`https://badge.fury.io/js/${npmName}.svg`} fill sizes="(max-width: 768px) 100vw" />
       </a>
     )}
 

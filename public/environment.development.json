@@ -16,7 +16,8 @@
   "oidc": {
     "isEnabled": true,
     "client_id": "interactive.public",
-    "redirect_uri": "http://localhost:9999/authentication/callback",
+    "redirect_uri": "http://localhost:3000/#authentication/callback",
+    "silent_redirect_uri": "http://localhost:3000/#authentication/silent-callback",
     "scope": "openid profile email api offline_access",
     "authority": "https://demo.duendesoftware.com"
   }

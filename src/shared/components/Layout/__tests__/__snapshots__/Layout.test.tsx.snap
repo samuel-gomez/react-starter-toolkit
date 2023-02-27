@@ -1,0 +1,2949 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout Should render when disabled: {"footer": true, "header": true, "menu": true, "title": true} 1`] = `
+<DocumentFragment>
+  <ul
+    aria-label="Menu d'accès rapide"
+    class="af-a11ymenu"
+  >
+    <li
+      class="af-a11ymenu__item"
+    >
+      <a
+        class="af-a11ymenu__link"
+        href="#main-content"
+      >
+        Passer directement au contenu principal
+      </a>
+    </li>
+    <li
+      class="af-a11ymenu__item"
+    >
+      <a
+        class="af-a11ymenu__link"
+        href="#mainmenu"
+      >
+        Accès rapide au menu principal
+      </a>
+    </li>
+  </ul>
+  <main
+    aria-label="Main Content"
+    class="af-main"
+    id="main-content"
+  />
+</DocumentFragment>
+`;
+
+exports[`Layout Should render when disabled: {"footer": true} 1`] = `
+<DocumentFragment>
+  <ul
+    aria-label="Menu d'accès rapide"
+    class="af-a11ymenu"
+  >
+    <li
+      class="af-a11ymenu__item"
+    >
+      <a
+        class="af-a11ymenu__link"
+        href="#main-content"
+      >
+        Passer directement au contenu principal
+      </a>
+    </li>
+    <li
+      class="af-a11ymenu__item"
+    >
+      <a
+        class="af-a11ymenu__link"
+        href="#mainmenu"
+      >
+        Accès rapide au menu principal
+      </a>
+    </li>
+  </ul>
+  <div
+    class="af-header"
+  >
+    <div
+      class="container af-header__wrapper"
+    >
+      <header
+        class="af-header__content"
+        role="banner"
+      >
+        <div
+          class="af-header__name af-header__name--slash"
+        >
+          <a
+            class="af-logo"
+            href="/"
+          >
+            <img
+              alt="Toolkit React Starter"
+              class="af-logo__brand"
+              src="/img.jpg"
+            />
+          </a>
+          <h2
+            class="af-header__title"
+          >
+            Toolkit React Starter
+            <span
+              class="af-header__subtitle"
+            >
+              by Slash Design System
+            </span>
+          </h2>
+        </div>
+        <div
+          class="af-info-user"
+        >
+          <a
+            class="af-info-user__link"
+            href="#"
+            title="Voir mon profil"
+          >
+            <span
+              class="af-info-user__name"
+            />
+            <span
+              class="af-info-user__profile"
+            >
+              [inconnu]
+            </span>
+          </a>
+        </div>
+      </header>
+    </div>
+  </div>
+  <section
+    class="af-menu"
+  >
+    <div
+      class="af-nav-container"
+    >
+      <button
+        aria-controls="mainmenu"
+        aria-haspopup="true"
+        aria-label="Open Menu"
+        class="mask fade "
+        id="togglemenu"
+        type="button"
+      />
+      <nav
+        aria-label="Menu principal"
+        class="af-nav af-drawer left false"
+        role="navigation"
+      >
+        <div
+          class="container af-nav__wrapper"
+        >
+          <div
+            class="af-nav__aside-header"
+          >
+            <h4
+              class="af-nav__aside-title"
+            >
+              Menu
+            </h4>
+            <button
+              aria-controls="mainmenu"
+              aria-haspopup="true"
+              aria-label="Close Menu"
+              class="af-nav__aside-close"
+              id="togglemenu"
+              type="button"
+            >
+              ×
+            </button>
+          </div>
+          <ul
+            aria-labelledby="togglemenu"
+            class="af-nav__list "
+            id="mainmenu"
+            role="menubar"
+          >
+            <li
+              class="af-nav__item af-nav__item--active "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Accueil"
+                class="af-nav__link"
+                href="/"
+                index="0"
+                role="menuitem"
+                tabindex="0"
+              >
+                Accueil
+              </a>
+            </li>
+            <li
+              class="af-nav__item af-nav__item--haschild "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Démos"
+                class="af-nav__link"
+                href="/demos"
+                index="1"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Démos
+              </a>
+              <i
+                class="glyphicon glyphicon-arrow-xs-down"
+              />
+              <ul
+                aria-label=""
+                class="af-nav__list af-nav__list--children"
+                role="menu"
+              >
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Membres"
+                    class="af-nav__link"
+                    href="/demos/members"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Membres
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Rechercher"
+                    class="af-nav__link"
+                    href="/demos/searchMembers"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Rechercher
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Modal"
+                    class="af-nav__link"
+                    href="/demos/modalCustom"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Modal
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Notification"
+                    class="af-nav__link"
+                    href="/demos/notification"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Notification
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li
+              class="af-nav__item af-nav__item--haschild "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Toolkit components"
+                class="af-nav__link"
+                href="/demos"
+                index="2"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Toolkit components
+              </a>
+              <i
+                class="glyphicon glyphicon-arrow-xs-down"
+              />
+              <ul
+                aria-label=""
+                class="af-nav__list af-nav__list--children"
+                role="menu"
+              >
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Accordion"
+                    class="af-nav__link"
+                    href="/demos/accordion"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Accordion
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Action"
+                    class="af-nav__link"
+                    href="/demos/action"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Action
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Alert"
+                    class="af-nav__link"
+                    href="/demos/alert"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Alert
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Badge"
+                    class="af-nav__link"
+                    href="/demos/badge"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Badge
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Button"
+                    class="af-nav__link"
+                    href="/demos/button"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Button
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Help"
+                    class="af-nav__link"
+                    href="/demos/help"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Help
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Loader"
+                    class="af-nav__link"
+                    href="/demos/loader"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Loader
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Modal"
+                    class="af-nav__link"
+                    href="/demos/modal"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Modal
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Popover"
+                    class="af-nav__link"
+                    href="/demos/popover"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Popover
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Restitution"
+                    class="af-nav__link"
+                    href="/demos/restitution"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Restitution
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Table"
+                    class="af-nav__link"
+                    href="/demos/table"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Table
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Tabs"
+                    class="af-nav__link"
+                    href="/demos/tabs"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Tabs
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Title"
+                    class="af-nav__link"
+                    href="/demos/title"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Title
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li
+              class="af-nav__item af-nav__item--haschild "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Toolkit structure"
+                class="af-nav__link"
+                href="/demos"
+                index="3"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Toolkit structure
+              </a>
+              <i
+                class="glyphicon glyphicon-arrow-xs-down"
+              />
+              <ul
+                aria-label=""
+                class="af-nav__list af-nav__list--children"
+                role="menu"
+              >
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Footer"
+                    class="af-nav__link"
+                    href="/demos/footer"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Footer
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Footer Client"
+                    class="af-nav__link"
+                    href="/demos/footerClient"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Footer Client
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Header"
+                    class="af-nav__link"
+                    href="/demos/header"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Header
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Infos"
+                    class="af-nav__link"
+                    href="/demos/infos"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Infos
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="NavBar"
+                    class="af-nav__link"
+                    href="/demos/navbar"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    NavBar
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="TitleBar"
+                    class="af-nav__link"
+                    href="/demos/titlebar"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    TitleBar
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li
+              class="af-nav__item af-nav__item--haschild "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Toolkit form components"
+                class="af-nav__link"
+                href="/demos"
+                index="4"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Toolkit form components
+              </a>
+              <i
+                class="glyphicon glyphicon-arrow-xs-down"
+              />
+              <ul
+                aria-label=""
+                class="af-nav__list af-nav__list--children"
+                role="menu"
+              >
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Checkbox Input"
+                    class="af-nav__link"
+                    href="/demos/checkboxInput"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Checkbox Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Date Input"
+                    class="af-nav__link"
+                    href="/demos/dateInput"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Date Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="File"
+                    class="af-nav__link"
+                    href="/demos/fileInput"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    File
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Number Input"
+                    class="af-nav__link"
+                    href="/demos/numberInput"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Number Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Radio Input"
+                    class="af-nav__link"
+                    href="/demos/radioInput"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Radio Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Select Input"
+                    class="af-nav__link"
+                    href="/demos/selectInput"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Select Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Select Multi"
+                    class="af-nav__link"
+                    href="/demos/selectMulti"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Select Multi
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Slider"
+                    class="af-nav__link"
+                    href="/demos/slider"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Slider
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Stepper"
+                    class="af-nav__link"
+                    href="/demos/stepper"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Stepper
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Switch"
+                    class="af-nav__link"
+                    href="/demos/switch"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Switch
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Textarea Input"
+                    class="af-nav__link"
+                    href="/demos/textareaInput"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Textarea Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Text Input"
+                    class="af-nav__link"
+                    href="/demos/textInput"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Text Input
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li
+              class="af-nav__item af-nav__item--haschild "
+              role="none"
+            >
+              <span
+                aria-expanded="false"
+                class="af-nav__link"
+                index="5"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Pages
+              </span>
+              <i
+                class="glyphicon glyphicon-arrow-xs-down"
+              />
+              <ul
+                aria-label=""
+                class="af-nav__list af-nav__list--children"
+                role="menu"
+              >
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Not found"
+                    class="af-nav__link"
+                    href="/notFound"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Not found
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Forbidden"
+                    class="af-nav__link"
+                    href="/unauthorize"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Forbidden
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li
+              class="af-nav__item "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Layout"
+                class="af-nav__link"
+                href="/demos/layout"
+                index="6"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Layout
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </section>
+  <a
+    aria-controls="mainmenu"
+    aria-haspopup="true"
+    class="btn af-title-bar__mobile-menu af-btn--circle"
+    href="/#"
+    id="opentogglemenu"
+    role="button"
+    tabindex="0"
+    title="Open toggle menu"
+  >
+    <i
+      class="glyphicon glyphicon-menu-hamburger"
+    />
+  </a>
+  <div
+    class="af-title-bar"
+  >
+    <div
+      class="container af-title-bar__wrapper"
+    >
+      <h1
+        class="af-title-bar__title"
+      >
+        title
+      </h1>
+    </div>
+  </div>
+  <main
+    aria-label="Main Content"
+    class="af-main"
+    id="main-content"
+  >
+    <section
+      class="container"
+    />
+  </main>
+</DocumentFragment>
+`;
+
+exports[`Layout Should render when disabled: {"header": true} 1`] = `
+<DocumentFragment>
+  <ul
+    aria-label="Menu d'accès rapide"
+    class="af-a11ymenu"
+  >
+    <li
+      class="af-a11ymenu__item"
+    >
+      <a
+        class="af-a11ymenu__link"
+        href="#main-content"
+      >
+        Passer directement au contenu principal
+      </a>
+    </li>
+    <li
+      class="af-a11ymenu__item"
+    >
+      <a
+        class="af-a11ymenu__link"
+        href="#mainmenu"
+      >
+        Accès rapide au menu principal
+      </a>
+    </li>
+  </ul>
+  <section
+    class="af-menu"
+  >
+    <div
+      class="af-nav-container"
+    >
+      <button
+        aria-controls="mainmenu"
+        aria-haspopup="true"
+        aria-label="Open Menu"
+        class="mask fade "
+        id="togglemenu"
+        type="button"
+      />
+      <nav
+        aria-label="Menu principal"
+        class="af-nav af-drawer left false"
+        role="navigation"
+      >
+        <div
+          class="container af-nav__wrapper"
+        >
+          <div
+            class="af-nav__aside-header"
+          >
+            <h4
+              class="af-nav__aside-title"
+            >
+              Menu
+            </h4>
+            <button
+              aria-controls="mainmenu"
+              aria-haspopup="true"
+              aria-label="Close Menu"
+              class="af-nav__aside-close"
+              id="togglemenu"
+              type="button"
+            >
+              ×
+            </button>
+          </div>
+          <ul
+            aria-labelledby="togglemenu"
+            class="af-nav__list "
+            id="mainmenu"
+            role="menubar"
+          >
+            <li
+              class="af-nav__item af-nav__item--active "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Accueil"
+                class="af-nav__link"
+                href="/"
+                index="0"
+                role="menuitem"
+                tabindex="0"
+              >
+                Accueil
+              </a>
+            </li>
+            <li
+              class="af-nav__item af-nav__item--haschild "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Démos"
+                class="af-nav__link"
+                href="/demos"
+                index="1"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Démos
+              </a>
+              <i
+                class="glyphicon glyphicon-arrow-xs-down"
+              />
+              <ul
+                aria-label=""
+                class="af-nav__list af-nav__list--children"
+                role="menu"
+              >
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Membres"
+                    class="af-nav__link"
+                    href="/demos/members"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Membres
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Rechercher"
+                    class="af-nav__link"
+                    href="/demos/searchMembers"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Rechercher
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Modal"
+                    class="af-nav__link"
+                    href="/demos/modalCustom"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Modal
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Notification"
+                    class="af-nav__link"
+                    href="/demos/notification"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Notification
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li
+              class="af-nav__item af-nav__item--haschild "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Toolkit components"
+                class="af-nav__link"
+                href="/demos"
+                index="2"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Toolkit components
+              </a>
+              <i
+                class="glyphicon glyphicon-arrow-xs-down"
+              />
+              <ul
+                aria-label=""
+                class="af-nav__list af-nav__list--children"
+                role="menu"
+              >
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Accordion"
+                    class="af-nav__link"
+                    href="/demos/accordion"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Accordion
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Action"
+                    class="af-nav__link"
+                    href="/demos/action"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Action
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Alert"
+                    class="af-nav__link"
+                    href="/demos/alert"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Alert
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Badge"
+                    class="af-nav__link"
+                    href="/demos/badge"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Badge
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Button"
+                    class="af-nav__link"
+                    href="/demos/button"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Button
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Help"
+                    class="af-nav__link"
+                    href="/demos/help"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Help
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Loader"
+                    class="af-nav__link"
+                    href="/demos/loader"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Loader
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Modal"
+                    class="af-nav__link"
+                    href="/demos/modal"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Modal
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Popover"
+                    class="af-nav__link"
+                    href="/demos/popover"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Popover
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Restitution"
+                    class="af-nav__link"
+                    href="/demos/restitution"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Restitution
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Table"
+                    class="af-nav__link"
+                    href="/demos/table"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Table
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Tabs"
+                    class="af-nav__link"
+                    href="/demos/tabs"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Tabs
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Title"
+                    class="af-nav__link"
+                    href="/demos/title"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Title
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li
+              class="af-nav__item af-nav__item--haschild "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Toolkit structure"
+                class="af-nav__link"
+                href="/demos"
+                index="3"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Toolkit structure
+              </a>
+              <i
+                class="glyphicon glyphicon-arrow-xs-down"
+              />
+              <ul
+                aria-label=""
+                class="af-nav__list af-nav__list--children"
+                role="menu"
+              >
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Footer"
+                    class="af-nav__link"
+                    href="/demos/footer"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Footer
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Footer Client"
+                    class="af-nav__link"
+                    href="/demos/footerClient"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Footer Client
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Header"
+                    class="af-nav__link"
+                    href="/demos/header"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Header
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Infos"
+                    class="af-nav__link"
+                    href="/demos/infos"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Infos
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="NavBar"
+                    class="af-nav__link"
+                    href="/demos/navbar"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    NavBar
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="TitleBar"
+                    class="af-nav__link"
+                    href="/demos/titlebar"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    TitleBar
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li
+              class="af-nav__item af-nav__item--haschild "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Toolkit form components"
+                class="af-nav__link"
+                href="/demos"
+                index="4"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Toolkit form components
+              </a>
+              <i
+                class="glyphicon glyphicon-arrow-xs-down"
+              />
+              <ul
+                aria-label=""
+                class="af-nav__list af-nav__list--children"
+                role="menu"
+              >
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Checkbox Input"
+                    class="af-nav__link"
+                    href="/demos/checkboxInput"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Checkbox Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Date Input"
+                    class="af-nav__link"
+                    href="/demos/dateInput"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Date Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="File"
+                    class="af-nav__link"
+                    href="/demos/fileInput"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    File
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Number Input"
+                    class="af-nav__link"
+                    href="/demos/numberInput"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Number Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Radio Input"
+                    class="af-nav__link"
+                    href="/demos/radioInput"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Radio Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Select Input"
+                    class="af-nav__link"
+                    href="/demos/selectInput"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Select Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Select Multi"
+                    class="af-nav__link"
+                    href="/demos/selectMulti"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Select Multi
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Slider"
+                    class="af-nav__link"
+                    href="/demos/slider"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Slider
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Stepper"
+                    class="af-nav__link"
+                    href="/demos/stepper"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Stepper
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Switch"
+                    class="af-nav__link"
+                    href="/demos/switch"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Switch
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Textarea Input"
+                    class="af-nav__link"
+                    href="/demos/textareaInput"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Textarea Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Text Input"
+                    class="af-nav__link"
+                    href="/demos/textInput"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Text Input
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li
+              class="af-nav__item af-nav__item--haschild "
+              role="none"
+            >
+              <span
+                aria-expanded="false"
+                class="af-nav__link"
+                index="5"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Pages
+              </span>
+              <i
+                class="glyphicon glyphicon-arrow-xs-down"
+              />
+              <ul
+                aria-label=""
+                class="af-nav__list af-nav__list--children"
+                role="menu"
+              >
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Not found"
+                    class="af-nav__link"
+                    href="/notFound"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Not found
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Forbidden"
+                    class="af-nav__link"
+                    href="/unauthorize"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Forbidden
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li
+              class="af-nav__item "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Layout"
+                class="af-nav__link"
+                href="/demos/layout"
+                index="6"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Layout
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </section>
+  <a
+    aria-controls="mainmenu"
+    aria-haspopup="true"
+    class="btn af-title-bar__mobile-menu af-btn--circle"
+    href="/#"
+    id="opentogglemenu"
+    role="button"
+    tabindex="0"
+    title="Open toggle menu"
+  >
+    <i
+      class="glyphicon glyphicon-menu-hamburger"
+    />
+  </a>
+  <div
+    class="af-title-bar"
+  >
+    <div
+      class="container af-title-bar__wrapper"
+    >
+      <h1
+        class="af-title-bar__title"
+      >
+        title
+      </h1>
+    </div>
+  </div>
+  <main
+    aria-label="Main Content"
+    class="af-main"
+    id="main-content"
+  >
+    <section
+      class="container"
+    />
+  </main>
+  <footer
+    class="af-footer"
+  >
+    <div
+      class="container-fluid container"
+    >
+      <a
+        class="af-logo"
+        href="https://www.axa.fr/"
+        target="blank"
+        title="Site Axa"
+      >
+        <img
+          alt="Logo Axa"
+          class="af-logo__brand"
+          data-nimg="1"
+          decoding="async"
+          height="22"
+          loading="lazy"
+          src="/_next/image?url=%2Fimg.jpg&w=48&q=75"
+          srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=48&q=75 2x"
+          style="color: transparent;"
+          width="22"
+        />
+      </a>
+      <div
+        class="af-footer-content"
+      >
+        © 2023 AXA Tous droits réservés - v1.0.0
+      </div>
+    </div>
+  </footer>
+</DocumentFragment>
+`;
+
+exports[`Layout Should render when disabled: {"menu": true} 1`] = `
+<DocumentFragment>
+  <ul
+    aria-label="Menu d'accès rapide"
+    class="af-a11ymenu"
+  >
+    <li
+      class="af-a11ymenu__item"
+    >
+      <a
+        class="af-a11ymenu__link"
+        href="#main-content"
+      >
+        Passer directement au contenu principal
+      </a>
+    </li>
+    <li
+      class="af-a11ymenu__item"
+    >
+      <a
+        class="af-a11ymenu__link"
+        href="#mainmenu"
+      >
+        Accès rapide au menu principal
+      </a>
+    </li>
+  </ul>
+  <div
+    class="af-header"
+  >
+    <div
+      class="container af-header__wrapper"
+    >
+      <header
+        class="af-header__content"
+        role="banner"
+      >
+        <div
+          class="af-header__name af-header__name--slash"
+        >
+          <a
+            class="af-logo"
+            href="/"
+          >
+            <img
+              alt="Toolkit React Starter"
+              class="af-logo__brand"
+              src="/img.jpg"
+            />
+          </a>
+          <h2
+            class="af-header__title"
+          >
+            Toolkit React Starter
+            <span
+              class="af-header__subtitle"
+            >
+              by Slash Design System
+            </span>
+          </h2>
+        </div>
+        <div
+          class="af-info-user"
+        >
+          <a
+            class="af-info-user__link"
+            href="#"
+            title="Voir mon profil"
+          >
+            <span
+              class="af-info-user__name"
+            />
+            <span
+              class="af-info-user__profile"
+            >
+              [inconnu]
+            </span>
+          </a>
+        </div>
+      </header>
+    </div>
+  </div>
+  <div
+    class="af-title-bar"
+  >
+    <div
+      class="container af-title-bar__wrapper"
+    >
+      <h1
+        class="af-title-bar__title"
+      >
+        title
+      </h1>
+    </div>
+  </div>
+  <main
+    aria-label="Main Content"
+    class="af-main"
+    id="main-content"
+  >
+    <section
+      class="container"
+    />
+  </main>
+  <footer
+    class="af-footer"
+  >
+    <div
+      class="container-fluid container"
+    >
+      <a
+        class="af-logo"
+        href="https://www.axa.fr/"
+        target="blank"
+        title="Site Axa"
+      >
+        <img
+          alt="Logo Axa"
+          class="af-logo__brand"
+          data-nimg="1"
+          decoding="async"
+          height="22"
+          loading="lazy"
+          src="/_next/image?url=%2Fimg.jpg&w=48&q=75"
+          srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=48&q=75 2x"
+          style="color: transparent;"
+          width="22"
+        />
+      </a>
+      <div
+        class="af-footer-content"
+      >
+        © 2023 AXA Tous droits réservés - v1.0.0
+      </div>
+    </div>
+  </footer>
+</DocumentFragment>
+`;
+
+exports[`Layout Should render when disabled: {"title": true} 1`] = `
+<DocumentFragment>
+  <ul
+    aria-label="Menu d'accès rapide"
+    class="af-a11ymenu"
+  >
+    <li
+      class="af-a11ymenu__item"
+    >
+      <a
+        class="af-a11ymenu__link"
+        href="#main-content"
+      >
+        Passer directement au contenu principal
+      </a>
+    </li>
+    <li
+      class="af-a11ymenu__item"
+    >
+      <a
+        class="af-a11ymenu__link"
+        href="#mainmenu"
+      >
+        Accès rapide au menu principal
+      </a>
+    </li>
+  </ul>
+  <div
+    class="af-header"
+  >
+    <div
+      class="container af-header__wrapper"
+    >
+      <header
+        class="af-header__content"
+        role="banner"
+      >
+        <div
+          class="af-header__name af-header__name--slash"
+        >
+          <a
+            class="af-logo"
+            href="/"
+          >
+            <img
+              alt="Toolkit React Starter"
+              class="af-logo__brand"
+              src="/img.jpg"
+            />
+          </a>
+          <h2
+            class="af-header__title"
+          >
+            Toolkit React Starter
+            <span
+              class="af-header__subtitle"
+            >
+              by Slash Design System
+            </span>
+          </h2>
+        </div>
+        <div
+          class="af-info-user"
+        >
+          <a
+            class="af-info-user__link"
+            href="#"
+            title="Voir mon profil"
+          >
+            <span
+              class="af-info-user__name"
+            />
+            <span
+              class="af-info-user__profile"
+            >
+              [inconnu]
+            </span>
+          </a>
+        </div>
+      </header>
+    </div>
+  </div>
+  <section
+    class="af-menu"
+  >
+    <div
+      class="af-nav-container"
+    >
+      <button
+        aria-controls="mainmenu"
+        aria-haspopup="true"
+        aria-label="Open Menu"
+        class="mask fade "
+        id="togglemenu"
+        type="button"
+      />
+      <nav
+        aria-label="Menu principal"
+        class="af-nav af-drawer left false"
+        role="navigation"
+      >
+        <div
+          class="container af-nav__wrapper"
+        >
+          <div
+            class="af-nav__aside-header"
+          >
+            <h4
+              class="af-nav__aside-title"
+            >
+              Menu
+            </h4>
+            <button
+              aria-controls="mainmenu"
+              aria-haspopup="true"
+              aria-label="Close Menu"
+              class="af-nav__aside-close"
+              id="togglemenu"
+              type="button"
+            >
+              ×
+            </button>
+          </div>
+          <ul
+            aria-labelledby="togglemenu"
+            class="af-nav__list "
+            id="mainmenu"
+            role="menubar"
+          >
+            <li
+              class="af-nav__item af-nav__item--active "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Accueil"
+                class="af-nav__link"
+                href="/"
+                index="0"
+                role="menuitem"
+                tabindex="0"
+              >
+                Accueil
+              </a>
+            </li>
+            <li
+              class="af-nav__item af-nav__item--haschild "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Démos"
+                class="af-nav__link"
+                href="/demos"
+                index="1"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Démos
+              </a>
+              <i
+                class="glyphicon glyphicon-arrow-xs-down"
+              />
+              <ul
+                aria-label=""
+                class="af-nav__list af-nav__list--children"
+                role="menu"
+              >
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Membres"
+                    class="af-nav__link"
+                    href="/demos/members"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Membres
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Rechercher"
+                    class="af-nav__link"
+                    href="/demos/searchMembers"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Rechercher
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Modal"
+                    class="af-nav__link"
+                    href="/demos/modalCustom"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Modal
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Notification"
+                    class="af-nav__link"
+                    href="/demos/notification"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Notification
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li
+              class="af-nav__item af-nav__item--haschild "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Toolkit components"
+                class="af-nav__link"
+                href="/demos"
+                index="2"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Toolkit components
+              </a>
+              <i
+                class="glyphicon glyphicon-arrow-xs-down"
+              />
+              <ul
+                aria-label=""
+                class="af-nav__list af-nav__list--children"
+                role="menu"
+              >
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Accordion"
+                    class="af-nav__link"
+                    href="/demos/accordion"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Accordion
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Action"
+                    class="af-nav__link"
+                    href="/demos/action"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Action
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Alert"
+                    class="af-nav__link"
+                    href="/demos/alert"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Alert
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Badge"
+                    class="af-nav__link"
+                    href="/demos/badge"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Badge
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Button"
+                    class="af-nav__link"
+                    href="/demos/button"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Button
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Help"
+                    class="af-nav__link"
+                    href="/demos/help"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Help
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Loader"
+                    class="af-nav__link"
+                    href="/demos/loader"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Loader
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Modal"
+                    class="af-nav__link"
+                    href="/demos/modal"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Modal
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Popover"
+                    class="af-nav__link"
+                    href="/demos/popover"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Popover
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Restitution"
+                    class="af-nav__link"
+                    href="/demos/restitution"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Restitution
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Table"
+                    class="af-nav__link"
+                    href="/demos/table"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Table
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Tabs"
+                    class="af-nav__link"
+                    href="/demos/tabs"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Tabs
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Title"
+                    class="af-nav__link"
+                    href="/demos/title"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Title
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li
+              class="af-nav__item af-nav__item--haschild "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Toolkit structure"
+                class="af-nav__link"
+                href="/demos"
+                index="3"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Toolkit structure
+              </a>
+              <i
+                class="glyphicon glyphicon-arrow-xs-down"
+              />
+              <ul
+                aria-label=""
+                class="af-nav__list af-nav__list--children"
+                role="menu"
+              >
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Footer"
+                    class="af-nav__link"
+                    href="/demos/footer"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Footer
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Footer Client"
+                    class="af-nav__link"
+                    href="/demos/footerClient"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Footer Client
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Header"
+                    class="af-nav__link"
+                    href="/demos/header"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Header
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Infos"
+                    class="af-nav__link"
+                    href="/demos/infos"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Infos
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="NavBar"
+                    class="af-nav__link"
+                    href="/demos/navbar"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    NavBar
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="TitleBar"
+                    class="af-nav__link"
+                    href="/demos/titlebar"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    TitleBar
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li
+              class="af-nav__item af-nav__item--haschild "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Toolkit form components"
+                class="af-nav__link"
+                href="/demos"
+                index="4"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Toolkit form components
+              </a>
+              <i
+                class="glyphicon glyphicon-arrow-xs-down"
+              />
+              <ul
+                aria-label=""
+                class="af-nav__list af-nav__list--children"
+                role="menu"
+              >
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Checkbox Input"
+                    class="af-nav__link"
+                    href="/demos/checkboxInput"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Checkbox Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Date Input"
+                    class="af-nav__link"
+                    href="/demos/dateInput"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Date Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="File"
+                    class="af-nav__link"
+                    href="/demos/fileInput"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    File
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Number Input"
+                    class="af-nav__link"
+                    href="/demos/numberInput"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Number Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Radio Input"
+                    class="af-nav__link"
+                    href="/demos/radioInput"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Radio Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Select Input"
+                    class="af-nav__link"
+                    href="/demos/selectInput"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Select Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Select Multi"
+                    class="af-nav__link"
+                    href="/demos/selectMulti"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Select Multi
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Slider"
+                    class="af-nav__link"
+                    href="/demos/slider"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Slider
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Stepper"
+                    class="af-nav__link"
+                    href="/demos/stepper"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Stepper
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Switch"
+                    class="af-nav__link"
+                    href="/demos/switch"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Switch
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Textarea Input"
+                    class="af-nav__link"
+                    href="/demos/textareaInput"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Textarea Input
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Text Input"
+                    class="af-nav__link"
+                    href="/demos/textInput"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Text Input
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li
+              class="af-nav__item af-nav__item--haschild "
+              role="none"
+            >
+              <span
+                aria-expanded="false"
+                class="af-nav__link"
+                index="5"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Pages
+              </span>
+              <i
+                class="glyphicon glyphicon-arrow-xs-down"
+              />
+              <ul
+                aria-label=""
+                class="af-nav__list af-nav__list--children"
+                role="menu"
+              >
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Not found"
+                    class="af-nav__link"
+                    href="/notFound"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Not found
+                  </a>
+                </li>
+                <li
+                  class="af-nav__item "
+                  role="none"
+                >
+                  <a
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-label="Forbidden"
+                    class="af-nav__link"
+                    href="/unauthorize"
+                    role="menuitem"
+                    tabindex="-1"
+                  >
+                    Forbidden
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li
+              class="af-nav__item "
+              role="none"
+            >
+              <a
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-label="Layout"
+                class="af-nav__link"
+                href="/demos/layout"
+                index="6"
+                role="menuitem"
+                tabindex="-1"
+              >
+                Layout
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </section>
+  <a
+    aria-controls="mainmenu"
+    aria-haspopup="true"
+    class="btn af-title-bar__mobile-menu af-btn--circle"
+    href="/#"
+    id="opentogglemenu"
+    role="button"
+    tabindex="0"
+    title="Open toggle menu"
+  >
+    <i
+      class="glyphicon glyphicon-menu-hamburger"
+    />
+  </a>
+  <main
+    aria-label="Main Content"
+    class="af-main"
+    id="main-content"
+  >
+    <section
+      class="container"
+    />
+  </main>
+  <footer
+    class="af-footer"
+  >
+    <div
+      class="container-fluid container"
+    >
+      <a
+        class="af-logo"
+        href="https://www.axa.fr/"
+        target="blank"
+        title="Site Axa"
+      >
+        <img
+          alt="Logo Axa"
+          class="af-logo__brand"
+          data-nimg="1"
+          decoding="async"
+          height="22"
+          loading="lazy"
+          src="/_next/image?url=%2Fimg.jpg&w=48&q=75"
+          srcset="/_next/image?url=%2Fimg.jpg&w=32&q=75 1x, /_next/image?url=%2Fimg.jpg&w=48&q=75 2x"
+          style="color: transparent;"
+          width="22"
+        />
+      </a>
+      <div
+        class="af-footer-content"
+      >
+        © 2023 AXA Tous droits réservés - v1.0.0
+      </div>
+    </div>
+  </footer>
+</DocumentFragment>
+`;

@@ -1,0 +1,46 @@
+@import '@axa-fr/react-toolkit-core/dist/assets/scss/core.scss';
+@import 'shared/scss/variables.scss';
+
+.af-title-bar__mobile-menu {
+  display: none;
+  background-color: $color-axa;
+}
+
+@include media-breakpoint-down(sm) {
+  .af-title-bar__mobile-menu {
+    position: fixed;
+    display: block;
+    top: calc(max(var(--titlebarHeight), var(--fullheaderHeight)) - (var(--titlebarHeight) / 2) - 1rem);
+    right: 0;
+    z-index: 12;
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.af-nav.af-drawer.left {
+  z-index: 17;
+}
+
+.af-nav__list--children {
+  .af-nav__item--separator {
+    text-transform: uppercase;
+    background: $color-gray-2;
+    &:hover {
+      .af-nav__link {
+        color: $color-texte;
+        background: $color-gray-2;
+      }
+    }
+  }
+}
+
+.af-menu {
+  padding: 0;
+  margin: 0;
+  &--fullscreen {
+    .container {
+      width: 100%;
+    }
+  }
+}

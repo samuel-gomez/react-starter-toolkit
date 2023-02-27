@@ -1,23 +1,25 @@
+import Image from 'next/image';
 import { useState, useEffect, ImgHTMLAttributes } from 'react';
 import loaderSVG from 'shared/images/puff.svg';
 import './LazyImage.scss';
 
 type TloadImage = string;
-export const loadImage = (name: TloadImage) => import(`../../../../public/images/${name}`);
+export const loadImage = async (name: TloadImage) => import(`../../../../public/images/${name}`);
 
-const Loading = () => <img className="af-lasyimage" src={loaderSVG} alt="loading..." />;
+const Loading = () => <Image className="af-lasyimage" src={loaderSVG} alt="loading..." fill />;
 
+type StaticImport = string;
 type TuseLoadImage = {
   name: TloadImage;
   loadImageFn?: typeof loadImage;
-  initState?: string | null;
+  initState?: { src: string | StaticImport };
 };
 
-const useLoadImage = ({ name, loadImageFn = loadImage, initState = null }: TuseLoadImage) => {
+const useLoadImage = ({ name, loadImageFn = loadImage, initState = { src: '' } }: TuseLoadImage) => {
   const [stateimage, setStateImage] = useState(initState);
 
   useEffect(() => {
-    if (stateimage === null && name) {
+    if (stateimage.src === '' && name) {
       loadImageFn(name)
         .then(image => setStateImage(image.default))
         .catch(error => setStateImage(error));
@@ -35,7 +37,11 @@ type TLasyImage = ImgHTMLAttributes<HTMLImageElement> & {
 
 const LasyImage = ({ name, alt, useLoadImageFn = useLoadImage, ...rest }: TLasyImage) => {
   const { stateimage } = useLoadImageFn({ name });
-  return stateimage !== null ? <img {...rest} src={stateimage} alt={alt} /> : <Loading />;
+  return stateimage !== null && stateimage.src !== '' ? (
+    <Image className={rest.className} alt={alt} src={stateimage.src} fill sizes="(max-width: 768px) 100vw" />
+  ) : (
+    <Loading />
+  );
 };
 
 export default LasyImage;

@@ -37,6 +37,11 @@
         margin-right: 0.4rem;
         text-decoration: none;
       }
+      &__npm-name {
+        position: relative;
+        width: 126px;
+        height: 20px;
+      }
     }
   }
 }

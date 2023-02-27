@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header/> Render <Header/> 1`] = `
+<DocumentFragment>
+  <div
+    class="af-header"
+  >
+    <div
+      class="container af-header__wrapper"
+    >
+      <header
+        class="af-header__content"
+        role="banner"
+      >
+        <div
+          class="af-header__name af-header__name--slash"
+        >
+          <a
+            class="af-logo"
+            href="/"
+          >
+            <img
+              alt="title"
+              class="af-logo__brand"
+              src="/img.jpg"
+            />
+          </a>
+          <h2
+            class="af-header__title"
+          >
+            title
+            <span
+              class="af-header__subtitle"
+            >
+              subtitle
+            </span>
+          </h2>
+        </div>
+        <div
+          aria-busy="true"
+          aria-label="loader"
+          class="af-skeleton af-skeleton--info"
+          role="status"
+        />
+        <div
+          class="af-info-user"
+        >
+          <a
+            class="af-info-user__link"
+            href="#"
+            title="Voir mon profil"
+          >
+            <span
+              class="af-info-user__name"
+            >
+              Non Connecté
+            </span>
+            <span
+              class="af-info-user__profile"
+            >
+              [Profil]
+            </span>
+          </a>
+        </div>
+      </header>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`<Header/> Render <Header/> fullscreen 1`] = `
+<DocumentFragment>
+  <div
+    class="af-header af-header--fullscreen"
+  >
+    <div
+      class="container af-header__wrapper"
+    >
+      <header
+        class="af-header__content"
+        role="banner"
+      >
+        <div
+          class="af-header__name af-header__name--slash"
+        >
+          <a
+            class="af-logo"
+            href="/"
+          >
+            <img
+              alt="title"
+              class="af-logo__brand"
+              src="/img.jpg"
+            />
+          </a>
+          <h2
+            class="af-header__title"
+          >
+            title
+            <span
+              class="af-header__subtitle"
+            >
+              subtitle
+            </span>
+          </h2>
+        </div>
+        <div
+          aria-busy="true"
+          aria-label="loader"
+          class="af-skeleton af-skeleton--info"
+          role="status"
+        />
+        <div
+          class="af-info-user"
+        >
+          <a
+            class="af-info-user__link"
+            href="#"
+            title="Voir mon profil"
+          >
+            <span
+              class="af-info-user__name"
+            >
+              Non Connecté
+            </span>
+            <span
+              class="af-info-user__profile"
+            >
+              [Profil]
+            </span>
+          </a>
+        </div>
+      </header>
+    </div>
+  </div>
+</DocumentFragment>
+`;

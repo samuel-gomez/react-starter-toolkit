@@ -67,7 +67,11 @@ exports[`ModalCommonBody Should render ModalCommonBody with icon 1`] = `
     <img
       alt="./icon.svg"
       class="af-modal__image"
+      data-nimg="fill"
+      decoding="async"
+      loading="lazy"
       src="./icon.svg"
+      style="position: absolute; height: 100%; width: 100%; left: 0px; top: 0px; right: 0px; bottom: 0px; color: transparent;"
     />
   </div>
 </DocumentFragment>

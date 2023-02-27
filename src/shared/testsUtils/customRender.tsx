@@ -1,7 +1,9 @@
+/* eslint-disable react/display-name */
 import { render, RenderOptions } from '@testing-library/react';
-import { StaticRouter } from 'react-router-dom/server';
-import FetchProvider from 'App/FetchProvider';
-import UserProvider from 'App/UserProvider';
+import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
+
+import FetchProvider from 'providers/FetchProvider';
+import UserProvider from 'providers/UserProvider';
 import { ReactElement, ReactNode } from 'react';
 import { MOCK_API_URL } from '.';
 
@@ -23,7 +25,7 @@ const MockProviders =
           }}
           useOidcAccessTokenFn={useOidcAccessTokenFn}
         >
-          <StaticRouter location="">{children}</StaticRouter>
+          <MemoryRouterProvider url="">{children}</MemoryRouterProvider>
         </FetchProvider>
       </UserProvider>
     );

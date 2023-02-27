@@ -1,9 +1,10 @@
+/* eslint-disable react/display-name */
 import { ReactNode } from 'react';
-import { StaticRouter } from 'react-router-dom/server';
+import { MemoryRouterProvider } from 'next-router-mock/MemoryRouterProvider';
 
 const WrapperStaticRouter =
   (route = '/') =>
   ({ children }: { children: ReactNode }) =>
-    <StaticRouter location={route}>{children}</StaticRouter>;
+    <MemoryRouterProvider url={route}>{children}</MemoryRouterProvider>;
 
 export default WrapperStaticRouter;

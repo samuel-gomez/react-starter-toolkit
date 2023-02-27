@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { ReactNode } from 'react';
 import { Tanomaly } from 'shared/types';
 import Alert from '@axa-fr/react-toolkit-alert';
@@ -18,7 +19,7 @@ const ModalCommonBody = ({ icon = '', title = '', anomaly, children }: TModalCom
         {anomaly.detail}
       </Alert>
     )}
-    {icon !== '' && <img className="af-modal__image" src={icon} alt={icon} />}
+    {icon !== '' && <Image className="af-modal__image" src={icon} alt={icon} fill />}
     {title !== '' && <h4 className="af-modal__title">{title}</h4>}
     {children}
   </Modal.Body>

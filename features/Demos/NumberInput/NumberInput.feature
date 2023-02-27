@@ -12,7 +12,7 @@ Feature: Playground NumberInput
     And un lien "Github" est visible avec un href "https://github.com/AxaGuilDEv/react-toolkit/tree/v2.0.0/packages/Form/Input/number"
     And un bouton "Edit props" est visible
     And un label "My number" est visible
-    And un champ texte "number-field" est visible avec la valeur "5", un placeholder "Ex: Samuel"
+    And un champ texte "name-field" est visible avec la valeur "5", un placeholder "Ex: Samuel"
     And un message "Enter your number" est visible avec la classe : "af-form__help"
     And un bouton "Copy to clipboard" est visible
     And un code du composant "NumberInput" est visible
@@ -80,10 +80,10 @@ Feature: Playground NumberInput
     And un champ checkbox toggle "disabled" avec le label "disabled" non sélectionné
     When je clique sur la checkbox "disabled"
     Then un champ checkbox toggle "disabled" avec le label "disabled" sélectionné
-    And un champ texte "number-field" est désactivé
+    And un champ texte "name-field" est désactivé
     When je clique sur la checkbox "disabled"
     Then un champ checkbox toggle "disabled" avec le label "disabled" non sélectionné
-    And un champ texte "number-field" est activé
+    And un champ texte "name-field" est activé
 
     Examples:
       | profil |
@@ -99,10 +99,10 @@ Feature: Playground NumberInput
     And un champ checkbox toggle "required" avec le label "required" non sélectionné
     When je clique sur la checkbox "required"
     Then un champ checkbox toggle "required" avec le label "required" sélectionné
-    And un champ texte "number-field" est requis
+    And un champ texte "name-field" est requis
     When je clique sur la checkbox "required"
     Then un champ checkbox toggle "required" avec le label "required" non sélectionné
-    And un champ texte "number-field" est optionnel
+    And un champ texte "name-field" est optionnel
 
     Examples:
       | profil |
@@ -119,10 +119,10 @@ Feature: Playground NumberInput
     And un champ checkbox toggle "readOnly" avec le label "readOnly" non sélectionné
     When je clique sur la checkbox "readOnly"
     Then un champ checkbox toggle "readOnly" avec le label "readOnly" sélectionné
-    And un champ texte "number-field" est en lecture seule
+    And un champ texte "name-field" est en lecture seule
     When je clique sur la checkbox "readOnly"
     Then un champ checkbox toggle "readOnly" avec le label "readOnly" non sélectionné
-    And un champ texte "number-field" est éditable
+    And un champ texte "name-field" est éditable
 
     Examples:
       | profil |
@@ -133,16 +133,16 @@ Feature: Playground NumberInput
   Scenario Outline: Affichage/masquage du champ input
     Given Je suis un utilisateur connu et connecté avec le profil "<profil>"
     When J'accède à la page playground NumberInput
-    Then un champ texte "number-field" est visible avec la valeur "5", un placeholder "Ex: Samuel"
+    Then un champ texte "name-field" est visible avec la valeur "5", un placeholder "Ex: Samuel"
     When je clique sur le bouton "Edit props"
     Then un éditeur de propriété est visible
     And un champ checkbox toggle "isVisible" avec le label "isVisible" sélectionné
     When je clique sur la checkbox "isVisible"
     Then un champ checkbox toggle "isVisible" avec le label "isVisible" non sélectionné
-    And un champ texte "number-field" est masqué
+    And un champ texte "name-field" est masqué
     When je clique sur la checkbox "isVisible"
     Then un champ checkbox toggle "isVisible" avec le label "isVisible" sélectionné
-    And un champ texte "number-field" est visible avec la valeur "5", un placeholder "Ex: Samuel"
+    And un champ texte "name-field" est visible avec la valeur "5", un placeholder "Ex: Samuel"
 
     Examples:
       | profil |
@@ -158,7 +158,7 @@ Feature: Playground NumberInput
     When je saisie "<message>" dans le champ "message"
     And je clique sur la checkbox "forceDisplayMessage"
     And Je sélectionne la valeur "<type>" sur le champ "messageType"
-    Then un champ texte "number-field" est visible et son wrapper a la classe : "<expectedWrapperInputClass>"
+    Then un champ texte "name-field" est visible et son wrapper a la classe : "<expectedWrapperInputClass>"
     And un message "<expectedDisplayMessage>" est visible avec la classe : "<expectedDisplayMessageClass>"
 
     Examples:

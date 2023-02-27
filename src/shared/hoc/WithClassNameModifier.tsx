@@ -1,3 +1,4 @@
+/* eslint-disable react/display-name */
 import { ComponentType } from 'react';
 import { ClassManager } from '@axa-fr/react-toolkit-core';
 

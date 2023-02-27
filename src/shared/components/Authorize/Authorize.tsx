@@ -1,5 +1,5 @@
 import { ReactNode, useContext } from 'react';
-import { UserContext } from 'App/UserProvider';
+import { UserContext } from 'providers/UserProvider';
 
 type TAuthorize = {
   authorized?: string[];

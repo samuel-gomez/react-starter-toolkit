@@ -1,7 +1,5 @@
-import { rest } from 'msw';
 import type { ResponseResolver, RestRequest, PathParams, RestContext } from 'msw';
 import { setupServer } from 'msw/node';
-import { MOCK_API_URL } from '.';
 
 type HandlerResolver = ResponseResolver<RestRequest<never, PathParams<string>>, RestContext>;
 

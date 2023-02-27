@@ -2,7 +2,6 @@
   "compilerOptions": {
     "target": "es2016",
     "module": "esnext",
-    "baseUrl": "src",
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
@@ -15,8 +14,19 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "preserve",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": "src",
+    "paths": {
+      "@/public/*": ["../public/*"]
+    },
+    "incremental": true,
+    "types": ["jest", "node", "@testing-library/jest-dom"]
   },
-  "include": ["src"],
+  "include": ["next-app-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules", "build", "scripts"]
 }

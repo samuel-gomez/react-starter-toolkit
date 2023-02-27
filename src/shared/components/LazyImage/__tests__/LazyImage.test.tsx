@@ -1,29 +1,20 @@
-import { render, act, waitFor } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import LasyImage, { loadImage } from '../index';
 
 const defaultProps = { alt: 'alt', name: '' };
 
-describe('<LasyImage/>', () => {
+describe('<LasyImage />', () => {
   it('Should render LasyImage', async () => {
     const { getByAltText, asFragment } = render(<LasyImage {...defaultProps} name="accordion.svg" alt="alt_accordion" />);
-    await act(() => {
-      getByAltText('loading...');
-    });
-
     await waitFor(() => expect(getByAltText('alt_accordion')).toBeDefined());
     expect(asFragment()).toMatchSnapshot();
   });
 
   it('Should render LasyImage unknown image', async () => {
     const { getByAltText, asFragment } = render(<LasyImage {...defaultProps} name="unknown.svg" alt="alt_unknown" />);
-    await act(() => {
-      getByAltText('loading...');
-    });
-
     await waitFor(() => expect(getByAltText('alt_unknown')).toBeDefined());
     expect(asFragment()).toMatchSnapshot();
   });
-
   it('Should render LasyImage when loading', () => {
     const { asFragment } = render(<LasyImage {...defaultProps} />);
     expect(asFragment()).toMatchSnapshot();
@@ -33,12 +24,22 @@ describe('<LasyImage/>', () => {
 describe('loadImage', () => {
   it('Should return import when loadImage have been called with image name and extension', async () => {
     const result = await loadImage('quality.png');
-    expect(result.default).toEqual('quality.png');
+    expect(result.default).toEqual({
+      src: '/img.jpg',
+      height: 40,
+      width: 40,
+      blurDataURL: 'data:image/png;base64,imagedata',
+    });
   });
 
   it('Should return import when loadImage have been called with image name and without extension', async () => {
     const result = await loadImage('text.svg');
-    expect(result.default).toEqual('text.svg');
+    expect(result.default).toEqual({
+      src: '/img.jpg',
+      height: 40,
+      width: 40,
+      blurDataURL: 'data:image/png;base64,imagedata',
+    });
   });
 
   it('Should return import when loadImage have been called with image unknown name and without extension', async () => {
