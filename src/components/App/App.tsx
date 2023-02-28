@@ -43,7 +43,7 @@ type TOidc = Omit<TUserAndFetchProviders, 'isEnabled'> &
 
 const Oidc = ({ oidc, OidcProviderCmpt, OidcSecureCmpt, ...restProps }: TOidc) =>
   oidc.isEnabled ? (
-    <OidcProviderCmpt configuration={{ ...oidc, service_worker_relative_url: '../../OidcServiceWorker.js', service_worker_only: true }}>
+    <OidcProviderCmpt configuration={{ ...oidc }}>
       <OidcSecureCmpt>
         <UserAndFetchProviders {...restProps} isEnabled={Boolean(oidc.isEnabled)} />
       </OidcSecureCmpt>

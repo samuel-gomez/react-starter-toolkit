@@ -19,6 +19,9 @@
     "redirect_uri": "http://localhost:3000/#authentication/callback",
     "silent_redirect_uri": "http://localhost:3000/#authentication/silent-callback",
     "scope": "openid profile email api offline_access",
+    "service_worker_only": false,
+    "token_renew_mode": "access_token_invalid",
+    "service_worker_relative_url": "/OidcServiceWorker.js",
     "authority": "https://demo.duendesoftware.com"
   }
 }
