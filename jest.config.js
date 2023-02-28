@@ -28,13 +28,12 @@ const customJestConfig = {
     '!<rootDir>/src/**/*.d.ts',
   ],
   testMatch: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)', '!**/__tests__/*.mock.{js,ts}'],
-  //testMatch: ['**/?(*.)+(test).[jt]s?(x)', '!**/__tests__/*.mock.{js,ts}'],
   coverageThreshold: {
     global: {
-      branches: 40,
-      functions: 40,
-      lines: 40,
-      statements: 40,
+      branches: 100,
+      functions: 100,
+      lines: 100,
+      statements: 100,
     },
   },
   clearMocks: true,
