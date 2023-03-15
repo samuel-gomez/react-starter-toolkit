@@ -1,7 +1,7 @@
 import { Alert } from '@axa-fr/react-toolkit-all';
 import Modal from '@axa-fr/react-toolkit-modal-default';
 import { ModalCommonHeader, ModalCommonBody, ModalCommonFooter, TReturnUseToggleModal } from 'shared/components/ModalCommon';
-import withClassNameModifier from 'shared/hoc/WithClassNameModifier';
+import withClassNameModifier, { TwithClassNameModifier } from 'shared/hoc/WithClassNameModifier';
 
 /**
  * NOTE: Ce composant est un snippet, il n'est pas utilisé dans la démo
@@ -9,9 +9,7 @@ import withClassNameModifier from 'shared/hoc/WithClassNameModifier';
 
 type TModalConfirm = Pick<TReturnUseToggleModal, 'isOpen' | 'onCancel'> & {
   className?: string;
-};
-
-const DEFAULT_CLASSNAME = 'af-modal';
+} & TwithClassNameModifier;
 
 const ModalConfirm = withClassNameModifier(
   ({ className, isOpen, onCancel }: TModalConfirm) => (
@@ -24,7 +22,7 @@ const ModalConfirm = withClassNameModifier(
       <ModalCommonFooter cancelLabel="Annuler" onCancel={onCancel} onSubmit={onCancel} confirmLabel="Valider" confirmClassModifier="" />
     </Modal>
   ),
-  DEFAULT_CLASSNAME,
+  { defaultClassName: 'af-modal' },
 );
 
 export default ModalConfirm;

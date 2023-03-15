@@ -1,5 +1,5 @@
 import { ReactNode, ComponentPropsWithoutRef } from 'react';
-import withClassNameModifier from 'shared/hoc/WithClassNameModifier';
+import { default as TableTk } from '@axa-fr/react-toolkit-table';
 import Body, { TBody } from './Body';
 import Header, { THeader } from './Header';
 
@@ -7,20 +7,15 @@ export type TTable = THeader &
   TBody & {
     childrenHeader?: ReactNode;
     className?: string;
-  } & ComponentPropsWithoutRef<'table'>;
+  } & ComponentPropsWithoutRef<typeof TableTk>;
 
-const DEFAULT_CLASSNAME = 'af-table';
-
-const Table = withClassNameModifier(
-  ({ onSort, sorting, className, headers, items, childrenHeader, ...rest }: TTable) => (
-    <table className={className} {...rest}>
-      <Header headers={headers} onSort={onSort} sorting={sorting}>
-        {childrenHeader}
-      </Header>
-      <Body items={items} />
-    </table>
-  ),
-  DEFAULT_CLASSNAME,
+const Table = ({ onSort, sorting, headers, items, childrenHeader, ...rest }: TTable) => (
+  <TableTk {...rest}>
+    <Header headers={headers} onSort={onSort} sorting={sorting}>
+      {childrenHeader}
+    </Header>
+    <Body items={items} />
+  </TableTk>
 );
 
 export default Table;

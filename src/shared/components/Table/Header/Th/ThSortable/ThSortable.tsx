@@ -1,42 +1,18 @@
-import { ReactNode } from 'react';
-import { withClassDefault, withClassModifier, WithClassModifierOptions, compose, identity } from '@axa-fr/react-toolkit-core';
-import { NONE, ASCENDING, DESCENDING } from 'shared/components/Table/constants';
+import { ComponentPropsWithoutRef } from 'react';
+import { default as TableTk } from '@axa-fr/react-toolkit-table';
 import type { Torder } from './ThSortable.container';
+import SortingIcon from './SortingIcon';
 
-export const orderIcons = (order: Torder = NONE) =>
-  ({
-    [NONE]: 'sorting',
-    [ASCENDING]: 'arrow-xs-up',
-    [DESCENDING]: 'arrow-xs-down',
-  }[order]);
-
-export type TSortingIcon = {
-  orderIconsFn?: typeof orderIcons;
-  order?: Torder;
-};
-export const SortingIcon = ({ order, orderIconsFn = orderIcons }: TSortingIcon) => (
-  <span className={`af-btn__icon af-btn__icon--table-sorting glyphicon glyphicon-${orderIconsFn(order)}`} />
-);
-
-export type TThSortable = {
-  className?: string;
-  children?: ReactNode;
+export type TThSortable = ComponentPropsWithoutRef<typeof TableTk.Th> & {
   sort: () => void;
   order: Torder;
-} & WithClassModifierOptions;
+};
 
-const DEFAULT_CLASSNAME = 'af-table__th';
-
-const ThSortable = ({ className, children, sort, order }: TThSortable) => (
-  <th role="button" onClick={sort} className={className}>
+const ThSortable = ({ className, children, sort, order, ...thSortableProps }: TThSortable) => (
+  <TableTk.Th role="button" onClick={sort} {...thSortableProps}>
     {children}
     <SortingIcon order={order} />
-  </th>
+  </TableTk.Th>
 );
 
-const enhance = compose(identity<TThSortable>(), withClassDefault(DEFAULT_CLASSNAME), withClassModifier());
-
-const Enhanced = enhance(ThSortable);
-Enhanced.displayName = ThSortable.name;
-
-export default Enhanced;
+export default ThSortable;

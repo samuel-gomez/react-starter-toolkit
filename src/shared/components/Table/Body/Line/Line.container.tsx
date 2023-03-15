@@ -1,19 +1,17 @@
 import type { Tcol } from '../Body';
-import Line from './Line';
+import Line, { TLine } from './Line';
 
-export type TLineContainer = {
-  className?: string;
-  modifier?: string;
+export type TLineContainer = Omit<TLine, 'columns'> & {
   LineCmpt?: typeof Line;
   cols: [string, Tcol][];
 };
 
-const LineContainer = ({ className, modifier = '', LineCmpt = Line, cols }: TLineContainer) => {
+const LineContainer = ({ LineCmpt = Line, cols, ...restLineProps }: TLineContainer) => {
   const columns = cols.map(([keyCol, value]) => ({
     keyCol,
     ...value,
   }));
-  return <LineCmpt className={className} modifier={modifier} columns={columns} />;
+  return <LineCmpt {...restLineProps} columns={columns} />;
 };
 
 export default LineContainer;

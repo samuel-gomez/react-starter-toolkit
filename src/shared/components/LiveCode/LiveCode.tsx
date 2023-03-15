@@ -2,7 +2,7 @@ import vsDark from 'prism-react-renderer/themes/vsDark';
 import React from 'react';
 import { LiveProviderProps, LiveProvider, LiveError, LivePreview } from 'react-live';
 import * as reactTookitAll from '@axa-fr/react-toolkit-all';
-import withClassNameModifier from 'shared/hoc/WithClassNameModifier';
+import withClassNameModifier, { TwithClassNameModifier } from 'shared/hoc/WithClassNameModifier';
 import { TReturnUseToggleModal } from '../ModalCommon';
 import TabsLiveCode from './TabsLiveCode';
 import Accessibility from './Accessibility';
@@ -23,7 +23,7 @@ type TLiveCode = {
   hideCode?: boolean;
   hideAccessibility?: boolean;
   hideReadme?: boolean;
-};
+} & TwithClassNameModifier;
 
 const styleLivePreviewDefault = { background: 'white', padding: '2rem', width: '100%' } as const;
 const ariaLabel = 'af-accessibility' as const;
@@ -53,7 +53,7 @@ const LiveCode = withClassNameModifier(
       </TabsLiveCode>
     </article>
   ),
-  'af-livecode',
+  { defaultClassName: 'af-livecode' },
 );
 
 export default LiveCode;

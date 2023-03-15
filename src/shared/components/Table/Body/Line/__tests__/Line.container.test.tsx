@@ -21,7 +21,6 @@ describe('LineContainer', () => {
 
     expect(LineCmpt).toHaveBeenCalledWith(
       {
-        className: undefined,
         columns: [
           {
             hover: undefined,
@@ -44,7 +43,6 @@ describe('LineContainer', () => {
             label: 'F',
           },
         ],
-        modifier: '',
       },
       {},
     );

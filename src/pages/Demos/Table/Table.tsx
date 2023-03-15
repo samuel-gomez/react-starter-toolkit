@@ -19,7 +19,7 @@ const INITIAL_STATE = {
   classModifier: '',
   className: 'af-table',
   headers: [
-    { label: 'Prénomlll', id: 'firstname' },
+    { label: 'Prénom', id: 'firstname' },
     {
       label: `<span><strong>Nom</strong>
     <i className="glyphicon glyphicon-ok"></i></span>`,

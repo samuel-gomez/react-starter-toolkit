@@ -1,3 +1,3 @@
-export { default } from './Th.container';
-export type { TThContainer } from './Th.container';
+export { default } from './Th';
+export type { TTh } from './Th';
 export type { TsetSort, Torder } from './ThSortable';

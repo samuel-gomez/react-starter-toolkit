@@ -1,2 +1,2 @@
-export { default } from './Td.container';
-export type { TTdContainer } from './Td.container';
+export { default } from './Td';
+export type { TTdContainer } from './Td';
