@@ -23,7 +23,7 @@
     "clean": "cd ./scripts && npm i && npm start && cd .. && npx rimraf ./scripts"
   },
   "dependencies": {
-    "@axa-fr/react-oidc": "6.11.1",
+    "@axa-fr/react-oidc": "6.15.9",
     "@axa-fr/react-toolkit-all": "2.0.0",
     "@axa-fr/react-toolkit-core": "2.0.0",
     "@babel/parser": "7.21.3",
