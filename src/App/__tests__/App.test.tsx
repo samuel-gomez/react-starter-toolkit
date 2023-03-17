@@ -1,4 +1,4 @@
-import { render, act } from '@testing-library/react';
+import { render, act, waitFor } from '@testing-library/react';
 import { ReactNode } from 'react';
 import App from '../App';
 
@@ -52,7 +52,7 @@ describe('<App/>', () => {
   it('Should render App with all props and authentication enabled', async () => {
     const { getByText } = render(<App {...envMock} {...optionalProps} />);
 
-    await act(() => expect(getByText(/OidcProviderCmpt/)).toBeInTheDocument());
+    await waitFor(() => expect(getByText(/OidcProviderCmpt/)).toBeInTheDocument());
     expect(getByText(/OidcSecureCmpt/)).toBeInTheDocument();
     expect(getByText(/FetchProviderCmpt/)).toBeInTheDocument();
   });
