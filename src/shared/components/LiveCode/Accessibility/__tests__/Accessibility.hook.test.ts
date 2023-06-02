@@ -1,4 +1,4 @@
-import { renderHook, act } from '@testing-library/react-hooks';
+import { renderHook, act } from '@testing-library/react';
 import { useAxe, axeRunAccessibility, TResults } from '../Accessibility.hook';
 
 const expected = { errors: undefined, results: [] as unknown as TResults['results'] };

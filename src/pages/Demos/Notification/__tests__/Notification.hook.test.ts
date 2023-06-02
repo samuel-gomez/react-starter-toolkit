@@ -1,11 +1,11 @@
-import { renderHook, act } from '@testing-library/react-hooks';
+import { renderHook, act } from '@testing-library/react';
 import { TNotificationContext } from 'App/NotificationProvider/NotificationProvider';
 import { createContext } from 'react';
 import useNotify from '../Notification.hook';
 
 describe('useNotify', () => {
   const addNotification = jest.fn();
-  const useContextFn = jest.fn();
+  const useContextFn = jest.fn().mockReturnValue({ addNotification });
 
   it('Should return notifyError, notifySuccess, notifyWarning useNotify have been called', () => {
     renderHook(() => useNotify({ useContextFn }));
