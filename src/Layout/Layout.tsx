@@ -5,6 +5,7 @@ import Footer from 'Layout/Footer';
 import TitleBar from 'Layout/TitleBar';
 import Menu from 'Layout/Menu';
 import A11yMenu from 'Layout/A11yMenu';
+import './Layout.scss';
 
 export type TLayout = {
   children?: ReactNode;

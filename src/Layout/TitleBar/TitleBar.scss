@@ -2,7 +2,9 @@
 @import '../../shared/scss/variables.scss';
 
 .af-title-bar {
-  margin-bottom: 0;
+  &:has(.af-steps-new) {
+    margin-bottom: 0;
+  }
   &--backhome {
     .af-title-bar {
       &__wrapper {
