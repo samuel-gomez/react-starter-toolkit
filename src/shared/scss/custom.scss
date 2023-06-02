@@ -3,6 +3,14 @@
 @import './mixins.scss';
 @import './keyframes.scss';
 
+body {
+  background-color: $color-gray-2;
+}
+
+.af-accordion__block {
+  background-color: $white;
+}
+
 /* FIX : LINK ***********************************************************/
 .af-link {
   background: transparent;

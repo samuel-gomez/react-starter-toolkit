@@ -1,11 +1,5 @@
-.af-main {
-  padding: 1rem;
-  min-height: calc(100vh - (calc(var(--fullheaderHeight) + var(--footerHeight))));
-  background: $color-gray-2;
-}
+@import '@axa-fr/react-toolkit-core/dist/assets/scss/core.scss';
 
-@include media-breakpoint-down(sm) {
-  .af-main {
-    padding: 0;
-  }
+.af-main {
+  min-height: calc(100vh - (calc(var(--fullheaderHeight) + var(--footerHeight))));
 }

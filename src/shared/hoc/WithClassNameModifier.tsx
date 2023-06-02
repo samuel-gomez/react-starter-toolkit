@@ -16,7 +16,7 @@ const withClassNameModifier = <P extends object>(
     <Component {...(props as P)} className={ClassManager.getComponentClassName(className, classModifier, defaultClassName)} />
   );
 
-  Hoc.displayName = `WithClassModier(${Component.name || Component.displayName || displayName}`;
+  Hoc.displayName = `WithClassModifier(${Component.name || Component.displayName || displayName}`;
   Hoc.defaultProps = defaultProps || {};
   return Hoc;
 };
