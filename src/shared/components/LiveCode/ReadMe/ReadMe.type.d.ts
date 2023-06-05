@@ -18,27 +18,23 @@ export type THighlightWrapper = {
   tokens: Token[][];
 };
 
-export type StyleObj = {
-  [key: string]: string | number | null;
-};
-
 export type LineInputProps = {
   key?: React.Key;
-  style?: StyleObj;
+  style?: CSSProperties;
   className?: string;
   line: Token[];
 };
 
 export type TokenOutputProps = {
   key?: React.Key;
-  style?: StyleObj;
+  style?: CSSProperties;
   className: string;
   children: string;
 };
 
 export type TokenInputProps = {
   key?: React.Key;
-  style?: StyleObj;
+  style?: CSSProperties;
   className?: string;
   token: Token;
 };
@@ -51,6 +47,6 @@ export type Token = {
 
 export type LineOutputProps = {
   key?: React.Key;
-  style?: StyleObj;
+  style?: CSSProperties;
   className: string;
 };

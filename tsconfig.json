@@ -22,7 +22,8 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src"
+    "src",
+    "node_modules/prism-react-renderer"
   ],
   "exclude": [
     "node_modules",
