@@ -75,7 +75,7 @@
     "jest-sonar-reporter": "2.0.0",
     "msw": "1.1.0",
     "precise-commits": "1.0.2",
-    "prettier": "2.8.4",
+    "prettier": "2.8.8",
     "sass": "1.59.3",
     "typescript": "4.9.5",
     "webpack-bundle-analyzer": "4.8.0",
