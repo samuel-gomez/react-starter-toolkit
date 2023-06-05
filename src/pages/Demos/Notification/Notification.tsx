@@ -1,4 +1,4 @@
-import dracula from 'prism-react-renderer/themes/dracula';
+import { themes } from 'prism-react-renderer';
 import { LiveProvider, LiveEditor } from 'react-live';
 import Button from '@axa-fr/react-toolkit-button';
 import { Accordion, CollapseCard } from '@axa-fr/react-toolkit-collapse';
@@ -71,7 +71,7 @@ const NotificationPage = ({ notifyError, notifySuccess, notifyWarning, titleBar 
       <CollapseCard id="collapse-hook" key="hook" isOpen={false}>
         <CollapseCard.Header key="hook-header">Hook example</CollapseCard.Header>
         <CollapseCard.Body key="hook-body">
-          <LiveProvider theme={dracula} code={code} scope={scope}>
+          <LiveProvider theme={themes.dracula} code={code} scope={scope}>
             <LiveEditor style={{ fontSize: '12px' }} />
           </LiveProvider>
         </CollapseCard.Body>

@@ -1,6 +1,6 @@
-import vsDark from 'prism-react-renderer/themes/vsDark';
+import { themes } from 'prism-react-renderer';
 import React from 'react';
-import { LiveProviderProps, LiveProvider, LiveError, LivePreview } from 'react-live';
+import { LiveProvider, LiveError, LivePreview } from 'react-live';
 import * as reactTookitAll from '@axa-fr/react-toolkit-all';
 import withClassNameModifier, { TwithClassNameModifier } from 'shared/hoc/WithClassNameModifier';
 import { TReturnUseToggleModal } from '../ModalCommon';
@@ -9,6 +9,8 @@ import Accessibility from './Accessibility';
 import Code from './Code';
 import ReadMe from './ReadMe';
 import './Livecode.scss';
+
+type LiveProviderProps = React.ComponentProps<typeof LiveProvider>;
 
 type TLiveCode = {
   code: string;
@@ -35,7 +37,7 @@ const LiveCode = withClassNameModifier(
     githubPackage,
     className,
     styleLivePreview = {},
-    theme = vsDark,
+    theme = themes.vsDark,
     modalProps,
     hideCode = false,
     hideAccessibility = false,

@@ -1,6 +1,5 @@
-import { screen, waitFor, within } from '@testing-library/dom';
 import userEvent from '@testing-library/user-event';
-import { fireEvent } from '@testing-library/react';
+import { fireEvent, screen, waitFor, within } from '@testing-library/react';
 import { DefineStepFunction } from 'jest-cucumber';
 import expectButton from './expectButton';
 import expectLink from './expectLink';
@@ -129,11 +128,16 @@ export const UnChampTextEstMasque = (instruction: DefineStepFunction, parentLabe
 export const JeSaisieDansLeChamp = (instruction: DefineStepFunction, parentLabel = '', inputRole = 'textbox') =>
   instruction(/^je saisie "(.*)" dans le champ "(.*)"$/, async (value, fieldName) => {
     const base = parentLabel ? within(screen.getByLabelText(parentLabel)) : screen;
-    const input = base.getByRole(inputRole, { name: fieldName });
+    const input = base.getByRole(inputRole, { name: fieldName }) as HTMLInputElement;
     const user = userEvent.setup();
     if (value) {
+      await waitFor(() => {
+        console.log('input', input.value);
+      });
       await user.clear(input);
-      await user.type(input, value);
+      await waitFor(async () => {
+        await user.type(input, value);
+      });
       expect(input).toHaveValue(value);
     }
   });

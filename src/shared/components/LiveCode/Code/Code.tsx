@@ -1,6 +1,6 @@
 import { createId } from '@axa-fr/react-toolkit-core';
-import Highlight, { defaultProps } from 'prism-react-renderer';
-import { LiveProviderProps } from 'react-live';
+import { Highlight, Prism as defaultProps } from 'prism-react-renderer';
+import type { LiveProvider } from 'react-live';
 import ClipBoard from '../ClipBoard';
 
 type TCode = {
@@ -10,6 +10,8 @@ type TCode = {
   theme: LiveProviderProps['theme'];
   code: string;
 };
+
+type LiveProviderProps = React.ComponentProps<typeof LiveProvider>;
 
 const ariaLabel = 'af-accessibility-code' as const;
 

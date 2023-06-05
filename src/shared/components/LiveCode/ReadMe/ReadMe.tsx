@@ -1,8 +1,7 @@
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeSlug from 'rehype-slug';
-import Highlight, { defaultProps } from 'prism-react-renderer';
-import vsDark from 'prism-react-renderer/themes/vsDark';
+import { Highlight, Prism as defaultProps, themes } from 'prism-react-renderer';
 import { createId } from '@axa-fr/react-toolkit-core';
 import 'github-markdown-css/github-markdown-light.css';
 import Resilience from 'shared/components/Resilience';
@@ -44,7 +43,7 @@ export type TcodeMarkdown = {
 export const codeMarkdown = ({ inline, className, children }: TcodeMarkdown) => {
   const match = regexLanguage(className);
   return !inline && match ? (
-    <Highlight {...defaultProps} theme={vsDark} code={String(children).replace(/\n$/, '')} language="jsx">
+    <Highlight {...defaultProps} theme={themes.vsDark} code={String(children).replace(/\n$/, '')} language="jsx">
       {({ className: classNameChild, style, tokens, getLineProps, getTokenProps }) => (
         <HighlightWrapper
           className={classNameChild}
