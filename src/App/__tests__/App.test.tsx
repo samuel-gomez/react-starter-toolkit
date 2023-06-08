@@ -1,5 +1,6 @@
 import { render, act, waitFor } from '@testing-library/react';
 import { ReactNode } from 'react';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import App from '../App';
 
 const useOidcUserMock = jest.fn().mockReturnValue({
@@ -23,6 +24,8 @@ const envMock = {
   },
 };
 
+beforeAll(() => import('pages/Home'));
+
 describe('<App/>', () => {
   it('Should render App with default props', async () => {
     const { getByText } = render(<App {...envMock} />);
@@ -34,11 +37,18 @@ describe('<App/>', () => {
   const OidcProviderCmpt = jest.fn().mockImplementation(({ children }: { children: ReactNode }) => <>OidcProviderCmpt : {children}</>);
   const OidcSecureCmpt = jest.fn().mockImplementation(({ children }: { children: ReactNode }) => <>OidcSecureCmpt : {children}</>);
   const FetchProviderCmpt = jest.fn().mockImplementation(({ children }: { children: ReactNode }) => <>FetchProviderCmpt : {children}</>);
+  const Home = () => <>Home</>;
+  const RoutesCmpt = () => (
+    <Routes>
+      <Route index path={'/'} element={<Home />} />
+    </Routes>
+  );
 
   const optionalProps = {
     OidcProviderCmpt,
     OidcSecureCmpt,
     FetchProviderCmpt,
+    RoutesCmpt,
     useOidcUserFn: useOidcUserMock,
   };
 

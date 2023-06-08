@@ -67,6 +67,7 @@ export type TApp = TEnvironment & {
   OidcSecureCmpt?: typeof OidcSecure;
   UserProviderCmpt?: typeof UserProvider;
   FetchProviderCmpt?: typeof FetchProvider;
+  RoutesCmpt?: typeof Routes;
 };
 
 const App = ({
@@ -80,6 +81,7 @@ const App = ({
   OidcSecureCmpt = OidcSecure,
   UserProviderCmpt = UserProvider,
   FetchProviderCmpt = FetchProvider,
+  RoutesCmpt = Routes,
 }: TApp) => (
   <OidcCmpt
     OidcProviderCmpt={OidcProviderCmpt}
@@ -94,7 +96,7 @@ const App = ({
   >
     <NotificationProvider>
       <Router>
-        <Routes />
+        <RoutesCmpt />
       </Router>
     </NotificationProvider>
   </OidcCmpt>
