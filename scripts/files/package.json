@@ -37,7 +37,7 @@
     "@types/react-dom": "18.0.11",
     "@types/react-router": "5.1.20",
     "@types/react-router-dom": "5.3.3",
-    "cross-fetch": "3.1.5",
+    "cross-fetch": "3.1.8",
     "jest-cucumber": "3.0.1",
     "lodash": "4.17.21",
     "react": "18.2.0",
