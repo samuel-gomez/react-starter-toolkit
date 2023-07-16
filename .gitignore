@@ -24,3 +24,7 @@ yarn-error.log*
 
 test-report.xml
 github.js
+
+# cypress
+/cypress/reports
+/cypress/downloads
