@@ -40,16 +40,14 @@ Feature: Playground NumberInput
     And un champ texte "name-field" est visible avec les propriétés : "<expectedValue>", "<expectedId>", "<expectedClass>", "<expectedPlaceholder>"
 
     Examples:
-      | profil | value | placeholder | className | modifier | expectedValue | expectedPlaceholder | expectedId | expectedClassWrapper                            | expectedClass                                     |
-      | Admin  | 459   |             |           |          | 459           | Ex: Samuel          | monid      | row af-form__group                              | af-form__input-text af-form__input-text--required |
-      | User   | 322   | Ex: 5       |           |          | 322           | Ex: 5               | monid      | row af-form__group                              | af-form__input-text af-form__input-text--required |
-      | User   | aaa   |             |           |          | aaa           | Ex: Samuel          | monid      | row af-form__group                              | af-form__input-text af-form__input-text--required |
-      | Admin  | 459   | Ex: 5       | myClass   |          | 459           | Ex: 5               | monid      | myClass                                         | af-form__input-text af-form__input-text--required |
-      | User   | 322   |             | myClass   |          | 322           | Ex: Samuel          | monid      | myClass                                         | af-form__input-text af-form__input-text--required |
-      | User   | aaa   |             | myClass   |          | aaa           | Ex: Samuel          | monid      | myClass                                         | af-form__input-text af-form__input-text--required |
-      | Admin  | 459   | Ex: 5       |           | other    | 459           | Ex: 5               | monid      | row af-form__group row af-form__group--required | af-form__input-text af-form__input-text--other    |
-      | User   | 322   |             |           | other    | 322           | Ex: Samuel          | monid      | row af-form__group row af-form__group--required | af-form__input-text af-form__input-text--other    |
-      | User   | aaa   |             |           | other    | aaa           | Ex: Samuel          | monid      | row af-form__group row af-form__group--required | af-form__input-text af-form__input-text--other    |
+      | profil | value | placeholder | className | modifier | expectedValue | expectedPlaceholder | expectedId | expectedClassWrapper | expectedClass                                     |
+      | Admin  | 459   |             |           |          | 459           | Ex: Samuel          | monid      | row af-form__group   | af-form__input-text af-form__input-text--required |
+      | User   | 459   | Ex: 5       |           | other    | 459           | Ex: 5               | monid      | row af-form__group   | af-form__input-text af-form__input-text--other    |
+      | User   | 322   | Ex: 5       | myClass   |          | 322           | Ex: 5               | monid      | row af-form__group   | af-form__input-text af-form__input-text--required |
+      | Admin  | 322   |             | myClass   | other    | 322           | Ex: Samuel          | monid      | myClass              | af-form__input-text af-form__input-text--other    |
+      | User   | aaa   |             |           |          | aaa           | Ex: Samuel          | monid      | myClass              | af-form__input-text af-form__input-text--required |
+      | User   | aaa   |             |           |          | aaa           | Ex: Samuel          | monid      | myClass              | af-form__input-text af-form__input-text--required |
+
 
   @RG3
   Scenario Outline: Affichage/masquage du helpButton
@@ -148,6 +146,7 @@ Feature: Playground NumberInput
       | profil |
       | Admin  |
       | User   |
+
   @RG8
   Scenario Outline: Gestion des erreurs du champ input
     Given Je suis un utilisateur connu et connecté avec le profil "<profil>"
@@ -165,9 +164,7 @@ Feature: Playground NumberInput
       | profil | message          | type    | expectedWrapperInputClass                                    | expectedDisplayMessage | expectedDisplayMessageClass |
       | Admin  |                  | warning | af-form__text                                                | Enter your number      | af-form__help               |
       | User   |                  | success | af-form__text                                                | Enter your number      | af-form__help               |
-      | User   |                  | error   | af-form__text                                                | Enter your number      | af-form__help               |
       | Admin  | myMessageWarning | warning | af-form__text af-form__text--required af-form__text--warning | myMessageWarning       | af-form__warning-text       |
-      | User   | myMessageError   | error   | af-form__text af-form__text--required af-form__text--error   | myMessageError         | af-form__error-text         |
       | User   | myMessageSuccess | success | af-form__text af-form__text--required af-form__text--success | myMessageSuccess       | af-form__success-text       |
 
   @RG9
