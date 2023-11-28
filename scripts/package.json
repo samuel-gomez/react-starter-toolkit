@@ -8,6 +8,6 @@
   },
   "rootDir": "../",
   "dependencies": {
-    "fs-extra": "10.1.0"
+    "fs-extra": "11.2.0"
   }
 }
