@@ -32,7 +32,7 @@
     "@tanstack/react-query-devtools": "4.29.12",
     "@types/downloadjs": "1.4.3",
     "@types/intl": "1.2.0",
-    "@types/jest": "29.5.2",
+    "@types/jest": "29.5.12",
     "@types/lodash": "4.14.195",
     "@types/node": "20.2.5",
     "@types/react": "18.2.9",
